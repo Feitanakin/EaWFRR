@@ -1,0 +1,93 @@
+spriteTypes = {
+
+	#### Equestria At War
+
+	SpriteType = {
+		name = "GFX_BRZ_a_matter_of_nature"
+		texturefile = "gfx/interface/goals/BRZ_a_matter_of_nature.dds"
+	}
+	SpriteType = {
+		name = "GFX_BRZ_a_part_of_them_for_an_alliance"
+		texturefile = "gfx/interface/goals/BRZ_a_part_of_them_for_an_alliance.dds"
+	}
+	SpriteType = {
+		name = "GFX_BRZ_declare_neutrality_in_herzlandian_affairs"
+		texturefile = "gfx/interface/goals/BRZ_declare_neutrality_in_herzlandian_affairs.dds"
+	}
+	SpriteType = {
+		name = "GFX_BRZ_demand_northern_ports"
+		texturefile = "gfx/interface/goals/BRZ_demand_northern_ports.dds"
+	}
+	SpriteType = {
+		name = "GFX_BRZ_nationalise_imperial_assets"
+		texturefile = "gfx/interface/goals/BRZ_nationalise_imperial_assets.dds"
+	}
+	SpriteType = {
+		name = "GFX_BRZ_operation_repellent"
+		texturefile = "gfx/interface/goals/BRZ_operation_repellent.dds"
+	}
+	SpriteType = {
+		name = "GFX_BRZ_our_ancestral_heart"
+		texturefile = "gfx/interface/goals/BRZ_our_ancestral_heart.dds"
+	}
+	SpriteType = {
+		name = "GFX_BRZ_our_shackles_have_been_broken"
+		texturefile = "gfx/interface/goals/BRZ_our_shackles_have_been_broken.dds"
+	}
+	SpriteType = {
+		name = "GFX_BRZ_our_warrior_ancestors"
+		texturefile = "gfx/interface/goals/BRZ_our_warrior_ancestors.dds"
+	}
+	SpriteType = {
+		name = "GFX_BRZ_reclaim_the_central_steppes"
+		texturefile = "gfx/interface/goals/BRZ_reclaim_the_central_steppes.dds"
+	}
+	SpriteType = {
+		name = "GFX_BRZ_take_the_weeds_of_the_garden"
+		texturefile = "gfx/interface/goals/BRZ_take_the_weeds_of_the_garden.dds"
+	}
+	SpriteType = {
+		name = "GFX_BRZ_tear_down_the_statue"
+		texturefile = "gfx/interface/goals/BRZ_tear_down_the_statue.dds"
+	}
+	SpriteType = {
+		name = "GFX_BRZ_the_call_of_our_ancestors"
+		texturefile = "gfx/interface/goals/BRZ_the_call_of_our_ancestors.dds"
+	}
+	SpriteType = {
+		name = "GFX_BRZ_the_question_of_the_southern_steppes"
+		texturefile = "gfx/interface/goals/BRZ_the_question_of_the_southern_steppes.dds"
+	}
+	SpriteType = {
+		name = "GFX_BRZ_threaten_the_griffons"
+		texturefile = "gfx/interface/goals/BRZ_threaten_the_griffons.dds"
+	}
+	SpriteType = {
+		name = "GFX_BRZ_to_reclaim_our_ancestral_homeland"
+		texturefile = "gfx/interface/goals/BRZ_to_reclaim_our_ancestral_homeland.dds"
+	}
+	SpriteType = {
+		name = "GFX_BRZ_traitors_death"
+		texturefile = "gfx/interface/goals/BRZ_traitors_death.dds"
+	}
+	SpriteType = {
+		name = "GFX_BRZ_web_of_intrigue"
+		texturefile = "gfx/interface/goals/BRZ_web_of_intrigue.dds"
+	}
+	SpriteType = {
+		name = "GFX_BRZ_were_a_state_of_mind"
+		texturefile = "gfx/interface/goals/BRZ_were_a_state_of_mind.dds"
+	}
+	SpriteType = {
+		name = "GFX_BRZ_zyon_reclaimed"
+		texturefile = "gfx/interface/goals/BRZ_zyon_reclaimed.dds"
+	}
+	SpriteType = {
+		name = "GFX_BRZ_khagans_of_all_khagans"
+		texturefile = "gfx/interface/goals/BRZ_khagans_of_all_khagans.dds"
+	}
+	SpriteType = {
+		name = "GFX_BRZ_demand_absolute_loyalty"
+		texturefile = "gfx/interface/goals/BRZ_demand_absolute_loyalty.dds"
+	}
+}

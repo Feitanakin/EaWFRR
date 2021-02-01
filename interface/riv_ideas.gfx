@@ -1,0 +1,20 @@
+spriteTypes = {
+
+	#### Equestria At War
+	spriteType = {
+		name = "GFX_idea_umilitary"
+		texturefile = "gfx/interface/ideas/umilitary.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ustase"
+		texturefile = "gfx/interface/ideas/ustase.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_zds"
+		texturefile = "gfx/interface/ideas/zds.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_idea_rct_riverswirliustase"
+		texturefile = "gfx/interface/ideas/idea_rct_riverswirliustase.dds"
+	}
+}

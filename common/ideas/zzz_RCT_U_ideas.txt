@@ -1,0 +1,205 @@
+ideas = {
+	country = {
+
+		RCT_u_camps = {
+
+			picture = slavery
+
+			allowed = {
+				always = no
+			}
+			available = {
+				country_exists = RCT
+				RCT = { has_government = fascism }
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = -0.2
+				stability_factor = 0.05
+				production_factory_max_efficiency_factor = 0.05
+				production_speed_buildings_factor = 0.10
+				fascism_drift = 0.01
+			}
+		}
+	    RCT_u_corporatism = {
+
+			picture = generic_spy_intel
+
+			allowed = {
+				always = no
+			}
+			available = {
+				country_exists = RCT
+				RCT = { has_government = fascism }
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.05
+				stability_factor = 0.05
+				industrial_capacity_factory = 0.10
+				production_speed_buildings_factor = 0.10
+				fascism_drift = 0.01
+			}
+		}
+        RCT_u_cons = {
+
+			picture = pony_army
+
+			allowed = {
+				always = no
+			}
+			available = {
+				country_exists = RCT
+				RCT = { has_government = fascism }
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				conscription = 0.05
+                army_morale_factor = -0.1
+			}
+		}
+        RCT_u_military = {
+
+			picture = umilitary
+
+			allowed = {
+				always = no
+			}
+			available = {
+				country_exists = RCT
+				RCT = { has_government = fascism }
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_speed_arms_factory_factor = 0.25
+				production_speed_industrial_complex_factor = -0.30
+				stability_factor = -0.1
+			}
+		}
+		RCT_u_propaganda = {
+
+			picture = CES_printing_press
+
+			allowed = {
+				always = no
+			}
+			available = {
+				country_exists = RCT
+				RCT = { has_government = fascism }
+			}
+
+			removal_cost = -1
+
+			modifier = {
+			political_power_gain = 0.15
+				stability_factor = 0.1
+				justify_war_goal_time = -0.25
+			}
+		}
+		RCT_u_urro = {
+
+			picture = ustase
+
+			allowed = {
+				always = no
+			}
+			available = {
+				country_exists = RCT
+				RCT = { has_government = fascism }
+			}
+
+			removal_cost = -1
+
+			modifier = {
+			war_support_factor = 0.10
+			stability_factor = 0.10 
+			political_advisor_cost_factor = -0.25 
+            trade_laws_cost_factor = -0.25 
+            mobilization_laws_cost_factor = -0.25 
+            economy_cost_factor = -0.25 
+			fascism_drift = 0.01 
+			}
+		}
+		RCT_u_OHS = {
+
+			picture = RCT_ofi
+
+			allowed = {
+				always = no
+			}
+			available = {
+				country_exists = RCT
+				RCT = { has_government = fascism }
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			stability_factor = 0.10 
+			decryption_factor = 0.1
+			fascism_drift = 0.01 
+			}
+						research_bonus = {
+				decryption_tech = 0.1
+				encryption_tech = 0.1
+			}
+		}
+		RCT_u_zds = {
+
+			picture = zds
+
+			allowed = {
+				always = no
+			}
+			available = {
+				country_exists = RCT
+				RCT = { has_government = fascism }
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			war_support_factor  = 0.10 
+			surrender_limit = 0.2
+			drift_defence_factor = 0.25 
+			army_org_factor = 0.05 
+			fascism_drift = 0.01 
+			}
+		}
+	}
+		political_advisor = {
+	RCT_river_ustase = {
+
+			picture = idea_rct_riverswirliustase
+
+			available = {
+				RCT = { has_government = fascism }
+				set_country_flag = RCT_ustase_swirl
+				has_country_leader = {
+					ruling_only = yes
+					name = "Arclight"
+				}
+			}
+
+			visible = {
+				has_country_flag = RCT_ustase_swirl
+			}
+
+			allowed = {
+				original_tag = RCT
+			}
+
+			traits = { democratic_sympathies captain_of_industry }
+
+		}
+		}
+}

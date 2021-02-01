@@ -1,0 +1,18 @@
+spriteTypes = {
+
+	#### Equestria At War
+
+	SpriteType = {
+		name = "GFX_goal_ustase"
+		texturefile = "gfx/interface/goals/ustase.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_ustase1"
+		texturefile = "gfx/interface/goals/ustase1.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_arclight1"
+		texturefile = "gfx/interface/goals/arclight1.dds"
+	}
+
+}

@@ -1,0 +1,18 @@
+spriteTypes = {
+
+	### UNIQUE national dec icons				
+############## Rijeka #################
+		
+		### NATION DECISIONS ####
+		
+	spriteType = {
+		name = "GFX_decision_category_ss"
+		texturefile = "gfx/interface/decisions/decision_cat_ss.dds"
+	}	
+	spriteType = {
+		name = "GFX_decision_ustase"
+		texturefile = "gfx/interface/decisions/decision_ustase.tga"
+	}	
+	
+	
+}
