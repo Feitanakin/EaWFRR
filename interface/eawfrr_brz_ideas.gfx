@@ -1,0 +1,27 @@
+spriteTypes = {
+
+    spriteType = {
+        name = "GFX_idea_BRZ_imperial_loyalists"
+		texturefile = "gfx/interface/ideas/BRZ_imperial_loyalists.tga"
+    }
+
+    spriteType = {
+        name = "GFX_idea_BRZ_imperial_loyalists_in_the_army"
+		texturefile = "gfx/interface/ideas/BRZ_imperial_loyalists_in_the_army.tga"
+    }
+
+    spriteType = {
+        name = "GFX_idea_BRZ_melted_down_the_gold"
+		texturefile = "gfx/interface/ideas/BRZ_melted_down_the_gold.tga"
+    }
+
+    spriteType = {
+        name = "GFX_idea_BRZ_militaristic_society"
+		texturefile = "gfx/interface/ideas/BRZ_militaristic_society.tga"
+    }
+
+    spriteType = {
+        name = "GFX_idea_BRZ_national_autarchy"
+		texturefile = "gfx/interface/ideas/BRZ_national_autarchy.tga"
+    }
+}
