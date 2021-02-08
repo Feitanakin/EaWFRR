@@ -1850,7 +1850,7 @@ focus_tree = {
 	focus = {
 		id = BRZ_The_Call_of_Our_Ancestors
 		icon = GFX_BRZ_the_call_of_our_ancestors
-		cost = 5
+		cost = 10
 		x = 45
 		y = 0
 		available = {
@@ -1861,6 +1861,8 @@ focus_tree = {
 		available_if_capitulated = no
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BRZ_The_Call_of_Our_Ancestors"
+			add_ideas = Imperial_loyalist_in_army_1
+			add_ideas = Imperial_loyalist_1
 		}
 	}
 	
@@ -1868,7 +1870,7 @@ focus_tree = {
 		id = BRZ_A_Great_Spiritual_Awakening
 		icon = GFX_goal_solar_church
 		prerequisite = { focus = BRZ_The_Call_of_Our_Ancestors }
-		cost = 5
+		cost = 2
 		x = -5
 		y = 1
 		relative_position_id = BRZ_The_Call_of_Our_Ancestors
@@ -1877,6 +1879,11 @@ focus_tree = {
 		available_if_capitulated = no
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BRZ_A_Great_Spiritual_Awakening"
+			add_manpower = 3000
+			swap_ideas = {
+				remove_idea = Imperial_loyalist_in_army_1
+				add_idea = Imperial_loyalist_in_army_2
+			}
 		}
 	}
 	focus = {
@@ -1892,6 +1899,11 @@ focus_tree = {
 		available_if_capitulated = no
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BRZ_Our_Warrior_Ancestors"
+			add_war_support = 15
+			swap_ideas = {
+				remove_idea = Imperial_loyalist_in_army_2
+				add_idea = Imperial_loyalist_in_army_3
+			}
 		}
 	}
 	
@@ -1901,13 +1913,14 @@ focus_tree = {
 		prerequisite = { focus = BRZ_A_Great_Spiritual_Awakening }
 		cost = 5
 		x = 1
-		y = 1
+		y = 2
 		relative_position_id = BRZ_A_Great_Spiritual_Awakening
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BRZ_Take_the_Weeds_of_the_Garden"
+			remove_ideas = Imperial_loyalist_in_army_3
 		}
 	}
 	
@@ -1916,15 +1929,16 @@ focus_tree = {
 		icon = GFX_goal_griffon_knights
 		prerequisite = { focus = BRZ_Our_Warrior_Ancestors }
 		prerequisite = { focus = BRZ_Take_the_Weeds_of_the_Garden }
-		cost = 5
+		cost = 10
 		x = 0
-		y = 2
+		y = 3
 		relative_position_id = BRZ_A_Great_Spiritual_Awakening
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BRZ_A_People_of_Warriors_Both_Men_and_Women"
+			add_ideas = Military_society
 		}
 	}
 	
@@ -1932,7 +1946,7 @@ focus_tree = {
 		id = BRZ_Our_Shackles_Have_Been_Broken
 		icon = GFX_BRZ_our_shackles_have_been_broken
 		prerequisite = { focus = BRZ_The_Call_of_Our_Ancestors }
-		cost = 5
+		cost = 2
 		x = 0
 		y = 1
 		relative_position_id = BRZ_The_Call_of_Our_Ancestors
@@ -1941,6 +1955,7 @@ focus_tree = {
 		available_if_capitulated = no
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BRZ_Our_Shackles_Have_Been_Broken"
+			add_political_power = 50
 		}
 	}
 	
@@ -1957,6 +1972,7 @@ focus_tree = {
 		available_if_capitulated = no
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BRZ_Tear_Down_the_Statues"
+			add_ideas = Melted_down_gold
 		}
 	}
 	
@@ -1964,7 +1980,7 @@ focus_tree = {
 		id = BRZ_Nationalise_Imperial_Assets
 		icon = GFX_BRZ_nationalise_imperial_assets
 		prerequisite = { focus = BRZ_Our_Shackles_Have_Been_Broken }
-		cost = 5
+		cost = 3
 		x = 2
 		y = 1
 		relative_position_id = BRZ_Our_Shackles_Have_Been_Broken
@@ -1973,6 +1989,8 @@ focus_tree = {
 		available_if_capitulated = no
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BRZ_Nationalise_Imperial_Assets"
+			add_ideas = National_Autarchy
+
 		}
 	}
 	
@@ -1989,6 +2007,7 @@ focus_tree = {
 		available_if_capitulated = no
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BRZ_The_Death_of_a_Moronic_Traitor"
+			
 		}
 	}
 	
@@ -1998,9 +2017,9 @@ focus_tree = {
 		prerequisite = { focus = BRZ_Tear_Down_the_Statues }
 		prerequisite = { focus = BRZ_The_Death_of_a_Moronic_Traitor }
 		prerequisite = { focus = BRZ_Nationalise_Imperial_Assets }
-		cost = 5
+		cost = 10
 		x = 0
-		y = 2
+		y = 3
 		relative_position_id = BRZ_Our_Shackles_Have_Been_Broken
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -2011,8 +2030,8 @@ focus_tree = {
 	}
 
 	focus = {
-		id = BRZ_Khagans_of_all_Khagans
-		icon = GFX_BRZ_khagans_of_all_khagans
+		id = BRZ_disband_parlament_forever
+		icon = GFX_BRZ_disband_parlament_forever
 		prerequisite = { focus = BRZ_The_Call_of_Our_Ancestors }
 		cost = 5
 		x = 5
@@ -2022,7 +2041,32 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BRZ_disband_parlament_forever"
+			add_popularity = {
+    			ideology = fascism
+    			popularity = 0.15
+			}
+			addd_stability = -20
+		}
+	}
+
+	focus = {
+		id = BRZ_Khagans_of_all_Khagans
+		icon = GFX_BRZ_khagans_of_all_khagans
+		prerequisite = { focus = BRZ_disband_parlament_forever }
+		cost = 5
+		x = 5
+		y = 2
+		relative_position_id = BRZ_The_Call_of_Our_Ancestors
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BRZ_Khagans_of_all_Khagans"
+			swap_ideas = {
+				remove_idea = Imperial_loyalist_1
+				add_idea = Imperial_loyalist_2
+			}
 		}
 	}
 	
@@ -2030,7 +2074,7 @@ focus_tree = {
 		id = BRZ_Demand_Absolute_Loyalty
 		icon = GFX_BRZ_demand_absolute_loyalty
 		prerequisite = { focus = BRZ_Khagans_of_all_Khagans }
-		cost = 5
+		cost = 6
 		x = -1
 		y = 1
 		relative_position_id = BRZ_Khagans_of_all_Khagans
@@ -2039,6 +2083,7 @@ focus_tree = {
 		available_if_capitulated = no
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BRZ_Demand_Absolute_Loyalty"
+			add_stability = 0.05
 		}
 	}
 	
@@ -2046,7 +2091,7 @@ focus_tree = {
 		id = BRZ_Threaten_the_Griffons
 		icon = GFX_BRZ_threaten_the_griffons
 		prerequisite = { focus = BRZ_Khagans_of_all_Khagans }
-		cost = 5
+		cost = 6
 		x = 1
 		y = 1
 		relative_position_id = BRZ_Khagans_of_all_Khagans
@@ -2055,6 +2100,13 @@ focus_tree = {
 		available_if_capitulated = no
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BRZ_Threaten_the_Griffons"
+			add_manpower = -3000
+			add_popularity = {
+    			ideology = neutrality
+    			popularity = -0.10
+			}
+			add_offsite_building = { type = industrial_complex level = 2 }
+			add_stability = 0.05
 		}
 	}
 	
@@ -2072,6 +2124,7 @@ focus_tree = {
 		available_if_capitulated = no
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BRZ_Unleash_the_Graue_Hunde"
+			remove_ideas = Imperial_loyalist_2
 		}
 	}
 	
@@ -2090,6 +2143,7 @@ focus_tree = {
 		available_if_capitulated = no
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BRZ_To_Reclaim_Our_Ancestral_Homeland"
+			add_political_power = 50
 		}
 	}
 	
@@ -2146,7 +2200,7 @@ focus_tree = {
 		icon = GFX_BRZ_were_a_state_of_mind
 		prerequisite = { focus = BRZ_Reclaim_the_Central_Steppes }
 		mutually_exclusive = { focus = BRZ_A_Matter_of_Nature }
-		cost = 5
+		cost = 2
 		x = -1
 		y = 1
 		relative_position_id = BRZ_Reclaim_the_Central_Steppes
@@ -2155,6 +2209,7 @@ focus_tree = {
 		available_if_capitulated = no
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BRZ_A_State_of_Mind"
+			add_manpower = 10000
 		}
 	}
 	
@@ -2172,6 +2227,9 @@ focus_tree = {
 		available_if_capitulated = no
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BRZ_A_Matter_of_Nature"
+			add_stability = 10
+			add_manpower = -15000
+		
 		}
 	}
 	
