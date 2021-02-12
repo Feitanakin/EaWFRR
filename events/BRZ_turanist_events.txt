@@ -1,0 +1,297 @@
+add_namespace = turanist
+country_event = {
+	id = turanist.1
+	title = turanist.1.t
+	desc = turanist.1.d
+	picture = GFX_event_generic_pony_diplomacy
+
+	is_triggered_only = yes
+	
+	option = {
+		name = turanist.1.a
+		custom_effect_tooltip = BRZ_kill_him
+		hidden_effect = {
+			create_country_leader = {
+				name = "Maxon Barkov"
+				expire = "1965.1.1"
+				ideology = centrism
+				traits = {  }
+			}
+		}
+	}
+	
+}
+
+country_event = {
+	id = turanist.2
+	title = turanist.2.t
+	desc = turanist.2.d
+	picture = GFX_event_generic_pony_diplomacy
+
+	is_triggered_only = yes
+	
+	#accept
+	option = {
+		name = turanist.2.a
+		ai_chance = {
+			factor = 80
+		}
+		BRZ = {
+			country_event = { id = turanist.3 days = 1 }
+		}
+		diplomatic_relation = {
+			country = BRZ
+			relation = non_aggression_pact
+			active = yes
+		}
+	}
+
+	#refuse
+	option = {
+		name = turanist.2.b
+		ai_chance = {
+			factor = 20
+		}
+		BRZ = {
+			country_event = { id = turanist.4 days = 1 }
+		}
+	}
+}
+
+country_event = {
+	id = turanist.3
+	title = turanist.3.t
+	desc = turanist.3.d
+	picture = GFX_event_generic_pony_diplomacy
+
+	is_triggered_only = yes
+	
+	#accept
+	option = {
+		name = turanist.3.a
+	}
+}
+
+country_event = {
+	id = turanist.4
+	title = turanist.4.t
+	desc = turanist.4.d
+	picture = GFX_event_generic_pony_diplomacy
+
+	is_triggered_only = yes
+	
+	#decline
+	option = {
+		name = turanist.4.a
+	}
+}
+
+country_event = {
+	id = turanist.5
+	title = turanist.5.t
+	desc = turanist.5.d
+	picture = GFX_event_generic_pony_diplomacy
+
+	is_triggered_only = yes
+	
+	#accept
+	option = {
+		name = turanist.5.a
+		ai_chance = {
+			factor = 50
+		}
+		BRZ = {
+			country_event = { id = turanist.6 days = 1 }
+		}
+	}
+
+	#refuse
+	option = {
+		name = turanist.5.b
+		ai_chance = {
+			factor = 50
+		}
+		BRZ = {
+			country_event = { id = turanist.7 days = 1 }
+		}
+	}
+}
+
+country_event = {
+	id = turanist.6
+	title = turanist.6.t
+	desc = turanist.6.d
+	picture = GFX_event_generic_pony_diplomacy
+
+	is_triggered_only = yes
+	
+	#accept
+	option = {
+		name = turanist.6.a
+		transfer_state = 633
+		add_state_core = 633
+		transfer_state = 634
+		add_state_core = 634
+		create_faction = "BRZ_HLQ_faction"
+		add_to_faction = HLQ
+	}
+}
+
+country_event = {
+	id = turanist.7
+	title = turanist.7.t
+	desc = turanist.7.d
+	picture = GFX_event_generic_pony_diplomacy
+
+	is_triggered_only = yes
+	
+	#decline
+	option = {
+		name = turanist.7.a
+		create_wargoal= {
+			type = annex_everything 
+			target = HLQ
+		}
+		HLQ = { add_to_ROOT_potential_cores = yes }
+	}
+}
+country_event = {
+	id = turanist.8
+	title = turanist.8.t
+	desc = turanist.8.d
+	picture = GFX_event_generic_pony_diplomacy
+
+	is_triggered_only = yes
+	
+	#accept
+	option = {
+		name = turanist.8.a
+		ai_chance = {
+			factor = 50
+		}
+		BRZ = {
+			country_event = { id = turanist.9 days = 1 }
+		}
+	}
+
+	#refuse
+	option = {
+		name = turanist.8.b
+		ai_chance = {
+			factor = 50
+		}
+		BRZ = {
+			country_event = { id = turanist.10 days = 1 }
+		}
+	}
+}
+
+country_event = {
+	id = turanist.9
+	title = turanist.9.t
+	desc = turanist.9.d
+	picture = GFX_event_generic_pony_diplomacy
+
+	is_triggered_only = yes
+	
+	#accept
+	option = {
+		name = turanist.9.a
+		transfer_state = 603
+		add_state_core = 603
+		transfer_state = 455
+		add_state_core = 455
+	}
+}
+
+country_event = {
+	id = turanist.10
+	title = turanist.10.t
+	desc = turanist.10.d
+	picture = GFX_event_generic_pony_diplomacy
+
+	is_triggered_only = yes
+	
+	#decline
+	option = {
+		name = turanist.10.a
+		create_wargoal= {
+			type = annex_everything 
+			target = FBK
+		}
+		FBK = { add_to_ROOT_potential_cores = yes }
+	}
+}
+
+country_event = {
+	id = turanist.11
+	title = turanist.11.t
+	desc = turanist.11.d
+	picture = GFX_event_generic_pony_diplomacy
+
+	is_triggered_only = yes
+	
+	#accept
+	option = {
+		name = turanist.11.a
+		ai_chance = {
+			factor = 50
+		}
+		BRZ = {
+			country_event = { id = turanist.12 days = 1 }
+		}
+	}
+
+	#refuse
+	option = {
+		name = turanist.11.b
+		ai_chance = {
+			factor = 50
+		}
+		BRZ = {
+			country_event = { id = turanist.13 days = 1 }
+		}
+	}
+}
+
+country_event = {
+	id = turanist.12
+	title = turanist.12.t
+	desc = turanist.12.d
+	picture = GFX_event_generic_pony_diplomacy
+
+	is_triggered_only = yes
+	
+	#accept
+	option = {
+		name = turanist.12.a
+		DMT = {
+			every_unit_leader = {
+				set_nationality = BRZ
+			}
+		}
+		annex_country = {
+			target = DMT
+			transfer_troops = yes
+			}
+	}
+}
+
+country_event = {
+	id = turanist.13
+	title = turanist.13.t
+	desc = turanist.13.d
+	picture = GFX_event_generic_pony_diplomacy
+
+	is_triggered_only = yes
+	
+	#decline
+	option = {
+		name = turanist.13.a
+		create_wargoal= {
+			type = annex_everything 
+			target = DMT
+		}
+		DMT = { add_to_ROOT_potential_cores = yes }
+	}
+}

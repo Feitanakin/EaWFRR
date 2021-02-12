@@ -24,4 +24,9 @@ spriteTypes = {
         name = "GFX_idea_BRZ_national_autarchy"
 		texturefile = "gfx/interface/ideas/BRZ_national_autarchy.tga"
     }
+	
+    spriteType = {
+        name = "GFX_idea_BRZ_create_a_web_of_intrigue"
+		texturefile = "gfx/interface/ideas/BRZ_create_a_web_of_intrigue.tga"
+    }
 }

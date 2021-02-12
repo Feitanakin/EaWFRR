@@ -135,11 +135,11 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_BRZ_declare_neutrality_in_herzlandial_affairs_shine"
-		texturefile = "gfx/interface/goals/BRZ_declare_neutrality_in_herzlandial_affairs.dds"
+		name = "GFX_BRZ_declare_neutrality_in_herzlandian_affairs_shine"
+		texturefile = "gfx/interface/goals/BRZ_declare_neutrality_in_herzlandian_affairs.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/BRZ_declare_neutrality_in_herzlandial_affairs.dds"
+			animationmaskfile = "gfx/interface/goals/BRZ_declare_neutrality_in_herzlandian_affairs.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -152,7 +152,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/BRZ_declare_neutrality_in_herzlandial_affairs.dds"
+			animationmaskfile = "gfx/interface/goals/BRZ_declare_neutrality_in_herzlandian_affairs.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no

@@ -6,4 +6,12 @@ leader_traits = {
 		army_defence_factor = 0.1	
 		conscription = 0.025
 	}
+	
+	khagans_of_all_khagans = {
+		random = no
+		war_support_factor = 0.05
+		high_command_cost_factor = -0.25
+		political_power_factor = 0.25
+		justify_war_goal_time = -0.25
+	}
 }

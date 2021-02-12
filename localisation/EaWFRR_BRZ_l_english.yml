@@ -1,5 +1,102 @@
 ﻿l_english:
 
+### Tooltips ###
+
+BRZ_kill_him:0 "§CTraitor will be killed§!"
+
+### Victory Points ###
+
+odror_avor_zyon:0 "Odror Avor Zyon"
+
+### Factions ###
+
+BRZ_HLQ_faction:0 "Motley League"
+
+### Traits ###
+
+khagans_of_all_khagans:0 "Khagans of all Khagans"
+
+### Party ###
+
+BRZ_turanist_dogs_long:0 "Idealistiche Herde"
+BRZ_turanist_dogs_short:0 "Idealistiche Herde"
+
+### Cosmetic Tags ###
+
+turanist_dogs_fascism:0 "National Republic of Bronzehill"
+turanist_dogs_fascism_ADJ:0 "Bronzehill"
+turanist_dogs_fascism_DEF:0 "National Republic of Bronzehill"
+United_dogs:0 "United Diamond Dog State"
+United_dogs_ADJ:0 "UDDS"
+United_dogs_DEF:0 "United Diamond Dog State"
+
+### Ideas ###
+
+Imperial_loyalist_in_army:0 "Imperial Loyalists in the Army"
+Imperial_loyalist:0 "Imperial Loyalists"
+Military_society:0 "Militaristic Society"
+Melted_down_gold:0 "Melted Down the Gold"
+National_Autarchy:0 "National Autarchy"
+BRZ_eyes_all_over_griffonia:0 "Eyes all over Griffonia"
+
+### Events ###
+
+turanist.1.t:0 "Kill Him!"
+turanist.1.d:0 "I shouldn't, it's not the jedi way."
+turanist.1.a:0 "Dew it."
+turanist.2.t:0 "Non-aggression Pact Proposal."
+turanist.2.d:0 "Don't attack us and we won't attack you. Ok?"
+turanist.2.a:0 "Ok."
+turanist.2.b:0 "No."
+turanist.3.t:0 "They accepted"
+turanist.3.d:0 "Description"
+turanist.3.a:0 "Yes! Yes! Yes!"
+turanist.4.t:0 "They refused"
+turanist.4.d:0 "Description"
+turanist.4.a:0 "Noooooooooooo!"
+turanist.5.t:0 "We need land, please."
+turanist.5.d:0 "Feit was here"
+turanist.5.a:0 "Alright"
+turanist.5.b:0 "Not in this universe"
+turanist.6.t:0 "They accepted"
+turanist.6.d:0 "ok"
+turanist.6.a:0 "Yay"
+turanist.7.t:0 "They refused"
+turanist.7.d:0 "no"
+turanist.7.a:0 "REEEEEEEEEEEEE"
+turanist.8.t:0 "Ports."
+turanist.8.d:0 "Hi I'm Feitanakin Skaivoker, you can call me Feit or Fei(only if you are Gian)."
+turanist.8.a:0 "What? Ok, ports."
+turanist.8.b:0 "What? Ports no."
+turanist.9.t:0 "They accepted"
+turanist.9.d:0 "ok"
+turanist.9.a:0 "Good. Good."
+turanist.10.t:0 "They refused"
+turanist.10.d:0 "no"
+turanist.10.a:0 "Crap"
+turanist.11.t:0 "Dwarfs."
+turanist.11.d:0 "I need a break."
+turanist.11.a:0 "You want it, you got it"
+turanist.11.b:0 "What the hay?"
+turanist.12.t:0 "They accepted"
+turanist.12.d:0 "ok"
+turanist.12.a:0 "Okay"
+turanist.13.t:0 "They refused"
+turanist.13.d:0 "no"
+turanist.13.a:0 "Oh no!"
+### Decisions ###
+
+BRZ_eternal_independence:0 "Non-aggression Pact"
+BRZ_eternal_independence_desc:0 ""
+BRZ_non_aggression_pact_GRI:0 "Send message to Griffenheim"
+BRZ_non_aggression_pact_STW:0 "Send message to Readewetter"
+BRZ_non_aggression_pact_FEA:0 "Send message to De Vleugels"
+BRZ_non_aggression_pact_KAT:0 "Send message to Katerinburg"
+BRZ_non_aggression_pact_ROU:0 "Send message to Romau"
+BRZ_non_aggression_pact_YAL:0 "Send message to Greenback"
+BRZ_non_aggression_pact_ANG:0 "Send message to Griffing"
+BRZ_non_aggression_pact_PYT:0 "Send message to Oldwingburg"
+
 ### Turanist Bronzehill Focuses ###
 
 BRZ_The_Call_of_Our_Ancestors:0 "The Call of Our Ancestors"
@@ -22,6 +119,8 @@ BRZ_Nationalise_Imperial_Assets:0 "Nationalise Imperial Assets"
 BRZ_Nationalise_Imperial_Assets_desc:0 ""
 BRZ_The_Declaration_of_Eternal_Independence:0 "The Declaration of Eternal Independence"
 BRZ_The_Declaration_of_Eternal_Independence_desc:0 ""
+BRZ_disband_parlament_forever:0 "Disband Parlament Forever"
+BRZ_disband_parlament_forever_desc:0 ""
 BRZ_Khagans_of_all_Khagans:0 "Khagans of all Khagans"
 BRZ_Khagans_of_all_Khagans_desc:0 ""
 BRZ_Demand_Absolute_Loyalty:0 "Demand Absolute Loyalty"
