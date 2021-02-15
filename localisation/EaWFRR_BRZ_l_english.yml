@@ -29,6 +29,12 @@ turanist_dogs_fascism_DEF:0 "National Republic of Bronzehill"
 United_dogs:0 "United Diamond Dog State"
 United_dogs_ADJ:0 "UDDS"
 United_dogs_DEF:0 "United Diamond Dog State"
+herzland_dogs:0 "Protektorat avor eth Odrormondr"
+herzland_dogs_ADJ:0 "Protectorate"
+herzland_dogs_DEF:0 "Protektorat avor eth Odrormondr"
+riverlands_dogs:0 "Jool Mondr"
+riverlands_dogs_ADJ:0 "Protectorate"
+riverlands_dogs_DEF:0 "Jool Mondr"
 
 ### Ideas ###
 
@@ -96,6 +102,9 @@ BRZ_non_aggression_pact_ROU:0 "Send message to Romau"
 BRZ_non_aggression_pact_YAL:0 "Send message to Greenback"
 BRZ_non_aggression_pact_ANG:0 "Send message to Griffing"
 BRZ_non_aggression_pact_PYT:0 "Send message to Oldwingburg"
+BRZ_protectorates:0 "Protectorates"
+BRZ_herzland:0 "Create a puppet state in the Herzland"
+BRZ_riverlands:0 "Create a puppet state in the Riverlands"
 
 ### Turanist Bronzehill Focuses ###
 

@@ -1999,9 +1999,23 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BRZ_Tear_Down_the_Statues"
 			add_ideas = Melted_down_gold
-			swap_ideas = {
-				remove_idea = BRZ_pacifism5
-				add_idea = BRZ_pacifism6
+			if = {
+				limit = {
+					has_idea = BRZ_pacifism5
+				}
+				swap_ideas = {
+					remove_idea = BRZ_pacifism5
+					add_idea = BRZ_pacifism6
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = BRZ_pacifism6
+				}
+				swap_ideas = {
+					remove_idea = BRZ_pacifism6
+					add_idea = BRZ_pacifism7
+				}
 			}
 		}
 	}
@@ -2035,14 +2049,25 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-		available = {
-			has_completed_focus = BRZ_Tear_Down_the_Statues
-		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BRZ_The_Death_of_a_Moronic_Traitor"
-			swap_ideas = {
-				remove_idea = BRZ_pacifism6
-				add_idea = BRZ_pacifism7
+			if = {
+				limit = {
+					has_idea = BRZ_pacifism5
+				}
+				swap_ideas = {
+					remove_idea = BRZ_pacifism5
+					add_idea = BRZ_pacifism6
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = BRZ_pacifism6
+				}
+				swap_ideas = {
+					remove_idea = BRZ_pacifism6
+					add_idea = BRZ_pacifism7
+				}
 			}
 			country_event = { days = 0 id = turanist.1 }
 		}
@@ -2130,9 +2155,23 @@ focus_tree = {
 		available_if_capitulated = no
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BRZ_Demand_Absolute_Loyalty"
-			swap_ideas = {
-				remove_idea = Imperial_loyalist_2
-				add_idea = Imperial_loyalist_3
+			if = {
+				limit = {
+					has_idea = Imperial_loyalist_2
+				}
+				swap_ideas = {
+					remove_idea = Imperial_loyalist_2
+					add_idea = Imperial_loyalist_3
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = Imperial_loyalist_3
+				}
+				swap_ideas = {
+					remove_idea = Imperial_loyalist_3
+					add_idea = Imperial_loyalist_4
+				}
 			}
 		}
 	}
@@ -2148,9 +2187,6 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-		available = {
-			has_completed_focus = BRZ_Demand_Absolute_Loyalty
-		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BRZ_Threaten_the_Griffons"
 			add_manpower = -3000
@@ -2159,9 +2195,23 @@ focus_tree = {
     			popularity = -0.10
 			}
 			add_offsite_building = { type = industrial_complex level = 2 }
-			swap_ideas = {
-				remove_idea = Imperial_loyalist_3
-				add_idea = Imperial_loyalist_4
+			if = {
+				limit = {
+					has_idea = Imperial_loyalist_2
+				}
+				swap_ideas = {
+					remove_idea = Imperial_loyalist_2
+					add_idea = Imperial_loyalist_3
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = Imperial_loyalist_3
+				}
+				swap_ideas = {
+					remove_idea = Imperial_loyalist_3
+					add_idea = Imperial_loyalist_4
+				}
 			}
 		}
 	}

@@ -2,6 +2,14 @@ United_dogs = {
 	color = rgb { 74 147 255 }
 	color_ui = rgb { 74 147 255 }
 }
+herzland_dogs = {
+	color = rgb { 122 176 255 }
+	color_ui = rgb { 122 176 255 }
+}
+riverlands_dogs = {
+	color = rgb { 122 176 255 }
+	color_ui = rgb { 122 176 255 }
+}
 FAT_Monarchy = {
 	color = rgb { 104 107 156 }
 	color_ui = rgb { 104 107 156 }

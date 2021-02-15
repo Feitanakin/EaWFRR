@@ -5997,7 +5997,7 @@ BRZ_eternal_independence = {
 		}
 
 		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove BRZ_finish_murals"
+			log = "[GetDateText]: [Root.GetName]: Decision remove BRZ_non_aggression_pact_GRI"
 			GRI = { country_event = { id = turanist.2 } }
 		}
 	}
@@ -6025,7 +6025,7 @@ BRZ_eternal_independence = {
 		}
 
 		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove BRZ_finish_murals"
+			log = "[GetDateText]: [Root.GetName]: Decision remove BRZ_non_aggression_pact_STW"
 			STW = { country_event = { id = turanist.2 } }
 		}
 	}
@@ -6053,7 +6053,7 @@ BRZ_eternal_independence = {
 		}
 
 		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove BRZ_finish_murals"
+			log = "[GetDateText]: [Root.GetName]: Decision remove BRZ_non_aggression_pact_FEA"
 			FEA = { country_event = { id = turanist.2 } }
 		}
 	}
@@ -6081,7 +6081,7 @@ BRZ_eternal_independence = {
 		}
 
 		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove BRZ_finish_murals"
+			log = "[GetDateText]: [Root.GetName]: Decision remove BRZ_non_aggression_pact_KAT"
 			KAT = { country_event = { id = turanist.2 } }
 		}
 	}
@@ -6109,7 +6109,7 @@ BRZ_eternal_independence = {
 		}
 
 		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove BRZ_finish_murals"
+			log = "[GetDateText]: [Root.GetName]: Decision remove BRZ_non_aggression_pact_ANG"
 			ANG = { country_event = { id = turanist.2 } }
 		}
 	}
@@ -6137,7 +6137,7 @@ BRZ_eternal_independence = {
 		}
 
 		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove BRZ_finish_murals"
+			log = "[GetDateText]: [Root.GetName]: Decision remove BRZ_non_aggression_pact_ROU"
 			ROU = { country_event = { id = turanist.2 } }
 		}
 	}
@@ -6165,7 +6165,7 @@ BRZ_eternal_independence = {
 		}
 
 		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove BRZ_finish_murals"
+			log = "[GetDateText]: [Root.GetName]: Decision remove BRZ_non_aggression_pact_PYT"
 			PYT = { country_event = { id = turanist.2 } }
 		}
 	}
@@ -6193,10 +6193,108 @@ BRZ_eternal_independence = {
 		}
 
 		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove BRZ_finish_murals"
+			log = "[GetDateText]: [Root.GetName]: Decision remove BRZ_non_aggression_pact_YAL"
 			YAL = { country_event = { id = turanist.2 } }
 		}
 	}
 
 }
+
+
+BRZ_protectorates = {
+	BRZ_herzland = {
+		cost = 50
+		allowed = {
+			original_tag = BRZ
+		}
+		available = {
+			original_tag = BRZ
+		}
+		visible = {
+			GRI = { exists = no }
+			382 = { is_owned_by = BRZ }
+		}
+		
+		fire_only_once = yes
+
+		days_remove = 0
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove BRZ_herzland"
+			hidden_effect = {
+				every_state = { limit = { is_core_of = STW } add_core_of = GRI }
+				every_state = { limit = { is_core_of = FEA } add_core_of = GRI }
+				every_state = { limit = { is_core_of = ROU } add_core_of = GRI }
+				every_state = { limit = { is_core_of = KAT } add_core_of = GRI }
+				every_state = { limit = { is_core_of = ANG } add_core_of = GRI }
+				every_state = { limit = { is_core_of = PYT } add_core_of = GRI }
+				every_state = { limit = { is_core_of = YAL } add_core_of = GRI }
+			}
+			release_puppet = GRI
+			hidden_effect = {
+				GRI = {
+					set_cosmetic_tag = herzland_dogs
+					create_country_leader = {
+						name = "Occupational Authority"
+						picture = "gfx/leaders/BRZ/occupational_authority.tga"
+						expire = "1965.1.1"
+						ideology = nazism
+						traits = {  }
+					}
+				}
+			}
+		}
+	}
 	
+	BRZ_riverlands = {
+		cost = 50
+		allowed = {
+			original_tag = BRZ
+		}
+		available = {
+			original_tag = BRZ
+		}
+		visible = {
+			RCT = { exists = no }
+			619 = { is_owned_by = BRZ }
+		}
+		
+		fire_only_once = yes
+
+		days_remove = 0
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove BRZ_riverlands"
+			hidden_effect = {
+				every_state = { limit = { is_core_of = BAK } add_core_of = RCT }
+				every_state = { limit = { is_core_of = NIM } add_core_of = RCT }
+				every_state = { limit = { is_core_of = FRE } add_core_of = RCT }
+				every_state = { limit = { is_core_of = WIT } add_core_of = RCT }
+				every_state = { limit = { is_core_of = LCT } add_core_of = RCT }
+				every_state = { limit = { is_core_of = DEP } add_core_of = RCT }
+			}
+			release_puppet = RCT
+			hidden_effect = {
+				RCT = {
+					set_cosmetic_tag = riverlands_dogs
+					create_country_leader = {
+						name = "Occupational Authority"
+						picture = "gfx/leaders/BRZ/occupational_authority.tga"
+						expire = "1965.1.1"
+						ideology = nazism
+						traits = {  }
+					}
+				}
+			}
+		}
+	}
+}
+
