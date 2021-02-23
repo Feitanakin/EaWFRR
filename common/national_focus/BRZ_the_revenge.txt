@@ -1863,6 +1863,7 @@ focus_tree = {
 		available_if_capitulated = no
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BRZ_The_Call_of_Our_Ancestors"
+			country_event = { days = 0 id = turanist.14 }
 			set_party_name = { 
 				ideology = fascism 
 				long_name = BRZ_turanist_dogs_long

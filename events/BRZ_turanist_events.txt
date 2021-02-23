@@ -3,7 +3,7 @@ country_event = {
 	id = turanist.1
 	title = turanist.1.t
 	desc = turanist.1.d
-	picture = GFX_event_generic_pony_diplomacy
+	picture = GFX_event_griffon_back
 
 	is_triggered_only = yes
 	
@@ -294,4 +294,18 @@ country_event = {
 		}
 		DMT = { add_to_ROOT_potential_cores = yes }
 	}
+}
+
+country_event = {
+	id = turanist.14
+	title = turanist.14.t
+	desc = turanist.14.d
+	picture = GFX_event_griffon_back
+
+	is_triggered_only = yes
+	
+	option = {
+		name = turanist.14.a
+	}
+	
 }

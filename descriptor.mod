@@ -5,6 +5,7 @@ tags={
 	"Events"
 }
 name="From Rottendedam to Rijeka"
+picture="Thumbnail.png"
 supported_version="1.10.*"
 dependencies = {  
 	"Equestria at War"

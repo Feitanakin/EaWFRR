@@ -2,7 +2,7 @@
 
 ### Tooltips ###
 
-BRZ_kill_him:0 "§CTraitor will be killed§!"
+BRZ_kill_him:0 "§CCount will be killed§!"
 
 ### Victory Points ###
 
@@ -47,9 +47,9 @@ BRZ_eyes_all_over_griffonia:0 "Eyes all over Griffonia"
 
 ### Events ###
 
-turanist.1.t:0 "Kill Him!"
-turanist.1.d:0 "I shouldn't, it's not the jedi way."
-turanist.1.a:0 "Dew it."
+turanist.1.t:0 "The Death of The Past"
+turanist.1.d:0 "A glimpse into the dark, then a bang.\n\nThen numerous amounts of gunshots noises were heard in the middle of the night.\n\nCount Ignatius and his family were dead, killed by a group of hooded members of the Graue Hunde, their corpses left to rot in the dark, as if they were forsaken by Boreas himself.\nContrasting Rumors have already begun to spread about the dynamics behind this barbaric act of violence, as various sides, both political and not, have started to blame someone or something they seek fit to discredit for  these deaths, and as the common populace try to assemble a logic conclusion or truth to these recent events.\n\nAnd in actuality, many have started to look for answers: who killed the Count and why? how and when? but the answer is more intricate and complicated than those related to a simple murder:\nWhile the Graue Hunde might have pulled the trigger and finished the job, the real instigator of Ignatius’ death is not a conscious being or a political group, may it be a terrorist or a civilian one.\nInstead, the real instigator of the Count’s end was time itself:\nWhile he was a good dog, a kind, sensible soul driven by a sincere desire to help his nation, his people and the geopolitical order he tried to maintain as shiny as it was during the golden day of the Griffonian Empire, Ignatius was, well, a dog who belonged to ages past, a statedog of other times, it seems.\n\nWith the end of the Griffstein dynasty and the abolishment of the Bronzehillian monarchy, it seemed only a matter of time until he would have disappeared, quietly into the night."
+turanist.1.a:0 "Out with the Old, In with the New"
 turanist.2.t:0 "Non-aggression Pact Proposal."
 turanist.2.d:0 "Don't attack us and we won't attack you. Ok?"
 turanist.2.a:0 "Ok."
@@ -80,16 +80,19 @@ turanist.9.a:0 "Good. Good."
 turanist.10.t:0 "They refused"
 turanist.10.d:0 "no"
 turanist.10.a:0 "Crap"
-turanist.11.t:0 "Dwarfs."
-turanist.11.d:0 "I need a break."
-turanist.11.a:0 "You want it, you got it"
-turanist.11.b:0 "What the hay?"
+turanist.11.t:0 "Ultimatum."
+turanist.11.d:0 "The Diabolic Bronzehillian state, with its insane pretentions to create a superethno state in the middle of Griffonia, has arrived at the steps of our country and we're being forced to make a decision that will change not only the destiny of our nation, but the destiny of the entire Griffonian continent.\nThe freakish nightmare state has sent us an official diplomatic envoy, asking for our direct annexation into their state.\n\nCommander, the choice is yours:\n\nWill we go quietly into the night or will take a stand and defend the Riverlands from this madness?"
+turanist.11.a:0 "We need to obey."
+turanist.11.b:0 "They wanna fight? Let's fight!"
 turanist.12.t:0 "They accepted"
 turanist.12.d:0 "ok"
 turanist.12.a:0 "Okay"
 turanist.13.t:0 "They refused"
 turanist.13.d:0 "no"
 turanist.13.a:0 "Oh no!"
+turanist.14.t:0 "The Call of Our Ancestors"
+turanist.14.d:0 "We’ve been lied to and what we considered to be our only motive of existence is an entire lie.\nOur allegiances have always stood for the griffonian race and their emperors in Griffenheim, who ruled seemingly endless empire who stretched from the semi-hospitable wastelands that now host the city of Skynavia to the waters of the Evi:\nOur ancestors were known across all of Griffonia, no, across all the world as the true foundation of the Imperial Heer and the most avid supporters of the empire for their sheer amounts of loyalty towards the Griffenstein dynasty and their unbreakable morale on the battlefield.\nWith the death of emperor Grover VI, the Griffenstein dynasty is deceased and dusted and by direct consequence our bonds to Griffenheim are no longer valid in any shape or form, even if the Duchess of Strawberry might have some semi-decent claims to the throne.\nThe most tragic part of this unfortunate chain of events is absolute collapse of the balances of power that kept our country together: the entirety of the common Bronzehillian diamond dog revolves around our nation’s relationship with the Herzlander state and their Kaiser and with both of those gone our nation is doomed to go down into an endless of moral decay and national death.\n\nThankfully, we’ve found quite the interesting solution to our problems.\n\nFollowing the coup d’etat in the Empire, a local writer, historian, ethnologist and anthropologist named Nihael Pawsha has led his underground politic al organization, known as the Idealistiche Herde, towards a successful takeover of Bronzehill, capturing the nation’s former leaders and keeping in capture Count Ignatius and the rest of the royal family:\nNihael’s movement seeks to sever Bronzehill’s ties to the Griffonian race by unifying every Diamond Dog in Griffonia under one single state.\nHis ideas of radical transformation not only include Bronzehill’s government, but also the very structure of Bronzehillian society and culture as a whole.\n\nWe shall see where his plans will lead our country and the diamond dog race as a whole."
+turanist.14.a:0 "Onward!"
 ### Decisions ###
 
 BRZ_eternal_independence:0 "Non-aggression Pact"

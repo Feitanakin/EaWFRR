@@ -5990,7 +5990,7 @@ BRZ_eternal_independence = {
 		
 		fire_only_once = yes
 
-		days_remove = 1
+		days_remove = 30
 
 		ai_will_do = {
 			factor = 100
@@ -6018,7 +6018,7 @@ BRZ_eternal_independence = {
 
 		fire_only_once = yes
 
-		days_remove = 1
+		days_remove = 30
 
 		ai_will_do = {
 			factor = 100
@@ -6046,7 +6046,7 @@ BRZ_eternal_independence = {
 
 		fire_only_once = yes
 
-		days_remove = 1
+		days_remove = 30
 
 		ai_will_do = {
 			factor = 100
@@ -6074,7 +6074,7 @@ BRZ_eternal_independence = {
 
 		fire_only_once = yes
 
-		days_remove = 1
+		days_remove = 30
 
 		ai_will_do = {
 			factor = 100
@@ -6102,7 +6102,7 @@ BRZ_eternal_independence = {
 
 		fire_only_once = yes
 
-		days_remove = 1
+		days_remove = 30
 
 		ai_will_do = {
 			factor = 100
@@ -6130,7 +6130,7 @@ BRZ_eternal_independence = {
 
 		fire_only_once = yes
 
-		days_remove = 1
+		days_remove = 30
 
 		ai_will_do = {
 			factor = 100
@@ -6158,7 +6158,7 @@ BRZ_eternal_independence = {
 
 		fire_only_once = yes
 
-		days_remove = 1
+		days_remove = 30
 
 		ai_will_do = {
 			factor = 100
@@ -6186,7 +6186,7 @@ BRZ_eternal_independence = {
 
 		fire_only_once = yes
 
-		days_remove = 1
+		days_remove = 30
 
 		ai_will_do = {
 			factor = 100
