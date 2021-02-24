@@ -133,7 +133,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				surrender_limit = 0.2
+				surrender_limit = 0.1
 			}
 			targeted_modifier = {
 				tag = ROOT
@@ -156,7 +156,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				surrender_limit = 0.2
+				surrender_limit = 0.1
 			}
 			targeted_modifier = {
 				tag = ROOT
@@ -179,7 +179,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				consumer_goods_factor = 0.05
+				consumer_goods_factor = -0.05
 			}
 		}
 		National_Autarchy = {

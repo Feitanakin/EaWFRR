@@ -1912,7 +1912,7 @@ focus_tree = {
 		icon = GFX_BRZ_our_warrior_ancestors
 		prerequisite = { focus = BRZ_A_Great_Spiritual_Awakening }
 		cost = 5
-		x = -1
+		x = 0
 		y = 1
 		relative_position_id = BRZ_A_Great_Spiritual_Awakening
 		cancel_if_invalid = yes
@@ -1931,17 +1931,14 @@ focus_tree = {
 	focus = {
 		id = BRZ_Take_the_Weeds_of_the_Garden
 		icon = GFX_BRZ_take_the_weeds_of_the_garden
-		prerequisite = { focus = BRZ_A_Great_Spiritual_Awakening }
+		prerequisite = { focus = BRZ_Our_Warrior_Ancestors }
 		cost = 5
-		x = 1
-		y = 1
+		x = 0
+		y = 2
 		relative_position_id = BRZ_A_Great_Spiritual_Awakening
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-		available = {
-			has_completed_focus = BRZ_Our_Warrior_Ancestors
-		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BRZ_Take_the_Weeds_of_the_Garden"
 			remove_ideas = Imperial_loyalist_in_army_3
@@ -2176,6 +2173,12 @@ focus_tree = {
 					add_idea = Imperial_loyalist_4
 				}
 			}
+			else = { 
+			swap_ideas = {
+				remove_idea = Imperial_loyalist_1
+				add_idea = Imperial_loyalist_2
+				}
+			}
 		}
 	}
 	
@@ -2253,6 +2256,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BRZ_To_Reclaim_Our_Ancestral_Homeland"
 			add_political_power = 50
+			remove_ideas = BRZ_the_chrisis
 		}
 	}
 	
