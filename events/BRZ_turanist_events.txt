@@ -26,7 +26,7 @@ country_event = {
 	id = turanist.2
 	title = turanist.2.t
 	desc = turanist.2.d
-	picture = GFX_event_generic_pony_diplomacy
+	picture = GFX_event_griffon_back
 
 	is_triggered_only = yes
 	
@@ -62,7 +62,7 @@ country_event = {
 	id = turanist.3
 	title = turanist.3.t
 	desc = turanist.3.d
-	picture = GFX_event_generic_pony_diplomacy
+	picture = GFX_event_griffon_back
 
 	is_triggered_only = yes
 	
@@ -76,7 +76,7 @@ country_event = {
 	id = turanist.4
 	title = turanist.4.t
 	desc = turanist.4.d
-	picture = GFX_event_generic_pony_diplomacy
+	picture = GFX_event_griffon_back
 
 	is_triggered_only = yes
 	
@@ -90,7 +90,7 @@ country_event = {
 	id = turanist.5
 	title = turanist.5.t
 	desc = turanist.5.d
-	picture = GFX_event_generic_pony_diplomacy
+	picture = GFX_event_griffon_back
 
 	is_triggered_only = yes
 	
@@ -121,7 +121,7 @@ country_event = {
 	id = turanist.6
 	title = turanist.6.t
 	desc = turanist.6.d
-	picture = GFX_event_generic_pony_diplomacy
+	picture = GFX_event_griffon_back
 
 	is_triggered_only = yes
 	
@@ -141,7 +141,7 @@ country_event = {
 	id = turanist.7
 	title = turanist.7.t
 	desc = turanist.7.d
-	picture = GFX_event_generic_pony_diplomacy
+	picture = GFX_event_griffon_back
 
 	is_triggered_only = yes
 	
@@ -159,7 +159,7 @@ country_event = {
 	id = turanist.8
 	title = turanist.8.t
 	desc = turanist.8.d
-	picture = GFX_event_generic_pony_diplomacy
+	picture = GFX_event_griffon_back
 
 	is_triggered_only = yes
 	
@@ -190,7 +190,7 @@ country_event = {
 	id = turanist.9
 	title = turanist.9.t
 	desc = turanist.9.d
-	picture = GFX_event_generic_pony_diplomacy
+	picture = GFX_event_griffon_back
 
 	is_triggered_only = yes
 	
@@ -208,7 +208,7 @@ country_event = {
 	id = turanist.10
 	title = turanist.10.t
 	desc = turanist.10.d
-	picture = GFX_event_generic_pony_diplomacy
+	picture = GFX_event_griffon_back
 
 	is_triggered_only = yes
 	
@@ -227,7 +227,7 @@ country_event = {
 	id = turanist.11
 	title = turanist.11.t
 	desc = turanist.11.d
-	picture = GFX_event_generic_pony_diplomacy
+	picture = GFX_event_griffon_back
 
 	is_triggered_only = yes
 	
@@ -258,7 +258,7 @@ country_event = {
 	id = turanist.12
 	title = turanist.12.t
 	desc = turanist.12.d
-	picture = GFX_event_generic_pony_diplomacy
+	picture = GFX_event_griffon_back
 
 	is_triggered_only = yes
 	
@@ -281,7 +281,7 @@ country_event = {
 	id = turanist.13
 	title = turanist.13.t
 	desc = turanist.13.d
-	picture = GFX_event_generic_pony_diplomacy
+	picture = GFX_event_griffon_back
 
 	is_triggered_only = yes
 	
@@ -306,6 +306,34 @@ country_event = {
 	
 	option = {
 		name = turanist.14.a
+	}
+	
+}
+
+country_event = {
+	id = turanist.15
+	title = turanist.15.t
+	desc = turanist.15.d
+	picture = GFX_event_griffon_back
+
+	is_triggered_only = yes
+	
+	option = {
+		name = turanist.15.a
+	}
+	
+}
+
+country_event = {
+	id = turanist.16
+	title = turanist.16.t
+	desc = turanist.16.d
+	picture = GFX_event_griffon_back
+
+	is_triggered_only = yes
+	
+	option = {
+		name = turanist.16.a
 	}
 	
 }

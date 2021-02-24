@@ -1900,6 +1900,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BRZ_A_Great_Spiritual_Awakening"
 			add_manpower = 3000
+			country_event = { days = 0 id = turanist.16 }
 			swap_ideas = {
 				remove_idea = Imperial_loyalist_in_army_1
 				add_idea = Imperial_loyalist_in_army_2
@@ -1944,6 +1945,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BRZ_Take_the_Weeds_of_the_Garden"
 			remove_ideas = Imperial_loyalist_in_army_3
+			country_event = { days = 0 id = turanist.15 }
 		}
 	}
 	
