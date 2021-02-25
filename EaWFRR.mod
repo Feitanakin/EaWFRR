@@ -4,7 +4,7 @@ tags={
 	"Gameplay"
 	"Events"
 }
-name="Equestria at War: From Rottendadam to Rijeka"
+name="From Rottendedam to Rijeka"
 dependencies={
 	"Equestria at War"
 }
