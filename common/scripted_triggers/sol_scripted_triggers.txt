@@ -1,0 +1,10 @@
+is_SOLAR_EMPIRE = {
+	custom_trigger_tooltip = {
+		tooltip = is_EQS_SOL_tp
+		tag = EQS
+		has_country_leader = {
+			ruling_only = yes
+			name = "Daybreaker"
+		}
+	}
+}

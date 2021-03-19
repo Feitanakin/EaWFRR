@@ -1,0 +1,328 @@
+on_actions = {
+	on_state_control_changed = {
+		effect = {
+			FROM = {
+				save_event_target_as = former_controller
+			}
+			if = {
+				limit = {
+					has_war_with = FROM
+					tag = event_target:solar_empire
+					has_unit_leader = 1337
+					has_country_leader = { ruling_only = yes name = "Daybreaker" }
+					FROM.FROM = {
+						has_state_flag = SOL_state_fall
+					}
+				}
+				add_to_variable = { var = daybreaker_support value = 3 } #Grants additional support if Daybreaker secures key cities immediately after taking control (the time when she is a Field Marshal)
+				FROM.FROM = {
+					clr_state_flag =  SOL_state_fall
+				}
+				hidden_effect = { SOL_calculate_loyalty = yes }
+			}
+			if = {
+				limit = {
+					has_war_with = event_target:solar_empire
+					event_target:solar_empire = { has_country_leader = { ruling_only = yes name = "Daybreaker" } }
+					FROM.FROM = {
+						is_owned_by = event_target:solar_empire
+						OR = {
+							state = 132 #Shire
+							state = 66 #Los Pegasus
+							state = 75 #Manehattan
+							state = 3 #Canterlot
+							state = 14 #Vanhoover
+							state = 59 #Tall Tale
+							state = 13 #Baltimare
+							state = 136 #Acornage
+							state = 12 #Fillydelphia
+							state = 70 #Whinnyapolis
+							state = 74 #Bales
+							state = 38 #Rockville
+							state = 525 #Albion
+							state = 2 #Ponyville
+						}
+						NOT = { has_state_flag = SOL_timeout }
+
+					}
+				}
+				event_target:solar_empire = {
+					add_to_variable = { var = daybreaker_support value = -5 } #Support is lost if Daybreaker loses key cities
+					hidden_effect = { SOL_calculate_loyalty = yes }
+				}
+				FROM.FROM = { 
+					set_state_flag = {
+						flag = SOL_timeout
+						days = 30
+						value = 1
+					} 
+				}
+			}
+		}
+	}
+	on_weekly_EQS = {
+		effect = {
+			if = {
+				limit = {
+					tag = EQS
+					has_country_flag = march_on_canterlot
+					any_enemy_country = {
+						has_offensive_war_with = EQS 
+						has_government = fascism
+						strength_ratio = {
+							tag = EQS
+							ratio > 0.5
+						}
+					}
+				}
+				random_country = {
+					limit = { 
+						has_offensive_war_with = EQS 
+						has_government = fascism
+						strength_ratio = {
+							tag = EQS
+							ratio > 0.5
+						}
+					}
+					save_global_event_target_as = sol_resistance_enemy
+				}
+				country_event = {
+					id = paxsolaris.37
+					days = 2
+				}
+				set_country_flag = resistance_ceasefire
+			}
+			add_to_variable = { var = SOL_lead_variable value = weekly_leads }
+			if = {
+				limit = {
+					original_tag = EQS
+					tag = event_target:solar_empire
+					has_country_leader = { ruling_only = yes name = "Daybreaker" }
+					NOT = { has_country_flag = resistance_ceasefire }
+				}
+				random_list = {
+					5 = {
+						modifier = {
+							factor = 0
+							has_country_flag = SOL_benevolent_public_timeout
+						}					
+						country_event = {
+							id = paxsolaris.50 	#Benign public support event
+						}				
+					}
+					5 = {
+						modifier = {
+							factor = 0
+							OR = {
+								has_country_flag = protest_happening
+								has_country_flag = protest_timeout
+							}
+						}
+						if = { 
+							limit = { 
+								NOT = { has_country_flag = protest_timeout }
+								NOT = { has_country_flag = protest_happening }
+							}
+							country_event = {
+								id = paxsolaris.51 #Protest event
+							}
+						}
+					}
+					5 = {
+						modifier = {
+							factor = 0
+							OR = {
+								NOT = { has_country_flag = SOL_resistance_begins }
+								has_country_flag = resistance_attack_blocked
+							}
+						}
+						SOL_calculate_resistance_target = yes
+						random_list = {
+							10 = {
+								country_event = {
+									id = paxsolaris.60 #propaganda event
+								}
+							}
+							5 = {
+								country_event = {
+									id = paxsolaris.61 #supplying event
+								}
+							}
+							5 = {
+								country_event = {
+									id = paxsolaris.62 #warehouse raid event
+								}
+							}
+							5 = {
+								country_event = {
+									id = paxsolaris.63 #recruitment event
+								}
+							}
+							5 = {
+								country_event = {
+									id = paxsolaris.64 #prisoner of war event
+								}
+							}
+						}
+					}
+					10 = {
+						#Random blank to create weeks where nothing happens
+					}
+				}
+			}
+		}
+	}
+	on_daily_EQS = {
+		effect = {
+			if = {
+				limit = {
+					tag = EQS
+				}
+				hidden_effect = { SOL_calculate_loyalty = yes }
+				add_to_variable = { var = daybreaker_support value = daybreaker_support_daily }
+
+				#Magic reserves
+				if = {
+					limit = {
+						EQS = { has_completed_focus = SOL_Imperium_Solis }
+					}
+					hidden_effect = { SOL_calculate_magic = yes }
+					add_to_variable = { var = daybreaker_magic_reserves value = daybreaker_magic_daily_change }
+					clamp_variable = {
+						var = daybreaker_magic_reserves
+						min = 0 
+						max = daybreaker_magic_max
+					}
+					if = {
+						limit = {
+							check_variable = { daybreaker_magic_reserves = 0 }
+						}
+						every_state = {
+							limit = {
+								has_state_flag = SOL_state_has_spell_heatwave
+							}
+							custom_effect_tooltip = SOL_remove_heatwave_tt
+							hidden_effect = {
+								clr_state_flag = SOL_state_has_spell_heatwave
+								remove_province_modifier = {
+									static_modifiers = {
+										SOL_heatwave_effect
+									}
+									province = {
+										all_provinces = yes
+									}
+								}
+								set_variable = { var = wrath_of_sun_icon_var value = 1 }
+							}
+						}
+						every_country = {
+							limit = {
+								has_idea = SOL_blessing_of_day_idea
+							}
+							remove_ideas = SOL_blessing_of_day_idea
+						}
+						every_country = {
+							limit = {
+								has_idea = SOL_curse_of_day_idea
+							}
+							remove_ideas = SOL_curse_of_day_idea
+						}
+						EQS = {
+							set_variable = { var = sol_curse_number value = 0 }
+							set_variable = { var = sol_blessing_number value = 0 }
+							set_variable = { var = sol_heatwave_number value = 0 }
+							SOL_calculate_magic = yes
+						}
+					}
+					if = {
+						limit = {
+							has_variable = sol_magic_screen_show
+						}
+						add_to_variable = { var = sol_magic_screen_show value = 1 }
+					}
+				}
+
+				#Public Works
+				if = {
+					limit = {
+						EQS = { has_completed_focus = SOL_public_works_program }
+					}
+					SOL_calculate_region_development = yes
+					if = {
+						limit = {
+							check_variable = { sol_ongoing_public_works_num > 0 }
+						}
+						if = {
+							limit = {
+								has_country_flag = SOL_east_coast_public_works_in_progress
+							}
+							add_to_variable = { var = sol_east_coast_public_works_duration_days value = -1 }
+						}
+						if = {
+							limit = {
+								has_country_flag = SOL_west_coast_public_works_in_progress
+							}
+							add_to_variable = { var = sol_west_coast_public_works_duration_days value = -1 }
+						}
+						if = {
+							limit = {
+								has_country_flag = SOL_southwest_public_works_in_progress
+							}
+							add_to_variable = { var = sol_southwest_public_works_duration_days value = -1 }
+						}
+						if = {
+							limit = {
+								has_country_flag = SOL_southeast_public_works_in_progress
+							}
+							add_to_variable = { var = sol_southeast_public_works_duration_days value = -1 }
+						}
+						if = {
+							limit = {
+								has_country_flag = SOL_heartland_public_works_in_progress
+							}
+							add_to_variable = { var = sol_heartland_public_works_duration_days value = -1 }
+						}
+						if = {
+							limit = {
+								has_country_flag = SOL_crystal_empire_public_works_in_progress
+							}
+							add_to_variable = { var = sol_crystal_empire_public_works_duration_days value = -1 }
+						}
+						if = {
+							limit = {
+								has_country_flag = SOL_severyana_public_works_in_progress
+							}
+							add_to_variable = { var = sol_severyana_public_works_duration_days value = -1 }
+						}
+						if = {
+							limit = {
+								has_country_flag = SOL_frontier_public_works_in_progress
+							}
+							add_to_variable = { var = sol_frontier_public_works_duration_days value = -1 }
+						}
+						if = {
+							limit = {
+								has_country_flag = SOL_bales_whinnyapolis_public_works_in_progress
+							}
+							add_to_variable = { var = sol_bales_whinnyapolis_public_works_duration_days value = -1 }
+						}
+
+						SOL_calculate_public_works_progress = yes
+						if = {
+							limit = {
+								NOT = { EQS = { has_dynamic_modifier = { modifier = SOL_public_works_modifier } } }
+							}
+							add_dynamic_modifier = { modifier = SOL_public_works_modifier }
+						}
+					}
+					else_if = {
+						limit = {
+							EQS = { has_dynamic_modifier = { modifier = SOL_public_works_modifier } }
+						}
+						remove_dynamic_modifier = { modifier = SOL_public_works_modifier }
+					}
+				}
+			}
+		}
+	}
+}
