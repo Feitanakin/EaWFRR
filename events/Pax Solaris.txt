@@ -1,0 +1,4006 @@
+add_namespace = paxsolaris
+
+
+
+country_event = {
+	id = paxsolaris.1
+	title = { 
+		text = paxsolaris.1.t_1
+		trigger = {
+			NOT = { has_country_flag = no_unification }
+		}
+	}
+
+	title = { 
+		text = paxsolaris.1.t_2
+		trigger = {
+			has_country_flag = no_unification
+		}
+	}
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_event_solarempire
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event paxsolaris.1"
+		if = {
+			limit = {
+				any_state = {
+					AND = {
+						OR = {
+							has_state_flag = sol_region_bales_whinnyapolis
+							has_state_flag = sol_region_west_coast
+							has_state_flag = sol_region_southwest
+							has_state_flag = sol_region_southeast
+							has_state_flag = sol_region_heartland
+							has_state_flag = sol_region_east_coast
+							has_state_flag = sol_region_frontier
+						}
+						NOT = { is_controlled_by = event_target:solar_empire }
+					}
+				}
+			}
+			set_country_flag = no_unification
+		}
+		else = {
+			clr_country_flag = no_unification
+		}
+	}
+
+	trigger = {
+		has_country_leader = { ruling_only = yes name = "Daybreaker" }
+	}
+	desc = { 
+		text = paxsolaris.1.d_1
+		trigger = {
+			NOT = { has_country_flag = no_unification }
+		}
+	}
+	desc = { 
+		text = paxsolaris.1.d_2
+		trigger = {
+			has_country_flag = no_unification
+		}
+	}
+	option = {
+		trigger = {
+			NOT = { has_country_flag = no_unification }
+		}
+		name = paxsolaris.1.a
+		custom_effect_tooltip = paxsolaris_loyalty_increase_5
+		add_to_variable = { var = daybreaker_support value = 5 }
+		hidden_effect = { SOL_calculate_loyalty = yes }
+	}
+	option = {
+		trigger = {
+			has_country_flag = no_unification
+		}
+		name = paxsolaris.1.b
+		custom_effect_tooltip = paxsolaris_loyalty_decrease_10
+		add_to_variable = { var = daybreaker_support value = -10 }
+		hidden_effect = { SOL_calculate_loyalty = yes }
+	}
+}
+
+country_event = {
+	id = paxsolaris.2
+	title = paxsolaris.2.t
+	trigger = {
+		has_global_flag = daybreaker_spawned
+		has_country_flag = march_on_canterlot
+		is_SOLAR_EMPIRE = yes
+		EQS = {
+			owns_state = 3
+			owns_state = 2
+			owns_state = 68
+			owns_state = 1
+			owns_state = 103
+			owns_state = 104
+			owns_state = 39
+			owns_state = 65
+			owns_state = 70
+		}
+		NOT = { has_war_with = NLR }
+		NOT = {
+			AND = {
+				has_defensive_war_with = CHN
+				CHN = { has_government = fascism }
+			}
+		}
+		NOT = {
+			AND = {
+				has_defensive_war_with = CRY
+				CRY = { has_government = fascism }
+			}
+		}
+	}
+	fire_only_once = yes
+	picture = GFX_event_elf_poster
+	mean_time_to_happen = {
+		days = 20
+	}
+	desc = paxsolaris.2.d
+	immediate = {
+		set_variable = { var = solar_initial_resistance_strength value = 4 }
+		if = {
+			limit = { check_variable = { daybreaker_support < 30  } }
+			add_to_variable = { var = solar_initial_resistance_strength value = 1 }
+		}
+		set_variable = { var = solar_initial_resistance_outreach_strength value = 4 }
+		if = {
+			limit = { check_variable = { daybreaker_support < 30  } }
+			add_to_variable = { var = solar_initial_resistance_outreach_strength value = 1 }
+		}
+		if = {
+			limit = { has_country_flag = SOL_wartime_change }
+			add_to_variable = { var = solar_initial_resistance_strength value = -1 }
+			add_to_variable = { var = solar_initial_resistance_outreach_strength value = -1 }
+		}
+		hidden_effect = {
+			set_stability = 0.5
+			random_owned_controlled_state = {
+				limit = {
+					NOT = { state = 3 }
+					NOT = { state = 75 }
+					is_owned_and_controlled_by = event_target:solar_empire
+					distance_to = {
+						value < 400
+						target = 3
+					}
+				}
+				save_global_event_target_as = SOL_resistance_stronghold
+			}
+		}
+		hidden_effect = { SOL_calculate_loyalty = yes }
+		set_country_flag = SOL_resistance_begins
+	}
+	option = {
+		log = "[GetDateText]: [Root.GetName]: event paxsolaris.2"
+		name = paxsolaris.2.a
+		custom_effect_tooltip = resistanceformation
+		hidden_effect = { SOL_calculate_loyalty = yes }
+	}
+}
+
+news_event = {
+	id = paxsolaris.3
+	immediate = {log = "[GetDateText]: [Root.GetName]: event paxsolaris.3"}
+	title = paxsolaris.3.t
+	desc = paxsolaris.3.d
+	picture = GFX_news_canterlot
+
+	trigger = {
+		has_global_flag = daybreaker_spawned
+		has_war = no
+		is_SOLAR_EMPIRE = yes
+	}
+
+	mean_time_to_happen = {
+		days = 20
+	}
+	major = yes
+	fire_only_once = yes
+
+	option = {
+		name = paxsolaris.3.a
+		set_country_flag = march_on_canterlot
+		hidden_effect = { 
+			set_variable = { var = harmonist_demand_counter value = 0 }
+		}
+		hidden_effect = { SOL_calculate_loyalty = yes }
+	}
+}
+
+
+country_event = { 
+	id = paxsolaris.4
+	title = paxsolaris.4.t
+	desc = paxsolaris.4.d
+	picture = GFX_ponies_daybreaker
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName]: event paxsolaris.4" }
+	option = { 
+		name = paxsolaris.4.a	
+	}
+}
+
+country_event = { 
+	id = paxsolaris.5
+	title = paxsolaris.5.t
+	desc = paxsolaris.5.d
+	picture = GFX_ponies_urban
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName]: event paxsolaris.5" }
+	option = { 
+		name = paxsolaris.5.a
+	}
+}
+
+country_event = { 
+	id = paxsolaris.6
+	title = paxsolaris.6.t
+	desc = paxsolaris.6.d
+	picture = GFX_event_solarempire
+	is_triggered_only = yes
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event paxsolaris.6" 
+		hidden_effect = {
+			set_variable = { var = SOL_equus_map_west_coast_development_wartorn value = 0 }
+			set_variable = { var = SOL_equus_map_east_coast_development_wartorn value = 0 }
+			set_variable = { var = SOL_equus_map_heartland_development_wartorn value = 0 }
+			set_variable = { var = SOL_equus_map_frontier_development_wartorn value = 0 }
+			set_variable = { var = SOL_equus_map_southeast_development_wartorn value = 0 }
+			set_variable = { var = SOL_equus_map_bales_whinnyapolis_development_wartorn value = 0 }
+			set_variable = { var = SOL_equus_map_southwest_development_wartorn value = 0 }
+			set_variable = { var = SOL_equus_map_crystal_empire_development_wartorn value = 0 }
+			set_variable = { var = SOL_equus_map_severyana_development_wartorn value = 0 }
+		}
+	}
+	option = { 
+		name = paxsolaris.6.a
+		custom_effect_tooltip = paxsolaris_6_tt
+		hidden_effect = { SOL_calculate_region_development = yes }
+	}
+}
+
+country_event = { 
+	id = paxsolaris.7
+	title = paxsolaris.7.t
+	desc = paxsolaris.7.d
+	picture = GFX_sol_daybreaker
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName]: event paxsolaris.7" }
+	option = { 
+		name = paxsolaris.7.a
+	}
+}
+
+country_event = { 
+	id = paxsolaris.8
+	title = paxsolaris.8.t
+	desc = paxsolaris.8.d
+	picture = GFX_event_solarempire
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName]: event paxsolaris.8" }
+	option = { 
+		name = paxsolaris.8.a
+		country_event = { id = paxsolaris.10 }
+	}
+}
+country_event = { 
+	id = paxsolaris.9
+	title = paxsolaris.9.t
+	desc = paxsolaris.9.d
+	picture = GFX_event_solarempire
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName]: event paxsolaris.9" }
+	option = { 
+		name = paxsolaris.9.a
+	}
+}
+country_event = { 
+	id = paxsolaris.10
+	title = paxsolaris.10.t
+	desc = paxsolaris.10.d
+	picture = GFX_event_solarempire
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName]: event paxsolaris.10" }
+	option = { 
+		name = paxsolaris.10.a
+		country_event = { id = paxsolaris.11 }
+	}
+}
+country_event = { 
+	id = paxsolaris.11
+	title = paxsolaris.11.t
+	desc = paxsolaris.11.d
+	picture = GFX_event_solarempire
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName]: event paxsolaris.11" }
+	option = { 
+		name = paxsolaris.11.a
+		create_field_marshal = {
+			name = "Sunset Shimmer"
+			portrait_path = "gfx/leaders/SOL/Sunset.tga"
+			traits = { sunset_shimmer_t fast_planner pony_race_trait }
+			skill = 3
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 4
+			logistics_skill = 3
+			id = 34
+		} custom_effect_tooltip = sunset_shimmer_stats_tp
+	}
+}
+country_event = { 
+	id = paxsolaris.14
+	title = paxsolaris.14.t
+	desc = paxsolaris.14.d
+	picture = GFX_event_solarempire
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName]: event paxsolaris.14" }
+	option = { 
+		name = paxsolaris.14.a
+		ai_chance = {
+			factor = 0.2
+		}
+		hidden_effect = {
+			news_event = {
+				id = paxsolaris.15
+				days = 2
+			}
+			country_event = {
+				id = paxsolaris.51
+				days = 2
+			}
+		}
+	}
+	option = { 
+		name = paxsolaris.14.b
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 10
+				has_country_flag = sol_wartime_change
+			}
+		}
+		hidden_effect = {
+			if = {
+				limit = { has_country_flag = sol_wartime_change }
+				country_event = {
+					id = paxsolaris.18
+					days = 2
+				}
+			}
+			else = {
+				news_event = {
+					id = paxsolaris.17
+					days = 2
+				}
+				country_event = {
+					id = paxsolaris.51
+					days = 2
+				}
+			}
+		}
+	}
+	option = { 
+		name = paxsolaris.14.c
+		ai_chance = {
+			factor = 0.2
+		}
+		hidden_effect = {
+			news_event = {
+				id = paxsolaris.16
+				days = 2
+			}
+			country_event = {
+				id = paxsolaris.51
+				days = 2
+			}
+		}
+	}
+	option = { 
+		name = paxsolaris.14.e
+		ai_chance = {
+			factor = 3
+		}
+		custom_effect_tooltip = paxsolaris_loyalty_decrease_3
+		add_to_variable = { var = daybreaker_support value = -3 }
+		hidden_effect = { SOL_calculate_loyalty = yes }
+	}
+}
+news_event = {
+	id = paxsolaris.15
+	immediate = { log = "[GetDateText]: [Root.GetName]: event paxsolaris.15" }
+	title = paxsolaris.15.t 
+	desc = paxsolaris.15.d 
+	is_triggered_only = yes
+	picture = GFX_news_event_manehattan
+	major = no
+	option = { 
+		name = paxsolaris.15.a
+		add_political_power = -50
+		custom_effect_tooltip = paxsolaris_information_suppression_reset
+		custom_effect_tooltip = paxsolaris_loyalty_decrease_5
+		add_to_variable = { var = daybreaker_support value = -5 }
+		set_variable = {
+			var = solar_resistance_outreach_suppression_progress
+			value = 0
+		}
+		hidden_effect = { SOL_calculate_loyalty = yes }
+	}
+}
+news_event = {
+	id = paxsolaris.16 
+	immediate = { log = "[GetDateText]: [Root.GetName]: event paxsolaris.16" }
+	title = paxsolaris.15.t 
+	desc = paxsolaris.16.d 
+	is_triggered_only = yes
+	picture = GFX_news_event_manehattan
+	major = no
+	option = { 
+		name = paxsolaris.15.a
+		add_political_power = -50
+		custom_effect_tooltip = paxsolaris_information_suppression_reset
+		custom_effect_tooltip = paxsolaris_loyalty_decrease_5
+		add_to_variable = { var = daybreaker_support value = -5 }
+		set_variable = {
+			var = solar_resistance_outreach_suppression_progress
+			value = 0
+		}
+		hidden_effect = { SOL_calculate_loyalty = yes }
+	}
+}
+news_event = {
+	id = paxsolaris.17 
+	immediate = { log = "[GetDateText]: [Root.GetName]: event paxsolaris.17" }
+	title = paxsolaris.15.t 
+	desc = paxsolaris.17.d 
+	is_triggered_only = yes
+	picture = GFX_news_event_manehattan
+	major = no
+	option = { 
+		name = paxsolaris.15.a
+		add_political_power = -50
+		custom_effect_tooltip = paxsolaris_information_suppression_reset
+		custom_effect_tooltip = paxsolaris_loyalty_decrease_5
+		add_to_variable = { var = daybreaker_support value = -5 }
+		set_variable = {
+			var = solar_resistance_outreach_suppression_progress
+			value = 0
+		}
+		hidden_effect = { SOL_calculate_loyalty = yes }
+	}
+}
+country_event = { 
+	id = paxsolaris.18
+	title = paxsolaris.18.t
+	desc = paxsolaris.18.d
+	picture = GFX_event_solarempire
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName]: event paxsolaris.18" }
+	option = { 
+		name = paxsolaris.18.a
+		custom_effect_tooltip = paxsolaris_information_suppression_increase
+		custom_effect_tooltip = paxsolaris_loyalty_increase_5
+		hidden_effect = {
+			add_to_variable = { var = solar_resistance_outreach_suppression_progress value = 1 }
+			add_to_variable = { var = daybreaker_support value = 5 }
+			SOL_calculate_loyalty = yes
+		}
+	}
+}
+country_event = { 
+	id = paxsolaris.19
+	title = paxsolaris.19.t
+	desc = paxsolaris.19.d
+	picture = GFX_event_solarempire
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName]: event paxsolaris.19" }
+	option = { 
+		name = paxsolaris.19.a
+	}
+}
+country_event = { #Fuck the Buffalo up
+	id = paxsolaris.20 
+	immediate = {log = "[GetDateText]: [Root.GetName]: event paxsolaris.20"}
+	title = paxsolaris.20.t
+	desc = paxsolaris.20.d
+	picture = GFX_event_appleloosa
+	is_triggered_only = yes
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event paxsolaris.18" 
+	}
+	option = {
+		name = paxsolaris.20.a #welp
+		custom_effect_tooltip = GAME_OVER_TT
+		EQS = {
+			annex_country = { target = BUF }
+			add_state_core = 89
+			add_state_core = 78
+			add_state_core = 93
+			add_state_core = 80
+			country_event = {
+				id = paxsolaris.21
+				days = 2
+			}
+		}
+		ai_chance = {
+			factor = 70
+		}
+	}
+	option = {
+		name = paxsolaris.20.b #fuck no
+		add_political_power = 150
+		add_war_support = 0.15
+		EQS = { country_event = { id = paxsolaris.22 days = 2 } }
+		ai_chance = {
+			factor = 30
+		}
+	}
+}
+country_event = { 
+	id = paxsolaris.21
+	title = paxsolaris.21.t
+	desc = paxsolaris.21.d
+	picture = GFX_event_solarempire
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName]: event paxsolaris.21" }
+	option = { 
+		name = paxsolaris.21.a
+	}
+}
+country_event = { 
+	id = paxsolaris.22
+	title = paxsolaris.22.t
+	desc = paxsolaris.22.d
+	picture = GFX_event_solarempire
+	is_triggered_only = yes
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event paxsolaris.22"
+		if = {
+			limit = {
+				21 = {
+					is_owned_and_controlled_by = EQS
+				}
+				89 = {
+					is_owned_and_controlled_by = BUF
+				}
+			}
+			89 = {
+				save_event_target_as = SOL_defender_state
+				set_variable = { BUF.SOL_defender_state_vs_@ROOT = id }
+				set_temp_variable = { defender_state_temp = id }
+			}
+			21 = {
+				save_event_target_as = SOL_attacker_state
+				set_variable = { BUF.SOL_attacker_state_vs_@ROOT = id }
+				set_temp_variable = { SOL_attacker_state_temp = id }
+			}
+		}
+		else = {
+			hidden_effect = {
+				random_state = {
+					limit = {
+						is_owned_and_controlled_by = BUF
+						any_neighbor_state = {
+							is_fully_controlled_by = ROOT
+						}
+					}
+					save_event_target_as = SOL_defender_state
+					set_variable = { BUF.SOL_defender_state_vs_@ROOT = id }
+					set_temp_variable = { defender_state_temp = id }
+				}
+				random_state = {
+					limit = {
+						is_fully_controlled_by = ROOT
+						any_neighbor_state = {
+							state = var:BUF.SOL_defender_state_vs_@ROOT
+						}
+					}
+					save_event_target_as = SOL_attacker_state
+					set_variable = { BUF.SOL_attacker_state_vs_@ROOT = id }
+					set_temp_variable = { SOL_attacker_state_temp = id }
+				}
+			}
+		}
+	}
+	option = { 
+		name = paxsolaris.22.a 
+		activate_targeted_decision = { target = BUF decision = SOL_attack_buf } 
+		effect_tooltip = {
+			start_border_war = {
+				change_state_after_war = no
+				attacker = {
+					state = var:BUF.SOL_attacker_state_vs_@ROOT
+					num_provinces = 4
+					on_win = paxsolaris.23
+					on_lose = paxsolaris.24
+					on_cancel = paxsolaris.24
+				}
+
+				defender = {
+					state = var:BUF.SOL_defender_state_vs_@ROOT
+					num_provinces = 4
+					on_win = paxsolaris.25
+					on_cancel = paxsolaris.25
+				}
+			}
+		}
+	}
+}
+
+country_event = { #Border war win, Solar Empire.
+	id = paxsolaris.23 
+	title = paxsolaris.23.t
+	desc = paxsolaris.23.d
+	picture = GFX_event_solarempire
+	is_triggered_only = yes
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event paxsolaris.23" 
+		hidden_effect = {
+			EQS = {
+				annex_country = { target = BUF }
+				add_state_core = 89
+				add_state_core = 78
+				add_state_core = 93
+				add_state_core = 80
+			}
+		}
+	}
+	option = { 
+		name = paxsolaris.23.a
+		add_to_variable = { var = daybreaker_support value = 3 }
+		custom_effect_tooltip = paxsolaris_loyalty_increase_3
+		custom_effect_tooltip = paxsolaris_23
+		hidden_effect = { SOL_calculate_loyalty = yes }
+		set_province_name = {
+			id = 6415
+			name = "New Rockville"
+		}
+	}
+}
+country_event = { #Border war lose, Solar Empire
+	id = paxsolaris.24
+	title = paxsolaris.24.t
+	desc = paxsolaris.24.d
+	picture = GFX_event_solarempire
+	is_triggered_only = yes
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event paxsolaris.24" 
+		hidden_effect = {
+			SOL_calculate_probability = yes
+		}
+	}
+	option = { 
+		name = paxsolaris.24.a
+		custom_effect_tooltip = paxsolaris_24_tt
+		custom_effect_tooltip = paxsolaris_resistance_strength_increase
+		ai_chance = { 
+			factor = 10
+		}
+		add_to_variable = { var = solar_resistance_actions_progress value = 1 }
+		if = {
+			limit = {
+				check_variable = { probability_check > pr_nightmare }
+			}
+			add_to_variable = { var = daybreaker_support value = -5 }
+			custom_effect_tooltip = paxsolaris_loyalty_decrease_5
+		}
+		add_political_power = -100
+		add_stability = -0.05
+		hidden_effect = { SOL_calculate_loyalty = yes }
+	}
+	option = { 
+		name = paxsolaris.24.b
+		custom_effect_tooltip = paxsolaris_24_tt
+		custom_effect_tooltip = paxsolaris_resistance_strength_increase
+		ai_chance = { 
+			factor = 1
+			modifier = {
+				add = 100
+				check_variable = { solar_military_support > 2 }
+			}
+		}
+		add_to_variable = { var = solar_resistance_actions_progress value = 1 }
+		if = {
+			limit = {
+				check_variable = { probability_check > pr_nightmare }
+			}
+			add_to_variable = { var = daybreaker_support value = -5 }
+			custom_effect_tooltip = paxsolaris_loyalty_decrease_5
+		}
+		add_political_power = -100
+		add_stability = -0.05
+		hidden_effect = { SOL_calculate_loyalty = yes }
+		create_wargoal = {
+			type = annex_everything
+			target = BUF
+		}
+	}
+}
+country_event = { #Border war win, Buffalo
+	id = paxsolaris.25
+	title = paxsolaris.25.t
+	desc = paxsolaris.25.d
+	picture = GFX_event_solarempire
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName]: event paxsolaris.25" }
+	option = { 
+		name = paxsolaris.25.a
+	}
+}
+country_event = { #Add Buffalo Resistance
+	id = paxsolaris.26
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event paxsolaris.26" 
+		hidden_effect = {
+			set_province_name = {
+				id = 6415
+				name = "New Rockville"
+			}
+		}
+	}
+	title = paxsolaris.26.t
+	desc = paxsolaris.26.d
+	picture = GFX_sol_buffalo
+	fire_only_once = yes
+	trigger = {
+		is_SOLAR_EMPIRE = yes
+		89 = { is_owned_and_controlled_by = ROOT NOT = { has_state_flag = eqs_buffalo_state } }
+		78 = { is_owned_and_controlled_by = ROOT NOT = { has_state_flag = eqs_buffalo_state } }
+		93 = { is_owned_and_controlled_by = ROOT NOT = { has_state_flag = eqs_buffalo_state } }
+		80 = { is_owned_and_controlled_by = ROOT NOT = { has_state_flag = eqs_buffalo_state } }
+	}
+
+	mean_time_to_happen = {
+		days = 40
+	}
+
+	option = {
+		name = paxsolaris.26.a #Do nothing
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 0.2
+				has_global_flag = EQS_evil_celestia
+			}
+		}
+		add_stability = -0.05
+		set_country_flag = SOL_buffalo_problems_flag_nothing
+		add_to_variable = { var = solar_resistance_actions_progress value = 1 }
+		custom_effect_tooltip = paxsolaris_resistance_strength_increase
+		every_state = {
+			limit = {
+				OR = {
+					state = 89
+					state = 78
+					state = 93
+					state = 80
+				}
+			}
+			remove_core_of = ROOT
+			add_claim_by = ROOT
+			set_state_flag = eqs_buffalo_state
+		}
+		hidden_effect = { SOL_calculate_loyalty = yes }
+		custom_effect_tooltip = paxsolaris_government_consolidation_decrease_southwest
+		set_variable = { var = SOL_equus_map_southwest_local_resistance value = -1 }
+		hidden_effect = { SOL_calculate_region_development = yes }
+	}
+	option = {
+		name = paxsolaris.26.b #Work camps
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.2
+				has_global_flag = EQS_evil_celestia
+			}
+		}
+		set_country_flag = SOL_buffalo_problems_flag_work
+		add_to_variable = { var = solar_military_measures_progress value = -1 }
+		custom_effect_tooltip = paxsolaris_military_consolidation_decrease
+		89 = {
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = industrial_complex
+				level = 3
+				instant_build = yes
+			}
+		}
+		78 = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+		89 = { set_state_flag = eqs_buffalo_state }
+		78 = { set_state_flag = eqs_buffalo_state }
+		93 = { set_state_flag = eqs_buffalo_state }
+		80 = { set_state_flag = eqs_buffalo_state }
+		hidden_effect = { SOL_calculate_loyalty = yes }
+	}
+	option = {
+		name = paxsolaris.26.c #Genocide
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.2
+				check_variable = { solar_resistance_outreach_strength > 3 }
+			}
+		}
+		set_country_flag = SOL_buffalo_problems_flag_genocide
+		add_to_variable = { var = solar_military_measures_progress value = -1 }
+		add_timed_idea = {
+			idea = SOL_buffalo_genocide
+			days = 60
+		}
+		custom_effect_tooltip = paxsolaris_military_consolidation_decrease
+		custom_effect_tooltip = paxsolaris_26_c
+		effect_tooltip = {
+			add_stability = 0.05
+			save_current_manpower = yes
+			89 = {
+				add_manpower = -200000
+			}
+			78 = {
+				add_manpower = -120000
+			}
+			93 = {
+				add_manpower = -30000
+			}
+			80 = {
+				add_manpower = -10000
+			}
+			restore_previous_manpower = yes
+		}
+		89 = { set_state_flag = eqs_buffalo_state }
+		78 = { set_state_flag = eqs_buffalo_state }
+		93 = { set_state_flag = eqs_buffalo_state }
+		80 = { set_state_flag = eqs_buffalo_state }
+		hidden_effect = { 
+			SOL_calculate_loyalty = yes 
+			country_event = {
+				id = paxsolaris.27
+				days = 30
+			}
+		}
+	}
+}
+country_event = { 
+	id = paxsolaris.27
+	title = paxsolaris.27.t
+	desc = paxsolaris.27.d
+	picture = GFX_event_solarempire
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName]: event paxsolaris.27" }
+	option = { 
+		name = paxsolaris.27.a
+		country_event = {
+			id = paxsolaris.28
+		}
+	}
+}
+country_event = { 
+	id = paxsolaris.28
+	title = paxsolaris.28.t
+	desc = paxsolaris.28.d
+	picture = GFX_event_solarempire
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName]: event paxsolaris.28" }
+	option = { 
+		name = paxsolaris.28.a
+	}
+}
+country_event = { #Successful Genocide
+	id = paxsolaris.29
+	title = paxsolaris.29.t
+	desc = paxsolaris.29.d
+	picture = GFX_event_solarempire
+	is_triggered_only = yes
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event paxsolaris.29" 
+		hidden_effect = {
+			add_stability = 0.05
+			save_current_manpower = yes
+			89 = {
+				add_manpower = -200000
+			}
+			78 = {
+				add_manpower = -120000
+			}
+			93 = {
+				add_manpower = -30000
+			}
+			80 = {
+				add_manpower = -10000
+			}
+			restore_previous_manpower = yes
+		}
+	}
+	option = { 
+		name = paxsolaris.29.a
+		every_state = {
+			limit = { is_core_of = BUF }
+			BUF = { remove_state_core = PREV }
+		}
+		hidden_effect = {
+			every_state = {
+				limit = { is_claimed_by = BUF }
+				BUF = { remove_state_claim = PREV }
+			}
+		}
+	}
+}
+country_event = { 
+	id = paxsolaris.30
+	title = paxsolaris.30.t
+	desc = paxsolaris.30.d
+	picture = GFX_event_solarempire
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName]: event paxsolaris.30" }
+	option = { 
+		name = paxsolaris.30.a
+		country_event = {
+			id = paxsolaris.31
+		}
+	}
+}
+country_event = { 
+	id = paxsolaris.31
+	title = paxsolaris.31.t
+	desc = paxsolaris.31.d
+	picture = GFX_event_solarempire
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName]: event paxsolaris.31" }
+	option = { 
+		name = paxsolaris.31.a
+		hidden_effect = {
+			country_event = {
+				id = paxsolaris.200
+				days = 5
+			}
+		}
+	}
+}
+
+country_event = { 
+	id = paxsolaris.32
+	title = paxsolaris.32.t
+	desc = paxsolaris.32.d
+	picture = GFX_event_solarempire
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName]: event paxsolaris.32" }
+	option = { 
+		name = paxsolaris.32.a
+		custom_effect_tooltip = paxsolaris_resistance_suppression_increase
+		ai_chance = { 
+			factor = 1
+			modifier = {
+				add = 10
+				check_variable = { daybreaker_support > 40 }
+			}
+		}
+		hidden_effect = {
+			add_to_variable = { var = solar_resistance_suppression_progress value = 1 }
+			SOL_calculate_loyalty = yes
+		}
+	}
+	option = { 
+		name = paxsolaris.32.b
+		custom_effect_tooltip = paxsolaris_information_suppression_increase
+		ai_chance = { 
+			factor = 1
+			modifier = {
+				add = 10
+				check_variable = { daybreaker_support < 40 }
+			}
+		}
+		hidden_effect = {
+			add_to_variable = { var = solar_resistance_outreach_suppression_progress value = 1 }
+			SOL_calculate_loyalty = yes
+		}
+	}
+}
+
+country_event = { 
+	id = paxsolaris.33
+	title = paxsolaris.33.t
+	desc = paxsolaris.33.d
+	picture = GFX_event_solarempire
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName]: event paxsolaris.33" }
+	option = { 
+		name = paxsolaris.33.a
+		custom_effect_tooltip = paxsolaris_government_consolidation_increase
+		ai_chance = { 
+			factor = 10
+		}
+		hidden_effect = {
+			add_to_variable = { var = solar_civilian_measures_progress value = 1 }
+			SOL_calculate_loyalty = yes
+		}
+	}
+	option = { 
+		name = paxsolaris.33.b
+		custom_effect_tooltip = paxsolaris_resistance_suppression_increase
+		ai_chance = { 
+			factor = 1
+		}
+		hidden_effect = {
+			add_to_variable = { var = solar_resistance_suppression_progress value = 1 }
+			SOL_calculate_loyalty = yes
+		}
+	}
+}
+
+country_event = { 
+	id = paxsolaris.34
+	title = paxsolaris.34.t
+	desc = paxsolaris.34.d
+	picture = GFX_event_papers_please
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName]: event paxsolaris.34" }
+	option = { 
+		name = paxsolaris.34.a
+	}
+}
+country_event = { 
+	id = paxsolaris.35
+	title = paxsolaris.35.t
+	desc = paxsolaris.35.d
+	picture = GFX_event_solarempire
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName]: event paxsolaris.35" }
+	option = { 
+		name = paxsolaris.35.a
+	}
+}
+country_event = { 
+	id = paxsolaris.36
+	title = paxsolaris.36.t
+	desc = paxsolaris.36.d
+	picture = GFX_inquisition_stamp
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName]: event paxsolaris.36" }
+	option = { 
+		name = paxsolaris.36.a
+	}
+}
+country_event = { 
+	id = paxsolaris.37
+	title = paxsolaris.37.t
+	desc = paxsolaris.37.d
+	picture = GFX_event_solarempire
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName]: event paxsolaris.37" }
+	option = { 
+		name = paxsolaris.37.a
+		add_to_variable = { var = solar_civilian_measures value = 3 }
+		add_to_variable = { var = solar_military_measures value = 3 }
+		add_to_variable = { var = solar_resistance_suppression value = -3 }
+		add_to_variable = { var = solar_resistance_outreach_suppression value = -3 }
+		add_to_variable = { var = solar_resistance_cohesion_suppression value = -3 }
+		custom_effect_tooltip = civilianresistanceaction_decrease_3
+		custom_effect_tooltip = militaryresistanceaction_decrease_3
+		custom_effect_tooltip = resistanceaction_decrease_3
+		custom_effect_tooltip = resistanceoutreachaction_decrease_3
+		custom_effect_tooltip = resistancecohesionaction_decrease_3
+		hidden_effect = { SOL_calculate_loyalty = yes }
+	}
+}
+country_event = { 
+	id = paxsolaris.38
+	title = paxsolaris.38.t
+	desc = paxsolaris.38.d
+	picture = GFX_event_solarempire
+	fire_only_once = yes
+	trigger = {
+		NOT = { has_war_with = event_target:sol_resistance_enemy }
+		has_country_flag = resistance_ceasefire
+	}
+	immediate = { log = "[GetDateText]: [Root.GetName]: event paxsolaris.38" }
+	option = { 
+		name = paxsolaris.38.a
+		add_to_variable = { var = solar_civilian_measures value = -3 }
+		add_to_variable = { var = solar_military_measures value = -3 }
+		add_to_variable = { var = solar_resistance_suppression value = 3 }
+		add_to_variable = { var = solar_resistance_outreach_suppression value = 3 }
+		add_to_variable = { var = solar_resistance_cohesion_suppression value = 3 }
+		custom_effect_tooltip = civilianresistanceaction_increase_3
+		custom_effect_tooltip = militaryresistanceaction_increase_3
+		custom_effect_tooltip = resistanceaction_increase_3
+		custom_effect_tooltip = resistanceoutreachaction_increase_3
+		custom_effect_tooltip = resistancecohesionaction_increase_3
+		clr_country_flag = resistance_ceasefire
+		hidden_effect = { SOL_calculate_loyalty = yes }
+	}
+}
+country_event = { 
+	id = paxsolaris.39
+	title = paxsolaris.39.t
+	desc = paxsolaris.39.d
+	picture = GFX_event_solarempire
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName]: event paxsolaris.39" }
+	option = { 
+		name = paxsolaris.39.a
+		ai_chance = { 
+			factor = 1
+			modifier = {
+				add = 10
+				check_variable = { solar_civilian_support < solar_military_support }
+			}
+		}
+		custom_effect_tooltip = paxsolaris_government_consolidation_increase
+		hidden_effect = {
+			add_to_variable = { var = solar_civilian_measures_progress value = 1 }
+			SOL_calculate_loyalty = yes
+		}
+	}
+	option = { 
+		name = paxsolaris.39.b
+		custom_effect_tooltip = paxsolaris_military_consolidation_increase
+		ai_chance = { 
+			factor = 1
+			modifier = {
+				add = 10
+				check_variable = { solar_civilian_support > solar_military_support }
+			}
+		}
+		hidden_effect = {
+			add_to_variable = { var = solar_military_measures_progress value = 1 }
+			SOL_calculate_loyalty = yes
+		}
+	}
+}
+country_event = { 
+	id = paxsolaris.40
+	title = paxsolaris.40.t
+	desc = paxsolaris.40.d
+	picture = GFX_event_solarempire
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName]: event paxsolaris.40" }
+	option = { 
+		name = paxsolaris.40.a
+		custom_effect_tooltip = paxsolaris_government_consolidation_increase
+		ai_chance = { 
+			factor = 10
+		}
+		hidden_effect = {
+			add_to_variable = { var = solar_civilian_measures_progress value = 1 }
+			SOL_calculate_loyalty = yes
+		}
+	}
+	option = { 
+		name = paxsolaris.40.b
+		custom_effect_tooltip = paxsolaris_resistance_suppression_increase
+		ai_chance = { 
+			factor = 1
+			modifier = {
+				add = 9
+				has_completed_focus = SOL_god_empress
+			}
+		}
+		hidden_effect = {
+			add_to_variable = { var = solar_resistance_suppression_progress value = 1 }
+			SOL_calculate_loyalty = yes
+		}
+	}
+}
+news_event = {
+	id = paxsolaris.41 
+	immediate = { log = "[GetDateText]: [Root.GetName]: event paxsolaris.41" }
+	title = paxsolaris.41.t 
+	desc = paxsolaris.41.d 
+	is_triggered_only = yes
+	picture = GFX_news_event_changeling_hive
+	major = no
+	option = { 
+		name = paxsolaris.41.a
+	}
+}
+country_event = { 
+	id = paxsolaris.42
+	title = paxsolaris.42.t
+	desc = paxsolaris.42.d
+	picture = GFX_inquisition_stamp
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName]: event paxsolaris.42" }
+	option = { 
+		name = paxsolaris.42.a
+	}
+}
+country_event = { 
+	id = paxsolaris.43
+	title = paxsolaris.43.t
+	desc = paxsolaris.43.d
+	picture = GFX_inquisition_stamp
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName]: event paxsolaris.43" }
+	option = { 
+		name = paxsolaris.43.a
+	}
+}
+country_event = { 
+	id = paxsolaris.44
+	title = paxsolaris.44.t
+	desc = paxsolaris.44.d
+	picture = GFX_inquisition_stamp
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName]: event paxsolaris.44" }
+	option = { 
+		name = paxsolaris.44.a
+	}
+}
+
+country_event = { #Add bat resistance
+	id = paxsolaris.45
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event paxsolaris.45"
+		hidden_effect = {
+			add_stability = -0.05
+			set_country_flag = SOL_bat_problems_flag
+			every_state = {
+				limit = {
+					OR = {
+						state = 40
+						state = 31
+						state = 36
+						state = 24
+						state = 81
+						state = 350
+						state = 32
+						state = 25
+						state = 83
+						state = 30
+						state = 353
+						state = 52
+						state = 79
+						state = 35
+					}
+					is_owned_and_controlled_by = ROOT
+				}
+				remove_core_of = ROOT
+				add_claim_by = ROOT
+				set_state_flag = eqs_bat_state
+			}
+		}
+	}
+	title = solarempire.44.t
+	desc = solarempire.44.d
+	picture = GFX_event_bat_ponies
+	fire_only_once = yes
+	trigger = {
+		is_SOLAR_EMPIRE = yes
+		has_war = no
+		OR = {
+			40 = { is_owned_and_controlled_by = ROOT NOT = { has_state_flag = eqs_bat_state } }
+			31 = { is_owned_and_controlled_by = ROOT NOT = { has_state_flag = eqs_bat_state } }
+			36 = { is_owned_and_controlled_by = ROOT NOT = { has_state_flag = eqs_bat_state } }
+			24 = { is_owned_and_controlled_by = ROOT NOT = { has_state_flag = eqs_bat_state } }
+			81 = { is_owned_and_controlled_by = ROOT NOT = { has_state_flag = eqs_bat_state } }
+			350 = { is_owned_and_controlled_by = ROOT NOT = { has_state_flag = eqs_bat_state } }
+			32 = { is_owned_and_controlled_by = ROOT NOT = { has_state_flag = eqs_bat_state } }
+			25 = { is_owned_and_controlled_by = ROOT NOT = { has_state_flag = eqs_bat_state } }
+			83 = { is_owned_and_controlled_by = ROOT NOT = { has_state_flag = eqs_bat_state } }
+			30 = { is_owned_and_controlled_by = ROOT NOT = { has_state_flag = eqs_bat_state } }
+			353 = { is_owned_and_controlled_by = ROOT NOT = { has_state_flag = eqs_bat_state } }
+			52 = { is_owned_and_controlled_by = ROOT NOT = { has_state_flag = eqs_bat_state } }
+			79 = { is_owned_and_controlled_by = ROOT NOT = { has_state_flag = eqs_bat_state } }
+			35 = { is_owned_and_controlled_by = ROOT NOT = { has_state_flag = eqs_bat_state } }
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 7
+	}
+
+	option = {
+		name = solarempire.44.a
+		effect_tooltip = {
+			add_stability = -0.05
+			set_country_flag = SOL_bat_problems_flag
+			every_state = {
+				limit = {
+					OR = {
+						state = 40
+						state = 31
+						state = 36
+						state = 24
+						state = 81
+						state = 350
+						state = 32
+						state = 25
+						state = 83
+						state = 30
+						state = 353
+						state = 52
+						state = 79
+						state = 35
+					}
+					is_owned_and_controlled_by = ROOT
+				}
+				remove_core_of = ROOT
+				add_claim_by = ROOT
+				set_state_flag = eqs_bat_state
+			}
+		}
+		add_to_variable = { var = solar_resistance_actions_progress value = 1 }
+		set_variable = { var = SOL_equus_map_southeast_local_resistance value = -1 }
+		custom_effect_tooltip = paxsolaris_resistance_strength_increase
+		hidden_effect = { SOL_calculate_loyalty = yes }
+		custom_effect_tooltip = paxsolaris_government_consolidation_decrease_southeast
+		hidden_effect = { SOL_calculate_region_development = yes }
+	}
+}
+country_event = {
+	id = paxsolaris.50
+	title = paxsolaris.50.t
+	picture = GFX_event_ponies_cheering
+	is_triggered_only = yes
+	
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event paxsolaris.50"
+		hidden_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = event_target:solar_empire
+					NOT = { state = 3 }
+					is_owned_and_controlled_by = event_target:solar_empire
+				}
+				save_global_event_target_as = SOL_benevolent_event_in_state
+			}
+		}
+	}
+	desc = paxsolaris.50.d
+	option = {
+		name = paxsolaris.50.a
+		custom_effect_tooltip = paxsolaris_loyalty_increase_2
+		add_to_variable = { var = daybreaker_support value = 2 }
+		add_to_variable = { var = paxsolaris_50 value = 1 }
+		hidden_effect = { 
+			SOL_calculate_loyalty = yes 
+			set_country_flag = {
+				flag = SOL_benevolent_public_timeout
+				days = 30
+				value = 1
+			}
+		}
+	}
+}
+country_event = {
+	id = paxsolaris.51
+	title = paxsolaris.51.t
+	picture = GFX_event_pony_counterprotest
+	is_triggered_only = yes
+
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event paxsolaris.51"
+		hidden_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = event_target:solar_empire
+					NOT = { state = 3 }
+					NOT = { has_state_flag = SOL_ongoing_uprising }
+					NOT = { has_state_flag = SOL_overrun_by_resistance }
+					is_owned_and_controlled_by = event_target:solar_empire
+					state_strategic_value > 50
+				}
+				save_global_event_target_as = SOL_protest_event_in_state
+			}
+			set_country_flag = protest_happening
+			SOL_calculate_probability = yes
+			set_temp_variable = { daybreaker_support_calculation_temp = daybreaker_support }
+			multiply_temp_variable = { daybreaker_support_calculation_temp = 0.01 }
+			if = {
+				limit = { has_country_flag = volunteer_militias }
+				add_to_temp_variable = { var = daybreaker_support_calculation_temp value = 0.2 }
+			}
+			if = {
+				limit = { check_variable = { daybreaker_support_calculation_temp > probability_check } }
+				set_country_flag = SOL_counterprotest
+			}
+		}
+	}
+	desc = { 
+		text = paxsolaris.51.d_riot
+		trigger = {
+			NOT = { has_country_flag = SOL_counterprotest }
+		}
+	}
+	desc = { 
+		text = paxsolaris.51.d_counterprotest
+		trigger = {
+			has_country_flag = SOL_counterprotest
+		}
+	}
+	option = {
+		name = paxsolaris.51.a #Let them fight
+		ai_chance = { 
+			factor = 10
+			modifier = {
+				factor = 10
+				check_variable = { daybreaker_support < 40 }
+			}
+		}
+		hidden_effect = {
+			random_list = {
+				50 = {
+					country_event = {
+						id = paxsolaris.52 #Protestors win, break shit and aid resistance
+						days = 2
+					}
+				}
+				50 = {
+					modifier = {
+						factor = 0
+						NOT = { has_country_flag = SOL_counterprotest }
+					}
+					country_event = {
+						id = paxsolaris.53 #Counterprotesters win
+						days = 2
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = paxsolaris.51.b #Send in the police
+		ai_chance = { 
+			factor = 10
+			modifier = {
+				add = 1000
+				has_country_flag = SOL_counterprotest
+			}
+		}
+		hidden_effect = {
+			SOL_calculate_probability = yes
+			set_temp_variable = { resistance_strength_temp = solar_resistance_strength }
+			divide_temp_variable = { resistance_strength_temp = 5 }
+			add_to_variable = { resistance_strength_temp = -0.2 }
+			if = {
+				limit = { has_country_flag = SOL_counterprotest }
+				add_to_variable = { resistance_strength_temp = -0.5 }
+			}
+			if = { 
+				limit = { check_variable = { resistance_strength_temp > probability_check } }
+				country_event = {
+					id = paxsolaris.58 #Protestors win, break shit and aid resistance
+					days = 2
+				}
+			}
+			else {
+				country_event = {
+					id = paxsolaris.54 #Police win
+					days = 2
+				}
+			}
+		}
+	}
+	option = {
+		name = paxsolaris.51.c #Send in the military
+		ai_chance = { 
+			factor = 10
+		}
+		hidden_effect = {
+			random_list = {
+				70 = {
+					country_event = {
+						id = paxsolaris.55 #Military wins
+						days = 2
+					}
+				}
+				30 = {
+					modifier = {
+						factor = 0
+						NOT = { has_country_flag = SOL_counterprotest }
+					}
+					country_event = {
+						id = paxsolaris.56 #Counterprotesters win, military compliant
+						days = 2
+					}
+				}
+				30 = {
+					modifier = {
+						factor = 0
+						has_country_flag = SOL_counterprotest
+					}
+					country_event = {
+						id = paxsolaris.57 #Military refuses to shoot on protesters
+						days = 2
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = { #Resistance countained but destroying stuff
+	id = paxsolaris.52
+	title = paxsolaris.52.t
+	picture = GFX_event_pony_counterprotest
+	is_triggered_only = yes
+
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event paxsolaris.52"
+		hidden_effect = { 
+			set_country_flag = protest_resistance 
+			activate_mission = SOL_create_narrative
+		}
+	}
+	desc = { 
+		text = paxsolaris.52.d_riot
+		trigger = {
+			NOT = { has_country_flag = SOL_counterprotest }
+		}
+	}
+	desc = { 
+		text = paxsolaris.52.d_counterprotest
+		trigger = {
+			has_country_flag = SOL_counterprotest
+		}
+	}
+	option = { 
+		name = paxsolaris.52.a
+		custom_effect_tooltip = paxsolaris_resistance_strength_increase
+		add_to_variable = { var = solar_resistance_actions_progress value = 1 }
+		add_stability = -0.01
+		if = {
+			limit = { has_country_flag = SOL_counterprotest }
+			add_to_variable = { var = daybreaker_support value = -3 }
+			custom_effect_tooltip = paxsolaris_loyalty_decrease_3
+		}
+		event_target:SOL_protest_event_in_state = {
+			if = {
+				limit = { 
+					non_damaged_building_level = {
+						building = infrastructure
+						level > 2		
+					}
+				}
+				damage_building = {
+    				type = infrastructure
+   					damage = 2
+				}
+			}
+			if = {
+				limit = { 
+					non_damaged_building_level = {
+						building = arms_factory
+						level > 0		
+					}
+				}
+				damage_building = {
+    				type = arms_factory
+   					damage = 1
+				}
+			}
+			if = {
+				limit = { 
+					non_damaged_building_level = {
+						building = industrial_complex
+						level > 0		
+					}
+				}
+				damage_building = {
+    				type = industrial_complex
+   					damage = 1
+				}
+			}
+		}
+		hidden_effect = { 
+			SOL_calculate_loyalty = yes 
+			SOL_calculate_outreach_win_chance = yes
+		}
+	}
+}
+
+country_event = { #Counterprotestors win
+	id = paxsolaris.53
+	title = paxsolaris.53.t
+	desc = paxsolaris.53.d
+	picture = GFX_event_pony_counterprotest
+	is_triggered_only = yes
+
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event paxsolaris.53"
+		hidden_effect = { 
+			set_country_flag = protest_counterprotestors 
+			activate_mission = SOL_create_narrative
+		}
+		hidden_effect = {
+			SOL_calculate_leads_small = yes
+			add_to_variable = { var = SOL_lead_variable value = lead_counter }
+		}
+	}
+	option = { 
+		name = paxsolaris.53.a
+		custom_effect_tooltip = paxsolaris_leads_increase_riot
+		event_target:SOL_protest_event_in_state = {
+			if = {
+				limit = { 
+					non_damaged_building_level = {
+						building = infrastructure
+						level > 0		
+					}
+				}
+				damage_building = {
+    				type = infrastructure
+   					damage = 1
+				}
+			}
+			if = {
+				limit = { 
+					non_damaged_building_level = {
+						building = industrial_complex
+						level > 0		
+					}
+				}
+				damage_building = {
+    				type = industrial_complex
+   					damage = 1
+				}
+			}
+		}
+		hidden_effect = { SOL_calculate_outreach_win_chance = yes }
+	}
+}
+country_event = { #Police win
+	id = paxsolaris.54
+	title = paxsolaris.54.t
+	picture = GFX_event_pony_counterprotest
+	is_triggered_only = yes
+
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event paxsolaris.54"
+		hidden_effect = {
+			SOL_calculate_leads_small = yes
+			add_to_variable = { var = SOL_lead_variable value = lead_counter }
+		}
+		hidden_effect = { 
+			set_country_flag = protest_police 
+			activate_mission = SOL_create_narrative
+		}
+	}
+	desc = { 
+		text = paxsolaris.54.d_riot
+		trigger = {
+			NOT = { has_country_flag = SOL_counterprotest }
+		}
+	}
+	desc = { 
+		text = paxsolaris.54.d_counterprotest
+		trigger = {
+			has_country_flag = SOL_counterprotest
+		}
+	}
+	option = { 
+		name = paxsolaris.54.a
+		custom_effect_tooltip = paxsolaris_leads_increase_riot
+		hidden_effect = { SOL_calculate_outreach_win_chance = yes }
+	}
+}
+country_event = { #Military wins
+	id = paxsolaris.55
+	title = paxsolaris.55.t
+	picture = GFX_event_bazooka_team
+	is_triggered_only = yes
+
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event paxsolaris.55"
+		hidden_effect = {
+			SOL_calculate_leads_small = yes
+			add_to_variable = { var = SOL_lead_variable value = lead_counter }
+		}
+		hidden_effect = { 
+			set_country_flag = protest_military 
+			activate_mission = SOL_create_narrative
+		}
+	}
+	desc = { 
+		text = paxsolaris.55.d_riot
+		trigger = {
+			NOT = { has_country_flag = SOL_counterprotest }
+		}
+	}
+	desc = { 
+		text = paxsolaris.55.d_counterprotest
+		trigger = {
+			has_country_flag = SOL_counterprotest
+		}
+	}
+	option = { 
+		name = paxsolaris.55.a
+		custom_effect_tooltip = paxsolaris_leads_increase_riot
+		hidden_effect = { SOL_calculate_outreach_win_chance = yes }
+	}
+}
+country_event = { #Military likes milita
+	id = paxsolaris.56
+	title = paxsolaris.56.t
+	picture = GFX_event_bazooka_team
+	is_triggered_only = yes
+
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event paxsolaris.56"
+		hidden_effect = {
+			SOL_calculate_leads_small = yes
+			add_to_variable = { var = SOL_lead_variable value = lead_counter }
+		}
+		hidden_effect = { 
+			set_country_flag = protest_military 
+			activate_mission = SOL_create_narrative
+		}
+	}
+	
+	desc = paxsolaris.56.d
+	option = { 
+		name = paxsolaris.56.a
+		custom_effect_tooltip = paxsolaris_loyalty_increase_3
+		custom_effect_tooltip = paxsolaris_leads_increase_riot
+		add_to_variable = { var = daybreaker_support value = 3 }
+		hidden_effect = { 
+			SOL_calculate_loyalty = yes 
+			SOL_calculate_outreach_win_chance = yes
+		}
+	}
+}
+country_event = { #Military refuses to fire on resistance
+	id = paxsolaris.57
+	title = paxsolaris.57.t
+	picture = GFX_event_bazooka_team
+	is_triggered_only = yes
+
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event paxsolaris.57"
+		hidden_effect = { 
+			set_country_flag = protest_mutiny
+			activate_mission = SOL_create_narrative
+		}
+	}
+	desc = paxsolaris.57.d
+
+	option = { 
+		name = paxsolaris.57.a
+		custom_effect_tooltip = paxsolaris_resistance_strength_increase
+		custom_effect_tooltip = paxsolaris_loyalty_decrease_3
+		add_to_variable = { var = solar_resistance_actions_progress value = 1 }
+		add_to_variable = { var = daybreaker_support value = -3 }
+		add_stability = -0.01
+		event_target:SOL_protest_event_in_state = {
+			if = {
+				limit = { 
+					non_damaged_building_level = {
+						building = infrastructure
+						level > 2		
+					}
+				}
+				damage_building = {
+    				type = infrastructure
+   					damage = 2
+				}
+			}
+			if = {
+				limit = { 
+					non_damaged_building_level = {
+						building = arms_factory
+						level > 0		
+					}
+				}
+				damage_building = {
+    				type = arms_factory
+   					damage = 1
+				}
+			}
+			if = {
+				limit = { 
+					non_damaged_building_level = {
+						building = industrial_complex
+						level > 0		
+					}
+				}
+				damage_building = {
+    				type = industrial_complex
+   					damage = 1
+				}
+			}
+		}
+		hidden_effect = { 
+			SOL_calculate_loyalty = yes 
+			SOL_calculate_outreach_win_chance = yes
+		}
+	}
+}
+country_event = { #Uprising!
+	id = paxsolaris.58 
+	title = paxsolaris.58.t 
+	desc = paxsolaris.58.d
+
+	picture = GFX_event_manehatten_explosion
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event paxsolaris.58"
+		hidden_effect = {
+			event_target:SOL_protest_event_in_state = {
+				save_global_event_target_as = SOL_uprising_in_state_temp_target
+			}
+			SOL_decision_mission_target = yes
+			set_country_flag = protest_uprising
+			activate_mission = SOL_create_narrative
+		}
+	}
+	is_triggered_only = yes
+	option = {
+		name = paxsolaris.58.a
+		custom_effect_tooltip = paxsolaris_resistance_strength_increase
+		add_to_variable = { var = solar_resistance_actions_progress value = 1 }
+		add_stability = -0.025
+		effect_tooltip = {
+			activate_mission = SOL_state_uprising_decision
+		}
+		event_target:SOL_protest_event_in_state = {
+			if = {
+				limit = { 
+					non_damaged_building_level = {
+						building = infrastructure
+						level > 2		
+					}
+				}
+				damage_building = {
+					type = infrastructure
+					damage = 2
+				}
+			}
+			if = {
+				limit = { 
+					non_damaged_building_level = {
+						building = arms_factory
+						level > 0		
+					}
+				}
+				damage_building = {
+					type = arms_factory
+					damage = 1
+				}
+			}
+			if = {
+				limit = { 
+					non_damaged_building_level = {
+						building = industrial_complex
+						level > 0		
+					}
+				}
+				damage_building = {
+					type = industrial_complex
+					damage = 1
+				}
+			}
+		}
+		hidden_effect = { 
+			SOL_calculate_loyalty = yes 
+			SOL_calculate_outreach_win_chance = yes
+		}
+	}
+}
+country_event = { 
+	id = paxsolaris.59
+	title = paxsolaris.59.t
+
+	is_triggered_only = yes
+	picture = GFX_event_speech
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event paxsolaris.59"
+		hidden_effect = {
+			if = {
+				limit = { has_country_flag = SOL_has_narrative }
+				add_to_variable = { resistance_outreach_win_chance = -0.1 }
+			}
+			SOL_calculate_probability = yes
+			if = {
+				limit = { check_variable = { resistance_outreach_win_chance > probability_check } }
+				set_country_flag = SOL_resistance_media
+			}
+			else = {
+				set_country_flag = SOL_imperial_media
+			}
+		}
+	}
+
+	desc = { 
+		text = paxsolaris.59.d_1
+		trigger = {
+			has_country_flag = SOL_imperial_media
+			OR = {
+				has_country_flag = protest_resistance
+				has_country_flag = protest_counterprotestors
+				has_country_flag = protest_mutiny
+			}
+		}
+	}
+	desc = { 
+		text = paxsolaris.59.d_2
+		trigger = {
+			has_country_flag = SOL_resistance_media
+			OR = {
+				has_country_flag = protest_resistance
+				has_country_flag = protest_counterprotestors
+				has_country_flag = protest_mutiny
+			}
+		}
+	}
+	desc = { 
+		text = paxsolaris.59.d_3
+		trigger = {
+			has_country_flag = SOL_imperial_media
+			OR = {
+				has_country_flag = protest_military
+				has_country_flag = protest_police
+			}
+		}
+	}
+	desc = { 
+		text = paxsolaris.59.d_4
+		trigger = {
+			has_country_flag = SOL_resistance_media
+			OR = {
+				has_country_flag = protest_military
+				has_country_flag = protest_police
+			}
+		}
+	}
+	desc = { 
+		text = paxsolaris.59.d_5
+		trigger = {
+			has_country_flag = SOL_imperial_media
+			has_country_flag = protest_uprising
+		}
+	}
+	desc = { 
+		text = paxsolaris.59.d_6
+		trigger = {
+			has_country_flag = SOL_resistance_media
+			has_country_flag = protest_uprising
+		}
+	}
+	option = {
+		trigger = {
+			has_country_flag = SOL_imperial_media
+		}
+		name = paxsolaris.59.a
+		custom_effect_tooltip = paxsolaris_loyalty_increase_3
+		add_to_variable = { var = daybreaker_support value = 3 }
+		hidden_effect = { SOL_calculate_loyalty = yes }
+		hidden_effect = {
+			clr_country_flag = protest_resistance
+			clr_country_flag = protest_counterprotestors 
+			clr_country_flag = protest_mutiny 
+			clr_country_flag = protest_military
+			clr_country_flag = protest_police
+			clr_country_flag = protest_uprising
+			clr_country_flag = SOL_resistance_media
+			clr_country_flag = SOL_imperial_media
+			clr_country_flag = protest_happening
+			clr_country_flag = SOL_has_narrative
+			clr_country_flag = SOL_counterprotest
+			set_country_flag = {
+				flag = protest_timeout
+				days = 60
+				value = 1
+			}
+		}
+
+	}
+	option = {
+		trigger = {
+			has_country_flag = SOL_resistance_media
+		}
+		name = paxsolaris.59.b
+		custom_effect_tooltip = paxsolaris_loyalty_decrease_3
+		add_to_variable = { var = daybreaker_support value = -3}
+		hidden_effect = { SOL_calculate_loyalty = yes }
+		hidden_effect = {
+			clr_country_flag = protest_resistance
+			clr_country_flag = protest_counterprotestors 
+			clr_country_flag = protest_mutiny 
+			clr_country_flag = protest_military
+			clr_country_flag = protest_police
+			clr_country_flag = protest_uprising
+			clr_country_flag = SOL_resistance_media
+			clr_country_flag = SOL_imperial_media
+			clr_country_flag = protest_happening
+			clr_country_flag = SOL_has_narrative
+			clr_country_flag = SOL_counterprotest
+			set_country_flag = {
+				flag = protest_timeout
+				days = 60
+				value = 1
+			}
+		}
+	}
+}
+
+#Resistance action events
+country_event = { 
+	id = paxsolaris.60
+	title = paxsolaris.60.t
+
+	is_triggered_only = yes
+	picture = GFX_event_speech
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event paxsolaris.60"
+		hidden_effect = {
+			SOL_calculate_propaganda_win_chance = yes 
+			SOL_calculate_probability = yes
+			if = {
+				limit = { check_variable = { resistance_propaganda_win_chance > probability_check } }
+				set_country_flag = SOL_resistance_propaganda
+				add_to_variable = { var = solar_resistance_outreach_actions_progress value = 1 }
+			}
+			else = {
+				set_country_flag = SOL_imperial_propaganda		
+			}
+		}
+		if = {
+			limit = { has_country_flag = SOL_imperial_propaganda }
+			hidden_effect = {
+				SOL_calculate_leads_small = yes
+				add_to_variable = { var = SOL_lead_variable value = lead_counter }
+			}
+		}
+	}
+
+	desc = { 
+		text = paxsolaris.60.d_1
+		trigger = {
+			has_country_flag = SOL_imperial_propaganda
+		}
+	}
+	desc = { 
+		text = paxsolaris.60.d_2
+		trigger = {
+			has_country_flag = SOL_resistance_propaganda
+		}
+	}
+	option = {
+		trigger = {
+			has_country_flag = SOL_imperial_propaganda
+		}
+		custom_effect_tooltip = paxsolaris_leads_increase_riot
+		name = paxsolaris.60.a
+		hidden_effect = {
+			clr_country_flag = SOL_resistance_propaganda
+			clr_country_flag = SOL_imperial_propaganda
+		}
+
+	}
+	option = {
+		trigger = {
+			has_country_flag = SOL_resistance_propaganda
+		}
+		name = paxsolaris.60.b
+		custom_effect_tooltip = paxsolaris_resistance_outreach_increase
+		hidden_effect = { SOL_calculate_loyalty = yes }
+		hidden_effect = {
+			clr_country_flag = SOL_resistance_propaganda
+			clr_country_flag = SOL_imperial_propaganda
+		}
+	}
+}
+country_event = { 
+	id = paxsolaris.61
+	title = paxsolaris.61.t
+
+	is_triggered_only = yes
+	picture = GFX_event_supplies
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event paxsolaris.61"
+		hidden_effect = {
+			SOL_calculate_civilian_event_win_chance = yes
+			SOL_calculate_probability = yes
+			if = { 
+				limit = { check_variable = { resistance_civilian_event_win_chance > probability_check } }
+				set_country_flag = SOL_imperial_supply
+			}
+			else = {
+				set_country_flag = SOL_resistance_supply
+				add_to_variable = { var = solar_resistance_actions_progress value = 1 }
+			}
+		}
+		if = {
+			limit = { has_country_flag = SOL_imperial_supply }
+			hidden_effect = {
+				SOL_calculate_leads_small = yes
+				add_to_variable = { var = SOL_lead_variable value = lead_counter }
+			}
+		}
+	}
+
+	desc = { 
+		text = paxsolaris.61.d_1
+		trigger = {
+			has_country_flag = SOL_imperial_supply
+		}
+	}
+	desc = { 
+		text = paxsolaris.61.d_2
+		trigger = {
+			has_country_flag = SOL_resistance_supply
+		}
+	}
+	option = {
+		trigger = {
+			has_country_flag = SOL_imperial_supply
+		}
+		custom_effect_tooltip = paxsolaris_leads_increase_riot
+		name = paxsolaris.61.a
+		hidden_effect = {
+			clr_country_flag = SOL_resistance_supply
+			clr_country_flag = SOL_imperial_supply
+		}
+
+	}
+	option = {
+		trigger = {
+			has_country_flag = SOL_resistance_supply
+		}
+		custom_effect_tooltip = paxsolaris_resistance_strength_increase
+		name = paxsolaris.61.b
+		send_equipment = {
+			equipment = support_equipment
+			amount = 1000
+			target = ELF
+		}
+		hidden_effect = { SOL_calculate_loyalty = yes }
+		hidden_effect = {
+			clr_country_flag = SOL_resistance_supply
+			clr_country_flag = SOL_imperial_supply
+		}
+	}
+}
+country_event = { 
+	id = paxsolaris.62
+	title = paxsolaris.62.t
+
+	is_triggered_only = yes
+	picture = GFX_event_bat_soldier2
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event paxsolaris.62"
+		hidden_effect = {
+			SOL_calculate_civilian_event_win_chance = yes
+			SOL_calculate_probability = yes
+			if = { 
+				limit = { check_variable = { resistance_civilian_event_win_chance > probability_check } }
+				set_country_flag = SOL_imperial_warehouse
+			}
+			else = {
+				set_country_flag = SOL_resistance_warehouse
+				add_to_variable = { var = solar_resistance_actions_progress value = 1 }
+			}
+		}
+		if = {
+			limit = { has_country_flag = SOL_imperial_warehouse }
+			hidden_effect = {
+				SOL_calculate_leads_small = yes
+				add_to_variable = { var = SOL_lead_variable value = lead_counter }
+			}
+		}
+	}
+
+	desc = { 
+		text = paxsolaris.62.d_1
+		trigger = {
+			has_country_flag = SOL_imperial_warehouse
+		}
+	}
+	desc = { 
+		text = paxsolaris.62.d_2
+		trigger = {
+			has_country_flag = SOL_resistance_warehouse
+		}
+	}
+	option = {
+		trigger = {
+			has_country_flag = SOL_imperial_warehouse
+		}
+		name = paxsolaris.62.a
+		custom_effect_tooltip = paxsolaris_leads_increase_riot
+		hidden_effect = {
+			clr_country_flag = SOL_resistance_warehouse
+			clr_country_flag = SOL_imperial_warehouse
+		}
+
+	}
+	option = {
+		trigger = {
+			has_country_flag = SOL_resistance_warehouse
+		}
+		name = paxsolaris.62.b
+		custom_effect_tooltip = paxsolaris_resistance_strength_increase
+		hidden_effect = { SOL_calculate_loyalty = yes }
+		hidden_effect = {
+			clr_country_flag = SOL_resistance_warehouse
+			clr_country_flag = SOL_imperial_warehouse
+		}
+	}
+}
+country_event = { 
+	id = paxsolaris.63
+	title = paxsolaris.63.t
+
+	is_triggered_only = yes
+	picture = GFX_event_bazooka_team
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event paxsolaris.63"
+		hidden_effect = {
+			SOL_calculate_military_event_win_chance = yes
+			SOL_calculate_probability = yes
+			if = { 
+				limit = { check_variable = { resistance_military_event_win_chance > probability_check } }
+				set_country_flag = SOL_imperial_recruitment
+			}
+			else = {
+				set_country_flag = SOL_resistance_recruitment
+				add_to_variable = { var = solar_resistance_actions_progress value = 1 }
+			}
+		}
+		if = {
+			limit = { has_country_flag = SOL_imperial_recruitment }
+			hidden_effect = {
+				SOL_calculate_leads_small = yes
+				add_to_variable = { var = SOL_lead_variable value = lead_counter }
+			}
+		}
+	}
+
+	desc = { 
+		text = paxsolaris.63.d_1
+		trigger = {
+			has_country_flag = SOL_imperial_recruitment
+		}
+	}
+	desc = { 
+		text = paxsolaris.63.d_2
+		trigger = {
+			has_country_flag = SOL_resistance_recruitment
+		}
+	}
+	option = {
+		trigger = {
+			has_country_flag = SOL_imperial_recruitment
+		}
+		name = paxsolaris.63.a
+		custom_effect_tooltip = paxsolaris_leads_increase_riot
+		hidden_effect = {
+			clr_country_flag = SOL_resistance_recruitment
+			clr_country_flag = SOL_imperial_recruitment
+		}
+
+	}
+	option = {
+		trigger = {
+			has_country_flag = SOL_resistance_recruitment
+		}
+		name = paxsolaris.63.b
+		custom_effect_tooltip = paxsolaris_resistance_strength_increase
+		add_manpower = -2000
+		hidden_effect = { SOL_calculate_loyalty = yes }
+		hidden_effect = {
+			clr_country_flag = SOL_resistance_recruitment
+			clr_country_flag = SOL_imperial_recruitment
+		}
+	}
+}
+country_event = { 
+	id = paxsolaris.64
+	title = paxsolaris.64.t
+
+	is_triggered_only = yes
+	picture = GFX_event_forest_depression
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event paxsolaris.64"
+		hidden_effect = {
+			SOL_calculate_military_event_win_chance = yes
+			SOL_calculate_probability = yes
+			if = { 
+				limit = { check_variable = { resistance_military_event_win_chance > probability_check } }
+				set_country_flag = SOL_imperial_prison
+			}
+			else = {
+				set_country_flag = SOL_resistance_prison
+				add_to_variable = { var = solar_resistance_actions_progress value = 1 }
+			}
+		}
+		if = {
+			limit = { has_country_flag = SOL_imperial_prison }
+			hidden_effect = {
+				SOL_calculate_leads_small = yes
+				add_to_variable = { var = SOL_lead_variable value = lead_counter }
+			}
+		}
+	}
+
+	desc = { 
+		text = paxsolaris.64.d_1
+		trigger = {
+			has_country_flag = SOL_imperial_prison
+		}
+	}
+	desc = { 
+		text = paxsolaris.64.d_2
+		trigger = {
+			has_country_flag = SOL_resistance_prison
+		}
+	}
+	option = {
+		trigger = {
+			has_country_flag = SOL_imperial_prison
+		}
+		name = paxsolaris.64.a
+		custom_effect_tooltip = paxsolaris_leads_increase_riot
+		hidden_effect = {
+			clr_country_flag = SOL_resistance_prison
+			clr_country_flag = SOL_imperial_prison
+		}
+
+	}
+	option = {
+		trigger = {
+			has_country_flag = SOL_resistance_prison
+		}
+		name = paxsolaris.64.b
+		add_manpower = -10
+		custom_effect_tooltip = paxsolaris_resistance_strength_increase
+		hidden_effect = { SOL_calculate_loyalty = yes }
+		hidden_effect = {
+			clr_country_flag = SOL_resistance_prison
+			clr_country_flag = SOL_imperial_prison
+		}
+	}
+}
+
+country_event = {
+	id = paxsolaris.70
+	title = paxsolaris.70.t
+	desc = paxsolaris.70.d
+	picture = GFX_inquisition_stamp
+	is_triggered_only = yes
+	fire_only_once = no
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event paxsolaris.70"
+		hidden_effect = {
+			clr_country_flag = resistance_strike_in_progress
+			add_to_variable = { var = solar_inquisition_ongoing_decisions value = -1 }
+		}
+	}
+	option = { 
+		name = paxsolaris.70.a
+	}
+}
+country_event = {
+	id = paxsolaris.71
+	title = paxsolaris.71.t
+	desc = paxsolaris.71.d
+	picture = GFX_inquisition_stamp
+	is_triggered_only = yes
+	fire_only_once = no
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event paxsolaris.71"
+	}
+	option = { 
+		name = paxsolaris.71.a
+	}
+}
+country_event = {
+	id = paxsolaris.72
+	title = paxsolaris.72.t
+	desc = paxsolaris.72.d
+	picture = GFX_inquisition_stamp
+	is_triggered_only = yes
+	fire_only_once = no
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event paxsolaris.72"
+		hidden_effect = {
+			remove_mission = SOL_raid_resistance_decision_1
+			remove_mission = SOL_raid_resistance_decision_2
+			remove_mission = SOL_raid_resistance_decision_3
+			clr_country_flag = resistance_strike_in_progress
+			add_to_variable = { var = solar_inquisition_ongoing_decisions value = -1 }
+		}
+	}
+	option = { 
+		name = paxsolaris.72.a
+	}
+}
+country_event = {
+	id = paxsolaris.73
+	title = paxsolaris.73.t
+	desc = paxsolaris.73.d
+	picture = GFX_inquisition_stamp
+	is_triggered_only = yes
+	fire_only_once = no
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event paxsolaris.73"
+		hidden_effect = {
+			remove_mission = SOL_raid_resistance_decision_1
+			remove_mission = SOL_raid_resistance_decision_2
+			remove_mission = SOL_raid_resistance_decision_3
+			SOL_calculate_leads_medium = yes
+			add_to_variable = { var = SOL_lead_variable value = lead_counter }
+			clr_country_flag = resistance_strike_in_progress
+			add_to_variable = { var = solar_inquisition_ongoing_decisions value = -1 }
+			add_to_variable = { var = solar_resistance_actions_progress value = -1 }
+		}
+	}
+	option = { 
+		name = paxsolaris.73.a
+		custom_effect_tooltip = paxsolaris_resistance_strength_decrease
+		custom_effect_tooltip = paxsolaris_leads_increase_raid
+	}
+}
+country_event = {
+	id = paxsolaris.74
+	title = paxsolaris.74.t
+	desc = paxsolaris.74.d
+	picture = GFX_inquisition_stamp
+	is_triggered_only = yes
+	fire_only_once = no
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event paxsolaris.74"
+	}
+	option = { 
+		name = paxsolaris.74.a
+	}
+}
+country_event = {
+	id = paxsolaris.75
+	title = paxsolaris.75.t
+	desc = paxsolaris.75.d
+	picture = GFX_inquisition_stamp
+	is_triggered_only = yes
+	fire_only_once = no
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event paxsolaris.75"
+	}
+	option = { 
+		name = paxsolaris.75.a
+		hidden_effect = {
+			country_event = {
+				id = paxsolaris.76
+			}
+		}
+	}
+}
+
+
+country_event = {
+	id = paxsolaris.76
+	title = paxsolaris.76.t
+	desc = paxsolaris.76.d
+	picture = GFX_inquisition_stamp
+	is_triggered_only = yes
+	fire_only_once = no
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event paxsolaris.76"
+	}
+	option = { 
+		name = paxsolaris.76.a
+		if = {
+			limit = {
+				divisions_in_state = {
+					size > 7
+					state = event_target:SOL_resistance_stronghold
+				}
+			}
+			custom_effect_tooltip = inquisitionaction
+			custom_effect_tooltip = paxsolaris_resistance_cohesion_decrease
+			custom_effect_tooltip = paxsolaris_75_tt_50_days
+		}
+		else_if = {
+			limit = {
+				divisions_in_state = {
+					size > 3
+					state = event_target:SOL_resistance_stronghold
+				}
+			}
+			custom_effect_tooltip = inquisitionaction
+			custom_effect_tooltip = paxsolaris_75_tt_30_days
+		}
+		if = {
+			limit = {
+				check_variable = { daybreaker_support_temp_loss_tracker > 0 }
+			}
+			custom_effect_tooltip = paxsolaris_75_tt_loyalty
+		}
+		if = {
+			limit = {
+				check_variable = { SOL_lead_variable_temp_gain_tracker > 0 }
+			}
+			custom_effect_tooltip = paxsolaris_75_tt_leads
+		}
+		set_variable = { var = daybreaker_support_temp_loss_tracker value = 0 }
+		set_variable = { var = SOL_lead_variable_temp_gain_tracker value = 0 }
+		set_variable = { var = strike_at_resistance_success_rating value = 0 }
+		hidden_effect = {
+			every_state = {
+				clr_state_flag = potential_secondary_strike_target
+			}
+		}
+		clr_country_flag = SOL_refined_resistance_strike
+		clr_country_flag = resistance_strike_in_progress
+		add_to_variable = { var = solar_inquisition_ongoing_decisions value = -1 }
+	}
+}
+country_event = {
+	id = paxsolaris.77
+	title = paxsolaris.77.t
+	desc = paxsolaris.77.d
+	picture = GFX_inquisition_stamp
+	is_triggered_only = yes
+	fire_only_once = no
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event paxsolaris.77"
+	}
+	option = { 
+		name = paxsolaris.77.a
+		hidden_effect = {
+			if = {
+				limit = {
+					check_variable = { SOL_arrest_sympathisers_target_var = 1 }
+				}
+				country_event = {
+					id = paxsolaris.78
+					days = 2
+				}
+			}
+			else = {
+				country_event = {
+					id = paxsolaris.79
+					days = 2
+				}
+			}
+		}
+	}
+	option = { 
+		name = paxsolaris.77.b
+		hidden_effect = {
+			if = {
+				limit = {
+					check_variable = { SOL_arrest_sympathisers_target_var = 2 }
+				}
+				country_event = {
+					id = paxsolaris.78
+					days = 2
+				}
+			}
+			else = {
+				country_event = {
+					id = paxsolaris.79
+					days = 2
+				}
+			}
+		}
+	}
+	option = { 
+		name = paxsolaris.77.c
+		trigger = {
+			NOT = {
+				AND = {
+					has_country_flag = SOL_twilight_ascended
+					has_country_flag = upgraded_inquisition
+				}
+			}
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					check_variable = { SOL_arrest_sympathisers_target_var = 3 }
+				}
+				country_event = {
+					id = paxsolaris.78
+					days = 2
+				}
+			}
+			else = {
+				country_event = {
+					id = paxsolaris.79
+					days = 2
+				}
+			}
+		}
+	}
+	option = { 
+		name = paxsolaris.77.e
+		trigger = {
+			NOT = {
+				OR = {
+					has_country_flag = SOL_twilight_ascended
+					has_country_flag = upgraded_inquisition
+				}
+			}
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					check_variable = { SOL_arrest_sympathisers_target_var = 4 }
+				}
+				country_event = {
+					id = paxsolaris.78
+					days = 2
+				}
+			}
+			else = {
+				country_event = {
+					id = paxsolaris.79
+					days = 2
+				}
+			}
+		}
+	}
+}
+country_event = {
+	id = paxsolaris.78
+	title = paxsolaris.78.t
+	desc = paxsolaris.78.d
+	picture = GFX_inquisition_stamp
+	is_triggered_only = yes
+	fire_only_once = no
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event paxsolaris.78"
+		hidden_effect = {
+			SOL_calculate_leads_medium = yes
+			add_to_variable = { var = SOL_lead_variable value = lead_counter }
+			add_to_variable = { var = solar_resistance_outreach_actions_progress value = -1 }
+			add_to_variable = { var = solar_inquisition_ongoing_decisions value = -1 }
+			clr_country_flag = information_strike_in_progress
+		}
+	}
+	option = { 
+		name = paxsolaris.78.a
+		custom_effect_tooltip = paxsolaris_resistance_outreach_decrease
+		custom_effect_tooltip = paxsolaris_leads_increase_arrest
+	}
+}
+country_event = {
+	id = paxsolaris.79
+	title = paxsolaris.79.t
+	desc = paxsolaris.79.d
+	picture = GFX_inquisition_stamp
+	is_triggered_only = yes
+	fire_only_once = no
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event paxsolaris.79"
+		hidden_effect = {
+			add_to_variable = { var = solar_inquisition_ongoing_decisions value = -1 }
+			clr_country_flag = information_strike_in_progress
+		}
+	}
+	option = { 
+		name = paxsolaris.79.a
+	}
+}
+
+
+
+
+#Celestia evil flavour events
+country_event = { #Worried
+	id = paxsolaris.100
+	title = paxsolaris.100.t
+	desc = paxsolaris.100.d
+	picture = GFX_event_pony_soldiers_sunset
+
+	trigger = {
+		tag = EQS
+		has_government = democratic
+		has_country_flag = { flag = celestia_evil_meter value > 9 }
+		has_country_leader = { ruling_only = yes name = "Princess Celestia" }
+	}
+
+	fire_only_once = yes
+
+	option = { 
+		name = paxsolaris.100.a
+	}
+}
+
+country_event = { #Stressed
+	id = paxsolaris.101
+	title = paxsolaris.101.t
+	desc = paxsolaris.101.d
+	picture = GFX_mane_6_war_council
+
+	trigger = {
+		tag = EQS
+		has_government = democratic
+		has_country_flag = { flag = celestia_evil_meter value > 17 }
+		has_country_leader = { ruling_only = yes name = "Princess Celestia" }
+	}
+
+	fire_only_once = yes
+
+	option = { 
+		name = paxsolaris.101.a
+	}
+}
+
+country_event = { #Overwhelmed
+	id = paxsolaris.102
+	title = paxsolaris.102.t
+	desc = {
+		text = paxsolaris.102.d_luna
+		trigger = {
+			has_idea = alicorn_sisters
+		}
+	}
+	desc = {
+		text = paxsolaris.102.d_alone
+		trigger = {
+			NOT = { has_idea = alicorn_sisters }
+		}
+	}
+	picture = GFX_canterlot_celestia
+
+	trigger = {
+		tag = EQS
+		has_government = democratic
+		has_country_flag = { flag = celestia_evil_meter value > 25 }
+		has_country_leader = { ruling_only = yes name = "Princess Celestia" }
+	}
+
+	fire_only_once = yes
+
+	option = {
+		name = paxsolaris.102.a
+		hidden_effect = {
+			modify_country_flag = { flag = celestia_evil_meter value = -4 }
+		}
+		trigger = {
+			has_idea = alicorn_sisters
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				has_global_flag = EQS_evil_celestia
+			}
+		}
+	}
+
+	option = {
+		name = paxsolaris.102.b
+		hidden_effect = {
+			add_popularity = { ideology = fascism popularity = 0.03 }
+		}
+		trigger = {
+			has_idea = alicorn_sisters
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				OR = { is_historical_focus_on = yes has_global_flag = EQS_nice_celestia }
+			}
+			modifier = {
+				factor = 1000
+				has_global_flag = EQS_evil_celestia
+			}
+		}
+	}
+	option = {
+		name = paxsolaris.102.c
+		trigger = {
+			NOT = { has_idea = alicorn_sisters }
+		}
+	}
+}
+
+country_event = { #Angry
+	id = paxsolaris.103
+	title = paxsolaris.103.t
+	desc = paxsolaris.103.d
+	picture = GFX_event_changeling_crest
+
+	trigger = {
+		tag = EQS
+		has_government = democratic
+		has_country_flag = { flag = celestia_evil_meter value > 32 }
+		has_country_leader = { ruling_only = yes name = "Princess Celestia" }
+	}
+
+	fire_only_once = yes
+
+	option = { 
+		name = paxsolaris.103.a
+		hidden_effect = {
+			country_event = { id = paxsolaris.105 }
+			country_event = {
+				id = equestria.153
+				days = 3
+			}
+		}
+	}
+}
+
+country_event = { #Vengeful
+	id = paxsolaris.104
+	title = paxsolaris.104.t
+	desc = paxsolaris.104.d
+	picture = GFX_sol_daybreaker
+
+	trigger = {
+		tag = EQS
+		has_government = democratic
+		has_country_flag = { flag = celestia_evil_meter value > 39 }
+		has_country_leader = { ruling_only = yes name = "Princess Celestia" }
+	}
+	
+	fire_only_once = yes
+
+	option = { 
+		name = paxsolaris.104.a
+		hidden_effect = {
+			country_event = { id = paxsolaris.106 }
+		}
+	}
+}
+
+country_event = { #Angry P2
+	id = paxsolaris.105
+	title = paxsolaris.105.t
+	desc = paxsolaris.105.d
+	picture = GFX_event_changeling_crest
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = { 
+		name = paxsolaris.105.a
+	}
+}
+
+country_event = { #Vengeful P2
+	id = paxsolaris.106
+	title = paxsolaris.106.t
+	desc = paxsolaris.106.d
+	picture = GFX_sol_daybreaker
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = { 
+		name = paxsolaris.106.a
+	}
+}
+country_event = { #Remove curse
+	id = paxsolaris.107
+	immediate = {log = "[GetDateText]: [Root.GetName]: event paxsolaris.107"}
+	title = paxsolaris.107.t
+	desc = paxsolaris.107.d
+	picture = GFX_the_sun
+	trigger = {
+		tag = EQS
+		has_government = democratic
+		has_war = no
+		OR = {
+			has_idea = SOL_daybreaker_curse1 
+			has_idea = SOL_daybreaker_curse2 
+			has_idea = SOL_daybreaker_curse3 
+		}
+		NOT = {
+			has_idea = eqs_media_control
+			has_idea = eqs_war_law_extreme
+			has_idea = eqs_war_admin_extreme
+			has_idea = eqs_order_idea
+		}
+	}
+	mean_time_to_happen = {
+		days = 180
+	}
+	fire_only_once = yes
+	option = {
+		name = paxsolaris.107.a
+		country_event = { id = paxsolaris.108 }
+	}
+}
+country_event = { #Remove curse
+	id = paxsolaris.108
+	immediate = {log = "[GetDateText]: [Root.GetName]: event paxsolaris.108"}
+	title = paxsolaris.108.t
+	desc = paxsolaris.108.d
+	picture = GFX_the_sun
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = paxsolaris.108.a
+		remove_ideas = SOL_daybreaker_curse1 
+		remove_ideas = SOL_daybreaker_curse2 
+		remove_ideas = SOL_daybreaker_curse3 
+	}
+}
+
+#HARMONIST DEMANDS
+
+country_event = {
+	id = paxsolaris.120
+	immediate = {log = "[GetDateText]: [Root.GetName]: event paxsolaris.120"}
+	title = paxsolaris.120.t
+	desc = paxsolaris.120.d
+	picture = GFX_event_demand_the_vote
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = paxsolaris.120.a
+		ai_chance = { 
+			factor = 1
+		}
+		if = { 
+			limit = { has_completed_focus = SOL_empress_protector } 
+			add_to_variable = { var = daybreaker_support value = 7 }
+			custom_effect_tooltip = paxsolaris_loyalty_increase_7
+		}
+		else = {
+			add_to_variable = { var = daybreaker_support value = 5 }
+			custom_effect_tooltip = paxsolaris_loyalty_increase_5
+		}
+		if = { 
+			limit = { has_idea = eqs_war_law_extreme }
+			remove_ideas = eqs_war_law_extreme
+		}
+		if = { 
+			limit = { has_idea = eqs_war_admin_extreme }
+			remove_ideas = eqs_war_admin_extreme
+		}
+		if = { 
+			limit = { has_idea = eqs_war_law }
+			remove_ideas = eqs_war_law
+		}
+		if = { 
+			limit = { has_idea = eqs_war_admin }
+			remove_ideas = eqs_war_admin
+		}
+		hidden_effect = { SOL_calculate_loyalty = yes }
+	}
+	option = {
+		name = paxsolaris.120.b
+		ai_chance = { 
+			factor = 0
+		}
+		if = { 
+			limit = { has_completed_focus = SOL_empress_mother } 
+			add_to_variable = { var = daybreaker_support value = 2 }
+			custom_effect_tooltip = paxsolaris_loyalty_increase_2
+		}
+		if = { 
+			limit = { has_idea = eqs_war_law_extreme } 
+			swap_ideas = {
+				remove_idea = eqs_war_law_extreme
+				add_idea = eqs_war_law
+			}
+		}
+		if = { 
+			limit = { has_idea = eqs_war_admin_extreme } 
+			swap_ideas = {
+				remove_idea = eqs_war_admin_extreme 
+				add_idea = eqs_war_admin
+			}
+		}	
+		hidden_effect = { SOL_calculate_loyalty = yes }
+	}
+	option = {
+		name = paxsolaris.120.c
+		ai_chance = { 
+			factor = 0
+		}
+		add_to_variable = { var = daybreaker_support value = -5 }
+		custom_effect_tooltip = paxsolaris_loyalty_decrease_5
+		hidden_effect = { SOL_calculate_loyalty = yes }
+	}
+}
+
+country_event = {
+	id = paxsolaris.121
+	immediate = {log = "[GetDateText]: [Root.GetName]: event paxsolaris.121"}
+	title = paxsolaris.121.t
+	desc = paxsolaris.121.d
+	picture = GFX_event_demand_the_vote
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = paxsolaris.121.a
+		ai_chance = { 
+			factor = 0
+		}
+		if = { 
+			limit = { has_completed_focus = SOL_empress_protector } 
+			add_to_variable = { var = daybreaker_support value = 7 }
+			custom_effect_tooltip = paxsolaris_loyalty_increase_7
+		}
+		else = {
+			add_to_variable = { var = daybreaker_support value = 5 }
+			custom_effect_tooltip = paxsolaris_loyalty_increase_5
+		}
+		if = {
+			limit = { has_idea = limited_conscription }
+			swap_ideas = {
+				remove_idea = limited_conscription
+				add_idea = volunteer_only
+			}
+		}
+		else_if = {
+			limit = { has_idea = extensive_conscription }
+			swap_ideas = {
+				remove_idea = extensive_conscription
+				add_idea = volunteer_only
+			}
+		}
+		else_if = {
+			limit = { has_idea = service_by_requirement }
+			swap_ideas = {
+				remove_idea = service_by_requirement
+				add_idea = volunteer_only
+			}
+		}
+		else_if = {
+			limit = { has_idea = all_adults_serve }
+			swap_ideas = {
+				remove_idea = all_adults_serve
+				add_idea = volunteer_only
+			}
+		}
+		else_if = {
+			limit = { has_idea = scraping_the_barrel }
+			swap_ideas = {
+				remove_idea = scraping_the_barrel
+				add_idea = volunteer_only
+			}
+		}
+		hidden_effect = { 
+			set_country_flag = manpower_laws_blocked
+			SOL_calculate_loyalty = yes
+		}
+	}
+	option = {
+		name = paxsolaris.121.b
+		ai_chance = { 
+			factor = 1
+		}
+		if = { 
+			limit = { has_completed_focus = SOL_empress_mother } 
+			add_to_variable = { var = daybreaker_support value = 2 }
+			custom_effect_tooltip = paxsolaris_loyalty_increase_2
+		}
+		if = {
+			limit = { has_idea = extensive_conscription }
+			swap_ideas = {
+				remove_idea = extensive_conscription
+				add_idea = limited_conscription
+			}
+		}
+		else_if = {
+			limit = { has_idea = service_by_requirement }
+			swap_ideas = {
+				remove_idea = service_by_requirement
+				add_idea = limited_conscription
+			}
+		}
+		else_if = {
+			limit = { has_idea = all_adults_serve }
+			swap_ideas = {
+				remove_idea = all_adults_serve
+				add_idea = limited_conscription
+			}
+		}
+		else_if = {
+			limit = { has_idea = scraping_the_barrel }
+			swap_ideas = {
+				remove_idea = scraping_the_barrel
+				add_idea = limited_conscription
+			}
+		}
+		hidden_effect = { 
+			set_country_flag = manpower_laws_blocked
+			SOL_calculate_loyalty = yes
+		}
+	}
+	option = {
+		name = paxsolaris.121.c
+		ai_chance = { 
+			factor = 0.5
+		}
+		add_to_variable = { var = daybreaker_support value = -5 }
+		custom_effect_tooltip = paxsolaris_loyalty_decrease_5
+		hidden_effect = { SOL_calculate_loyalty = yes }
+	}
+}
+
+country_event = {
+	id = paxsolaris.122
+	immediate = {log = "[GetDateText]: [Root.GetName]: event paxsolaris.122"}
+	title = paxsolaris.122.t
+	desc = paxsolaris.122.d
+	picture = GFX_event_demand_the_vote
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = paxsolaris.122.a
+		ai_chance = { 
+			factor = 1
+		}
+		if = { 
+			limit = { has_completed_focus = SOL_empress_protector } 
+			add_to_variable = { var = daybreaker_support value = 7 }
+			custom_effect_tooltip = paxsolaris_loyalty_increase_7
+			custom_effect_tooltip = resistanceoutreachaction
+		}
+		else = {
+			add_to_variable = { var = daybreaker_support value = 5 }
+			custom_effect_tooltip = paxsolaris_loyalty_increase_5
+			custom_effect_tooltip = resistanceoutreachaction
+		}
+		remove_ideas = eqs_media_control
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.05
+		}
+		add_to_variable = { var = solar_resistance_outreach_actions value = 1 }
+		hidden_effect = { SOL_calculate_loyalty = yes }
+	}
+	option = {
+		name = paxsolaris.122.b
+		ai_chance = { 
+			factor = 0.5
+		}
+		if = { 
+			limit = { has_completed_focus = SOL_empress_mother } 
+			add_to_variable = { var = daybreaker_support value = 2 }
+			custom_effect_tooltip = paxsolaris_loyalty_increase_2
+			custom_effect_tooltip = paxsolaris_information_suppression_reset
+
+		}
+		else = {
+			custom_effect_tooltip = paxsolaris_information_suppression_reset
+		}
+		remove_ideas = eqs_media_control
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.03
+		}
+		set_variable = { var = solar_resistance_outreach_suppression_progress value = 0 }
+		hidden_effect = { SOL_calculate_loyalty = yes }
+	}
+	option = {
+		name = paxsolaris.122.c
+		ai_chance = { 
+			factor = 0
+		}
+		add_to_variable = { var = daybreaker_support value = -5 }
+		custom_effect_tooltip = paxsolaris_loyalty_decrease_5
+		hidden_effect = { SOL_calculate_loyalty = yes }
+	}
+}
+country_event = {
+	id = paxsolaris.123
+	immediate = {log = "[GetDateText]: [Root.GetName]: event paxsolaris.123"}
+	title = paxsolaris.123.t
+	desc = paxsolaris.123.d
+	picture = GFX_event_demand_the_vote
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = paxsolaris.123.a
+		ai_chance = { 
+			factor = 0
+		}
+		if = { 
+			limit = { has_completed_focus = SOL_empress_protector } 
+			add_to_variable = { var = daybreaker_support value = 7 }
+			custom_effect_tooltip = paxsolaris_loyalty_increase_7
+		}
+		else = {
+			add_to_variable = { var = daybreaker_support value = 5 }
+			custom_effect_tooltip = paxsolaris_loyalty_increase_5
+		}
+		add_ideas = civilian_economy
+		set_country_flag = economic_laws_blocked
+		hidden_effect = { SOL_calculate_loyalty = yes }
+	}
+	option = {
+		name = paxsolaris.123.b
+		ai_chance = { 
+			factor = 0.5
+		}
+		if = { 
+			limit = { has_completed_focus = SOL_empress_mother } 
+			add_to_variable = { var = daybreaker_support value = 2 }
+			custom_effect_tooltip = paxsolaris_loyalty_increase_2
+		}
+		add_ideas = low_economic_mobilisation
+		set_country_flag = economic_laws_blocked
+		hidden_effect = { SOL_calculate_loyalty = yes }
+	}
+	option = {
+		name = paxsolaris.123.c
+		ai_chance = { 
+			factor = 1
+		}
+		add_to_variable = { var = daybreaker_support value = -5 }
+		custom_effect_tooltip = paxsolaris_loyalty_decrease_5
+		hidden_effect = { SOL_calculate_loyalty = yes }
+	}
+}
+country_event = {
+	id = paxsolaris.124
+	immediate = {log = "[GetDateText]: [Root.GetName]: event paxsolaris.124"}
+	title = paxsolaris.124.t
+	desc = paxsolaris.124.d
+	picture = GFX_event_demand_the_vote
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = paxsolaris.124.a
+		ai_chance = { 
+			factor = 0.5
+		}
+		if = { 
+			limit = { has_completed_focus = SOL_empress_protector } 
+			add_to_variable = { var = daybreaker_support value = 7 }
+			custom_effect_tooltip = paxsolaris_loyalty_increase_7
+		}
+		else = {
+			add_to_variable = { var = daybreaker_support value = 5 }
+			custom_effect_tooltip = paxsolaris_loyalty_increase_5
+		}
+		add_ideas = export_focus
+		set_country_flag = trade_laws_blocked
+		hidden_effect = { SOL_calculate_loyalty = yes }
+	}
+	option = {
+		name = paxsolaris.124.b
+		ai_chance = { 
+			factor = 1
+		}
+		if = { 
+			limit = { has_completed_focus = SOL_empress_mother } 
+			add_to_variable = { var = daybreaker_support value = 2 }
+			custom_effect_tooltip = paxsolaris_loyalty_increase_2
+		}
+		add_ideas = limited_exports
+		set_country_flag = trade_laws_blocked
+		hidden_effect = { SOL_calculate_loyalty = yes }
+	}
+	option = {
+		name = paxsolaris.124.c
+		ai_chance = { 
+			factor = 0
+		}
+		add_to_variable = { var = daybreaker_support value = -5 }
+		custom_effect_tooltip = paxsolaris_loyalty_decrease_5
+		hidden_effect = { SOL_calculate_loyalty = yes }
+	}
+}
+country_event = {
+	id = paxsolaris.125
+	immediate = {log = "[GetDateText]: [Root.GetName]: event paxsolaris.125"}
+	title = paxsolaris.125.t
+	desc = paxsolaris.125.d
+	picture = GFX_event_demand_the_vote
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = paxsolaris.125.a
+		ai_chance = { 
+			factor = 0
+		}
+		if = { 
+			limit = { has_completed_focus = SOL_empress_protector } 
+			add_to_variable = { var = daybreaker_support value = 7 }
+			custom_effect_tooltip = paxsolaris_loyalty_increase_7
+		}
+		else = {
+			add_to_variable = { var = daybreaker_support value = 5 }
+			custom_effect_tooltip = paxsolaris_loyalty_increase_5
+		}
+		if = {
+			limit = { has_idea = eqs_order_idea }
+			swap_ideas = { 
+				remove_idea = eqs_order_idea
+				add_idea = friendly_harmony_SOL
+			}
+		}
+		else = {
+			add_ideas = friendly_harmony_SOL
+		}
+		hidden_effect = { 
+			SOL_calculate_loyalty = yes 
+			set_country_flag = demands_over
+		}
+	}
+	option = {
+		name = paxsolaris.125.b
+		ai_chance = { 
+			factor = 1
+		}
+		if = { 
+			limit = { has_completed_focus = SOL_empress_mother } 
+			add_to_variable = { var = daybreaker_support value = 2 }
+			custom_effect_tooltip = paxsolaris_loyalty_increase_2
+		}
+		remove_ideas = eqs_order_idea
+		hidden_effect = { 
+			SOL_calculate_loyalty = yes 
+			set_country_flag = demands_over
+		}
+	}
+	option = {
+		name = paxsolaris.125.c
+		ai_chance = { 
+			factor = 0
+		}
+		add_to_variable = { var = daybreaker_support value = -5 }
+		custom_effect_tooltip = paxsolaris_loyalty_decrease_5
+		hidden_effect = { 
+			SOL_calculate_loyalty = yes 
+			set_country_flag = demands_over
+		}
+	}
+}
+
+country_event = { 
+	id = paxsolaris.200
+	title = paxsolaris.200.t
+	desc = paxsolaris.200.d
+	picture = GFX_event_elf_poster
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName]: event paxsolaris.200" }
+	option = { 
+		name = paxsolaris.200.a
+		country_event = {
+			id = paxsolaris.201
+		}
+	}
+}
+country_event = { 
+	id = paxsolaris.201
+	title = paxsolaris.201.t
+	desc = paxsolaris.201.d
+	picture = GFX_event_elf_poster
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName]: event paxsolaris.201" }
+	option = { 
+		name = paxsolaris.201.a
+		country_event = {
+			id = paxsolaris.202
+			days = 5
+		}
+	}
+}
+country_event = { 
+	id = paxsolaris.202
+	title = paxsolaris.202.t
+	desc = paxsolaris.202.d
+	picture = GFX_event_solarempire
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName]: event paxsolaris.202" }
+	option = { 
+		name = paxsolaris.202.a
+		country_event = {
+			id = paxsolaris.203
+			days = 5
+		}
+	}
+}
+country_event = { 
+	id = paxsolaris.203
+	title = paxsolaris.203.t
+	desc = paxsolaris.203.d
+	picture = GFX_event_elf_poster
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName]: event paxsolaris.203" }
+	option = { 
+		name = paxsolaris.203.a
+		country_event = {
+			id = paxsolaris.204
+		}
+		set_country_flag = choice_1_save_starlight
+		clr_country_flag = choice_1_do_nothing
+		ai_chance = {
+			factor = 10
+		}
+	}
+	option = { 
+		name = paxsolaris.203.b
+		country_event = {
+			id = paxsolaris.205
+		}
+		set_country_flag = choice_1_do_nothing
+		clr_country_flag = choice_1_save_starlight
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+country_event = { 
+	id = paxsolaris.204
+	title = paxsolaris.204.t
+	desc = paxsolaris.204.d
+	picture = GFX_event_elf_poster
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName]: event paxsolaris.204" }
+	option = { 
+		name = paxsolaris.204.a
+		country_event = {
+			id = paxsolaris.214
+		}
+	}
+}
+country_event = { 
+	id = paxsolaris.214
+	title = paxsolaris.214.t
+	desc = paxsolaris.214.d
+	picture = GFX_event_elf_poster
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName]: event paxsolaris.214" }
+	option = { 
+		name = paxsolaris.214.a
+		country_event = {
+			id = paxsolaris.206
+			days = 15
+		}
+	}
+}
+country_event = { 
+	id = paxsolaris.205
+	title = paxsolaris.205.t
+	desc = paxsolaris.205.d
+	picture = GFX_event_elf_poster
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName]: event paxsolaris.205" }
+	option = { 
+		name = paxsolaris.205.a
+		country_event = {
+			id = paxsolaris.206
+			days = 15
+		}
+	}
+}
+country_event = { 
+	id = paxsolaris.206
+	title = paxsolaris.206.t
+	desc = {
+		trigger = {
+			has_country_flag = choice_1_save_starlight
+		}
+		text = paxsolaris.206.d_1
+	}
+	desc = {
+		trigger = {
+			has_country_flag = choice_1_do_nothing
+		}
+		text = paxsolaris.206.d_2
+	}
+	picture = GFX_event_solarempire
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName]: event paxsolaris.206" }
+	option = { 
+		name = paxsolaris.206.a
+		if = {
+			limit = { has_country_flag = choice_1_do_nothing }
+			country_event = {
+				id = paxsolaris.209
+				days = 45
+			}
+		}
+		else = {
+			country_event = {
+				id = paxsolaris.207
+				days = 35
+			}
+		}
+	}
+}
+country_event = { 
+	id = paxsolaris.207
+	title = paxsolaris.207.t
+	desc = paxsolaris.207.d
+	picture = GFX_event_elf_poster
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName]: event paxsolaris.207" }
+	option = { 
+		name = paxsolaris.207.a
+		country_event = {
+			id = paxsolaris.208
+		}
+	}
+}
+country_event = { 
+	id = paxsolaris.208
+	title = paxsolaris.208.t
+	desc = paxsolaris.208.d
+	picture = GFX_event_elf_poster
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName]: event paxsolaris.208" }
+	option = { 
+		name = paxsolaris.208.a
+		country_event = {
+			id = paxsolaris.215
+		}
+	}
+}
+country_event = { 
+	id = paxsolaris.215
+	title = paxsolaris.215.t
+	desc = paxsolaris.215.d
+	picture = GFX_event_elf_poster
+	is_triggered_only = yes
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event paxsolaris.215" 
+		set_variable = { var = SOL_resistance_major_attack_duration value = 20 }
+		hidden_effect = {
+			activate_mission = SOL_resistance_major_attack_1
+		}
+	}
+	option = { 
+		name = paxsolaris.215.a
+		ai_chance = {
+			factor = 10
+		}
+		country_event = {
+			id = paxsolaris.210
+			days = 3
+		}
+		effect_tooltip = {
+			activate_mission = SOL_resistance_major_attack_1
+		}
+		set_country_flag = SOL_resistance_major_attack_1_civilian
+		clr_country_flag = SOL_resistance_major_attack_1_military
+	}
+	option = { 
+		name = paxsolaris.215.b
+		ai_chance = {
+			factor = 1
+		}
+		country_event = {
+			id = paxsolaris.210
+			days = 3
+		}
+		effect_tooltip = {
+			activate_mission = SOL_resistance_major_attack_1
+		}
+		set_country_flag = SOL_resistance_major_attack_1_military
+		clr_country_flag = SOL_resistance_major_attack_1_civilian
+	}
+}
+country_event = { 
+	id = paxsolaris.209
+	title = paxsolaris.209.t
+	desc = paxsolaris.209.d
+	picture = GFX_event_elf_poster
+	is_triggered_only = yes
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event paxsolaris.209"
+		set_variable = { var = SOL_resistance_major_attack_duration value = 10 }
+		hidden_effect = {
+			activate_mission = SOL_resistance_major_attack_1
+		} 
+	}
+	option = { 
+		name = paxsolaris.209.a
+		country_event = {
+			id = paxsolaris.210
+			days = 3
+		}
+		effect_tooltip = {
+			activate_mission = SOL_resistance_major_attack_1
+		}
+	}
+}
+country_event = { 
+	id = paxsolaris.210
+	title = paxsolaris.210.t
+	desc = paxsolaris.210.d
+	picture = GFX_event_solarempire
+	is_triggered_only = yes
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event paxsolaris.210" 
+	}
+	option = { 
+		name = paxsolaris.210.a
+		ai_chance = {
+			factor = 1
+		}
+		custom_effect_tooltip = paxsolaris_210_a_tt
+		set_country_flag = SOL_resistance_major_attack_1_surrounding_troops
+		clr_country_flag = SOL_resistance_major_attack_1_no_surrounding_troops
+		set_variable = { var = SOL_resistance_major_attack_duration value = days_mission_timeout@SOL_resistance_major_attack_1 }
+		hidden_effect = {
+			remove_mission = SOL_resistance_major_attack_1
+			activate_mission = SOL_resistance_major_attack_1_surrounding_troops
+		}
+	}
+	option = { 
+		name = paxsolaris.210.b
+		ai_chance = {
+			factor = 10
+		}
+		set_country_flag = SOL_resistance_major_attack_1_no_surrounding_troops
+		clr_country_flag = SOL_resistance_major_attack_1_surrounding_troops
+	}
+}
+
+country_event = {
+	id = paxsolaris.211
+	immediate = { log = "[GetDateText]: [Root.GetName]: event paxsolaris.211" }
+	title = paxsolaris.211.t
+	desc = paxsolaris.211.d
+	picture = GFX_event_canterlot
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = paxsolaris.211.a
+		if = {
+			limit = {
+				has_country_flag = SOL_resistance_major_attack_1_civilian
+				has_country_flag = major_attack_1_loss
+				NOT = { check_variable = { solar_civilian_support = 0 } }
+			}
+			custom_effect_tooltip = civilianresistanceaction
+			add_to_variable = { var = solar_civilian_resistance_actions value = -1 }
+		}
+		if = {
+			limit = {
+				has_country_flag = SOL_resistance_major_attack_1_military
+				has_country_flag = major_attack_1_loss
+				NOT = { check_variable = { solar_military_support = 0 } }
+			}
+			custom_effect_tooltip = militaryresistanceaction
+			add_to_variable = { var = solar_military_resistance_actions value = -1 }
+		}
+		hidden_effect = { SOL_calculate_loyalty = yes }
+	}
+}
+country_event = { 
+	id = paxsolaris.212
+	title = paxsolaris.212.t
+	desc = paxsolaris.212.d
+	picture = GFX_report_event_radar_01
+	is_triggered_only = yes
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event paxsolaris.212" 
+		hidden_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					NOT = { state = 3 }
+					NOT = { has_state_flag = SOL_ongoing_uprising }
+					NOT = { has_state_flag = SOL_overrun_by_resistance }
+					is_owned_and_controlled_by = event_target:solar_empire
+					distance_to = {
+						value < 800
+						target = 3
+					}
+				}
+				save_global_event_target_as = SOL_uprising_in_state_temp_target
+			}
+			SOL_decision_mission_target = yes
+
+			random_owned_controlled_state = {
+				limit = {
+					NOT = { state = 3 }
+					NOT = { has_state_flag = SOL_ongoing_uprising }
+					NOT = { has_state_flag = SOL_overrun_by_resistance }
+					is_owned_and_controlled_by = event_target:solar_empire
+					distance_to = {
+						value < 800
+						target = 3
+					}
+				}
+				save_global_event_target_as = SOL_uprising_in_state_temp_target
+			}
+			SOL_decision_mission_target = yes
+
+			random_owned_controlled_state = {
+				limit = {
+					NOT = { state = 3 }
+					NOT = { has_state_flag = SOL_ongoing_uprising }
+					NOT = { has_state_flag = SOL_overrun_by_resistance }
+					is_owned_and_controlled_by = event_target:solar_empire
+					distance_to = {
+						value < 800
+						target = 3
+					}
+				}
+				save_global_event_target_as = SOL_uprising_in_state_temp_target
+			}
+			SOL_decision_mission_target = yes
+
+			if= {
+				limit = {
+					has_country_flag = SOL_resistance_major_attack_1_surrounding_troops
+				}
+
+				random_owned_controlled_state = {
+					limit = {
+						NOT = { state = 3 }
+						NOT = { has_state_flag = SOL_ongoing_uprising }
+						NOT = { has_state_flag = SOL_overrun_by_resistance }
+						is_owned_and_controlled_by = event_target:solar_empire
+						distance_to = {
+							value < 800
+							target = 3
+						}
+					}
+					save_global_event_target_as = SOL_uprising_in_state_temp_target
+				}
+				SOL_decision_mission_target = yes
+
+
+				random_owned_controlled_state = {
+					limit = {
+						NOT = { state = 3 }
+						NOT = { has_state_flag = SOL_ongoing_uprising }
+						NOT = { has_state_flag = SOL_overrun_by_resistance }
+						is_owned_and_controlled_by = event_target:solar_empire
+						distance_to = {
+							value < 800
+							target = 3
+						}
+					}
+					save_global_event_target_as = SOL_uprising_in_state_temp_target
+				}
+				SOL_decision_mission_target = yes
+
+				random_owned_controlled_state = {
+					limit = {
+						NOT = { state = 3 }
+						NOT = { has_state_flag = SOL_ongoing_uprising }
+						NOT = { has_state_flag = SOL_overrun_by_resistance }
+						is_owned_and_controlled_by = event_target:solar_empire
+						distance_to = {
+							value < 800
+							target = 3
+						}
+					}
+					save_global_event_target_as = SOL_uprising_in_state_temp_target
+				}
+				SOL_decision_mission_target = yes
+			}
+		}
+	}
+	option = { 
+		name = paxsolaris.212.a
+		custom_effect_tooltip = resistanceoutreachaction
+		add_to_variable = {	var = solar_resistance_outreach_actions value = 1 }
+		if= {
+			limit = {
+				has_country_flag = SOL_resistance_major_attack_1_surrounding_troops
+			}
+			custom_effect_tooltip = paxsolaris_loyalty_decrease_6
+			add_to_variable = { var = daybreaker_support value = -6 }
+		}
+		else = {
+			custom_effect_tooltip = paxsolaris_loyalty_decrease_4
+			add_to_variable = { var = daybreaker_support value = -4 }
+		}
+		hidden_effect = { SOL_calculate_loyalty = yes }
+	}
+}
+
+news_event = {
+	id = paxsolaris.213
+	immediate = {log = "[GetDateText]: [Root.GetName]: event paxsolaris.213"}
+	title = paxsolaris.213.t
+	desc = paxsolaris.213.d
+	picture = GFX_news_elf_assault
+
+	is_triggered_only = yes
+	major = yes
+	fire_only_once = yes
+
+	option = {
+		name = paxsolaris.213.a
+		trigger = {
+			original_tag = EQS
+		}
+		set_country_flag = harmony_restoration_movement_formed
+		add_to_variable = { var = solar_resistance_cohesion_actions value = 1 }
+		add_to_variable = { var = solar_resistance_actions value = 1 }
+		custom_effect_tooltip = resistanceaction
+		custom_effect_tooltip = resistancecohesionaction
+		hidden_effect = { SOL_calculate_loyalty = yes }
+		hidden_effect = { 
+			country_event = {
+				id = paxsolaris.216
+				days = 3
+			}
+			random_list = {
+				70 = {
+					set_country_flag = sol_inquisition_spies
+				}
+				30 = {
+					clr_country_flag = sol_inquisition_spies
+				}
+			}
+		}
+	}
+	option = {
+		name = paxsolaris.213.b
+		trigger = {
+			NOT = { original_tag = EQS }
+			OR = {
+				has_government = democratic
+				AND = {
+					has_government = communism
+					EQS = { NOT = { has_government = communism } }
+				}
+			}
+		}
+	}
+	option = {
+		name = paxsolaris.213.c
+		trigger = {
+			NOT = { 
+				original_tag = EQS
+				has_government = democratic
+				AND = {
+					has_government = communism
+					EQS = { has_government = communism }
+				}
+			}
+		}
+	}
+}
+country_event = { 
+	id = paxsolaris.216
+	title = paxsolaris.216.t
+	desc = paxsolaris.216.d
+	picture = GFX_event_elf_poster
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName]: event paxsolaris.216" }
+	option = { 
+		name = paxsolaris.216.a
+		country_event = {
+			id = paxsolaris.217
+			days = 1
+		}
+	}
+}
+country_event = { 
+	id = paxsolaris.217
+	title = paxsolaris.217.t
+	desc = paxsolaris.217.d
+	picture = GFX_event_elf_poster
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName]: event paxsolaris.217" }
+	option = { 
+		name = paxsolaris.217.a
+		country_event = {
+			id = paxsolaris.218
+		}
+	}
+}
+country_event = { 
+	id = paxsolaris.218
+	title = paxsolaris.218.t
+	desc = paxsolaris.218.d
+	picture = GFX_event_elf_poster
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName]: event paxsolaris.218" }
+	option = { 
+		name = paxsolaris.218.a
+		country_event = {
+			id = paxsolaris.219
+		}
+	}
+}
+country_event = { 
+	id = paxsolaris.219
+	title = paxsolaris.219.t
+	desc = paxsolaris.219.d
+	picture = GFX_event_elf_poster
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName]: event paxsolaris.219" }
+	option = { 
+		name = paxsolaris.219.a
+	}
+}
+country_event = { 
+	id = paxsolaris.220
+	title = paxsolaris.220.t
+	desc = paxsolaris.220.d
+	picture = GFX_event_solarempire
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName]: event paxsolaris.220" }
+	option = { 
+		name = paxsolaris.220.a
+		country_event = {
+			id = paxsolaris.221
+		}
+	}
+}
+country_event = { 
+	id = paxsolaris.221
+	title = paxsolaris.221.t
+	desc = paxsolaris.221.d
+	picture = GFX_event_solarempire
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName]: event paxsolaris.221" }
+	option = { 
+		name = paxsolaris.221.a
+		set_variable = { var = solar_inquisition_ongoing_decisions value = 1 }
+		custom_effect_tooltip = paxsolaris_221_a
+		hidden_effect = {
+			if = {
+				limit = { has_country_flag = sol_inquisition_spies }
+				random_list = {
+					70 = {
+						country_event = {
+							id = paxsolaris.222
+							days = 30
+						}
+					}
+					30 = {
+						country_event = {
+							id = paxsolaris.223
+							days = 30
+						}
+					}
+				}
+			}
+			else = { 
+				country_event = {
+					id = paxsolaris.223
+					days = 30
+				}
+			}
+		}
+	}
+	option = { 
+		name = paxsolaris.221.b
+		set_variable = { var = solar_inquisition_ongoing_decisions value = 1 }
+		custom_effect_tooltip = paxsolaris_221_b
+		hidden_effect = {
+			if = {
+				limit = { has_country_flag = sol_inquisition_spies }
+				country_event = {
+					id = paxsolaris.222
+					days = 50
+				}
+			}
+			else = { 
+				country_event = {
+					id = paxsolaris.223
+					days = 30
+				}
+			}
+		}
+	}
+}
+country_event = { 
+	id = paxsolaris.222
+	title = paxsolaris.222.t
+	desc = paxsolaris.222.d
+	picture = GFX_event_solarempire
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName]: event paxsolaris.222" }
+	option = { 
+		name = paxsolaris.222.a
+		add_to_variable = { var = solar_inquisition_ongoing_decisions value = -1 }
+		clr_country_flag = sol_inquisition_spies
+	}
+}
+country_event = { 
+	id = paxsolaris.223
+	title = paxsolaris.223.t
+	desc = paxsolaris.223.d
+	picture = GFX_event_solarempire
+	is_triggered_only = yes
+	immediate = { log = "[GetDateText]: [Root.GetName]: event paxsolaris.223" }
+	option = { 
+		name = paxsolaris.223.a
+		add_to_variable = { var = solar_inquisition_ongoing_decisions value = -1 }
+	}
+}
+country_event = { 
+	id = paxsolaris.224
+	title = paxsolaris.224.t
+	desc = paxsolaris.224.d
+	picture = GFX_event_solarempire
+	is_triggered_only = yes
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event paxsolaris.224"
+		hidden_effect = {
+			SOL_calculate_leads_small = yes
+			add_to_variable = { var = SOL_lead_variable value = lead_counter }
+		}
+	}
+	option = { 
+		name = paxsolaris.224.a
+		custom_effect_tooltip = paxsolaris_leads_increase_riot
+	}
+}

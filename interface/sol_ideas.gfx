@@ -1,0 +1,42 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_SOL_revanchism"
+		texturefile = "gfx/interface/ideas/SOL_revanchism.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SOL_daybreaker_influence"
+		texturefile = "gfx/interface/ideas/SOL_daybreaker_influence.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SOL_harmonist_broadcasts"
+		texturefile = "gfx/interface/ideas/SOL_harmonist_broadcasts.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SOL_friendly_harmony"
+		texturefile = "gfx/interface/ideas/idea_friendly_harmony.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_resistance_cohesion"
+		texturefile = "gfx/interface/ideas/idea_resistance_cohesion.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_sol_propaganda"
+		texturefile = "gfx/interface/ideas/idea_sol_propaganda.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_blessing_of_day"
+		texturefile = "gfx/interface/ideas/idea_blessing_of_day.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_sol_curse"
+		texturefile = "gfx/interface/ideas/idea_sol_curse.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_public_works"
+		texturefile = "gfx/interface/ideas/idea_public_works.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_sol_wonderbolts"
+		texturefile = "gfx/interface/ideas/idea_sol_wonderbolts.dds"
+	}
+}

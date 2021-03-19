@@ -1,0 +1,106 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_SOL_goal_EEA"
+		texturefile = "gfx/interface/goals/SOL_goal_EEA.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_celestia_propaganda"
+		texturefile = "gfx/interface/goals/goal_celestia_propaganda.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_sol_rebuild_equestria"
+		texturefile = "gfx/interface/goals/goal_sol_rebuild_equestria.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_investigate_resistance"
+		texturefile = "gfx/interface/goals/goal_investigate_resistance.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_sol_decypher_code"
+		texturefile = "gfx/interface/goals/goal_sol_decypher_code.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_sol_surveillance"
+		texturefile = "gfx/interface/goals/goal_sol_surveillance.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_sol_reeducation"
+		texturefile = "gfx/interface/goals/goal_sol_reeducation.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_sol_propaganda"
+		texturefile = "gfx/interface/goals/goal_propaganda_sol.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_sol_inquisition_law"
+		texturefile = "gfx/interface/goals/goal_sol_inquisition_law.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_sol_the_list"
+		texturefile = "gfx/interface/goals/goal_sol_the_list.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_sol_upgrade_inquisition"
+		texturefile = "gfx/interface/goals/goal_sol_upgrade_inquisition.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_legacy_of_hurricane"
+		texturefile = "gfx/interface/goals/goal_legacy_of_hurricane.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_sol_railroads"
+		texturefile = "gfx/interface/goals/goal_sol_railroad.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_sol_expand_inquisition"
+		texturefile = "gfx/interface/goals/goal_sol_expand_inquisition.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_sol_canterlot"
+		texturefile = "gfx/interface/goals/goal_sol_canterlot.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_sol_decentralised_policing"
+		texturefile = "gfx/interface/goals/goal_sol_decentralised_policing.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_sol_imperial_royal_guard"
+		texturefile = "gfx/interface/goals/goal_sol_imperial_royal_guard.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_sol_pony_rights"
+		texturefile = "gfx/interface/goals/goal_sol_pony_rights.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_sol_technological_supremacy"
+		texturefile = "gfx/interface/goals/goal_sol_technological_supremacy.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_sol_chaplains"
+		texturefile = "gfx/interface/goals/goal_sol_chaplains.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_sol_party_military"
+		texturefile = "gfx/interface/goals/goal_sol_party_military.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_sol_inquisitorial_integration"
+		texturefile = "gfx/interface/goals/goal_sol_inquisitorial_integration.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_state_approved_doctrine"
+		texturefile = "gfx/interface/goals/goal_state_approved_doctrine.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_sol_remilitarisation"
+		texturefile = "gfx/interface/goals/goal_sol_remilitarisation.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_gifted_unicorns"
+		texturefile = "gfx/interface/goals/goal_gifted_unicorns.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_sol_public_works_program"
+		texturefile = "gfx/interface/goals/goal_sol_public_works_program.dds"
+	}
+}

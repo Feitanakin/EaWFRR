@@ -1,0 +1,12 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_leads_text"
+		texturefile = "gfx/texticons/leads_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_solar_energy_text"
+		texturefile = "gfx/texticons/solar_energy_texticon.dds"
+		legacy_lazy_load = no
+	}		
+}
