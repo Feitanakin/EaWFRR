@@ -1,0 +1,42 @@
+focus_tree = {
+	id = equestria_sol_focus
+
+	country = {
+		factor = 0
+
+		modifier = {
+			add = 9
+			is_SOLAR_EMPIRE = yes
+		}
+	}
+
+	continuous_focus_position = { x = 1250 y = 1825 }
+	#################################################
+	###### Politics #######################
+	#################################################
+
+	shared_focus = SOL_Imperium_Solis
+
+	shared_focus = SOL_twilight_ascend
+
+	shared_focus = SOL_civil_war_measures
+
+	shared_focus = examine_the_situation
+
+	shared_focus = Crystal_Fair
+
+	#shared_focus = SOL_bat_problems
+
+	shared_focus = SOL_investigate_resistance
+	shared_focus = SOL_Imperial_Inquisition
+
+	shared_focus = SOL_economic_miracle
+	shared_focus = SOL_direct_rule_from_canterlot
+
+	shared_focus = SOL_Solar_Cult
+
+	############## DEFENSE SECTION / WAR SECTION ############
+
+	shared_focus = SOL_military_reorganization
+
+}

@@ -1,0 +1,2645 @@
+SOL_calculate_loyalty = {
+	if = {
+		limit = {
+			original_tag = EQS
+			tag = event_target:solar_empire
+			has_country_leader = { ruling_only = yes name = "Daybreaker" }
+			OR = {
+				AND = {
+					has_country_flag = march_on_canterlot
+					has_country_flag = sol_wartime_change
+				}
+				NOT = { has_country_flag = sol_wartime_change }
+			}
+		}
+
+		#GENERAL PUBLIC 
+		clamp_variable = {
+			var = daybreaker_support
+			min = 0
+			max = 100
+		}
+		
+		set_variable = { var = solar_popular_support value = 0 }
+
+		set_variable = { var = daybreaker_support_daily_base value = daybreaker_support }
+		multiply_variable = { var = daybreaker_support_daily_base value = 0.25 }
+		round_variable = daybreaker_support_daily_base 
+		multiply_variable = { var = daybreaker_support_daily_base value = 0.001 }
+		if = {
+			limit = { 
+				check_variable = { 
+					var = daybreaker_support 
+					value = 10
+					compare = greater_than_or_equals
+				}
+			}
+			add_to_variable = { var = solar_popular_support value = 1 }
+		}
+		if = {
+			limit = { 
+				check_variable = { 
+					var = daybreaker_support 
+					value = 30
+					compare = greater_than_or_equals
+				}
+			}
+			add_to_variable = { var = solar_popular_support value = 1 }
+		}
+		if = {
+			limit = { 
+				check_variable = { 
+					var = daybreaker_support 
+					value = 50
+					compare = greater_than_or_equals
+				}
+			}
+			add_to_variable = { var = solar_popular_support value = 1 }
+		}
+		if = {
+			limit = { 
+				check_variable = { 
+					var = daybreaker_support 
+					value = 70
+					compare = greater_than_or_equals
+				}
+			}
+			add_to_variable = { var = solar_popular_support value = 1 }
+		}
+		if = {
+			limit = { 
+				check_variable = { 
+					var = daybreaker_support 
+					value = 90
+					compare = greater_than_or_equals
+				}
+			}
+			add_to_variable = { var = solar_popular_support value = 1 }
+		}
+		#THE CIVILIAN RESISTANCE
+
+		set_variable = { var = solar_civilian_support_change_temp value = solar_civilian_support }
+		set_variable = { var = solar_civilian_support value = 0 }
+		add_to_variable = {
+			var = solar_civilian_support
+			value = solar_popular_support
+		}
+		add_to_variable = {
+			var = solar_civilian_support
+			value = solar_civilian_measures
+		}
+		add_to_variable = {
+			var = solar_civilian_support
+			value = solar_civilian_resistance_actions
+		}
+		clamp_variable = {
+			var = solar_civilian_support
+			min = 0
+			max = 5
+		}
+		if = {
+			limit = { 
+				check_variable = { solar_civilian_support = 0 } 
+			}
+			remove_ideas = SOL_public_hostility_5
+			add_ideas = SOL_public_hostility_5
+			remove_ideas = SOL_public_hostility_4
+			remove_ideas = SOL_public_hostility_3
+			remove_ideas = SOL_public_hostility_2
+			remove_ideas = SOL_public_hostility_1
+			remove_ideas = SOL_public_hostility_0
+		}
+		if = {
+			limit = { 
+				check_variable = { solar_civilian_support = 1 } 
+			}
+			remove_ideas = SOL_public_hostility_4
+			remove_ideas = SOL_public_hostility_5
+			add_ideas = SOL_public_hostility_4
+			remove_ideas = SOL_public_hostility_3
+			remove_ideas = SOL_public_hostility_2
+			remove_ideas = SOL_public_hostility_1
+			remove_ideas = SOL_public_hostility_0
+		}
+		if = {
+			limit = { 
+				check_variable = { solar_civilian_support = 2 } 
+			}
+			remove_ideas = SOL_public_hostility_3
+			remove_ideas = SOL_public_hostility_5
+			remove_ideas = SOL_public_hostility_4
+			add_ideas = SOL_public_hostility_3
+			remove_ideas = SOL_public_hostility_2
+			remove_ideas = SOL_public_hostility_1
+			remove_ideas = SOL_public_hostility_0
+		}
+		if = {
+			limit = { 
+				check_variable = { solar_civilian_support = 3 } 
+			}
+			remove_ideas = SOL_public_hostility_2
+			remove_ideas = SOL_public_hostility_5
+			remove_ideas = SOL_public_hostility_4
+			remove_ideas = SOL_public_hostility_3
+			add_ideas = SOL_public_hostility_2
+			remove_ideas = SOL_public_hostility_1
+			remove_ideas = SOL_public_hostility_0
+		}
+		if = {
+			limit = { 
+				check_variable = { solar_civilian_support = 4 } 
+			}
+			remove_ideas = SOL_public_hostility_1
+			remove_ideas = SOL_public_hostility_5
+			remove_ideas = SOL_public_hostility_4
+			remove_ideas = SOL_public_hostility_3
+			remove_ideas = SOL_public_hostility_2
+			add_ideas = SOL_public_hostility_1
+			remove_ideas = SOL_public_hostility_0
+		}
+		if = {
+			limit = { 
+				check_variable = { solar_civilian_support = 5 } 
+			}
+			remove_ideas = SOL_public_hostility_0
+			remove_ideas = SOL_public_hostility_5
+			remove_ideas = SOL_public_hostility_4
+			remove_ideas = SOL_public_hostility_3
+			remove_ideas = SOL_public_hostility_2
+			remove_ideas = SOL_public_hostility_1
+			add_ideas = SOL_public_hostility_0
+		}
+
+		if = {
+			limit = {
+				NOT = { check_variable = { solar_civilian_support_change_temp = solar_civilian_support } }
+			}
+			SOL_calculate_region_development = yes
+		}
+
+		#MILITARY RESISTANCE
+
+		set_variable = { var = solar_military_support value = 0 }
+		round_variable = solar_military_defeats
+		add_to_variable = {
+			var = solar_military_support
+			value = solar_popular_support
+		}
+		add_to_variable = {
+			var = solar_military_support
+			value = solar_military_measures
+		}
+		add_to_variable = {
+			var = solar_military_support
+			value = solar_military_defeats
+		}
+		add_to_variable = {
+			var = solar_military_support
+			value = solar_military_resistance_actions
+		}
+		clamp_variable = {
+			var = solar_military_support
+			min = 0
+			max = 5
+		}
+		if = {
+			limit = { 
+				check_variable = { solar_military_support = 0 } 
+			}
+			remove_ideas = SOL_military_desertion_5
+			add_ideas = SOL_military_desertion_5
+			remove_ideas = SOL_military_desertion_4
+			remove_ideas = SOL_military_desertion_3
+			remove_ideas = SOL_military_desertion_2
+			remove_ideas = SOL_military_desertion_1
+			remove_ideas = SOL_military_desertion_0
+		}
+		if = {
+			limit = { 
+				check_variable = { solar_military_support = 1 } 
+			}
+			remove_ideas = SOL_military_desertion_4
+			remove_ideas = SOL_military_desertion_5
+			add_ideas = SOL_military_desertion_4
+			remove_ideas = SOL_military_desertion_3
+			remove_ideas = SOL_military_desertion_2
+			remove_ideas = SOL_military_desertion_1
+			remove_ideas = SOL_military_desertion_0
+		}
+		if = {
+			limit = { 
+				check_variable = { solar_military_support = 2 } 
+			}
+			remove_ideas = SOL_military_desertion_3
+			remove_ideas = SOL_military_desertion_5
+			remove_ideas = SOL_military_desertion_4
+			add_ideas = SOL_military_desertion_3
+			remove_ideas = SOL_military_desertion_2
+			remove_ideas = SOL_military_desertion_1
+			remove_ideas = SOL_military_desertion_0
+		}
+		if = {
+			limit = { 
+				check_variable = { solar_military_support = 3 } 
+			}
+			remove_ideas = SOL_military_desertion_2
+			remove_ideas = SOL_military_desertion_5
+			remove_ideas = SOL_military_desertion_4
+			remove_ideas = SOL_military_desertion_3
+			add_ideas = SOL_military_desertion_2
+			remove_ideas = SOL_military_desertion_1
+			remove_ideas = SOL_military_desertion_0
+		}
+		if = {
+			limit = { 
+				check_variable = { solar_military_support = 4 } 
+			}
+			remove_ideas = SOL_military_desertion_1
+			remove_ideas = SOL_military_desertion_5
+			remove_ideas = SOL_military_desertion_4
+			remove_ideas = SOL_military_desertion_3
+			remove_ideas = SOL_military_desertion_2
+			add_ideas = SOL_military_desertion_1
+			remove_ideas = SOL_military_desertion_0
+		}
+		if = {
+			limit = { 
+				check_variable = { solar_military_support = 5 } 
+			}
+			remove_ideas = SOL_military_desertion_0
+			remove_ideas = SOL_military_desertion_5
+			remove_ideas = SOL_military_desertion_4
+			remove_ideas = SOL_military_desertion_3
+			remove_ideas = SOL_military_desertion_2
+			remove_ideas = SOL_military_desertion_1
+			add_ideas = SOL_military_desertion_0
+		}
+
+
+		#RESISTANCE COUNTER-ACTIVITY
+		if = {
+			limit = { 
+				check_variable = { solar_resistance_actions_progress > 4 } 
+				NOT = { check_variable = { solar_resistance_strength = 5 } }
+			}
+			add_to_variable = { var = solar_resistance_strength value = 1 }
+			set_variable = { var = solar_resistance_actions_progress value = 0 }
+		}
+		if = {
+			limit = { 
+				check_variable = { solar_resistance_outreach_actions_progress > 4 } 
+				NOT = { check_variable = { solar_resistance_outreach_strength = 5 } }
+			}
+			add_to_variable = { var = solar_resistance_outreach_strength value = 1 }
+			set_variable = { var = solar_resistance_outreach_actions_progress value = 0 }
+		}
+		if = {
+			limit = { 
+				check_variable = { solar_resistance_cohesion_actions_progress > 4 } 
+				NOT = { check_variable = { solar_resistance_cohesion = 3 } }
+			}
+			add_to_variable = { var = solar_resistance_cohesion value = 1 }
+			set_variable = { var = solar_resistance_cohesion_actions_progress value = 0 }
+		}
+
+		if = {
+			limit = { 
+				check_variable = { solar_civilian_measures_progress < 0 } 
+			}
+			set_variable = { var = solar_civilian_measures_progress value = 0 }
+		}
+		if = {
+			limit = { 
+				check_variable = { solar_military_measures_progress < 0 } 
+			}
+			set_variable = { var = solar_military_measures_progress value = 0 }
+		}
+		if = {
+			limit = { 
+				check_variable = { solar_resistance_actions_progress < 0 } 
+			}
+			set_variable = { var = solar_resistance_actions_progress value = 0 }
+		}
+		if = {
+			limit = { 
+				check_variable = { solar_resistance_outreach_actions_progress < 0 } 
+			}
+			set_variable = { var = solar_resistance_outreach_actions_progress value = 0 }
+		}
+		if = {
+			limit = { 
+				check_variable = { solar_resistance_cohesion_actions_progress < 0 } 
+			}
+			set_variable = { var = solar_resistance_cohesion_actions_progress value = 0 }
+		}
+
+
+		if = {
+			limit = { check_variable = { solar_resistance_strength = 5 } }
+			set_variable = { var = solar_resistance_actions_progress value = 0 }
+		}
+		if = {
+			limit = { check_variable = { solar_resistance_outreach_strength = 5 } }
+			set_variable = { var = solar_resistance_outreach_actions_progress value = 0 }
+		}
+		if = {
+			limit = { check_variable = { solar_resistance_cohesion = 3 } }
+			set_variable = { var = solar_resistance_cohesion_actions_progress value = 0 }
+		}
+		
+		#HARMONY RESTORATION MOVEMENT STRENGTH
+
+		set_variable = { var = solar_resistance_strength value = 0 }
+		add_to_variable = {
+			var = solar_resistance_strength
+			value = solar_initial_resistance_strength
+		}
+		add_to_variable = {
+			var = solar_resistance_strength
+			value = solar_resistance_suppression
+		}
+		add_to_variable = {
+			var = solar_resistance_strength
+			value = solar_resistance_actions
+		}
+		clamp_variable = {
+			var = solar_resistance_strength
+			min = 0
+			max = 5
+		}
+		if = {
+			limit = { 
+				check_variable = { solar_resistance_strength = 0 } 
+				NOT = { has_country_flag = SOL_resistance_begins }
+			}
+			remove_ideas = SOL_resistance_strength_0
+			add_ideas = SOL_resistance_strength_0
+			remove_ideas = SOL_resistance_strength_1
+			remove_ideas = SOL_resistance_strength_2
+			remove_ideas = SOL_resistance_strength_3
+			remove_ideas = SOL_resistance_strength_4
+			remove_ideas = SOL_resistance_strength_5
+		}
+		if = {
+			limit = { 
+				check_variable = { solar_resistance_strength = 1 } 
+			}
+			remove_ideas = SOL_resistance_strength_1
+			remove_ideas = SOL_resistance_strength_0
+			add_ideas = SOL_resistance_strength_1
+			remove_ideas = SOL_resistance_strength_2
+			remove_ideas = SOL_resistance_strength_3
+			remove_ideas = SOL_resistance_strength_4
+			remove_ideas = SOL_resistance_strength_5
+		}
+		if = {
+			limit = { 
+				check_variable = { solar_resistance_strength = 2 } 
+			}
+			remove_ideas = SOL_resistance_strength_2
+			remove_ideas = SOL_resistance_strength_0
+			remove_ideas = SOL_resistance_strength_1
+			add_ideas = SOL_resistance_strength_2
+			remove_ideas = SOL_resistance_strength_3
+			remove_ideas = SOL_resistance_strength_4
+			remove_ideas = SOL_resistance_strength_5
+		}
+		if = {
+			limit = { 
+				check_variable = { solar_resistance_strength = 3 } 
+			}
+			remove_ideas = SOL_resistance_strength_3
+			remove_ideas = SOL_resistance_strength_0
+			remove_ideas = SOL_resistance_strength_1
+			remove_ideas = SOL_resistance_strength_2
+			add_ideas = SOL_resistance_strength_3
+			remove_ideas = SOL_resistance_strength_4
+			remove_ideas = SOL_resistance_strength_5
+		}
+		if = {
+			limit = { 
+				check_variable = { solar_resistance_strength = 4 } 
+			}
+			remove_ideas = SOL_resistance_strength_4
+			remove_ideas = SOL_resistance_strength_0
+			remove_ideas = SOL_resistance_strength_1
+			remove_ideas = SOL_resistance_strength_2
+			remove_ideas = SOL_resistance_strength_3
+			add_ideas = SOL_resistance_strength_4
+			remove_ideas = SOL_resistance_strength_5
+		}
+		if = {
+			limit = { 
+				check_variable = { solar_resistance_strength = 5 } 
+			}
+			remove_ideas = SOL_resistance_strength_5
+			remove_ideas = SOL_resistance_strength_0
+			remove_ideas = SOL_resistance_strength_1
+			remove_ideas = SOL_resistance_strength_2
+			remove_ideas = SOL_resistance_strength_3
+			remove_ideas = SOL_resistance_strength_4
+			add_ideas = SOL_resistance_strength_5
+		}
+
+		#RESISTANCE OUTREACH STRENGTH
+
+		set_variable = { var = solar_resistance_outreach_strength value = 0 }
+		add_to_variable = {
+			var = solar_resistance_outreach_strength
+			value = solar_initial_resistance_outreach_strength
+		}
+		add_to_variable = {
+			var = solar_resistance_outreach_strength
+			value = solar_resistance_outreach_suppression
+		}
+		add_to_variable = {
+			var = solar_resistance_outreach_strength
+			value = solar_resistance_outreach_actions
+		}
+		clamp_variable = {
+			var = solar_resistance_outreach_strength
+			min = 0
+			max = 5
+		}
+		if = {
+			limit = { 
+				check_variable = { solar_resistance_outreach_strength = 0 } 
+				NOT = { has_country_flag = SOL_resistance_begins }
+			}
+			remove_ideas = SOL_harmonist_broadcasts_0
+			add_ideas = SOL_harmonist_broadcasts_0
+			remove_ideas = SOL_harmonist_broadcasts_1
+			remove_ideas = SOL_harmonist_broadcasts_2
+			remove_ideas = SOL_harmonist_broadcasts_3
+			remove_ideas = SOL_harmonist_broadcasts_4
+			remove_ideas = SOL_harmonist_broadcasts_5
+			set_variable = { var = daybreaker_support_daily_resistance_outreach value = 0 }
+		}
+		if = {
+			limit = { 
+				check_variable = { solar_resistance_outreach_strength = 1 } 
+			}
+			remove_ideas = SOL_harmonist_broadcasts_1
+			remove_ideas = SOL_harmonist_broadcasts_0
+			add_ideas = SOL_harmonist_broadcasts_1
+			remove_ideas = SOL_harmonist_broadcasts_2
+			remove_ideas = SOL_harmonist_broadcasts_3
+			remove_ideas = SOL_harmonist_broadcasts_4
+			remove_ideas = SOL_harmonist_broadcasts_5
+			set_variable = { var = daybreaker_support_daily_resistance_outreach value = -0.02 }
+		}
+		if = {
+			limit = { 
+				check_variable = { solar_resistance_outreach_strength = 2 } 
+			}
+			remove_ideas = SOL_harmonist_broadcasts_2
+			remove_ideas = SOL_harmonist_broadcasts_0
+			remove_ideas = SOL_harmonist_broadcasts_1
+			add_ideas = SOL_harmonist_broadcasts_2
+			remove_ideas = SOL_harmonist_broadcasts_3
+			remove_ideas = SOL_harmonist_broadcasts_4
+			remove_ideas = SOL_harmonist_broadcasts_5
+			set_variable = { var = daybreaker_support_daily_resistance_outreach value = -0.04 }
+		}
+		if = {
+			limit = { 
+				check_variable = { solar_resistance_outreach_strength = 3 } 
+			}
+			remove_ideas = SOL_harmonist_broadcasts_3
+			remove_ideas = SOL_harmonist_broadcasts_0
+			remove_ideas = SOL_harmonist_broadcasts_1
+			remove_ideas = SOL_harmonist_broadcasts_2
+			add_ideas = SOL_harmonist_broadcasts_3
+			remove_ideas = SOL_harmonist_broadcasts_4
+			remove_ideas = SOL_harmonist_broadcasts_5
+			set_variable = { var = daybreaker_support_daily_resistance_outreach value = -0.06 }
+		}
+		if = {
+			limit = { 
+				check_variable = { solar_resistance_outreach_strength = 4 } 
+			}
+			remove_ideas = SOL_harmonist_broadcasts_4
+			remove_ideas = SOL_harmonist_broadcasts_0
+			remove_ideas = SOL_harmonist_broadcasts_1
+			remove_ideas = SOL_harmonist_broadcasts_2
+			remove_ideas = SOL_harmonist_broadcasts_3
+			add_ideas = SOL_harmonist_broadcasts_4
+			remove_ideas = SOL_harmonist_broadcasts_5
+			set_variable = { var = daybreaker_support_daily_resistance_outreach value = -0.08 }
+		}
+		if = {
+			limit = { 
+				check_variable = { solar_resistance_outreach_strength = 5 } 
+			}
+			remove_ideas = SOL_harmonist_broadcasts_5
+			remove_ideas = SOL_harmonist_broadcasts_0
+			remove_ideas = SOL_harmonist_broadcasts_1
+			remove_ideas = SOL_harmonist_broadcasts_2
+			remove_ideas = SOL_harmonist_broadcasts_3
+			remove_ideas = SOL_harmonist_broadcasts_4
+			add_ideas = SOL_harmonist_broadcasts_5
+			set_variable = { var = daybreaker_support_daily_resistance_outreach value = -0.1 }
+		}
+		#PR Nightmare, basically the chance of bad news reaching the general public
+		set_variable = { var = pr_nightmare value = solar_resistance_outreach_strength }
+		multiply_variable { var = pr_nightmare value = 0.2 }
+
+		#RESISTANCE COHESION
+		set_variable = { var = solar_resistance_cohesion value = 0 }
+		add_to_variable = {
+			var = solar_resistance_cohesion
+			value = solar_resistance_cohesion_suppression
+		}
+		add_to_variable = {
+			var = solar_resistance_cohesion
+			value = solar_resistance_cohesion_actions
+		}
+		clamp_variable = {
+			var = solar_resistance_cohesion
+			min = 0
+			max = 3
+		}
+		if = {
+			limit = {
+				check_variable = { solar_resistance_cohesion = 0 }
+			}
+			remove_ideas = SOL_resistance_cohesion_1
+			remove_ideas = SOL_resistance_cohesion_2
+			remove_ideas = SOL_resistance_cohesion_3
+		}
+		if = {
+			limit = {
+				check_variable = { solar_resistance_cohesion = 1 }
+			}
+			remove_ideas = SOL_resistance_cohesion_1
+			remove_ideas = SOL_resistance_cohesion_2
+			remove_ideas = SOL_resistance_cohesion_3
+			add_ideas = SOL_resistance_cohesion_1
+		}
+		if = {
+			limit = {
+				check_variable = { solar_resistance_cohesion = 2 }
+			}
+			remove_ideas = SOL_resistance_cohesion_1
+			remove_ideas = SOL_resistance_cohesion_2
+			remove_ideas = SOL_resistance_cohesion_3
+			add_ideas = SOL_resistance_cohesion_2
+		}
+		if = {
+			limit = {
+				check_variable = { solar_resistance_cohesion = 3 }
+			}
+			remove_ideas = SOL_resistance_cohesion_1
+			remove_ideas = SOL_resistance_cohesion_2
+			remove_ideas = SOL_resistance_cohesion_3
+			add_ideas = SOL_resistance_cohesion_3
+		}
+
+		#THE PROGRESS BAR
+		set_variable = { var = daybreaker_support_progress_bar_pos value = daybreaker_support }
+		multiply_variable = { var = daybreaker_support_progress_bar_pos value = 4 }
+		add_to_variable = { var = daybreaker_support_progress_bar_pos value = -400 }
+		round_variable = daybreaker_support_progress_bar_pos
+
+		#WEEKLY LOYALTY
+		set_variable = { var = daybreaker_support_daily value = 0 }
+		add_to_variable = {
+			var = daybreaker_support_daily
+			value = daybreaker_support_daily_base
+		}
+		add_to_variable = {
+			var = daybreaker_support_daily
+			value = daybreaker_support_daily_resistance_outreach
+		}
+		add_to_variable = {
+			var = daybreaker_support_daily
+			value = daybreaker_support_daily_actions
+		}
+		set_variable = { var = daybreaker_support_weekly value = daybreaker_support_daily }
+		multiply_variable = { var = daybreaker_support_weekly value = 7 }
+
+		#WEEKLY LEADS
+		set_variable = { var = weekly_leads value = 0 }
+		add_to_variable = {
+			var = weekly_leads
+			value = weekly_leads_modifier
+		}
+		if = {
+			limit = { 
+				check_variable = { 
+					var = daybreaker_support 
+					value = 60
+					compare = greater_than_or_equals
+				}
+				has_completed_focus = SOL_Imperial_Inquisition
+			}
+			add_to_variable = { var = weekly_leads value = 2 }
+		}
+
+		if = {
+			limit = { 
+				check_variable = { 
+					var = daybreaker_support 
+					value = 20
+					compare = greater_than_or_equals
+				}
+				has_completed_focus = SOL_bounty_hunters
+			}
+			set_country_flag = civilian_informants
+		}
+		else = {
+			clr_country_flag = civilian_informants
+		}
+
+		if = {
+			limit = { 
+				check_variable = { 
+					var = daybreaker_support 
+					value = 40
+					compare = greater_than_or_equals
+				}
+				has_completed_focus = SOL_civilian_militias
+			}
+			set_country_flag = volunteer_militias
+		}
+		else = {
+			clr_country_flag = volunteer_militias
+		}
+	}
+}
+SOL_calculate_probability = { #Yeah I didn't like doing this either, but the values I was getting from randomize_temp_variable weren't random enough. This basically allows for DnD-style gameplay for events.
+	random_list = {
+		1 = { set_temp_variable = { var = probability_check_temp_1 value = 0.0 } }
+		1 = { set_temp_variable = { var = probability_check_temp_1 value = 0.1 } }
+		1 = { set_temp_variable = { var = probability_check_temp_1 value = 0.2 } }
+		1 = { set_temp_variable = { var = probability_check_temp_1 value = 0.3 } }
+		1 = { set_temp_variable = { var = probability_check_temp_1 value = 0.4 } }
+		1 = { set_temp_variable = { var = probability_check_temp_1 value = 0.5 } }
+		1 = { set_temp_variable = { var = probability_check_temp_1 value = 0.6 } }
+		1 = { set_temp_variable = { var = probability_check_temp_1 value = 0.7 } }
+		1 = { set_temp_variable = { var = probability_check_temp_1 value = 0.8 } }
+		1 = { set_temp_variable = { var = probability_check_temp_1 value = 0.9 } }
+	}
+	random_list = {
+		1 = { set_temp_variable = { var = probability_check_temp_2 value = 0.00 } }
+		1 = { set_temp_variable = { var = probability_check_temp_2 value = 0.01 } }
+		1 = { set_temp_variable = { var = probability_check_temp_2 value = 0.02 } }
+		1 = { set_temp_variable = { var = probability_check_temp_2 value = 0.03 } }
+		1 = { set_temp_variable = { var = probability_check_temp_2 value = 0.04 } }
+		1 = { set_temp_variable = { var = probability_check_temp_2 value = 0.05 } }
+		1 = { set_temp_variable = { var = probability_check_temp_2 value = 0.06 } }
+		1 = { set_temp_variable = { var = probability_check_temp_2 value = 0.07 } }
+		1 = { set_temp_variable = { var = probability_check_temp_2 value = 0.08 } }
+		1 = { set_temp_variable = { var = probability_check_temp_2 value = 0.09 } }
+	}
+	add_to_temp_variable = { probability_check_temp_1 = probability_check_temp_2 }
+	set_variable = { var = probability_check value = probability_check_temp_1 }
+}
+
+SOL_calculate_outreach_win_chance = {
+	set_temp_variable = { daybreaker_support_calculation_temp = 100 }
+	subtract_from_temp_variable = { daybreaker_support_calculation_temp = daybreaker_support }
+	divide_temp_variable = { daybreaker_support_calculation_temp = 100 }
+	set_temp_variable = { outreach_strength_calculation_temp = solar_resistance_outreach_strength }
+	divide_temp_variable = { outreach_strength_calculation_temp = 5 }
+	multiply_temp_variable = { outreach_strength_calculation_temp = daybreaker_support_calculation_temp }
+
+	#SQUARE ROOT CALCULATION - You would not believe how hard this was
+	set_temp_variable = { iteration_temp_0 = 0.5 }
+	set_temp_variable = { squared_value = outreach_strength_calculation_temp }
+	divide_temp_variable = { squared_value = iteration_temp_0 }
+	add_to_temp_variable = { iteration_temp_0 = squared_value }
+	divide_temp_variable = { iteration_temp_0 = 2 }
+
+	set_temp_variable = { iteration_temp_1 = iteration_temp_0 }
+	set_temp_variable = { squared_value = outreach_strength_calculation_temp }
+	divide_temp_variable = { squared_value = iteration_temp_1 }
+	add_to_temp_variable = { iteration_temp_1 = squared_value }
+	divide_temp_variable = { iteration_temp_1 = 2 }
+
+	set_temp_variable = { iteration_temp_2 = iteration_temp_1 }
+	set_temp_variable = { squared_value = outreach_strength_calculation_temp }
+	divide_temp_variable = { squared_value = iteration_temp_2 }
+	add_to_temp_variable = { iteration_temp_2 = squared_value }
+	divide_temp_variable = { iteration_temp_2 = 2 }
+
+	set_temp_variable = { iteration_temp_3 = iteration_temp_2 }
+	set_temp_variable = { squared_value = outreach_strength_calculation_temp }
+	divide_temp_variable = { squared_value = iteration_temp_2 }
+	add_to_temp_variable = { iteration_temp_3 = squared_value }
+	divide_temp_variable = { iteration_temp_3 = 2 }
+
+	set_temp_variable = { iteration_temp_4 = iteration_temp_3 }
+	set_temp_variable = { squared_value = outreach_strength_calculation_temp }
+	divide_temp_variable = { squared_value = iteration_temp_4 }
+	add_to_temp_variable = { iteration_temp_4 = squared_value }
+	divide_temp_variable = { iteration_temp_4 = 2 }
+
+	set_temp_variable = { iteration_temp_5 = iteration_temp_4 }
+	set_temp_variable = { squared_value = outreach_strength_calculation_temp }
+	divide_temp_variable = { squared_value = iteration_temp_5 }
+	add_to_temp_variable = { iteration_temp_5 = squared_value }
+	divide_temp_variable = { iteration_temp_5 = 2 }
+
+
+	if = {
+		limit = { has_country_flag = SOL_counterprotest }
+		add_to_temp_variable = { iteration_temp_5 = -0.1 }
+	}
+	if = {
+		limit = { has_country_flag = protest_police }
+		add_to_temp_variable = { iteration_temp_5 = 0.05 }
+	}
+	if = {
+		limit = { 
+			OR = {
+				has_country_flag = protest_military 
+				has_country_flag = protest_mutiny
+			}
+		}
+		add_to_temp_variable = { iteration_temp_5 = 0.1 }
+	}
+
+	set_variable = { var = resistance_outreach_win_chance value = iteration_temp_5 } 
+	set_variable = { var = resistance_outreach_win_chance_percent value = resistance_outreach_win_chance }
+	multiply_variable = { var = resistance_outreach_win_chance_percent value = 100 } #This is so the tooltip displays the value as a percent instead of decimal
+}
+
+SOL_calculate_propaganda_win_chance = {
+	set_temp_variable = { daybreaker_support_calculation_temp = 100 }
+	subtract_from_temp_variable = { daybreaker_support_calculation_temp = daybreaker_support }
+	divide_temp_variable = { daybreaker_support_calculation_temp = 100 }
+	set_temp_variable = { outreach_strength_calculation_temp = solar_resistance_strength }
+	divide_temp_variable = { outreach_strength_calculation_temp = 5 }
+	multiply_temp_variable = { outreach_strength_calculation_temp = daybreaker_support_calculation_temp }
+
+	#SQUARE ROOT CALCULATION - You would not believe how hard this was
+	set_temp_variable = { iteration_temp_0 = 0.5 }
+	set_temp_variable = { squared_value = outreach_strength_calculation_temp }
+	divide_temp_variable = { squared_value = iteration_temp_0 }
+	add_to_temp_variable = { iteration_temp_0 = squared_value }
+	divide_temp_variable = { iteration_temp_0 = 2 }
+
+	set_temp_variable = { iteration_temp_1 = iteration_temp_0 }
+	set_temp_variable = { squared_value = outreach_strength_calculation_temp }
+	divide_temp_variable = { squared_value = iteration_temp_1 }
+	add_to_temp_variable = { iteration_temp_1 = squared_value }
+	divide_temp_variable = { iteration_temp_1 = 2 }
+
+	set_temp_variable = { iteration_temp_2 = iteration_temp_1 }
+	set_temp_variable = { squared_value = outreach_strength_calculation_temp }
+	divide_temp_variable = { squared_value = iteration_temp_2 }
+	add_to_temp_variable = { iteration_temp_2 = squared_value }
+	divide_temp_variable = { iteration_temp_2 = 2 }
+
+	set_temp_variable = { iteration_temp_3 = iteration_temp_2 }
+	set_temp_variable = { squared_value = outreach_strength_calculation_temp }
+	divide_temp_variable = { squared_value = iteration_temp_2 }
+	add_to_temp_variable = { iteration_temp_3 = squared_value }
+	divide_temp_variable = { iteration_temp_3 = 2 }
+
+	set_temp_variable = { iteration_temp_4 = iteration_temp_3 }
+	set_temp_variable = { squared_value = outreach_strength_calculation_temp }
+	divide_temp_variable = { squared_value = iteration_temp_4 }
+	add_to_temp_variable = { iteration_temp_4 = squared_value }
+	divide_temp_variable = { iteration_temp_4 = 2 }
+
+	set_temp_variable = { iteration_temp_5 = iteration_temp_4 }
+	set_temp_variable = { squared_value = outreach_strength_calculation_temp }
+	divide_temp_variable = { squared_value = iteration_temp_5 }
+	add_to_temp_variable = { iteration_temp_5 = squared_value }
+	divide_temp_variable = { iteration_temp_5 = 2 }
+
+	set_variable = { var = resistance_propaganda_win_chance value = iteration_temp_5 }
+	if = {
+		limit = { has_country_flag = civilian_informants }
+		add_to_variable = { var = resistance_propaganda_win_chance value = -0.1 }
+	}
+}
+
+SOL_calculate_civilian_event_win_chance = {
+	set_temp_variable = { daybreaker_support_calculation_temp = daybreaker_support }
+	divide_temp_variable = { daybreaker_support_calculation_temp = 100 }
+	set_temp_variable = { civilian_strength_calculation_temp = solar_civilian_support }
+	divide_temp_variable = { civilian_strength_calculation_temp = 5 }
+	multiply_temp_variable = { civilian_strength_calculation_temp = daybreaker_support_calculation_temp }
+
+	#SQUARE ROOT CALCULATION - You would not believe how hard this was
+	set_temp_variable = { iteration_temp_0 = 0.5 }
+	set_temp_variable = { squared_value = civilian_strength_calculation_temp }
+	divide_temp_variable = { squared_value = iteration_temp_0 }
+	add_to_temp_variable = { iteration_temp_0 = squared_value }
+	divide_temp_variable = { iteration_temp_0 = 2 }
+
+	set_temp_variable = { iteration_temp_1 = iteration_temp_0 }
+	set_temp_variable = { squared_value = civilian_strength_calculation_temp }
+	divide_temp_variable = { squared_value = iteration_temp_1 }
+	add_to_temp_variable = { iteration_temp_1 = squared_value }
+	divide_temp_variable = { iteration_temp_1 = 2 }
+
+	set_temp_variable = { iteration_temp_2 = iteration_temp_1 }
+	set_temp_variable = { squared_value = civilian_strength_calculation_temp }
+	divide_temp_variable = { squared_value = iteration_temp_2 }
+	add_to_temp_variable = { iteration_temp_2 = squared_value }
+	divide_temp_variable = { iteration_temp_2 = 2 }
+
+	set_temp_variable = { iteration_temp_3 = iteration_temp_2 }
+	set_temp_variable = { squared_value = civilian_strength_calculation_temp }
+	divide_temp_variable = { squared_value = iteration_temp_2 }
+	add_to_temp_variable = { iteration_temp_3 = squared_value }
+	divide_temp_variable = { iteration_temp_3 = 2 }
+
+	set_temp_variable = { iteration_temp_4 = iteration_temp_3 }
+	set_temp_variable = { squared_value = civilian_strength_calculation_temp }
+	divide_temp_variable = { squared_value = iteration_temp_4 }
+	add_to_temp_variable = { iteration_temp_4 = squared_value }
+	divide_temp_variable = { iteration_temp_4 = 2 }
+
+	set_temp_variable = { iteration_temp_5 = iteration_temp_4 }
+	set_temp_variable = { squared_value = civilian_strength_calculation_temp }
+	divide_temp_variable = { squared_value = iteration_temp_5 }
+	add_to_temp_variable = { iteration_temp_5 = squared_value }
+	divide_temp_variable = { iteration_temp_5 = 2 }
+
+	set_variable = { var = resistance_civilian_event_win_chance value = iteration_temp_5 }
+	if = {
+		limit = { has_country_flag = civilian_informants }
+		add_to_variable = { var = resistance_civilian_event_win_chance value = 0.1 }
+	}
+}
+SOL_calculate_military_event_win_chance = {
+	set_temp_variable = { daybreaker_support_calculation_temp = daybreaker_support }
+	divide_temp_variable = { daybreaker_support_calculation_temp = 100 }
+	set_temp_variable = { military_strength_calculation_temp = solar_military_support }
+	divide_temp_variable = { military_strength_calculation_temp = 5 }
+	multiply_temp_variable = { military_strength_calculation_temp = daybreaker_support_calculation_temp }
+
+	#SQUARE ROOT CALCULATION - You would not believe how hard this was
+	set_temp_variable = { iteration_temp_0 = 0.5 }
+	set_temp_variable = { squared_value = military_strength_calculation_temp }
+	divide_temp_variable = { squared_value = iteration_temp_0 }
+	add_to_temp_variable = { iteration_temp_0 = squared_value }
+	divide_temp_variable = { iteration_temp_0 = 2 }
+
+	set_temp_variable = { iteration_temp_1 = iteration_temp_0 }
+	set_temp_variable = { squared_value = military_strength_calculation_temp }
+	divide_temp_variable = { squared_value = iteration_temp_1 }
+	add_to_temp_variable = { iteration_temp_1 = squared_value }
+	divide_temp_variable = { iteration_temp_1 = 2 }
+
+	set_temp_variable = { iteration_temp_2 = iteration_temp_1 }
+	set_temp_variable = { squared_value = military_strength_calculation_temp }
+	divide_temp_variable = { squared_value = iteration_temp_2 }
+	add_to_temp_variable = { iteration_temp_2 = squared_value }
+	divide_temp_variable = { iteration_temp_2 = 2 }
+
+	set_temp_variable = { iteration_temp_3 = iteration_temp_2 }
+	set_temp_variable = { squared_value = military_strength_calculation_temp }
+	divide_temp_variable = { squared_value = iteration_temp_2 }
+	add_to_temp_variable = { iteration_temp_3 = squared_value }
+	divide_temp_variable = { iteration_temp_3 = 2 }
+
+	set_temp_variable = { iteration_temp_4 = iteration_temp_3 }
+	set_temp_variable = { squared_value = military_strength_calculation_temp }
+	divide_temp_variable = { squared_value = iteration_temp_4 }
+	add_to_temp_variable = { iteration_temp_4 = squared_value }
+	divide_temp_variable = { iteration_temp_4 = 2 }
+
+	set_temp_variable = { iteration_temp_5 = iteration_temp_4 }
+	set_temp_variable = { squared_value = military_strength_calculation_temp }
+	divide_temp_variable = { squared_value = iteration_temp_5 }
+	add_to_temp_variable = { iteration_temp_5 = squared_value }
+	divide_temp_variable = { iteration_temp_5 = 2 }
+
+	set_variable = { var = resistance_military_event_win_chance value = iteration_temp_5 }
+	if = {
+		limit = { has_country_flag = civilian_informants }
+		add_to_variable = { var = resistance_military_event_win_chance value = 0.1 }
+	}
+}
+
+SOL_calculate_leads_small = {
+	random_list = {
+		0.5 = {
+			modifier = {
+				factor = 0.5
+				has_country_flag = inquisition_additional_leads
+			}
+			set_variable = { var = lead_counter value = 3 }
+		}
+		1 = {
+			modifier = {
+				factor = 0.5
+				has_country_flag = inquisition_additional_leads
+			}
+			set_variable = { var = lead_counter value = 4 }
+		}
+		2 = {
+			set_variable = { var = lead_counter value = 5 }
+		}
+		1 = {
+			set_variable = { var = lead_counter value = 6 }
+		}
+		0.5 = {
+			set_variable = { var = lead_counter value = 7 }
+		}
+	}
+}
+SOL_calculate_leads_medium = {
+	random_list = {
+		0.25 = {
+			modifier = {
+				factor = 0.5
+				has_country_flag = inquisition_additional_leads
+			}
+			set_variable = { var = lead_counter value = 15 }
+		}
+		0.5 = {
+			modifier = {
+				factor = 0.5
+				has_country_flag = inquisition_additional_leads
+			}
+			set_variable = { var = lead_counter value = 17 }
+		}
+		1 = {
+			modifier = {
+				factor = 0.5
+				has_country_flag = inquisition_additional_leads
+			}
+			set_variable = { var = lead_counter value = 19 }
+		}
+		2 = {
+			set_variable = { var = lead_counter value = 21 }
+		}
+		1 = {
+			set_variable = { var = lead_counter value = 23 }
+		}
+		0.5 = {
+			set_variable = { var = lead_counter value = 25 }
+		}
+		0.25 = {
+			set_variable = { var = lead_counter value = 27 }
+		}
+	}
+}
+SOL_calculate_leads_large = {
+	random_list = {
+		0.25 = {
+			modifier = {
+				factor = 0.5
+				has_country_flag = inquisition_additional_leads
+			}
+			set_variable = { var = lead_counter value = 35 }
+		}
+		0.5 = {
+			modifier = {
+				factor = 0.5
+				has_country_flag = inquisition_additional_leads
+			}
+			set_variable = { var = lead_counter value = 38 }
+		}
+		1 = {
+			modifier = {
+				factor = 0.5
+				has_country_flag = inquisition_additional_leads
+			}
+			set_variable = { var = lead_counter value = 41 }
+		}
+		2 = {
+			set_variable = { var = lead_counter value = 44 }
+		}
+		1 = {
+			set_variable = { var = lead_counter value = 47 }
+		}
+		0.5 = {
+			set_variable = { var = lead_counter value = 50 }
+		}
+		0.25 = {
+			set_variable = { var = lead_counter value = 53 }
+		}
+	}
+}
+SOL_calculate_leads_huge = {
+	random_list = {
+		0.25 = {
+			modifier = {
+				factor = 0.5
+				has_country_flag = inquisition_additional_leads
+			}
+			set_variable = { var = lead_counter value = 61 }
+		}
+		0.5 = {
+			modifier = {
+				factor = 0.5
+				has_country_flag = inquisition_additional_leads
+			}
+			set_variable = { var = lead_counter value = 64 }
+		}
+		1 = {
+			modifier = {
+				factor = 0.5
+				has_country_flag = inquisition_additional_leads
+			}
+			set_variable = { var = lead_counter value = 67 }
+		}
+		2 = {
+			set_variable = { var = lead_counter value = 70 }
+		}
+		1 = {
+			set_variable = { var = lead_counter value = 73 }
+		}
+		0.5 = {
+			set_variable = { var = lead_counter value = 76 }
+		}
+		0.25 = {
+			set_variable = { var = lead_counter value = 79 }
+		}
+	}
+}
+
+SOL_calculate_resistance_target = {
+	random_list = {
+		50 = {
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = event_target:solar_empire
+					NOT = { state = 3 }
+					NOT = { state = 75 }
+					NOT = { state = event_target:SOL_resistance_stronghold }
+					is_owned_and_controlled_by = event_target:solar_empire
+					distance_to = {
+						value < 600
+						target = event_target:SOL_resistance_stronghold
+					}
+				}
+				save_global_event_target_as = SOL_resistance_activity
+			}
+		}
+		30 = {
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = event_target:solar_empire
+					NOT = { state = 3 }
+					NOT = { state = 75 }
+					NOT = { state = event_target:SOL_resistance_stronghold }
+					is_owned_and_controlled_by = event_target:solar_empire
+					distance_to = {
+						value > 600
+						target = event_target:SOL_resistance_stronghold
+					}
+					distance_to = {
+						value < 1000
+						target = event_target:SOL_resistance_stronghold
+					}
+				}
+				save_global_event_target_as = SOL_resistance_activity
+			}
+		}
+		20 = {
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = event_target:solar_empire
+					NOT = { state = 3 }
+					NOT = { state = 75 }
+					NOT = { state = event_target:SOL_resistance_stronghold }
+					is_owned_and_controlled_by = event_target:solar_empire
+					distance_to = {
+						value > 1000
+						target = event_target:SOL_resistance_stronghold
+					}
+				}
+				save_global_event_target_as = SOL_resistance_activity
+			}
+		}
+	}
+}
+SOL_calculate_last_resistance_strike_target = {
+	if = {
+		limit = {
+			NOT = {
+				AND = {
+					event_target:SOL_strike_target_7 = { has_state_flag = potential_secondary_strike_target }
+					has_country_flag = SOL_refined_resistance_strike
+				}
+			}
+			NOT = { has_country_flag = upgraded_inquisition }
+			event_target:SOL_strike_target_7 = { is_owned_and_controlled_by = event_target:solar_empire }
+			divisions_in_state = {
+				size > 3
+				state = event_target:SOL_strike_target_7
+			}
+		}
+		set_variable = { var = SOL_strike_at_resistance_last_state_target value = 7 }
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				AND = {
+					event_target:SOL_strike_target_6 = { has_state_flag = potential_secondary_strike_target }
+					has_country_flag = SOL_refined_resistance_strike
+				}
+			}
+			event_target:SOL_strike_target_6 = { is_owned_and_controlled_by = event_target:solar_empire }
+			NOT = { has_country_flag = SOL_twilight_ascended }
+			divisions_in_state = {
+				size > 3
+				state = event_target:SOL_strike_target_6
+			}
+		}
+		set_variable = { var = SOL_strike_at_resistance_last_state_target value = 6 }
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				AND = {
+					event_target:SOL_strike_target_5 = { has_state_flag = potential_secondary_strike_target }
+					has_country_flag = SOL_refined_resistance_strike
+				}
+			}
+			event_target:SOL_strike_target_5 = { is_owned_and_controlled_by = event_target:solar_empire }
+			divisions_in_state = {
+				size > 3
+				state = event_target:SOL_strike_target_5
+			}
+		}
+		set_variable = { var = SOL_strike_at_resistance_last_state_target value = 5 }
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				AND = {
+					event_target:SOL_strike_target_4 = { has_state_flag = potential_secondary_strike_target }
+					has_country_flag = SOL_refined_resistance_strike
+				}
+			}
+			event_target:SOL_strike_target_4 = { is_owned_and_controlled_by = event_target:solar_empire }
+			divisions_in_state = {
+				size > 3
+				state = event_target:SOL_strike_target_4
+			}
+		}
+		set_variable = { var = SOL_strike_at_resistance_last_state_target value = 4 }
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				AND = {
+					event_target:SOL_strike_target_3 = { has_state_flag = potential_secondary_strike_target }
+					has_country_flag = SOL_refined_resistance_strike
+				}
+			}
+			event_target:SOL_strike_target_3 = { is_owned_and_controlled_by = event_target:solar_empire }
+			divisions_in_state = {
+				size > 3
+				state = event_target:SOL_strike_target_3
+			}
+		}
+		set_variable = { var = SOL_strike_at_resistance_last_state_target value = 3 }
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				AND = {
+					event_target:SOL_strike_target_2 = { has_state_flag = potential_secondary_strike_target }
+					has_country_flag = SOL_refined_resistance_strike
+				}
+			}
+			event_target:SOL_strike_target_2 = { is_owned_and_controlled_by = event_target:solar_empire }
+			divisions_in_state = {
+				size > 3
+				state = event_target:SOL_strike_target_2
+			}
+		}
+		set_variable = { var = SOL_strike_at_resistance_last_state_target value = 2 }
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				AND = {
+					event_target:SOL_strike_target_1 = { has_state_flag = potential_secondary_strike_target }
+					has_country_flag = SOL_refined_resistance_strike
+				}
+			}
+			event_target:SOL_strike_target_1 = { is_owned_and_controlled_by = event_target:solar_empire }
+			divisions_in_state = {
+				size > 3
+				state = event_target:SOL_strike_target_1
+			}
+		}
+		set_variable = { var = SOL_strike_at_resistance_last_state_target value = 1 }
+	}
+
+	if = {
+		limit = {
+			NOT = {
+				AND = {
+					event_target:SOL_strike_target_1 = { has_state_flag = potential_secondary_strike_target }
+					has_country_flag = SOL_refined_resistance_strike
+				}
+			}
+			event_target:SOL_strike_target_1 = { is_owned_and_controlled_by = event_target:solar_empire }
+			divisions_in_state = {
+				size > 3
+				state = event_target:SOL_strike_target_1
+			}
+		}
+		set_variable = { var = SOL_strike_at_resistance_first_state_target value = 1 }
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				AND = {
+					event_target:SOL_strike_target_2 = { has_state_flag = potential_secondary_strike_target }
+					has_country_flag = SOL_refined_resistance_strike
+				}
+			}
+			NOT = { has_country_flag = SOL_twilight_ascended }
+			event_target:SOL_strike_target_2 = { is_owned_and_controlled_by = event_target:solar_empire }
+			divisions_in_state = {
+				size > 3
+				state = event_target:SOL_strike_target_2
+			}
+		}
+		set_variable = { var = SOL_strike_at_resistance_first_state_target value = 2 }
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				AND = {
+					event_target:SOL_strike_target_3 = { has_state_flag = potential_secondary_strike_target }
+					has_country_flag = SOL_refined_resistance_strike
+				}
+			}
+			event_target:SOL_strike_target_3 = { is_owned_and_controlled_by = event_target:solar_empire }
+			divisions_in_state = {
+				size > 3
+				state = event_target:SOL_strike_target_3
+			}
+		}
+		set_variable = { var = SOL_strike_at_resistance_first_state_target value = 3 }
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				AND = {
+					event_target:SOL_strike_target_4 = { has_state_flag = potential_secondary_strike_target }
+					has_country_flag = SOL_refined_resistance_strike
+				}
+			}
+			event_target:SOL_strike_target_4 = { is_owned_and_controlled_by = event_target:solar_empire }
+			divisions_in_state = {
+				size > 3
+				state = event_target:SOL_strike_target_4
+			}
+		}
+		set_variable = { var = SOL_strike_at_resistance_first_state_target value = 4 }
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				AND = {
+					event_target:SOL_strike_target_5 = { has_state_flag = potential_secondary_strike_target }
+					has_country_flag = SOL_refined_resistance_strike
+				}
+			}
+			event_target:SOL_strike_target_5 = { is_owned_and_controlled_by = event_target:solar_empire }
+			divisions_in_state = {
+				size > 3
+				state = event_target:SOL_strike_target_5
+			}
+		}
+		set_variable = { var = SOL_strike_at_resistance_first_state_target value = 5 }
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				AND = {
+					event_target:SOL_strike_target_6 = { has_state_flag = potential_secondary_strike_target }
+					has_country_flag = SOL_refined_resistance_strike
+				}
+			}
+			event_target:SOL_strike_target_6 = { is_owned_and_controlled_by = event_target:solar_empire }
+			NOT = { has_country_flag = SOL_twilight_ascended }
+			divisions_in_state = {
+				size > 3
+				state = event_target:SOL_strike_target_6
+			}
+		}
+		set_variable = { var = SOL_strike_at_resistance_first_state_target value = 6 }
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				AND = {
+					event_target:SOL_strike_target_7 = { has_state_flag = potential_secondary_strike_target }
+					has_country_flag = SOL_refined_resistance_strike
+				}
+			}
+			event_target:SOL_strike_target_7 = { is_owned_and_controlled_by = event_target:solar_empire }
+			NOT = { has_country_flag = upgraded_inquisition }
+			divisions_in_state = {
+				size > 3
+				state = event_target:SOL_strike_target_7
+			}
+		}
+		set_variable = { var = SOL_strike_at_resistance_first_state_target value = 7 }
+	}
+}
+
+SOL_decision_mission_target = { #This makes sure that each new uprising doesn't assign their state target to an in-progress mission
+	add_to_variable = { var = num_ongoing_uprisings value = 1 }
+	event_target:SOL_uprising_in_state_temp_target = {
+		set_state_flag = SOL_ongoing_uprising
+	}
+	if = {
+		limit = { 
+			check_variable = { num_ongoing_uprisings = 1 }
+		}
+		event_target:SOL_uprising_in_state_temp_target = {
+			save_global_event_target_as = SOL_uprising_in_state_event_target
+		}
+		activate_mission = SOL_state_uprising_decision
+	}
+	else_if = {
+		limit = { 
+			check_variable = { num_ongoing_uprisings = 2 }
+		}
+		event_target:SOL_uprising_in_state_temp_target = {
+			save_global_event_target_as = SOL_uprising_in_state_event_target_1
+		}
+		activate_mission = SOL_state_uprising_decision_1
+	}
+	else_if = {
+		limit = { 
+			check_variable = { num_ongoing_uprisings = 3 }
+		}
+		event_target:SOL_uprising_in_state_temp_target = {
+			save_global_event_target_as = SOL_uprising_in_state_event_target_2
+		}
+		activate_mission = SOL_state_uprising_decision_2
+	}
+	else_if = {
+		limit = { 
+			check_variable = { num_ongoing_uprisings = 4 }
+		}
+		event_target:SOL_uprising_in_state_temp_target = {
+			save_global_event_target_as = SOL_uprising_in_state_event_target_3
+		}
+		activate_mission = SOL_state_uprising_decision_3
+	}
+	else_if = {
+		limit = { 
+			check_variable = { num_ongoing_uprisings = 5 }
+		}
+		event_target:SOL_uprising_in_state_temp_target = {
+			save_global_event_target_as = SOL_uprising_in_state_event_target_4
+		}
+		activate_mission = SOL_state_uprising_decision_4
+	}
+	else_if = {
+		limit = { 
+			check_variable = { num_ongoing_uprisings = 6 }
+		}
+		event_target:SOL_uprising_in_state_temp_target = {
+			save_global_event_target_as = SOL_uprising_in_state_event_target_5
+		}
+		activate_mission = SOL_state_uprising_decision_5
+	}
+	else_if = {
+		limit = { 
+			check_variable = { num_ongoing_uprisings = 7 }
+		}
+		event_target:SOL_uprising_in_state_temp_target = {
+			save_global_event_target_as = SOL_uprising_in_state_event_target_6
+		}
+		activate_mission = SOL_state_uprising_decision_6
+	}
+	clamp_variable = {
+		var = num_ongoing_uprisings
+		min = 0
+		max = 7
+	}
+}
+
+
+SOL_calculate_magic = {
+	if = {
+		limit = {
+			original_tag = EQS
+			tag = event_target:solar_empire
+			has_country_leader = { ruling_only = yes name = "Daybreaker" }
+		}
+
+
+		clamp_variable = {
+			var = daybreaker_magic_reserves
+			min = 0 
+			max = daybreaker_magic_max
+		}
+		#Magic bar position
+		set_variable = { var = daybreaker_magic_daily_change value = daybreaker_magic_regeneration }
+
+		set_variable = { var = daybreaker_magic_loss value = 0 }
+		set_variable = { var = daybreaker_magic_calculation_temp value = sol_heatwave_cost_daily }
+		multiply_variable = { var = daybreaker_magic_calculation_temp value = sol_heatwave_number }
+		subtract_from_variable = { var = daybreaker_magic_loss value = daybreaker_magic_calculation_temp }
+		set_variable = { var = daybreaker_magic_calculation_temp value = sol_blessing_cost_daily }
+		multiply_variable = { var = daybreaker_magic_calculation_temp value = sol_blessing_number }
+		subtract_from_variable = { var = daybreaker_magic_loss value = daybreaker_magic_calculation_temp }
+		set_variable = { var = daybreaker_magic_calculation_temp value = sol_curse_cost_daily }
+		multiply_variable = { var = daybreaker_magic_calculation_temp value = sol_curse_number }
+		subtract_from_variable = { var = daybreaker_magic_loss value = daybreaker_magic_calculation_temp }
+
+		add_to_variable = { var = daybreaker_magic_daily_change value = daybreaker_magic_loss }
+		add_to_variable = { var = daybreaker_magic_daily_change value = daybreaker_magic_daily_change_actions }
+
+		set_variable = { var = daybreaker_magic_progress_bar_pos value = 300 }
+		set_variable = { var = daybreaker_magic_progress_bar_pos_temp value = daybreaker_magic_reserves }
+		divide_variable = { var = daybreaker_magic_progress_bar_pos_temp value = daybreaker_magic_max }
+		multiply_variable = { var = daybreaker_magic_progress_bar_pos_temp value = 300 }
+		round_variable = daybreaker_magic_progress_bar_pos_temp
+		subtract_from_variable = { var = daybreaker_magic_progress_bar_pos value = daybreaker_magic_progress_bar_pos_temp }
+		if = {
+			limit = { #Force GUI update only if GUI is open
+				has_variable = sol_magic_screen_show
+			}
+			add_to_variable = { var = sol_magic_screen_show value = 1 }
+		}
+		clamp_variable = {
+			var = daybreaker_magic_reserves
+			min = 0 
+			max = daybreaker_magic_max
+		}
+	}
+}
+
+SOL_set_state_flags_for_public_works = {
+	if = {
+		limit = {
+			original_tag = EQS
+			tag = event_target:solar_empire
+			has_country_leader = { ruling_only = yes name = "Daybreaker" }
+		}
+		every_state = {
+			limit = {
+				OR = {
+					state = 180
+					state = 181
+					state = 70
+					state = 134
+					state = 135
+					state = 56
+					state = 176
+					state = 183
+					state = 102
+					state = 178
+					state = 177
+					state = 74
+					state = 182
+					state = 40
+				}
+			}
+			set_state_flag = sol_region_bales_whinnyapolis
+		}
+		every_state = {
+			limit = {
+				OR = {
+					state = 96
+					state = 127
+					state = 124
+					state = 125
+					state = 95
+					state = 119
+					state = 118
+					state = 41
+					state = 66
+					state = 100
+					state = 87
+					state = 38
+					state = 94
+				}
+			}
+	
+			set_state_flag = sol_region_west_coast
+		}
+		every_state = {
+			limit = {
+				OR = {
+					state = 22
+					state = 23
+					state = 19
+					state = 80
+					state = 85
+					state = 93
+					state = 89
+					state = 21
+					state = 20
+					state = 78
+					state = 92
+					state = 91
+					state = 43
+					state = 44
+					state = 42
+					state = 51
+					state = 71
+					state = 47
+					state = 49
+				}
+			}
+			set_state_flag = sol_region_southwest
+		}
+		every_state = {
+			limit = {
+				OR = {
+					state = 28
+					state = 27
+					state = 82
+					state = 13
+					state = 90
+					state = 37
+					state = 17
+					state = 31
+					state = 88
+					state = 348
+					state = 16
+					state = 24
+					state = 350
+					state = 30
+					state = 36
+					state = 25
+					state = 83
+					state = 79
+					state = 52
+					state = 353
+					state = 32
+					state = 81
+					state = 35
+					state = 221
+					state = 50
+					state = 86
+					state = 15
+					state = 26
+					state = 348
+					state = 33
+					state = 351
+					state = 34
+					state = 352
+				}
+			}
+			set_state_flag = sol_region_southeast
+		}
+		every_state = {
+			limit = {
+				OR = {
+					state = 117
+					state = 114
+					state = 121
+					state = 123
+					state = 97
+					state = 111
+					state = 122
+					state = 120
+					state = 113
+					state = 63
+					state = 116
+					state = 115
+					state = 112
+					state = 84
+					state = 327
+					state = 101
+					state = 2
+					state = 1
+					state = 5
+					state = 65
+					state = 39
+					state = 3
+					state = 68
+					state = 99
+					state = 128
+					state = 129
+					state = 105
+					state = 103
+					state = 104
+					state = 40
+					state = 171
+					state = 179
+				}
+			}
+			set_state_flag = sol_region_heartland
+		}
+		every_state = {
+			limit = {
+				OR = {
+					state = 106
+					state = 29
+					state = 109
+					state = 12
+					state = 107
+					state = 185
+					state = 108
+					state = 110
+					state = 188
+					state = 186
+					state = 75
+					state = 187
+					state = 223
+					state = 226
+					state = 349
+					state = 184
+					state = 230
+					state = 231
+					state = 232
+					state = 227
+					state = 228
+					state = 525
+				}
+			}
+			set_state_flag = sol_region_east_coast
+		}
+		every_state = {
+			limit = {
+				OR = {
+					state = 48
+					state = 18
+					state = 46
+					state = 59
+					state = 60
+					state = 61
+					state = 130
+					state = 132
+					state = 126
+					state = 170
+					state = 169
+					state = 54
+					state = 133
+					state = 73
+					state = 72
+					state = 45
+					state = 14
+					state = 173
+					state = 174
+					state = 175
+					state = 172
+					state = 138
+					state = 136
+					state = 137
+					state = 131
+				}
+			}
+			set_state_flag = sol_region_frontier
+		}
+		every_state = {
+			limit = {
+				OR = {
+					state = 318
+					state = 139
+					state = 343
+					state = 324
+					state = 143
+					state = 140
+					state = 77
+					state = 142
+					state = 146
+					state = 148
+					state = 147
+					state = 149
+					state = 144
+					state = 141
+					state = 55
+					state = 145
+					state = 53
+					state = 345
+					state = 344
+					state = 150
+					state = 64
+					state = 151
+					state = 152
+					state = 98
+					state = 236
+					state = 339
+				}
+			}
+			set_state_flag = sol_region_crystal_empire
+		}
+		every_state = {
+			limit = {
+				OR = {
+					state = 156
+					state = 155
+					state = 154
+					state = 157
+					state = 326
+					state = 164
+					state = 160
+					state = 162
+					state = 158
+					state = 159
+					state = 229
+					state = 167
+					state = 653
+					state = 662
+					state = 661
+					state = 67
+					state = 166
+					state = 233
+					state = 168
+					state = 225
+					state = 161
+					state = 163
+					state = 235
+					state = 237
+					state = 153
+					state = 334
+					state = 165
+					state = 240
+					state = 234
+					state = 678
+					state = 332
+					state = 241
+					state = 333
+					state = 57
+				}
+			}
+			set_state_flag = sol_region_severyana
+		}
+	}
+}
+
+SOL_calculate_region_development = {
+	#Bales-Whinnyapolis
+	if = {
+		limit = {
+			NOT = {
+				any_state = {
+					AND = {
+						has_state_flag = sol_region_bales_whinnyapolis
+						NOT = { is_controlled_by = event_target:solar_empire }
+					}
+				}
+			}	
+		}
+		set_variable = { var = SOL_equus_map_bales_whinnyapolis_development value = 0 }
+
+		add_to_variable = {
+			var = SOL_equus_map_bales_whinnyapolis_development
+			value = SOL_equus_map_bales_whinnyapolis_development_wartorn
+		}
+		add_to_variable = {
+			var = SOL_equus_map_bales_whinnyapolis_development
+			value = SOL_equus_map_bales_whinnyapolis_development_completed_public_works
+		}
+		add_to_variable = {
+			var = SOL_equus_map_bales_whinnyapolis_development
+			value = SOL_equus_map_bales_whinnyapolis_local_resistance
+		}
+		add_to_variable = { var = SOL_equus_map_bales_whinnyapolis_development value = solar_civilian_support }
+		if = {
+			limit = { 
+				check_variable = { SOL_equus_map_bales_whinnyapolis_development < 3 }
+			}
+			set_variable = { var = SOL_equus_map_bales_whinnyapolis_frame_var value = 2 }
+		}
+		else_if = {
+			limit = { 
+				check_variable = { SOL_equus_map_bales_whinnyapolis_development < 5 }
+			}
+			set_variable = { var = SOL_equus_map_bales_whinnyapolis_frame_var value = 3 }
+		}
+		else_if = {
+			limit = { 
+				check_variable = { SOL_equus_map_bales_whinnyapolis_development > 4 }
+			}
+			set_variable = { var = SOL_equus_map_bales_whinnyapolis_frame_var value = 4 }
+		}
+	}
+	else = {
+		set_variable = { var = SOL_equus_map_bales_whinnyapolis_frame_var value = 1 }
+	}
+
+	#Heartland
+	if = {
+		limit = {
+			NOT = {
+				any_state = {
+					AND = {
+						has_state_flag = sol_region_heartland
+						NOT = { is_controlled_by = event_target:solar_empire }
+					}
+				}
+			}
+		}
+		set_variable = { var = SOL_equus_map_heartland_development value = 1 }
+
+		add_to_variable = {
+			var = SOL_equus_map_heartland_development
+			value = SOL_equus_map_heartland_development_wartorn
+		}
+		add_to_variable = {
+			var = SOL_equus_map_heartland_development
+			value = SOL_equus_map_heartland_development_completed_public_works
+		}
+		add_to_variable = {
+			var = SOL_equus_map_heartland_development
+			value = SOL_equus_map_heartland_local_resistance
+		}
+		add_to_variable = { var = SOL_equus_map_heartland_development value = solar_civilian_support }
+		if = {
+			limit = { 
+				check_variable = { SOL_equus_map_heartland_development < 3 }
+			}
+			set_variable = { var = SOL_equus_map_heartland_frame_var value = 2 }
+		}
+		else_if = {
+			limit = { 
+				check_variable = { SOL_equus_map_heartland_development < 5 }
+			}
+			set_variable = { var = SOL_equus_map_heartland_frame_var value = 3 }
+		}
+		else_if = {
+			limit = { 
+				check_variable = { SOL_equus_map_heartland_development > 4 }
+			}
+			set_variable = { var = SOL_equus_map_heartland_frame_var value = 4 }
+		}
+	}
+	else = {
+		set_variable = { var = SOL_equus_map_heartland_frame_var value = 1 }
+	}
+
+	#WEST COAST
+	if = {
+		limit = {
+			NOT = {
+				any_state = {
+					AND = {
+						has_state_flag = sol_region_west_coast
+						NOT = { is_controlled_by = event_target:solar_empire }
+					}
+				}
+			}
+		}
+		set_variable = { var = SOL_equus_map_west_coast_development value = 0 }
+
+		add_to_variable = {
+			var = SOL_equus_map_west_coast_development
+			value = SOL_equus_map_west_coast_development_wartorn
+		}
+		add_to_variable = {
+			var = SOL_equus_map_west_coast_development
+			value = SOL_equus_map_west_coast_development_completed_public_works
+		}
+		add_to_variable = {
+			var = SOL_equus_map_west_coast_development
+			value = SOL_equus_map_west_coast_local_resistance
+		}
+		add_to_variable = { var = SOL_equus_map_west_coast_development value = solar_civilian_support }
+		if = {
+			limit = { 
+				check_variable = { SOL_equus_map_west_coast_development < 3 }
+			}
+			set_variable = { var = SOL_equus_map_west_coast_frame_var value = 2 }
+		}
+		else_if = {
+			limit = { 
+				check_variable = { SOL_equus_map_west_coast_development < 5 }
+			}
+			set_variable = { var = SOL_equus_map_west_coast_frame_var value = 3 }
+		}
+		else_if = {
+			limit = { 
+				check_variable = { SOL_equus_map_west_coast_development > 4 }
+			}
+			set_variable = { var = SOL_equus_map_west_coast_frame_var value = 4 }
+		}
+	}
+	else = {
+		set_variable = { var = SOL_equus_map_west_coast_frame_var value = 1 }
+	}
+
+	#EAST COAST
+	if = {
+		limit = {
+			NOT = {
+				any_state = {
+					AND = {
+						has_state_flag = sol_region_east_coast
+						NOT = { is_controlled_by = event_target:solar_empire }
+					}
+				}
+			}
+		}
+		set_variable = { var = SOL_equus_map_east_coast_development value = 0 }
+
+		add_to_variable = {
+			var = SOL_equus_map_east_coast_development
+			value = SOL_equus_map_east_coast_development_wartorn
+		}
+		add_to_variable = {
+			var = SOL_equus_map_east_coast_development
+			value = SOL_equus_map_east_coast_development_completed_public_works
+		}
+		add_to_variable = {
+			var = SOL_equus_map_east_coast_development
+			value = SOL_equus_map_east_coast_local_resistance
+		}
+		add_to_variable = { var = SOL_equus_map_east_coast_development value = solar_civilian_support }
+		if = {
+			limit = { 
+				check_variable = { SOL_equus_map_east_coast_development < 3 }
+			}
+			set_variable = { var = SOL_equus_map_east_coast_frame_var value = 2 }
+		}
+		else_if = {
+			limit = { 
+				check_variable = { SOL_equus_map_east_coast_development < 5 }
+			}
+			set_variable = { var = SOL_equus_map_east_coast_frame_var value = 3 }
+		}
+		else_if = {
+			limit = { 
+				check_variable = { SOL_equus_map_east_coast_development > 4 }
+			}
+			set_variable = { var = SOL_equus_map_east_coast_frame_var value = 4 }
+		}
+	}
+	else = {
+		set_variable = { var = SOL_equus_map_east_coast_frame_var value = 1 }
+	}
+
+	#SOUTHWEST
+	if = {
+		limit = {
+			NOT = {
+				any_state = {
+					AND = {
+						has_state_flag = sol_region_southwest
+						NOT = { is_controlled_by = event_target:solar_empire }
+					}
+				}
+			}
+		}
+		set_variable = { var = SOL_equus_map_southwest_development value = 0 }
+
+		add_to_variable = {
+			var = SOL_equus_map_southwest_development
+			value = SOL_equus_map_southwest_development_wartorn
+		}
+		add_to_variable = {
+			var = SOL_equus_map_southwest_development
+			value = SOL_equus_map_southwest_development_completed_public_works
+		}
+		add_to_variable = {
+			var = SOL_equus_map_southwest_development
+			value = SOL_equus_map_southwest_local_resistance
+		}
+		add_to_variable = { var = SOL_equus_map_southwest_development value = solar_civilian_support }
+		if = {
+			limit = { 
+				check_variable = { SOL_equus_map_southwest_development < 3 }
+			}
+			set_variable = { var = SOL_equus_map_southwest_frame_var value = 2 }
+		}
+		else_if = {
+			limit = { 
+				check_variable = { SOL_equus_map_southwest_development < 5 }
+			}
+			set_variable = { var = SOL_equus_map_southwest_frame_var value = 3 }
+		}
+		else_if = {
+			limit = { 
+				check_variable = { SOL_equus_map_southwest_development > 4 }
+			}
+			set_variable = { var = SOL_equus_map_southwest_frame_var value = 4 }
+		}
+	}
+	else = {
+		set_variable = { var = SOL_equus_map_southwest_frame_var value = 1 }
+	}
+
+	#SOUTHEAST
+	if = {
+		limit = {
+			NOT = {
+				any_state = {
+					AND = {
+						has_state_flag = sol_region_southeast
+						NOT = { is_controlled_by = event_target:solar_empire }
+					}
+				}
+			}
+		}
+		set_variable = { var = SOL_equus_map_southeast_development value = 0 }
+
+		add_to_variable = {
+			var = SOL_equus_map_southeast_development
+			value = SOL_equus_map_southeast_development_wartorn
+		}
+		add_to_variable = {
+			var = SOL_equus_map_southeast_development
+			value = SOL_equus_map_southeast_development_completed_public_works
+		}
+		add_to_variable = {
+			var = SOL_equus_map_southeast_development
+			value = SOL_equus_map_southeast_local_resistance
+		}
+		add_to_variable = { var = SOL_equus_map_southeast_development value = solar_civilian_support }
+		if = {
+			limit = { 
+				check_variable = { SOL_equus_map_southeast_development < 3 }
+			}
+			set_variable = { var = SOL_equus_map_southeast_frame_var value = 2 }
+		}
+		else_if = {
+			limit = { 
+				check_variable = { SOL_equus_map_southeast_development < 5 }
+			}
+			set_variable = { var = SOL_equus_map_southeast_frame_var value = 3 }
+		}
+		else_if = {
+			limit = { 
+				check_variable = { SOL_equus_map_southeast_development > 4 }
+			}
+			set_variable = { var = SOL_equus_map_southeast_frame_var value = 4 }
+		}
+	}
+	else = {
+		set_variable = { var = SOL_equus_map_southeast_frame_var value = 1 }
+	}
+
+	#FRONTIER
+	if = {
+		limit = {
+			NOT = {
+				any_state = {
+					AND = {
+						has_state_flag = sol_region_frontier
+						NOT = { is_controlled_by = event_target:solar_empire }
+					}
+				}
+			}
+		}
+		set_variable = { var = SOL_equus_map_frontier_development value = 0 }
+
+		add_to_variable = {
+			var = SOL_equus_map_frontier_development
+			value = SOL_equus_map_frontier_development_wartorn
+		}
+		add_to_variable = {
+			var = SOL_equus_map_frontier_development
+			value = SOL_equus_map_frontier_development_completed_public_works
+		}
+		add_to_variable = {
+			var = SOL_equus_map_frontier_development
+			value = SOL_equus_map_frontier_local_resistance
+		}
+		add_to_variable = { var = SOL_equus_map_frontier_development value = solar_civilian_support }
+		if = {
+			limit = { 
+				check_variable = { SOL_equus_map_frontier_development < 3 }
+			}
+			set_variable = { var = SOL_equus_map_frontier_frame_var value = 2 }
+		}
+		else_if = {
+			limit = { 
+				check_variable = { SOL_equus_map_frontier_development < 5 }
+			}
+			set_variable = { var = SOL_equus_map_frontier_frame_var value = 3 }
+		}
+		else_if = {
+			limit = { 
+				check_variable = { SOL_equus_map_frontier_development > 4 }
+			}
+			set_variable = { var = SOL_equus_map_frontier_frame_var value = 4 }
+		}
+	}
+	else = {
+		set_variable = { var = SOL_equus_map_frontier_frame_var value = 1 }
+	}
+
+	#CRYSTAL EMPIRE
+	if = {
+		limit = {
+			NOT = {
+				any_state = {
+					AND = {
+						has_state_flag = sol_region_crystal_empire
+						NOT = { is_controlled_by = event_target:solar_empire }
+					}
+				}
+			}
+		}
+		set_variable = { var = SOL_equus_map_crystal_empire_development value = 0 }
+
+		add_to_variable = {
+			var = SOL_equus_map_crystal_empire_development
+			value = SOL_equus_map_crystal_empire_development_wartorn
+		}
+		add_to_variable = {
+			var = SOL_equus_map_crystal_empire_development
+			value = SOL_equus_map_crystal_empire_development_completed_public_works
+		}
+		add_to_variable = {
+			var = SOL_equus_map_crystal_empire_development
+			value = SOL_equus_map_crystal_empire_local_resistance
+		}
+		add_to_variable = { var = SOL_equus_map_crystal_empire_development value = solar_civilian_support }
+		if = {
+			limit = { 
+				check_variable = { SOL_equus_map_crystal_empire_development < 3 }
+			}
+			set_variable = { var = SOL_equus_map_crystal_empire_frame_var value = 2 }
+		}
+		else_if = {
+			limit = { 
+				check_variable = { SOL_equus_map_crystal_empire_development < 5 }
+			}
+			set_variable = { var = SOL_equus_map_crystal_empire_frame_var value = 3 }
+		}
+		else_if = {
+			limit = { 
+				check_variable = { SOL_equus_map_crystal_empire_development > 4 }
+			}
+			set_variable = { var = SOL_equus_map_crystal_empire_frame_var value = 4 }
+		}
+	}
+	else = {
+		set_variable = { var = SOL_equus_map_crystal_empire_frame_var value = 1 }
+	}
+
+	#SEVERYANA
+	if = {
+		limit = {
+			NOT = {
+				any_state = {
+					AND = {
+						has_state_flag = sol_region_severyana
+						NOT = { is_controlled_by = event_target:solar_empire }
+					}
+				}
+			}
+		}
+		set_variable = { var = SOL_equus_map_severyana_development value = 0 }
+
+		add_to_variable = {
+			var = SOL_equus_map_severyana_development
+			value = SOL_equus_map_severyana_development_wartorn
+		}
+		add_to_variable = {
+			var = SOL_equus_map_severyana_development
+			value = SOL_equus_map_severyana_development_completed_public_works
+		}
+		add_to_variable = {
+			var = SOL_equus_map_severyana_development
+			value = SOL_equus_map_severyana_local_resistance
+		}
+		add_to_variable = { var = SOL_equus_map_severyana_development value = solar_civilian_support }
+		if = {
+			limit = { 
+				check_variable = { SOL_equus_map_severyana_development < 3 }
+			}
+			set_variable = { var = SOL_equus_map_severyana_frame_var value = 2 }
+		}
+		else_if = {
+			limit = { 
+				check_variable = { SOL_equus_map_severyana_development < 5 }
+			}
+			set_variable = { var = SOL_equus_map_severyana_frame_var value = 3 }
+		}
+		else_if = {
+			limit = { 
+				check_variable = { SOL_equus_map_severyana_development > 4 }
+			}
+			set_variable = { var = SOL_equus_map_severyana_frame_var value = 4 }
+		}
+	}
+	else = {
+		set_variable = { var = SOL_equus_map_severyana_frame_var value = 1 }
+	}
+	if = {
+		limit = {
+			has_variable = sol_public_works_screen_show
+		}
+		add_to_variable = { var = sol_public_works_screen_show value = 1 }
+	}
+}
+
+SOL_calculate_public_works_progress = {
+	if = {
+		limit = {
+			original_tag = EQS
+			tag = event_target:solar_empire
+			has_country_leader = { ruling_only = yes name = "Daybreaker" }
+		}
+		set_variable = { var = SOL_dynamic_modifier_civ_use_total value = 0 }
+		if = {
+			limit = { 
+				has_war = no #Public Works are put on hold when there is an ongoing war
+			}
+			if = {
+				limit = {
+					has_country_flag = SOL_east_coast_public_works_in_progress
+				}
+				if = {
+					limit = {
+						check_variable = { sol_east_coast_public_works_duration_days > 0 }
+					}
+					add_to_variable = { var = SOL_dynamic_modifier_civ_use_total value = sol_public_works_cost }
+					subtract_from_variable = { var = SOL_dynamic_modifier_civ_use_total value = SOL_equus_map_east_coast_development }
+				}
+				else = {
+					every_state = {
+						limit = { has_state_flag = sol_region_east_coast }
+						add_dynamic_modifier = { modifier = SOL_state_civilian_consolidation }
+						add_province_modifier = {
+							static_modifiers = {
+								SOL_state_civilian_consolidation_province 
+							}
+							province = {
+								all_provinces = yes
+							}
+						}
+					}
+					clr_country_flag = SOL_east_coast_public_works_in_progress
+					add_to_variable = { var = sol_ongoing_public_works_num value = -1 }
+					set_variable = { var = SOL_equus_map_east_coast_development_completed_public_works value = 1 }
+					SOL_calculate_region_development = yes
+
+					add_to_variable = { var = solar_civilian_measures_progress value = 1 }
+					add_to_variable = { var = daybreaker_support value = sol_public_works_loyalty_increase }
+					every_state = {
+						limit = {
+							has_state_flag = sol_region_east_coast
+						}
+						add_extra_state_shared_building_slots = 2
+						add_building_construction = {
+							type = infrastructure
+							level = 2
+							instant_build = yes
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = SOL_heartland_public_works_in_progress
+				}
+				if = {
+					limit = {
+						check_variable = { sol_heartland_public_works_duration_days > 0 }
+					}
+					add_to_variable = { var = SOL_dynamic_modifier_civ_use_total value = sol_public_works_cost }
+					subtract_from_variable = { var = SOL_dynamic_modifier_civ_use_total value = SOL_equus_map_heartland_development }
+				}
+				else = {
+					every_state = {
+						limit = { has_state_flag = sol_region_heartland }
+						add_dynamic_modifier = { modifier = SOL_state_civilian_consolidation }
+						add_province_modifier = {
+							static_modifiers = {
+								SOL_state_civilian_consolidation_province 
+							}
+							province = {
+								all_provinces = yes
+							}
+						}
+					}
+					clr_country_flag = SOL_heartland_public_works_in_progress
+					add_to_variable = { var = sol_ongoing_public_works_num value = -1 }
+					set_variable = { var = SOL_equus_map_heartland_development_completed_public_works value = 1 }
+					SOL_calculate_region_development = yes
+
+					add_to_variable = { var = solar_civilian_measures_progress value = 1 }
+					add_to_variable = { var = daybreaker_support value = sol_public_works_loyalty_increase }
+					every_state = {
+						limit = {
+							has_state_flag = sol_region_heartland
+						}
+						add_extra_state_shared_building_slots = 2
+						add_building_construction = {
+							type = infrastructure
+							level = 2
+							instant_build = yes
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = SOL_crystal_empire_public_works_in_progress
+				}
+				if = {
+					limit = {
+						check_variable = { sol_crystal_empire_public_works_duration_days > 0 }
+					}
+					add_to_variable = { var = SOL_dynamic_modifier_civ_use_total value = sol_public_works_cost }
+					subtract_from_variable = { var = SOL_dynamic_modifier_civ_use_total value = SOL_equus_map_crystal_empire_development }
+				}
+				else = {
+					every_state = {
+						limit = { has_state_flag = sol_region_crystal_empire }
+						add_dynamic_modifier = { modifier = SOL_state_civilian_consolidation }
+						add_province_modifier = {
+							static_modifiers = {
+								SOL_state_civilian_consolidation_province 
+							}
+							province = {
+								all_provinces = yes
+							}
+						}
+					}
+					clr_country_flag = SOL_crystal_empire_public_works_in_progress
+					add_to_variable = { var = sol_ongoing_public_works_num value = -1 }
+					set_variable = { var = SOL_equus_map_crystal_empire_development_completed_public_works value = 1 }
+					SOL_calculate_region_development = yes
+
+					add_to_variable = { var = solar_civilian_measures_progress value = 1 }
+					add_to_variable = { var = daybreaker_support value = sol_public_works_loyalty_increase }
+					every_state = {
+						limit = {
+							has_state_flag = sol_region_crystal_empire
+						}
+						add_extra_state_shared_building_slots = 2
+						add_building_construction = {
+							type = infrastructure
+							level = 2
+							instant_build = yes
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = SOL_bales_whinnyapolis_public_works_in_progress
+				}
+				if = {
+					limit = {
+						check_variable = { sol_bales_whinnyapolis_public_works_duration_days > 0 }
+					}
+					add_to_variable = { var = SOL_dynamic_modifier_civ_use_total value = sol_public_works_cost }
+					subtract_from_variable = { var = SOL_dynamic_modifier_civ_use_total value = SOL_equus_map_bales_whinnyapolis_development }
+				}
+				else = {
+					every_state = {
+						limit = { has_state_flag = sol_region_bales_whinnyapolis }
+						add_dynamic_modifier = { modifier = SOL_state_civilian_consolidation }
+						add_province_modifier = {
+							static_modifiers = {
+								SOL_state_civilian_consolidation_province 
+							}
+							province = {
+								all_provinces = yes
+							}
+						}
+					}
+					clr_country_flag = SOL_bales_whinnyapolis_public_works_in_progress
+					add_to_variable = { var = sol_ongoing_public_works_num value = -1 }
+					set_variable = { var = SOL_equus_map_bales_whinnyapolis_development_completed_public_works value = 1 }
+					SOL_calculate_region_development = yes
+
+					add_to_variable = { var = solar_civilian_measures_progress value = 1 }
+					add_to_variable = { var = daybreaker_support value = sol_public_works_loyalty_increase }
+					every_state = {
+						limit = {
+							has_state_flag = sol_region_bales_whinnyapolis
+						}
+						add_extra_state_shared_building_slots = 2
+						add_building_construction = {
+							type = infrastructure
+							level = 2
+							instant_build = yes
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = SOL_frontier_public_works_in_progress
+				}
+				if = {
+					limit = {
+						check_variable = { sol_frontier_public_works_duration_days > 0 }
+					}
+					add_to_variable = { var = SOL_dynamic_modifier_civ_use_total value = sol_public_works_cost }
+					subtract_from_variable = { var = SOL_dynamic_modifier_civ_use_total value = SOL_equus_map_frontier_development }
+				}
+				else = {
+					every_state = {
+						limit = { has_state_flag = sol_region_frontier }
+						add_dynamic_modifier = { modifier = SOL_state_civilian_consolidation }
+						add_province_modifier = {
+							static_modifiers = {
+								SOL_state_civilian_consolidation_province 
+							}
+							province = {
+								all_provinces = yes
+							}
+						}
+					}
+					clr_country_flag = SOL_frontier_public_works_in_progress
+					add_to_variable = { var = sol_ongoing_public_works_num value = -1 }
+					set_variable = { var = SOL_equus_map_frontier_development_completed_public_works value = 1 }
+					SOL_calculate_region_development = yes
+
+					add_to_variable = { var = solar_civilian_measures_progress value = 1 }
+					add_to_variable = { var = daybreaker_support value = sol_public_works_loyalty_increase }
+					every_state = {
+						limit = {
+							has_state_flag = sol_region_frontier
+						}
+						add_extra_state_shared_building_slots = 2
+						add_building_construction = {
+							type = infrastructure
+							level = 2
+							instant_build = yes
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = SOL_west_coast_public_works_in_progress
+				}
+				if = {
+					limit = {
+						check_variable = { sol_west_coast_public_works_duration_days > 0 }
+					}
+					add_to_variable = { var = SOL_dynamic_modifier_civ_use_total value = sol_public_works_cost }
+					subtract_from_variable = { var = SOL_dynamic_modifier_civ_use_total value = SOL_equus_map_west_coast_development }
+				}
+				else = {
+					every_state = {
+						limit = { has_state_flag = sol_region_west_coast }
+						add_dynamic_modifier = { modifier = SOL_state_civilian_consolidation }
+						add_province_modifier = {
+							static_modifiers = {
+								SOL_state_civilian_consolidation_province 
+							}
+							province = {
+								all_provinces = yes
+							}
+						}
+					}
+					clr_country_flag = SOL_west_coast_public_works_in_progress
+					add_to_variable = { var = sol_ongoing_public_works_num value = -1 }
+					set_variable = { var = SOL_equus_map_west_coast_development_completed_public_works value = 1 }
+					SOL_calculate_region_development = yes
+
+					add_to_variable = { var = solar_civilian_measures_progress value = 1 }
+					add_to_variable = { var = daybreaker_support value = sol_public_works_loyalty_increase }
+					every_state = {
+						limit = {
+							has_state_flag = sol_region_west_coast
+						}
+						add_extra_state_shared_building_slots = 2
+						add_building_construction = {
+							type = infrastructure
+							level = 2
+							instant_build = yes
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = SOL_southwest_public_works_in_progress
+				}
+				if = {
+					limit = {
+						check_variable = { sol_southwest_public_works_duration_days > 0 }
+					}
+					add_to_variable = { var = SOL_dynamic_modifier_civ_use_total value = sol_public_works_cost }
+					subtract_from_variable = { var = SOL_dynamic_modifier_civ_use_total value = SOL_equus_map_southwest_development }
+				}
+				else = {
+					every_state = {
+						limit = { has_state_flag = sol_region_southwest }
+						add_dynamic_modifier = { modifier = SOL_state_civilian_consolidation }
+						add_province_modifier = {
+							static_modifiers = {
+								SOL_state_civilian_consolidation_province 
+							}
+							province = {
+								all_provinces = yes
+							}
+						}
+					}
+					clr_country_flag = SOL_southwest_public_works_in_progress
+					add_to_variable = { var = sol_ongoing_public_works_num value = -1 }
+					set_variable = { var = SOL_equus_map_southwest_development_completed_public_works value = 1 }
+					SOL_calculate_region_development = yes
+
+					add_to_variable = { var = solar_civilian_measures_progress value = 1 }
+					add_to_variable = { var = daybreaker_support value = sol_public_works_loyalty_increase }
+					every_state = {
+						limit = {
+							has_state_flag = sol_region_southwest
+						}
+						add_extra_state_shared_building_slots = 2
+						add_building_construction = {
+							type = infrastructure
+							level = 2
+							instant_build = yes
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = SOL_southeast_public_works_in_progress
+				}
+				if = {
+					limit = {
+						check_variable = { sol_southeast_public_works_duration_days > 0 }
+					}
+					add_to_variable = { var = SOL_dynamic_modifier_civ_use_total value = sol_public_works_cost }
+					subtract_from_variable = { var = SOL_dynamic_modifier_civ_use_total value = SOL_equus_map_southeast_development }
+				}
+				else = {
+					every_state = {
+						limit = { has_state_flag = sol_region_southeast }
+						add_dynamic_modifier = { modifier = SOL_state_civilian_consolidation }
+						add_province_modifier = {
+							static_modifiers = {
+								SOL_state_civilian_consolidation_province 
+							}
+							province = {
+								all_provinces = yes
+							}
+						}
+					}
+					clr_country_flag = SOL_southeast_public_works_in_progress
+					add_to_variable = { var = sol_ongoing_public_works_num value = -1 }
+					set_variable = { var = SOL_equus_map_southeast_development_completed_public_works value = 1 }
+					SOL_calculate_region_development = yes
+
+					add_to_variable = { var = solar_civilian_measures_progress value = 1 }
+					add_to_variable = { var = daybreaker_support value = sol_public_works_loyalty_increase }
+					every_state = {
+						limit = {
+							has_state_flag = sol_region_southeast
+						}
+						add_extra_state_shared_building_slots = 2
+						add_building_construction = {
+							type = infrastructure
+							level = 2
+							instant_build = yes
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = SOL_severyana_public_works_in_progress
+				}
+				if = {
+					limit = {
+						check_variable = { sol_severyana_public_works_duration_days > 0 }
+					}
+					add_to_variable = { var = SOL_dynamic_modifier_civ_use_total value = sol_public_works_cost }
+					subtract_from_variable = { var = SOL_dynamic_modifier_civ_use_total value = SOL_equus_map_severyana_development }
+				}
+				else = {
+					every_state = {
+						limit = { has_state_flag = sol_region_severyana }
+						add_dynamic_modifier = { modifier = SOL_state_civilian_consolidation }
+						add_province_modifier = {
+							static_modifiers = {
+								SOL_state_civilian_consolidation_province 
+							}
+							province = {
+								all_provinces = yes
+							}
+						}
+					}
+					clr_country_flag = SOL_severyana_public_works_in_progress
+					add_to_variable = { var = sol_ongoing_public_works_num value = -1 }
+					set_variable = { var = SOL_equus_map_severyana_development_completed_public_works value = 1 }
+					SOL_calculate_region_development = yes
+
+					add_to_variable = { var = solar_civilian_measures_progress value = 1 }
+					add_to_variable = { var = daybreaker_support value = sol_public_works_loyalty_increase }
+					every_state = {
+						limit = {
+							has_state_flag = sol_region_severyana
+						}
+						add_extra_state_shared_building_slots = 2
+						add_building_construction = {
+							type = infrastructure
+							level = 2
+							instant_build = yes
+						}
+					}
+				}
+			}
+		}
+
+		multiply_variable = { var = SOL_dynamic_modifier_civ_use_total value = 0.01 }
+
+		if = {
+			limit = {
+				has_variable = sol_public_works_screen_show
+			}
+			add_to_variable = sol_public_works_screen_show
+		}
+	}
+}

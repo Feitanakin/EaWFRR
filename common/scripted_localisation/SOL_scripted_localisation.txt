@@ -1,0 +1,3197 @@
+﻿defined_text = { # Loyalty to Daybreaker
+	name = GetSolarLoyalty
+	text = {
+		trigger = {
+			check_variable = { daybreaker_support < 40 }
+		}
+		localization_key = SOL_daybreaker_support_1
+	}
+	text = {
+		trigger = {
+			check_variable = { daybreaker_support > 39 }
+			check_variable = { daybreaker_support < 65 }
+		}
+		localization_key = SOL_daybreaker_support_2
+	}
+	text = {
+		trigger = {
+			check_variable = { daybreaker_support > 64 }
+		}
+		localization_key = SOL_daybreaker_support_3
+	}
+}
+
+defined_text = { # Popular Loyalty
+	name = PopularLoyalty
+	text = {
+		trigger = {
+			check_variable = { solar_popular_support = 5 }
+		}
+		localization_key = SOL_popular_loyalty_5
+	}
+	text = {
+		trigger = {
+			check_variable = { solar_popular_support = 4 }
+		}
+		localization_key = SOL_popular_loyalty_4
+	}
+	text = {
+		trigger = {
+			check_variable = { solar_popular_support = 3}
+		}
+		localization_key = SOL_popular_loyalty_3
+	}
+	text = {
+		trigger = {
+			check_variable = { solar_popular_support = 2 }
+		}
+		localization_key = SOL_popular_loyalty_2
+	}
+	text = {
+		trigger = {
+			check_variable = { solar_popular_support = 1 }
+		}
+		localization_key = SOL_popular_loyalty_1
+	}
+	text = {
+		trigger = {
+			check_variable = { solar_popular_support = 0 }
+		}
+		localization_key = SOL_popular_loyalty_0
+	}
+}
+
+defined_text = {
+	name = SOL_civilian_consolidation_stage_progress
+	text = {
+		trigger = {
+			NOT = { check_variable = { solar_civilian_support = 5 } }
+		}
+		localization_key = SOL_civilian_consolidation_stage_progress_incomplete
+	}
+	text = {
+		trigger = {
+			check_variable = { solar_civilian_support = 5 }
+		}
+		localization_key = SOL_civilian_consolidation_stage_progress_complete
+	}
+}
+
+defined_text = {
+	name = SOL_resistance_activity_inquisition
+	text = {
+		trigger = {
+			has_completed_focus = SOL_Imperial_Inquisition
+		}
+		localization_key = SOL_resistance_activity_inquisition_yes
+	}
+	text = {
+		localization_key = SOL_resistance_activity_inquisition_no
+	}
+}
+defined_text = {
+	name = SOL_resistance_activity_inquisition_adj
+	text = {
+		trigger = {
+			has_completed_focus = SOL_Imperial_Inquisition
+		}
+		localization_key = SOL_resistance_activity_inquisition_yes_adj
+	}
+	text = {
+		localization_key = SOL_resistance_activity_inquisition_no_adj
+	}
+}
+
+defined_text = {
+	name = SOL_military_consolidation_stage_progress
+	text = {
+		trigger = {
+			NOT = { check_variable = { solar_military_support = 5 } }
+		}
+		localization_key = SOL_military_consolidation_stage_progress_incomplete
+	}
+	text = {
+		trigger = {
+			check_variable = { solar_military_support = 5 }
+		}
+		localization_key = SOL_military_consolidation_stage_progress_complete
+	}
+}
+
+defined_text = {
+	name = SOL_daybreaker_support_daily
+	text = {
+		trigger = {
+			check_variable = { daybreaker_support_daily < 0 }
+		}
+		localization_key = daybreaker_support_daily_negative
+	}
+	text = {
+		trigger = {
+			check_variable = { 
+				var = daybreaker_support_daily
+				value = 0
+				compare = greater_than_or_equals 
+			}
+		}
+		localization_key = daybreaker_support_daily_positive
+	}
+}
+defined_text = {
+	name = SOL_daybreaker_support_daily_actions
+	text = {
+		trigger = {
+			check_variable = { daybreaker_support_daily_actions < 0 }
+		}
+		localization_key = daybreaker_support_daily_actions_negative
+	}
+	text = {
+		trigger = {
+			check_variable = { 
+				var = daybreaker_support_daily_actions
+				value = 0
+				compare = greater_than_or_equals 
+			}
+		}
+		localization_key = daybreaker_support_daily_actions_positive
+	}
+}
+defined_text = {
+	name = SOL_resistance_suppression_stage_progress
+	text = {
+		trigger = {
+			NOT = { check_variable = { solar_resistance_strength = 0 } }
+		}
+		localization_key = SOL_resistance_suppression_stage_progress_incomplete
+	}
+	text = {
+		trigger = {
+			check_variable = { solar_resistance_strength = 0 }
+		}
+		localization_key = SOL_resistance_suppression_stage_progress_complete
+	}
+}
+defined_text = {
+	name = SOL_resistance_outreach_suppression_stage_progress
+	text = {
+		trigger = {
+			NOT = { check_variable = { solar_resistance_outreach_strength = 0 } }
+		}
+		localization_key = SOL_resistance_outreach_suppression_stage_progress_incomplete
+	}
+	text = {
+		trigger = {
+			check_variable = { solar_resistance_outreach_strength = 0 }
+		}
+		localization_key = SOL_resistance_outreach_suppression_stage_progress_complete
+	}
+}
+
+defined_text = {
+	name = SOL_civilian_consolidation_stage_progress_resistance
+	text = {
+		trigger = {
+			NOT = { check_variable = { solar_civilian_support = 0 } }
+		}
+		localization_key = SOL_civilian_consolidation_stage_progress_incomplete_resistance
+	}
+	text = {
+		trigger = {
+			check_variable = { solar_civilian_support = 0 }
+		}
+		localization_key = SOL_civilian_consolidation_stage_progress_complete_resistance
+	}
+}
+
+defined_text = {
+	name = SOL_military_consolidation_stage_progress_resistance
+	text = {
+		trigger = {
+			NOT = { check_variable = { solar_military_support = 0 } }
+		}
+		localization_key = SOL_military_consolidation_stage_progress_incomplete_resistance
+	}
+	text = {
+		trigger = {
+			check_variable = { solar_military_support = 0 }
+		}
+		localization_key = SOL_military_consolidation_stage_progress_complete_resistance
+	}
+}
+
+defined_text = {
+	name = SOL_resistance_suppression_stage_progress_resistance
+	text = {
+		trigger = {
+			NOT = { check_variable = { solar_resistance_strength = 5 } }
+		}
+		localization_key = SOL_resistance_suppression_stage_progress_incomplete_resistance
+	}
+	text = {
+		trigger = {
+			check_variable = { solar_resistance_strength = 5 }
+		}
+		localization_key = SOL_resistance_suppression_stage_progress_complete_resistance
+	}
+}
+defined_text = {
+	name = SOL_resistance_outreach_suppression_stage_progress_resistance
+	text = {
+		trigger = {
+			NOT = { check_variable = { solar_resistance_outreach_strength = 5 } }
+		}
+		localization_key = SOL_resistance_outreach_suppression_stage_progress_incomplete_resistance
+	}
+	text = {
+		trigger = {
+			check_variable = { solar_resistance_outreach_strength = 5 }
+		}
+		localization_key = SOL_resistance_outreach_suppression_stage_progress_complete_resistance
+	}
+}
+defined_text = {
+	name = SOL_resistance_cohesion_suppression_stage_progress_resistance
+	text = {
+		trigger = {
+			NOT = { check_variable = { solar_resistance_cohesion = 3 } }
+		}
+		localization_key = SOL_resistance_cohesion_suppression_stage_progress_incomplete_resistance
+	}
+	text = {
+		trigger = {
+			check_variable = { solar_resistance_cohesion = 3 }
+		}
+		localization_key = SOL_resistance_cohesion_suppression_stage_progress_complete_resistance
+	}
+}
+
+defined_text = {
+	name = SOL_benevolent_civilian_event_description
+	text = {
+		trigger = { check_variable = { paxsolaris_50 = 0 } }
+		localization_key = SOL_benevolent_civilian_event_description_0
+	}
+	text = {
+		trigger = { check_variable = { paxsolaris_50 = 1 } }
+		localization_key = SOL_benevolent_civilian_event_description_1
+	}
+	text = {
+		trigger = { check_variable = { paxsolaris_50 = 2 } }
+		localization_key = SOL_benevolent_civilian_event_description_2
+	}
+	text = {
+		trigger = { check_variable = { paxsolaris_50 = 3 } }
+		localization_key = SOL_benevolent_civilian_event_description_3
+	}
+}
+defined_text = {
+	name = SOL_benevolent_civilian_event_title
+	text = {
+		trigger = { check_variable = { paxsolaris_50 = 0 } }
+		localization_key = SOL_benevolent_civilian_event_title_0
+	}
+	text = {
+		trigger = { check_variable = { paxsolaris_50 = 1 } }
+		localization_key = SOL_benevolent_civilian_event_title_1
+	}
+	text = {
+		trigger = { check_variable = { paxsolaris_50 = 2 } }
+		localization_key = SOL_benevolent_civilian_event_title_2
+	}
+	text = {
+		trigger = { check_variable = { paxsolaris_50 = 3 } }
+		localization_key = SOL_benevolent_civilian_event_title_3
+	}
+	text = {
+		trigger = { check_variable = { paxsolaris_50 = 4 } }
+		localization_key = SOL_benevolent_civilian_event_title_4
+	}
+}
+defined_text = {
+	name = SOL_benevolent_civilian_event_response
+	text = {
+		trigger = { check_variable = { paxsolaris_50 = 0 } }
+		localization_key = SOL_benevolent_civilian_event_response_0
+	}
+	text = {
+		trigger = { check_variable = { paxsolaris_50 = 1 } }
+		localization_key = SOL_benevolent_civilian_event_response_1
+	}
+	text = {
+		trigger = { check_variable = { paxsolaris_50 = 2 } }
+		localization_key = SOL_benevolent_civilian_event_response_2
+	}
+	text = {
+		trigger = { check_variable = { paxsolaris_50 = 3 } }
+		localization_key = SOL_benevolent_civilian_event_response_3
+	}
+	text = {
+		trigger = { check_variable = { paxsolaris_50 = 4 } }
+		localization_key = SOL_benevolent_civilian_event_response_4
+	}
+}
+
+
+
+defined_text = {
+	name = SOL_customtooltip_loyalty_1
+	text = {
+		trigger = {
+			check_variable = { var = loyalty_counter1 < 0 }
+		}
+		localization_key = SOL_customtooltip_loyalty_1_down
+	}
+	text = {
+		trigger = {
+			check_variable = { var = loyalty_counter1 = 0 }
+		}
+		localization_key = SOL_customtooltip_loyalty_1_none
+	}
+	text = {
+		trigger = {
+			check_variable = { var = loyalty_counter1 > 0 }
+		}
+		localization_key = SOL_customtooltip_loyalty_1_up
+	}
+}
+defined_text = {
+	name = SOL_customtooltip_civilian_1
+	text = {
+		trigger = {
+			check_variable = { var = civilian_counter1 < 0 }
+		}
+		localization_key = SOL_customtooltip_civilian_1_down
+	}
+	text = {
+		trigger = {
+			check_variable = { var = civilian_counter1 = 0 }
+		}
+		localization_key = SOL_customtooltip_civilian_1_none
+	}
+	text = {
+		trigger = {
+			check_variable = { var = civilian_counter1 > 0 }
+		}
+		localization_key = SOL_customtooltip_civilian_1_up
+	}
+}
+defined_text = {
+	name = SOL_customtooltip_military_1
+	text = {
+		trigger = {
+			check_variable = { var = military_counter1 < 0 }
+		}
+		localization_key = SOL_customtooltip_military_1_down
+	}
+	text = {
+		trigger = {
+			check_variable = { var = military_counter1 = 0 }
+		}
+		localization_key = SOL_customtooltip_military_1_none
+	}
+	text = {
+		trigger = {
+			check_variable = { var = military_counter1 > 0 }
+		}
+		localization_key = SOL_customtooltip_military_1_up
+	}
+}
+defined_text = {
+	name = SOL_customtooltip_resistance_1
+	text = {
+		trigger = {
+			check_variable = { var = resistance_counter1 < 0 }
+		}
+		localization_key = SOL_customtooltip_resistance_1_down
+	}
+	text = {
+		trigger = {
+			check_variable = { var = resistance_counter1 = 0 }
+		}
+		localization_key = SOL_customtooltip_resistance_1_none
+	}
+	text = {
+		trigger = {
+			check_variable = { var = resistance_counter1 > 0 }
+		}
+		localization_key = SOL_customtooltip_resistance_1_up
+	}
+}
+defined_text = {
+	name = SOL_customtooltip_resistance_action_1
+	text = {
+		trigger = {
+			check_variable = { var = resistance_action_counter1 < 0 }
+		}
+		localization_key = SOL_customtooltip_resistance_action_1_down
+	}
+	text = {
+		trigger = {
+			check_variable = { var = resistance_action_counter1 = 0 }
+		}
+		localization_key = SOL_customtooltip_resistance_action_1_none
+	}
+	text = {
+		trigger = {
+			check_variable = { var = resistance_action_counter1 > 0 }
+		}
+		localization_key = SOL_customtooltip_resistance_action_1_up
+	}
+}
+
+defined_text = {
+	name = SOL_customtooltip_loyalty_2
+	text = {
+		trigger = {
+			check_variable = { var = loyalty_counter2 < 0 }
+		}
+		localization_key = SOL_customtooltip_loyalty_2_down
+	}
+	text = {
+		trigger = {
+			check_variable = { var = loyalty_counter2 = 0 }
+		}
+		localization_key = SOL_customtooltip_loyalty_2_none
+	}
+	text = {
+		trigger = {
+			check_variable = { var = loyalty_counter2 > 0 }
+		}
+		localization_key = SOL_customtooltip_loyalty_2_up
+	}
+}
+defined_text = {
+	name = SOL_customtooltip_civilian_2
+	text = {
+		trigger = {
+			check_variable = { var = civilian_counter2 < 0 }
+		}
+		localization_key = SOL_customtooltip_civilian_2_down
+	}
+	text = {
+		trigger = {
+			check_variable = { var = civilian_counter2 = 0 }
+		}
+		localization_key = SOL_customtooltip_civilian_2_none
+	}
+	text = {
+		trigger = {
+			check_variable = { var = civilian_counter2 > 0 }
+		}
+		localization_key = SOL_customtooltip_civilian_2_up
+	}
+}
+defined_text = {
+	name = SOL_customtooltip_military_2
+	text = {
+		trigger = {
+			check_variable = { var = military_counter2 < 0 }
+		}
+		localization_key = SOL_customtooltip_military_2_down
+	}
+	text = {
+		trigger = {
+			check_variable = { var = military_counter2 = 0 }
+		}
+		localization_key = SOL_customtooltip_military_2_none
+	}
+	text = {
+		trigger = {
+			check_variable = { var = military_counter2 > 0 }
+		}
+		localization_key = SOL_customtooltip_military_2_up
+	}
+}
+defined_text = {
+	name = SOL_customtooltip_resistance_2
+	text = {
+		trigger = {
+			check_variable = { var = resistance_counter2 < 0 }
+		}
+		localization_key = SOL_customtooltip_resistance_2_down
+	}
+	text = {
+		trigger = {
+			check_variable = { var = resistance_counter2 = 0 }
+		}
+		localization_key = SOL_customtooltip_resistance_2_none
+	}
+	text = {
+		trigger = {
+			check_variable = { var = resistance_counter2 > 0 }
+		}
+		localization_key = SOL_customtooltip_resistance_2_up
+	}
+}
+defined_text = {
+	name = SOL_customtooltip_resistance_action_2
+	text = {
+		trigger = {
+			check_variable = { var = resistance_action_counter2 < 0 }
+		}
+		localization_key = SOL_customtooltip_resistance_action_2_down
+	}
+	text = {
+		trigger = {
+			check_variable = { var = resistance_action_counter2 = 0 }
+		}
+		localization_key = SOL_customtooltip_resistance_action_2_none
+	}
+	text = {
+		trigger = {
+			check_variable = { var = resistance_action_counter2 > 0 }
+		}
+		localization_key = SOL_customtooltip_resistance_action_2_up
+	}
+}
+
+defined_text = {
+	name = SOL_lead_explainer_loc_string
+	text = {
+		localization_key = SOL_lead_explainer_tt
+	}
+}
+defined_text = {
+	name = SOL_lead_variable_loc_string
+	text = {
+		localization_key = SOL_lead_variable_tt
+	}
+}
+defined_text = {
+	name = SOL_consolidation_menu_explainer
+	text = {
+		localization_key = SOL_consolidation_menu_explainer_tt
+	}
+}
+
+defined_text = {
+	name = SOL_mtf_action_state_requirement_owned
+	text = {
+		trigger = {
+			THIS = {
+				OR = {
+					owner = {
+						OR = {
+							original_tag = EQS
+							is_subject_of = EQS
+							is_in_faction_with = EQS
+						}
+					}
+					controller = {
+						OR = {
+							original_tag = EQS
+							is_subject_of = EQS
+							is_in_faction_with = EQS
+						}
+					}
+				}
+			}
+		}
+		localization_key = SOL_mtf_action_state_requirement_owned_met_tt
+	}
+	text = {
+		localization_key = SOL_mtf_action_state_requirement_owned_unmet_tt
+	}
+}
+
+defined_text = {
+	name = SOL_mtf_action_state_requirement_notdeployedyet
+	text = {
+		trigger = {
+			THIS = { 
+				NOT = { has_state_flag = SOL_has_already_dispatched_mtf_to_this_state }
+			}
+		}
+		localization_key = SOL_mtf_action_state_requirement_notdeployedyet_met_tt
+	}
+	text = {
+		trigger = {
+			THIS = { 
+				has_state_flag = SOL_has_already_dispatched_mtf_to_this_state
+			}
+		}
+		localization_key = SOL_mtf_action_state_requirement_notdeployedyet_unmet_tt
+	}
+}
+
+defined_text = {
+	name = SOL_mtf_action_total_deployed
+	text = {
+		trigger = {
+			ROOT = {
+				check_variable = {
+					var = SOL_mobile_task_force_deployed_var
+					value = 4
+					compare = less_than_or_equals
+				}
+			}
+		}
+		localization_key = SOL_mtf_action_total_deployed_met_tt
+	}
+	text = {
+		localization_key = SOL_mtf_action_total_deployed_unmet_tt
+	}
+}
+
+defined_text = {
+	name = SOL_mtf_action_not_recalling
+	text = {
+		trigger = {
+			ROOT = {
+				NOT = { has_country_flag = SOL_recall_pegasi_decision_in_progress_flag }
+			}
+		}
+		localization_key = SOL_mtf_action_not_recalling_met_tt
+	}
+	text = {
+		trigger = {
+			ROOT = {
+				has_country_flag = SOL_recall_pegasi_decision_in_progress_flag
+			}
+		}
+		localization_key = SOL_mtf_action_not_recalling_unmet_tt
+	}
+}
+defined_text = {
+	name = RaidDescriptionUpgrade
+	text = {
+		trigger = {
+			has_country_flag = upgraded_inquisition
+		}
+		localization_key = RaidDescriptionUpgradeYes
+	}
+	text = {
+		localization_key = RaidDescriptionUpgradeNo
+	}
+}
+defined_text = {
+	name = RaidDescriptionTwilight
+	text = {
+		trigger = {
+			has_country_flag = SOL_twilight_ascended
+		}
+		localization_key = RaidDescriptionTwilightYes
+	}
+	text = {
+		localization_key = RaidDescriptionTwilightNo
+	}
+}
+defined_text = {
+	name = GetDecisionCostCP5Leads25
+	text = {
+		trigger = {
+			check_variable = {
+				var = command_power
+				value = 5
+				compare = greater_than_or_equals
+			}
+			check_variable = {
+				var = SOL_lead_variable
+				value = 25
+				compare = greater_than_or_equals
+			}
+		}
+		localization_key = decision_cost_cp_5_leads_25
+	}
+	text = {
+		localization_key = decision_cost_cp_5_leads_25_blocked
+	}
+}
+defined_text = {
+	name = GetDecisionCostCP10Leads50
+	text = {
+		trigger = {
+			check_variable = {
+				var = command_power
+				value = 10
+				compare = greater_than_or_equals
+			}
+			check_variable = {
+				var = SOL_lead_variable
+				value = 50
+				compare = greater_than_or_equals
+			}
+		}
+		localization_key = decision_cost_cp_10_leads_50
+	}
+	text = {
+		localization_key = decision_cost_cp_10_leads_50_blocked
+	}
+}
+defined_text = {
+	name = GetDecisionCostCP20Leads75
+	text = {
+		trigger = {
+			check_variable = {
+				var = command_power
+				value = 20
+				compare = greater_than_or_equals
+			}
+			check_variable = {
+				var = SOL_lead_variable
+				value = 75
+				compare = greater_than_or_equals
+			}
+		}
+		localization_key = decision_cost_cp_20_leads_75
+	}
+	text = {
+		localization_key = decision_cost_cp_20_leads_75_blocked
+	}
+}
+defined_text = {
+	name = UpgradeInquisitionTitle
+	text = {
+		trigger = {
+			check_variable = { inquisition_upgrade_process = 0 }
+		}
+		localization_key = UpgradeInquisitionTitle1
+	}
+	text = {
+		trigger = {
+			check_variable = { inquisition_upgrade_process = 1 }
+		}
+		localization_key = UpgradeInquisitionTitle2
+	}
+	text = {
+		trigger = {
+			check_variable = { inquisition_upgrade_process = 2 }
+		}
+		localization_key = UpgradeInquisitionTitle3
+	}
+	text = {
+		trigger = {
+			check_variable = { inquisition_upgrade_process = 3 }
+		}
+		localization_key = UpgradeInquisitionTitle4
+	}
+	text = {
+		trigger = {
+			check_variable = { inquisition_upgrade_process = 4 }
+		}
+		localization_key = UpgradeInquisitionTitle5
+	}
+}
+defined_text = {
+	name = UpgradeInquisitionDescription
+	text = {
+		trigger = {
+			check_variable = { inquisition_upgrade_process = 0 }
+		}
+		localization_key = UpgradeInquisitionDescription1
+	}
+	text = {
+		trigger = {
+			check_variable = { inquisition_upgrade_process = 1 }
+		}
+		localization_key = UpgradeInquisitionDescription2
+	}
+	text = {
+		trigger = {
+			check_variable = { inquisition_upgrade_process = 2 }
+		}
+		localization_key = UpgradeInquisitionDescription3
+	}
+	text = {
+		trigger = {
+			check_variable = { inquisition_upgrade_process = 3 }
+		}
+		localization_key = UpgradeInquisitionDescription4
+	}
+	text = {
+		trigger = {
+			check_variable = { inquisition_upgrade_process = 4 }
+		}
+		localization_key = UpgradeInquisitionDescription5
+	}
+}
+define_text = {
+	name = VictoryParadeDesc
+	text = {
+		trigger = {
+			has_country_flag = victory_parade_CHN
+		}
+		localization_key = VictoryParadeDescCHN
+	}
+	text = {
+		trigger = {
+			has_country_flag = victory_parade_NLR
+		}
+		localization_key = VictoryParadeDescNLR
+	}
+	text = {
+		trigger = {
+			has_country_flag = victory_parade_STG
+		}
+		localization_key = VictoryParadeDescSTG
+	}
+	text = {
+		trigger = {
+			has_country_flag = victory_parade_CRY
+		}
+		localization_key = VictoryParadeDescCRY
+	}
+}
+defined_text = {
+	name = VictoryParadeGoalDesc
+	text = {
+		trigger = {
+			NOT = {
+				has_country_flag = victory_parade_bypass
+			}
+		}
+		localization_key = VictoryParadeGoalDesc1
+	}
+	text = {
+		localization_key = VictoryParadeGoalDesc2
+	}
+}
+define_text = {
+	name = paxsolaris2desc
+	text = {
+		trigger = {
+			has_completed_focus = SOL_hear_them_out
+			has_country_flag = SOL_wartime_change
+		}
+		localization_key = paxsolaris2desc1
+	}
+	text = {
+		trigger = {
+			has_completed_focus = SOL_hear_them_out
+			NOT = { has_country_flag = SOL_wartime_change }
+		}
+		localization_key = paxsolaris2desc2
+	}
+	text = {
+		trigger = {
+			has_completed_focus = SOL_send_in_the_tanks
+			has_country_flag = SOL_wartime_change
+		}
+		localization_key = paxsolaris2desc3
+	}
+	text = {
+		trigger = {
+			has_completed_focus = SOL_send_in_the_tanks
+			NOT = { has_country_flag = SOL_wartime_change }
+		}
+		localization_key = paxsolaris2desc4
+	}
+}
+defined_text = {
+	name = ResistanceCategoryDesc
+	text = {
+		trigger = {
+			has_country_flag = harmony_restoration_movement_formed
+		}
+		localization_key = HRMDesc
+	}
+	text = {
+		localization_key = NormalDesc
+	}
+}
+defined_text = {
+	name = CanterlotAttackAftermathDesc
+	text = {
+		trigger = {
+			has_country_flag = major_attack_1_win
+		}
+		localization_key = CanterlotAttackAftermathDescWin
+	}
+	text = {
+		trigger = {
+			has_country_flag = SOL_resistance_major_attack_1_civilian
+			has_country_flag = major_attack_1_loss
+		}
+		localization_key = CanterlotAttackAftermathDescCivilian
+	}
+	text = {
+		trigger = {
+			has_country_flag = SOL_resistance_major_attack_1_military
+			has_country_flag = major_attack_1_loss
+		}
+		localization_key = CanterlotAttackAftermathDescMilitary
+	}
+}
+defined_text = {
+	name = RadioWhinnyapolisDesc
+	text = {
+		trigger = {
+			has_country_flag = SOL_resistance_major_attack_1_surrounding_troops
+		}
+		localization_key = RadioWhinnyapolisDescSurroundingTroops
+	}
+	text = {
+		localization_key = RadioWhinnyapolisDescNoSurroundingTroops
+	}
+}
+defined_text = { 
+	name = LoyaltyBoost1TT
+	text = {
+		trigger = {
+			check_variable = { 
+				var = daybreaker_support 
+				value = 10
+				compare = greater_than_or_equals
+			}
+		}
+		localization_key = LoyaltyBoostActive1
+	}
+	text = {
+		localization_key = LoyaltyBoostInactive1
+	}
+}
+defined_text = { 
+	name = LoyaltyBoost2TT
+	text = {
+		trigger = {
+			check_variable = { 
+				var = daybreaker_support 
+				value = 30
+				compare = greater_than_or_equals
+			}
+		}
+		localization_key = LoyaltyBoostActive2
+	}
+	text = {
+		localization_key = LoyaltyBoostInactive2
+	}
+}
+defined_text = { 
+	name = LoyaltyBoost3TT
+	text = {
+		trigger = {
+			check_variable = { 
+				var = daybreaker_support 
+				value = 50
+				compare = greater_than_or_equals
+			}
+		}
+		localization_key = LoyaltyBoostActive3
+	}
+	text = {
+		localization_key = LoyaltyBoostInactive3
+	}
+}
+defined_text = { 
+	name = LoyaltyBoost4TT
+	text = {
+		trigger = {
+			check_variable = { 
+				var = daybreaker_support 
+				value = 70
+				compare = greater_than_or_equals
+			}
+		}
+		localization_key = LoyaltyBoostActive4
+	}
+	text = {
+		localization_key = LoyaltyBoostInactive4
+	}
+}
+defined_text = { 
+	name = LoyaltyBoost5TT
+	text = {
+		trigger = {
+			check_variable = { 
+				var = daybreaker_support 
+				value = 90
+				compare = greater_than_or_equals
+			}
+		}
+		localization_key = LoyaltyBoostActive5
+	}
+	text = {
+		localization_key = LoyaltyBoostInactive5
+	}
+}
+defined_text = { 
+	name = LoyaltyBoost6TT
+	text = {
+		trigger = {
+			AND = {
+				check_variable = { 
+					var = daybreaker_support 
+					value = 20
+					compare = greater_than_or_equals
+				}
+				check_variable = { informants_loyalty_frame_var > 1 }
+			}
+		}
+		localization_key = LoyaltyBoostActive6
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = { daybreaker_support < 20 }
+				check_variable = { informants_loyalty_frame_var > 1 }
+			}
+		}
+		localization_key = LoyaltyBoostInactive6
+	}
+	text = {
+		localization_key = LoyaltyBoostEmpty
+	}
+}
+defined_text = { 
+	name = LoyaltyBoost7TT
+	text = {
+		trigger = {
+			AND = {
+				check_variable = { 
+					var = daybreaker_support 
+					value = 40
+					compare = greater_than_or_equals
+				}
+				check_variable = { volunteer_militias_frame_var > 1 }
+			}
+		}
+		localization_key = LoyaltyBoostActive7
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = { daybreaker_support < 40 }
+				check_variable = { volunteer_militias_frame_var > 1 }
+			}
+		}
+		localization_key = LoyaltyBoostInactive7
+	}
+	text = {
+		localization_key = LoyaltyBoostEmpty
+	}
+}
+defined_text = { 
+	name = LoyaltyBoost8TT
+	text = {
+		trigger = {
+			AND = {
+				check_variable = { 
+					var = daybreaker_support 
+					value = 60
+					compare = greater_than_or_equals
+				}
+				check_variable = { inquisition_informants_frame_var > 1 }
+			}
+		}
+		localization_key = LoyaltyBoostActive8
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = { daybreaker_support < 60 }
+				check_variable = { inquisition_informants_frame_var > 1 }
+			}
+		}
+		localization_key = LoyaltyBoostInactive8
+	}
+	text = {
+		localization_key = LoyaltyBoostEmpty
+	}
+}
+defined_text = { 
+	name = LoyaltyBoost9TT
+	text = {
+		trigger = {
+			AND = {
+				check_variable = { 
+					var = daybreaker_support 
+					value = 80
+					compare = greater_than_or_equals
+				}
+				check_variable = { harmonist_commanders_frame_var > 1 }
+			}
+		}
+		localization_key = LoyaltyBoostActive9
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = { daybreaker_support < 80 }
+				check_variable = { harmonist_commanders_frame_var > 1 }
+			}
+		}
+		localization_key = LoyaltyBoostInactive9
+	}
+	text = {
+		localization_key = LoyaltyBoostEmpty
+	}
+}
+defined_text = {
+	name = LoyaltyBoostTitle1
+	text = {
+		trigger = {
+			check_variable = { informants_loyalty_frame_var > 1 }
+		}
+		localization_key = LoyaltyBoostTitleActive1
+	}
+	text = {
+		localization_key = LoyaltyBoostEmpty
+	}
+}
+defined_text = {
+	name = LoyaltyBoostTitle2
+	text = {
+		trigger = {
+			check_variable = { volunteer_militias_frame_var > 1 }
+		}
+		localization_key = LoyaltyBoostTitleActive2
+	}
+	text = {
+		localization_key = LoyaltyBoostEmpty
+	}
+}
+defined_text = {
+	name = LoyaltyBoostTitle3
+	text = {
+		trigger = {
+			check_variable = { inquisition_informants_frame_var > 1 }
+		}
+		localization_key = LoyaltyBoostTitleActive3
+	}
+	text = {
+		localization_key = LoyaltyBoostEmpty
+	}
+}
+defined_text = {
+	name = LoyaltyBoostTitle4
+	text = {
+		trigger = {
+			check_variable = { harmonist_commanders_frame_var > 1 }
+		}
+		localization_key = LoyaltyBoostTitleActive4
+	}
+	text = {
+		localization_key = LoyaltyBoostEmpty
+	}
+}
+
+defined_text = {
+	name = resistance_strike_mission_target_1
+	text = {
+		trigger = {
+			NOT = {
+				AND = {
+					event_target:SOL_strike_target_1 = { has_state_flag = potential_secondary_strike_target }
+					has_country_flag = SOL_refined_resistance_strike
+				}
+			}
+			event_target:SOL_strike_target_1 = { is_owned_and_controlled_by = event_target:solar_empire }
+			divisions_in_state = {
+				size > 3
+				state = event_target:SOL_strike_target_1
+			}
+		}
+		localization_key = resistance_strike_mission_target_1_raided
+	}
+	text = {
+		localization_key = resistance_strike_mission_target_missed
+	}
+}
+defined_text = {
+	name = resistance_strike_mission_target_2
+	text = {
+		trigger = {
+			NOT = {
+				AND = {
+					event_target:SOL_strike_target_2 = { has_state_flag = potential_secondary_strike_target }
+					has_country_flag = SOL_refined_resistance_strike
+				}
+			}
+			event_target:SOL_strike_target_2 = { is_owned_and_controlled_by = event_target:solar_empire }
+			divisions_in_state = {
+				size > 3
+				state = event_target:SOL_strike_target_2
+			}
+		}
+		localization_key = resistance_strike_mission_target_2_raided
+	}
+	text = {
+		localization_key = resistance_strike_mission_target_missed
+	}
+}
+defined_text = {
+	name = resistance_strike_mission_target_3
+	text = {
+		trigger = {
+			NOT = {
+				AND = {
+					event_target:SOL_strike_target_3 = { has_state_flag = potential_secondary_strike_target }
+					has_country_flag = SOL_refined_resistance_strike
+				}
+			}
+			event_target:SOL_strike_target_3 = { is_owned_and_controlled_by = event_target:solar_empire }
+			divisions_in_state = {
+				size > 3
+				state = event_target:SOL_strike_target_3
+			}
+		}
+		localization_key = resistance_strike_mission_target_3_raided
+	}
+	text = {
+		localization_key = resistance_strike_mission_target_missed
+	}
+}
+defined_text = {
+	name = resistance_strike_mission_target_4
+	text = {
+		trigger = {
+			NOT = {
+				AND = {
+					event_target:SOL_strike_target_4 = { has_state_flag = potential_secondary_strike_target }
+					has_country_flag = SOL_refined_resistance_strike
+				}
+			}
+			event_target:SOL_strike_target_4 = { is_owned_and_controlled_by = event_target:solar_empire }
+			divisions_in_state = {
+				size > 3
+				state = event_target:SOL_strike_target_4
+			}
+		}
+		localization_key = resistance_strike_mission_target_4_raided
+	}
+	text = {
+		localization_key = resistance_strike_mission_target_missed
+	}
+}
+defined_text = {
+	name = resistance_strike_mission_target_5
+	text = {
+		trigger = {
+			NOT = {
+				AND = {
+					event_target:SOL_strike_target_5 = { has_state_flag = potential_secondary_strike_target }
+					has_country_flag = SOL_refined_resistance_strike
+				}
+			}
+			event_target:SOL_strike_target_5 = { is_owned_and_controlled_by = event_target:solar_empire }
+			divisions_in_state = {
+				size > 3
+				state = event_target:SOL_strike_target_5
+			}
+		}
+		localization_key = resistance_strike_mission_target_5_raided
+	}
+	text = {
+		localization_key = resistance_strike_mission_target_missed
+	}
+}
+defined_text = {
+	name = resistance_strike_mission_target_6
+	text = {
+		trigger = {
+			NOT = {
+				AND = {
+					event_target:SOL_strike_target_6 = { has_state_flag = potential_secondary_strike_target }
+					has_country_flag = SOL_refined_resistance_strike
+				}
+			}
+			NOT = { has_country_flag = SOL_twilight_ascended }
+			event_target:SOL_strike_target_6 = { is_owned_and_controlled_by = event_target:solar_empire }
+			divisions_in_state = {
+				size > 3
+				state = event_target:SOL_strike_target_6
+			}
+		}
+		localization_key = resistance_strike_mission_target_6_raided
+	}
+	text = {
+		localization_key = resistance_strike_mission_target_missed
+	}
+}
+defined_text = {
+	name = resistance_strike_mission_target_7
+	text = {
+		trigger = {
+			NOT = {
+				AND = {
+					event_target:SOL_strike_target_7 = { has_state_flag = potential_secondary_strike_target }
+					has_country_flag = SOL_refined_resistance_strike
+				}
+			}
+			NOT = { has_country_flag = upgraded_inquisition }
+			event_target:SOL_strike_target_7 = { is_owned_and_controlled_by = event_target:solar_empire }
+			divisions_in_state = {
+				size > 3
+				state = event_target:SOL_strike_target_7
+			}
+		}
+		localization_key = resistance_strike_mission_target_7_raided
+	}
+	text = {
+		localization_key = resistance_strike_mission_target_missed
+	}
+}
+defined_text = {
+	name = resistance_strike_mission_target_debrief_1
+	text = {
+		trigger = {
+			NOT = {
+				AND = {
+					event_target:SOL_strike_target_1 = { has_state_flag = potential_secondary_strike_target }
+					has_country_flag = SOL_refined_resistance_strike
+				}
+			}
+			event_target:SOL_strike_target_1 = { is_owned_and_controlled_by = event_target:solar_empire }
+			divisions_in_state = {
+				size > 3
+				state = event_target:SOL_strike_target_1
+			}
+		}
+		localization_key = resistance_strike_mission_target_debrief_1_raided
+	}
+	text = {
+		localization_key = resistance_strike_mission_target_debrief_missed
+	}
+}
+defined_text = {
+	name = resistance_strike_mission_target_debrief_2
+	text = {
+		trigger = {
+			NOT = {
+				AND = {
+					event_target:SOL_strike_target_2 = { has_state_flag = potential_secondary_strike_target }
+					has_country_flag = SOL_refined_resistance_strike
+				}
+			}
+			event_target:SOL_strike_target_2 = { is_owned_and_controlled_by = event_target:solar_empire }
+			divisions_in_state = {
+				size > 3
+				state = event_target:SOL_strike_target_2
+			}
+		}
+		localization_key = resistance_strike_mission_target_debrief_2_raided
+	}
+	text = {
+		localization_key = resistance_strike_mission_target_debrief_missed
+	}
+}
+defined_text = {
+	name = resistance_strike_mission_target_debrief_3
+	text = {
+		trigger = {
+			NOT = {
+				AND = {
+					event_target:SOL_strike_target_3 = { has_state_flag = potential_secondary_strike_target }
+					has_country_flag = SOL_refined_resistance_strike
+				}
+			}
+			event_target:SOL_strike_target_3 = { is_owned_and_controlled_by = event_target:solar_empire }
+			divisions_in_state = {
+				size > 3
+				state = event_target:SOL_strike_target_3
+			}
+		}
+		localization_key = resistance_strike_mission_target_debrief_3_raided
+	}
+	text = {
+		localization_key = resistance_strike_mission_target_debrief_missed
+	}
+}
+defined_text = {
+	name = resistance_strike_mission_target_debrief_4
+	text = {
+		trigger = {
+			NOT = {
+				AND = {
+					event_target:SOL_strike_target_4 = { has_state_flag = potential_secondary_strike_target }
+					has_country_flag = SOL_refined_resistance_strike
+				}
+			}
+			event_target:SOL_strike_target_4 = { is_owned_and_controlled_by = event_target:solar_empire }
+			divisions_in_state = {
+				size > 3
+				state = event_target:SOL_strike_target_4
+			}
+		}
+		localization_key = resistance_strike_mission_target_debrief_4_raided
+	}
+	text = {
+		localization_key = resistance_strike_mission_target_debrief_missed
+	}
+}
+defined_text = {
+	name = resistance_strike_mission_target_debrief_5
+	text = {
+		trigger = {
+			NOT = {
+				AND = {
+					event_target:SOL_strike_target_5 = { has_state_flag = potential_secondary_strike_target }
+					has_country_flag = SOL_refined_resistance_strike
+				}
+			}
+			event_target:SOL_strike_target_5 = { is_owned_and_controlled_by = event_target:solar_empire }
+			divisions_in_state = {
+				size > 3
+				state = event_target:SOL_strike_target_5
+			}
+		}
+		localization_key = resistance_strike_mission_target_debrief_5_raided
+	}
+	text = {
+		localization_key = resistance_strike_mission_target_debrief_missed
+	}
+}
+defined_text = {
+	name = resistance_strike_mission_target_debrief_6
+	text = {
+		trigger = {
+			NOT = {
+				AND = {
+					event_target:SOL_strike_target_6 = { has_state_flag = potential_secondary_strike_target }
+					has_country_flag = SOL_refined_resistance_strike
+				}
+			}
+			NOT = { has_country_flag = SOL_twilight_ascended }
+			event_target:SOL_strike_target_6 = { is_owned_and_controlled_by = event_target:solar_empire }
+			divisions_in_state = {
+				size > 3
+				state = event_target:SOL_strike_target_6
+			}
+		}
+		localization_key = resistance_strike_mission_target_debrief_6_raided
+	}
+	text = {
+		localization_key = resistance_strike_mission_target_debrief_missed
+	}
+}
+defined_text = {
+	name = resistance_strike_mission_target_debrief_7
+	text = {
+		trigger = {
+			NOT = {
+				AND = {
+					event_target:SOL_strike_target_7 = { has_state_flag = potential_secondary_strike_target }
+					has_country_flag = SOL_refined_resistance_strike
+				}
+			}
+			NOT = { has_country_flag = upgraded_inquisition }
+			event_target:SOL_strike_target_7 = { is_owned_and_controlled_by = event_target:solar_empire }
+			divisions_in_state = {
+				size > 3
+				state = event_target:SOL_strike_target_7
+			}
+		}
+		localization_key = resistance_strike_mission_target_debrief_7_raided
+	}
+	text = {
+		localization_key = resistance_strike_mission_target_debrief_missed
+	}
+}
+defined_text = {
+	name = resistance_strike_mission_target_list_1
+	text = {
+		trigger = {
+			NOT = { check_variable = { SOL_strike_at_resistance_last_state_target = 1 } }
+			NOT = { check_variable = { SOL_strike_at_resistance_first_state_target = 1 } }
+		}
+		localization_key = resistance_strike_mission_target_list_1_raided
+	}
+	text = {
+		trigger = {
+			check_variable = { SOL_strike_at_resistance_last_state_target = 1 }
+			NOT = { check_variable = { SOL_strike_at_resistance_first_state_target = 1 } }
+		}
+		localization_key = resistance_strike_mission_target_list_1_raided_end
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { SOL_strike_at_resistance_last_state_target = 1 } }
+			check_variable = { SOL_strike_at_resistance_first_state_target = 1 }
+		}
+		localization_key = resistance_strike_mission_target_list_1_raided_start
+	}
+}
+defined_text = {
+	name = resistance_strike_mission_target_list_2
+	text = {
+		trigger = {
+			NOT = { check_variable = { SOL_strike_at_resistance_last_state_target = 2 } }
+			NOT = { check_variable = { SOL_strike_at_resistance_first_state_target = 2 } }
+		}
+		localization_key = resistance_strike_mission_target_list_2_raided
+	}
+	text = {
+		trigger = {
+			check_variable = { SOL_strike_at_resistance_last_state_target = 2 }
+			NOT = { check_variable = { SOL_strike_at_resistance_first_state_target = 2 } }
+		}
+		localization_key = resistance_strike_mission_target_list_2_raided_end
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { SOL_strike_at_resistance_last_state_target = 2 } }
+			check_variable = { SOL_strike_at_resistance_first_state_target = 2 }
+		}
+		localization_key = resistance_strike_mission_target_list_2_raided_start
+	}
+}
+defined_text = {
+	name = resistance_strike_mission_target_list_3
+	text = {
+		trigger = {
+			NOT = { check_variable = { SOL_strike_at_resistance_last_state_target = 3 } }
+			NOT = { check_variable = { SOL_strike_at_resistance_first_state_target = 3 } }
+		}
+		localization_key = resistance_strike_mission_target_list_3_raided
+	}
+	text = {
+		trigger = {
+			check_variable = { SOL_strike_at_resistance_last_state_target = 3 }
+			NOT = { check_variable = { SOL_strike_at_resistance_first_state_target = 3 } }
+		}
+		localization_key = resistance_strike_mission_target_list_3_raided_end
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { SOL_strike_at_resistance_last_state_target = 3 } }
+			check_variable = { SOL_strike_at_resistance_first_state_target = 3 }
+		}
+		localization_key = resistance_strike_mission_target_list_3_raided_start
+	}
+}
+defined_text = {
+	name = resistance_strike_mission_target_list_4
+	text = {
+		trigger = {
+			NOT = { check_variable = { SOL_strike_at_resistance_last_state_target = 4 } }
+			NOT = { check_variable = { SOL_strike_at_resistance_first_state_target = 4 } }
+		}
+		localization_key = resistance_strike_mission_target_list_4_raided
+	}
+	text = {
+		trigger = {
+			check_variable = { SOL_strike_at_resistance_last_state_target = 4 }
+			NOT = { check_variable = { SOL_strike_at_resistance_first_state_target = 4 } }
+		}
+		localization_key = resistance_strike_mission_target_list_4_raided_end
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { SOL_strike_at_resistance_last_state_target = 4 } }
+			check_variable = { SOL_strike_at_resistance_first_state_target = 4 }
+		}
+		localization_key = resistance_strike_mission_target_list_4_raided_start
+	}
+}
+defined_text = {
+	name = resistance_strike_mission_target_list_5
+	text = {
+		trigger = {
+			NOT = { check_variable = { SOL_strike_at_resistance_last_state_target = 5 } }
+			NOT = { check_variable = { SOL_strike_at_resistance_first_state_target = 5 } }
+		}
+		localization_key = resistance_strike_mission_target_list_5_raided
+	}
+	text = {
+		trigger = {
+			check_variable = { SOL_strike_at_resistance_last_state_target = 5 }
+			NOT = { check_variable = { SOL_strike_at_resistance_first_state_target = 5 } }
+		}
+		localization_key = resistance_strike_mission_target_list_5_raided_end
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { SOL_strike_at_resistance_last_state_target = 5 } }
+			check_variable = { SOL_strike_at_resistance_first_state_target = 5 }
+		}
+		localization_key = resistance_strike_mission_target_list_5_raided_start
+	}
+}
+defined_text = {
+	name = resistance_strike_mission_target_list_6
+	text = {
+		trigger = {
+			NOT = { check_variable = { SOL_strike_at_resistance_last_state_target = 6 } }
+			NOT = { check_variable = { SOL_strike_at_resistance_first_state_target = 6 } }
+		}
+		localization_key = resistance_strike_mission_target_list_6_raided
+	}
+	text = {
+		trigger = {
+			check_variable = { SOL_strike_at_resistance_last_state_target = 6 }
+			NOT = { check_variable = { SOL_strike_at_resistance_first_state_target = 6 } }
+		}
+		localization_key = resistance_strike_mission_target_list_6_raided_end
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { SOL_strike_at_resistance_last_state_target = 6 } }
+			check_variable = { SOL_strike_at_resistance_first_state_target = 6 }
+		}
+		localization_key = resistance_strike_mission_target_list_6_raided_start
+	}
+}
+defined_text = {
+	name = resistance_strike_mission_target_list_7
+	text = {
+		trigger = {
+			NOT = { check_variable = { SOL_strike_at_resistance_last_state_target = 7 } }
+			NOT = { check_variable = { SOL_strike_at_resistance_first_state_target = 7 } }
+		}
+		localization_key = resistance_strike_mission_target_list_7_raided
+	}
+	text = {
+		trigger = {
+			check_variable = { SOL_strike_at_resistance_last_state_target = 7 }
+			NOT = { check_variable = { SOL_strike_at_resistance_first_state_target = 7 } }
+		}
+		localization_key = resistance_strike_mission_target_list_7_raided_end
+	}
+	text = {
+		trigger = {
+			NOT = { check_variable = { SOL_strike_at_resistance_last_state_target = 7 } }
+			check_variable = { SOL_strike_at_resistance_first_state_target = 7 }
+		}
+		localization_key = resistance_strike_mission_target_list_7_raided_start
+	}
+}
+defined_text = {
+	name = resistance_strike_mission_success_rating_desc
+	text = {
+		trigger = {
+			check_variable = { strike_at_resistance_success_rating < 0 }
+		}
+		localization_key = resistance_strike_mission_success_rating_desc_failure
+	}
+	text = {
+		trigger = {
+			check_variable = { strike_at_resistance_success_rating > -1 }
+			check_variable = { strike_at_resistance_success_rating < 4 }
+		}
+		localization_key = resistance_strike_mission_success_rating_desc_partial_success
+	}
+	text = {
+		trigger = {
+			check_variable = { strike_at_resistance_success_rating > 3 }
+			check_variable = { strike_at_resistance_success_rating < 7 }
+		}
+		localization_key = resistance_strike_mission_success_rating_desc_success
+	}
+	text = {
+		trigger = {
+			check_variable = { strike_at_resistance_success_rating > 6 }
+		}
+		localization_key = resistance_strike_mission_success_rating_desc_resounding_success
+	}
+}
+defined_text = {
+	name = resistance_strike_mission_stronghold_desc
+	text = {
+		trigger = {
+			divisions_in_state = {
+				size > 7
+				state = event_target:SOL_resistance_stronghold
+			}
+		}
+		localization_key = resistance_strike_mission_stronghold_desc_best
+	}
+	text = {
+		trigger = {
+			divisions_in_state = {
+				size < 8
+				state = event_target:SOL_resistance_stronghold
+			}
+			divisions_in_state = {
+				size > 3
+				state = event_target:SOL_resistance_stronghold
+			}
+		}
+		localization_key = resistance_strike_mission_stronghold_desc_middle
+	}
+	text = {
+		localization_key = resistance_strike_mission_stronghold_desc_missed
+	}
+}
+defined_text = {
+	name = resistance_strike_mission_secondary_targets_desc
+	text = {
+		trigger = {
+			OR = {
+				divisions_in_state = {
+					size > 3
+					state = event_target:SOL_secondary_strike_target_1
+				}
+				divisions_in_state = {
+					size > 3
+					state = event_target:SOL_secondary_strike_target_2
+				}
+			}
+		}
+		localization_key = resistance_strike_mission_secondary_targets_desc_identified
+	}
+	text = {
+		localization_key = resistance_strike_mission_secondary_targets_desc_missed
+	}
+}
+defined_text = {
+	name = resistance_strike_mission_failures_desc
+	text = {
+		trigger = {
+			OR = {
+				AND = {
+					event_target:SOL_strike_target_1 = { has_state_flag = potential_secondary_strike_target }
+					NOT = { has_country_flag = SOL_refined_resistance_strike }
+					divisions_in_state = {
+						size > 3
+						state = event_target:SOL_strike_target_1
+					}
+				}
+				AND = { 
+					event_target:SOL_strike_target_2 = { has_state_flag = potential_secondary_strike_target }
+					NOT = { has_country_flag = SOL_refined_resistance_strike }
+					divisions_in_state = {
+						size > 3
+						state = event_target:SOL_strike_target_2
+					}
+				}
+				AND = { 
+					event_target:SOL_strike_target_3 = { has_state_flag = potential_secondary_strike_target }
+					NOT = { has_country_flag = SOL_refined_resistance_strike }
+					divisions_in_state = {
+						size > 3
+						state = event_target:SOL_strike_target_3
+					}
+				}
+				AND = {
+					event_target:SOL_strike_target_4 = { has_state_flag = potential_secondary_strike_target }
+					NOT = { has_country_flag = SOL_refined_resistance_strike }
+					divisions_in_state = {
+						size > 3
+						state = event_target:SOL_strike_target_4
+					}
+				}
+				AND = {
+					event_target:SOL_strike_target_5 = { has_state_flag = potential_secondary_strike_target }
+					NOT = { has_country_flag = SOL_refined_resistance_strike }
+					divisions_in_state = {
+						size > 3
+						state = event_target:SOL_strike_target_5
+					}
+				}
+				AND = { 
+					event_target:SOL_strike_target_6 = { has_state_flag = potential_secondary_strike_target }
+					NOT = { has_country_flag = SOL_refined_resistance_strike }
+					divisions_in_state = {
+						size > 3
+						state = event_target:SOL_strike_target_6
+					}
+					NOT = { has_country_flag = SOL_twilight_ascended }
+				}
+				AND = { 
+					event_target:SOL_strike_target_7 = { has_state_flag = potential_secondary_strike_target }
+					NOT = { has_country_flag = SOL_refined_resistance_strike }
+					divisions_in_state = {
+						size > 3
+						state = event_target:SOL_strike_target_7
+					}
+					NOT = { has_country_flag = upgraded_inquisition }
+				}
+			}
+			check_variable = { pr_nightmare > probability_check }
+		}
+		localization_key = resistance_strike_mission_failures_desc_media_fail
+	}
+	text = {
+		trigger = {
+			OR = {
+				AND = {
+					event_target:SOL_strike_target_1 = { has_state_flag = potential_secondary_strike_target }
+					NOT = { has_country_flag = SOL_refined_resistance_strike }
+					divisions_in_state = {
+						size > 3
+						state = event_target:SOL_strike_target_1
+					}
+				}
+				AND = { 
+					event_target:SOL_strike_target_2 = { has_state_flag = potential_secondary_strike_target }
+					NOT = { has_country_flag = SOL_refined_resistance_strike }
+					divisions_in_state = {
+						size > 3
+						state = event_target:SOL_strike_target_2
+					}
+				}
+				AND = { 
+					event_target:SOL_strike_target_3 = { has_state_flag = potential_secondary_strike_target }
+					NOT = { has_country_flag = SOL_refined_resistance_strike }
+					divisions_in_state = {
+						size > 3
+						state = event_target:SOL_strike_target_3
+					}
+				}
+				AND = {
+					event_target:SOL_strike_target_4 = { has_state_flag = potential_secondary_strike_target }
+					NOT = { has_country_flag = SOL_refined_resistance_strike }
+					divisions_in_state = {
+						size > 3
+						state = event_target:SOL_strike_target_4
+					}
+				}
+				AND = {
+					event_target:SOL_strike_target_5 = { has_state_flag = potential_secondary_strike_target }
+					NOT = { has_country_flag = SOL_refined_resistance_strike }
+					divisions_in_state = {
+						size > 3
+						state = event_target:SOL_strike_target_5
+					}
+				}
+				AND = { 
+					event_target:SOL_strike_target_6 = { has_state_flag = potential_secondary_strike_target }
+					NOT = { has_country_flag = SOL_refined_resistance_strike }
+					divisions_in_state = {
+						size > 3
+						state = event_target:SOL_strike_target_6
+					}
+					NOT = { has_country_flag = SOL_twilight_ascended }
+				}
+				AND = { 
+					event_target:SOL_strike_target_7 = { has_state_flag = potential_secondary_strike_target }
+					NOT = { has_country_flag = SOL_refined_resistance_strike }
+					divisions_in_state = {
+						size > 3
+						state = event_target:SOL_strike_target_7
+					}
+					NOT = { has_country_flag = upgraded_inquisition }
+				}
+			}
+			NOT = { check_variable = { pr_nightmare > probability_check } }
+		}
+		localization_key = resistance_strike_mission_failures_desc_media_win
+	}
+	text = {
+		localization_key = resistance_strike_mission_failures_desc_none
+	}
+}
+defined_text = {
+	name = resistance_strike_mission_recommendations
+	text = {
+		trigger = {
+			divisions_in_state = {
+				size > 3
+				state = event_target:SOL_resistance_stronghold
+			}
+		}
+		localization_key = resistance_strike_mission_recommendations_best
+	}
+	text = {
+		trigger = {
+			NOT = {
+				divisions_in_state = {
+					size > 3
+					state = event_target:SOL_resistance_stronghold
+				}
+			}
+			OR = {
+				divisions_in_state = {
+					size > 3
+					state = event_target:SOL_secondary_strike_target_1
+				}
+				divisions_in_state = {
+					size > 3
+					state = event_target:SOL_secondary_strike_target_2
+				}
+			}
+		}
+		localization_key = resistance_strike_mission_recommendations_middle
+	}
+	text = {
+		localization_key = resistance_strike_mission_recommendations_worse
+	}
+}
+defined_text = {
+	name = resistance_strike_mission_success_rating_comment
+	text = {
+		trigger = {
+			check_variable = { strike_at_resistance_success_rating < 0 }
+		}
+		localization_key = resistance_strike_mission_success_rating_comment_failure
+	}
+	text = {
+		trigger = {
+			check_variable = { strike_at_resistance_success_rating > -1 }
+			check_variable = { strike_at_resistance_success_rating < 4 }
+		}
+		localization_key = resistance_strike_mission_success_rating_comment_partial_success
+	}
+	text = {
+		trigger = {
+			check_variable = { strike_at_resistance_success_rating > 3 }
+			check_variable = { strike_at_resistance_success_rating < 7 }
+		}
+		localization_key = resistance_strike_mission_success_rating_comment_success
+	}
+	text = {
+		trigger = {
+			check_variable = { strike_at_resistance_success_rating > 6 }
+		}
+		localization_key = resistance_strike_mission_success_rating_comment_resounding_success
+	}
+}
+
+defined_text = {
+	name = MagicCurrentSpell
+	text = {
+		trigger = {
+			check_variable = { sol_magic_currently_selected_spell = 1 }
+		}
+		localization_key = selected_spell_heatwave
+	}
+	text = {
+		trigger = {
+			check_variable = { sol_magic_currently_selected_spell = 2 }
+		}
+		localization_key = selected_spell_blessing
+	}
+	text = {
+		trigger = {
+			check_variable = { sol_magic_currently_selected_spell = 3 }
+		}
+		localization_key = selected_spell_curse
+	}
+}
+defined_text = {
+	name = MagicCurrentSpellDesc
+	text = {
+		trigger = {
+			check_variable = { sol_magic_currently_selected_spell = 1 }
+		}
+		localization_key = selected_spell_heatwave_desc
+	}
+	text = {
+		trigger = {
+			check_variable = { sol_magic_currently_selected_spell = 2 }
+		}
+		localization_key = selected_spell_blessing_desc
+	}
+	text = {
+		trigger = {
+			check_variable = { sol_magic_currently_selected_spell = 3 }
+		}
+		localization_key = selected_spell_curse_desc
+	}
+}
+
+defined_text = {
+	name = SOL_daybreaker_magic_daily
+	text = {
+		trigger = {
+			check_variable = { daybreaker_magic_daily_change < 0 }
+		}
+		localization_key = daybreaker_magic_daily_negative
+	}
+	text = {
+		trigger = {
+			check_variable = { 
+				var = daybreaker_magic_daily_change
+				value = 0
+				compare = greater_than_or_equals 
+			}
+		}
+		localization_key = daybreaker_magic_daily_positive
+	}
+}
+defined_text = {
+	name = SOL_daybreaker_magic_daily_actions
+	text = {
+		trigger = {
+			check_variable = { daybreaker_magic_daily_change_actions < 0 }
+		}
+		localization_key = daybreaker_magic_daily_actions_negative
+	}
+	text = {
+		trigger = {
+			check_variable = { 
+				var = daybreaker_magic_daily_change_actions
+				value = 0
+				compare = greater_than_or_equals 
+			}
+		}
+		localization_key = daybreaker_magic_daily_actions_positive
+	}
+}
+defined_text = { # Country
+	name = GetSpellCost
+	text = {
+		trigger = {
+			check_variable = { sol_magic_currently_selected_spell = 1 }
+			check_variable = { 
+				var = daybreaker_magic_reserves 
+				value = sol_heatwave_cost
+				compare = greater_than_or_equals
+			}
+		}
+		localization_key = decision_cost_heatwave
+	}
+	text = {
+		trigger = {
+			check_variable = { sol_magic_currently_selected_spell = 1 }
+			check_variable = { daybreaker_magic_reserves < sol_heatwave_cost }
+		}
+		localization_key = decision_cost_heatwave_blocked
+	}
+	text = {
+		trigger = {
+			check_variable = { sol_magic_currently_selected_spell = 2 }
+			check_variable = { 
+				var = daybreaker_magic_reserves 
+				value = sol_blessing_cost
+				compare = greater_than_or_equals
+			}
+		}
+		localization_key = decision_cost_blessing
+	}
+	text = {
+		trigger = {
+			check_variable = { sol_magic_currently_selected_spell = 2 }
+			check_variable = { daybreaker_magic_reserves < sol_blessing_cost }
+		}
+		localization_key = decision_cost_blessing_blocked
+	}
+	text = {
+		trigger = {
+			check_variable = { sol_magic_currently_selected_spell = 3 }
+			check_variable = { 
+				var = daybreaker_magic_reserves 
+				value = sol_curse_cost
+				compare = greater_than_or_equals
+			}
+		}
+		localization_key = decision_cost_curse
+	}
+	text = {
+		trigger = {
+			check_variable = { sol_magic_currently_selected_spell = 3 }
+			check_variable = { daybreaker_magic_reserves < sol_curse_cost }
+		}
+		localization_key = decision_cost_curse_blocked
+	}
+}
+defined_text = {
+	name = SpellEffect
+	text = {
+		trigger = {
+			check_variable = { sol_magic_currently_selected_spell = 1 }
+		}
+		localization_key = spell_effect_heatwave
+	}
+	text = {
+		trigger = {
+			check_variable = { sol_magic_currently_selected_spell = 2 }
+		}
+		localization_key = spell_effect_blessing
+	}
+	text = {
+		trigger = {
+			check_variable = { sol_magic_currently_selected_spell = 3 }
+		}
+		localization_key = spell_effect_curse
+	}
+}
+defined_text = {
+	name = SpellEffectCancel
+	text = {
+		trigger = {
+			check_variable = { sol_magic_currently_selected_spell = 1 }
+		}
+		localization_key = spell_effect_cancel_heatwave
+	}
+	text = {
+		trigger = {
+			check_variable = { sol_magic_currently_selected_spell = 2 }
+		}
+		localization_key = spell_effect_cancel_blessing
+	}
+	text = {
+		trigger = {
+			check_variable = { sol_magic_currently_selected_spell = 3 }
+		}
+		localization_key = spell_effect_cancel_curse
+	}
+}
+defined_text = {
+	name = HasNightmareMoon1
+	text = {
+		trigger = {
+			has_global_flag = equestrian_civil_war
+		}
+		localization_key = event_100_nmm
+	}
+	text = { 
+		localization_key = event_100_other
+	}
+}
+defined_text = {
+	name = HasNightmareMoon2
+	text = {
+		trigger = {
+			has_global_flag = equestrian_civil_war
+		}
+		localization_key = event_103_nmm
+	}
+	text = { 
+		localization_key = event_103_other
+	}
+}
+defined_text = {
+	name = HasNightmareMoon3
+	text = {
+		trigger = {
+			has_global_flag = equestrian_civil_war
+		}
+		localization_key = event_105_nmm
+	}
+	text = { 
+		localization_key = event_105_other
+	}
+}
+defined_text = {
+	name = past_public_works_bales_whinnyapolis
+	text = {
+		trigger = {
+			check_variable = { SOL_equus_map_bales_whinnyapolis_development_completed_public_works > 0 }
+		}
+		localization_key = past_public_works_bales_whinnyapolis_yes
+	}
+	text = { 
+		localization_key = public_works_no
+	}
+}
+defined_text = {
+	name = wartorn_bales_whinnyapolis
+	text = {
+		trigger = {
+			check_variable = { SOL_equus_map_bales_whinnyapolis_development_wartorn > 0 }
+		}
+		localization_key = wartorn_bales_whinnyapolis_yes
+	}
+	text = { 
+		localization_key = public_works_no
+	}
+}
+defined_text = {
+	name = past_public_works_heartland
+	text = {
+		trigger = {
+			check_variable = { SOL_equus_map_heartland_development_completed_public_works > 0 }
+		}
+		localization_key = past_public_works_heartland_yes
+	}
+	text = { 
+		localization_key = public_works_no
+	}
+}
+defined_text = {
+	name = wartorn_heartland
+	text = {
+		trigger = {
+			check_variable = { SOL_equus_map_heartland_development_wartorn > 0 }
+		}
+		localization_key = wartorn_heartland_yes
+	}
+	text = { 
+		localization_key = public_works_no
+	}
+}
+defined_text = {
+	name = past_public_works_frontier
+	text = {
+		trigger = {
+			check_variable = { SOL_equus_map_frontier_development_completed_public_works > 0 }
+		}
+		localization_key = past_public_works_frontier_yes
+	}
+	text = { 
+		localization_key = public_works_no
+	}
+}
+defined_text = {
+	name = wartorn_frontier
+	text = {
+		trigger = {
+			check_variable = { SOL_equus_map_frontier_development_wartorn > 0 }
+		}
+		localization_key = wartorn_frontier_yes
+	}
+	text = { 
+		localization_key = public_works_no
+	}
+}
+defined_text = {
+	name = past_public_works_southeast
+	text = {
+		trigger = {
+			check_variable = { SOL_equus_map_southeast_development_completed_public_works > 0 }
+		}
+		localization_key = past_public_works_southeast_yes
+	}
+	text = { 
+		localization_key = public_works_no
+	}
+}
+defined_text = {
+	name = wartorn_southeast
+	text = {
+		trigger = {
+			check_variable = { SOL_equus_map_southeast_development_wartorn > 0 }
+		}
+		localization_key = wartorn_southeast_yes
+	}
+	text = { 
+		localization_key = public_works_no
+	}
+}
+defined_text = {
+	name = past_public_works_southwest
+	text = {
+		trigger = {
+			check_variable = { SOL_equus_map_southwest_development_completed_public_works > 0 }
+		}
+		localization_key = past_public_works_southwest_yes
+	}
+	text = { 
+		localization_key = public_works_no
+	}
+}
+defined_text = {
+	name = wartorn_southwest
+	text = {
+		trigger = {
+			check_variable = { SOL_equus_map_southwest_development_wartorn > 0 }
+		}
+		localization_key = wartorn_southwest_yes
+	}
+	text = { 
+		localization_key = public_works_no
+	}
+}
+defined_text = {
+	name = past_public_works_east_coast
+	text = {
+		trigger = {
+			check_variable = { SOL_equus_map_east_coast_development_completed_public_works > 0 }
+		}
+		localization_key = past_public_works_east_coast_yes
+	}
+	text = { 
+		localization_key = public_works_no
+	}
+}
+defined_text = {
+	name = wartorn_east_coast
+	text = {
+		trigger = {
+			check_variable = { SOL_equus_map_east_coast_development_wartorn > 0 }
+		}
+		localization_key = wartorn_east_coast_yes
+	}
+	text = { 
+		localization_key = public_works_no
+	}
+}
+defined_text = {
+	name = past_public_works_west_coast
+	text = {
+		trigger = {
+			check_variable = { SOL_equus_map_west_coast_development_completed_public_works > 0 }
+		}
+		localization_key = past_public_works_west_coast_yes
+	}
+	text = { 
+		localization_key = public_works_no
+	}
+}
+defined_text = {
+	name = wartorn_west_coast
+	text = {
+		trigger = {
+			check_variable = { SOL_equus_map_west_coast_development_wartorn > 0 }
+		}
+		localization_key = wartorn_west_coast_yes
+	}
+	text = { 
+		localization_key = public_works_no
+	}
+}
+defined_text = {
+	name = past_public_works_crystal_empire
+	text = {
+		trigger = {
+			check_variable = { SOL_equus_map_crystal_empire_development_completed_public_works > 0 }
+		}
+		localization_key = past_public_works_crystal_empire_yes
+	}
+	text = { 
+		localization_key = public_works_no
+	}
+}
+defined_text = {
+	name = wartorn_crystal_empire
+	text = {
+		trigger = {
+			check_variable = { SOL_equus_map_crystal_empire_development_wartorn > 0 }
+		}
+		localization_key = wartorn_crystal_empire_yes
+	}
+	text = { 
+		localization_key = public_works_no
+	}
+}
+defined_text = {
+	name = past_public_works_severyana
+	text = {
+		trigger = {
+			check_variable = { SOL_equus_map_severyana_development_completed_public_works > 0 }
+		}
+		localization_key = past_public_works_severyana_yes
+	}
+	text = { 
+		localization_key = public_works_no
+	}
+}
+defined_text = {
+	name = wartorn_severyana
+	text = {
+		trigger = {
+			check_variable = { SOL_equus_map_severyana_development_wartorn > 0 }
+		}
+		localization_key = wartorn_severyana_yes
+	}
+	text = { 
+		localization_key = public_works_no
+	}
+}
+
+defined_text = {
+	name = resistance_severyana
+	text = {
+		trigger = {
+			check_variable = { SOL_equus_map_severyana_local_resistance < 0 }
+		}
+		localization_key = resistance_severyana_yes
+	}
+	text = { 
+		localization_key = public_works_no
+	}
+}
+defined_text = {
+	name = resistance_heartland
+	text = {
+		trigger = {
+			check_variable = { SOL_equus_map_heartland_local_resistance < 0 }
+		}
+		localization_key = resistance_heartland_yes
+	}
+	text = { 
+		localization_key = public_works_no
+	}
+}
+defined_text = {
+	name = resistance_bales_whinnyapolis
+	text = {
+		trigger = {
+			check_variable = { SOL_equus_map_bales_whinnyapolis_local_resistance < 0 }
+		}
+		localization_key = resistance_bales_whinnyapolis_yes
+	}
+	text = { 
+		localization_key = public_works_no
+	}
+}
+defined_text = {
+	name = resistance_southeast
+	text = {
+		trigger = {
+			check_variable = { SOL_equus_map_southeast_local_resistance < 0 }
+		}
+		localization_key = resistance_southeast_yes
+	}
+	text = { 
+		localization_key = public_works_no
+	}
+}
+defined_text = {
+	name = resistance_southwest
+	text = {
+		trigger = {
+			check_variable = { SOL_equus_map_southwest_local_resistance < 0 }
+		}
+		localization_key = resistance_southwest_yes
+	}
+	text = { 
+		localization_key = public_works_no
+	}
+}
+defined_text = {
+	name = resistance_crystal_empire
+	text = {
+		trigger = {
+			check_variable = { SOL_equus_map_crystal_empire_local_resistance < 0 }
+		}
+		localization_key = resistance_crystal_empire_yes
+	}
+	text = { 
+		localization_key = public_works_no
+	}
+}
+defined_text = {
+	name = resistance_west_coast
+	text = {
+		trigger = {
+			check_variable = { SOL_equus_map_west_coast_local_resistance < 0 }
+		}
+		localization_key = resistance_west_coast_yes
+	}
+	text = { 
+		localization_key = public_works_no
+	}
+}
+defined_text = {
+	name = resistance_east_coast
+	text = {
+		trigger = {
+			check_variable = { SOL_equus_map_east_coast_local_resistance < 0 }
+		}
+		localization_key = resistance_east_coast_yes
+	}
+	text = { 
+		localization_key = public_works_no
+	}
+}
+defined_text = {
+	name = resistance_frontier
+	text = {
+		trigger = {
+			check_variable = { SOL_equus_map_frontier_local_resistance < 0 }
+		}
+		localization_key = resistance_frontier_yes
+	}
+	text = { 
+		localization_key = public_works_no
+	}
+}
+
+
+defined_text = {
+	name = public_works_has_war
+	text = {
+		trigger = {
+			has_war = yes
+		}
+		localization_key = public_works_has_war_yes
+	}
+	text = { 
+		localization_key = public_works_no
+	}
+}
+
+defined_text = {
+	name = public_works_desc_east_coast
+	text = {
+		trigger = {
+			NOT = { has_country_flag = SOL_east_coast_public_works_in_progress }
+			check_variable = { SOL_equus_map_east_coast_development_completed_public_works = 0 }
+		}
+		localization_key = public_works_desc_east_coast_not_completed
+	}
+	text = {
+		trigger = {
+			has_country_flag = SOL_east_coast_public_works_in_progress
+		}
+		localization_key = public_works_desc_east_coast_in_progress
+	}
+	text = {
+		trigger = {
+			NOT = { has_country_flag = SOL_east_coast_public_works_in_progress }
+			check_variable = { SOL_equus_map_east_coast_development_completed_public_works = 1 }
+		}
+		localization_key = public_works_desc_completed
+	}
+}
+defined_text = {
+	name = public_works_desc_frontier
+	text = {
+		trigger = {
+			NOT = { has_country_flag = SOL_frontier_public_works_in_progress }
+			check_variable = { SOL_equus_map_frontier_development_completed_public_works = 0 }
+		}
+		localization_key = public_works_desc_frontier_not_completed
+	}
+	text = {
+		trigger = {
+			has_country_flag = SOL_frontier_public_works_in_progress
+		}
+		localization_key = public_works_desc_frontier_in_progress
+	}
+	text = {
+		trigger = {
+			NOT = { has_country_flag = SOL_frontier_public_works_in_progress }
+			check_variable = { SOL_equus_map_frontier_development_completed_public_works = 1 }
+		}
+		localization_key = public_works_desc_completed
+	}
+}
+defined_text = {
+	name = public_works_desc_west_coast
+	text = {
+		trigger = {
+			NOT = { has_country_flag = SOL_west_coast_public_works_in_progress }
+			check_variable = { SOL_equus_map_west_coast_development_completed_public_works = 0 }
+		}
+		localization_key = public_works_desc_west_coast_not_completed
+	}
+	text = {
+		trigger = {
+			has_country_flag = SOL_west_coast_public_works_in_progress
+		}
+		localization_key = public_works_desc_west_coast_in_progress
+	}
+	text = {
+		trigger = {
+			NOT = { has_country_flag = SOL_west_coast_public_works_in_progress }
+			check_variable = { SOL_equus_map_west_coast_development_completed_public_works = 1 }
+		}
+		localization_key = public_works_desc_completed
+	}
+}
+defined_text = {
+	name = public_works_desc_severyana
+	text = {
+		trigger = {
+			NOT = { has_country_flag = SOL_severyana_public_works_in_progress }
+			check_variable = { SOL_equus_map_severyana_development_completed_public_works = 0 }
+		}
+		localization_key = public_works_desc_severyana_not_completed
+	}
+	text = {
+		trigger = {
+			has_country_flag = SOL_severyana_public_works_in_progress
+		}
+		localization_key = public_works_desc_severyana_in_progress
+	}
+	text = {
+		trigger = {
+			NOT = { has_country_flag = SOL_severyana_public_works_in_progress }
+			check_variable = { SOL_equus_map_severyana_development_completed_public_works = 1 }
+		}
+		localization_key = public_works_desc_completed
+	}
+}
+defined_text = {
+	name = public_works_desc_crystal_empire
+	text = {
+		trigger = {
+			NOT = { has_country_flag = SOL_crystal_empire_public_works_in_progress }
+			check_variable = { SOL_equus_map_crystal_empire_development_completed_public_works = 0 }
+		}
+		localization_key = public_works_desc_crystal_empire_not_completed
+	}
+	text = {
+		trigger = {
+			has_country_flag = SOL_crystal_empire_public_works_in_progress
+		}
+		localization_key = public_works_desc_crystal_empire_in_progress
+	}
+	text = {
+		trigger = {
+			NOT = { has_country_flag = SOL_crystal_empire_public_works_in_progress }
+			check_variable = { SOL_equus_map_crystal_empire_development_completed_public_works = 1 }
+		}
+		localization_key = public_works_desc_completed
+	}
+}
+defined_text = {
+	name = public_works_desc_southeast
+	text = {
+		trigger = {
+			NOT = { has_country_flag = SOL_southeast_public_works_in_progress }
+			check_variable = { SOL_equus_map_southeast_development_completed_public_works = 0 }
+		}
+		localization_key = public_works_desc_southeast_not_completed
+	}
+	text = {
+		trigger = {
+			has_country_flag = SOL_southeast_public_works_in_progress
+		}
+		localization_key = public_works_desc_southeast_in_progress
+	}
+	text = {
+		trigger = {
+			NOT = { has_country_flag = SOL_southeast_public_works_in_progress }
+			check_variable = { SOL_equus_map_southeast_development_completed_public_works = 1 }
+		}
+		localization_key = public_works_desc_completed
+	}
+}
+defined_text = {
+	name = public_works_desc_southwest
+	text = {
+		trigger = {
+			NOT = { has_country_flag = SOL_southwest_public_works_in_progress }
+			check_variable = { SOL_equus_map_southwest_development_completed_public_works = 0 }
+		}
+		localization_key = public_works_desc_southwest_not_completed
+	}
+	text = {
+		trigger = {
+			has_country_flag = SOL_southwest_public_works_in_progress
+		}
+		localization_key = public_works_desc_southwest_in_progress
+	}
+	text = {
+		trigger = {
+			NOT = { has_country_flag = SOL_southwest_public_works_in_progress }
+			check_variable = { SOL_equus_map_southwest_development_completed_public_works = 1 }
+		}
+		localization_key = public_works_desc_completed
+	}
+}
+defined_text = {
+	name = public_works_desc_bales_whinnyapolis
+	text = {
+		trigger = {
+			NOT = { has_country_flag = SOL_bales_whinnyapolis_public_works_in_progress }
+			check_variable = { SOL_equus_map_bales_whinnyapolis_development_completed_public_works = 0 }
+		}
+		localization_key = public_works_desc_bales_whinnyapolis_not_completed
+	}
+	text = {
+		trigger = {
+			has_country_flag = SOL_bales_whinnyapolis_public_works_in_progress
+		}
+		localization_key = public_works_desc_bales_whinnyapolis_in_progress
+	}
+	text = {
+		trigger = {
+			NOT = { has_country_flag = SOL_bales_whinnyapolis_public_works_in_progress }
+			check_variable = { SOL_equus_map_bales_whinnyapolis_development_completed_public_works = 1 }
+		}
+		localization_key = public_works_desc_completed
+	}
+}
+defined_text = {
+	name = public_works_desc_heartland
+	text = {
+		trigger = {
+			NOT = { has_country_flag = SOL_heartland_public_works_in_progress }
+			check_variable = { SOL_equus_map_heartland_development_completed_public_works = 0 }
+		}
+		localization_key = public_works_desc_heartland_not_completed
+	}
+	text = {
+		trigger = {
+			has_country_flag = SOL_heartland_public_works_in_progress
+		}
+		localization_key = public_works_desc_heartland_in_progress
+	}
+	text = {
+		trigger = {
+			NOT = { has_country_flag = SOL_heartland_public_works_in_progress }
+			check_variable = { SOL_equus_map_heartland_development_completed_public_works = 1 }
+		}
+		localization_key = public_works_desc_completed
+	}
+}
+defined_text = {
+	name = public_works_effect_text
+	text = {
+		localization_key = public_works_effect_text_tt
+	}
+}
+defined_text = {
+	name = ArrestDescriptionList
+	text = {
+		trigger = {
+			has_country_flag = upgraded_inquisition
+			has_country_flag = SOL_twilight_ascended
+		}
+		localization_key = ArrestDescriptionList2
+	}
+	text = {
+		trigger = {
+			OR = { 
+				has_country_flag = upgraded_inquisition 
+				has_country_flag = SOL_twilight_ascended
+			}
+		}
+		localization_key = ArrestDescriptionList3
+	}
+	text = {
+		localization_key = ArrestDescriptionList4
+	}
+}
+defined_text = {
+	name = ArrestDescriptionUpgrade
+	text = {
+		trigger = {
+			has_country_flag = upgraded_inquisition
+			has_country_flag = SOL_twilight_ascended
+		}
+		localization_key = ArrestDescriptionUpgradeTwilight
+	}
+	text = {
+		trigger = {
+			NOT = { has_country_flag = upgraded_inquisition }
+			has_country_flag = SOL_twilight_ascended
+		}
+		localization_key = ArrestDescriptionTwilight
+	}
+	text = {
+		trigger = {
+			has_country_flag = upgraded_inquisition
+			NOT = { has_country_flag = SOL_twilight_ascended }
+		}
+		localization_key = ArrestDescriptionUpgrade
+	}
+	text = {
+		localization_key = ArrestDescriptionNo
+	}
+}
+defined_text = {
+	name = ArrestPropagandaLocationDesc
+	text = {
+		trigger = {
+			check_variable = { SOL_arrest_sympathisers_target_type_var = 1 }
+		}
+		localization_key = ArrestPropagandaLocation1
+	}
+	text = {
+		trigger = {
+			check_variable = { SOL_arrest_sympathisers_target_type_var = 2 }		
+		}
+		localization_key = ArrestPropagandaLocation2
+	}
+	text = {
+		trigger = {
+			check_variable = { SOL_arrest_sympathisers_target_type_var = 3 }
+		}
+		localization_key = ArrestPropagandaLocation3
+	}
+	text = {
+		trigger = {
+			check_variable = { SOL_arrest_sympathisers_target_type_var = 4 }
+		}
+		localization_key = ArrestPropagandaLocation4
+	}
+	text = {
+		trigger = {
+			check_variable = { SOL_arrest_sympathisers_target_type_var = 5 }
+		}
+		localization_key = ArrestPropagandaLocation5
+	}
+	text = {
+		trigger = {
+			check_variable = { SOL_arrest_sympathisers_target_type_var = 6 }
+		}
+		localization_key = ArrestPropagandaLocation6
+	}
+	text = {
+		trigger = {
+			check_variable = { SOL_arrest_sympathisers_target_type_var = 7 }		
+		}
+		localization_key = ArrestPropagandaLocation7
+	}
+	text = {
+		trigger = {
+			check_variable = { SOL_arrest_sympathisers_target_type_var = 8 }
+		}
+		localization_key = ArrestPropagandaLocation8
+	}
+	text = {
+		trigger = {
+			check_variable = { SOL_arrest_sympathisers_target_type_var = 9 }
+		}
+		localization_key = ArrestPropagandaLocation9
+	}
+	text = {
+		trigger = {
+			check_variable = { SOL_arrest_sympathisers_target_type_var = 10 }
+		}
+		localization_key = ArrestPropagandaLocation10
+	}
+	text = {
+		trigger = {
+			check_variable = { SOL_arrest_sympathisers_target_type_var = 11 }
+		}
+		localization_key = ArrestPropagandaLocation11
+	}
+	text = {
+		trigger = {
+			check_variable = { SOL_arrest_sympathisers_target_type_var = 12 }
+		}
+		localization_key = ArrestPropagandaLocation12
+	}
+}
+defined_text = {
+	name = ArrestPropagandaTitleFirstDesc
+	text = {
+		trigger = {
+			check_variable = { SOL_arrest_sympathisers_first_target = 1 }
+		}
+		localization_key = ArrestPropagandaTitle1
+	}
+	text = {
+		trigger = {
+			check_variable = { SOL_arrest_sympathisers_first_target = 2 }
+		}
+		localization_key = ArrestPropagandaTitle2
+	}
+	text = {
+		trigger = {
+			check_variable = { SOL_arrest_sympathisers_first_target = 3 }
+		}
+		localization_key = ArrestPropagandaTitle3
+	}
+	text = {
+		trigger = {
+			check_variable = { SOL_arrest_sympathisers_first_target = 4 }
+		}
+		localization_key = ArrestPropagandaTitle4
+	}
+	text = {
+		trigger = {
+			check_variable = { SOL_arrest_sympathisers_first_target = 5 }
+		}
+		localization_key = ArrestPropagandaTitle5
+	}
+	text = {
+		trigger = {
+			check_variable = { SOL_arrest_sympathisers_first_target = 6 }
+		}
+		localization_key = ArrestPropagandaTitle6
+	}
+	text = {
+		trigger = {
+			check_variable = { SOL_arrest_sympathisers_first_target = 7 }
+		}
+		localization_key = ArrestPropagandaTitle7
+	}
+	text = {
+		trigger = {
+			check_variable = { SOL_arrest_sympathisers_first_target = 8 }
+		}
+		localization_key = ArrestPropagandaTitle8
+	}
+	text = {
+		trigger = {
+			check_variable = { SOL_arrest_sympathisers_first_target = 9 }
+		}
+		localization_key = ArrestPropagandaTitle9
+	}
+	text = {
+		trigger = {
+			check_variable = { SOL_arrest_sympathisers_first_target = 10 }
+		}
+		localization_key = ArrestPropagandaTitle10
+	}
+	text = {
+		trigger = {
+			check_variable = { SOL_arrest_sympathisers_first_target = 11 }
+		}
+		localization_key = ArrestPropagandaTitle11
+	}
+	text = {
+		trigger = {
+			check_variable = { SOL_arrest_sympathisers_first_target = 12 }
+		}
+		localization_key = ArrestPropagandaTitle12
+	}
+}
+defined_text = {
+	name = ArrestPropagandaTitleSecondDesc
+	text = {
+		trigger = {
+			check_variable = { SOL_arrest_sympathisers_second_target = 1 }
+		}
+		localization_key = ArrestPropagandaTitle1
+	}
+	text = {
+		trigger = {
+			check_variable = { SOL_arrest_sympathisers_second_target = 2 }
+		}
+		localization_key = ArrestPropagandaTitle2
+	}
+	text = {
+		trigger = {
+			check_variable = { SOL_arrest_sympathisers_second_target = 3 }
+		}
+		localization_key = ArrestPropagandaTitle3
+	}
+	text = {
+		trigger = {
+			check_variable = { SOL_arrest_sympathisers_second_target = 4 }
+		}
+		localization_key = ArrestPropagandaTitle4
+	}
+	text = {
+		trigger = {
+			check_variable = { SOL_arrest_sympathisers_second_target = 5 }
+		}
+		localization_key = ArrestPropagandaTitle5
+	}
+	text = {
+		trigger = {
+			check_variable = { SOL_arrest_sympathisers_second_target = 6 }
+		}
+		localization_key = ArrestPropagandaTitle6
+	}
+	text = {
+		trigger = {
+			check_variable = { SOL_arrest_sympathisers_second_target = 7 }
+		}
+		localization_key = ArrestPropagandaTitle7
+	}
+	text = {
+		trigger = {
+			check_variable = { SOL_arrest_sympathisers_second_target = 8 }
+		}
+		localization_key = ArrestPropagandaTitle8
+	}
+	text = {
+		trigger = {
+			check_variable = { SOL_arrest_sympathisers_second_target = 9 }
+		}
+		localization_key = ArrestPropagandaTitle9
+	}
+	text = {
+		trigger = {
+			check_variable = { SOL_arrest_sympathisers_second_target = 10 }
+		}
+		localization_key = ArrestPropagandaTitle10
+	}
+	text = {
+		trigger = {
+			check_variable = { SOL_arrest_sympathisers_second_target = 11 }
+		}
+		localization_key = ArrestPropagandaTitle11
+	}
+	text = {
+		trigger = {
+			check_variable = { SOL_arrest_sympathisers_second_target = 12 }
+		}
+		localization_key = ArrestPropagandaTitle12
+	}
+}
+defined_text = {
+	name = ArrestPropagandaTitleThirdDesc
+	text = {
+		trigger = {
+			check_variable = { SOL_arrest_sympathisers_third_target = 1 }
+		}
+		localization_key = ArrestPropagandaTitle1
+	}
+	text = {
+		trigger = {
+			check_variable = { SOL_arrest_sympathisers_third_target = 2 }
+		}
+		localization_key = ArrestPropagandaTitle2
+	}
+	text = {
+		trigger = {
+			check_variable = { SOL_arrest_sympathisers_third_target = 3 }
+		}
+		localization_key = ArrestPropagandaTitle3
+	}
+	text = {
+		trigger = {
+			check_variable = { SOL_arrest_sympathisers_third_target = 4 }
+		}
+		localization_key = ArrestPropagandaTitle4
+	}
+	text = {
+		trigger = {
+			check_variable = { SOL_arrest_sympathisers_third_target = 5 }
+		}
+		localization_key = ArrestPropagandaTitle5
+	}
+	text = {
+		trigger = {
+			check_variable = { SOL_arrest_sympathisers_third_target = 6 }
+		}
+		localization_key = ArrestPropagandaTitle6
+	}
+	text = {
+		trigger = {
+			check_variable = { SOL_arrest_sympathisers_third_target = 7 }
+		}
+		localization_key = ArrestPropagandaTitle7
+	}
+	text = {
+		trigger = {
+			check_variable = { SOL_arrest_sympathisers_third_target = 8 }
+		}
+		localization_key = ArrestPropagandaTitle8
+	}
+	text = {
+		trigger = {
+			check_variable = { SOL_arrest_sympathisers_third_target = 9 }
+		}
+		localization_key = ArrestPropagandaTitle9
+	}
+	text = {
+		trigger = {
+			check_variable = { SOL_arrest_sympathisers_third_target = 10 }
+		}
+		localization_key = ArrestPropagandaTitle10
+	}
+	text = {
+		trigger = {
+			check_variable = { SOL_arrest_sympathisers_third_target = 11 }
+		}
+		localization_key = ArrestPropagandaTitle11
+	}
+	text = {
+		trigger = {
+			check_variable = { SOL_arrest_sympathisers_third_target = 12 }
+		}
+		localization_key = ArrestPropagandaTitle12
+	}
+}
+defined_text = {
+	name = ArrestPropagandaTitleFourthDesc
+	text = {
+		trigger = {
+			check_variable = { SOL_arrest_sympathisers_fourth_target = 1 }
+		}
+		localization_key = ArrestPropagandaTitle1
+	}
+	text = {
+		trigger = {
+			check_variable = { SOL_arrest_sympathisers_fourth_target = 2 }
+		}
+		localization_key = ArrestPropagandaTitle2
+	}
+	text = {
+		trigger = {
+			check_variable = { SOL_arrest_sympathisers_fourth_target = 3 }
+		}
+		localization_key = ArrestPropagandaTitle3
+	}
+	text = {
+		trigger = {
+			check_variable = { SOL_arrest_sympathisers_fourth_target = 4 }
+		}
+		localization_key = ArrestPropagandaTitle4
+	}
+	text = {
+		trigger = {
+			check_variable = { SOL_arrest_sympathisers_fourth_target = 5 }
+		}
+		localization_key = ArrestPropagandaTitle5
+	}
+	text = {
+		trigger = {
+			check_variable = { SOL_arrest_sympathisers_fourth_target = 6 }
+		}
+		localization_key = ArrestPropagandaTitle6
+	}
+	text = {
+		trigger = {
+			check_variable = { SOL_arrest_sympathisers_fourth_target = 7 }
+		}
+		localization_key = ArrestPropagandaTitle7
+	}
+	text = {
+		trigger = {
+			check_variable = { SOL_arrest_sympathisers_fourth_target = 8 }
+		}
+		localization_key = ArrestPropagandaTitle8
+	}
+	text = {
+		trigger = {
+			check_variable = { SOL_arrest_sympathisers_fourth_target = 9 }
+		}
+		localization_key = ArrestPropagandaTitle9
+	}
+	text = {
+		trigger = {
+			check_variable = { SOL_arrest_sympathisers_fourth_target = 10 }
+		}
+		localization_key = ArrestPropagandaTitle10
+	}
+	text = {
+		trigger = {
+			check_variable = { SOL_arrest_sympathisers_fourth_target = 11 }
+		}
+		localization_key = ArrestPropagandaTitle11
+	}
+	text = {
+		trigger = {
+			check_variable = { SOL_arrest_sympathisers_fourth_target = 12 }
+		}
+		localization_key = ArrestPropagandaTitle12
+	}
+}
+defined_text = {
+	name = ArrestPropagandaWinDesc
+	text = {
+		trigger = {
+			check_variable = { SOL_arrest_sympathisers_target_type_var = 1 }
+		}
+		localization_key = ArrestPropagandaWin1
+	}
+	text = {
+		trigger = {
+			check_variable = { SOL_arrest_sympathisers_target_type_var = 2 }		
+		}
+		localization_key = ArrestPropagandaWin2
+	}
+	text = {
+		trigger = {
+			check_variable = { SOL_arrest_sympathisers_target_type_var = 3 }
+		}
+		localization_key = ArrestPropagandaWin3
+	}
+	text = {
+		trigger = {
+			check_variable = { SOL_arrest_sympathisers_target_type_var = 4 }
+		}
+		localization_key = ArrestPropagandaWin4
+	}
+	text = {
+		trigger = {
+			check_variable = { SOL_arrest_sympathisers_target_type_var = 5 }
+		}
+		localization_key = ArrestPropagandaWin5
+	}
+	text = {
+		trigger = {
+			check_variable = { SOL_arrest_sympathisers_target_type_var = 6 }
+		}
+		localization_key = ArrestPropagandaWin6
+	}
+	text = {
+		trigger = {
+			check_variable = { SOL_arrest_sympathisers_target_type_var = 7 }		
+		}
+		localization_key = ArrestPropagandaWin7
+	}
+	text = {
+		trigger = {
+			check_variable = { SOL_arrest_sympathisers_target_type_var = 8 }
+		}
+		localization_key = ArrestPropagandaWin8
+	}
+	text = {
+		trigger = {
+			check_variable = { SOL_arrest_sympathisers_target_type_var = 9 }
+		}
+		localization_key = ArrestPropagandaWin9
+	}
+	text = {
+		trigger = {
+			check_variable = { SOL_arrest_sympathisers_target_type_var = 10 }
+		}
+		localization_key = ArrestPropagandaWin10
+	}
+	text = {
+		trigger = {
+			check_variable = { SOL_arrest_sympathisers_target_type_var = 11 }
+		}
+		localization_key = ArrestPropagandaWin11
+	}
+	text = {
+		trigger = {
+			check_variable = { SOL_arrest_sympathisers_target_type_var = 12 }
+		}
+		localization_key = ArrestPropagandaWin12
+	}
+}
