@@ -1,0 +1,178 @@
+spriteTypes = {
+
+	SpriteType = {
+		name = "GFX_tech_skeletons_medium"
+		texturefile = "gfx/interface/technologies/skeleton1.dds"
+	}
+	SpriteType = {
+		name = "GFX_tech_skeletons2_medium"
+		texturefile = "gfx/interface/technologies/skeleton2.dds"
+	}
+	SpriteType = {
+		name = "GFX_tech_skeletons3_medium"
+		texturefile = "gfx/interface/technologies/skeleton3.dds"
+	}
+	SpriteType = {
+		name = "GFX_tech_skeletons4_medium"
+		texturefile = "gfx/interface/technologies/skeleton4.dds"
+	}
+	SpriteType = {
+		name = "GFX_tech_skeletons5_medium"
+		texturefile = "gfx/interface/technologies/skeleton5.dds"
+	}
+
+
+	SpriteType = {
+		name = "GFX_tech_vampires_medium"
+		texturefile = "gfx/interface/technologies/vampires1.dds"
+	}
+	SpriteType = {
+		name = "GFX_tech_vampires2_medium"
+		texturefile = "gfx/interface/technologies/vampires2.dds"
+	}
+	SpriteType = {
+		name = "GFX_tech_vampires3_medium"
+		texturefile = "gfx/interface/technologies/vampires3.dds"
+	}
+	SpriteType = {
+		name = "GFX_tech_vampires4_medium"
+		texturefile = "gfx/interface/technologies/vampires4.dds"
+	}
+	SpriteType = {
+		name = "GFX_tech_vampires5_medium"
+		texturefile = "gfx/interface/technologies/vampires5.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_tech_zombies_medium"
+		texturefile = "gfx/interface/technologies/zombie1.dds"
+	}
+	SpriteType = {
+		name = "GFX_tech_zombies2_medium"
+		texturefile = "gfx/interface/technologies/zombie2.dds"
+	}
+	SpriteType = {
+		name = "GFX_tech_zombies3_medium"
+		texturefile = "gfx/interface/technologies/zombie3.dds"
+	}
+	SpriteType = {
+		name = "GFX_tech_zombies4_medium"
+		texturefile = "gfx/interface/technologies/zombie4.dds"
+	}
+	SpriteType = {
+		name = "GFX_tech_zombies5_medium"
+		texturefile = "gfx/interface/technologies/zombie5.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_tech_dragon_riders_medium"
+		texturefile = "gfx/interface/technologies/dragon_riders1.dds"
+	}
+	SpriteType = {
+		name = "GFX_tech_dragon_riders_sa_medium"
+		texturefile = "gfx/interface/technologies/dragon_riders_sa.dds"
+	}
+	SpriteType = {
+		name = "GFX_tech_dragon_riders_sa2_medium"
+		texturefile = "gfx/interface/technologies/dragon_riders_sa2.dds"
+	}
+	SpriteType = {
+		name = "GFX_tech_dragon_riders_ha_medium"
+		texturefile = "gfx/interface/technologies/dragon_riders_ha.dds"
+	}
+	SpriteType = {
+		name = "GFX_tech_dragon_riders_ha2_medium"
+		texturefile = "gfx/interface/technologies/dragon_riders_ha2.dds"
+	}
+	SpriteType = {
+		name = "GFX_tech_dragon_riders2_medium"
+		texturefile = "gfx/interface/technologies/dragon_riders4.dds"
+	}
+	SpriteType = {
+		name = "GFX_tech_dragon_riders3_medium"
+		texturefile = "gfx/interface/technologies/dragon_riders5.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_tech_undead_industry_medium"
+		texturefile = "gfx/interface/technologies/tech_undead_industry.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_tech_undead_industry2_medium"
+		texturefile = "gfx/interface/technologies/tech_undead_industry2.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_tech_undead_industry_q1_medium"
+		texturefile = "gfx/interface/technologies/tech_undead_industry_q1.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_tech_undead_industry_q2_medium"
+		texturefile = "gfx/interface/technologies/tech_undead_industry_q2.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_tech_undead_industry3_medium"
+		texturefile = "gfx/interface/technologies/tech_undead_industry3.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_tech_undead_industry4_medium"
+		texturefile = "gfx/interface/technologies/tech_undead_industry4.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_tech_undead_industry_q3_medium"
+		texturefile = "gfx/interface/technologies/tech_undead_industry_q3.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_tech_undead_industry_q4_medium"
+		texturefile = "gfx/interface/technologies/tech_undead_industry_q4.dds"
+	}
+
+	
+	SpriteType = {
+		name = "GFX_undead_techtree_bg"
+		textureFile = "gfx/interface/techtree/undead_magic_techtree_bg.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_undead_folder_tab"
+		textureFile = "gfx/interface/techtree/techtree_magic_undead_tab.dds"
+		noOfFrames = 2
+	}
+
+	spriteType = {
+		name = "GFX_undead_folder_icon"
+		textureFile = "gfx/interface/techtree/icons/undead_folder_icon.dds"
+	}
+
+	spriteType = {
+		name = "GFX_technology_branch_item_bg"
+		textureFile = "gfx/interface/techtree/tech_doctrine_branch_item_bg.dds"
+	}
+
+	spriteType = {
+		name = "GFX_technology_undead_folder_researching_item_bg"
+		textureFile = "gfx/interface/techtree/tech_doctrine_researching_item_bg.dds"
+	}
+
+	spriteType = {
+		name = "GFX_technology_undead_folder_researched_item_bg"
+		textureFile = "gfx/interface/techtree/tech_doctrine_researched_item_bg.dds"
+	}
+
+	spriteType = {
+		name = "GFX_technology_undead_folder_available_item_bg"
+		textureFile = "gfx/interface/techtree/tech_doctrine_available_item_bg.dds"
+	}
+
+	spriteType = {
+		name = "GFX_technology_undead_folder_unavailable_item_bg"
+		textureFile = "gfx/interface/techtree/tech_doctrine_unavailable_item_bg.dds"
+	}
+
+}
