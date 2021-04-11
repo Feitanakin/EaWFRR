@@ -1,0 +1,27 @@
+add_namespace = feat_dutch
+
+country_event = {
+	id = feat_dutch.1
+	immediate = {log = "[GetDateText]: [Root.GetName]: event feat_dutch.1"}
+	title = feat_dutch.1.t
+	desc = feat_dutch.1.d
+	picture = GFX_event_river_city_3
+
+	is_triggered_only = yes
+
+	option = {#keep the capital
+		name = feat_dutch.1.a
+		drop_cosmetic_tag = GRIF_EMPIRE
+		set_cosmetic_tag = FEA_dutch
+	}
+	option = {#move and rename the capital
+	trigger = { FEA = { has_government = fascism } }
+		name = feat_dutch.1.b
+		set_capital = 382
+		set_province_name = { id = 10537 name = "Handgrepenhuis" }
+		382 = {
+		set_state_name = "Handgrepenhuis"
+		}
+		set_cosmetic_tag = FEA_dutch
+	}
+}

@@ -10,6 +10,10 @@ riverlands_dogs = {
 	color = rgb { 122 176 255 }
 	color_ui = rgb { 122 176 255 }
 }
+FEA_dutch = {
+	color = rgb { 122 150 128 }
+	color_ui = rgb { 122 150 128 }
+}
 FAT_Monarchy = {
 	color = rgb { 104 107 156 }
 	color_ui = rgb { 104 107 156 }
