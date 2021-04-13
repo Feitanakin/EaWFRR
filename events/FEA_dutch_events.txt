@@ -13,6 +13,7 @@ country_event = {
 		name = feat_dutch.1.a
 		drop_cosmetic_tag = GRIF_EMPIRE
 		set_cosmetic_tag = FEA_dutch
+		news_event = { days = 1 id = feat_dutch.2 }
 	}
 	option = {#move and rename the capital
 	trigger = { FEA = { has_government = fascism } }
@@ -23,5 +24,19 @@ country_event = {
 		set_state_name = "Handgrepenhuis"
 		}
 		set_cosmetic_tag = FEA_dutch
+		news_event = { days = 1 id = feat_dutch.2 }
+	}
+}
+
+news_event = {
+	id = feat_dutch.2
+	immediate = {log = "[GetDateText]: [Root.GetName]: event feat_dutch.2"}
+	title = feat_dutch.2.t
+	desc = feat_dutch.2.d
+	picture = GFX_news_griffon_mountain_2
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = feat_dutch.2.a
 	}
 }
