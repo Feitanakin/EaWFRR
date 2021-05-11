@@ -6440,7 +6440,170 @@ focus_tree = {
 		}
 		search_filters = {  }
 	}
+	
+	focus = {
+		id = LCT_red_river_army
+		icon = GFX_goal_generic_navy_battleship
+		prerequisite = { focus = LCT_the_means_of_production }
+		x = 0
+		y = 2
+		relative_position_id = LCT_the_goal_ahead
 
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		available = {
+			
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus LCT_red_river_army"
+			add_ideas = LCT_red_river_army_idea
+			every_unit_leader = {
+				add_logistics = 1
+			    add_planning = 1
+	            add_defense = 1
+			    add_attack = 1
+			}
+		}
+		search_filters = { FOCUS_FILTER_ARMY_BONUS }
+	}
+	focus = {
+		id = LCT_sparkling_dusk
+		icon = GFX_goal_generic_navy_battleship
+		prerequisite = { focus = LCT_red_river_army }
+		x = 0
+		y = 2
+		relative_position_id = LCT_the_goal_ahead
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+		will_lead_to_war_with = LNS
+		will_lead_to_war_with = LSC
+		will_lead_to_war_with = LSM
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		bypass = {
+			AND = {
+				LNS = { exists = no }
+				LSC = { exists = no }
+				LSM = { exists = no }
+			}
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus LCT_sparkling_dusk"
+			if = {
+				limit = { LSC = { exists = yes } }
+				#LSC = { country_event = } #ADD THE EVENT HERE. USE EFFECT TOOLTIP FOR ACCEPT RESULTS
+				custom_effect_tooltip = "§YIf they accept:§!"
+				effect_tooltip = {
+					LCT = {
+						puppet = LSC
+						if = {
+							limit = { LSC = { has_war_with = LNS } }
+							add_to_war = { 
+							    targeted_alliance = LSC
+							    enemy = LNS
+							    hostility_reason = asked_to_join
+							}
+						}
+						if = {
+							limit = { LSC = { has_war_with = LSM } }
+							add_to_war = { 
+							    targeted_alliance = LSC
+							    enemy = LSM
+							    hostility_reason = asked_to_join
+							}
+						}
+						if = {
+							limit = { LSC = { has_war_with = HLQ } }
+							add_to_war = { 
+							    targeted_alliance = LSC
+							    enemy = HLQ
+							    hostility_reason = asked_to_join
+							}
+						}
+					}
+				}
+			}
+			else = {
+				declare_war_on = LSM
+				declare_war_on = LNS
+			}
+		}
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+	}
+	focus = {
+		id = LCT_settlement_initiative
+		icon = GFX_goal_generic_navy_battleship
+		prerequisite = { focus = LCT_sparkling_dusk }
+		x = -2
+		y = 3
+		relative_position_id = LCT_the_goal_ahead
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		available = {
+			is_subject = no
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus LCT_settlement_initiative"
+			LSC = { add_to_ROOT_potential_cores = yes }
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = LCT_envoy_to_stalliongrad
+		icon = GFX_goal_generic_navy_battleship
+		prerequisite = { focus = LCT_sparkling_dusk }
+		x = 2
+		y = 3
+		relative_position_id = LCT_the_goal_ahead
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		available = {
+			STG = { exists = yes }
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus LCT_envoy_to_stalliongrad"
+			#STG = { country_event = } #ADD THE EVENT HERE
+			custom_effect_tooltip = "§YIf they accept:§!"
+			effect_tooltip = {
+					LCT = {
+					}
+				}
+
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
 
 
 
