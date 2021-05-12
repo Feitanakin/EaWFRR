@@ -6480,7 +6480,7 @@ focus_tree = {
 		icon = GFX_goal_generic_navy_battleship
 		prerequisite = { focus = LCT_red_river_army }
 		x = 0
-		y = 2
+		y = 3
 		relative_position_id = LCT_the_goal_ahead
 
 		cost = 10
@@ -6551,7 +6551,7 @@ focus_tree = {
 		icon = GFX_goal_generic_navy_battleship
 		prerequisite = { focus = LCT_sparkling_dusk }
 		x = -2
-		y = 3
+		y = 4
 		relative_position_id = LCT_the_goal_ahead
 
 		cost = 10
@@ -6577,7 +6577,7 @@ focus_tree = {
 		icon = GFX_goal_generic_navy_battleship
 		prerequisite = { focus = LCT_sparkling_dusk }
 		x = 2
-		y = 3
+		y = 4
 		relative_position_id = LCT_the_goal_ahead
 
 		cost = 10
