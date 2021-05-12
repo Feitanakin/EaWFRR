@@ -6540,8 +6540,14 @@ focus_tree = {
 				}
 			}
 			else = {
-				declare_war_on = LSM
-				declare_war_on = LNS
+				declare_war_on = {
+				    target = LSM
+				    type = annex_everything
+				}
+				declare_war_on = {
+				    target = LNS
+				    type = annex_everything
+				}
 			}
 		}
 		search_filters = { FOCUS_FILTER_ANNEXATION }
