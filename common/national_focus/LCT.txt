@@ -6610,7 +6610,70 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
+	focus = {
+		id = LCT_envoy_to_stalliongrad
+		icon = GFX_goal_generic_navy_battleship
+		prerequisite = { focus = LCT_sparkling_dusk }
+		x = 2
+		y = 4
+		relative_position_id = LCT_the_goal_ahead
 
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		available = {
+			STG = { exists = yes }
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus LCT_envoy_to_stalliongrad"
+			#STG = { country_event = } #ADD THE EVENT HERE
+			custom_effect_tooltip = "§YIf they accept:§!"
+			effect_tooltip = {
+					LCT = {
+						add_tech_bonus = {
+							name = armor_bonus
+							bonus = 1.0
+							uses = 2
+							category = armor
+						}
+						add_ideas = LCT_stalliongrad_cooperation
+						add_opinion_modifier = { target = STG modifier = LCT_Stalliongrad_Cooperation } 
+					}
+					STG = { target = LCT modifier = LCT_Stalliongrad_Cooperation }
+				}
+
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = LCT_export_the_revolution
+		icon = GFX_goal_generic_navy_battleship
+		prerequisite = { focus = LCT_sparkling_dusk }
+		x = 0
+		y = 4
+		relative_position_id = LCT_the_goal_ahead
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus LCT_export_the_revolution"
+			custom_effect_tooltip = "We will gain the ability to §Rincrease communist support§! in the §GRiverlands§!"
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
 
 
 
