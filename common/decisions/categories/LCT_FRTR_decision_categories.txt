@@ -1,0 +1,10 @@
+LCT_communist_partisans = {
+	allowed = {
+		original_tag = LCT
+	}
+	visible = {
+		has_government = communism
+		has_completed_focus = LCT_export_the_revolution
+	}
+	icon = modern_city
+}
