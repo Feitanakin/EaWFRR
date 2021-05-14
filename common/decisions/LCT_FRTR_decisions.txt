@@ -1,0 +1,44 @@
+
+LCT_communist_partisans = {
+   LCT_agitate_in_from = {
+		icon = hammer_and_horseshoe_decision
+		targets = { RCT LCT NIM WIT BAK DEP FRE DMT }
+		targets_dynamic = yes
+		target_trigger = {
+			FROM = {
+				is_original_riv_fed_country = yes
+			}
+		}
+		visible = {
+			FROM = {
+				is_original_riv_fed_country = yes
+				exists = yes
+				NOT = {
+					has_government = communism
+					has_idea = RCT_communist_infiltrators
+					has_idea = RCT_communist_infiltrators_NIM
+				}
+			}
+		}
+		available = {
+			has_completed_focus = LCT_export_the_revolution
+		}
+		cost = 40
+		fire_only_once = no
+		days_re_enable = 120
+		days_remove = 30
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove LCT_agitate_in_from target: [From.GetName]"
+			FROM = {
+				country_event = {
+					id = rivercity.1918
+				}
+			}
+		}
+	}
+}
