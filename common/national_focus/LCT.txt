@@ -6508,7 +6508,7 @@ focus_tree = {
 			if = {
 				limit = { LSC = { exists = yes } }
 				#LSC = { country_event = } #ADD THE EVENT HERE. USE EFFECT TOOLTIP FOR ACCEPT RESULTS
-				custom_effect_tooltip = "§YIf they accept:§!"
+				custom_effect_tooltip = LCT_accept_tt
 				effect_tooltip = {
 					LCT = {
 						puppet = LSC
@@ -6539,14 +6539,37 @@ focus_tree = {
 					}
 				}
 			}
-			else = {
-				declare_war_on = {
-				    target = LSM
-				    type = annex_everything
+			else_if = {
+				limit = {
+					OR = {
+						LSM = { exists = yes }
+						LNS = { exists = yes }
+					}
 				}
-				declare_war_on = {
-				    target = LNS
-				    type = annex_everything
+				if = {
+					limit = {
+						LSM = { exists = yes }
+					}
+					declare_war_on = {
+					    target = LSM
+					    type = annex_everything
+					}
+				}
+				if = {
+					limit = {
+						LNS = { exists = yes }
+					}
+					declare_war_on = {
+					    target = LNS
+					    type = annex_everything
+					}
+				}
+			}
+			else = {
+				create_wargoal = {	
+					type = take_state_focus
+					generator = { 552 }
+					target = 552.owner
 				}
 			}
 		}
@@ -6601,39 +6624,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus LCT_envoy_to_stalliongrad"
 			#STG = { country_event = } #ADD THE EVENT HERE
-			custom_effect_tooltip = "§YIf they accept:§!"
-			effect_tooltip = {
-					LCT = {
-					}
-				}
-
-		}
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-	focus = {
-		id = LCT_envoy_to_stalliongrad
-		icon = GFX_goal_generic_navy_battleship
-		prerequisite = { focus = LCT_sparkling_dusk }
-		x = 2
-		y = 4
-		relative_position_id = LCT_the_goal_ahead
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 10
-		}
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		available = {
-			STG = { exists = yes }
-		}
-		
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus LCT_envoy_to_stalliongrad"
-			#STG = { country_event = } #ADD THE EVENT HERE
-			custom_effect_tooltip = "§YIf they accept:§!"
+			custom_effect_tooltip = LCT_accept_tt
 			effect_tooltip = {
 					LCT = {
 						add_tech_bonus = {
@@ -6643,9 +6634,17 @@ focus_tree = {
 							category = armor
 						}
 						add_ideas = LCT_stalliongrad_cooperation
-						add_opinion_modifier = { target = STG modifier = LCT_Stalliongrad_Cooperation } 
+						add_opinion_modifier = { 
+							target = STG 
+							modifier = LCT_Stalliongrad_Cooperation 
+						} 
 					}
-					STG = { target = LCT modifier = LCT_Stalliongrad_Cooperation }
+					STG = {
+						add_opinion_modifier = { 
+							target = LCT
+							modifier = LCT_Stalliongrad_Cooperation 
+						}  
+					}
 				}
 
 		}
@@ -6670,7 +6669,46 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus LCT_export_the_revolution"
-			custom_effect_tooltip = "We will gain the ability to §Rincrease communist support§! in the §GRiverlands§!"
+			custom_effect_tooltip = LCT_export_the_revolution_tt
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = LCT_fund_partisans
+		icon = GFX_goal_generic_navy_battleship
+		prerequisite = { focus = LCT_export_the_revolution }
+		x = 1
+		y = 5
+		relative_position_id = LCT_the_goal_ahead
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus LCT_fund_partisans"
+			custom_effect_tooltip = LCT_fund_partisans_tt
+			hidden_effect = {
+				set_country_flag = LCT_spawn_communist_partisans_ability_flag
+				division_template = {
+					name = "Socialist Partisans"
+					division_names_group = LCT_INF_01
+					is_locked = yes
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 0 y = 3 }
+						infantry = { x = 0 y = 4 }
+					}
+					priority = 1
+				}
+			}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}

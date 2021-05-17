@@ -2,6 +2,7 @@ LCT_communist_partisans = {
 	allowed = {
 		original_tag = LCT
 	}
+	priority = 99
 	visible = {
 		has_government = communism
 		has_completed_focus = LCT_export_the_revolution

@@ -1,0 +1,113 @@
+defined_text = {
+	name = LCT_owned_by_river_fed_nation
+	text = {
+		trigger = {
+			THIS = {
+				owner = {
+					is_original_riv_fed_country = yes
+				}
+			}
+		}
+		localization_key = LCT_owned_by_river_fed_nation_met_tt
+	}
+	text = {
+		localization_key = LCT_owned_by_river_fed_nation_unmet_tt
+	}
+}
+defined_text = {
+	name = LCT_at_war_with
+	text = {
+		trigger = {
+			THIS = {
+				owner = {
+					has_war_with = LCT
+				}
+			}
+		}
+		localization_key = LCT_at_war_with_met_tt
+	}
+	text = {
+		localization_key = LCT_at_war_with_unmet_tt
+	}
+}
+defined_text = {
+	name = LCT_has_partisans_to_deploy
+	text = {
+		trigger = {
+			THIS = {
+				owner = {
+					check_variable = { LCT_socialist_partisans > 0 }
+				}
+			}
+		}
+		localization_key = LCT_has_partisans_to_deploy_met_tt
+	}
+	text = {
+		localization_key = LCT_has_partisans_to_deploy_unmet_tt
+	}
+}
+defined_text = {
+	name = LCT_get_num_partisans
+	text = {
+		trigger = {
+			THIS = {
+				owner = {
+					check_variable = { LCT_socialist_partisans = 6 }
+				}
+			}
+		}
+		localization_key = "6"
+	}
+	text = {
+		trigger = {
+			THIS = {
+				owner = {
+					check_variable = { LCT_socialist_partisans = 4 }
+				}
+			}
+		}
+		localization_key = "4"
+	}
+	text = {
+		trigger = {
+			THIS = {
+				owner = {
+					check_variable = { LCT_socialist_partisans = 2 }
+				}
+			}
+		}
+		localization_key = "2"
+	}
+}
+defined_text = {
+	name = GetDecisionCostCP10
+	text = {
+		trigger = {
+			check_variable = {
+				var = command_power
+				value = 10
+				compare = greater_than_or_equals
+			}
+		}
+		localization_key = decision_cost_cp_10
+	}
+	text = {
+		localization_key = decision_cost_cp_10_blocked
+	}
+}
+defined_text = {
+	name = GetDecisionCostManpower10k
+	text = {
+		trigger = {
+			check_variable = {
+				var = manpower_k
+				value = 10
+				compare = greater_than_or_equals
+			}
+		}
+		localization_key = decision_cost_manpower_10k
+	}
+	text = {
+		localization_key = decision_cost_manpower_10k_blocked
+	}
+}

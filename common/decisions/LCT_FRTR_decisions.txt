@@ -1,6 +1,5 @@
-
 LCT_communist_partisans = {
-   LCT_agitate_in_from = {
+	LCT_agitate_in_from = {
 		icon = hammer_and_horseshoe_decision
 		targets = { RCT LCT NIM WIT BAK DEP FRE DMT }
 		targets_dynamic = yes
@@ -19,8 +18,10 @@ LCT_communist_partisans = {
 					has_idea = RCT_communist_infiltrators_NIM
 				}
 			}
+			hidden_trigger = { has_completed_focus = LCT_export_the_revolution }
 		}
 		available = {
+			has_government = communism
 			has_completed_focus = LCT_export_the_revolution
 		}
 		cost = 40
@@ -38,6 +39,64 @@ LCT_communist_partisans = {
 				country_event = {
 					id = rivercity.1918
 				}
+			}
+		}
+	}
+	LCT_partisans_in_from = {
+		icon = hammer_and_horseshoe_decision
+		targets = { RCT LCT NIM WIT BAK DEP FRE DMT }
+		targets_dynamic = yes
+		target_trigger = {
+			FROM = {
+				is_original_riv_fed_country = yes
+			}
+		}
+		visible = {
+			FROM = {
+				is_original_riv_fed_country = yes
+				exists = yes
+				NOT = {
+					has_government = communism
+				}
+			}
+			hidden_trigger = { has_country_flag = LCT_spawn_communist_partisans_ability_flag }
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 1
+			custom_trigger_tooltip = {
+				tooltip = LCT_socialist_partisans_max
+				check_variable = { THIS.LCT_socialist_partisans < 5 }
+			}
+			hidden_trigger = { has_country_flag = LCT_spawn_communist_partisans_ability_flag }
+		}
+		fire_only_once = no
+		days_re_enable = 20
+		days_remove = 100
+
+		ai_will_do = {
+			factor = 15
+		}
+		custom_cost_trigger = {
+			check_variable = {
+				var = manpower_k
+				value = 10
+			}
+		}
+		custom_cost_text = decision_cost_manpower_10k
+		modifier = {			
+			civilian_factory_use = 2
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision LCT_partisans_in_from target: [From.GetName]"
+			hidden_effect = {
+				add_manpower = -10000
+			}
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove LCT_partisans_in_from target: [From.GetName]"
+			custom_effect_tooltip = LCT_partisans_in_from_tt
+			FROM = {
+				add_to_variable = { THIS.LCT_socialist_partisans = 2 }
 			}
 		}
 	}

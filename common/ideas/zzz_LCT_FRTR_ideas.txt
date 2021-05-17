@@ -3,7 +3,7 @@ ideas = {
 		LCT_red_river_army_idea = {
 			picture = BAL_peoples_army
 			available = {
-        tag = LCT
+        		tag = LCT
 				has_government = communism
 			}
 			removal_cost = -1
@@ -21,7 +21,7 @@ ideas = {
 		LCT_stalliongrad_cooperation = {
 			picture = BAL_peoples_army
 			available = {
-        tag = LCT
+      			tag = LCT
 				has_government = communism
 				STG = { exists = yes }
 			}

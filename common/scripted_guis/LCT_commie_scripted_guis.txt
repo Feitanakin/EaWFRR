@@ -1,0 +1,52 @@
+scripted_gui = {
+	LCT_state_action_communist_uprising_gui = {
+		context_type = selected_state_context
+		parent_window_token = selected_state_view
+		
+		visible = {
+			ROOT = {
+				original_tag = LCT
+				has_country_flag = LCT_spawn_communist_partisans_ability_flag
+			}
+		}
+		
+		window_name = "LCT_state_action_communist_uprising"
+	}
+
+	LCT_state_action_communist_uprising_clickable_gui = {
+		context_type = selected_state_context
+		parent_window_token = selected_state_view
+		
+		visible = {
+			ROOT = {
+				original_tag = LCT
+				has_country_flag = LCT_spawn_communist_partisans_ability_flag
+				command_power > 9
+			}
+			THIS = {
+				owner = {
+					is_original_riv_fed_country = yes
+					check_variable = { LCT_socialist_partisans > 1 }
+					has_war_with = LCT
+				}
+			}
+		}
+		
+		window_name = "LCT_state_action_communist_uprising_clickable"
+		
+		effects = {
+			SOL_state_action_communist_uprising_button_click = {
+				hidden_effect = {
+					ROOT = {
+						add_command_power = -10
+					}
+					THIS = {
+						owner = { subtract_from_variable = { LCT_socialist_partisans = 2 } }
+						create_unit = { division = "name = \"Communist Partisans\" division_template = \"Socialist Partisans\" start_experience_factor = 0.1" owner = ROOT allow_spawning_on_enemy_provs = yes }
+						create_unit = { division = "name = \"Communist Partisans\" division_template = \"Socialist Partisans\" start_experience_factor = 0.1" owner = ROOT allow_spawning_on_enemy_provs = yes }
+					}
+				}
+			}
+		}
+	}
+}

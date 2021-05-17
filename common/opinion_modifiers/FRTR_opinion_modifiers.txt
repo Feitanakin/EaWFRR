@@ -1,0 +1,3 @@
+opinion_modifiers = {
+  LCT_Stalliongrad_Cooperation = { value = 30 }
+}
