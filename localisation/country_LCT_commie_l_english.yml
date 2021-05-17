@@ -8,8 +8,8 @@
 
   LCT_owned_by_river_fed_nation_met_tt:0 "£trigger_yes §Y[THIS.GetName]§! is owned by an §Yoriginal River Coalition member§!"
   LCT_owned_by_river_fed_nation_unmet_tt:0 "£trigger_no §Y[THIS.GetName]§! is owned by an §Yoriginal River Coalition member§!"
-  LCT_at_war_with_met_tt:0 "£trigger_yes We are at war with the owner of §Y[THIS.GetName]§!"
-  LCT_at_war_with_unmet_tt:0 "£trigger_no We are at war with the owner of §Y[THIS.GetName]§!"
+  LCT_at_war_with_met_tt:0 "£trigger_yes We are at war with §Y[THIS.owner.GetName]§!"
+  LCT_at_war_with_unmet_tt:0 "£trigger_no We are at war with §Y[THIS.owner.GetName]§!"
   LCT_has_partisans_to_deploy_met_tt:0 "£trigger_yes There are still §Rsocialist partisans§! to deploy in §Y[THIS.owner.GetName]§! (§Y[?THIS.LCT_get_num_partisans]§!)."
   LCT_has_partisans_to_deploy_unmet_tt:0 "£trigger_no There are still §Rsocialist partisans§! to deploy in §Y[THIS.owner.GetName]§! (§R0§!)."
 
