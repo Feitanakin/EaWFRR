@@ -1,0 +1,25 @@
+﻿l_english:
+  LCT_socialist_partisans_max:0 "No more than §Ysix§! divisions of §Rsocialist partisans§! can be sent into an enemy nation"
+  LCT_partisans_in_from:0 "Seed [FROM.GetName] with Socialist Partisans"
+  LCT_partisans_in_from_desc:0 "We will train a group of socialist partisans and sneak them across the border into [FROM.GetName]. When the time comes to spread the revolution, we can order them to rise up behind enemy lines and support our efforts."
+
+  LCT_communist_partisans_tt:0 "Spark §YSocialist Uprising§! in §Y[THIS.GetName]§!"
+  LCT_communist_partisans_tt_delayed:0 "§LSocialist partisans planted in §Y[THIS.GetName]§! will launch an uprising against their government.§!\n\n[THIS.LCT_owned_by_river_fed_nation]\n[THIS.LCT_at_war_with]\n[THIS.LCT_has_partisans_to_deploy]\n\n§YEffects when selected:§!\nSpawns §Ytwo§! divisions of §Rsocialist partisans§!\n\nIt costs [Root.GetDecisionCostCP10] to take this action."
+
+  LCT_owned_by_river_fed_nation_met_tt:0 "£trigger_yes §Y[THIS.GetName]§! is owned by an §Yoriginal River Coalition member§!"
+  LCT_owned_by_river_fed_nation_unmet_tt:0 "£trigger_no §Y[THIS.GetName]§! is owned by an §Yoriginal River Coalition member§!"
+  LCT_at_war_with_met_tt:0 "£trigger_yes We are at war with the owner of §Y[THIS.GetName]§!"
+  LCT_at_war_with_unmet_tt:0 "£trigger_no We are at war with the owner of §Y[THIS.GetName]§!"
+  LCT_has_partisans_to_deploy_met_tt:0 "£trigger_yes There are still §Rsocialist partisans§! to deploy in §Y[THIS.owner.GetName]§! (§Y[?THIS.LCT_get_num_partisans]§!)."
+  LCT_has_partisans_to_deploy_unmet_tt:0 "£trigger_no There are still §Rsocialist partisans§! to deploy in §Y[THIS.owner.GetName]§! (§R0§!)."
+
+  decision_cost_cp_10:0 "£GFX_command_power §Y10§!"
+  decision_cost_cp_10_blocked:0 "£GFX_command_power §R10§!"
+  decision_cost_manpower_10k:0 "£GFX_manpower_icon §Y10k§!"
+  decision_cost_manpower_10k_blocked:0 "£GFX_manpower_icon §R10k§!"
+  decision_cost_manpower_10k_tooltip:0 "It costs [This.GetDecisionCostManpower10k] to take this decision"
+
+  LCT_fund_partisans_tt:0 "We will get decisions to §Rfund socialist partisans§! in the §GRiverlands§!"
+  LCT_export_the_revolution_tt:0 "We will get decisions to §Rincrease communist support§! in the §GRiverlands§!"
+  LCT_accept_tt:0 "§YIf they accept:§!"
+  LCT_partisans_in_from_tt:0 "§YTwo§! divisions of §Rsocialist partisans§! can be spawned behind §Y[FROM.GetAdjective]§! lines when we are at war with them."
