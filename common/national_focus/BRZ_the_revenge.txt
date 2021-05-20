@@ -1899,7 +1899,7 @@ focus_tree = {
 		available_if_capitulated = no
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BRZ_A_Great_Spiritual_Awakening"
-			add_manpower = 3000
+			add_manpower = 3000		
 			country_event = { days = 0 id = turanist.16 }
 			swap_ideas = {
 				remove_idea = Imperial_loyalist_in_army_1
@@ -1933,7 +1933,7 @@ focus_tree = {
 		icon = GFX_BRZ_take_the_weeds_of_the_garden
 		prerequisite = { focus = BRZ_Our_Warrior_Ancestors }
 		cost = 5
-		x = 0
+		x = 1
 		y = 2
 		relative_position_id = BRZ_A_Great_Spiritual_Awakening
 		cancel_if_invalid = yes
@@ -1945,11 +1945,28 @@ focus_tree = {
 			country_event = { days = 0 id = turanist.15 }
 		}
 	}
+	focus = {
+		id = BRZ_new_spiritual_education
+		icon = GFX_focus_research
+		prerequisite = { focus = BRZ_Our_Warrior_Ancestors }
+		cost = 5
+		x = -1
+		y = 2
+		relative_position_id = BRZ_A_Great_Spiritual_Awakening
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BRZ_Take_the_Weeds_of_the_Garden"
+			add_research_slot = 1
+			add_stability = 0.05
+		}
+	}
 	
 	focus = {
 		id = BRZ_A_People_of_Warriors_Both_Men_and_Women
 		icon = GFX_goal_griffon_knights
-		prerequisite = { focus = BRZ_Our_Warrior_Ancestors }
+		prerequisite = { focus = BRZ_new_spiritual_education }
 		prerequisite = { focus = BRZ_Take_the_Weeds_of_the_Garden }
 		cost = 10
 		x = 0
@@ -2024,7 +2041,7 @@ focus_tree = {
 		id = BRZ_Nationalise_Imperial_Assets
 		icon = GFX_BRZ_nationalise_imperial_assets
 		prerequisite = { focus = BRZ_Our_Shackles_Have_Been_Broken }
-		cost = 3
+		cost = 5
 		x = 2
 		y = 1
 		relative_position_id = BRZ_Our_Shackles_Have_Been_Broken
@@ -2033,8 +2050,8 @@ focus_tree = {
 		available_if_capitulated = no
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BRZ_Nationalise_Imperial_Assets"
-			add_ideas = National_Autarchy
-
+			add_offsite_building = { type = arms_factory level = 2 }
+			
 		}
 	}
 	
@@ -2089,6 +2106,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BRZ_The_Declaration_of_Eternal_Independence"
 			remove_ideas = BRZ_pacifism7
+			add_ideas = National_Autarchy
 		}
 	}
 
@@ -2280,31 +2298,31 @@ focus_tree = {
 		}
 	}
 	
-	focus = {
-		id = BRZ_Create_a_Web_of_Intrigue
-		icon = GFX_BRZ_web_of_intrigue
-		prerequisite = { focus = BRZ_Declare_Neutrality_in_Herzlandian_Affairs }
-		cost = 5
-		x = 0
-		y = 1
-		relative_position_id = BRZ_Declare_Neutrality_in_Herzlandian_Affairs
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus BRZ_Create_a_Web_of_Intrigue"
-			add_ideas = BRZ_eyes_all_over_griffonia
-		}
-	}
+#	focus = {
+#		id = BRZ_Create_a_Web_of_Intrigue
+#		icon = GFX_BRZ_web_of_intrigue
+#		prerequisite = { focus = BRZ_Declare_Neutrality_in_Herzlandian_Affairs }
+#		cost = 5
+#		x = 0
+#		y = 1
+#		relative_position_id = BRZ_Declare_Neutrality_in_Herzlandian_Affairs
+#		cancel_if_invalid = yes
+#		continue_if_invalid = no
+#		available_if_capitulated = no
+#		completion_reward = {
+#			log = "[GetDateText]: [Root.GetName]: Focus BRZ_Create_a_Web_of_Intrigue"
+#			add_ideas = BRZ_eyes_all_over_griffonia
+#		}
+#	}
 	
 	focus = {
 		id = BRZ_Reclaim_the_Central_Steppes
 		icon = GFX_BRZ_reclaim_the_central_steppes
-		prerequisite = { focus = BRZ_Create_a_Web_of_Intrigue }
+		prerequisite = { focus = BRZ_Declare_Neutrality_in_Herzlandian_Affairs }
 		cost = 5
-		x = 0
+		x = -2
 		y = 1
-		relative_position_id = BRZ_Create_a_Web_of_Intrigue
+		relative_position_id = BRZ_Declare_Neutrality_in_Herzlandian_Affairs
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -2372,11 +2390,11 @@ focus_tree = {
 	focus = {
 		id = BRZ_The_Question_of_the_Southern_Steppes
 		icon = GFX_BRZ_the_question_of_the_southern_steppes
-		prerequisite = { focus = BRZ_A_State_of_Mind focus = BRZ_A_Matter_of_Nature }
+		prerequisite = { focus = BRZ_Declare_Neutrality_in_Herzlandian_Affairs }
 		cost = 5
-		x = 0
-		y = 2
-		relative_position_id = BRZ_Reclaim_the_Central_Steppes
+		x = 2
+		y = 1
+		relative_position_id = BRZ_Declare_Neutrality_in_Herzlandian_Affairs
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -2436,10 +2454,11 @@ focus_tree = {
 		id = BRZ_Our_Ancestral_Heart
 		icon = GFX_BRZ_our_ancestral_heart
 		prerequisite = { focus = BRZ_A_Part_of_Them_for_an_Alliance focus = BRZ_Demand_the_Steppes }
+		prerequisite = { focus = BRZ_A_State_of_Mind focus = BRZ_A_Matter_of_Nature }
 		cost = 5
 		x = 0
-		y = 2
-		relative_position_id = BRZ_The_Question_of_the_Southern_Steppes
+		y = 3
+		relative_position_id = BRZ_Declare_Neutrality_in_Herzlandian_Affairs
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
