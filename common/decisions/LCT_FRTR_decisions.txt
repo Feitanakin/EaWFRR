@@ -70,8 +70,8 @@ LCT_communist_partisans = {
 			hidden_trigger = { has_country_flag = LCT_spawn_communist_partisans_ability_flag }
 		}
 		fire_only_once = no
-		days_re_enable = 20
-		days_remove = 100
+		#days_re_enable = 20
+		days_remove = 1
 
 		ai_will_do = {
 			factor = 15

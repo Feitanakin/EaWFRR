@@ -1,0 +1,210 @@
+add_namespace = lakecommie
+
+country_event = {
+	id = lakecommie.1 #EVENT FOR STARRY NIGHT. YOU SHOULD CREATE TWO ADDITIONAL EVENTS
+	title = lakecommie.1.t
+	desc = lakecommie.1.d
+	#picture = GFX_event_equestria_fail
+	immediate = {log = "[GetDateText]: [Root.GetName]: event lakecommie.1"}
+	is_triggered_only = yes
+	option = {
+		name = lakecommie.1.a
+		ai_chance = {
+			factor = 65
+		}
+		every_unit_leader = {
+			limit = {
+				OR = {
+					has_id = 1940
+					has_id = 1945
+					has_id = 20041
+					has_id = 2012
+					has_id = 177013
+				}
+			}
+			set_nationality = LCT
+		}
+		LCT = {
+			if = {
+				limit = { LSC = { has_war_with = LNS } }
+				add_to_war = { 
+				    targeted_alliance = LSC
+				    enemy = LNS
+				    hostility_reason = asked_to_join
+				}
+			}
+			if = {
+				limit = { LSC = { has_war_with = LSM } }
+				add_to_war = { 
+				    targeted_alliance = LSC
+				    enemy = LSM
+				    hostility_reason = asked_to_join
+				}
+			}
+			if = {
+				limit = { LSC = { has_war_with = HLQ } }
+				add_to_war = { 
+				    targeted_alliance = LSC
+				    enemy = HLQ
+				    hostility_reason = asked_to_join
+				}
+			}
+			annex_country = { target = ROOT transfer_troops = yes }
+		}
+		if = {
+			limit = { 
+				is_ai = no
+				LCT = { is_ai = yes }
+			}
+			custom_effect_tooltip = LCT_become_tp
+			LCT = { change_tag_from = ROOT }
+		}
+		else = {
+			custom_effect_tooltip = GAME_OVER_TT
+			LCT = { country_event = lakecommie.2 }
+		}
+	}
+	option = {
+		name = lakecommie.1.b
+		ai_chance = {
+			factor = 35
+		}
+		LCT = {
+			if = {
+				limit = {
+					LNS = { exists = yes }
+				}
+				create_wargoal = {	
+					type = annex_everything
+					target = LNS
+				}
+			}
+			if = {
+				limit = {
+					LSC = { exists = yes }
+				}
+				create_wargoal = {	
+					type = annex_everything
+					target = LSC
+				}
+			}
+			if = {
+				limit = {
+					LSM = { exists = yes }
+				}
+				create_wargoal = {	
+					type = annex_everything
+					target = LSM
+				}
+			}
+		}
+		LCT = { country_event = lakecommie.3 }
+	}
+}
+country_event = {
+	id = lakecommie.2 #STARRY NIGHT ACCEPT EVENT. FLAVOUR TEXT
+	title = lakecommie.2.t
+	desc = lakecommie.2.d
+	#picture = GFX_event_equestria_fail
+	immediate = {log = "[GetDateText]: [Root.GetName]: event lakecommie.2"}
+	is_triggered_only = yes
+	option = {
+		name = lakecommie.2.a
+	}
+}
+country_event = {
+	id = lakecommie.3 #STARRY NIGHT REFUSE EVENT. FLAVOUR TEXT
+	title = lakecommie.3.t
+	desc = lakecommie.3.d
+	#picture = GFX_event_equestria_fail
+	immediate = {log = "[GetDateText]: [Root.GetName]: event lakecommie.3"}
+	is_triggered_only = yes
+	option = {
+		name = lakecommie.3.a
+	}
+}
+country_event = {
+	id = lakecommie.4
+	title = lakecommie.4.t
+	desc = lakecommie.4.d
+	#picture = GFX_event_equestria_fail
+	immediate = {log = "[GetDateText]: [Root.GetName]: event lakecommie.4"}
+	is_triggered_only = yes
+	option = {
+		name = lakecommie.4.a
+		ai_chance = {
+			factor = 90
+		}
+		LCT = {
+			add_tech_bonus = {
+				name = armor_bonus
+				bonus = 1.0
+				uses = 2
+				category = armor
+			}
+			add_ideas = LCT_stalliongrad_cooperation
+			add_opinion_modifier = { 
+				target = STG 
+				modifier = LCT_Stalliongrad_Cooperation 
+			} 
+		}
+		STG = {
+			add_opinion_modifier = { 
+				target = LCT
+				modifier = LCT_Stalliongrad_Cooperation 
+			}  
+		}
+		LCT = { country_event = lakecommie.5 }
+	}
+	option = {
+		name = lakecommie.4.b
+		ai_chance = {
+			factor = 10
+		}
+		LCT = { country_event = lakecommie.6 }
+	}
+}
+country_event = {
+	id = lakecommie.5 #STALLIONGRAD ACCEPT EVENT. FLAVOUR TEXT
+	title = lakecommie.5.t
+	desc = lakecommie.5.d
+	#picture = GFX_event_equestria_fail
+	immediate = {log = "[GetDateText]: [Root.GetName]: event lakecommie.5"}
+	is_triggered_only = yes
+	option = {
+		name = lakecommie.5.a
+	}
+}
+country_event = {
+	id = lakecommie.6 #STALLIONGRAD REFUSE EVENT. FLAVOUR TEXT
+	title = lakecommie.6.t
+	desc = lakecommie.6.d
+	#picture = GFX_event_equestria_fail
+	immediate = {log = "[GetDateText]: [Root.GetName]: event lakecommie.6"}
+	is_triggered_only = yes
+	option = {
+		name = lakecommie.6.a
+	}
+}
+country_event = {
+	id = lakecommie.7 #LONGSWORD GRIFFON GENOCIDE EVENT. FLAVOUR TEXT
+	title = lakecommie.7.t
+	desc = lakecommie.7.d
+	#picture = GFX_event_equestria_fail
+	immediate = {log = "[GetDateText]: [Root.GetName]: event lakecommie.7"}
+	is_triggered_only = yes
+	option = {
+		name = lakecommie.7.a
+	}
+}
+country_event = {
+	id = lakecommie.8 #HELLQUIL GRIFFON REFUGEES EVENT. FLAVOUR TEXT
+	title = lakecommie.8.t
+	desc = lakecommie.8.d
+	#picture = GFX_event_equestria_fail
+	immediate = {log = "[GetDateText]: [Root.GetName]: event lakecommie.8"}
+	is_triggered_only = yes
+	option = {
+		name = lakecommie.8.a
+	}
+}

@@ -6507,11 +6507,11 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus LCT_sparkling_dusk"
 			if = {
 				limit = { LSC = { exists = yes } }
-				#LSC = { country_event = } #ADD THE EVENT HERE. USE EFFECT TOOLTIP FOR ACCEPT RESULTS
+				LSC = { country_event = { id = lakecommie.1 hours = 6 } }
 				custom_effect_tooltip = LCT_accept_tt
 				effect_tooltip = {
 					LCT = {
-						puppet = LSC
+						annex_country = { target = LSC transfer_troops = yes }
 						if = {
 							limit = { LSC = { has_war_with = LNS } }
 							add_to_war = { 
@@ -6536,6 +6536,34 @@ focus_tree = {
 							    hostility_reason = asked_to_join
 							}
 						}
+					}
+				}
+				custom_effect_tooltip = LCT_refuse_tt
+				if = {
+					limit = {
+						LNS = { exists = yes }
+					}
+					create_wargoal = {	
+						type = annex_everything
+						target = LNS
+					}
+				}
+				if = {
+					limit = {
+						LSC = { exists = yes }
+					}
+					create_wargoal = {	
+						type = annex_everything
+						target = LSC
+					}
+				}
+				if = {
+					limit = {
+						LSM = { exists = yes }
+					}
+					create_wargoal = {	
+						type = annex_everything
+						target = LSM
 					}
 				}
 			}
@@ -6565,13 +6593,6 @@ focus_tree = {
 					}
 				}
 			}
-			else = {
-				create_wargoal = {	
-					type = take_state_focus
-					generator = { 552 }
-					target = 552.owner
-				}
-			}
 		}
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 	}
@@ -6593,11 +6614,38 @@ focus_tree = {
 		available_if_capitulated = no
 		available = {
 			is_subject = no
+			LCT = {
+				owns_state = 552
+				owns_state = 540
+				owns_state = 505
+			}
 		}
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus LCT_settlement_initiative"
 			LSC = { add_to_ROOT_potential_cores = yes }
+			hidden_effect = { save_current_manpower = yes }
+			552 = {
+				add_manpower = -400000
+			}
+			505 = {
+				add_manpower = -50000
+			}
+			540 = {
+				add_manpower = -200000
+			}
+			hidden_effect = { restore_previous_manpower = yes }
+			country_event = { id = lakecommie.7 days = 1 }
+			HLQ = {
+				hidden_effect = { save_current_manpower = yes }
+				537 = { add_manpower = 300000 }
+				hidden_effect = { restore_previous_manpower = yes }
+				add_opinion_modifier = { 
+					target = LCT
+					modifier = HLQ_Longsword_Resettlement
+				} 
+				country_event = { id = lakecommie.8 days = 4 }
+			}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
@@ -6623,29 +6671,29 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus LCT_envoy_to_stalliongrad"
-			#STG = { country_event = } #ADD THE EVENT HERE
+			STG = { country_event = { id = lakecommie.4 hours = 12 } } #ADD THE EVENT HERE
 			custom_effect_tooltip = LCT_accept_tt
 			effect_tooltip = {
-					LCT = {
-						add_tech_bonus = {
-							name = armor_bonus
-							bonus = 1.0
-							uses = 2
-							category = armor
-						}
-						add_ideas = LCT_stalliongrad_cooperation
-						add_opinion_modifier = { 
-							target = STG 
-							modifier = LCT_Stalliongrad_Cooperation 
-						} 
+				LCT = {
+					add_tech_bonus = {
+						name = armor_bonus
+						bonus = 1.0
+						uses = 2
+						category = armor
 					}
-					STG = {
-						add_opinion_modifier = { 
-							target = LCT
-							modifier = LCT_Stalliongrad_Cooperation 
-						}  
-					}
+					add_ideas = LCT_stalliongrad_cooperation
+					add_opinion_modifier = { 
+						target = STG 
+						modifier = LCT_Stalliongrad_Cooperation 
+					} 
 				}
+				STG = {
+					add_opinion_modifier = { 
+						target = LCT
+						modifier = LCT_Stalliongrad_Cooperation 
+					}  
+				}
+			}
 
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -6709,6 +6757,73 @@ focus_tree = {
 					priority = 1
 				}
 			}
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = LCT_defend_the_revolution
+		icon = GFX_goal_generic_navy_battleship
+		prerequisite = { focus = LCT_export_the_revolution }
+		x = -1
+		y = 5
+		relative_position_id = LCT_the_goal_ahead
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: LCT_defend_the_revolution"
+			custom_effect_tooltip = LCT_border_wall
+			hidden_effect = {	
+				every_state = {
+					limit = {
+						any_neighbor_state = { NOT = { is_owned_by = LCT } }
+						is_owned_by = LCT
+					}
+					add_building_construction = {
+						type = bunker
+						level = 2
+						instant_build = yes
+						province = {
+							all_provinces = yes
+							limit_to_border = yes
+						}
+					}
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = LCT_deponyan_liberation
+		icon = GFX_goal_generic_navy_battleship
+		prerequisite = { 
+			focus = LCT_defend_the_revolution
+		}
+		prerequisite = { 
+			focus = LCT_fund_partisans
+		}
+		x = 0
+		y = 6
+		relative_position_id = LCT_the_goal_ahead
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: LCT_deponyan_liberation"
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}

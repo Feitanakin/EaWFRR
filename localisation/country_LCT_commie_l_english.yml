@@ -22,4 +22,11 @@
   LCT_fund_partisans_tt:0 "We will get decisions to §Rfund socialist partisans§! in the §GRiverlands§!"
   LCT_export_the_revolution_tt:0 "We will get decisions to §Rincrease communist support§! in the §GRiverlands§!"
   LCT_accept_tt:0 "§YIf they accept:§!"
+  LCT_refuse_tt:0 "§YIf they refuse:§!"
   LCT_partisans_in_from_tt:0 "§YTwo§! divisions of §Rsocialist partisans§! can be spawned behind §Y[FROM.GetAdjective]§! lines when we are at war with them."
+
+  LCT_Stalliongrad_Cooperation:0 "Stalliongrad-Lake City Cooperation"
+  HLQ_Longsword_Resettlement:0 "Longsword Griffon Resettlement"
+
+  LCT_become_tp:0 "You will become §Y[LCT.GetNameDef]§!\n"
+  LCT_border_wall:0 "§YEvery Border Province:§!\n   Add §Y2 Land Fort§!."
