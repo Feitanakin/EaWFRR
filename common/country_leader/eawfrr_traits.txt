@@ -14,4 +14,21 @@ leader_traits = {
 		political_power_factor = 0.25
 		justify_war_goal_time = -0.25
 	}
+	
+	the_red_compromiser = {
+		random = no
+		stability_factor = 0.1
+		democratic_acceptance = 70
+		master_ideology_drift = 0.05
+		consumer_goods_factor = -0.05
+	}
+	
+	unexperienced_revolutionary = {
+		random = no
+		stability_factor = 0.05
+		war_support_factor = 0.05
+		justify_war_goal_time = -0.25
+		conscription = 0.005
+		communism_drift = 0.02
+	}
 }

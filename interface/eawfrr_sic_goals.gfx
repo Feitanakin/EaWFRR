@@ -1,0 +1,50 @@
+spriteTypes = {
+
+	#### Equestria At War
+
+	SpriteType = {
+		name = "GFX_SIC_a_show_of_strength"
+		texturefile = "gfx/interface/goals/SIC_a_show_of_strength.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_SIC_all_is_well"
+		texturefile = "gfx/interface/goals/SIC_all_is_well.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_SIC_an_interesting_proposal"
+		texturefile = "gfx/interface/goals/SIC_an_interesting_proposal.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_SIC_deal_with_the_republican_issue"
+		texturefile = "gfx/interface/goals/SIC_deal_with_the_republican_issue.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SIC_don_espadartes_connections"
+		texturefile = "gfx/interface/goals/SIC_don_espadartes_connections.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SIC_reshuffle_our_budget"
+		texturefile = "gfx/interface/goals/SIC_reshuffle_our_budget.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SIC_the_decadent_regency"
+		texturefile = "gfx/interface/goals/SIC_the_decadent_regency.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SIC_an_emergency_meeting"
+		texturefile = "gfx/interface/goals/SIC_an_emergency_meeting.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SIC_whip_our_navy_back_into_shape"
+		texturefile = "gfx/interface/goals/SIC_whip_our_navy_back_into_shape.dds"
+	}
+
+}

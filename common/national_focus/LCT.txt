@@ -1905,6 +1905,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = LCT_vanguard_restores_order
 		mutually_exclusive = { focus = LCT_placate_the_militery }
+		mutually_exclusive = { focus = LCT_the_lakish_way_to_socialism }
 
 		cost = 5
 
@@ -6061,6 +6062,7 @@ focus_tree = {
 		id = LCT_the_lakish_way_to_socialism
 		icon = GFX_goal_generic_navy_battleship
 		prerequisite = { focus = LCT_democracy_prevails }
+		mutually_exclusive = { focus = LCT_westerly_takes_control }
 		mutually_exclusive = { focus = LCT_curtail_the_militery }
 		mutually_exclusive = { focus = LCT_placate_the_militery }
 		x = 18
@@ -6077,11 +6079,12 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 		
+		bypass = {
+			has_country_leader = { ruling_only = yes name = "Tito Titovich" }
+		}
+		
 		available = {
-			custom_trigger_tooltip = {
-				tooltip = LCT_wavebreaker_elected_tt
-				has_global_flag = LCT_wavebreaker_elected
-			}
+			has_government = communism
 		}
 		
 		completion_reward = {
@@ -6099,7 +6102,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = LCT_the_lakish_way_to_socialism
 
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 10
@@ -6115,7 +6118,7 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus LCT_subvert_the_army"
-			
+			add_ideas = LCT_C_a_red_army
 		}
 		search_filters = {  }
 	}
@@ -6129,7 +6132,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = LCT_subvert_the_army
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -6145,7 +6148,18 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus LCT_syndicalism_pluralism"
-			
+			hidden_effect = {
+				create_country_leader = {
+					name = "Tito Titovich"
+					desc = ""
+					expire = "1965.1.1"
+					picture = "Tito.tga"
+					ideology = democratic_socialism
+					traits = {
+						the_red_compromiser
+					}
+				}
+			}
 		}
 		search_filters = {  }
 	}
@@ -6159,7 +6173,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = LCT_subvert_the_army
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -6175,7 +6189,18 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus LCT_uz_maršala_titovich"
-			
+			hidden_effect = {
+				create_country_leader = {
+					name = "Tito Titovich"
+					desc = ""
+					expire = "1965.1.1"
+					picture = "Tito_uniform.tga"
+					ideology = democratic_socialism
+					traits = {
+						unexperienced_revolutionary
+					}
+				}
+			}
 		}
 		search_filters = {  }
 	}
@@ -6246,7 +6271,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = LCT_subvert_the_army
 
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 10
@@ -6262,7 +6287,10 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus LCT_the_conquest_of_hay"
-			
+			swap_ideas = {
+				remove_idea = poverty4
+				add_idea = poverty5
+			}
 		}
 		search_filters = {  }
 	}
@@ -6275,7 +6303,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = LCT_the_conquest_of_hay
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -6291,7 +6319,19 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus LCT_red_housing_system"
-			
+			387 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 		search_filters = {  }
 	}
@@ -6304,7 +6344,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = LCT_red_housing_system
 
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 10
@@ -6320,7 +6360,10 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus LCT_shuffle_the_budget_even_more"
-			
+			swap_ideas = {
+				remove_idea = poverty5
+				add_idea = no_poverty
+			}
 		}
 		search_filters = {  }
 	}
@@ -6333,7 +6376,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = LCT_subvert_the_army
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -6349,7 +6392,9 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus LCT_marked_socialism"
-			
+			add_ideas = {
+				LCT_C_market_socialism
+			}
 		}
 		search_filters = {  }
 	}
@@ -6362,7 +6407,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = LCT_marked_socialism
 
-		cost = 10
+		cost = 20
 
 		ai_will_do = {
 			factor = 10
@@ -6378,7 +6423,13 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus LCT_eliminate_the_guilds"
-			
+			add_manpower = -3000
+			remove_ideas = LCT_guilds
+			add_popularity = {
+				ideology = communism
+				popularity = 0.15
+			}
+			add_research_slot = 1
 		}
 		search_filters = {  }
 	}
@@ -6391,7 +6442,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = LCT_eliminate_the_guilds
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -6407,7 +6458,9 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus LCT_replace_the_guilds"
-			
+			add_ideas = { 
+				LCT_C_nationalized_guilds
+			}
 		}
 		search_filters = {  }
 	}
@@ -6420,7 +6473,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = LCT_eliminate_the_guilds
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -6436,7 +6489,11 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus LCT_a_futuristic_proletcult"
-			
+			swap_ideas = {
+				remove_idea = lack_of_scientists3
+				add_idea = no_lack_of_scientists
+			}
+			add_research_slot = 1
 		}
 		search_filters = {  }
 	}
