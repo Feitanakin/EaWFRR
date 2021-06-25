@@ -71,14 +71,13 @@ set_politics = {
 	elections_allowed = no
 }
 add_ideas = {
+	republican_tension
+	dead_monarchy
+	the_swordfish_claws
+	eternal_navy
 	outdated_industry
-	SIC_peasant_republic
 	limited_conscription
 	free_trade
-	SIC_church_schools
-	SIC_armed_merchant_marine
-	SIC_militia_dependence
-	SIC_constitutionalized_decentralization
 }
 set_stability = 0.6
 set_war_support = 0.4
