@@ -38,7 +38,7 @@ ideas = {
 		}
 			
 		the_swordfish_claws = {
-			name = The_Swordfish's_Claws
+			name = The_Swordfish_Claws
 			
 			picture = SIC_the_swordfish_claws
 			
