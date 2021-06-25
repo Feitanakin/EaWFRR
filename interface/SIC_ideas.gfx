@@ -11,7 +11,7 @@ spriteTypes = {
 	
 	spriteType = {
 		name = "GFX_idea_SIC_the_swordfish_claws"
-		texturefile = "gfx/interface/ideas/SIC_the_swordfish_claws"
+		texturefile = "gfx/interface/ideas/SIC_swordfish_claws"
 	}
 	
 	spriteType = {

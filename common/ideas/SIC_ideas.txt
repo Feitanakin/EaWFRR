@@ -3,7 +3,7 @@ ideas = {
 	country = {
 	
 		republican_tension = {
-			name = Republican Tension
+			name = Republican_Tension
 			
 			picture = SIC_republican_tension
 			
@@ -21,7 +21,7 @@ ideas = {
 		}
 		
 		dead_monarchy = {
-			name = Dead Monarchy
+			name = Dead_Monarchy
 			
 			picture = SIC_dead_monarchy
 			
@@ -38,7 +38,7 @@ ideas = {
 		}
 			
 		the_swordfish_claws = {
-			name = The Swordfish's Claws
+			name = The_Swordfish's_Claws
 			
 			picture = SIC_the_swordfish_claws
 			
@@ -56,7 +56,7 @@ ideas = {
 		}
 		
 		eternal_navy = {
-			name = Eternal Navy
+			name = Eternal_Navy
 			
 			picture = SIC_eternal_navy
 			
