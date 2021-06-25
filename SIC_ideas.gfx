@@ -1,0 +1,21 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_SIC_republican_tension"
+		texturefile = "gfx/interface/ideas/SIC_republican_tension"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_SIC_dead_monarchy"
+		texturefile = "gfx/interface/ideas/SIC_dead_monarchy"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_SIC_the_swordfish_claws"
+		texturefile = "gfx/interface/ideas/SIC_the_swordfish_claws"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_SIC_eternal_navy"
+		texturefile = "gfx/interface/ideas/SIC_eternal_navy"
+	}
+}
