@@ -1,0 +1,65 @@
+spriteTypes = {
+
+	#### Equestria At War
+
+	SpriteType = {
+		name = "GFX_LCT_shuffle_the_budget_even_more"
+		texturefile = "gfx/interface/goals/LCT_shuffle_the_budget_even_more.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_LCT_red_housing_system"
+		texturefile = "gfx/interface/goals/LCT_red_housing_system.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_LCT_the_conquest_of_hay"
+		texturefile = "gfx/interface/goals/LCT_the_conquest_of_hay.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_LCT_replace_the_guilds "
+		texturefile = "gfx/interface/goals/LCT_replace_the_guilds.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_LCT_futuristic_proletkult"
+		texturefile = "gfx/interface/goals/LCT_futuristic_proletkult.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_LCT_eliminate_the_guilds"
+		texturefile = "gfx/interface/goals/LCT_eliminate_the_guilds.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_LCT_market_socialism"
+		texturefile = "gfx/interface/goals/LCT_market_socialism.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_LCT_subvert_the_army"
+		texturefile = "gfx/interface/goals/LCT_subvert_the_army.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_LCT_the_lakish_way_to_socialism"
+		texturefile = "gfx/interface/goals/LCT_the_lakish_way_to_socialism.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_LCT_uz_marsala_titovich"
+		texturefile = "gfx/interface/goals/LCT_uz_marsala_titovich.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_LCT_syndicalism_pluralism"
+		texturefile = "gfx/interface/goals/LCT_syndicalism_pluralism.dds"
+	}
+
+
+
+
+
+
+}

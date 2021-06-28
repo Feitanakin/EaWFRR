@@ -6060,7 +6060,7 @@ focus_tree = {
 
 	focus = {
 		id = LCT_the_lakish_way_to_socialism
-		icon = GFX_goal_generic_navy_battleship
+		icon = GFX_LCT_the_lakish_way_to_socialism
 		prerequisite = { focus = LCT_democracy_prevails }
 		mutually_exclusive = { focus = LCT_westerly_takes_control }
 		mutually_exclusive = { focus = LCT_curtail_the_militery }
@@ -6096,7 +6096,7 @@ focus_tree = {
 
 	focus = {
 		id = LCT_subvert_the_army
-		icon = GFX_goal_generic_navy_battleship
+		icon = GFX_LCT_subvert_the_army
 		prerequisite = { focus = LCT_the_lakish_way_to_socialism }
 		x = 0
 		y = 1
@@ -6125,9 +6125,9 @@ focus_tree = {
 
 	focus = {
 		id = LCT_syndicalism_pluralism
-		icon = GFX_goal_generic_navy_battleship
+		icon = GFX_LCT_syndicalist_pluralism
 		prerequisite = { focus = LCT_subvert_the_army }
-		mutually_exclusive = { focus = LCT_uz_maršala_titovich }
+		mutually_exclusive = { focus = LCT_uz_marsala_titovich }
 		x = -2
 		y = 1
 		relative_position_id = LCT_subvert_the_army
@@ -6165,8 +6165,8 @@ focus_tree = {
 	}
 
 	focus = {
-		id = LCT_uz_maršala_titovich
-		icon = GFX_goal_generic_navy_battleship
+		id = LCT_uz_marsala_titovich
+		icon = GFX_LCT_uz_marsala_titovich
 		prerequisite = { focus = LCT_subvert_the_army }
 		mutually_exclusive = { focus = LCT_syndicalism_pluralism }
 		x = 2
@@ -6188,7 +6188,7 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus LCT_uz_maršala_titovich"
+			log = "[GetDateText]: [Root.GetName]: Focus LCT_uz_marsala_titovich"
 			hidden_effect = {
 				create_country_leader = {
 					name = "Tito Titovich"
@@ -6208,7 +6208,7 @@ focus_tree = {
 	focus = {
 		id = LCT_the_goal_ahead
 		icon = GFX_goal_generic_navy_battleship
-		prerequisite = { focus = LCT_syndicalism_pluralism focus = LCT_uz_maršala_titovich }
+		prerequisite = { focus = LCT_syndicalism_pluralism focus = LCT_uz_marsala_titovich }
 		x = 0
 		y = 2
 		relative_position_id = LCT_subvert_the_army
@@ -6265,8 +6265,8 @@ focus_tree = {
 
 	focus = {
 		id = LCT_the_conquest_of_hay
-		icon = GFX_goal_generic_navy_battleship
-		prerequisite = { focus = LCT_syndicalism_pluralism focus = LCT_uz_maršala_titovich }
+		icon = GFX_LCT_the_conquest_of_hay
+		prerequisite = { focus = LCT_syndicalism_pluralism focus = LCT_uz_marsala_titovich }
 		x = -5
 		y = 2
 		relative_position_id = LCT_subvert_the_army
@@ -6297,7 +6297,7 @@ focus_tree = {
 
 	focus = {
 		id = LCT_red_housing_system
-		icon = GFX_goal_generic_navy_battleship
+		icon = GFX_LCT_red_housing_system
 		prerequisite = { focus = LCT_the_conquest_of_hay }
 		x = 0
 		y = 1
@@ -6338,7 +6338,7 @@ focus_tree = {
 
 	focus = {
 		id = LCT_shuffle_the_budget_even_more
-		icon = GFX_goal_generic_navy_battleship
+		icon = GFX_LCT_shuffle_the_budget_even_more
 		prerequisite = { focus = LCT_red_housing_system }
 		x = 0
 		y = 1
@@ -6369,9 +6369,9 @@ focus_tree = {
 	}
 
 	focus = {
-		id = LCT_marked_socialism
-		icon = GFX_goal_generic_navy_battleship
-		prerequisite = { focus = LCT_syndicalism_pluralism focus = LCT_uz_maršala_titovich }
+		id = LCT_market_socialism
+		icon = GFX_LCT_market_socialism
+		prerequisite = { focus = LCT_syndicalism_pluralism focus = LCT_uz_marsala_titovich }
 		x = 6
 		y = 2
 		relative_position_id = LCT_subvert_the_army
@@ -6391,7 +6391,7 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus LCT_marked_socialism"
+			log = "[GetDateText]: [Root.GetName]: Focus LCT_market_socialism"
 			add_ideas = {
 				LCT_C_market_socialism
 			}
@@ -6401,11 +6401,11 @@ focus_tree = {
 
 	focus = {
 		id = LCT_eliminate_the_guilds
-		icon = GFX_goal_generic_navy_battleship
-		prerequisite = { focus = LCT_marked_socialism }
+		icon = GFX_LCT_eliminate_the_guilds
+		prerequisite = { focus = LCT_market_socialism }
 		x = 0
 		y = 1
-		relative_position_id = LCT_marked_socialism
+		relative_position_id = LCT_market_socialism
 
 		cost = 20
 
@@ -6436,7 +6436,7 @@ focus_tree = {
 
 	focus = {
 		id = LCT_replace_the_guilds
-		icon = GFX_goal_generic_navy_battleship
+		icon = GFX_LCT_replace_the_guilds
 		prerequisite = { focus = LCT_eliminate_the_guilds }
 		x = -2
 		y = 1
@@ -6467,7 +6467,7 @@ focus_tree = {
 
 	focus = {
 		id = LCT_a_futuristic_proletcult
-		icon = GFX_goal_generic_navy_battleship
+		icon = GFX_LCT_futuristic_proletkult
 		prerequisite = { focus = LCT_eliminate_the_guilds }
 		x = 2
 		y = 1
