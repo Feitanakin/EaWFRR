@@ -1,11 +1,9 @@
 ideas = {
-
 	country = {
-	
 		republican_tension = {
 			name = republican_tension
 			
-			picture = SIC_republican_tension
+			picture = republican_tension
 			
 			allowed = {
 				tag = SIC
@@ -23,7 +21,7 @@ ideas = {
 		dead_monarchy = {
 			name = dead_monarchy
 			
-			picture = SIC_dead_monarchy
+			picture = dead_monarchy
 			
 			allowed = {
 				tag = SIC
@@ -37,10 +35,10 @@ ideas = {
 			}
 		}
 			
-		the_swordfish_claws = {
-			name = the_swordfish_claws
+		swordfish_claws = {
+			name = swordfish_claws
 			
-			picture = SIC_the_swordfish_claws
+			picture = swordfish_claws
 			
 			allowed = {
 				tag = SIC
@@ -58,7 +56,7 @@ ideas = {
 		eternal_navy = {
 			name = eternal_navy
 			
-			picture = SIC_eternal_navy
+			picture = eternal_navy
 			
 			allowed = {
 				tag = SIC
