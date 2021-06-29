@@ -1,0 +1,21 @@
+spriteTypes = {
+	SpriteType = {
+		name = "GFX_idea_dead_monarchy"
+		texturefile = "gfx/interface/ideas/dead_monarchy.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_idea_republican_tension"
+		texturefile = "gfx/interface/ideas/republican_tension.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_idea_swordfish_claws"
+		texturefile = "gfx/interface/ideas/swordfish_claws.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_idea_eternal_navy"
+		texturefile = "gfx/interface/ideas/eternal_navy.dds"
+	}
+}
