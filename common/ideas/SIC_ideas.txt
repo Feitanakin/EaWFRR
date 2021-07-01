@@ -1,7 +1,7 @@
 ideas = {
 	country = {
 		republican_tension = {
-			name = republican_tension
+			name = Republican Tension
 			
 			picture = republican_tension
 			
@@ -19,7 +19,7 @@ ideas = {
 		}
 		
 		dead_monarchy = {
-			name = dead_monarchy
+			name = A Dead Monarchy
 			
 			picture = dead_monarchy
 			
@@ -36,7 +36,7 @@ ideas = {
 		}
 			
 		swordfish_claws = {
-			name = swordfish_claws
+			name = The Swordfish's claws
 			
 			picture = swordfish_claws
 			
@@ -54,7 +54,7 @@ ideas = {
 		}
 		
 		eternal_navy = {
-			name = eternal_navy
+			name = An Eternal Navy
 			
 			picture = eternal_navy
 			
