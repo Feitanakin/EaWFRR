@@ -4475,7 +4475,7 @@ focus_tree = {
 		id = SIC_minotaurian_friendship
 		icon = GFX_focus_indy_bullish_diplomacy
 		cost = 4
-		relative_position_id = SIC_looking_outward
+		relative_position_id = SIC_looking_outwards
 		x = 8
 		y = 1
 		ai_will_do = {
@@ -4490,7 +4490,7 @@ focus_tree = {
 			is_subject = no
 		}
 		prerequisite = {
-			focus = SIC_looking_outward
+			focus = SIC_looking_outwards
 		}
 		will_lead_to_war_with = MIT
 		completion_reward = {
@@ -6481,4 +6481,210 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
+	####################
+    #####PETRONILO######
+    #DUKE#OF#DEPRESSION#
+    ####################
+    focus = {
+        id = SIC_springtime_sic
+        icon = GFX_goal_unknown
+        cost = 10
+        x = 60
+        y = 0
+        #bypass = {
+        #    has_country_flag = #Petronilo has been elected Duke
+        #}
+    }
+    focus = {
+        id = SIC_make_the_best
+        icon = GFX_goal_unknown
+        cost = 5
+        relative_position_id = SIC_springtime_sic #clamped to SIC_springtime_sic, so that when you plug it in to the main focus tree you only have to move SIC_springtime_sic to orient it.
+        x = -2
+        y = 1
+        prerequisite = {
+            focus = SIC_springtime_sic
+        }
+        completion_reward = {
+            country_event = sicameon_frr.1
+        }
+    }
+    focus = {
+        id = SIC_justify_regency
+        icon = GFX_goal_unknown
+        cost = 8    
+        relative_position_id = SIC_springtime_sic
+        x = 2
+        y = 1
+        prerequisite = {
+           focus = SIC_springtime_sic
+        }
+        completion_reward = {
+            add_idea = unifying_nation_sic
+        }
+    }
+    focus = {
+        id = SIC_no_hope_action
+        icon = GFX_goal_unknown
+        cost = 5
+        relative_position_id = SIC_springtime_sic
+        x = -3
+        y = 2
+        prerequisite = {
+            focus = SIC_make_the_best
+        }
+        completion_reward = {
+            country_event = sicameon_frr.2
+        }
+    }
+    focus = {
+        id = SIC_deradical_cam
+        icon = GFX_goal_unknown
+        cost = 5
+        relative_position_id = SIC_springtime_sic
+        x = -4
+        y = 3
+        prerequisite = {
+            focus = SIC_no_hope_action
+        }
+    }
+    focus = {
+        id = SIC_peoples_duke
+        icon = GFX_goal_unknown
+        cost = 5
+        relative_position_id = SIC_springtime_sic
+        x = -4
+        y = 4
+        prerequisite = {
+            focus = SIC_deradical_cam
+        }
+        completion_reward = {
+            add_idea = duke_of_the_people
+        }
+    }
+    focus = {
+        id = SIC_anticorruption
+        icon = GFX_goal_unknown
+        cost = 8
+        relative_position_id = SIC_springtime_sic
+        x = -2
+        y = 3
+        prerequisite = {
+            focus = SIC_no_hope_action
+        }
+    }
+    focus = {
+        id = SIC_demonize_sword
+        icon = GFX_goal_unknown
+        cost = 5
+        relative_position_id = SIC_springtime_sic
+        x = -2
+        y = 4
+        prerequisite = {
+            focus = SIC_anticorruption
+        }
+        completion_reward = {
+            add_timed_idea = { 
+                idea = antiespadarte
+                days = 180
+            }
+        }
+    }
+    focus = {
+        id = SIC_hearts_minds
+        icon = GFX_goal_unknown
+        cost = 8
+        relative_position_id = SIC_springtime_sic
+        x = -2
+        y = 5
+        prerequisite = {
+            focus = SIC_demonize_sword
+        }
+        completion_reward = {
+            add_idea = faith_harmony 
+        }
+    }
+    focus = {
+        id = SIC_immediate_change
+        icon = GFX_goal_unknown
+        cost = 5
+        relative_position_id = SIC_springtime_sic
+        x = 2
+        y = 2
+        prerequisite = {
+            focus = SIC_justify_regency
+        }
+    }
+    focus = {
+        id = SIC_convince_council
+        icon = GFX_goal_unknown
+        cost = 8
+        relative_position_id = SIC_springtime_sic
+        x = 1
+        y = 3
+        prerequisite = {
+            focus = SIC_immediate_change
+        }
+    }
+    focus = {
+        id = SIC_second_chance
+        icon = GFX_goal_unknown
+        cost = 5
+        relative_position_id = SIC_springtime_sic
+        x = 1
+        y = 4
+        prerequisite = {
+            focus = SIC_convince_council
+        }
+    }
+    focus = {
+        id = SIC_pardon_republicans
+        icon = GFX_goal_unknown
+        cost = 8
+        relative_position_id = SIC_springtime_sic
+        x = 3
+        y = 3
+        prerequisite = {
+            focus = SIC_immediate_change
+        }
+    }
+    focus = {
+        id = SIC_democracy_now
+        icon = GFX_goal_unknown
+        cost = 5
+        relative_position_id = SIC_springtime_sic
+        x = 3
+        y = 4
+        prerequisite = {
+            focus = SIC_pardon_republicans
+        }
+    }
+    focus = {
+        id = SIC_free_elections
+        icon = GFX_goal_unknown
+        cost = 8
+        relative_position_id = SIC_springtime_sic
+        x = 2
+        y = 5
+        prerequisite = {
+            focus = SIC_second_chance
+        }
+        prerequisite = {
+            focus = SIC_democracy_now
+        }
+    }
+    focus = {
+        id = SIC_looking_outwards
+        icon = GFX_goal_unknown
+        cost = 1
+        relative_position_id = SIC_springtime_sic
+        x = 0
+        y = 6
+        prerequisite = {
+            focus = SIC_free_elections
+        }
+        prerequisite = {
+            focus = SIC_hearts_minds
+        }
+    }
 }

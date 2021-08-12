@@ -1,0 +1,21 @@
+add_namespace = sicameon_frr
+country_event = {
+	id = sicameon_frr.1
+	title = sicameon_frr.1.t
+	desc = sicameon_frr.1.d
+	#picture =
+	option = {
+		name = sicameon_frr.1.a
+	}
+	is_triggered_only = yes
+}
+country_event = {
+	id = sicameon_frr.2
+	title = sicameon_frr.2.t
+	desc = sicameon_frr.2.d
+	#picture = 
+	option = {
+		name = sicameon_frr.2.a
+	}
+	is_triggered_only = yes
+}

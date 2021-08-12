@@ -1,0 +1,11 @@
+SIC_swordfish_campaign_cat = {
+    priority = {
+        base = 100
+    }
+    allowed = {
+        original_tag = SIC
+    }
+    visible = {
+        has_completed_focus = SIC_anticorruption
+    }
+}
