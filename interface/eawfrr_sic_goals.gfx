@@ -47,4 +47,91 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/SIC_whip_our_navy_back_into_shape.dds"
 	}
 
+####################################################################
+####################################################################
+####################################################################
+####################################################################
+####################################################################
+####################################################################
+####################################################################
+####################################################################
+####################################################################
+####################################################################
+####################################################################
+
+	SpriteType = {
+		name = "GFX_SIC_there_is_no_hope_without_action"
+		texturefile = "gfx/interface/goals/SIC_there_is_no_hope_without_action.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SIC_the_peoples_grand_duke"
+		texturefile = "gfx/interface/goals/SIC_the_peoples_grand_duke.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SIC_everybody_deserves_a_second_chance"
+		texturefile = "gfx/interface/goals/SIC_everybody_deserves_a_second_chance.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_SIC_democracy_now"
+		texturefile = "gfx/interface/goals/SIC_democracy_now.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_SIC_anti_corruption_campaign"
+		texturefile = "gfx/interface/goals/SIC_anti_corruption_campaign.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_SIC_hearts_and_minds"
+		texturefile = "gfx/interface/goals/SIC_hearts_and_minds.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_SIC_justify_the_regency"
+		texturefile = "gfx/interface/goals/SIC_justify_the_regency.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_SIC_a_true_grand_duchess"
+		texturefile = "gfx/interface/goals/SIC_a_true_grand_duchess.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_SIC_free_elections"
+		texturefile = "gfx/interface/goals/SIC_free_elections.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_SIC_demozise_the_swordfish"
+		texturefile = "gfx/interface/goals/SIC_demozise_the_swordfish.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_SIC_make_the_best_out_of_this"
+		texturefile = "gfx/interface/goals/SIC_make_the_best_out_of_this.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_SIC_but_bring_forth_immediate_change"
+		texturefile = "gfx/interface/goals/SIC_but_bring_forth_immediate_change.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_SIC_deradicalization_campaign"
+		texturefile = "gfx/interface/goals/SIC_deradicalization_campaign.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_SIC_pardon_the_republicans"
+		texturefile = "gfx/interface/goals/SIC_pardon_the_republicans.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_SIC_convince_the_former_council"
+		texturefile = "gfx/interface/goals/SIC_convince_the_former_council.dds"
+	}
+
 }

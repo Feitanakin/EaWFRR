@@ -18,7 +18,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_LCT_replace_the_guilds "
+		name = "GFX_LCT_replace_the_guilds"
 		texturefile = "gfx/interface/goals/LCT_replace_the_guilds.dds"
 	}
 

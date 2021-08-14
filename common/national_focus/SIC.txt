@@ -6487,7 +6487,7 @@ focus_tree = {
     ####################
     focus = {
         id = SIC_springtime_sic
-        icon = GFX_goal_unknown
+        icon = GFX_SIC_a_true_grand_duchess
         cost = 10
         x = 60
         y = 0
@@ -6497,7 +6497,7 @@ focus_tree = {
     }
     focus = {
         id = SIC_make_the_best
-        icon = GFX_goal_unknown
+        icon = GFX_SIC_make_the_best_out_of_this
         cost = 5
         relative_position_id = SIC_springtime_sic #clamped to SIC_springtime_sic, so that when you plug it in to the main focus tree you only have to move SIC_springtime_sic to orient it.
         x = -2
@@ -6511,7 +6511,7 @@ focus_tree = {
     }
     focus = {
         id = SIC_justify_regency
-        icon = GFX_goal_unknown
+        icon = GFX_SIC_justify_the_regency
         cost = 8    
         relative_position_id = SIC_springtime_sic
         x = 2
@@ -6525,7 +6525,7 @@ focus_tree = {
     }
     focus = {
         id = SIC_no_hope_action
-        icon = GFX_goal_unknown
+        icon = GFX_SIC_there_is_no_hope_without_action
         cost = 5
         relative_position_id = SIC_springtime_sic
         x = -3
@@ -6539,7 +6539,7 @@ focus_tree = {
     }
     focus = {
         id = SIC_deradical_cam
-        icon = GFX_goal_unknown
+        icon = GFX_SIC_deradicalization_campaign
         cost = 5
         relative_position_id = SIC_springtime_sic
         x = -4
@@ -6550,7 +6550,7 @@ focus_tree = {
     }
     focus = {
         id = SIC_peoples_duke
-        icon = GFX_goal_unknown
+        icon = GFX_SIC_the_peoples_grand_duke
         cost = 5
         relative_position_id = SIC_springtime_sic
         x = -4
@@ -6564,7 +6564,7 @@ focus_tree = {
     }
     focus = {
         id = SIC_anticorruption
-        icon = GFX_goal_unknown
+        icon = GFX_SIC_anti_corruption_campaign
         cost = 8
         relative_position_id = SIC_springtime_sic
         x = -2
@@ -6575,7 +6575,7 @@ focus_tree = {
     }
     focus = {
         id = SIC_demonize_sword
-        icon = GFX_goal_unknown
+        icon = GFX_SIC_demozise_the_swordfish
         cost = 5
         relative_position_id = SIC_springtime_sic
         x = -2
@@ -6592,7 +6592,7 @@ focus_tree = {
     }
     focus = {
         id = SIC_hearts_minds
-        icon = GFX_goal_unknown
+        icon = GFX_SIC_hearts_and_minds
         cost = 8
         relative_position_id = SIC_springtime_sic
         x = -2
@@ -6606,7 +6606,7 @@ focus_tree = {
     }
     focus = {
         id = SIC_immediate_change
-        icon = GFX_goal_unknown
+        icon = GFX_SIC_but_bring_forth_immediate_change
         cost = 5
         relative_position_id = SIC_springtime_sic
         x = 2
@@ -6617,7 +6617,7 @@ focus_tree = {
     }
     focus = {
         id = SIC_convince_council
-        icon = GFX_goal_unknown
+        icon = GFX_SIC_convince_the_former_council
         cost = 8
         relative_position_id = SIC_springtime_sic
         x = 1
@@ -6628,7 +6628,7 @@ focus_tree = {
     }
     focus = {
         id = SIC_second_chance
-        icon = GFX_goal_unknown
+        icon = GFX_SIC_everybody_deserves_a_second_chance
         cost = 5
         relative_position_id = SIC_springtime_sic
         x = 1
@@ -6639,7 +6639,7 @@ focus_tree = {
     }
     focus = {
         id = SIC_pardon_republicans
-        icon = GFX_goal_unknown
+        icon = GFX_SIC_pardon_the_republicans
         cost = 8
         relative_position_id = SIC_springtime_sic
         x = 3
@@ -6650,7 +6650,7 @@ focus_tree = {
     }
     focus = {
         id = SIC_democracy_now
-        icon = GFX_goal_unknown
+        icon = GFX_SIC_democracy_now
         cost = 5
         relative_position_id = SIC_springtime_sic
         x = 3
@@ -6661,7 +6661,7 @@ focus_tree = {
     }
     focus = {
         id = SIC_free_elections
-        icon = GFX_goal_unknown
+        icon = GFX_SIC_free_elections
         cost = 8
         relative_position_id = SIC_springtime_sic
         x = 2
@@ -6675,7 +6675,7 @@ focus_tree = {
     }
     focus = {
         id = SIC_looking_outwards
-        icon = GFX_goal_unknown
+        icon = GFX_goal_foreign_diplomacy
         cost = 1
         relative_position_id = SIC_springtime_sic
         x = 0
