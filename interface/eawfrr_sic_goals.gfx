@@ -134,4 +134,91 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/SIC_convince_the_former_council.dds"
 	}
 
+####################################################################
+####################################################################
+####################################################################
+####################################################################
+####################################################################
+####################################################################
+####################################################################
+####################################################################
+####################################################################
+####################################################################
+####################################################################
+
+	SpriteType = {
+		name = "GFX_SIC_welcome_the_brodfeldian_diaspora"
+		texturefile = "gfx/interface/goals/SIC_welcome_the_brodfeldian_diaspora.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_SIC_the_kingdom_of_brodfeld_in_exile"
+		texturefile = "gfx/interface/goals/SIC_the_kingdom_of_brodfeld_in_exile.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_SIC_sicameons_new_generation_of_officers"
+		texturefile = "gfx/interface/goals/SIC_sicameons_new_generation_of_officers.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_SIC_revive_enthusiasm"
+		texturefile = "gfx/interface/goals/SIC_revive_enthusiasm.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_SIC_keep_freemasons_out"
+		texturefile = "gfx/interface/goals/SIC_keep_freemasons_out.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_SIC_harmony_and_honour"
+		texturefile = "gfx/interface/goals/SIC_harmony_and_honour.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_SIC_encourage_early_retirements"
+		texturefile = "gfx/interface/goals/SIC_encourage_early_retirements.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_SIC_emigree_intelligentsia"
+		texturefile = "gfx/interface/goals/SIC_emigree_intelligentsia.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_SIC_democratize_local_administration"
+		texturefile = "gfx/interface/goals/SIC_democratize_local_administration.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_SIC_blame_the_regency"
+		texturefile = "gfx/interface/goals/SIC_blame_the_regency.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_SIC_an_idealistic_approach"
+		texturefile = "gfx/interface/goals/SIC_an_idealistic_approach.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_SIC_a_monarchy_nonetheless"
+		texturefile = "gfx/interface/goals/SIC_a_monarchy_nonetheless.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_SIC_a_monarchy_in_check"
+		texturefile = "gfx/interface/goals/SIC_a_monarchy_in_check.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_SIC_a_heir_in_exile"
+		texturefile = "gfx/interface/goals/SIC_a_heir_in_exile.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_SIC_a_former_revolutionary"
+		texturefile = "gfx/interface/goals/SIC_a_former_revolutionary.dds"
+	}
+
 }

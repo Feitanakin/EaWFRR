@@ -1,21 +1,80 @@
-add_namespace = sicameon_frr
+add_namespace = sicameon_frtr
 country_event = {
-	id = sicameon_frr.1
-	title = sicameon_frr.1.t
-	desc = sicameon_frr.1.d
+	id = sicameon_frtr.1
+	title = sicameon_frtr.1.t
+	desc = sicameon_frtr.1.d
 	#picture =
 	option = {
-		name = sicameon_frr.1.a
+		name = sicameon_frtr.1.a
 	}
 	is_triggered_only = yes
 }
 country_event = {
-	id = sicameon_frr.2
-	title = sicameon_frr.2.t
-	desc = sicameon_frr.2.d
+	id = sicameon_frtr.2
+	title = sicameon_frtr.2.t
+	desc = sicameon_frtr.2.d
 	#picture = 
 	option = {
-		name = sicameon_frr.2.a
+		name = sicameon_frtr.2.a
+	}
+	is_triggered_only = yes
+}
+
+country_event = {
+	id = sicameon_frtr.3
+	immediate = {log = "[GetDateText]: [Root.GetName]: event sicameon_frtr.1"}
+	title = sicameon_frtr.3.t
+	desc = sicameon_frtr.3.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = sicameon_frtr.3.a
+		ai_chance = {
+			factor = 25
+		}
+	}
+	option = {
+		name = sicameon_frtr.3.b
+		ai_chance = {
+			factor = 25
+		}
+		complete_national_focus = SIC_an_heir_in_exile
+		create_country_leader = {
+			name = "Tomado of Brodfeld"
+			picture = "Tomado.tga"
+			expire = "1965.1.1"
+			ideology = liberalism
+			traits = {  }
+		}
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = no
+		}
+	}
+	option = {
+		name = sicameon_frtr.3.c
+		ai_chance = {
+			factor = 25
+		}
+	}
+	option = {
+		name = sicameon_frtr.3.e
+		ai_chance = {
+			factor = 25
+		}
+	}
+}
+
+country_event = {
+	id = sicameon_frtr.4
+	title = sicameon_frtr.4.t
+	desc = sicameon_frtr.4.d
+	#picture = 
+	option = {
+		name = sicameon_frtr.4.a
+		
 	}
 	is_triggered_only = yes
 }

@@ -126,5 +126,79 @@ ideas = {
 				war_support_factor = 0.05
 			}
 		}
+		
+		brodfeld_diaspora = {
+			#picture = placeholder
+			allowed = {
+				tag = SIC
+			}
+			removal_cost = -1
+			modifier = { 
+				conscription = 0.015
+			}
+		}
+		
+		idealism_above_all = {
+			#picture = placeholder
+			allowed = {
+				tag = SIC
+			}
+			removal_cost = -1
+			modifier = { 
+				drift_defence_factor = 0.2
+				justify_war_goal_time = -0.35
+			}
+		}
+		
+		decentralized_administration = {
+			#picture = placeholder
+			allowed = {
+				tag = SIC
+			}
+			removal_cost = -1
+			modifier = { 
+				stability_factor = -0.1
+				stability_weekly = 0.001
+				army_core_defence_factor = 0.05
+				democratic_drift  = 0.03
+			}
+		}
+		
+		harmony_with_enlightened_characteristics = {
+			#picture = placeholder
+			allowed = {
+				tag = SIC
+			}
+			removal_cost = -1
+			modifier = { 
+				conscription = 0.025
+				army_defence_factor = 0.1
+				army_attack_factor = 0.1
+			}
+		}
+		
+	}
+
+####ADVISORS, THEORISTS AND CONCERNS
+
+	political_advisor = {
+	
+		BRF_Enrico = {
+			allowed = {
+				original_tag = SIC
+			}
+			available = {
+				has_completed_focus = SIC_intelligentsia
+			}
+			visible = {
+				NOT = {
+					has_completed_focus = SIC_intelligentsia
+				}
+			}
+			ai_will_do = {
+				factor = 40
+			}
+			traits = { compassionate_gentleman }
+		}
 	}
 }

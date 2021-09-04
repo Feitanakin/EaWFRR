@@ -31,4 +31,18 @@ leader_traits = {
 		conscription = 0.005
 		communism_drift = 0.02
 	}
+	
+	the_legitimate_claimant = {
+		random = no
+		targeted_modifier = {
+			tag = GRW
+			attack_bonus_against = 0.1
+			defense_bonus_against = 0.1
+		}
+		targeted_modifier = {
+			tag = BRF
+			attack_bonus_against = 0.1
+			defense_bonus_against = 0.1
+		}
+	}
 }

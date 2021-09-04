@@ -166,7 +166,7 @@ focus_tree = {
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_an_interesting_proposal"
-			
+			country_event = { days = 0 id = sicameon_frtr.3 }
 		}
 	}
 
@@ -4491,6 +4491,7 @@ focus_tree = {
 		}
 		prerequisite = {
 			focus = SIC_looking_outwards
+			focus = SIC_outwards
 		}
 		will_lead_to_war_with = MIT
 		completion_reward = {
@@ -6489,7 +6490,7 @@ focus_tree = {
         id = SIC_springtime_sic
         icon = GFX_SIC_a_true_grand_duchess
         cost = 10
-        x = 60
+        x = 45
         y = 0
         #bypass = {
         #    has_country_flag = #Petronilo has been elected Duke
@@ -6506,7 +6507,7 @@ focus_tree = {
             focus = SIC_springtime_sic
         }
         completion_reward = {
-            country_event = sicameon_frr.1
+            country_event = sicameon_frtr.1
         }
     }
     focus = {
@@ -6534,7 +6535,7 @@ focus_tree = {
             focus = SIC_make_the_best
         }
         completion_reward = {
-            country_event = sicameon_frr.2
+            country_event = sicameon_frtr.2
         }
     }
     focus = {
@@ -6687,4 +6688,374 @@ focus_tree = {
             focus = SIC_hearts_minds
         }
     }
+
+##########################################################################
+##########################################################################
+##########################################################################
+##########################################################################
+##########################################################################
+##########################################################################
+##########################################################################
+##########################################################################
+##########################################################################
+##########################################################################
+##########################################################################
+##########################################################################
+
+
+	focus = {
+		id = SIC_an_heir_in_exile
+		icon = GFX_SIC_a_heir_in_exile
+		cost = 10
+		x = 61
+		y = 0
+		ai_will_do = { factor = 100 }
+		available = {
+			has_country_leader = {
+				id = 50002 
+				ruling_only = yes 
+				name = "Tomado of Brodfeld"
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_an_heir_in_exile"
+			
+		}
+	}
+
+	focus = {
+		id = SIC_brodfeldian_diaspora
+		icon = GFX_SIC_welcome_the_brodfeldian_diaspora
+		prerequisite = { focus = SIC_an_heir_in_exile }
+		cost = 10
+		x = -5
+		y = 1
+		relative_position_id = SIC_an_heir_in_exile
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_brodfeldian_diaspora"
+			add_ideas = brodfeld_diaspora
+			add_manpower = 2000
+			country_event = { days = 0 id = sicameon_frtr.4 }
+		}
+	}
+
+	focus = {
+		id = SIC_freemasons
+		icon = GFX_SIC_keep_freemasons_out
+		prerequisite = { focus = SIC_brodfeldian_diaspora }
+		cost = 5
+		x = -1
+		y = 1
+		relative_position_id = SIC_brodfeldian_diaspora
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_freemasons"
+			add_manpower = -3000
+			add_stability = 0.1
+		}
+	}
+
+	focus = {
+		id = SIC_intelligentsia 
+		icon = GFX_SIC_emigree_intelligentsia
+		prerequisite = { focus = SIC_brodfeldian_diaspora }
+		cost = 10
+		x = 1
+		y = 1
+		relative_position_id = SIC_brodfeldian_diaspora
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_intelligentsia"
+			BRF = {
+				remove_unit_leader = 787
+				remove_unit_leader = 782
+				remove_unit_leader = 783
+			}
+			create_corps_commander = {
+				name = "Sycle Coroanargint"
+				portrait_path = "gfx/leaders/BRF/Walrus.tga"
+				desc = BRF_Walrus_desc
+				traits = { griffon_race_trait career_officer brilliant_strategist organizer }
+				skill = 3
+				attack_skill = 4
+				defense_skill = 2
+				planning_skill = 3
+				logistics_skill = 1
+				id = 787
+			}
+			create_corps_commander = {
+				name = "Catelin Toderoiu"
+				portrait_path = "gfx/leaders/BRF/BRF_waifu.tga"
+				traits = { griffon_race_trait trait_reckless ranger swamp_fox }
+				skill = 2
+				attack_skill = 3
+				defense_skill = 2
+				planning_skill = 1
+				logistics_skill = 1
+				female = yes
+				id = 782
+			}
+			create_corps_commander = {
+				name = "Lexandru Leuescu"
+				portrait_path = "gfx/leaders/BRF/Lexandru.tga"
+				traits = { griffon_race_trait skilled_staffer trickster infantry_leader }
+				skill = 2
+				attack_skill = 2
+				defense_skill = 1
+				planning_skill = 3
+				logistics_skill = 1
+				id = 783
+			}
+		}
+	}
+
+	focus = {
+		id = SIC_former_revolutionary 
+		icon = GFX_SIC_a_former_revolutionary
+		prerequisite = { focus = SIC_freemasons }
+		prerequisite = { focus = SIC_intelligentsia }
+		cost = 2
+		x = -1
+		y = 1
+		relative_position_id = SIC_intelligentsia
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_former_revolutionary"
+			GRW = {
+				remove_unit_leader = 788
+			}
+			create_corps_commander = {
+				name = "Theresa"
+				portrait_path = "gfx/leaders/GRW/Mors.tga"
+				traits = { griffon_race_trait promising_general }
+				skill = 2
+				attack_skill = 3
+				defense_skill = 3
+				planning_skill = 2
+				logistics_skill = 1
+				female = yes
+				id = 788
+			}
+		}
+	}
+
+	focus = {
+		id = SIC_brodfeld_in_exile 
+		icon = GFX_SIC_the_kingdom_of_brodfeld_in_exile
+		prerequisite = { focus = SIC_former_revolutionary }
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = SIC_former_revolutionary
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_brodfeld_in_exile"
+			add_country_leader_trait = the_legitimate_claimant
+		}
+	}
+
+	focus = {
+		id = SIC_enthusiasm
+		icon = GFX_SIC_revive_enthusiasm
+		prerequisite = { focus = SIC_an_heir_in_exile }
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = SIC_an_heir_in_exile
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_enthusiasm"
+			add_political_power = 50
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.10
+			}
+		}
+	}
+
+	focus = {
+		id = SIC_regency
+		icon = GFX_SIC_blame_the_regency
+		prerequisite = { focus = SIC_enthusiasm }
+		cost = 8
+		x = -1
+		y = 1
+		relative_position_id = SIC_enthusiasm
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_regency"
+			remove_ideas = dead_monarchy
+			add_popularity = {
+				ideology = neutrality
+				popularity = -0.15
+			}
+		}
+	}
+
+	focus = {
+		id = SIC_piracy
+		icon = GFX_SIC_demozise_the_swordfish
+		prerequisite = { focus = SIC_regency }
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = SIC_regency
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_piracy"
+			
+		}
+	}
+
+	focus = {
+		id = SIC_retirements
+		icon = GFX_SIC_encourage_early_retirements
+		prerequisite = { focus = SIC_enthusiasm }
+		cost = 8
+		x = 1
+		y = 1
+		relative_position_id = SIC_enthusiasm
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_retirements"
+			add_manpower = -1500
+			army_experience = -15
+			air_experience = -15
+			navy_experience = -15
+		}
+	}
+
+	focus = {
+		id = SIC_generation
+		icon = GFX_SIC_sicameons_new_generation_of_officers
+		prerequisite = { focus = SIC_retirements }
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = SIC_retirements
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_generation"
+			
+		}
+	}
+
+	focus = {
+		id = SIC_blackhollow
+		icon = GFX_SIC_a_show_of_strength
+		prerequisite = { focus = SIC_piracy }
+		prerequisite = { focus = SIC_generation }
+		cost = 2
+		x = -1
+		y = 1
+		relative_position_id = SIC_generation
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_generation"
+			create_wargoal= {
+				type = annex_everything 
+				target = BAN
+			}
+			BAN = { add_to_ROOT_potential_cores = yes }
+		}
+	}
+
+	focus = {
+		id = SIC_approach
+		icon = GFX_SIC_an_idealistic_approach
+		prerequisite = { focus = SIC_an_heir_in_exile }
+		cost = 5
+		x = 5
+		y = 1
+		relative_position_id = SIC_an_heir_in_exile
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_approach"
+			add_ideas = idealism_above_all
+		}
+	}
+
+	focus = {
+		id = SIC_administration
+		icon = GFX_SIC_democratize_local_administration
+		prerequisite = { focus = SIC_approach }
+		cost = 8
+		x = -1
+		y = 1
+		relative_position_id = SIC_approach
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_administration"
+			add_ideas = decentralized_administration
+		}
+	}
+
+	focus = {
+		id = SIC_in_check 
+		icon = GFX_SIC_a_monarchy_in_check
+		prerequisite = { focus = SIC_approach }
+		cost = 4.3
+		x = 1
+		y = 1
+		relative_position_id = SIC_approach
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_in_check"
+			add_political_power = -100
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.05
+			}
+		}
+	}
+
+	focus = {
+		id = SIC_nonetheless 
+		icon = GFX_SIC_a_monarchy_nonetheless
+		prerequisite = { focus = SIC_in_check }
+		prerequisite = { focus = SIC_administration }
+		cost = 8
+		x = -1
+		y = 1
+		relative_position_id = SIC_in_check
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_nonetheless"
+			
+		}
+	}
+
+	focus = {
+		id = SIC_with_honour 
+		icon = GFX_SIC_harmony_and_honour
+		prerequisite = { focus = SIC_nonetheless }
+		cost = 2
+		x = 0
+		y = 1
+		relative_position_id = SIC_nonetheless
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_with_honour"
+			add_ideas = harmony_with_enlightened_characteristics
+		}
+	}
+
+	focus = {
+		id = SIC_outwards 
+		icon = GFX_goal_foreign_diplomacy
+		prerequisite = { focus = SIC_with_honour }
+		prerequisite = { focus = SIC_blackhollow }
+		prerequisite = { focus = SIC_brodfeld_in_exile }
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = SIC_blackhollow
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_outwards"
+			
+		}
+	}
+
 }
