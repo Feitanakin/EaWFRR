@@ -7203,6 +7203,12 @@ focus_tree = {
 		prerequisite = { 
 			focus = SIC_trial_the_legionnaires 
 		}
+				prerequisite = { 
+			focus = SIC_trials_the_red 
+		}
+		prerequisite = { 
+			focus = SIC_unite_the_evi_valley 
+		}
 		ai_will_do = {
 			factor = 1
 		}
@@ -7221,6 +7227,12 @@ focus_tree = {
 		}
 		prerequisite = { 
 			focus = SIC_unite_the_evi_valley 
+		}
+		prerequisite = { 
+			focus = SIC_religious_syncretism 
+		}
+		prerequisite = { 
+			focus = SIC_trial_the_legionnaires 
 		}
 		ai_will_do = {
 			factor = 1
