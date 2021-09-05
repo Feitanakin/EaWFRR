@@ -7056,6 +7056,375 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_outwards"
 			
 		}
+	}	#Focus for Dreams of reclamation
+	focus = {
+		id = SIC_dreams_of_reclamation
+		icon = GFX_goal_unknown
+		x = 75
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Sow discontentement
+	focus = {
+		id = SIC_sow_discontentement
+		icon = GFX_goal_unknown
+		x = 73
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = SIC_dreams_of_reclamation }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for The cyalonosian question
+	focus = {
+		id = SIC_the_cyalonosian_question
+		icon = GFX_goal_unknown
+		x = 75
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = SIC_dreams_of_reclamation }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Organise insurgencies
+	focus = {
+		id = SIC_organise_insurgencies
+		icon = GFX_goal_unknown
+		x = 77
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = SIC_dreams_of_reclamation }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for A war of reclamation
+	focus = {
+		id = SIC_a_war_of_reclamation
+		icon = GFX_goal_unknown
+		x = 75
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = SIC_sow_discontentement 
+		}
+		prerequisite = { 
+			focus = SIC_the_cyalonosian_question 
+		}
+		prerequisite = { 
+			focus = SIC_organise_insurgencies 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Trials the red
+	focus = {
+		id = SIC_trials_the_red
+		icon = GFX_goal_unknown
+		x = 72
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = SIC_a_war_of_reclamation }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Unite the Evi Valley
+	focus = {
+		id = SIC_unite_the_evi_valley
+		icon = GFX_goal_unknown
+		x = 74
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = SIC_a_war_of_reclamation }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Religious syncretism
+	focus = {
+		id = SIC_religious_syncretism
+		icon = GFX_goal_unknown
+		x = 76
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = SIC_a_war_of_reclamation }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Trial the legionnaires
+	focus = {
+		id = SIC_trial_the_legionnaires
+		icon = GFX_goal_unknown
+		x = 78
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = SIC_a_war_of_reclamation }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Dream of a better future
+	focus = {
+		id = SIC_dream_of_a_better_future
+		icon = GFX_goal_unknown
+		x = 77
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = SIC_religious_syncretism 
+		}
+		prerequisite = { 
+			focus = SIC_trial_the_legionnaires 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Revelation of an ancient past
+	focus = {
+		id = SIC_revelation_of_an_ancient_past
+		icon = GFX_goal_unknown
+		x = 73
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = SIC_trials_the_red 
+		}
+		prerequisite = { 
+			focus = SIC_unite_the_evi_valley 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Return in Karthin
+	focus = {
+		id = SIC_return_in_karthin
+		icon = GFX_goal_unknown
+		x = 75
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = SIC_revelation_of_an_ancient_past 
+		}
+		prerequisite = { 
+			focus = SIC_dream_of_a_better_future 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Irredentist claim
+	focus = {
+		id = SIC_irredentist_claim
+		icon = GFX_goal_unknown
+		x = 88
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for The best defense...
+	focus = {
+		id = SIC_the_best_defense
+		icon = GFX_goal_unknown
+		x = 88
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = SIC_irredentist_claim }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Bargain for riverland funds
+	focus = {
+		id = SIC_bargain_for_riverland_funds
+		icon = GFX_goal_unknown
+		x = 84
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = SIC_the_best_defense }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Befriend new Mareland
+	focus = {
+		id = SIC_befriend_new_mareland
+		icon = GFX_goal_unknown
+		x = 84
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = SIC_bargain_for_riverland_funds }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for ...is a good defense
+	focus = {
+		id = SIC_is_a_good_defense
+		icon = GFX_goal_unknown
+		x = 87
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = SIC_the_best_defense }
+		mutually_exclusive = { focus = SIC_is_a_good_offense }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for The falcolian line
+	focus = {
+		id = SIC_the_falcolian_line
+		icon = GFX_goal_unknown
+		x = 87
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = SIC_is_a_good_defense }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for ....is a good offense!
+	focus = {
+		id = SIC_is_a_good_offense
+		icon = GFX_goal_unknown
+		x = 89
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = SIC_the_best_defense }
+		mutually_exclusive = { focus = SIC_is_a_good_defense }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Sycaceia call us to battle!
+	focus = {
+		id = SIC_sycaceia_call_us_to_battle
+		icon = GFX_goal_unknown
+		x = 89
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = SIC_is_a_good_offense }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Settle the situation with gryphus
+	focus = {
+		id = SIC_settle_the_situation_with_gryphus
+		icon = GFX_goal_unknown
+		x = 92
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = SIC_the_best_defense }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Intervene in Blackhollow
+	focus = {
+		id = SIC_intervene_in_blackhollow
+		icon = GFX_goal_unknown
+		x = 92
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = SIC_settle_the_situation_with_gryphus }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Peace in southern griffonia
+	focus = {
+		id = SIC_peace_in_southern_griffonia
+		icon = GFX_goal_unknown
+		x = 87
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = SIC_intervene_in_blackhollow 
+		}
+		prerequisite = { 
+			focus = SIC_befriend_new_mareland 
+		}
+		mutually_exclusive = { focus = SIC_slay_the_wingbardian_beast }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Slay the wingbardian beast
+	focus = {
+		id = SIC_slay_the_wingbardian_beast
+		icon = GFX_goal_unknown
+		x = 89
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = SIC_intervene_in_blackhollow 
+		}
+		prerequisite = { 
+			focus = SIC_befriend_new_mareland 
+		}
+		mutually_exclusive = { focus = SIC_peace_in_southern_griffonia }
+		ai_will_do = {
+			factor = 1
+		}
 	}
 
 }
