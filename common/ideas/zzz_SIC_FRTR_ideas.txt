@@ -72,7 +72,7 @@ ideas = {
 			}
 		}
 		
-		antiespadarte = {
+		antiespadarte = { #Anti-Espadarte Smear Campaign
 			#picture = placeholder
 			allowed = {
 				tag = SIC
@@ -99,7 +99,7 @@ ideas = {
 			}
 		}
 
-		unifying_nation_sic = {
+		unifying_nation = {
 			#picture = placeholder
 			allowed = {
 				tag = SIC

@@ -208,7 +208,7 @@ focus_tree = {
 				ideology = democratic
 				popularity = 0.05
 			}
-			add_ideas = SIC_divided_legislature
+			add_ideass = SIC_divided_legislature
 		}
 		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL }
 	}
@@ -249,7 +249,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_looking_outward"
-			add_ideas = SIC_har_diplo_idea
+			add_ideass = SIC_har_diplo_idea
 		}
 	}
 
@@ -406,7 +406,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_red_defense_ministry"
-			add_ideas = SIC_red_def_ministry
+			add_ideass = SIC_red_def_ministry
 		}
 		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_ARMY_BONUS }
 	}
@@ -427,7 +427,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_ONI"
-			add_ideas = SIC_ONI_idea
+			add_ideass = SIC_ONI_idea
 		}
 		search_filters = { FOCUS_FILTER_NAVY_BONUS }
 	}
@@ -456,7 +456,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_united_in_purpose"
-			add_ideas = SIC_united_purpose_idea
+			add_ideass = SIC_united_purpose_idea
 			remove_ideas = SIC_divided_legislature
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
@@ -478,7 +478,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_national_philanthropy"
-			add_ideas = SIC_philanthropy_idea
+			add_ideass = SIC_philanthropy_idea
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 	}
@@ -499,7 +499,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_citizen_soldier"
-			add_ideas = SIC_citizen_soldier_idea
+			add_ideass = SIC_citizen_soldier_idea
 		}
 		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_ARMY_BONUS }
 	}
@@ -520,7 +520,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_welfare_worker"
-			add_ideas = SIC_welfare_worker_idea
+			add_ideass = SIC_welfare_worker_idea
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
@@ -679,7 +679,7 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_looking_further_outward"
 			swap_ideas = {
 				remove_idea = SIC_har_diplo_idea
-				add_idea = SIC_har_better_diplo_idea
+				add_ideas = SIC_har_better_diplo_idea
 				}
 		}
 		search_filters = { FOCUS_FILTER_ANNEXATION }
@@ -1016,9 +1016,9 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_republic_attache"
-			add_ideas = SIC_republic_attache
+			add_ideass = SIC_republic_attache
 			FAT = {
-				add_ideas = SIC_FAT_republic_attache
+				add_ideass = SIC_FAT_republic_attache
 			}
 			if = {
 				limit = {
@@ -1154,7 +1154,7 @@ focus_tree = {
 				ideology = communism
 				popularity = 0.1
 			}
-			add_ideas = SIC_divided_legislature
+			add_ideass = SIC_divided_legislature
 		}
 		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL }
 	}
@@ -1205,7 +1205,7 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_penalize_harmonists"
 			add_stability = -0.1
 			add_war_support = 0.1
-			add_ideas = SIC_bash_democrats
+			add_ideass = SIC_bash_democrats
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
 	}
@@ -1228,7 +1228,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_might_makes_right"
-			add_ideas = SIC_might_makes_right_idea
+			add_ideass = SIC_might_makes_right_idea
 		}
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
 	}
@@ -1257,7 +1257,7 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_incentives_for_harmonists"
 			add_stability = 0.1
 			add_war_support = -0.1
-			add_ideas = SIC_appease_democrats
+			add_ideass = SIC_appease_democrats
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
 	}
@@ -1280,7 +1280,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_reason_tempers_passion"
-			add_ideas = SIC_reason_tempers_passion_idea
+			add_ideass = SIC_reason_tempers_passion_idea
 		}
 		search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
 	}
@@ -1329,7 +1329,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_supreme_pontiff"
-			add_ideas = SIC_supreme_pontiff_idea
+			add_ideass = SIC_supreme_pontiff_idea
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
 	}
@@ -1352,7 +1352,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_reorganize_church"
-			add_ideas = SIC_reorganize_church_idea
+			add_ideass = SIC_reorganize_church_idea
 		}
 		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_RESEARCH }
 	}
@@ -1379,7 +1379,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_pontificate_blessing"
-			add_ideas = SIC_pontificate_blessing_idea
+			add_ideass = SIC_pontificate_blessing_idea
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
 	}
@@ -1402,7 +1402,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_sycaecia_vanguard"
-			add_ideas = SIC_sycaecia_vanguard_idea
+			add_ideass = SIC_sycaecia_vanguard_idea
 		}
 		search_filters = { FOCUS_FILTER_ARMY_BONUS }
 	}
@@ -1453,7 +1453,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_one_for_all"
-			add_ideas = SIC_one_for_all
+			add_ideass = SIC_one_for_all
 			remove_ideas = SIC_divided_legislature
 		}
 		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
@@ -1477,7 +1477,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_codify_sicameonism"
-			add_ideas = SIC_codified_syndicalism
+			add_ideass = SIC_codified_syndicalism
 			add_popularity = { 
 				ideology = communism
 				popularity = 0.1
@@ -1504,7 +1504,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_officialize_the_syndicates"
-			swap_ideas = { remove_idea = SIC_codified_syndicalism add_idea = SIC_official_syndicates }
+			swap_ideas = { remove_idea = SIC_codified_syndicalism add_ideas = SIC_official_syndicates }
 		}
 	}
 
@@ -1529,7 +1529,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_separate_syndicates"
-			swap_ideas = { remove_idea = SIC_official_syndicates add_idea = SIC_syndicates_and_parishes }
+			swap_ideas = { remove_idea = SIC_official_syndicates add_ideas = SIC_syndicates_and_parishes }
 		}
 	}
 
@@ -1551,7 +1551,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_establish_fourth_branch"
-			add_ideas = SIC_fourth_branch
+			add_ideass = SIC_fourth_branch
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
@@ -1577,7 +1577,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_replace_parishes"
-			swap_ideas = { remove_idea = SIC_official_syndicates add_idea = SIC_syndicates_only }
+			swap_ideas = { remove_idea = SIC_official_syndicates add_ideas = SIC_syndicates_only }
 		}
 	}
 
@@ -1599,7 +1599,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_syndical_legislature"
-			add_ideas = SIC_syndical_legislature_idea
+			add_ideass = SIC_syndical_legislature_idea
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
@@ -1624,7 +1624,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_federal_syndicate"
 			add_political_power = 100
-			swap_ideas = { remove_idea = SIC_peasant_republic add_idea = SIC_federal_syndicate_idea }
+			swap_ideas = { remove_idea = SIC_peasant_republic add_ideas = SIC_federal_syndicate_idea }
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
@@ -1830,7 +1830,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_establish_republican_guards"
-			add_ideas = SIC_commie_republican_guard
+			add_ideass = SIC_commie_republican_guard
 		}
 		search_filters = { FOCUS_FILTER_ARMY_BONUS }
 	}
@@ -1893,7 +1893,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_peasant_frugality"
-			add_ideas = SIC_peasant_frugality_idea
+			add_ideass = SIC_peasant_frugality_idea
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
@@ -1913,7 +1913,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_national_syndiate"
-			add_ideas = SIC_national_syndicate_idea
+			add_ideass = SIC_national_syndicate_idea
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
@@ -1933,7 +1933,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_free_industrial_might"
-			add_ideas = SIC_free_industrial_might_idea
+			add_ideass = SIC_free_industrial_might_idea
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
@@ -2349,7 +2349,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_winning_rigged_lottery"
 			add_political_power = 150
-			add_ideas = SIC_divided_legislature
+			add_ideass = SIC_divided_legislature
 			if = {
 				limit = {
 					is_in_faction_with = MIT
@@ -2500,7 +2500,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_fishy_business"
-			add_ideas = SIC_black_market_crime_nexus
+			add_ideass = SIC_black_market_crime_nexus
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
@@ -2964,7 +2964,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_pinstripe_suit"
-			add_ideas = SIC_black_market_legalized
+			add_ideass = SIC_black_market_legalized
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
@@ -3367,7 +3367,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_no_guarantees"
 			add_political_power = -75
-			add_ideas = SIC_slavery_1_0_0
+			add_ideass = SIC_slavery_1_0_0
 		}
 		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL }
 	}
@@ -3395,7 +3395,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_indentured_servitude"
-			add_ideas = SIC_slavery_2_0_0
+			add_ideass = SIC_slavery_2_0_0
 		}
 		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL }
 	}
@@ -3423,7 +3423,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_citizen_immunity"
-			add_ideas = SIC_slavery_3_0_0
+			add_ideass = SIC_slavery_3_0_0
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY }
 	}
@@ -3634,7 +3634,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_unifying_science_guilds"
-			add_ideas = SIC_unified_scientific_community
+			add_ideass = SIC_unified_scientific_community
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
@@ -3767,7 +3767,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_standardize_weights_measures"
-			add_ideas = SIC_standardized_weights_and_measures
+			add_ideass = SIC_standardized_weights_and_measures
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
@@ -3944,7 +3944,7 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_religious_education"
 			swap_ideas = {
 				remove_idea = SIC_church_schools
-				add_idea = SIC_religious_schoolsA
+				add_ideas = SIC_religious_schoolsA
 				}
 			add_popularity = {
 				ideology = neutrality 
@@ -3973,7 +3973,7 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_secular_future"
 			swap_ideas = {
 				remove_idea = SIC_church_schools
-				add_idea = SIC_secular_schoolsA
+				add_ideas = SIC_secular_schoolsA
 				}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH }
@@ -4079,7 +4079,7 @@ focus_tree = {
 				}
 				swap_ideas = {
 					remove_idea = SIC_religious_schoolsA
-					add_idea = SIC_religious_schoolsAB
+					add_ideas = SIC_religious_schoolsAB
 				}
 			}
 			if = {
@@ -4088,7 +4088,7 @@ focus_tree = {
 				}
 				swap_ideas = {
 					remove_idea = SIC_religious_schoolsAC
-					add_idea = SIC_religious_schoolsABC
+					add_ideas = SIC_religious_schoolsABC
 				}
 			}
 			add_popularity = {
@@ -4120,7 +4120,7 @@ focus_tree = {
 				}
 				swap_ideas = {
 					remove_idea = SIC_religious_schoolsA
-					add_idea = SIC_religious_schoolsAC
+					add_ideas = SIC_religious_schoolsAC
 				}
 			}
 			if = {
@@ -4129,7 +4129,7 @@ focus_tree = {
 				}
 				swap_ideas = {
 					remove_idea = SIC_religious_schoolsAB
-					add_idea = SIC_religious_schoolsABC
+					add_ideas = SIC_religious_schoolsABC
 				}
 			}
 			add_popularity = {
@@ -4161,7 +4161,7 @@ focus_tree = {
 				}
 				swap_ideas = {
 					remove_idea = SIC_secular_schoolsA
-					add_idea = SIC_secular_schoolsAB
+					add_ideas = SIC_secular_schoolsAB
 				}
 			}
 			if = {
@@ -4170,7 +4170,7 @@ focus_tree = {
 				}
 				swap_ideas = {
 					remove_idea = SIC_secular_schoolsAC
-					add_idea = SIC_secular_schoolsABC
+					add_ideas = SIC_secular_schoolsABC
 				}
 			}
 		}
@@ -4198,7 +4198,7 @@ focus_tree = {
 				}
 				swap_ideas = {
 					remove_idea = SIC_secular_schoolsA
-					add_idea = SIC_secular_schoolsAC
+					add_ideas = SIC_secular_schoolsAC
 				}
 			}
 			if = {
@@ -4207,7 +4207,7 @@ focus_tree = {
 				}
 				swap_ideas = {
 					remove_idea = SIC_secular_schoolsAB
-					add_idea = SIC_secular_schoolsABC
+					add_ideas = SIC_secular_schoolsABC
 				}
 			}
 		}
@@ -4330,7 +4330,7 @@ focus_tree = {
 			custom_effect_tooltip = SIC_school_buff
 			swap_ideas = {
 				remove_idea = SIC_religious_schoolsABC
-				add_idea = SIC_religious_schoolsABCD
+				add_ideas = SIC_religious_schoolsABCD
 			}
 			add_popularity = {
 				ideology = neutrality 
@@ -4360,7 +4360,7 @@ focus_tree = {
 			custom_effect_tooltip = SIC_school_buff
 			swap_ideas = {
 				remove_idea = SIC_secular_schoolsABC
-				add_idea = SIC_secular_schoolsABCD
+				add_ideas = SIC_secular_schoolsABCD
 			}
 		}
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL }
@@ -4383,7 +4383,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_federal_reserve"
-			add_ideas = SIC_federal_reserve1
+			add_ideass = SIC_federal_reserve1
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL }
 	}
@@ -4424,7 +4424,7 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_FBIC_act"
 			swap_ideas = {
 				remove_idea = SIC_federal_reserve1
-				add_idea = SIC_federal_reserve2
+				add_ideas = SIC_federal_reserve2
 			}
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL }
@@ -4444,7 +4444,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_research_grants"
-			add_ideas = proper_science_base
+			add_ideass = proper_science_base
 		}
 	}
 	focus = {
@@ -4465,7 +4465,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_modern_peasant"
-			add_ideas = modern_society
+			add_ideass = modern_society
 		}
 	}
 
@@ -4791,28 +4791,28 @@ focus_tree = {
 				limit = { has_idea = SIC_militia_dependence }
 				swap_ideas = {
 					remove_idea = SIC_militia_dependence
-					add_idea = SIC_militia_dependence1
+					add_ideas = SIC_militia_dependence1
 				}
 			}
 			else_if = {
 				limit = { has_idea = SIC_militia_dependence1  }
 				swap_ideas = {
 					remove_idea = SIC_militia_dependence1
-					add_idea = SIC_militia_dependence2
+					add_ideas = SIC_militia_dependence2
 				}
 			}
 			else_if = {
 				limit = { has_idea = SIC_militia_dependence2 }
 				swap_ideas = {
 					remove_idea = SIC_militia_dependence2
-					add_idea = SIC_militia_dependence3
+					add_ideas = SIC_militia_dependence3
 				}
 			}
 			else_if = {
 				limit = { has_idea = SIC_militia_dependence3 }
 				swap_ideas = {
 					remove_idea = SIC_militia_dependence3
-					add_idea = SIC_militia_dependence4
+					add_ideas = SIC_militia_dependence4
 				}
 			}
 			else_if = {
@@ -4841,28 +4841,28 @@ focus_tree = {
 				limit = { has_idea = SIC_militia_dependence }
 				swap_ideas = {
 					remove_idea = SIC_militia_dependence
-					add_idea = SIC_militia_dependence1
+					add_ideas = SIC_militia_dependence1
 				}
 			}
 			else_if = {
 				limit = { has_idea = SIC_militia_dependence1  }
 				swap_ideas = {
 					remove_idea = SIC_militia_dependence1
-					add_idea = SIC_militia_dependence2
+					add_ideas = SIC_militia_dependence2
 				}
 			}
 			else_if = {
 				limit = { has_idea = SIC_militia_dependence2 }
 				swap_ideas = {
 					remove_idea = SIC_militia_dependence2
-					add_idea = SIC_militia_dependence3
+					add_ideas = SIC_militia_dependence3
 				}
 			}
 			else_if = {
 				limit = { has_idea = SIC_militia_dependence3 }
 				swap_ideas = {
 					remove_idea = SIC_militia_dependence3
-					add_idea = SIC_militia_dependence4
+					add_ideas = SIC_militia_dependence4
 				}
 			}
 			else_if = {
@@ -5336,7 +5336,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_plowshares_to_swords"
-			add_ideas = SIC_plowshares_to_swords
+			add_ideass = SIC_plowshares_to_swords
 		}
 		search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_INDUSTRY FOCUS_FILTER_WAR_SUPPORT }
 	}
@@ -5574,7 +5574,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_analyze_merchant_marine"
-			add_ideas = SIC_merchant_cruiser1
+			add_ideass = SIC_merchant_cruiser1
 			if = {
 				limit = {
 					has_dlc = "Man the Guns"
@@ -5614,7 +5614,7 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_prepare_against_piracy"
 			swap_ideas = {
 				remove_idea = SIC_merchant_cruiser1
-				add_idea = SIC_merchant_cruiser2
+				add_ideas = SIC_merchant_cruiser2
 			}
 			if = {
 				limit = {
@@ -6093,7 +6093,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_modernize_command_structure"
-			add_ideas = SIC_modernized_naval_command
+			add_ideass = SIC_modernized_naval_command
 		}
 		search_filters = { FOCUS_FILTER_NAVY_BONUS }
 	}
@@ -6167,7 +6167,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_midoria_naval_academy"
-			add_ideas = SIC_midoria_marine_academy
+			add_ideass = SIC_midoria_marine_academy
 		}
 		search_filters = { FOCUS_FILTER_NAVY_BONUS FOCUS_FILTER_POLITICAL }
 	}
@@ -6442,7 +6442,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_barnstormer_squadron"
-			add_ideas = SIC_barnstormer_squadron
+			add_ideass = SIC_barnstormer_squadron
 		}
 		search_filters = { FOCUS_FILTER_AIRFORCE_BONUS }
 	}
@@ -6485,7 +6485,7 @@ focus_tree = {
 	####################
     #####PETRONILO######
     #DUKE#OF#DEPRESSION#
-    ####################
+    ##AND FABULOUSNESS##
     focus = {
         id = SIC_springtime_sic
         icon = GFX_SIC_a_true_grand_duchess
@@ -6521,7 +6521,7 @@ focus_tree = {
            focus = SIC_springtime_sic
         }
         completion_reward = {
-            add_idea = unifying_nation_sic
+            add_ideas = unifying_nation
         }
     }
     focus = {
@@ -6545,6 +6545,14 @@ focus_tree = {
         relative_position_id = SIC_springtime_sic
         x = -4
         y = 3
+        completion_reward = {
+        add_political_power = -75
+                add_popularity = {
+				ideology = democratic
+				popularity = 0.1
+				}
+		add_stability = -0.1
+        }
         prerequisite = {
             focus = SIC_no_hope_action
         }
@@ -6560,7 +6568,7 @@ focus_tree = {
             focus = SIC_deradical_cam
         }
         completion_reward = {
-            add_idea = duke_of_the_people
+            add_ideas = duke_of_the_people
         }
     }
     focus = {
@@ -6602,7 +6610,7 @@ focus_tree = {
             focus = SIC_demonize_sword
         }
         completion_reward = {
-            add_idea = faith_harmony 
+            add_ideas = faith_harmony
         }
     }
     focus = {
@@ -6623,6 +6631,13 @@ focus_tree = {
         relative_position_id = SIC_springtime_sic
         x = 1
         y = 3
+        completion_reward = {
+        add_political_power = -50
+                add_popularity = {
+				ideology = neutrality
+				popularity = 0.1
+				}
+        }
         prerequisite = {
             focus = SIC_immediate_change
         }
@@ -6634,6 +6649,13 @@ focus_tree = {
         relative_position_id = SIC_springtime_sic
         x = 1
         y = 4
+        completion_reward = {
+        add_manpower = 25000
+        add_popularity = {
+				ideology = democratic
+				popularity = 0.1
+			}
+        }
         prerequisite = {
             focus = SIC_convince_council
         }
@@ -6656,6 +6678,9 @@ focus_tree = {
         relative_position_id = SIC_springtime_sic
         x = 3
         y = 4
+        completion_reward = {
+        add_political_power = 100 
+        }
         prerequisite = {
             focus = SIC_pardon_republicans
         }
@@ -6667,6 +6692,9 @@ focus_tree = {
         relative_position_id = SIC_springtime_sic
         x = 2
         y = 5
+        completion_reward = {
+        remove_ideas = republican_tension
+        }
         prerequisite = {
             focus = SIC_second_chance
         }
@@ -6734,7 +6762,7 @@ focus_tree = {
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_brodfeldian_diaspora"
-			add_ideas = brodfeld_diaspora
+			add_ideass = brodfeld_diaspora
 			add_manpower = 2000
 			country_event = { days = 0 id = sicameon_frtr.4 }
 		}
@@ -6972,7 +7000,7 @@ focus_tree = {
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_approach"
-			add_ideas = idealism_above_all
+			add_ideass = idealism_above_all
 		}
 	}
 
@@ -6987,7 +7015,7 @@ focus_tree = {
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_administration"
-			add_ideas = decentralized_administration
+			add_ideass = decentralized_administration
 		}
 	}
 
@@ -7037,7 +7065,7 @@ focus_tree = {
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_with_honour"
-			add_ideas = harmony_with_enlightened_characteristics
+			add_ideass = harmony_with_enlightened_characteristics
 		}
 	}
 
@@ -7203,12 +7231,6 @@ focus_tree = {
 		prerequisite = { 
 			focus = SIC_trial_the_legionnaires 
 		}
-				prerequisite = { 
-			focus = SIC_trials_the_red 
-		}
-		prerequisite = { 
-			focus = SIC_unite_the_evi_valley 
-		}
 		ai_will_do = {
 			factor = 1
 		}
@@ -7227,12 +7249,6 @@ focus_tree = {
 		}
 		prerequisite = { 
 			focus = SIC_unite_the_evi_valley 
-		}
-		prerequisite = { 
-			focus = SIC_religious_syncretism 
-		}
-		prerequisite = { 
-			focus = SIC_trial_the_legionnaires 
 		}
 		ai_will_do = {
 			factor = 1
