@@ -221,4 +221,125 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/SIC_a_former_revolutionary.dds"
 	}
 
+####################################################################
+####################################################################
+####################################################################
+####################################################################
+####################################################################
+####################################################################
+####################################################################
+####################################################################
+####################################################################
+####################################################################
+####################################################################
+
+	SpriteType = {
+		name = "GFX_SIC_a_war_of_reclamation"
+		texturefile = "gfx/interface/goals/SIC_a_war_of_reclamation.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_SIC_befriend_new_mareland"
+		texturefile = "gfx/interface/goals/SIC_befriend_new_mareland.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_SIC_dreams_of_reclamation"
+		texturefile = "gfx/interface/goals/SIC_dreams_of_reclamation.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_SIC_irredentist_claims"
+		texturefile = "gfx/interface/goals/SIC_irredentist_claims.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_SIC_is_a_good_defense"
+		texturefile = "gfx/interface/goals/SIC_is_a_good_defense.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_SIC_is_a_good_offense"
+		texturefile = "gfx/interface/goals/SIC_is_a_good_offense.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_SIC_organize_insurgencies"
+		texturefile = "gfx/interface/goals/SIC_organize_insurgencies.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_SIC_peace_in_southern_griffonia"
+		texturefile = "gfx/interface/goals/SIC_peace_in_southern_griffonia.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_SIC_settle_the_situation_with_gryphus"
+		texturefile = "gfx/interface/goals/SIC_settle_the_situation_with_gryphus.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_SIC_slay_the_wingbardian_beast"
+		texturefile = "gfx/interface/goals/SIC_slay_the_wingbardian_beast.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_SIC_sow_discontent"
+		texturefile = "gfx/interface/goals/SIC_sow_discontent.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_SIC_sycaceia_calls_us_to_battle"
+		texturefile = "gfx/interface/goals/SIC_sycaceia_calls_us_to_battle.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_SIC_the_best_defence"
+		texturefile = "gfx/interface/goals/SIC_the_best_defence.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_SIC_the_cyanolisian_question"
+		texturefile = "gfx/interface/goals/SIC_the_cyanolisian_question.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_SIC_the_falcorian_line"
+		texturefile = "gfx/interface/goals/SIC_the_falcorian_line.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_SIC_trial_the_legionaries"
+		texturefile = "gfx/interface/goals/SIC_trial_the_legionaries.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_SIC_trial_the_reds"
+		texturefile = "gfx/interface/goals/SIC_trial_the_reds.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_SIC_unite_the_evi_valley"
+		texturefile = "gfx/interface/goals/SIC_unite_the_evi_valley.dds"
+	}
+		
+	SpriteType = {
+		name = "GFX_SIC_dreams_of_a_better_future"
+		texturefile = "gfx/interface/goals/SIC_dreams_of_a_better_future.dds"
+	}
+		
+	SpriteType = {
+		name = "GFX_SIC_religious_syncretism"
+		texturefile = "gfx/interface/goals/SIC_religious_syncretism.dds"
+	}
+			
+	SpriteType = {
+		name = "GFX_SIC_return_in_karthin"
+		texturefile = "gfx/interface/goals/SIC_return_in_karthin.dds"
+	}
+			
+	SpriteType = {
+		name = "GFX_SIC_revelations_of_an_ancient_past"
+		texturefile = "gfx/interface/goals/SIC_revelations_of_an_ancient_past.dds"
+	}
 }

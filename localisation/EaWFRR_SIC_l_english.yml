@@ -170,6 +170,8 @@
  idealism_above_all:0 "Idealism above all"
  decentralized_administration:0 "Decentralized administration"
  harmony_with_enlightened_characteristics:0 "Harmony With Enlightened Characteristics"
+ tactical_reorganization_efforts:0 "Tactical Reorganization Efforts"
+ defensive_tactical_approach:0 "Defensive Tactical Approach"
 
 ### Traits ###
 
@@ -201,7 +203,7 @@
  sicameon_frtr.2.a:0 ""
  ########################
  sicameon_frtr.3.t:0 "An Interesting Proposal"
- sicameon_frtr.3.d:0 "With the understandably unique circumstances laid before them, the regency council had gone into a private chamber and had been there a very long time indeed. Even the servants bringing refreshments were angrily told to simply leave food at the door before one of the members would scoot out, seize it, and scoot back in before slamming the door shut. It was now day two, and although they had yet to decide who would take the reigns of power, a few notable candidates were now there.\n\nThe first option was perhaps the most obvious, at least according to the best bred on the council. Duke Frederick of Yale-Gamia, the Herzlander. Technically the legitimate heir to the throne, the duke laid claim through his father (who had sold the Duchy of Yaledom to the universities), whose grandfather in turn originally laid claim to Sicameon. Unfortunately, in the modern world claims of legitimacy fall on deaf ears. The vast majority of the country are repelled by his autocratic tendencies and worse yet, the nationalists are disgusted by his wholehearted embrace of Imperial nostalgia, with most sicameonese citizens being repulsed by the idea of a returning Griffonian Empire.\n\nAnother well-bred option is Tomado of Brodfeld, the crown prince of Brodfeld. Now in exile, he fled his home country after it broke out into civil war between the communists and supporters of his tyrannical and mad father, King Kloseu. Now in Sicameon he speaks of an arrangement to preserve monarchy and reform it for the future, creating a constitutional system where democracy and monarchy may coexist. While his harmonic values are beyond question, most council members have noted the increased animosity and fieryness in his speeches, more than ofter decrying the 'disgustingly decadent political order left behind by the failed Herzlander Empire' and proposing that Griffonian harmonism could only be achieved 'by returning to the pre-herzlander way of life that was the norm in the greatest civilizations in Southern Griffonia'.\nRegardless of his controversial views, the exiled crown prince has established himself as a very charismatic and intelligent figure in his new Sicameonese home, with most observers now falling in love with his quiet rage against those who brought the Grand Duchy to ruin.\n\nWhen it comes to politics however pragmatism often wins out, and while there are still disagreements it may be the case that Duchess Giovanna of Wingbardy may ultimately win the day. Closely related to the royal family of Wingbardy and with good connections, she would certainly seek to strengthen ties with Wingbardy and join the Karthinian Pact. Of course she has much in common in Frederick in this regard were it not for some rumours and careful comments on her part. Giovanna has absolutely no intention of making Sicameon subservient to Wingbardy, but instead aspires to establish her own powerful legacy. Enlightened autocrats often end up beloved by their subjects but the Sicameonese people hold their Wingbardian neighbours in no high regard, and many would be more than displeased to see Sicameon become a part of Wingbardy's sphere of influence.\n\nThe last candidate is Petronilo of Midoria, whose pedigree is the least established – unless you count the opinion of the commoners, who secretly wish for the council to pick him. His nationalist credentials are well-understood, especially given his concern for the Sicameonese minorities in Gryphus that he aspires to help. Despite his relatively humble origins and curious behaviours, he does have a genuine desire to improve the lot of the common people while strengthening the nation and his rural populist and religious stances differentiate him from the other candidates, to the pleasure of the populace.\n\nFinally, the council decides. They pick…"
+ sicameon_frtr.3.d:0 "With the understandably unique circumstances laid before them, the regency council had gone into a private chamber and had been there a very long time indeed.  It was now day two, and although they had yet to decide who would take the reigns of power, a few notable candidates were now there.\n\nThe first option was perhaps the most obvious, at least according to the best bred on the council. Duke Frederick of Yale-Gamia, the Herzlander. Technically the legitimate heir to the throne, the duke laid claim through his father (who had sold the Duchy of Yaledom to the universities), whose grandfather in turn originally laid claim to Sicameon. Unfortunately, in the modern world claims of legitimacy fall on deaf ears. The vast majority of the country are repelled by his autocratic tendencies and worse yet the populace is disgusted by his wholehearted embrace of Imperial nostalgia.\n\nAnother well-bred option is Tomado of Bronfeld, the crown prince of Brodfeld. Now in exile, he fled his home country after it broke out into civil war between the communists and supporters of his tyrannical and mad father, King Kloseu. His harmonic values are beyond question, most council members have noted the increased animosity and fieryness in his speeches, more than ofter decrying the 'disgustingly decadent political order left behind by the failed Herzlander Empire'.\nRegardless of his extravagant views, the exiled crown prince has established himself as a very charismatic and intelligent figure in his new Sicameonese home.\n\nWhen it comes to politics however pragmatism often wins out, and while there are still disagreements it may be the case that Duchess Giovanna of Wingbardy may ultimately win the day. Closely related to the royal family of Wingbardy and with good connections, she would certainly seek to strengthen ties with Wingbardy and join the Karthinian Pact . Giovanna has,however, absolutely no intention of making Sicameon subservient to Wingbardy, but instead aspires to establish her own powerful legacy.\n\nThe last candidate is Petronilo of Midoria, whose pedigree is the least established – unless you count the opinion of the commoners. His nationalist credentials are well-understood, especially given his concern for the Sicameonese minorities in Gryphus that he aspires to help. Despite his relatively humble origins and curious behaviours, he does have a genuine desire to improve the lot of the common people while strengthening the nation and his rural populist and religious stances differentiate him from the other candidates, to the pleasure of the populace\n\nFinally, the council decides. They pick…"
  sicameon_frtr.3.a:0 "Frederick of Yale-Gamia"
  sicameon_frtr.3.b:0 "Tomado of Brodfeld"
  sicameon_frtr.3.c:0 "Giovanna of Wingbardy"
@@ -209,8 +211,36 @@
  sicameon_frtr.4.t:0 "Brodfeldian Refugees"
  sicameon_frtr.4.d:0 "Event about an increased influx of brodfeldian refugees fleeing to Sicameon"
  sicameon_frtr.4.a:0 "Good"
- 
- 
+ sicameon_frtr.5.t:0 "Petition"
+ sicameon_frtr.5.d:0 "Give me those states. Please?"
+ sicameon_frtr.5.a:0 "Ok."
+ sicameon_frtr.5.b:0 "No."
+ sicameon_frtr.6.t:0 "Response"
+ sicameon_frtr.6.d:0 "They say yes."
+ sicameon_frtr.6.a:0 "Good."
+ sicameon_frtr.7.t:0 "Response"
+ sicameon_frtr.7.d:0 "They say no."
+ sicameon_frtr.7.a:0 "Not good."
+ sicameon_frtr.8.t:0 "Proposal"
+ sicameon_frtr.8.d:0 "Can I join your faction?"
+ sicameon_frtr.8.a:0 "Yes."
+ sicameon_frtr.8.b:0 "No."
+ sicameon_frtr.9.t:0 "Response"
+ sicameon_frtr.9.d:0 "They say yes."
+ sicameon_frtr.9.a:0 "Good."
+ sicameon_frtr.10.t:0 "Response"
+ sicameon_frtr.10.d:0 "They say no."
+ sicameon_frtr.10.a:0 "Not good."
+ sicameon_frtr.11.t:0 "Agreement"
+ sicameon_frtr.11.d:0 "Can we guarantee each other?"
+ sicameon_frtr.11.a:0 "Yes."
+ sicameon_frtr.11.b:0 "No."
+ sicameon_frtr.12.t:0 "Response"
+ sicameon_frtr.12.d:0 "They say yes."
+ sicameon_frtr.12.a:0 "Good."
+ sicameon_frtr.13.t:0 "Response"
+ sicameon_frtr.13.d:0 "They say no."
+ sicameon_frtr.13.a:0 "Not good."
  
  
  

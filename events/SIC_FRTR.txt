@@ -78,3 +78,163 @@ country_event = {
 	}
 	is_triggered_only = yes
 }
+
+country_event = {
+	id = sicameon_frtr.5
+	title = sicameon_frtr.5.t
+	desc = sicameon_frtr.5.d
+	#picture = 
+	option = {
+		name = sicameon_frtr.5.a
+		ai_chance = {
+			factor = 30
+		}
+		SIC = {
+			country_event= { days = 1 id = sicameon_frtr.6 }
+		}
+	}
+	option = {
+		name = sicameon_frtr.5.b
+		ai_chance = {
+			factor = 70
+		}
+		SIC = {
+			country_event= { days = 1 id = sicameon_frtr.7 }
+		}
+	}
+	is_triggered_only = yes
+}
+
+country_event = {
+	id = sicameon_frtr.6
+	title = sicameon_frtr.6.t
+	desc = sicameon_frtr.6.d
+	#picture = 
+	option = {
+		name = sicameon_frtr.6.a
+		SIC = {
+			transfer_state = 514
+			add_state_core = 514
+			transfer_state = 512
+			add_state_core = 512
+			transfer_state = 594
+			add_state_core = 594
+		}
+	}
+	is_triggered_only = yes
+}
+
+country_event = {
+	id = sicameon_frtr.7
+	title = sicameon_frtr.7.t
+	desc = sicameon_frtr.7.d
+	#picture = 
+	option = {
+		name = sicameon_frtr.7.a
+		
+	}
+	is_triggered_only = yes
+}
+
+country_event = {
+	id = sicameon_frtr.8
+	title = sicameon_frtr.8.t
+	desc = sicameon_frtr.8.d
+	#picture = 
+	option = {
+		name = sicameon_frtr.8.a
+		ai_chance = {
+			factor = 80
+		}
+		SIC = {
+			country_event= { days = 1 id = sicameon_frtr.9 }
+		}
+	}
+	option = {
+		name = sicameon_frtr.5.b
+		ai_chance = {
+			factor = 20
+		}
+		SIC = {
+			country_event= { days = 1 id = sicameon_frtr.10 }
+		}
+	}
+	is_triggered_only = yes
+}
+
+country_event = {
+	id = sicameon_frtr.9
+	title = sicameon_frtr.9.t
+	desc = sicameon_frtr.9.d
+	#picture = 
+	option = {
+		name = sicameon_frtr.9.a
+		WNG = {
+			add_to_faction = SIC
+		}
+	}
+	is_triggered_only = yes
+}
+
+country_event = {
+	id = sicameon_frtr.10
+	title = sicameon_frtr.10.t
+	desc = sicameon_frtr.10.d
+	#picture = 
+	option = {
+		name = sicameon_frtr.10.a
+		
+	}
+	is_triggered_only = yes
+}
+
+country_event = {
+	id = sicameon_frtr.11
+	title = sicameon_frtr.11.t
+	desc = sicameon_frtr.11.d
+	#picture = 
+	option = {
+		name = sicameon_frtr.11.a
+		ai_chance = {
+			factor = 50
+		}
+		give_guarantee = SIC
+		SIC = {
+			country_event= { days = 1 id = sicameon_frtr.12 }
+		}
+	}
+	option = {
+		name = sicameon_frtr.11.b
+		ai_chance = {
+			factor = 50
+		}
+		SIC = {
+			country_event= { days = 1 id = sicameon_frtr.13 }
+		}
+	}
+	is_triggered_only = yes
+}
+
+country_event = {
+	id = sicameon_frtr.12
+	title = sicameon_frtr.12.t
+	desc = sicameon_frtr.12.d
+	#picture = 
+	option = {
+		name = sicameon_frtr.12.a
+		give_guarantee = EQC
+	}
+	is_triggered_only = yes
+}
+
+country_event = {
+	id = sicameon_frtr.13
+	title = sicameon_frtr.13.t
+	desc = sicameon_frtr.13.d
+	#picture = 
+	option = {
+		name = sicameon_frtr.13.a
+		
+	}
+	is_triggered_only = yes
+}

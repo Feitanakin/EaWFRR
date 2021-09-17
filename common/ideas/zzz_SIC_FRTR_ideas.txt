@@ -177,6 +177,31 @@ ideas = {
 			}
 		}
 		
+		tactical_reorganization_efforts = {
+			#picture = placeholder
+			allowed = {
+				tag = SIC
+			}
+			removal_cost = -1
+			modifier = { 
+				conscription = 0.005
+				experience_gain_army = 0.1
+			}
+		}
+		
+		defensive_tactical_approach = {
+			#picture = placeholder
+			allowed = {
+				tag = SIC
+			}
+			removal_cost = -1
+			modifier = { 
+				conscription = 0.01
+				experience_gain_army = 0.1
+				army_defence_factor = 0.1
+			}
+		}
+		
 	}
 
 ####ADVISORS, THEORISTS AND CONCERNS
