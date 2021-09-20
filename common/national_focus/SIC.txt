@@ -7557,4 +7557,281 @@ focus_tree = {
 		}
 	}
 
+##########################################################################
+##########################################################################
+##########################################################################
+##########################################################################
+##########################################################################
+##########################################################################
+##########################################################################
+##########################################################################
+##########################################################################
+##########################################################################
+##########################################################################
+##########################################################################
+
+	focus = {
+		id = SIC_a_phantom_from_the_past
+		icon = GFX_
+		cost = 10
+		x = 80
+		y = 8
+		ai_will_do = { factor = 100 }
+		available = {
+			
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_a_phantom_from_the_past"
+			
+		}
+	}
+
+	focus = {
+		id = SIC_for_the_kaiserreich
+		icon = GFX_
+		prerequisite = { focus = SIC_a_phantom_from_the_past }
+		cost = 10
+		x = -4
+		y = 1
+		relative_position_id = SIC_a_phantom_from_the_past
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_for_the_kaiserreich"
+			
+		}
+	}
+
+	focus = {
+		id = SIC_scuash_local_resistance
+		icon = GFX_
+		prerequisite = { focus = SIC_for_the_kaiserreich }
+		mutually_exclusive = { focus = SIC_make_compromisses }
+		cost = 10
+		x = 3
+		y = 1
+		relative_position_id = SIC_for_the_kaiserreich
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_scuash_local_resistance"
+			
+		}
+	}
+
+	focus = {
+		id = SIC_combat_crime_with_extreme_prejudice
+		icon = GFX_
+		prerequisite = { focus = SIC_scuash_local_resistance }
+		cost = 10
+		x = -1
+		y = 1
+		relative_position_id = SIC_scuash_local_resistance
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_combat_crime_with_extreme_prejudice"
+			
+		}
+	}
+
+	focus = {
+		id = SIC_raze_coasts
+		icon = GFX_
+		prerequisite = { focus = SIC_combat_crime_with_extreme_prejudice }
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = SIC_combat_crime_with_extreme_prejudice
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_raze_coasts"
+			
+		}
+	}
+
+	focus = {
+		id = SIC_die_republikanischen_ratten
+		icon = GFX_
+		prerequisite = { focus = SIC_scuash_local_resistance }
+		cost = 10
+		x = 1
+		y = 1
+		relative_position_id = SIC_scuash_local_resistance
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_die_republikanischen_ratten"
+			
+		}
+	}
+
+	focus = {
+		id = SIC_the_law_of_boreas
+		icon = GFX_
+		prerequisite = { focus = SIC_die_republikanischen_ratten }
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = SIC_die_republikanischen_ratten
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_the_law_of_boreas"
+			
+		}
+	}
+
+	focus = {
+		id = SIC_make_compromisses
+		icon = GFX_
+		prerequisite = { focus = SIC_for_the_kaiserreich }
+		mutually_exclusive = { focus = SIC_scuash_local_resistance }
+		cost = 10
+		x = -3
+		y = 1
+		relative_position_id = SIC_for_the_kaiserreich
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_make_compromisses"
+			
+		}
+	}
+
+	focus = {
+		id = SIC_an_unorthodox_solution
+		icon = GFX_
+		prerequisite = { focus = SIC_make_compromisses }
+		cost = 10
+		x = -1
+		y = 1
+		relative_position_id = SIC_make_compromisses
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_an_unorthodox_solution"
+			
+		}
+	}
+
+	focus = {
+		id = SIC_pirates_of_the_grand_duke
+		icon = GFX_
+		prerequisite = { focus = SIC_an_unorthodox_solution }
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = SIC_an_unorthodox_solution
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_pirates_of_the_grand_duke"
+			
+		}
+	}
+
+	focus = {
+		id = SIC_let_the_countryside_be
+		icon = GFX_
+		prerequisite = { focus = SIC_make_compromisses }
+		cost = 10
+		x = 1
+		y = 1
+		relative_position_id = SIC_make_compromisses
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_let_the_countryside_be"
+			
+		}
+	}
+
+	focus = {
+		id = SIC_firm_but_fair
+		icon = GFX_
+		prerequisite = { focus = SIC_let_the_countryside_be }
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = SIC_let_the_countryside_be
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_firm_but_fair"
+			
+		}
+	}
+
+	focus = {
+		id = SIC_applaud_the_regency
+		icon = GFX_
+		prerequisite = { focus = SIC_a_phantom_from_the_past }
+		cost = 10
+		x = 4
+		y = 1
+		relative_position_id = SIC_a_phantom_from_the_past
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_applaud_the_regency"
+			
+		}
+	}
+
+	focus = {
+		id = SIC_work_with_defunct_council
+		icon = GFX_
+		prerequisite = { focus = SIC_applaud_the_regency }
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = SIC_applaud_the_regency
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_work_with_defunct_council"
+			
+		}
+	}
+
+	focus = {
+		id = SIC_sway_the_religious
+		icon = GFX_
+		prerequisite = { focus = SIC_work_with_defunct_council }
+		cost = 10
+		x = -1
+		y = 1
+		relative_position_id = SIC_work_with_defunct_council
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_sway_the_religious"
+			
+		}
+	}
+
+	focus = {
+		id = SIC_meet_with_the_far_right
+		icon = GFX_
+		prerequisite = { focus = SIC_work_with_defunct_council }
+		cost = 10
+		x = 1
+		y = 1
+		relative_position_id = SIC_work_with_defunct_council
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_meet_with_the_far_right"
+			
+		}
+	}
+
+	focus = {
+		id = SIC_no_second_chances
+		icon = GFX_
+		prerequisite = { focus = SIC_meet_with_the_far_right }
+		prerequisite = { focus = SIC_sway_the_religious }
+		cost = 10
+		x = 0
+		y = 2
+		relative_position_id = SIC_work_with_defunct_council
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_no_second_chances"
+			
+		}
+	}
+
+
+
+
+
+
 }
