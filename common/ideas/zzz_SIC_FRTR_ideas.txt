@@ -18,6 +18,43 @@ ideas = {
 			}
 		}
 		
+		republican_tension_antic = {
+			name = republican_tension
+			
+			picture = republican_tension
+			allowed = {
+				original_tag = SIC 
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.1
+				political_power_factor = -0.1
+				democratic_drift = 0.04
+				communism_drift = 0.01
+			}
+		}
+		
+		republican_tension_pardon = {
+			name = republican_tension
+			
+			picture = republican_tension
+			allowed = {
+				original_tag = SIC 
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.05
+				political_power_factor = -0.05
+				democratic_drift = 0.05
+				communism_drift = 0.05
+			}
+		}
+				
+		
 		dead_monarchy = {
 			name = dead_monarchy
 			

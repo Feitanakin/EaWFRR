@@ -6492,9 +6492,12 @@ focus_tree = {
         cost = 10
         x = 45
         y = 0
-        #bypass = {
-        #    has_country_flag = #Petronilo has been elected Duke
-        #}
+        bypass = {
+            has_country_leader = {
+				name = "Petronilo"
+				ruling_only = yes 
+			}
+        }
     }
     focus = {
         id = SIC_make_the_best
@@ -6546,12 +6549,12 @@ focus_tree = {
         x = -4
         y = 3
         completion_reward = {
-        add_political_power = -75
-                add_popularity = {
+			add_political_power = -75
+            add_popularity = {
 				ideology = democratic
 				popularity = 0.1
-				}
-		add_stability = -0.1
+			}
+			add_stability = -0.1
         }
         prerequisite = {
             focus = SIC_no_hope_action
@@ -6623,6 +6626,12 @@ focus_tree = {
         prerequisite = {
             focus = SIC_justify_regency
         }
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = republican_tension
+				add_idea = republican_tension_antic
+			}
+		}
     }
     focus = {
         id = SIC_convince_council
@@ -6632,11 +6641,11 @@ focus_tree = {
         x = 1
         y = 3
         completion_reward = {
-        add_political_power = -50
-                add_popularity = {
+			add_political_power = -50
+            add_popularity = {
 				ideology = neutrality
 				popularity = 0.1
-				}
+			}
         }
         prerequisite = {
             focus = SIC_immediate_change
@@ -6650,8 +6659,8 @@ focus_tree = {
         x = 1
         y = 4
         completion_reward = {
-        add_manpower = 25000
-        add_popularity = {
+			add_manpower = 25000
+			add_popularity = {
 				ideology = democratic
 				popularity = 0.1
 			}
@@ -6670,6 +6679,12 @@ focus_tree = {
         prerequisite = {
             focus = SIC_immediate_change
         }
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = republican_tension_antic
+				add_idea = republican_tension_pardon
+			}
+		}
     }
     focus = {
         id = SIC_democracy_now
@@ -6679,7 +6694,7 @@ focus_tree = {
         x = 3
         y = 4
         completion_reward = {
-        add_political_power = 100 
+			add_political_power = 50 
         }
         prerequisite = {
             focus = SIC_pardon_republicans
@@ -6693,7 +6708,24 @@ focus_tree = {
         x = 2
         y = 5
         completion_reward = {
-        remove_ideas = republican_tension
+			if = {
+				limit = {
+					has_idea = republican_tension_pardon
+				}
+				remove_ideas = republican_tension_pardon
+			}
+			if = {
+				limit = {
+					has_idea = republican_tension_antic
+				}
+				remove_ideas = republican_tension_antic
+			}
+			if = {
+				limit = {
+					has_idea = republican_tension
+				}
+				remove_ideas = republican_tension
+			}
         }
         prerequisite = {
             focus = SIC_second_chance
