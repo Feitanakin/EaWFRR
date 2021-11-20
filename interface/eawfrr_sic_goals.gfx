@@ -342,4 +342,174 @@ spriteTypes = {
 		name = "GFX_SIC_revelations_of_an_ancient_past"
 		texturefile = "gfx/interface/goals/SIC_revelations_of_an_ancient_past.dds"
 	}
+
+####################################################################
+####################################################################
+####################################################################
+####################################################################
+####################################################################
+####################################################################
+####################################################################
+####################################################################
+####################################################################
+####################################################################
+####################################################################
+
+	SpriteType = {
+		name = "GFX_SIC_a_herzlander_grand_duke"
+		texturefile = "gfx/interface/goals/SIC_a_herzlander_grand_duke.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_SIC_an_unorthodox_solution"
+		texturefile = "gfx/interface/goals/SIC_an_unorthodox_solution.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_SIC_applaud_the_regency"
+		texturefile = "gfx/interface/goals/SIC_applaud_the_regency.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_SIC_combat_crime_with_extreme_prejudice"
+		texturefile = "gfx/interface/goals/SIC_combat_crime_with_extreme_prejudice.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_SIC_die_ratten"
+		texturefile = "gfx/interface/goals/SIC_die_ratten.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_SIC_firm_but_fair"
+		texturefile = "gfx/interface/goals/SIC_firm_but_fair.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_SIC_for_the_kaiserreich"
+		texturefile = "gfx/interface/goals/SIC_for_the_kaiserreich.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_SIC_let_the_countryside_be"
+		texturefile = "gfx/interface/goals/SIC_let_the_countryside_be.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_SIC_make_compromises"
+		texturefile = "gfx/interface/goals/SIC_make_compromises.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_SIC_meet_with_the_far_right"
+		texturefile = "gfx/interface/goals/SIC_meet_with_the_far_right.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_SIC_no_second_chances"
+		texturefile = "gfx/interface/goals/SIC_no_second_chances.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_SIC_pirates_of_the_grand_duke"
+		texturefile = "gfx/interface/goals/SIC_pirates_of_the_grand_duke.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_SIC_raze_coasts"
+		texturefile = "gfx/interface/goals/SIC_raze_coasts.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_SIC_squash_local_resistance"
+		texturefile = "gfx/interface/goals/SIC_squash_local_resistance.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_SIC_sway_the_religious"
+		texturefile = "gfx/interface/goals/SIC_sway_the_religious.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_SIC_the_law_of_boreas"
+		texturefile = "gfx/interface/goals/SIC_the_law_of_boreas.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_SIC_work_with_the_defunct_council"
+		texturefile = "gfx/interface/goals/SIC_work_with_the_defunct_council.dds"
+	}
+	
+####################################################################
+####################################################################
+####################################################################
+####################################################################
+####################################################################
+####################################################################
+####################################################################
+####################################################################
+####################################################################
+####################################################################
+####################################################################
+
+	SpriteType = {
+		name = "GFX_SIC_a_nation_of_warriors"
+		texturefile = "gfx/interface/goals/SIC_a_nation_of_warriors.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_SIC_a_socialist_oulook"
+		texturefile = "gfx/interface/goals/SIC_a_socialist_oulook.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_SIC_absorb_monarchists"
+		texturefile = "gfx/interface/goals/SIC_absorb_monarchists.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_SIC_an_almighty_caudillo"
+		texturefile = "gfx/interface/goals/SIC_an_almighty_caudillo.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_SIC_betray_the_revolution"
+		texturefile = "gfx/interface/goals/SIC_betray_the_revolution.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_SIC_destory_the_harmonists"
+		texturefile = "gfx/interface/goals/SIC_destory_the_harmonists.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_SIC_facing_the_sun"
+		texturefile = "gfx/interface/goals/SIC_facing_the_sun.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_SIC_forget_the_old_right"
+		texturefile = "gfx/interface/goals/SIC_forget_the_old_right.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_SIC_our_former_allies"
+		texturefile = "gfx/interface/goals/SIC_our_former_allies.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_SIC_soldiers_of_a_great_sicameon"
+		texturefile = "gfx/interface/goals/SIC_soldiers_of_a_great_sicameon.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_SIC_spring_will_return"
+		texturefile = "gfx/interface/goals/SIC_spring_will_return.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_SIC_sway_the_workers"
+		texturefile = "gfx/interface/goals/SIC_sway_the_workers.dds"
+	}
+
 }

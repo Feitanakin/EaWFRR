@@ -174,7 +174,38 @@
  SIC_meet_with_the_far_right_desc:0 ""
  SIC_no_second_chances:0 "No Second Chances"
  SIC_no_second_chances_desc:0 ""
-
+ SIC_facing_the_sun:0 "Facing the Sun"
+ SIC_facing_the_sun_desc:0 ""
+ SIC_betray_the_revolution:0 "Betray the Revolution"
+ SIC_betray_the_revolution_desc:0 ""
+ SIC_an_almighty_caudillo:0 "An Almighty Caudillo"
+ SIC_an_almighty_caudillo_desc:0 ""
+ SIC_integrate_reactionaries:0 "Integrate Reactionaries"
+ SIC_integrate_reactionaries_desc:0 ""
+ SIC_absorb_monarchists:0 "Absorb Monarchists"
+ SIC_absorb_monarchists_desc:0 ""
+ SIC_soldiers_of_a_great_sicameon:0 "Soldiers of a Great Sicameon"
+ SIC_soldiers_of_a_great_sicameon_desc:0 ""
+ SIC_forget_the_old_right:0 "Forget the Old Right"
+ SIC_forget_the_old_right_desc:0 ""
+ SIC_spring_will_return:0 "Spring Will Return!"
+ SIC_spring_will_return_desc:0 ""
+ SIC_a_socialist_outlook:0 "A Socialist Outlook"
+ SIC_a_socialist_outlook_desc:0 ""
+ SIC_our_karthinian_brethen:0 "Our Karthinian  Brethen"
+ SIC_our_karthinian_brethen_desc:0 ""
+ SIC_our_former_allies:0 "Our Former Allies"
+ SIC_our_former_allies_desc:0 ""
+ SIC_an_end_to_espadarte:0 "An End to Espadarte"
+ SIC_an_end_to_espadarte_desc:0 ""
+ SIC_destroy_harmonists:0 "Destroy Harmonists"
+ SIC_destroy_harmonists_desc:0 ""
+ SIC_sway_the_workers:0 "Sway the Workers"
+ SIC_sway_the_workers_desc:0 ""
+ SIC_a_nation_of_warriors:0 "A Nation of Warriors"
+ SIC_a_nation_of_warriors_desc:0 ""
+ SIC_a_legacy_to_consider:0 "A Legacy to Consider"
+ SIC_a_legacy_to_consider_desc:0 ""
 
 ### Ideas ###
 
@@ -275,9 +306,19 @@
  sicameon_frtr.13.t:0 "Response"
  sicameon_frtr.13.d:0 "They say no."
  sicameon_frtr.13.a:0 "Not good."
- 
- 
- 
+ sicameon_frtr.14.t:0 "What have the Pirates ever done for us?"
+ sicameon_frtr.14.d:0 "The vast and empty countryside of Sicameon was good for one thing at least: no one ever knew where you were. You were free to meet and discuss plans without the risk of the military breaking in. But still, caution was needed, the location of the meeting was kept secret, a password was needed and everyone knew each other.\n\nThe crowd of republicans all talked and whispered in hushed tones. They wondered what this meeting was about, rumours have been circulated for weeks about a new alliance made by their illustrious leader. But only time would tell if he was here to discuss it. Indeed as the thought of their leader came to mind, the man while took to the stage. Alexis Vidrio.\n\nHe looked upon the Republicans that waited anxiously for his words, the whispers and murmurs soon faded away. They all looked up and waited for him to speak.\n\n“My friends,” he began, “I know these are trying times and I appreciate your patience. But the time to act is soon upon us. We must take the first steps to begin organising for the fall of the regency. Its despotic and imperialist dogma must end, only together can we-”\n\nBefore he could finish, a voice from the crowd yelled out. “We don’t want some empty speech! Tell us the truth!”\n\n“Yeah!” Another cried out, “Is it true? Are we allied with criminals and pirates now?!”\n\n“We are no better than the regency if that’s the case!”\n\nWhat started as a handful of disgruntled voices soon spread more and more. Vidrio sighed, the rumours of an alliance with the known pirate Don Espadarte had been spreading like wildfire. He had hoped not to need to worry about this coming out but now he had no choice.\n\n“What possible reason could we have to-”\n\n“Tell me...how many of you know how to operate a destroyer?” The room was silent. “No one? How many of you can get up enough supplies to supply our men?’ Once more, there was only silence. “And I don’t suppose any of you have a fleet of ships lying around that can intercept their fleet?” And for one final time...silence. “It breaks my heart that we must do this, but regardless of his current occupation Don Espadarte is a talented and experienced admiral. Something we need. I know this is disappointing...but you have my vow...once our republic is secured...I will personally tear Espadarte down, destroy his fleet piece by piece.”\n\nMany of those in the crowd made murmurs of agreement, their confidence restored as he continued to speak. "
+ sicameon_frtr.14.a:0 "Another Empty Promise?"
+ sicameon_frtr.15.t:0 "A meeting in the dark"
+ sicameon_frtr.15.d:0 ""
+ sicameon_frtr.15.a:0 ""
+ sicameon_frtr.16.t:0 "Time is Running Out"
+ sicameon_frtr.16.d:0 "The years have been cruel to Sicameon and to its rulers. In the past few decades, many elusive problems have begun to rear their ugly heads, posing a challenge to the ruling Regency Council and the nation that hosts it.\n\nFirstly, piracy and illegal trade have strained our economy and caused corruption to fester throughout local governments. An ever-growing number of upstart politicians line their own pockets with bribe money while the average citizen lives in fear of going outside at night.\n\nTo add to this, the popularity of our ruling Regency Council, having previously been uneasy, has recently begun to decay at an alarming rate. Republican parties have captured the hearts of a concerning swathe of the population, which looks increasingly towards revolution due to the uncompromising nature of our rule. The indecisiveness of the Regency Council towards electing a monarch does little to recover the government’s reputation, either.\n\nWe are left with two different possible approaches. The Regency Council should either focus all of its efforts on suppressing dissent or electing a monarch. Although getting a king on the throne may yet prove itself an indomitable task given the situation, it would solve some of our more immediate problems and help get the nation back on the right track. That said, facing our enemies head on would likely prove a less difficult but more risky effort. The choice ultimately falls to the Regency Council, which, in a rare moment of unity, decides… "
+ sicameon_frtr.16.a:0 "A monarch must be elected now!"
+ sicameon_frtr.16.b:0 "We must eliminate our domestic enemies first!"
+ sicameon_frtr.17.t:0 "The Rebels dealt with"
+ sicameon_frtr.17.d:0 ""
+ sicameon_frtr.17.a:0 ""
  
  
  

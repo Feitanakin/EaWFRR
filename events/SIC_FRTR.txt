@@ -238,3 +238,46 @@ country_event = {
 	}
 	is_triggered_only = yes
 }
+
+country_event = {
+	id = sicameon_frtr.14
+	title = sicameon_frtr.14.t
+	desc = sicameon_frtr.14.d
+	#picture = 
+	option = {
+		name = sicameon_frtr.14.a
+		
+	}
+	is_triggered_only = yes
+}
+
+country_event = {
+	id = sicameon_frtr.15
+	title = sicameon_frtr.15.t
+	desc = sicameon_frtr.15.d
+	#picture = 
+	option = {
+		name = sicameon_frtr.15.a
+		add_popularity= { 
+			ideology = fascism 
+			popularity = 0.025
+		}
+	}
+	is_triggered_only = yes
+}
+
+country_event = {
+	id = sicameon_frtr.16
+	title = sicameon_frtr.16.t
+	desc = sicameon_frtr.16.d
+	#picture = 
+	option = {
+		name = sicameon_frtr.16.a
+		set_country_flag = SIC_monarch_elected
+	}
+	option = {
+		name = sicameon_frtr.16.b
+		set_country_flag = SIC_domestic_enemies
+	}
+	is_triggered_only = yes
+}

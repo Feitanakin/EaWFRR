@@ -1,0 +1,128 @@
+spriteTypes = {
+
+	#### Equestria At War
+
+	SpriteType = {
+		name = "GFX_BAL_worker_led_town_councils"
+		texturefile = "gfx/interface/goals/BAL_worker_led_town_councils.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_BAL_unity_against_nightmare_moon"
+		texturefile = "gfx/interface/goals/BAL_unity_against_nightmare_moon.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_BAL_theres_no_equestria_without_princess_twilight"
+		texturefile = "gfx/interface/goals/BAL_theres_no_equestria_without_princess_twilight.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_BAL_theres_no_day_without_sunlight"
+		texturefile = "gfx/interface/goals/BAL_theres_no_day_without_sunlight.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_BAL_socialism_is_harmonic"
+		texturefile = "gfx/interface/goals/BAL_socialism_is_harmonic.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_BAL_rescue_celestial_officers"
+		texturefile = "gfx/interface/goals/BAL_rescue_celestial_officers.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_BAL_relocate_the_batponies"
+		texturefile = "gfx/interface/goals/BAL_relocate_the_batponies.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_BAL_praise_starlight"
+		texturefile = "gfx/interface/goals/BAL_praise_starlight.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_BAL_never_again"
+		texturefile = "gfx/interface/goals/BAL_never_again.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_BAL_loyalty_to_equestria_onlyy"
+		texturefile = "gfx/interface/goals/BAL_loyalty_to_equestria_onlyy.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_BAL_lessons_from_our_town"
+		texturefile = "gfx/interface/goals/BAL_lessons_from_our_town.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_BAL_jungle_camps"
+		texturefile = "gfx/interface/goals/BAL_jungle_camps.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_BAL_general_secretary_starlight_glimmer"
+		texturefile = "gfx/interface/goals/BAL_general_secretary_starlight_glimmer.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_BAL_embrace_the_fourth_tribe"
+		texturefile = "gfx/interface/goals/BAL_embrace_the_fourth_tribe.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_BAL_develop_the_countryside"
+		texturefile = "gfx/interface/goals/BAL_develop_the_countryside.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_BAL_destroy_anarchists"
+		texturefile = "gfx/interface/goals/BAL_destroy_anarchists.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_BAL_denounce_stalliongrad"
+		texturefile = "gfx/interface/goals/BAL_denounce_stalliongrad.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_BAL_death_to_tyranny"
+		texturefile = "gfx/interface/goals/BAL_death_to_tyranny.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_BAL_death_to_revisionism"
+		texturefile = "gfx/interface/goals/BAL_death_to_revisionism.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_BAL_centralization_and_discipline"
+		texturefile = "gfx/interface/goals/BAL_centralization_and_discipline.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_BAL_assure_our_comrades"
+		texturefile = "gfx/interface/goals/BAL_assure_our_comrades.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_BAL_a_war_of_liberation"
+		texturefile = "gfx/interface/goals/BAL_a_war_of_liberation.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_BAL_a_mare_of_steel"
+		texturefile = "gfx/interface/goals/BAL_a_mare_of_steel.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_BAL_a_great_purge"
+		texturefile = "gfx/interface/goals/BAL_a_great_purge.dds"
+	}
+
+
+
+
+}

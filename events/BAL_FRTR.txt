@@ -1,0 +1,84 @@
+﻿add_namespace = baltimare_frtr
+
+country_event = { 
+	id = baltimare_frtr.1
+	immediate = {log = "[GetDateText]: [Root.GetName]: event baltimare_frtr.1"}
+	title = baltimare_frtr.1.t
+	desc = baltimare_frtr.1.d
+	picture = GFX_event_eqs_communists
+	is_triggered_only = yes
+	option = {
+		name = baltimare_frtr.1.a
+		create_corps_commander = {
+			name = "Starlight Glimmer"
+			portrait_path = "gfx/leaders/BAL/Starlight.tga"
+			id = 5559
+			traits = { trickster pony_race_trait }
+			skill = 4
+			attack_skill = 4
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 3
+		}
+		hidden_effect = {
+			country_event = { days = 1 id = baltimare_frtr.2 }
+		}
+	}
+}
+
+country_event = { 
+	id = baltimare_frtr.2
+	immediate = {log = "[GetDateText]: [Root.GetName]: event baltimare_frtr.1"}
+	title = baltimare_frtr.2.t
+	desc = baltimare_frtr.2.d
+	picture = GFX_event_eqs_communists
+	is_triggered_only = yes
+	option = {
+		name = baltimare_frtr.2.a
+		hidden_effect = {
+			country_event = { days = 1 id = baltimare_frtr.3 }
+		}
+	}
+}
+
+country_event = { 
+	id = baltimare_frtr.3
+	immediate = {log = "[GetDateText]: [Root.GetName]: event baltimare_frtr.1"}
+	title = baltimare_frtr.3.t
+	desc = baltimare_frtr.3.d
+	picture = GFX_event_eqs_communists
+	is_triggered_only = yes
+	option = {
+		name = baltimare_frtr.3.a
+		create_country_leader = {
+			name = "Starlight Glimmer"
+			picture = "Starlight.tga"
+			expire = "1965.1.1"
+			ideology = stalinism
+			traits = {  }
+		}
+		hidden_effect = {
+			country_event = { days = 1 id = baltimare_frtr.4 }
+		}
+	}
+	option = {
+		name = baltimare_frtr.3.b
+		remove_unit_leader = 5559
+	}
+}
+
+country_event = { 
+	id = baltimare_frtr.4
+	immediate = {log = "[GetDateText]: [Root.GetName]: event baltimare_frtr.1"}
+	title = baltimare_frtr.4.t
+	desc = baltimare_frtr.4.d
+	picture = GFX_event_pony_march
+	is_triggered_only = yes
+	option = {
+		name = baltimare_frtr.4.a
+		load_focus_tree = { 
+			tree = baltimare_focus_3
+		}
+	}
+}
+

@@ -9,3 +9,14 @@ SIC_swordfish_campaign_cat = {
         has_completed_focus = SIC_anticorruption
     }
 }
+SIC_anti_piracy = {
+    priority = {
+        base = 100
+    }
+    allowed = {
+        original_tag = SIC
+    }
+    visible = {
+        has_completed_focus = SIC_piracy
+    }
+}

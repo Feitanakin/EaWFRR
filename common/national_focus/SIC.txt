@@ -19,13 +19,13 @@ focus_tree = {
 	focus = {
 		id = SIC_the_decadent_regency
 		icon = GFX_SIC_the_decadent_regency_2
-		cost = 10
+		cost = 8
 		x = 0
 		y = 0
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_the_decadent_regency"
-			
+			country_event = { id = sicameon_frtr.16 days = 0 }
 		}
 	}
 
@@ -34,14 +34,18 @@ focus_tree = {
 		icon = GFX_SIC_deal_with_the_republican_issue
 		prerequisite = { focus = SIC_the_decadent_regency }
 		mutually_exclusive = { focus = SIC_reshuffle_our_budget }
-		cost = 10
+		available = { has_country_flag = SIC_domestic_enemies  }
+		cost = 8
 		x = -2
 		y = 1
 		relative_position_id = SIC_the_decadent_regency
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_deal_with_the_republican_issue"
-			
+			swap_ideas = {
+				remove_idea = republican_tension
+				add_idea = republican_tension_1
+			}
 		}
 	}
 	
@@ -49,14 +53,14 @@ focus_tree = {
 		id = SIC_don_espadartes_connections
 		icon = GFX_SIC_don_espadartes_connections
 		prerequisite = { focus = SIC_deal_with_the_republican_issue }
-		cost = 10
+		cost = 5
 		x = -1
 		y = 1
 		relative_position_id = SIC_deal_with_the_republican_issue
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_don_espadartes_connections"
-			
+			country_event = { days = 0 id = sicameon_frtr.14 }
 		}
 	}
 
@@ -64,14 +68,14 @@ focus_tree = {
 		id = SIC_what_does_falangism_stand_for
 		icon = GFX_focus_spa_the_phalanx_ascendant
 		prerequisite = { focus = SIC_deal_with_the_republican_issue }
-		cost = 10
+		cost = 5
 		x = 1
 		y = 1
 		relative_position_id = SIC_deal_with_the_republican_issue
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_what_does_falangism_stand_for"
-			
+			country_event = { days = 0 id = sicameon_frtr.15 }
 		}
 	}
 	
@@ -80,14 +84,17 @@ focus_tree = {
 		icon = GFX_focus_rom_parties_end
 		prerequisite = { focus = SIC_what_does_falangism_stand_for }
 		prerequisite = { focus = SIC_don_espadartes_connections }
-		cost = 10
+		cost = 2
 		x = 0
 		y = 2
 		relative_position_id = SIC_deal_with_the_republican_issue
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_a_problem_solved"
-			
+			swap_ideas = {
+				remove_idea = republican_tension_1
+				add_idea = republican_tension_2
+			}
 		}
 	}
 
@@ -95,14 +102,14 @@ focus_tree = {
 		id = SIC_all_is_well
 		icon = GFX_SIC_all_is_well
 		prerequisite = { focus = SIC_a_problem_solved }
-		cost = 10
+		cost = 8
 		x = 0
 		y = 1
 		relative_position_id = SIC_a_problem_solved
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_all_is_well"
-			
+			country_event = { id = sicameon_frtr.17 days = 0 }
 		}
 	}
 	
@@ -113,7 +120,8 @@ focus_tree = {
 		icon = GFX_SIC_reshuffle_our_budget
 		prerequisite = { focus = SIC_the_decadent_regency }
 		mutually_exclusive = { focus = SIC_deal_with_the_republican_issue }
-		cost = 10
+		available = { has_country_flag = SIC_monarch_elected  }
+		cost = 8
 		x = 2
 		y = 1
 		relative_position_id = SIC_the_decadent_regency
@@ -128,7 +136,7 @@ focus_tree = {
 		id = SIC_whip_our_navy_back_into_shape
 		icon = GFX_SIC_whip_our_navy_back_into_shape
 		prerequisite = { focus = SIC_reshuffle_our_budget }
-		cost = 10
+		cost = 5
 		x = -1
 		y = 1
 		relative_position_id = SIC_reshuffle_our_budget
@@ -143,7 +151,7 @@ focus_tree = {
 		id = SIC_a_show_of_strength
 		icon = GFX_SIC_a_show_of_strength
 		prerequisite = { focus = SIC_reshuffle_our_budget }
-		cost = 10
+		cost = 5
 		x = 1
 		y = 1
 		relative_position_id = SIC_reshuffle_our_budget
@@ -6492,6 +6500,13 @@ focus_tree = {
         cost = 10
         x = 45
         y = 0
+		available = {
+			has_country_leader = {
+				id = 50001
+				ruling_only = yes 
+				name = "Petronilo of Midoria"
+			}
+		}
         #bypass = {
         #    has_country_flag = #Petronilo has been elected Duke
         #}
@@ -6951,6 +6966,7 @@ focus_tree = {
 			army_experience = -15
 			air_experience = -15
 			navy_experience = -15
+			remove_unit_leader = 5131
 		}
 	}
 
@@ -7572,13 +7588,17 @@ focus_tree = {
 
 	focus = {
 		id = SIC_a_phantom_from_the_past
-		icon = GFX_
+		icon = GFX_SIC_a_herzlander_grand_duke
 		cost = 10
 		x = 80
 		y = 8
 		ai_will_do = { factor = 100 }
 		available = {
-			
+			has_country_leader = {
+				id = 50003
+				ruling_only = yes 
+				name = "Frederick of Yale-Gamia"
+			}
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_a_phantom_from_the_past"
@@ -7588,7 +7608,7 @@ focus_tree = {
 
 	focus = {
 		id = SIC_for_the_kaiserreich
-		icon = GFX_
+		icon = GFX_SIC_for_the_kaiserreich
 		prerequisite = { focus = SIC_a_phantom_from_the_past }
 		cost = 10
 		x = -4
@@ -7603,7 +7623,7 @@ focus_tree = {
 
 	focus = {
 		id = SIC_scuash_local_resistance
-		icon = GFX_
+		icon = GFX_SIC_squash_local_resistance
 		prerequisite = { focus = SIC_for_the_kaiserreich }
 		mutually_exclusive = { focus = SIC_make_compromisses }
 		cost = 10
@@ -7619,7 +7639,7 @@ focus_tree = {
 
 	focus = {
 		id = SIC_combat_crime_with_extreme_prejudice
-		icon = GFX_
+		icon = GFX_SIC_combat_crime_with_extreme_prejudice
 		prerequisite = { focus = SIC_scuash_local_resistance }
 		cost = 10
 		x = -1
@@ -7634,7 +7654,7 @@ focus_tree = {
 
 	focus = {
 		id = SIC_raze_coasts
-		icon = GFX_
+		icon = GFX_SIC_raze_coasts
 		prerequisite = { focus = SIC_combat_crime_with_extreme_prejudice }
 		cost = 10
 		x = 0
@@ -7649,7 +7669,7 @@ focus_tree = {
 
 	focus = {
 		id = SIC_die_republikanischen_ratten
-		icon = GFX_
+		icon = GFX_SIC_die_ratten
 		prerequisite = { focus = SIC_scuash_local_resistance }
 		cost = 10
 		x = 1
@@ -7664,7 +7684,7 @@ focus_tree = {
 
 	focus = {
 		id = SIC_the_law_of_boreas
-		icon = GFX_
+		icon = GFX_SIC_the_law_of_boreas
 		prerequisite = { focus = SIC_die_republikanischen_ratten }
 		cost = 10
 		x = 0
@@ -7679,7 +7699,7 @@ focus_tree = {
 
 	focus = {
 		id = SIC_make_compromisses
-		icon = GFX_
+		icon = GFX_SIC_make_compromises
 		prerequisite = { focus = SIC_for_the_kaiserreich }
 		mutually_exclusive = { focus = SIC_scuash_local_resistance }
 		cost = 10
@@ -7695,7 +7715,7 @@ focus_tree = {
 
 	focus = {
 		id = SIC_an_unorthodox_solution
-		icon = GFX_
+		icon = GFX_SIC_an_unorthodox_solution
 		prerequisite = { focus = SIC_make_compromisses }
 		cost = 10
 		x = -1
@@ -7710,7 +7730,7 @@ focus_tree = {
 
 	focus = {
 		id = SIC_pirates_of_the_grand_duke
-		icon = GFX_
+		icon = GFX_SIC_pirates_of_the_grand_duke
 		prerequisite = { focus = SIC_an_unorthodox_solution }
 		cost = 10
 		x = 0
@@ -7725,7 +7745,7 @@ focus_tree = {
 
 	focus = {
 		id = SIC_let_the_countryside_be
-		icon = GFX_
+		icon = GFX_SIC_let_the_countryside_be
 		prerequisite = { focus = SIC_make_compromisses }
 		cost = 10
 		x = 1
@@ -7740,7 +7760,7 @@ focus_tree = {
 
 	focus = {
 		id = SIC_firm_but_fair
-		icon = GFX_
+		icon = GFX_SIC_firm_but_fair
 		prerequisite = { focus = SIC_let_the_countryside_be }
 		cost = 10
 		x = 0
@@ -7755,7 +7775,7 @@ focus_tree = {
 
 	focus = {
 		id = SIC_applaud_the_regency
-		icon = GFX_
+		icon = GFX_SIC_applaud_the_regency
 		prerequisite = { focus = SIC_a_phantom_from_the_past }
 		cost = 10
 		x = 4
@@ -7770,7 +7790,7 @@ focus_tree = {
 
 	focus = {
 		id = SIC_work_with_defunct_council
-		icon = GFX_
+		icon = GFX_SIC_work_with_the_defunct_council
 		prerequisite = { focus = SIC_applaud_the_regency }
 		cost = 10
 		x = 0
@@ -7785,7 +7805,7 @@ focus_tree = {
 
 	focus = {
 		id = SIC_sway_the_religious
-		icon = GFX_
+		icon = GFX_SIC_sway_the_religious
 		prerequisite = { focus = SIC_work_with_defunct_council }
 		cost = 10
 		x = -1
@@ -7800,7 +7820,7 @@ focus_tree = {
 
 	focus = {
 		id = SIC_meet_with_the_far_right
-		icon = GFX_
+		icon = GFX_SIC_meet_with_the_far_right
 		prerequisite = { focus = SIC_work_with_defunct_council }
 		cost = 10
 		x = 1
@@ -7815,7 +7835,7 @@ focus_tree = {
 
 	focus = {
 		id = SIC_no_second_chances
-		icon = GFX_
+		icon = GFX_SIC_no_second_chances
 		prerequisite = { focus = SIC_meet_with_the_far_right }
 		prerequisite = { focus = SIC_sway_the_religious }
 		cost = 10
@@ -7828,6 +7848,284 @@ focus_tree = {
 			
 		}
 	}
+
+##########################################################################
+##########################################################################
+##########################################################################
+##########################################################################
+##########################################################################
+##########################################################################
+##########################################################################
+##########################################################################
+##########################################################################
+##########################################################################
+##########################################################################
+##########################################################################
+
+	focus = {
+		id = SIC_facing_the_sun
+		icon = GFX_SIC_facing_the_sun
+		cost = 10
+		x = 104
+		y = 0
+		ai_will_do = { factor = 100 }
+		available = {
+			has_country_leader = {
+				id = 50003
+				ruling_only = yes 
+				name = "Frederick of Yale-Gamia"
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_facing_the_sun"
+			
+		}
+	}
+
+	focus = {
+		id = SIC_betray_the_revolution
+		icon = GFX_SIC_betray_the_revolution
+		prerequisite = { focus = SIC_facing_the_sun }
+		mutually_exclusive = { focus = SIC_an_almighty_caudillo }
+		cost = 10
+		x = -2
+		y = 1
+		relative_position_id = SIC_facing_the_sun
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_betray_the_revolution"
+			
+		}
+	}
+
+	focus = {
+		id = SIC_integrate_reactionaries
+		icon = GFX_SIC_sway_the_religious
+		prerequisite = { focus = SIC_betray_the_revolution }
+		cost = 10
+		x = -2
+		y = 1
+		relative_position_id = SIC_betray_the_revolution
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_integrate_reactionaries"
+			
+		}
+	}
+
+	focus = {
+		id = SIC_absorb_monarchists
+		icon = GFX_SIC_absorb_monarchists
+		prerequisite = { focus = SIC_integrate_reactionaries }
+		mutually_exclusive = { focus = SIC_forget_the_old_right }
+		cost = 10
+		x = -2
+		y = 2
+		relative_position_id = SIC_integrate_reactionaries
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_absorb_monarchists"
+			
+		}
+	}
+
+	focus = {
+		id = SIC_soldiers_of_a_great_sicameon
+		icon = GFX_SIC_soldiers_of_a_great_sicameon
+		prerequisite = { focus = SIC_integrate_reactionaries }
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = SIC_integrate_reactionaries
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_soldiers_of_a_great_sicameon"
+			
+		}
+	}
+
+	focus = {
+		id = SIC_forget_the_old_right
+		icon = GFX_SIC_forget_the_old_right
+		prerequisite = { focus = SIC_integrate_reactionaries }
+		mutually_exclusive = { focus = SIC_absorb_monarchists }
+		cost = 10
+		x = 2
+		y = 2
+		relative_position_id = SIC_integrate_reactionaries
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_forget_the_old_right"
+			
+		}
+	}
+
+	focus = {
+		id = SIC_spring_will_return
+		icon = GFX_SIC_spring_will_return
+		prerequisite = { focus = SIC_betray_the_revolution focus = SIC_an_almighty_caudillo }
+		cost = 10
+		x = 0
+		y = 2
+		relative_position_id = SIC_facing_the_sun
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_spring_will_return"
+			
+		}
+	}
+
+	focus = {
+		id = SIC_a_socialist_outlook
+		icon = GFX_SIC_a_socialist_oulook
+		prerequisite = { focus = SIC_spring_will_return }
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = SIC_spring_will_return
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_a_socialist_outlook"
+			
+		}
+	}
+
+	focus = {
+		id = SIC_our_karthinian_brethen
+		icon = GFX_goal_WNG_meet_beakolini
+		prerequisite = { focus = SIC_a_socialist_outlook }
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = SIC_a_socialist_outlook
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_our_karthinian_brethen"
+			
+		}
+	}
+
+	focus = {
+		id = SIC_a_nation_of_warriors
+		icon = GFX_SIC_a_nation_of_warriors
+		prerequisite = { focus = SIC_forget_the_old_right  focus = SIC_absorb_monarchists }
+		prerequisite = { focus = SIC_our_karthinian_brethen }
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = SIC_forget_the_old_right
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_a_nation_of_warriors"
+			
+		}
+	}
+	
+	focus = {
+		id = SIC_a_legacy_to_consider
+		icon = GFX_SIC_return_in_karthin
+		prerequisite = { focus = SIC_an_end_to_espadarte  focus = SIC_sway_the_workers }
+		prerequisite = { focus = SIC_our_karthinian_brethen }
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = SIC_an_end_to_espadarte
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_a_legacy_to_consider"
+			
+		}
+	}
+
+	focus = {
+		id = SIC_an_almighty_caudillo
+		icon = GFX_SIC_an_almighty_caudillo
+		prerequisite = { focus = SIC_facing_the_sun }
+		mutually_exclusive = { focus = SIC_betray_the_revolution }
+		cost = 10
+		x = 2
+		y = 1
+		relative_position_id = SIC_facing_the_sun
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_an_almighty_caudillo"
+			
+		}
+	}
+
+	focus = {
+		id = SIC_our_former_allies
+		icon = GFX_SIC_our_former_allies
+		prerequisite = { focus = SIC_an_almighty_caudillo }
+		cost = 10
+		x = 2
+		y = 1
+		relative_position_id = SIC_an_almighty_caudillo
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_our_former_allies"
+			
+		}
+	}
+
+	focus = {
+		id = SIC_an_end_to_espadarte
+		icon = GFX_SIC_anti_corruption_campaign
+		prerequisite = { focus = SIC_our_former_allies }
+		mutually_exclusive = { focus = SIC_sway_the_workers }
+		cost = 10
+		x = -2
+		y = 2
+		relative_position_id = SIC_our_former_allies
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_an_end_to_espadarte"
+			
+		}
+	}
+
+	focus = {
+		id = SIC_destroy_harmonists
+		icon = GFX_SIC_destory_the_harmonists
+		prerequisite = { focus = SIC_our_former_allies }
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = SIC_our_former_allies
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_destroy_harmonists"
+			
+		}
+	}
+
+	focus = {
+		id = SIC_sway_the_workers
+		icon = GFX_SIC_sway_the_workers
+		prerequisite = { focus = SIC_our_former_allies }
+		mutually_exclusive = { focus = SIC_an_end_to_espadarte }
+		cost = 10
+		x = 2
+		y = 2
+		relative_position_id = SIC_our_former_allies
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_sway_the_workers"
+			
+		}
+	}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

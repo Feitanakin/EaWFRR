@@ -1,0 +1,65 @@
+SIC_anti_piracy = {
+	SIC_anti_piracy_remove_1 = {
+		icon = hammer_and_horseshoe_decision
+		visible = {
+			has_idea = swordfish_claws
+		}
+		available = {
+			has_idea = swordfish_claws
+		}
+		cost = 40
+		fire_only_once = yes
+		days_remove = 40
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove LCT_agitate_in_from target: [From.GetName]"
+			swap_ideas = { remove_idea = swordfish_claws add_idea = swordfish_claws_1 }
+		}
+	}
+	SIC_anti_piracy_remove_1 = {
+		icon = hammer_and_horseshoe_decision
+		visible = {
+			has_idea = swordfish_claws_1
+		}
+		available = {
+			has_idea = swordfish_claws_1
+		}
+		cost = 40
+		fire_only_once = yes
+		days_remove = 40
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove LCT_agitate_in_from target: [From.GetName]"
+			swap_ideas = { remove_idea = swordfish_claws add_idea_1 = swordfish_claws_2 }
+		}
+	}
+	SIC_anti_piracy_remove_1 = {
+		icon = hammer_and_horseshoe_decision
+		visible = {
+			has_idea = swordfish_claws_2
+		}
+		available = {
+			has_idea = swordfish_claws_2
+		}
+		cost = 40
+		fire_only_once = yes
+		days_remove = 40
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove LCT_agitate_in_from target: [From.GetName]"
+			remove_idea = swordfish_claws_2
+		}
+	}
+}

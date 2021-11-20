@@ -1995,4 +1995,958 @@ spriteTypes = {
 		legacy_lazy_load = no
 	}
 	
+####################################################################
+####################################################################
+####################################################################
+####################################################################
+####################################################################
+####################################################################
+####################################################################
+####################################################################
+####################################################################
+####################################################################
+####################################################################
+	
+	SpriteType = {
+		name = "GFX_SIC_a_herzlander_grand_duke_shine"
+		texturefile = "gfx/interface/goals/SIC_a_herzlander_grand_duke.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/SIC_a_herzlander_grand_duke.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/SIC_a_herzlander_grand_duke.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	
+
+	SpriteType = {
+		name = "GFX_SIC_an_unorthodox_solution_shine"
+		texturefile = "gfx/interface/goals/SIC_an_unorthodox_solution.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/SIC_an_unorthodox_solution.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/SIC_an_unorthodox_solution.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_SIC_applaud_the_regency_shine"
+		texturefile = "gfx/interface/goals/SIC_applaud_the_regency.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/SIC_applaud_the_regency.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/SIC_applaud_the_regency.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	
+	SpriteType = {
+		name = "GFX_SIC_combat_crime_with_extreme_prejudice_shine"
+		texturefile = "gfx/interface/goals/SIC_combat_crime_with_extreme_prejudice.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/SIC_combat_crime_with_extreme_prejudice.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/SIC_combat_crime_with_extreme_prejudice.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	
+	SpriteType = {
+		name = "GFX_SIC_die_ratten_shine"
+		texturefile = "gfx/interface/goals/SIC_die_ratten.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/SIC_die_ratten.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/SIC_die_ratten.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	
+	SpriteType = {
+		name = "GFX_SIC_firm_but_fair_shine"
+		texturefile = "gfx/interface/goals/SIC_firm_but_fair.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/SIC_firm_but_fair.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/SIC_firm_but_fair.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	
+	SpriteType = {
+		name = "GFX_SIC_for_the_kaiserreich_shine"
+		texturefile = "gfx/interface/goals/SIC_for_the_kaiserreich.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/SIC_for_the_kaiserreich.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/SIC_for_the_kaiserreich.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	
+	SpriteType = {
+		name = "GFX_SIC_let_the_countryside_be_shine"
+		texturefile = "gfx/interface/goals/SIC_let_the_countryside_be.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/SIC_let_the_countryside_be.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/SIC_let_the_countryside_be.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	
+	SpriteType = {
+		name = "GFX_SIC_make_compromises_shine"
+		texturefile = "gfx/interface/goals/SIC_make_compromises.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/SIC_make_compromises.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/SIC_make_compromises.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	
+	SpriteType = {
+		name = "GFX_SIC_meet_with_the_far_right_shine"
+		texturefile = "gfx/interface/goals/SIC_meet_with_the_far_right.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/SIC_meet_with_the_far_right.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/SIC_meet_with_the_far_right.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	
+	SpriteType = {
+		name = "GFX_SIC_no_second_chances_shine"
+		texturefile = "gfx/interface/goals/SIC_no_second_chances.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/SIC_no_second_chances.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/SIC_no_second_chances.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	
+	SpriteType = {
+		name = "GFX_SIC_pirates_of_the_grand_duke_shine"
+		texturefile = "gfx/interface/goals/SIC_pirates_of_the_grand_duke.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/SIC_pirates_of_the_grand_duke.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/SIC_pirates_of_the_grand_duke.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	
+	SpriteType = {
+		name = "GFX_SIC_raze_coasts_shine"
+		texturefile = "gfx/interface/goals/SIC_raze_coasts.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/SIC_raze_coasts.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/SIC_raze_coasts.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	
+	SpriteType = {
+		name = "GFX_SIC_squash_local_resistance_shine"
+		texturefile = "gfx/interface/goals/SIC_squash_local_resistance.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/SIC_squash_local_resistance.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/SIC_squash_local_resistance.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	
+	SpriteType = {
+		name = "GFX_SIC_sway_the_religious_shine"
+		texturefile = "gfx/interface/goals/SIC_sway_the_religious.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/SIC_sway_the_religious.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/SIC_sway_the_religious.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	
+	SpriteType = {
+		name = "GFX_SIC_the_law_of_boreas_shine"
+		texturefile = "gfx/interface/goals/SIC_the_law_of_boreas.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/SIC_the_law_of_boreas.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/SIC_the_law_of_boreas.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	
+	SpriteType = {
+		name = "GFX_SIC_work_with_the_defunct_council_shine"
+		texturefile = "gfx/interface/goals/SIC_work_with_the_defunct_council.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/SIC_work_with_the_defunct_council.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/SIC_work_with_the_defunct_council.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+####################################################################
+####################################################################
+####################################################################
+####################################################################
+####################################################################
+####################################################################
+####################################################################
+####################################################################
+####################################################################
+####################################################################
+####################################################################
+
+	SpriteType = {
+		name = "GFX_SIC_a_nation_of_warriors_shine"
+		texturefile = "gfx/interface/goals/SIC_a_nation_of_warriors.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/SIC_a_nation_of_warriors.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/SIC_a_nation_of_warriors.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_SIC_a_socialist_oulook_shine"
+		texturefile = "gfx/interface/goals/SIC_a_socialist_oulook.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/SIC_a_socialist_oulook.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/SIC_a_socialist_oulook.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_SIC_absorb_monarchists_shine"
+		texturefile = "gfx/interface/goals/SIC_absorb_monarchists.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/SIC_absorb_monarchists.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/SIC_absorb_monarchists.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_SIC_an_almighty_caudillo_shine"
+		texturefile = "gfx/interface/goals/SIC_an_almighty_caudillo.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/SIC_an_almighty_caudillo.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/SIC_an_almighty_caudillo.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_SIC_betray_the_revolution_shine"
+		texturefile = "gfx/interface/goals/SIC_betray_the_revolution.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/SIC_betray_the_revolution.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/SIC_betray_the_revolution.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_SIC_destory_the_harmonists_shine"
+		texturefile = "gfx/interface/goals/SIC_destory_the_harmonists.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/SIC_destory_the_harmonists.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/SIC_destory_the_harmonists.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	
+	SpriteType = {
+		name = "GFX_SIC_facing_the_sun_shine"
+		texturefile = "gfx/interface/goals/SIC_facing_the_sun.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/SIC_facing_the_sun.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/SIC_facing_the_sun.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_SIC_forget_the_old_right_shine"
+		texturefile = "gfx/interface/goals/SIC_forget_the_old_right.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/SIC_forget_the_old_right.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/SIC_forget_the_old_right.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	
+	SpriteType = {
+		name = "GFX_SIC_our_former_allies_shine"
+		texturefile = "gfx/interface/goals/SIC_our_former_allies.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/SIC_our_former_allies.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/SIC_our_former_allies.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_SIC_soldiers_of_a_great_sicameon_shine"
+		texturefile = "gfx/interface/goals/SIC_soldiers_of_a_great_sicameon.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/SIC_soldiers_of_a_great_sicameon.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/SIC_soldiers_of_a_great_sicameon.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	
+	SpriteType = {
+		name = "GFX_SIC_spring_will_return_shine"
+		texturefile = "gfx/interface/goals/SIC_spring_will_return.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/SIC_spring_will_return.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/SIC_spring_will_return.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_SIC_sway_the_workers_shine"
+		texturefile = "gfx/interface/goals/SIC_sway_the_workers.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/SIC_sway_the_workers.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/SIC_sway_the_workers.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+
 }

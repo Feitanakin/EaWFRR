@@ -17,7 +17,45 @@ ideas = {
 				communism_drift = 0.03
 			}
 		}
-		
+
+		republican_tension_1 = {
+			name = republican_tension
+			
+			picture = republican_tension
+			
+			allowed = {
+				tag = SIC
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.10
+				democratic_drift = 0.08
+				communism_drift = 0.08
+			}
+		}
+
+		republican_tension_2 = {
+			name = republican_tension
+			
+			picture = republican_tension
+			
+			allowed = {
+				tag = SIC
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.30
+				political_power_factor = -0.20
+				democratic_drift = 0.11
+				communism_drift = 0.11
+				fascism_drift = 0.06
+			}
+		}
+
 		dead_monarchy = {
 			name = dead_monarchy
 			
@@ -50,6 +88,41 @@ ideas = {
 				consumer_goods_factor = 0.04
 				stability_factor = -0.07
 				min_export = 0.2
+			}
+		}
+		
+		swordfish_claws_1 = {
+			name = swordfish_claws
+			
+			picture = swordfish_claws
+			
+			allowed = {
+				tag = SIC
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.02
+				stability_factor = -0.05
+				min_export = 0.2
+			}
+		}
+	
+		swordfish_claws_2 = {
+			name = swordfish_claws
+			
+			picture = swordfish_claws
+			
+			allowed = {
+				tag = SIC
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.02
+				stability_factor = -0.03
 			}
 		}
 		
