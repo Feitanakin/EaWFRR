@@ -512,4 +512,86 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/SIC_sway_the_workers.dds"
 	}
 
+####################################################################
+####################################################################
+####################################################################
+####################################################################
+####################################################################
+####################################################################
+####################################################################
+####################################################################
+####################################################################
+####################################################################
+####################################################################
+
+	SpriteType = {
+		name = "GFX_SIC_restitutor_orbis"
+		texturefile = "gfx/interface/goals/SIC_restitutor_orbis.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_SIC_resurrection_of_the_spirit"
+		texturefile = "gfx/interface/goals/SIC_resurrection_of_the_spirit.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_SIC_princeps_senatus"
+		texturefile = "gfx/interface/goals/SIC_princeps_senatus.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_SIC_pater_patriae"
+		texturefile = "gfx/interface/goals/SIC_pater_patriae.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_SIC_imperial_mythos"
+		texturefile = "gfx/interface/goals/SIC_imperial_mythos.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_SIC_harmonia_et_honor"
+		texturefile = "gfx/interface/goals/SIC_harmonia_et_honor.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_SIC_generals_of_the_empire"
+		texturefile = "gfx/interface/goals/SIC_generals_of_the_empire.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_SIC_dux_esercitus"
+		texturefile = "gfx/interface/goals/SIC_dux_esercitus.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_SIC_bello_griffkino"
+		texturefile = "gfx/interface/goals/SIC_bello_griffkino.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_SIC_barbaroi_councils"
+		texturefile = "gfx/interface/goals/SIC_barbaroi_councils.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_SIC_true_empire_of_griffonkind"
+		texturefile = "gfx/interface/goals/SIC_true_empire_of_griffonkind.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_SIC_something_old_made_immortal"
+		texturefile = "gfx/interface/goals/SIC_something_old_made_immortal.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_SIC_something_dead_made_new"
+		texturefile = "gfx/interface/goals/SIC_something_dead_made_new.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_SIC_revive_language"
+		texturefile = "gfx/interface/goals/SIC_revive_language.dds"
+	}
+
 }

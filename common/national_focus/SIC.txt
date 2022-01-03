@@ -7590,7 +7590,7 @@ focus_tree = {
 		id = SIC_a_phantom_from_the_past
 		icon = GFX_SIC_a_herzlander_grand_duke
 		cost = 10
-		x = 80
+		x = 90
 		y = 8
 		ai_will_do = { factor = 100 }
 		available = {
@@ -8072,7 +8072,6 @@ focus_tree = {
 		id = SIC_an_end_to_espadarte
 		icon = GFX_SIC_anti_corruption_campaign
 		prerequisite = { focus = SIC_our_former_allies }
-		mutually_exclusive = { focus = SIC_sway_the_workers }
 		cost = 10
 		x = -2
 		y = 2
@@ -8103,7 +8102,6 @@ focus_tree = {
 		id = SIC_sway_the_workers
 		icon = GFX_SIC_sway_the_workers
 		prerequisite = { focus = SIC_our_former_allies }
-		mutually_exclusive = { focus = SIC_an_end_to_espadarte }
 		cost = 10
 		x = 2
 		y = 2
@@ -8115,13 +8113,240 @@ focus_tree = {
 		}
 	}
 
+#####################################################################################
+#####################################################################################
+#####################################################################################
+#####################################################################################
+#####################################################################################
+#####################################################################################
+#####################################################################################
+#####################################################################################
+#####################################################################################
+#####################################################################################
+#####################################################################################
+#####################################################################################
+#####################################################################################
+#####################################################################################
 
+	focus = {
+		id = SIC_restitutor_orbis
+		icon = GFX_SIC_restitutor_orbis
+		prerequisite = { focus = SIC_return_in_karthin }
+		cost = 10
+		x = 75
+		y = 7
+		ai_will_do = { factor = 100 }
+		available = {
+			
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_restitutor_orbis"
+			
+		}
+	}
 
+	focus = {
+		id = SIC_imperial_mythos
+		icon = GFX_SIC_imperial_mythos
+		prerequisite = { focus = SIC_restitutor_orbis }
+		cost = 10
+		x = -2
+		y = 1
+		relative_position_id = SIC_restitutor_orbis
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_imperial_mythos"
+			
+		}
+	}
 
+	focus = {
+		id = SIC_true_empire_of_griffonkind
+		icon = GFX_SIC_true_empire_of_griffonkind
+		prerequisite = { focus = SIC_restitutor_orbis }
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = SIC_restitutor_orbis
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_true_empire_of_griffonkind"
+			
+		}
+	}
+	
+	focus = {
+		id = SIC_revive_language
+		icon = GFX_SIC_revive_language
+		prerequisite = { focus = SIC_restitutor_orbis }
+		cost = 10
+		x = 2
+		y = 1
+		relative_position_id = SIC_restitutor_orbis
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_revive_language"
+			
+		}
+	}
 
+	focus = {
+		id = SIC_harmonia_et_honor
+		icon = GFX_SIC_harmonia_et_honor
+		prerequisite = { focus = SIC_true_empire_of_griffonkind }
+		prerequisite = { focus = SIC_imperial_mythos }
+		prerequisite = { focus = SIC_revive_language }
+		cost = 10
+		x = -1
+		y = 1
+		relative_position_id = SIC_true_empire_of_griffonkind
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_harmonia_et_honor"
+			
+		}
+	}
 
+	focus = {
+		id = SIC_pater_patriae
+		icon = GFX_SIC_pater_patriae
+		prerequisite = { focus = SIC_true_empire_of_griffonkind }
+		cost = 10
+		x = 0
+		y = 2
+		relative_position_id = SIC_true_empire_of_griffonkind
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_pater_patriae"
+			
+		}
+	}
 
+	focus = {
+		id = SIC_barbaroi_councils
+		icon = GFX_SIC_barbaroi_councils
+		prerequisite = { focus = SIC_harmonia_et_honor }
+		cost = 10
+		x = -2
+		y = 1
+		relative_position_id = SIC_harmonia_et_honor
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_barbaroi_councils"
+			
+		}
+	}
 
+	focus = {
+		id = SIC_princeps_senatus
+		icon = GFX_SIC_princeps_senatus
+		prerequisite = { focus = SIC_harmonia_et_honor }
+		cost = 10
+		x = 0
+		y = 2
+		relative_position_id = SIC_harmonia_et_honor
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_princeps_senatus"
+			
+		}
+	}
+
+	focus = {
+		id = SIC_something_dead_made_new
+		icon = GFX_SIC_something_dead_made_new
+		prerequisite = { focus = SIC_barbaroi_councils }
+		prerequisite = { focus = SIC_princeps_senatus }
+		cost = 10
+		x = 0
+		y = 2
+		relative_position_id = SIC_barbaroi_councils
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_something_dead_made_new"
+			
+		}
+	}
+
+	focus = {
+		id = SIC_resurrection_of_the_spirit
+		icon = GFX_SIC_resurrection_of_the_spirit
+		prerequisite = { focus = SIC_true_empire_of_griffonkind }
+		prerequisite = { focus = SIC_imperial_mythos }
+		prerequisite = { focus = SIC_revive_language }
+		cost = 10
+		x = 1
+		y = 1
+		relative_position_id = SIC_true_empire_of_griffonkind
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_resurrection_of_the_spirit"
+			
+		}
+	}
+
+	focus = {
+		id = SIC_generals_of_the_empire
+		icon = GFX_SIC_generals_of_the_empire
+		prerequisite = { focus = SIC_resurrection_of_the_spirit }
+		cost = 10
+		x = 2
+		y = 1
+		relative_position_id = SIC_resurrection_of_the_spirit
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_generals_of_the_empire"
+			
+		}
+	}
+
+	focus = {
+		id = SIC_dux_esercitus
+		icon = GFX_SIC_dux_esercitus
+		prerequisite = { focus = SIC_resurrection_of_the_spirit }
+		cost = 10
+		x = 0
+		y = 2
+		relative_position_id = SIC_resurrection_of_the_spirit
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_dux_esercitus"
+			
+		}
+	}
+
+	focus = {
+		id = SIC_something_old_made_immortal
+		icon = GFX_SIC_something_old_made_immortal
+		prerequisite = { focus = SIC_generals_of_the_empire }
+		prerequisite = { focus = SIC_dux_esercitus }
+		cost = 10
+		x = 0
+		y = 2
+		relative_position_id = SIC_generals_of_the_empire
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_something_old_made_immortal"
+			
+		}
+	}
+
+	focus = {
+		id = SIC_bello_griffkino
+		icon = GFX_SIC_bello_griffkino
+		prerequisite = { focus = SIC_pater_patriae }
+		prerequisite = { focus = SIC_something_dead_made_new }
+		prerequisite = { focus = SIC_something_old_made_immortal }
+		cost = 10
+		x = 0
+		y = 3
+		relative_position_id = SIC_pater_patriae
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_bello_griffkino"
+			
+		}
+	}
 
 
 
