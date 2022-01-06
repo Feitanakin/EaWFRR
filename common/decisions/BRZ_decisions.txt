@@ -6238,13 +6238,8 @@ BRZ_protectorates = {
 			hidden_effect = {
 				GRI = {
 					set_cosmetic_tag = herzland_dogs
-					create_country_leader = {
-						name = "Occupational Authority"
-						picture = "gfx/leaders/BRZ/occupational_authority.tga"
-						expire = "1965.1.1"
-						ideology = nazism
-						traits = {  }
-					}
+					recruit_character = BRZ_occupation
+					promote_character = BRZ_occupation
 				}
 			}
 		}
@@ -6285,13 +6280,8 @@ BRZ_protectorates = {
 			hidden_effect = {
 				RCT = {
 					set_cosmetic_tag = riverlands_dogs
-					create_country_leader = {
-						name = "Occupational Authority"
-						picture = "gfx/leaders/BRZ/occupational_authority.tga"
-						expire = "1965.1.1"
-						ideology = nazism
-						traits = {  }
-					}
+					recruit_character = BRZ_occupation
+					promote_character = BRZ_occupation
 				}
 			}
 		}

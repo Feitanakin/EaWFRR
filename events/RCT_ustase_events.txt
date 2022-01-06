@@ -14,17 +14,8 @@ country_event = {
 	#Full Takeover
 	option = {
 		name = rivercityustase.1.a
-		create_country_leader = {
-			name = "Arclight"
-			desc = "POLITICS_ARCLIGHT_DESC"
-			picture = "Arclight.tga"
-			expire = "1965.1.1"
-			ideology = nazism
-			traits = {
-				ohs_director
-				dictator
-			}
-		}
+		recruit_character = RCT_Arclight
+		promote_character = RCT_Arclight
 		set_politics = { ruling_party = fascism elections_allowed = no }
 		add_popularity = { ideology = fascism popularity = 0.3}
 		add_stability = -0.10

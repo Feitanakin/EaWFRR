@@ -31,6 +31,7 @@
  RCT_ohs_party:0 "OHS"
  RCT_ohs_party_long:0 "The Office of Harmonic Services"
  
+ RCT_Arclight:0 "Arclight"
 
  #### IDEAS #### 
  RCT_eastern_eqs:0 "Equestria Of The East"
@@ -1697,8 +1698,19 @@
  RCT_CAS_equipment_3:0 "SOKO J-15 Orao"
  RCT_CAS_equipment_3_short:0 "SOKO J-15"
 
+ ### General Descriptions ###
+ RCT_brilliant_specter_desc:0 "Born moments after his twin sister Brilliant Shade, Brilliant Specter was raised in Rijekograd. His childhood was fairly unremarkable, with the colt taking to the books and learning through the magic of words and images about the world, and improving on his illusion magic in the process as well. Stories of Equestria with its immortal Princess inspired him to pursue a career in the military, hoping to make a positive impact on the River Republic's standing in east Griffonia. An ardent supporter of Harmony, he will do all that he can to defend his homeland."
+ RCT_brilliant_shade_desc:0 "Born moments before her twin brother Brilliant Specter, Brilliant Shade was raised in Rijekograd, her childhood filled with adventure and exploration. She went through every nook and cranny she could, using her burgeoning talent with illusion magic to stay out of trouble. Tales of the once-powerful Griffonian Empire inspired her to pursue a career in the Republic's armed forces, hoping to one day bring the fight to what's left of the Empire. An avid proponent of Harmony, she will do all she can to protect the integrity of her homeland."
+
+
  ####Tech Sharing Group####
  Equestria_exchange_mission_name:0 "The Equestrian Exchange"
  Equestria_exchange_mission_desc:0 "Rijekan and Equestrian scientists coordinate together, to help the harmonic Riverland nation to catch up to latest developments in Canterlot. Although the distant between the countries is vast, modern communication means that knowledge can still be shared effectively."
 
  Riverland_Socialist_Union:0 "Riverland Socialist Union"
+
+ RCT_EQS_Helped:0 "Equestrian Exchange"
+ RCT_EQS_Helped_a_Lot:0 "Equestrian Exchange"
+ RCT_EQS_Exchange_mission_buddies:0 "Equestrian Exchange"
+ RCT_EQS_didnt_Helped:0 "Refused Equestrian Exchange"
+ RCT_EQS_didnt_Helped_in_Exchange:0 "Refused Equestrian Exchange"

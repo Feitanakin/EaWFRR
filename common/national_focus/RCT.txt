@@ -3886,41 +3886,36 @@ add_war_support = 0.15
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus RCT_red_saturday"
 			country_event = { id = rivercity.27 }
-			hidden_effect = {
-				create_corps_commander = {
-					name = "Gear Tail"
-					skill = 1
-					attack_skill = 1
-					defense_skill = 1
-					planning_skill = 1
-					logistics_skill = 1
-					desc = "GEAR_TAIL_DESC"
-					portrait_path = "gfx/leaders/RCT/Gear_Tail.tga"
-					traits = { armor_officer }
-					id = 657
-				}
-				create_corps_commander = {
-					name = "Twotail Tail"
-					skill = 1
-					attack_skill = 1
-					defense_skill = 1
-					planning_skill = 1
-					logistics_skill = 1
-					desc = "TWOTAIL_TAIL_DESC"
-					portrait_path = "gfx/leaders/RCT/Twotail_Tail.tga"
-					traits = { politically_connected }
-					id = 658
-					female = yes
-				}
-				random_army_leader = {
-					limit = { has_id = 657 }
-					save_global_event_target_as = RCT_Gear_Tail
-				}
-				random_army_leader = {
-					limit = { has_id = 658 }
-					save_global_event_target_as = RCT_Two_Tail
-				}
-			}
+		}
+	}
+	focus = {
+		id = RCT_proletarian_dictatorship
+		icon = GFX_caramel_socialism
+		prerequisite = { focus = RCT_red_saturday }
+		x = -4
+		y = 1
+		relative_position_id = RCT_red_saturday
+		mutually_exclusive = {
+			focus = RCT_independent_socialism
+		}
+		cost = 0
+		available = {
+			always = no
+		}
+
+		bypass = {
+			has_country_flag = RCT_caramels_coup
+		}
+		ai_will_do = {
+			factor = 50
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RCT_proletarian_dictatorship"
 		}
 	}
 	focus = {
@@ -6663,12 +6658,11 @@ add_war_support = 0.15
 			log = "[GetDateText]: [Root.GetName]: Focus RCT_promote_best"
 			army_experience = 50
 			add_war_support = 0.05
-			create_corps_commander = {
-				name = "Ironside Vandergallop"
-				portrait_path = "gfx/leaders/RCT/Ironside.tga"
+			add_corps_commander_role = {
+				character = RCT_ironside_vandergallop
 				traits = { harsh_leader commando hill_fighter ranger pony_race_trait }
-				skill = 4
-				id = 230
+				skill = 3
+				legacy_id = 230
 				female = no
 				attack_skill = 4
 				defense_skill = 2
@@ -8644,15 +8638,9 @@ focus_tree = {
 			custom_effect_tooltip = RCT_restore_government
 			hidden_effect = {
 				set_politics = { ruling_party = democratic elections_allowed = yes }
-				create_country_leader = {
-					name = "River Swirl"
-					desc = "POLITICS_RIVERSWIRL_DESC"
-					picture = "Riverswirl.tga"
-					expire = "1965.1.1"
+				promote_character = {
+					character = RCT_river_swirl
 					ideology = liberalism
-					traits = {
-
-					}
 				}
 				load_focus_tree = river_city_focus
 				complete_national_focus = RCT_strengthen_the_ohs
@@ -8879,13 +8867,20 @@ focus_tree = {
 				set_country_flag = RCT_caramel_took_power
 				set_politics = { ruling_party = communism elections_allowed = no }
 				add_popularity = { ideology = communism popularity = 0.60}
-				create_country_leader = {
-					name = "Caramel Haze"
-					picture = "Caramel_Haze_Com.tga"
-					desc = "POLITICS_CARAMELHAZE_DESC"
-					expire = "1965.1.1"
-					ideology = anti_revisionism
+				add_country_leader_role = {
+					character = RCT_caramel_haze
+					country_leader = {
+						desc = "POLITICS_CARAMELHAZE_DESC"
+						expire = "1965.1.1"
+						ideology = anti_revisionism
+						traits = {  }
+					}
+					promote_leader = yes
 				}
+				set_portraits = {
+            		character = RCT_caramel_haze 
+					army = { large ="gfx/leaders/RCT/Caramel_Haze_Com.tga" }
+        		}
 				load_focus_tree = river_city_focus
 				complete_national_focus = RCT_proletarian_dictatorship
 			}

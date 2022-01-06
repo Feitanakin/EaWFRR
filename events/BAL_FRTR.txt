@@ -9,17 +9,7 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = baltimare_frtr.1.a
-		create_corps_commander = {
-			name = "Starlight Glimmer"
-			portrait_path = "gfx/leaders/BAL/Starlight.tga"
-			id = 5559
-			traits = { trickster pony_race_trait }
-			skill = 4
-			attack_skill = 4
-			defense_skill = 2
-			planning_skill = 3
-			logistics_skill = 3
-		}
+		recruit_character = BAL_starlin_glimmer
 		hidden_effect = {
 			country_event = { days = 1 id = baltimare_frtr.2 }
 		}
@@ -50,13 +40,7 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = baltimare_frtr.3.a
-		create_country_leader = {
-			name = "Starlight Glimmer"
-			picture = "Starlight.tga"
-			expire = "1965.1.1"
-			ideology = stalinism
-			traits = {  }
-		}
+		promote_character = BAL_starlin_glimmer
 		hidden_effect = {
 			country_event = { days = 1 id = baltimare_frtr.4 }
 		}

@@ -192,7 +192,6 @@ focus_tree = {
 			
 		}
 	}
-	
 
 	###########Harmonic Tree##########################
 	focus = {
@@ -687,7 +686,7 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_looking_further_outward"
 			swap_ideas = {
 				remove_idea = SIC_har_diplo_idea
-				add_ideas = SIC_har_better_diplo_idea
+				add_idea = SIC_har_better_diplo_idea
 				}
 		}
 		search_filters = { FOCUS_FILTER_ANNEXATION }
@@ -1512,7 +1511,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_officialize_the_syndicates"
-			swap_ideas = { remove_idea = SIC_codified_syndicalism add_ideas = SIC_official_syndicates }
+			swap_ideas = { remove_idea = SIC_codified_syndicalism add_idea = SIC_official_syndicates }
 		}
 	}
 
@@ -1537,7 +1536,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_separate_syndicates"
-			swap_ideas = { remove_idea = SIC_official_syndicates add_ideas = SIC_syndicates_and_parishes }
+			swap_ideas = { remove_idea = SIC_official_syndicates add_idea = SIC_syndicates_and_parishes }
 		}
 	}
 
@@ -1585,7 +1584,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_replace_parishes"
-			swap_ideas = { remove_idea = SIC_official_syndicates add_ideas = SIC_syndicates_only }
+			swap_ideas = { remove_idea = SIC_official_syndicates add_idea = SIC_syndicates_only }
 		}
 	}
 
@@ -1632,7 +1631,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_federal_syndicate"
 			add_political_power = 100
-			swap_ideas = { remove_idea = SIC_peasant_republic add_ideas = SIC_federal_syndicate_idea }
+			swap_ideas = { remove_idea = SIC_peasant_republic add_idea = SIC_federal_syndicate_idea }
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
@@ -1858,30 +1857,25 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_valentin_prodegies"
-			create_corps_commander = {
-				name = "Jose Pico"
-				picture = "jose_pico.tga"
-				traits = {
-					griffon_race_trait
-				}
+			add_corps_commander_role = {
+				character = SIC_jose_pico
+
+				traits = { griffon_race_trait }
 				skill = 2
 				attack_skill = 2
 				defense_skill = 2
 				planning_skill = 1
-				logistics_skill = 1
+				logistics_skill = 2
 			} custom_effect_tooltip = jose_pico_stats_tp
-			create_corps_commander = {
-				name = "Leila Ordona"
-				picture = "commie_waifu.tga"
-				traits = {
-					griffon_race_trait
-				}
+			add_corps_commander_role = {
+				character = SIC_leila_ordona
+
+				traits = { griffon_race_trait }
 				skill = 2
 				attack_skill = 2
 				defense_skill = 2
-				planning_skill = 1
+				planning_skill = 2
 				logistics_skill = 1
-				female = yes
 			} custom_effect_tooltip = leila_ordona_stats_tp
 		}
 	}
@@ -3906,7 +3900,7 @@ focus_tree = {
 			}
 			add_resource = { 
 				type = chromium
-				amount = 12
+				amount = 14
 				state = 570
 			}
 		}
@@ -3952,7 +3946,7 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_religious_education"
 			swap_ideas = {
 				remove_idea = SIC_church_schools
-				add_ideas = SIC_religious_schoolsA
+				add_idea = SIC_religious_schoolsA
 				}
 			add_popularity = {
 				ideology = neutrality 
@@ -3981,7 +3975,7 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_secular_future"
 			swap_ideas = {
 				remove_idea = SIC_church_schools
-				add_ideas = SIC_secular_schoolsA
+				add_idea = SIC_secular_schoolsA
 				}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH }
@@ -4087,7 +4081,7 @@ focus_tree = {
 				}
 				swap_ideas = {
 					remove_idea = SIC_religious_schoolsA
-					add_ideas = SIC_religious_schoolsAB
+					add_idea = SIC_religious_schoolsAB
 				}
 			}
 			if = {
@@ -4096,7 +4090,7 @@ focus_tree = {
 				}
 				swap_ideas = {
 					remove_idea = SIC_religious_schoolsAC
-					add_ideas = SIC_religious_schoolsABC
+					add_idea = SIC_religious_schoolsABC
 				}
 			}
 			add_popularity = {
@@ -4128,7 +4122,7 @@ focus_tree = {
 				}
 				swap_ideas = {
 					remove_idea = SIC_religious_schoolsA
-					add_ideas = SIC_religious_schoolsAC
+					add_idea = SIC_religious_schoolsAC
 				}
 			}
 			if = {
@@ -4137,7 +4131,7 @@ focus_tree = {
 				}
 				swap_ideas = {
 					remove_idea = SIC_religious_schoolsAB
-					add_ideas = SIC_religious_schoolsABC
+					add_idea = SIC_religious_schoolsABC
 				}
 			}
 			add_popularity = {
@@ -4169,7 +4163,7 @@ focus_tree = {
 				}
 				swap_ideas = {
 					remove_idea = SIC_secular_schoolsA
-					add_ideas = SIC_secular_schoolsAB
+					add_idea = SIC_secular_schoolsAB
 				}
 			}
 			if = {
@@ -4178,7 +4172,7 @@ focus_tree = {
 				}
 				swap_ideas = {
 					remove_idea = SIC_secular_schoolsAC
-					add_ideas = SIC_secular_schoolsABC
+					add_idea = SIC_secular_schoolsABC
 				}
 			}
 		}
@@ -4206,7 +4200,7 @@ focus_tree = {
 				}
 				swap_ideas = {
 					remove_idea = SIC_secular_schoolsA
-					add_ideas = SIC_secular_schoolsAC
+					add_idea = SIC_secular_schoolsAC
 				}
 			}
 			if = {
@@ -4215,7 +4209,7 @@ focus_tree = {
 				}
 				swap_ideas = {
 					remove_idea = SIC_secular_schoolsAB
-					add_ideas = SIC_secular_schoolsABC
+					add_idea = SIC_secular_schoolsABC
 				}
 			}
 		}
@@ -4338,7 +4332,7 @@ focus_tree = {
 			custom_effect_tooltip = SIC_school_buff
 			swap_ideas = {
 				remove_idea = SIC_religious_schoolsABC
-				add_ideas = SIC_religious_schoolsABCD
+				add_idea = SIC_religious_schoolsABCD
 			}
 			add_popularity = {
 				ideology = neutrality 
@@ -4368,7 +4362,7 @@ focus_tree = {
 			custom_effect_tooltip = SIC_school_buff
 			swap_ideas = {
 				remove_idea = SIC_secular_schoolsABC
-				add_ideas = SIC_secular_schoolsABCD
+				add_idea = SIC_secular_schoolsABCD
 			}
 		}
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL }
@@ -4432,7 +4426,7 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_FBIC_act"
 			swap_ideas = {
 				remove_idea = SIC_federal_reserve1
-				add_ideas = SIC_federal_reserve2
+				add_idea = SIC_federal_reserve2
 			}
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL }
@@ -4483,7 +4477,7 @@ focus_tree = {
 		id = SIC_minotaurian_friendship
 		icon = GFX_focus_indy_bullish_diplomacy
 		cost = 4
-		relative_position_id = SIC_looking_outwards
+		relative_position_id = SIC_looking_outward
 		x = 8
 		y = 1
 		ai_will_do = {
@@ -4498,8 +4492,7 @@ focus_tree = {
 			is_subject = no
 		}
 		prerequisite = {
-			focus = SIC_looking_outwards
-			focus = SIC_outwards
+			focus = SIC_looking_outward
 		}
 		will_lead_to_war_with = MIT
 		completion_reward = {
@@ -4799,28 +4792,28 @@ focus_tree = {
 				limit = { has_idea = SIC_militia_dependence }
 				swap_ideas = {
 					remove_idea = SIC_militia_dependence
-					add_ideas = SIC_militia_dependence1
+					add_idea = SIC_militia_dependence1
 				}
 			}
 			else_if = {
 				limit = { has_idea = SIC_militia_dependence1  }
 				swap_ideas = {
 					remove_idea = SIC_militia_dependence1
-					add_ideas = SIC_militia_dependence2
+					add_idea = SIC_militia_dependence2
 				}
 			}
 			else_if = {
 				limit = { has_idea = SIC_militia_dependence2 }
 				swap_ideas = {
 					remove_idea = SIC_militia_dependence2
-					add_ideas = SIC_militia_dependence3
+					add_idea = SIC_militia_dependence3
 				}
 			}
 			else_if = {
 				limit = { has_idea = SIC_militia_dependence3 }
 				swap_ideas = {
 					remove_idea = SIC_militia_dependence3
-					add_ideas = SIC_militia_dependence4
+					add_idea = SIC_militia_dependence4
 				}
 			}
 			else_if = {
@@ -4849,28 +4842,28 @@ focus_tree = {
 				limit = { has_idea = SIC_militia_dependence }
 				swap_ideas = {
 					remove_idea = SIC_militia_dependence
-					add_ideas = SIC_militia_dependence1
+					add_idea = SIC_militia_dependence1
 				}
 			}
 			else_if = {
 				limit = { has_idea = SIC_militia_dependence1  }
 				swap_ideas = {
 					remove_idea = SIC_militia_dependence1
-					add_ideas = SIC_militia_dependence2
+					add_idea = SIC_militia_dependence2
 				}
 			}
 			else_if = {
 				limit = { has_idea = SIC_militia_dependence2 }
 				swap_ideas = {
 					remove_idea = SIC_militia_dependence2
-					add_ideas = SIC_militia_dependence3
+					add_idea = SIC_militia_dependence3
 				}
 			}
 			else_if = {
 				limit = { has_idea = SIC_militia_dependence3 }
 				swap_ideas = {
 					remove_idea = SIC_militia_dependence3
-					add_ideas = SIC_militia_dependence4
+					add_idea = SIC_militia_dependence4
 				}
 			}
 			else_if = {
@@ -4898,9 +4891,9 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_grand_defense"
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = cat_grand_battle_plan
-				bonus = 1
+				cost_reduction = 0.5
 				uses = 1
 				category = cat_grand_battle_plan
 			}
@@ -4925,9 +4918,9 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_professional_army"
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = cat_superior_firepower
-				bonus = 1
+				cost_reduction = 0.5
 				uses = 1
 				category = cat_superior_firepower
 			}
@@ -4950,9 +4943,9 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_abolish_grover_tactics"
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = land_doc_bonus
-				bonus = 1
+				cost_reduction = 0.5
 				uses = 1
 				category = land_doctrine
 			}
@@ -5516,6 +5509,9 @@ focus_tree = {
 				popup = no
 				SIC_light_dockyards = 1
 			}
+			hidden_effect = {
+				add_ideas = SIC_light_dockyard_idea
+			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
@@ -5541,9 +5537,8 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_flexible_dockyards"
 			custom_effect_tooltip = SIC_flexible_dockyards_tooltip
-			set_technology = {
-				popup = no
-				SIC_flexible_dockyards = 1
+			hidden_effect = {
+				add_ideas = SIC_flexible_dockyards_idea
 			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -5622,7 +5617,7 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_prepare_against_piracy"
 			swap_ideas = {
 				remove_idea = SIC_merchant_cruiser1
-				add_ideas = SIC_merchant_cruiser2
+				add_idea = SIC_merchant_cruiser2
 			}
 			if = {
 				limit = {
@@ -5666,7 +5661,7 @@ focus_tree = {
 					has_dlc = "Man the Guns"
 				}
 				set_technology = {
-					SIC_destroyer_escort = 1
+					destroyer_escorts_mtg = 1
 				}
 			}
 			if = {
@@ -5676,7 +5671,7 @@ focus_tree = {
 					}
 				}
 				set_technology = {
-					SIC_destroyer_escort_nomtg = 1
+					destroyer_escorts_nomtg = 1
 				}
 				}
 		}
@@ -6044,7 +6039,7 @@ focus_tree = {
 					has_dlc = "Man the Guns"
 				}
 				set_technology = {
-					SIC_grand_cruiser = 1
+					basic_ship_hull_grand_cruiser = 1
 				}
 				add_tech_bonus = {
 					name = naval_bonus
@@ -6123,9 +6118,9 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_skirmish_theory"
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = cat_fleet_in_being
-				bonus = 1
+				cost_reduction = 0.5
 				uses = 2
 				category = cat_fleet_in_being
 			}
@@ -6150,9 +6145,9 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_carrier_theory"
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = cat_base_strike
-				bonus = 1
+				cost_reduction = 0.5
 				uses = 2
 				category = cat_base_strike
 			}
@@ -6194,9 +6189,9 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_next_generation_officers"
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = naval_doc_bonus
-				bonus = 1
+				cost_reduction = 0.5
 				uses = 2
 				category = naval_doctrine
 			}
@@ -6292,9 +6287,9 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_arahno_school"
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = air_doc_bonus
-				bonus = 1
+				cost_reduction = 0.5
 				uses = 2
 				category = air_doctrine
 			}
@@ -6371,11 +6366,11 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_adapting_patrols"
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = air_doc_bonus
-				bonus = 1
+				cost_reduction = 0.5
 				uses = 1
-				category = naval_air
+				category = air_doctrine
 			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -6395,9 +6390,9 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_support_doctrine"
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = battlefield_support_tree
-				bonus = 1
+				cost_reduction = 0.5
 				uses = 1
 				category = battlefield_support_tree
 			}
@@ -6419,9 +6414,9 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_sea_hawkeyes"
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = naval_doc_bonus
-				bonus = 1
+				cost_reduction = 0.5
 				uses = 1
 				category = naval_doctrine
 			}
@@ -6815,41 +6810,9 @@ focus_tree = {
 				remove_unit_leader = 782
 				remove_unit_leader = 783
 			}
-			create_corps_commander = {
-				name = "Sycle Coroanargint"
-				portrait_path = "gfx/leaders/BRF/Walrus.tga"
-				desc = BRF_Walrus_desc
-				traits = { griffon_race_trait career_officer brilliant_strategist organizer }
-				skill = 3
-				attack_skill = 4
-				defense_skill = 2
-				planning_skill = 3
-				logistics_skill = 1
-				id = 787
-			}
-			create_corps_commander = {
-				name = "Catelin Toderoiu"
-				portrait_path = "gfx/leaders/BRF/BRF_waifu.tga"
-				traits = { griffon_race_trait trait_reckless ranger swamp_fox }
-				skill = 2
-				attack_skill = 3
-				defense_skill = 2
-				planning_skill = 1
-				logistics_skill = 1
-				female = yes
-				id = 782
-			}
-			create_corps_commander = {
-				name = "Lexandru Leuescu"
-				portrait_path = "gfx/leaders/BRF/Lexandru.tga"
-				traits = { griffon_race_trait skilled_staffer trickster infantry_leader }
-				skill = 2
-				attack_skill = 2
-				defense_skill = 1
-				planning_skill = 3
-				logistics_skill = 1
-				id = 783
-			}
+			recruit_character = SIC_catelin_toderoiu
+			recruit_character = SIC_lexandru_leuescu
+			recruit_character = SIC_sycle_coroanargint
 		}
 	}
 
@@ -6868,18 +6831,7 @@ focus_tree = {
 			GRW = {
 				remove_unit_leader = 788
 			}
-			create_corps_commander = {
-				name = "Theresa"
-				portrait_path = "gfx/leaders/GRW/Mors.tga"
-				traits = { griffon_race_trait promising_general }
-				skill = 2
-				attack_skill = 3
-				defense_skill = 3
-				planning_skill = 2
-				logistics_skill = 1
-				female = yes
-				id = 788
-			}
+			recruit_character = SIC_Theresa
 		}
 	}
 

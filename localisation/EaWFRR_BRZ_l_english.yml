@@ -1,5 +1,10 @@
 ﻿l_english:
 
+### Names ###
+
+BRZ_nihael_pawsha:0 "Nihael Pawsha"
+BRZ_occupational_authority:0 "Occupational Authority"
+
 ### Tooltips ###
 
 BRZ_kill_him:0 "§CCount will be killed§!"

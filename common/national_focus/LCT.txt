@@ -109,10 +109,6 @@ focus_tree = {
 			factor = 10
 		}
 
-
-
-
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -129,27 +125,24 @@ focus_tree = {
 			}
 			custom_effect_tooltip = focus_finished_idea
 
-			create_country_leader = {
-				name = "Heavenly Snow"
-				desc = "POLITICS_PRINCE_SNOW_DESC"
-				picture = "Heavenly_Snow.tga"
-				expire = "1081.1.1"
-				ideology = nazism
-				traits = { heir_of_blessed_sowrd }
-				id = 900
-			}
+			promote_character = LCT_heavenly_snow
 
 			add_political_power = 15
 
 			hidden_effect = {
 				if = {
 					limit = {
-						has_cosmetic_tag = LCT_prince_army_ally
+						NOT = { has_country_flag = river_federation_founder }
 					}
-					set_cosmetic_tag = LCT_prince_ally
-				}
-				else = {
-					set_cosmetic_tag = LCT_prince
+					if = {
+						limit = {
+							has_cosmetic_tag = LCT_prince_army_ally
+						}
+						set_cosmetic_tag = LCT_prince_ally
+					}
+					else = {
+						set_cosmetic_tag = LCT_prince
+					}
 				}
 				remove_ideas = LCT_princely_restoration_idea
 			}
@@ -6149,16 +6142,8 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus LCT_syndicalism_pluralism"
 			hidden_effect = {
-				create_country_leader = {
-					name = "Tito Titovich"
-					desc = ""
-					expire = "1965.1.1"
-					picture = "Tito.tga"
-					ideology = democratic_socialism
-					traits = {
-						the_red_compromiser
-					}
-				}
+				recruit_character = LCT_tito_titovich_compromiser
+				promote_character = LCT_tito_titovich_compromiser
 			}
 		}
 		search_filters = {  }
@@ -6190,16 +6175,8 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus LCT_uz_marsala_titovich"
 			hidden_effect = {
-				create_country_leader = {
-					name = "Tito Titovich"
-					desc = ""
-					expire = "1965.1.1"
-					picture = "Tito_uniform.tga"
-					ideology = democratic_socialism
-					traits = {
-						unexperienced_revolutionary
-					}
-				}
+				recruit_character = LCT_tito_titovich_revolutionary
+				promote_character = LCT_tito_titovich_revolutionary
 			}
 		}
 		search_filters = {  }

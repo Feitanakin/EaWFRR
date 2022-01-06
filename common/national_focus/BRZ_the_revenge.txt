@@ -63,7 +63,6 @@ focus_tree = {
 		x = 28
 		y = 0
 		relative_position_id = BRZ_finish_the_ravenworks
-		mutually_exclusive = { focus = BRZ_The_Call_of_Our_Ancestors }
 
 		cost = 5
 
@@ -387,15 +386,15 @@ focus_tree = {
 				long_name = BRZ_communism_party_kim_long
 				name = BRZ_communism_party_kim
 			}
-			create_country_leader = {
-				name = "Kimball Barking-Sun"
-				desc = ""
-				picture = "kim_bark_sun.tga"
-				expire = "1965.1.1"
-				ideology = juche
-				traits = {
-					champion_of_the_great_leader
+			add_country_leader_role = {
+				character = BRZ_kimball_barking_sun
+				country_leader = {
+					desc = BRZ_BARKINGSUN_DESC
+					expire = "1965.1.1"
+					ideology = juche
+					traits = { champion_of_the_great_leader }
 				}
+				promote_leader = yes
 			}
 		}
 		search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL }
@@ -750,7 +749,7 @@ focus_tree = {
 		available = {
 			STW = {
 				has_country_leader = {
-					name = "Duchess Gabriela Eagleclaw"
+					character = STW_gabriela_eagleclaw 
 					ruling_only = yes
 				}
 			}
@@ -765,7 +764,7 @@ focus_tree = {
 				NOT = {
 					STW = {
 						has_country_leader = {
-							name = "Duchess Gabriela Eagleclaw"
+							character = STW_gabriela_eagleclaw 
 							ruling_only = yes
 						}
 					}
@@ -1055,17 +1054,16 @@ focus_tree = {
 			}
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = BRZ_lassy_goldcoat
-			create_corps_commander = {
-				name = "Lassie Goldcoat"
-				picture = "Lassie.tga"
+			add_corps_commander_role = {
+				character = BRZ_lassy_goldcoat
 				traits = { politically_connected trait_reckless harsh_leader diamond_dog_race_trait }
 				skill = 2
 				attack_skill = 3
 				defense_skill = 2
 				planning_skill = 1
 				logistics_skill = 1
-				female = yes
-			} custom_effect_tooltip = lassie_goldcoat_stats_tp
+			}
+			custom_effect_tooltip = lassie_goldcoat_stats_tp
 		}
 		search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL }
 	}
@@ -1323,7 +1321,7 @@ focus_tree = {
 			GRI = {
 				exists = yes
 				has_country_leader = {
-					name = "Ferdinand Dawnclaw"
+					character = GRI_ferdinand_dawnclaw
 					ruling_only = yes
 				}
 			}
@@ -1597,7 +1595,7 @@ focus_tree = {
 				exists = yes
 				has_country_leader = {
 					ruling_only = yes
-					name = "Duchess Gabriela Eagleclaw"
+					character = STW_gabriela_eagleclaw 
 				}
 			}
 			382 = {
@@ -1873,13 +1871,8 @@ focus_tree = {
 				ruling_party = fascism
 				elections_allowed = no
 			}
-			create_country_leader = {
-				name = "Nihael Pawsha"
-				picture = "Nihael_Pawsha.tga"
-				expire = "1965.1.1"
-				ideology = nazism
-				traits = {  }
-			}
+			recruit_character = BRZ_nihael_pawsha_khagan
+			promote_character = BRZ_nihael_pawsha_khagan
 			set_cosmetic_tag = turanist_dogs
 			add_ideas = Imperial_loyalist_in_army_1
 			add_ideas = Imperial_loyalist_1
@@ -2148,15 +2141,7 @@ focus_tree = {
 				remove_idea = Imperial_loyalist_1
 				add_idea = Imperial_loyalist_2
 			}
-			hidden_effect = {
-				create_country_leader = {
-					name = "Nihael Pawsha"
-					picture = "Nihael_Pawsha.tga"
-					expire = "1965.1.1"
-					ideology = nazism
-					traits = { khagans_of_all_khagans }
-				}
-			}
+			add_country_leader_trait = khagans_of_all_khagans
 		}
 	}
 	
