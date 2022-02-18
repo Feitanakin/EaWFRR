@@ -5422,6 +5422,128 @@
 		}
 	}
 
+	shared_focus = {
+        id = BAL_liberate_vanhoover
+        icon = GFX_BAL_a_war_of_liberation
+        prerequisite = { focus = BAL_a_war_of_liberation }
+        cost = 10
+        x = -4
+        y = 1
+        relative_position_id = BAL_a_war_of_liberation
+        ai_will_do = { factor = 100 }
+        completion_reward = {
+            log = "[GetDateText]: [Root.GetName]: Focus BAL_a_war_of_liberation"
+            
+        }
+    }
+    
+    shared_focus = {
+        id = BAL_integrate_vanhoovers_chain_of_command
+        icon = GFX_BAL_a_war_of_liberation
+        prerequisite = { focus = BAL_liberate_vanhoover }
+        cost = 10
+        x = 0
+        y = 1
+        relative_position_id = BAL_liberate_vanhoover
+        ai_will_do = { factor = 100 }
+        completion_reward = {
+            log = "[GetDateText]: [Root.GetName]: Focus BAL_a_war_of_liberation"
+            
+        }
+    }
+    
+    shared_focus = {
+        id = BAL_liberate_canterlot
+        icon = GFX_BAL_a_war_of_liberation
+        prerequisite = { focus = BAL_a_war_of_liberation }
+        cost = 10
+        x = 0
+        y = 1
+        relative_position_id = BAL_a_war_of_liberation
+        ai_will_do = { factor = 100 }
+        completion_reward = {
+            log = "[GetDateText]: [Root.GetName]: Focus BAL_a_war_of_liberation"
+            
+        }
+    }
+    
+    shared_focus = {
+        id = BAL_left_flavor
+        icon = GFX_BAL_a_war_of_liberation
+        prerequisite = { focus = BAL_liberate_canterlot }
+        cost = 10
+        x = -1
+        y = 1
+        relative_position_id = BAL_liberate_canterlot
+        ai_will_do = { factor = 100 }
+        completion_reward = {
+            log = "[GetDateText]: [Root.GetName]: Focus BAL_a_war_of_liberation"
+            
+        }
+    }
+    
+    shared_focus = {
+        id = BAL_right_flavor
+        icon = GFX_BAL_a_war_of_liberation
+        prerequisite = { focus = BAL_liberate_canterlot }
+        cost = 10
+        x = 1
+        y = 1
+        relative_position_id = BAL_liberate_canterlot
+        ai_will_do = { factor = 100 }
+        completion_reward = {
+            log = "[GetDateText]: [Root.GetName]: Focus BAL_a_war_of_liberation"
+            
+        }
+    }
+    
+    shared_focus = {
+        id = BAL_liberate_the_southwest
+        icon = GFX_BAL_a_war_of_liberation
+        prerequisite = { focus = BAL_a_war_of_liberation }
+        cost = 10
+        x = 4
+        y = 1
+        relative_position_id = BAL_a_war_of_liberation
+        ai_will_do = { factor = 100 }
+        completion_reward = {
+            log = "[GetDateText]: [Root.GetName]: Focus BAL_a_war_of_liberation"
+            
+        }
+    }
+    
+    shared_focus = {
+        id = BAL_the_fate_of_las_pegasus
+        icon = GFX_BAL_a_war_of_liberation
+        prerequisite = { focus = BAL_liberate_the_southwest }
+        cost = 10
+        x = 0
+        y = 1
+        relative_position_id = BAL_liberate_the_southwest
+        ai_will_do = { factor = 100 }
+        completion_reward = {
+            log = "[GetDateText]: [Root.GetName]: Focus BAL_a_war_of_liberation"
+            
+        }
+    }
+    
+    shared_focus = {
+        id = BAL_reunification_of_equestria
+        icon = GFX_BAL_a_war_of_liberation
+        prerequisite = { focus = BAL_integrate_vanhoovers_chain_of_command }
+        prerequisite = { focus = BAL_left_flavor }
+        prerequisite = { focus = BAL_right_flavor }
+        prerequisite = { focus = BAL_the_fate_of_las_pegasus }
+        cost = 10
+        x = 0
+        y = 2
+        relative_position_id = BAL_liberate_canterlot
+        ai_will_do = { factor = 100 }
+        completion_reward = {
+            log = "[GetDateText]: [Root.GetName]: Focus BAL_a_war_of_liberation"
+            
+        }
+    }
 
 
 
