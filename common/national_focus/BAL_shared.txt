@@ -5545,7 +5545,142 @@
         }
     }
 
+    shared_focus = {
+		id = BAL_changelings_flavor
+		icon = GFX_BAL_a_war_of_liberation
+		prerequisite = { focus = BAL_changelings_wargoal}
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = BAL_changelings_wargoal
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BAL_changelings_wargoal"
+			
+		}
+	}
+	
+	shared_focus = {
+		id = BAL_olenia_wargoal
+		icon = GFX_BAL_a_war_of_liberation
+		prerequisite = { focus = BAL_changelings_flavor }
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = BAL_changelings_flavor
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BAL_a_war_of_liberation"
+			
+		}
+	}
+	
+	shared_focus = {
+		id = BAL_chrystal_empire_wargoal
+		icon = GFX_BAL_a_war_of_liberation
+		prerequisite = { focus = BAL_reunification_of_equestria }
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = BAL_reunification_of_equestria
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BAL_a_war_of_liberation"
+			
+		}
+	}
+	
+	shared_focus = {
+		id = BAL_chrystal_empire_flavor
+		icon = GFX_BAL_a_war_of_liberation
+		prerequisite = { focus = BAL_chrystal_empire_wargoal }
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = BAL_chrystal_empire_wargoal
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BAL_a_war_of_liberation"
+			
+		}
+	}
 
+	shared_focus = {
+		id = BAL_yaks_wargoal
+		icon = GFX_BAL_a_war_of_liberation
+		prerequisite = { focus = BAL_chrystal_empire_flavor }
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = BAL_chrystal_empire_flavor
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BAL_a_war_of_liberation"
+			
+		}
+	}
+	
+	shared_focus = {
+		id = BAL_stalliongrad_wargoal
+		icon = GFX_BAL_a_war_of_liberation
+		prerequisite = { focus = BAL_reunification_of_equestria }
+		cost = 10
+		x = 4
+		y = 1
+		relative_position_id = BAL_reunification_of_equestria
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BAL_a_war_of_liberation"
+			
+		}
+	}
+	
+	shared_focus = {
+		id = BAL_stalliongrad_flavor
+		icon = GFX_BAL_a_war_of_liberation
+		prerequisite = { focus = BAL_stalliongrad_wargoal }
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = BAL_stalliongrad_wargoal
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BAL_a_war_of_liberation"
+			
+		}
+	}
+	
+	shared_focus = {
+		id = BAL_nova_griffonia_wargoal
+		icon = GFX_BAL_a_war_of_liberation
+		prerequisite = { focus = BAL_stalliongrad_flavor }
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = BAL_stalliongrad_flavor
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BAL_a_war_of_liberation"
+			
+		}
+	}
+	
+	shared_focus = {
+		id = BAL_consumer
+		icon = GFX_BAL_a_war_of_liberation
+		prerequisite = { focus = BAL_nova_griffonia_wargoal }
+		prerequisite = { focus = BAL_yaks_wargoal }
+		prerequisite = { focus = BAL_olenia_wargoal }
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = BAL_yaks_wargoal
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BAL_a_war_of_liberation"
+			
+		}
+	}
 
 
 
