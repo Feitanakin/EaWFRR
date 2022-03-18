@@ -4033,576 +4033,545 @@ shared_focus = {
 	}
 	search_filters = { FOCUS_FILTER_INDUSTRY }
 }
-	#Focus for A Trade With Zebrica
-	shared_focus = {
-		id = VAN_a_trade_with_zebrica
-		icon = GFX_goal_unknown
-		x = 20
-		y = 10
-		cost = 10
-		available_if_capitulated = yes
-		prerequisite = { 
-			focus = VAN_driftin_alone 
-			focus = VAN_our_piece_of_the_continent 
-		}
-		ai_will_do = {
-			factor = 1
-		}
+
+#Focus for A Trade With Zebrica
+shared_focus = {
+	id = VAN_a_trade_with_zebrica
+	icon = GFX_goal_unknown
+	x = 20
+	y = 10
+	cost = 10
+	available_if_capitulated = yes
+	prerequisite = { 
+		focus = VAN_driftin_alone 
+		focus = VAN_our_piece_of_the_continent 
+	}
+	ai_will_do = {
+		factor = 1
 	}
 }
 
-	#Focus for Built The Wall
-	shared_focus = {
-		id = VAN_built_the_wall
-		icon = GFX_goal_unknown
-		x = 16
-		y = 11
-		cost = 10
-		available_if_capitulated = yes
-		prerequisite = { 
-			focus = VAN_target_civilians_ship 
-		}
-		prerequisite = { 
-			focus = VAN_a_raiding_fleet 
-		}
-		ai_will_do = {
-			factor = 1
-		}
+#Focus for Built The Wall
+shared_focus = {
+	id = VAN_built_the_wall
+	icon = GFX_goal_unknown
+	x = 16
+	y = 11
+	cost = 10
+	available_if_capitulated = yes
+	prerequisite = { 
+		focus = VAN_target_civilians_ship 
 	}
-}
-	#Focus for Driftin' Alone
-	shared_focus = {
-		id = VAN_driftin_alone
-		icon = GFX_goal_unknown
-		x = 20
-		y = 9
-		cost = 10
-		available_if_capitulated = yes
-		prerequisite = { focus = VAN_allies_or_foes }
-		mutually_exclusive = { focus = VAN_our_piece_of_the_continent }
-		ai_will_do = {
-			factor = 1
-		}
+	prerequisite = { 
+		focus = VAN_a_raiding_fleet 
+	}
+	ai_will_do = {
+		factor = 1
 	}
 }
 
-	#Focus for A Raiding Fleet
-	shared_focus = {
-		id = VAN_a_raiding_fleet
-		icon = GFX_goal_unknown
-		x = 17
-		y = 10
-		cost = 10
-		available_if_capitulated = yes
-		prerequisite = { 
-			focus = VAN_driftin_alone 
-			focus = VAN_our_piece_of_the_continent 
-		}
-		ai_will_do = {
-			factor = 1
-		}
+#Focus for Driftin' Alone
+shared_focus = {
+	id = VAN_driftin_alone
+	icon = GFX_goal_unknown
+	x = 20
+	y = 9
+	cost = 10
+	available_if_capitulated = yes
+	prerequisite = { focus = VAN_allies_or_foes }
+	mutually_exclusive = { focus = VAN_our_piece_of_the_continent }
+	ai_will_do = {
+		factor = 1
 	}
 }
 
-	#Focus for Our Piece Of The Continent
-	shared_focus = {
-		id = VAN_our_piece_of_the_continent
-		icon = GFX_goal_unknown
-		x = 14
-		y = 9
-		cost = 10
-		available_if_capitulated = yes
-		prerequisite = { focus = VAN_allies_or_foes }
-		mutually_exclusive = { focus = VAN_driftin_alone }
-		ai_will_do = {
-			factor = 1
-		}
+#Focus for A Raiding Fleet
+shared_focus = {
+	id = VAN_a_raiding_fleet
+	icon = GFX_goal_unknown
+	x = 17
+	y = 10
+	cost = 10
+	available_if_capitulated = yes
+	prerequisite = { 
+		focus = VAN_driftin_alone 
+		focus = VAN_our_piece_of_the_continent 
+	}
+	ai_will_do = {
+		factor = 1
 	}
 }
 
-	#Focus for The King Of The Ocean
-	shared_focus = {
-		id = VAN_the_king_of_the_ocean
-		icon = GFX_goal_unknown
-		x = 17
-		y = 12
-		cost = 10
-		available_if_capitulated = yes
-		prerequisite = { 
-			focus = VAN_built_the_wall 
-		}
-		prerequisite = { 
-			focus = VAN_expand_our_market 
-		}
-		ai_will_do = {
-			factor = 1
-		}
+#Focus for Our Piece Of The Continent
+shared_focus = {
+	id = VAN_our_piece_of_the_continent
+	icon = GFX_goal_unknown
+	x = 14
+	y = 9
+	cost = 10
+	available_if_capitulated = yes
+	prerequisite = { focus = VAN_allies_or_foes }
+	mutually_exclusive = { focus = VAN_driftin_alone }
+	ai_will_do = {
+		factor = 1
 	}
 }
 
-	#Focus for Target Civilians Ship
-	shared_focus = {
-		id = VAN_target_civilians_ship
-		icon = GFX_goal_unknown
-		x = 14
-		y = 10
-		cost = 10
-		available_if_capitulated = yes
-		prerequisite = { 
-			focus = VAN_our_piece_of_the_continent 
-			focus = VAN_driftin_alone 
-		}
-		ai_will_do = {
-			factor = 1
-		}
+#Focus for The King Of The Ocean
+shared_focus = {
+	id = VAN_the_king_of_the_ocean
+	icon = GFX_goal_unknown
+	x = 17
+	y = 12
+	cost = 10
+	available_if_capitulated = yes
+	prerequisite = { 
+		focus = VAN_built_the_wall 
+	}
+	prerequisite = { 
+		focus = VAN_expand_our_market 
+	}
+	ai_will_do = {
+		factor = 1
 	}
 }
 
-	#Focus for A Pirate Life For Me!
-	shared_focus = {
-		id = VAN_a_pirate_life_for_me
-		icon = GFX_goal_unknown
-		x = 12
-		y = 4
-		cost = 10
-		available_if_capitulated = yes
-		ai_will_do = {
-			factor = 1
-		}
+#Focus for Target Civilians Ship
+shared_focus = {
+	id = VAN_target_civilians_ship
+	icon = GFX_goal_unknown
+	x = 14
+	y = 10
+	cost = 10
+	available_if_capitulated = yes
+	prerequisite = { 
+		focus = VAN_our_piece_of_the_continent 
+		focus = VAN_driftin_alone 
+	}
+	ai_will_do = {
+		factor = 1
 	}
 }
 
-	#Focus for The Battle For Vanhoover
-	shared_focus = {
-		id = VAN_the_battle_for_vanhoover
-		icon = GFX_goal_unknown
-		x = 12
-		y = 5
-		cost = 10
-		available_if_capitulated = yes
-		prerequisite = { focus = VAN_a_pirate_life_for_me }
-		ai_will_do = {
-			factor = 1
-		}
+#Focus for A Pirate Life For Me!
+shared_focus = {
+	id = VAN_A_Pirate_Life_For_Me
+	icon = GFX_goal_unknown
+	x = 12
+	y = 4
+	cost = 10
+	available_if_capitulated = yes
+	ai_will_do = {
+		factor = 1
 	}
 }
 
-	#Focus for Hoist The Black Flag
-	shared_focus = {
-		id = VAN_hoist_the_black_flag
-		icon = GFX_goal_unknown
-		x = 17
-		y = 6
-		cost = 10
-		available_if_capitulated = yes
-		prerequisite = { focus = VAN_the_battle_for_vanhoover }
-		mutually_exclusive = { focus = VAN_the_harmonist_prevail }
-		ai_will_do = {
-			factor = 1
-		}
+#Focus for The Battle For Vanhoover
+shared_focus = {
+	id = VAN_the_battle_for_vanhoover
+	icon = GFX_goal_unknown
+	x = 12
+	y = 5
+	cost = 10
+	available_if_capitulated = yes
+	prerequisite = { focus = VAN_a_pirate_life_for_me }
+	ai_will_do = {
+		factor = 1
 	}
 }
 
-	#Focus for The Harmonist Prevail
-	shared_focus = {
-		id = VAN_the_harmonist_prevail
-		icon = GFX_goal_unknown
-		x = 6
-		y = 6
-		cost = 10
-		available_if_capitulated = yes
-		prerequisite = { focus = VAN_the_battle_for_vanhoover }
-		mutually_exclusive = { focus = VAN_hoist_the_black_flag }
-		ai_will_do = {
-			factor = 1
-		}
+#Focus for Hoist The Black Flag
+shared_focus = {
+	id = VAN_hoist_the_black_flag
+	icon = GFX_goal_unknown
+	x = 17
+	y = 6
+	cost = 10
+	available_if_capitulated = yes
+	prerequisite = { focus = VAN_the_battle_for_vanhoover }
+	mutually_exclusive = { focus = VAN_the_harmonist_prevail }
+	ai_will_do = {
+		factor = 1
 	}
 }
 
-	#Focus for The Northern Mernace
-	shared_focus = {
-		id = VAN_the_northern_mernace
-		icon = GFX_goal_unknown
-		x = 8
-		y = 10
-		cost = 10
-		available_if_capitulated = yes
-		prerequisite = { focus = VAN_elections_time }
-		ai_will_do = {
-			factor = 1
-		}
+#Focus for The Harmonist Prevail
+shared_focus = {
+	id = VAN_the_harmonist_prevail
+	icon = GFX_goal_unknown
+	x = 6
+	y = 6
+	cost = 10
+	available_if_capitulated = yes
+	prerequisite = { focus = VAN_the_battle_for_vanhoover }
+	mutually_exclusive = { focus = VAN_hoist_the_black_flag }
+	ai_will_do = {
+		factor = 1
 	}
 }
 
-	#Focus for Elections Time
-	shared_focus = {
-		id = VAN_elections_time
-		icon = GFX_goal_unknown
-		x = 9
-		y = 9
-		cost = 10
-		available_if_capitulated = yes
-		prerequisite = { 
-			focus = VAN_voter_registration 
-		}
-		prerequisite = { 
-			focus = VAN_the_candidates 
-		}
-		ai_will_do = {
-			factor = 1
-		}
+#Focus for The Northern Mernace
+shared_focus = {
+	id = VAN_the_northern_mernace
+	icon = GFX_goal_unknown
+	x = 8
+	y = 10
+	cost = 10
+	available_if_capitulated = yes
+	prerequisite = { focus = VAN_elections_time }
+	ai_will_do = {
+		factor = 1
 	}
 }
 
-	#Focus for A Lecon From The 6
-	shared_focus = {
-		id = VAN_a_lecon_from_the_6
-		icon = GFX_goal_unknown
-		x = 3
-		y = 7
-		cost = 10
-		available_if_capitulated = yes
-		prerequisite = { focus = VAN_the_harmonist_prevail }
-		mutually_exclusive = { focus = VAN_the_democrats_wins }
-		ai_will_do = {
-			factor = 1
-		}
+#Focus for Elections Time
+shared_focus = {
+	id = VAN_elections_time
+	icon = GFX_goal_unknown
+	x = 9
+	y = 9
+	cost = 10
+	available_if_capitulated = yes
+	prerequisite = { 
+		focus = VAN_voter_registration 
+	}
+	prerequisite = { 
+		focus = VAN_the_candidates 
+	}
+	ai_will_do = {
+		factor = 1
 	}
 }
 
-	#Focus for The Democrats Wins
-	shared_focus = {
-		id = VAN_the_democrats_wins
-		icon = GFX_goal_unknown
-		x = 9
-		y = 7
-		cost = 10
-		available_if_capitulated = yes
-		prerequisite = { focus = VAN_the_harmonist_prevail }
-		mutually_exclusive = { focus = VAN_a_lecon_from_the_6 }
-		ai_will_do = {
-			factor = 1
-		}
+#Focus for A Lecon From The 6
+shared_focus = {
+	id = VAN_a_lecon_from_the_6
+	icon = GFX_goal_unknown
+	x = 3
+	y = 7
+	cost = 10
+	available_if_capitulated = yes
+	prerequisite = { focus = VAN_the_harmonist_prevail }
+	mutually_exclusive = { focus = VAN_the_democrats_wins }
+	ai_will_do = {
+		factor = 1
 	}
 }
 
-	#Focus for Empower Parliement
-	shared_focus = {
-		id = VAN_empower_parliement
-		icon = GFX_goal_unknown
-		x = 2
-		y = 10
-		cost = 10
-		available_if_capitulated = yes
-		prerequisite = { focus = VAN_proclaim_the_princessdom }
-		ai_will_do = {
-			factor = 1
-		}
+#Focus for The Democrats Wins
+shared_focus = {
+	id = VAN_the_democrats_wins
+	icon = GFX_goal_unknown
+	x = 9
+	y = 7
+	cost = 10
+	available_if_capitulated = yes
+	prerequisite = { focus = VAN_the_harmonist_prevail }
+	mutually_exclusive = { focus = VAN_a_lecon_from_the_6 }
+	ai_will_do = {
+		factor = 1
 	}
 }
 
-	#Focus for Military Mission To Equestria
-	shared_focus = {
-		id = VAN_military_mission_to_equestria
-		icon = GFX_goal_unknown
-		x = 2
-		y = 8
-		cost = 10
-		available_if_capitulated = yes
-		prerequisite = { focus = VAN_a_lecon_from_the_6 }
-		ai_will_do = {
-			factor = 1
-		}
-	}
-}
-	#Focus for Equestrian Loyalty
-	shared_focus = {
-		id = VAN_equestrian_loyalty
-		icon = GFX_goal_unknown
-		x = 4
-		y = 8
-		cost = 10
-		available_if_capitulated = yes
-		prerequisite = { focus = VAN_a_lecon_from_the_6 }
-		ai_will_do = {
-			factor = 1
-		}
+#Focus for Empower Parliement
+shared_focus = {
+	id = VAN_empower_parliement
+	icon = GFX_goal_unknown
+	x = 2
+	y = 10
+	cost = 10
+	available_if_capitulated = yes
+	prerequisite = { focus = VAN_proclaim_the_princessdom }
+	ai_will_do = {
+		factor = 1
 	}
 }
 
-	#Focus for Proclaim The Princessdom
-	shared_focus = {
-		id = VAN_proclaim_the_princessdom
-		icon = GFX_goal_unknown
-		x = 3
-		y = 9
-		cost = 10
-		available_if_capitulated = yes
-		prerequisite = { 
-			focus = VAN_military_mission_to_equestria 
-		}
-		prerequisite = { 
-			focus = VAN_equestrian_loyalty 
-		}
-		ai_will_do = {
-			factor = 1
-		}
+#Focus for Military Mission To Equestria
+shared_focus = {
+	id = VAN_military_mission_to_equestria
+	icon = GFX_goal_unknown
+	x = 2
+	y = 8
+	cost = 10
+	available_if_capitulated = yes
+	prerequisite = { focus = VAN_a_lecon_from_the_6 }
+	ai_will_do = {
+		factor = 1
 	}
 }
 
-	#Focus for The Vanhoover Royal Navy
-	shared_focus = {
-		id = VAN_the_vanhoover_royal_navy
-		icon = GFX_goal_unknown
-		x = 4
-		y = 10
-		cost = 10
-		available_if_capitulated = yes
-		prerequisite = { focus = VAN_proclaim_the_princessdom }
-		ai_will_do = {
-			factor = 1
-		}
+#Focus for Equestrian Loyalty
+shared_focus = {
+	id = VAN_equestrian_loyalty
+	icon = GFX_goal_unknown
+	x = 4
+	y = 8
+	cost = 10
+	available_if_capitulated = yes
+	prerequisite = { focus = VAN_a_lecon_from_the_6 }
+	ai_will_do = {
+		factor = 1
 	}
 }
 
-	#Focus for Protect Harmonist Values
-	shared_focus = {
-		id = VAN_protect_harmonist_values
-		icon = GFX_goal_unknown
-		x = 6
-		y = 8
-		cost = 10
-		available_if_capitulated = yes
-		prerequisite = { 
-			focus = VAN_a_lecon_from_the_6 
-			focus = VAN_the_democrats_wins 
-		}
-		ai_will_do = {
-			factor = 1
-		}
+#Focus for Proclaim The Princessdom
+shared_focus = {
+	id = VAN_proclaim_the_princessdom
+	icon = GFX_goal_unknown
+	x = 3
+	y = 9
+	cost = 10
+	available_if_capitulated = yes
+	prerequisite = { 
+		focus = VAN_military_mission_to_equestria 
+	}
+	prerequisite = { 
+		focus = VAN_equestrian_loyalty 
+	}
+	ai_will_do = {
+		factor = 1
 	}
 }
 
-	#Focus for Voter Registration
-	shared_focus = {
-		id = VAN_voter_registration
-		icon = GFX_goal_unknown
-		x = 8
-		y = 8
-		cost = 10
-		available_if_capitulated = yes
-		prerequisite = { focus = VAN_the_democrats_wins }
-		ai_will_do = {
-			factor = 1
-		}
+#Focus for The Vanhoover Royal Navy
+shared_focus = {
+	id = VAN_the_vanhoover_royal_navy
+	icon = GFX_goal_unknown
+	x = 4
+	y = 10
+	cost = 10
+	available_if_capitulated = yes
+	prerequisite = { focus = VAN_proclaim_the_princessdom }
+	ai_will_do = {
+		factor = 1
 	}
 }
 
-	#Focus for Purge The Communist
-	shared_focus = {
-		id = VAN_purge_the_communist
-		icon = GFX_goal_unknown
-		x = 7
-		y = 9
-		cost = 10
-		available_if_capitulated = yes
-		prerequisite = { focus = VAN_protect_harmonist_values }
-		mutually_exclusive = { focus = VAN_integrate_the_moderates }
-		ai_will_do = {
-			factor = 1
-		}
+#Focus for Protect Harmonist Values
+shared_focus = {
+	id = VAN_protect_harmonist_values
+	icon = GFX_goal_unknown
+	x = 6
+	y = 8
+	cost = 10
+	available_if_capitulated = yes
+	prerequisite = { 
+		focus = VAN_a_lecon_from_the_6 
+		focus = VAN_the_democrats_wins 
+	}
+	ai_will_do = {
+		factor = 1
 	}
 }
 
-	#Focus for Integrate The Moderates
-	shared_focus = {
-		id = VAN_integrate_the_moderates
-		icon = GFX_goal_unknown
-		x = 5
-		y = 9
-		cost = 10
-		available_if_capitulated = yes
-		prerequisite = { focus = VAN_protect_harmonist_values }
-		mutually_exclusive = { focus = VAN_purge_the_communist }
-		ai_will_do = {
-			factor = 1
-		}
+#Focus for Voter Registration
+shared_focus = {
+	id = VAN_voter_registration
+	icon = GFX_goal_unknown
+	x = 8
+	y = 8
+	cost = 10
+	available_if_capitulated = yes
+	prerequisite = { focus = VAN_the_democrats_wins }
+	ai_will_do = {
+		factor = 1
 	}
 }
 
-	#Focus for A Security Agency?
-	shared_focus = {
-		id = VAN_a_security_agency
-		icon = GFX_goal_unknown
-		x = 6
-		y = 10
-		cost = 10
-		available_if_capitulated = yes
-		prerequisite = { 
-			focus = VAN_integrate_the_moderates 
-			focus = VAN_purge_the_communist 
-		}
-		ai_will_do = {
-			factor = 1
-		}
+#Focus for Purge The Communist
+shared_focus = {
+	id = VAN_purge_the_communist
+	icon = GFX_goal_unknown
+	x = 7
+	y = 9
+	cost = 10
+	available_if_capitulated = yes
+	prerequisite = { focus = VAN_protect_harmonist_values }
+	mutually_exclusive = { focus = VAN_integrate_the_moderates }
+	ai_will_do = {
+		factor = 1
 	}
 }
 
-	#Focus for The Candidates
-	shared_focus = {
-		id = VAN_the_candidates
-		icon = GFX_goal_unknown
-		x = 10
-		y = 8
-		cost = 10
-		available_if_capitulated = yes
-		prerequisite = { focus = VAN_the_democrats_wins }
-		ai_will_do = {
-			factor = 1
-		}
+#Focus for Integrate The Moderates
+shared_focus = {
+	id = VAN_integrate_the_moderates
+	icon = GFX_goal_unknown
+	x = 5
+	y = 9
+	cost = 10
+	available_if_capitulated = yes
+	prerequisite = { focus = VAN_protect_harmonist_values }
+	mutually_exclusive = { focus = VAN_purge_the_communist }
+	ai_will_do = {
+		factor = 1
 	}
 }
 
-	#Focus for Equestria Has Not Yet Perished!
-	shared_focus = {
-		id = VAN_equestria_has_not_yet_perished
-		icon = GFX_goal_unknown
-		x = 4
-		y = 11
-		cost = 10
-		available_if_capitulated = yes
-		prerequisite = { 
-			focus = VAN_the_vanhoover_royal_navy 
-		}
-		prerequisite = { 
-			focus = VAN_empower_parliement 
-		}
-		prerequisite = { 
-			focus = VAN_a_security_agency 
-		}
-		ai_will_do = {
-			factor = 1
-		}
+#Focus for A Security Agency?
+shared_focus = {
+	id = VAN_a_security_agency
+	icon = GFX_goal_unknown
+	x = 6
+	y = 10
+	cost = 10
+	available_if_capitulated = yes
+	prerequisite = { 
+		focus = VAN_integrate_the_moderates 
+		focus = VAN_purge_the_communist 
+	}
+	ai_will_do = {
+		factor = 1
 	}
 }
 
-	#Focus for Support For Guarantee
-	shared_focus = {
-		id = VAN_support_for_guarantee
-		icon = GFX_goal_unknown
-		x = 10
-		y = 10
-		cost = 10
-		available_if_capitulated = yes
-		prerequisite = { focus = VAN_elections_time }
-		ai_will_do = {
-			factor = 1
-		}
+#Focus for The Candidates
+shared_focus = {
+	id = VAN_the_candidates
+	icon = GFX_goal_unknown
+	x = 10
+	y = 8
+	cost = 10
+	available_if_capitulated = yes
+	prerequisite = { focus = VAN_the_democrats_wins }
+	ai_will_do = {
+		factor = 1
 	}
 }
 
-	#Focus for A Shinning Merchand Republic
-	shared_focus = {
-		id = VAN_a_shinning_merchand_republic
-		icon = GFX_goal_unknown
-		x = 8
-		y = 11
-		cost = 10
-		available_if_capitulated = yes
-		prerequisite = { 
-			focus = VAN_a_security_agency 
-		}
-		prerequisite = { 
-			focus = VAN_support_for_guarantee 
-		}
-		prerequisite = { 
-			focus = VAN_the_northern_mernace 
-		}
-		ai_will_do = {
-			factor = 1
-		}
+#Focus for Equestria Has Not Yet Perished!
+shared_focus = {
+	id = VAN_equestria_has_not_yet_perished
+	icon = GFX_goal_unknown
+	x = 4
+	y = 11
+	cost = 10
+	available_if_capitulated = yes
+	prerequisite = { 
+		focus = VAN_the_vanhoover_royal_navy 
+	}
+	prerequisite = { 
+		focus = VAN_empower_parliement 
+	}
+	prerequisite = { 
+		focus = VAN_a_security_agency 
+	}
+	ai_will_do = {
+		factor = 1
 	}
 }
 
-	#Focus for A Criminal Economy
-	shared_focus = {
-		id = VAN_a_criminal_economy
-		icon = GFX_goal_unknown
-		x = 14
-		y = 7
-		cost = 10
-		available_if_capitulated = yes
-		prerequisite = { focus = VAN_hoist_the_black_flag }
-		ai_will_do = {
-			factor = 1
-		}
+#Focus for Support For Guarantee
+shared_focus = {
+	id = VAN_support_for_guarantee
+	icon = GFX_goal_unknown
+	x = 10
+	y = 10
+	cost = 10
+	available_if_capitulated = yes
+	prerequisite = { focus = VAN_elections_time }
+	ai_will_do = {
+		factor = 1
 	}
 }
 
-	#Focus for Rules Of The Strongest
-	shared_focus = {
-		id = VAN_rules_of_the_strongest
-		icon = GFX_goal_unknown
-		x = 20
-		y = 7
-		cost = 10
-		available_if_capitulated = yes
-		prerequisite = { focus = VAN_hoist_the_black_flag }
-		ai_will_do = {
-			factor = 1
-		}
+#Focus for A Shinning Merchand Republic
+shared_focus = {
+	id = VAN_a_shinning_merchand_republic
+	icon = GFX_goal_unknown
+	x = 8
+	y = 11
+	cost = 10
+	available_if_capitulated = yes
+	prerequisite = { 
+		focus = VAN_a_security_agency 
+	}
+	prerequisite = { 
+		focus = VAN_support_for_guarantee 
+	}
+	prerequisite = { 
+		focus = VAN_the_northern_mernace 
+	}
+	ai_will_do = {
+		factor = 1
 	}
 }
 
-	#Focus for Allies Or Foes?
-	shared_focus = {
-		id = VAN_allies_or_foes
-		icon = GFX_goal_unknown
-		x = 17
-		y = 8
-		cost = 10
-		available_if_capitulated = yes
-		prerequisite = { 
-			focus = VAN_a_criminal_economy 
-			focus = VAN_rules_of_the_strongest 
-		}
-		ai_will_do = {
-			factor = 1
-		}
+#Focus for A Criminal Economy
+shared_focus = {
+	id = VAN_a_criminal_economy
+	icon = GFX_goal_unknown
+	x = 14
+	y = 7
+	cost = 10
+	available_if_capitulated = yes
+	prerequisite = { focus = VAN_hoist_the_black_flag }
+	ai_will_do = {
+		factor = 1
 	}
 }
 
-	#Focus for The Greatest Heist
-	shared_focus = {
-		id = VAN_the_greatest_heist
-		icon = GFX_goal_unknown
-		x = 17
-		y = 7
-		cost = 10
-		available_if_capitulated = yes
-		prerequisite = { focus = VAN_hoist_the_black_flag }
-		ai_will_do = {
-			factor = 1
-		}
+#Focus for Rules Of The Strongest
+shared_focus = {
+	id = VAN_rules_of_the_strongest
+	icon = GFX_goal_unknown
+	x = 20
+	y = 7
+	cost = 10
+	available_if_capitulated = yes
+	prerequisite = { focus = VAN_hoist_the_black_flag }
+	ai_will_do = {
+		factor = 1
 	}
 }
 
-	#Focus for Expand Our Market
-	shared_focus = {
-		id = VAN_expand_our_market
-		icon = GFX_goal_unknown
-		x = 18
-		y = 11
-		cost = 10
-		available_if_capitulated = yes
-		prerequisite = { 
-			focus = VAN_a_raiding_fleet 
-		}
-		prerequisite = { 
-			focus = VAN_a_trade_with_zebrica 
-		}
-		ai_will_do = {
-			factor = 1
-		}
+#Focus for Allies Or Foes?
+shared_focus = {
+	id = VAN_allies_or_foes
+	icon = GFX_goal_unknown
+	x = 17
+	y = 8
+	cost = 10
+	available_if_capitulated = yes
+	prerequisite = { 
+		focus = VAN_a_criminal_economy 
+		focus = VAN_rules_of_the_strongest 
 	}
- }
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+#Focus for The Greatest Heist
+shared_focus = {
+	id = VAN_the_greatest_heist
+	icon = GFX_goal_unknown
+	x = 17
+	y = 7
+	cost = 10
+	available_if_capitulated = yes
+	prerequisite = { focus = VAN_hoist_the_black_flag }
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+#Focus for Expand Our Market
+shared_focus = {
+	id = VAN_expand_our_market
+	icon = GFX_goal_unknown
+	x = 18
+	y = 11
+	cost = 10
+	available_if_capitulated = yes
+	prerequisite = { 
+		focus = VAN_a_raiding_fleet 
+	}
+	prerequisite = { 
+		focus = VAN_a_trade_with_zebrica 
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
