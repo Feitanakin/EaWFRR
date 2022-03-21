@@ -5432,7 +5432,7 @@
         relative_position_id = BAL_a_war_of_liberation
         ai_will_do = { factor = 100 }
         completion_reward = {
-            log = "[GetDateText]: [Root.GetName]: Focus BAL_a_war_of_liberation"
+            log = "[GetDateText]: [Root.GetName]: Focus BAL_liberate_vanhoover"
             
         }
     }
@@ -5447,7 +5447,7 @@
         relative_position_id = BAL_liberate_vanhoover
         ai_will_do = { factor = 100 }
         completion_reward = {
-            log = "[GetDateText]: [Root.GetName]: Focus BAL_a_war_of_liberation"
+            log = "[GetDateText]: [Root.GetName]: Focus BAL_integrate_vanhoovers_chain_of_command"
             
         }
     }
@@ -5462,7 +5462,7 @@
         relative_position_id = BAL_a_war_of_liberation
         ai_will_do = { factor = 100 }
         completion_reward = {
-            log = "[GetDateText]: [Root.GetName]: Focus BAL_a_war_of_liberation"
+            log = "[GetDateText]: [Root.GetName]: Focus BAL_liberate_canterlot"
             
         }
     }
@@ -5477,7 +5477,7 @@
         relative_position_id = BAL_liberate_canterlot
         ai_will_do = { factor = 100 }
         completion_reward = {
-            log = "[GetDateText]: [Root.GetName]: Focus BAL_a_war_of_liberation"
+            log = "[GetDateText]: [Root.GetName]: Focus BAL_left_flavor"
             
         }
     }
@@ -5492,7 +5492,7 @@
         relative_position_id = BAL_liberate_canterlot
         ai_will_do = { factor = 100 }
         completion_reward = {
-            log = "[GetDateText]: [Root.GetName]: Focus BAL_a_war_of_liberation"
+            log = "[GetDateText]: [Root.GetName]: Focus BAL_right_flavor"
             
         }
     }
@@ -5507,7 +5507,7 @@
         relative_position_id = BAL_a_war_of_liberation
         ai_will_do = { factor = 100 }
         completion_reward = {
-            log = "[GetDateText]: [Root.GetName]: Focus BAL_a_war_of_liberation"
+            log = "[GetDateText]: [Root.GetName]: Focus BAL_liberate_the_southwest"
             
         }
     }
@@ -5522,7 +5522,7 @@
         relative_position_id = BAL_liberate_the_southwest
         ai_will_do = { factor = 100 }
         completion_reward = {
-            log = "[GetDateText]: [Root.GetName]: Focus BAL_a_war_of_liberation"
+            log = "[GetDateText]: [Root.GetName]: Focus BAL_the_fate_of_las_pegasus"
             
         }
     }
@@ -5540,10 +5540,25 @@
         relative_position_id = BAL_liberate_canterlot
         ai_will_do = { factor = 100 }
         completion_reward = {
-            log = "[GetDateText]: [Root.GetName]: Focus BAL_a_war_of_liberation"
+            log = "[GetDateText]: [Root.GetName]: Focus BAL_reunification_of_equestria"
             
         }
     }
+
+    shared_focus = {
+		id = BAL_changelings_wargoal
+		icon = GFX_BAL_a_war_of_liberation
+		prerequisite = { focus = BAL_reunification_of_equestria}
+		cost = 10
+		x = -4
+		y = 1
+		relative_position_id = BAL_reunification_of_equestria
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BAL_changelings_wargoal"
+			
+		}
+	}
 
     shared_focus = {
 		id = BAL_changelings_flavor
@@ -5555,7 +5570,7 @@
 		relative_position_id = BAL_changelings_wargoal
 		ai_will_do = { factor = 100 }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus BAL_changelings_wargoal"
+			log = "[GetDateText]: [Root.GetName]: Focus BAL_changelings_flavor"
 			
 		}
 	}
@@ -5570,7 +5585,7 @@
 		relative_position_id = BAL_changelings_flavor
 		ai_will_do = { factor = 100 }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus BAL_a_war_of_liberation"
+			log = "[GetDateText]: [Root.GetName]: Focus BAL_olenia_wargoal"
 			
 		}
 	}
@@ -5585,7 +5600,7 @@
 		relative_position_id = BAL_reunification_of_equestria
 		ai_will_do = { factor = 100 }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus BAL_a_war_of_liberation"
+			log = "[GetDateText]: [Root.GetName]: Focus BAL_chrystal_empire_wargoal"
 			
 		}
 	}
@@ -5600,7 +5615,7 @@
 		relative_position_id = BAL_chrystal_empire_wargoal
 		ai_will_do = { factor = 100 }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus BAL_a_war_of_liberation"
+			log = "[GetDateText]: [Root.GetName]: Focus BAL_chrystal_empire_flavor"
 			
 		}
 	}
@@ -5615,7 +5630,7 @@
 		relative_position_id = BAL_chrystal_empire_flavor
 		ai_will_do = { factor = 100 }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus BAL_a_war_of_liberation"
+			log = "[GetDateText]: [Root.GetName]: Focus BAL_yaks_wargoal"
 			
 		}
 	}
@@ -5630,7 +5645,7 @@
 		relative_position_id = BAL_reunification_of_equestria
 		ai_will_do = { factor = 100 }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus BAL_a_war_of_liberation"
+			log = "[GetDateText]: [Root.GetName]: Focus BAL_stalliongrad_wargoal"
 			
 		}
 	}
@@ -5645,7 +5660,7 @@
 		relative_position_id = BAL_stalliongrad_wargoal
 		ai_will_do = { factor = 100 }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus BAL_a_war_of_liberation"
+			log = "[GetDateText]: [Root.GetName]: Focus BAL_stalliongrad_flavor"
 			
 		}
 	}
@@ -5660,7 +5675,7 @@
 		relative_position_id = BAL_stalliongrad_flavor
 		ai_will_do = { factor = 100 }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus BAL_a_war_of_liberation"
+			log = "[GetDateText]: [Root.GetName]: Focus BAL_nova_griffonia_wargoal"
 			
 		}
 	}
@@ -5677,7 +5692,7 @@
 		relative_position_id = BAL_yaks_wargoal
 		ai_will_do = { factor = 100 }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus BAL_a_war_of_liberation"
+			log = "[GetDateText]: [Root.GetName]: Focus BAL_consumer"
 			
 		}
 	}
