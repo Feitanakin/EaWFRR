@@ -8300,11 +8300,1529 @@ focus_tree = {
 		}
 	}
 
+#####################################################################################
+#####################################################################################
+#####################################################################################
+#####################################################################################
+#####################################################################################
+#####################################################################################
+#####################################################################################
+#####################################################################################
+#####################################################################################
+#####################################################################################
+#####################################################################################
+#####################################################################################
+#####################################################################################
+#####################################################################################
+
+#Frederick gets wacky
+
+	focus = {
+		id = SIC_the_imperial_restoration
+		icon = GFX_SIC_facing_the_sun
+		cost = 10
+		x = 114
+		y = 8
+		ai_will_do = { factor = 10 }
+		available = {
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_the_imperial_restoration"
+			
+		}
+	}
+
+	focus = {
+		id = SIC_the_sharpened_claws
+		icon = GFX_SIC_facing_the_sun
+		prerequisite = { focus = SIC_the_imperial_restoration }
+		cost = 10
+		x = -1
+		y = 1
+		relative_position_id = SIC_the_imperial_restoration
+		ai_will_do = { factor = 100 }
+		available = {
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_the_sharpened_claws"
+			add_manpower = 50000
+		}
+	}
+
+	focus = {
+		id = SIC_the_greatest_of_peoples
+		icon = GFX_SIC_facing_the_sun
+		prerequisite = { focus = SIC_the_imperial_restoration }
+		cost = 10
+		x = 1
+		y = 1
+		relative_position_id = SIC_the_imperial_restoration
+		ai_will_do = { factor = 100 }
+		available = {
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_the_greatest_of_peoples"
+			add_war_support = 0.1
+		}
+	}
+
+	focus = {
+		id = SIC_the_problem_before_us
+		icon = GFX_SIC_facing_the_sun
+		prerequisite = { focus = SIC_the_sharpened_claws }
+		prerequisite = { focus = SIC_the_greatest_of_peoples }
+		cost = 10
+		x = 1
+		y = 1
+		relative_position_id = SIC_the_sharpened_claws
+		ai_will_do = { factor = 100 }
+		available = {
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_the_problem_before_us"
+			set_country_flag = SIC_frederick_conquering
+		}
+	}
+	
+	
+
+	focus = {
+		id = SIC_the_eastern_counties
+		icon = GFX_SIC_facing_the_sun
+		prerequisite = { focus = SIC_the_problem_before_us }
+		cost = 10
+		x = -12
+		y = 1
+		relative_position_id = SIC_the_problem_before_us
+		ai_will_do = { factor = 100 }
+		available = {
+			has_country_flag = SIC_frederick_conquering
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_the_eastern_counties"
+			clr_country_flag = SIC_frederick_conquering
+		}
+	}
+
+	focus = {
+		id = SIC_cyanlosia
+		icon = GFX_SIC_facing_the_sun
+		prerequisite = { focus = SIC_the_eastern_counties }
+		cost = 10
+		x = -3
+		y = 1
+		relative_position_id = SIC_the_eastern_counties
+		ai_will_do = { factor = 100 }
+		available = {
+			country_exists = CYA
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_cyanlosia"
+		}
+	}
+
+	focus = {
+		id = SIC_a_meeting_with_taillow
+		icon = GFX_SIC_facing_the_sun
+		prerequisite = { focus = SIC_cyanlosia }
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = SIC_cyanlosia
+		ai_will_do = { factor = 100 }
+		available = {
+			country_exists = CYA
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_a_meeting_with_taillow"
+		}
+	}
+
+	focus = {
+		id = SIC_a_deep_reflection
+		icon = GFX_SIC_facing_the_sun
+		prerequisite = { focus = SIC_a_meeting_with_taillow }
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = SIC_a_meeting_with_taillow
+		ai_will_do = { factor = 100 }
+		available = {
+			country_exists = CYA
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_a_deep_reflection"
+		}
+	}
+
+	focus = {
+		id = SIC_a_daring_proposal
+		icon = GFX_SIC_facing_the_sun
+		prerequisite = { focus = SIC_a_deep_reflection }
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = SIC_a_deep_reflection
+		ai_will_do = { factor = 100 }
+		available = {
+			country_exists = CYA
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_a_daring_proposal"
+		}
+	}
+
+	focus = {
+		id = SIC_a_royal_unification
+		icon = GFX_SIC_facing_the_sun
+		prerequisite = { focus = SIC_a_deep_reflection }
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = SIC_a_deep_reflection
+		ai_will_do = { factor = 100 }
+		available = {
+			country_exists = CYA
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_a_royal_unification"
+			#sets into place a multi month event chain that ends in marriage
+			annex_country = {
+				target = CYA
+				transfer_troops = yes
+			}
+			671 = {
+				add_core_of = SIC
+			}
+			510 = {
+				add_core_of = SIC
+			}
+			511 = {
+				add_core_of = SIC
+			}
+			507 = {
+				add_core_of = SIC
+			}
+		}
+	}
+
+	focus = {
+		id = SIC_asterion
+		icon = GFX_SIC_facing_the_sun
+		prerequisite = { focus = SIC_the_eastern_counties }
+		bypass = {
+			NOT = {
+				country_exists = MIT
+			}
+		}
+		cost = 5
+		x = 3
+		y = 1
+		relative_position_id = SIC_the_eastern_counties
+		ai_will_do = { factor = 100 }
+		available = {
+			country_exists = MIT
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_asterion"
+			add_war_support = 0.03
+		}
+	}
+
+	focus = {
+		id = SIC_the_roaring_bulls
+		icon = GFX_SIC_facing_the_sun
+		prerequisite = { focus = SIC_asterion }
+		bypass = {
+			NOT = {
+				country_exists = MIT
+			}
+		}
+		cost = 3
+		x = -1
+		y = 1
+		relative_position_id = SIC_asterion
+		ai_will_do = { factor = 100 }
+		available = {
+			country_exists = MIT
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_the_roaring_bulls"
+			add_ideas = SIC_FRD_astida
+		}
+	}
+
+	focus = {
+		id = SIC_our_rifles_ready
+		icon = GFX_SIC_facing_the_sun
+		prerequisite = { focus = SIC_asterion }
+		bypass = {
+			NOT = {
+				country_exists = MIT
+			}
+		}
+		cost = 3
+		x = 1
+		y = 1
+		relative_position_id = SIC_asterion
+		ai_will_do = { factor = 100 }
+		available = {
+			country_exists = MIT
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_our_rifles_ready"
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 750
+				producer = SIC
+			}
+		}
+	}
+
+	focus = {
+		id = SIC_the_red_cloth
+		icon = GFX_SIC_facing_the_sun
+		prerequisite = { focus = SIC_the_roaring_bulls }
+		prerequisite = { focus = SIC_our_rifles_ready }
+		cost = 3
+		x = 1
+		y = 1
+		relative_position_id = SIC_the_roaring_bulls
+		ai_will_do = { factor = 100 }
+		available = {
+			country_exists = MIT
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_the_red_cloth"
+			country_event = { id = sicameon_frtr_frd.1 days = 0 }
+		}
+	}
+
+	focus = {
+		id = SIC_the_spoils_of_aster
+		icon = GFX_SIC_facing_the_sun
+		prerequisite = { focus = SIC_the_red_cloth }
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id = SIC_the_red_cloth
+		ai_will_do = { factor = 100 }
+		available = {
+			owns_state = 386
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_the_spoils_of_aster"
+			remove_ideas = SIC_FRD_astida
+			custom_effect_tooltip = 1_frd_burn_it_all_down_tt
+			hidden_effect = {
+				386 = {
+					remove_building = {
+						type = arms_factory
+						level = 99
+					}
+					remove_building = {
+						type = industrial_complex
+						level = 99
+					}
+					remove_building = {
+						type = dockyard
+						level = 99
+					}
+					remove_building = {
+						type = infrastructure
+						level = 10
+					}
+					add_manpower = -1500000
+				}
+				add_offsite_building = {
+					type = industrial_complex
+					level = 1
+				}
+				add_offsite_building = {
+					type = arms_factory
+					level = 1
+				}
+			}
+			386 = {
+				add_core_of = SIC
+				set_state_category = wasteland
+			}
+			add_victory_points = {
+				province = 2156
+				value = -25
+			}
+			set_province_name = { id = 2156 name = "Ruins of Aster" }
+		}
+	}
+
+	focus = {
+		id = SIC_the_east_tamed
+		icon = GFX_SIC_facing_the_sun
+		prerequisite = { focus = SIC_a_royal_unification }
+		prerequisite = { focus = SIC_the_spoils_of_aster }
+		cost = 10
+		x = 3
+		y = 1
+		relative_position_id = SIC_a_royal_unification
+		ai_will_do = { factor = 100 }
+		available = {
+			NOT = {
+				country_exists = CYA
+				country_exists = MIT
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_a_daring_proposal"
+			set_country_flag = SIC_frederick_conquering
+			add_stability = 0.03
+		}
+	}
+	
+	
+
+	focus = {
+		id = SIC_the_northern_counties
+		icon = GFX_SIC_facing_the_sun
+		prerequisite = { focus = SIC_the_problem_before_us }
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = SIC_the_problem_before_us
+		ai_will_do = { factor = 100 }
+		available = {
+			has_country_flag = SIC_frederick_conquering
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_the_northern_counties"
+			clr_country_flag = SIC_frederick_conquering
+		}
+	}
+
+	focus = {
+		id = SIC_falcoria
+		icon = GFX_SIC_facing_the_sun
+		prerequisite = { focus = SIC_the_northern_counties }
+		bypass = {
+			NOT = {
+				country_exists = FAL
+			}
+		}
+		cost = 5
+		x = -3
+		y = 1
+		relative_position_id = SIC_the_northern_counties
+		ai_will_do = { factor = 100 }
+		available = {
+			country_exists = FAL
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_falcoria"
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = SIC_fortify_our_islands
+		icon = GFX_SIC_facing_the_sun
+		prerequisite = { focus = SIC_falcoria }
+		bypass = {
+			NOT = {
+				country_exists = FAL
+			}
+		}
+		cost = 3
+		x = -1
+		y = 1
+		relative_position_id = SIC_falcoria
+		ai_will_do = { factor = 100 }
+		available = {
+			country_exists = FAL
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_fortify_our_islands"
+			535 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 12182 
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 9045 
+				}
+				add_building_construction = {
+					type = naval_base
+					province = 9055
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SIC_the_drawing_of_weapons
+		icon = GFX_SIC_facing_the_sun
+		prerequisite = { focus = SIC_falcoria }
+		bypass = {
+			NOT = {
+				country_exists = FAL
+			}
+		}
+		cost = 3
+		x = 1
+		y = 1
+		relative_position_id = SIC_falcoria
+		ai_will_do = { factor = 100 }
+		available = {
+			country_exists = FAL
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_the_drawing_of_weapons"
+			add_manpower = 20000
+		}
+	}
+
+	focus = {
+		id = SIC_attack
+		icon = GFX_SIC_facing_the_sun
+		prerequisite = { focus = SIC_the_drawing_of_weapons }
+		prerequisite = { focus = SIC_fortify_our_islands }
+		cost = 3
+		x = 1
+		y = 1
+		relative_position_id = SIC_fortify_our_islands
+		ai_will_do = { factor = 100 }
+		available = {
+			country_exists = FAL
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_attack"
+			declare_war_on = {
+				target = FAL
+				type = annex_everything
+			}
+			add_timed_idea = {
+				idea = SIC_FRD_falatkida
+				days = 15
+			}
+		}
+	}
+
+	focus = {
+		id = SIC_sacking_matton
+		icon = GFX_SIC_facing_the_sun
+		prerequisite = { focus = SIC_attack }
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id = SIC_attack
+		ai_will_do = { factor = 100 }
+		available = {
+			owns_state = 529
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_sacking_matton"
+			custom_effect_tooltip = 1_frd_burn_it_all_down_tt
+			hidden_effect = {
+				529 = {
+					remove_building = {
+						type = arms_factory
+						level = 99
+					}
+					remove_building = {
+						type = industrial_complex
+						level = 99
+					}
+					remove_building = {
+						type = infrastructure
+						level = 10
+					}
+					add_manpower = -700000
+				}
+				add_offsite_building = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			529 = {
+				add_core_of = SIC
+				set_state_category = wasteland
+			}
+			add_victory_points = {
+				province = 7868
+				value = -12
+			}
+		}
+	}
+
+	focus = {
+		id = SIC_blackrock
+		icon = GFX_SIC_facing_the_sun
+		prerequisite = { focus = SIC_the_northern_counties }
+		cost = 10
+		x = 3
+		y = 1
+		relative_position_id = SIC_the_northern_counties
+		ai_will_do = { factor = 100 }
+		available = {
+			country_exists = BAN
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_blackrock"
+			add_political_power = 75
+		}
+	}
+
+	focus = {
+		id = SIC_promise_order
+		icon = GFX_SIC_facing_the_sun
+		prerequisite = { focus = SIC_blackrock }
+		cost = 10
+		x = -1
+		y = 1
+		relative_position_id = SIC_blackrock
+		ai_will_do = { factor = 100 }
+		available = {
+			country_exists = BAN
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_promise_order"
+			BAN = {
+				add_ideas = SIC_FRD_ordcmnida
+			}
+		}
+	}
+
+	focus = {
+		id = SIC_mountaineer_brigades
+		icon = GFX_SIC_facing_the_sun
+		prerequisite = { focus = SIC_blackrock }
+		cost = 10
+		x = 1
+		y = 1
+		relative_position_id = SIC_blackrock
+		ai_will_do = { factor = 100 }
+		available = {
+			country_exists = BAN
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_mountaineer_brigades"
+			load_oob = "SIC_MOUNT_BRGDS"
+		}
+	}
+
+	focus = {
+		id = SIC_subdue_the_anarchists
+		icon = GFX_SIC_facing_the_sun
+		prerequisite = { focus = SIC_mountaineer_brigades }
+		prerequisite = { focus = SIC_promise_order }
+		cost = 10
+		x = 1
+		y = 1
+		relative_position_id = SIC_promise_order
+		ai_will_do = { factor = 100 }
+		available = {
+			country_exists = BAN
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_subdue_the_anarchists"
+			declare_war_on = {
+				target = BAN
+				type = annex_everything
+			}
+			add_timed_idea = {
+				idea = SIC_FRD_mntbltida
+				days = 21
+			}
+		}
+	}
+
+	focus = {
+		id = SIC_mountain_riches
+		icon = GFX_SIC_facing_the_sun
+		prerequisite = { focus = SIC_subdue_the_anarchists }
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = SIC_subdue_the_anarchists
+		ai_will_do = { factor = 100 }
+		available = {
+			owns_state = 446
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_mountain_riches"
+			custom_effect_tooltip = 1_frd_burn_it_all_down_tt
+			hidden_effect = {
+				532 = {
+					remove_building = {
+						type = arms_factory
+						level = 99
+					}
+					remove_building = {
+						type = industrial_complex
+						level = 99
+					}
+					remove_building = {
+						type = infrastructure
+						level = 10
+					}
+					add_manpower = -510000
+				}
+				add_offsite_building = {
+					type = arms_factory
+					level = 1
+				}
+			}
+			532 = {
+				add_core_of = SIC
+				set_state_category = wasteland
+			}
+			add_victory_points = {
+				province = 10025
+				value = -8
+			}
+		}
+	}
+
+	focus = {
+		id = SIC_the_north_reclaimed
+		icon = GFX_SIC_facing_the_sun
+		prerequisite = { focus = SIC_mountain_riches }
+		prerequisite = { focus = SIC_sacking_matton }
+		cost = 10
+		x = 3
+		y = 1
+		relative_position_id = SIC_sacking_matton
+		ai_will_do = { factor = 100 }
+		available = {
+			NOT = {
+				country_exists = CYA
+				country_exists = MIT
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_the_north_reclaimed"
+			set_country_flag = SIC_frederick_conquering
+			add_political_power = 50
+		}
+	}
+	
+	
+
+	focus = {
+		id = SIC_the_western_counties
+		icon = GFX_SIC_facing_the_sun
+		prerequisite = { focus = SIC_the_problem_before_us }
+		cost = 10
+		x = 10
+		y = 1
+		relative_position_id = SIC_the_problem_before_us
+		ai_will_do = { factor = 100 }
+		available = {
+			has_country_flag = SIC_frederick_conquering
+			has_completed_focus = SIC_the_north_reclaimed
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_the_northern_counties"
+			clr_country_flag = SIC_frederick_conquering
+		}
+	}
+
+	focus = {
+		id = SIC_wingbardy
+		icon = GFX_SIC_facing_the_sun
+		prerequisite = { focus = SIC_the_western_counties }
+		cost = 10
+		x = -3
+		y = 1
+		relative_position_id = SIC_the_western_counties
+		ai_will_do = { factor = 100 }
+		available = {
+			country_exists = WNG
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_wingbardy"
+			add_manpower = 5714
+		}
+	}
+
+	focus = {
+		id = SIC_anti_tank_tactics
+		icon = GFX_SIC_facing_the_sun
+		prerequisite = { focus = SIC_wingbardy }
+		cost = 10
+		x = -1
+		y = 1
+		relative_position_id = SIC_wingbardy
+		ai_will_do = { factor = 100 }
+		available = {
+			country_exists = WNG
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_anti_tank_tactics"
+			add_ideas = SIC_FRD_anttnktctida
+		}
+	}
+
+	focus = {
+		id = SIC_the_true_fascism
+		icon = GFX_SIC_facing_the_sun
+		prerequisite = { focus = SIC_wingbardy }
+		cost = 10
+		x = 1
+		y = 1
+		relative_position_id = SIC_wingbardy
+		ai_will_do = { factor = 100 }
+		available = {
+			country_exists = WNG
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_the_true_fascism"
+			add_stability = 0.03
+		}
+	}
+
+	focus = {
+		id = SIC_to_karthin
+		icon = GFX_SIC_facing_the_sun
+		prerequisite = { focus = SIC_anti_tank_tactics }
+		prerequisite = { focus = SIC_the_true_fascism }
+		cost = 10
+		x = 1
+		y = 1
+		relative_position_id = SIC_anti_tank_tactics
+		ai_will_do = { factor = 100 }
+		available = {
+			country_exists = WNG
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_to_karthin"
+			declare_war_on = {
+				target = WNG
+				type = annex_everything
+			}
+		}
+	}
+
+	focus = {
+		id = SIC_the_ancient_wealth
+		icon = GFX_SIC_facing_the_sun
+		prerequisite = { focus = SIC_to_karthin }
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = SIC_to_karthin
+		ai_will_do = { factor = 100 }
+		available = {
+			owns_state = 371
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_the_ancient_wealth"
+			custom_effect_tooltip = 1_frd_burn_it_all_down_tt
+			hidden_effect = {
+				371 = {
+					remove_building = {
+						type = arms_factory
+						level = 99
+					}
+					remove_building = {
+						type = industrial_complex
+						level = 99
+					}
+					remove_building = {
+						type = infrastructure
+						level = 10
+					}
+					add_manpower = -2350000
+				}
+				369 = {
+					remove_building = {
+						type = arms_factory
+						level = 99
+					}
+					remove_building = {
+						type = industrial_complex
+						level = 99
+					}
+					remove_building = {
+						type = infrastructure
+						level = 10
+					}
+					add_manpower = -1840000
+				}
+				530 = {
+					remove_building = {
+						type = arms_factory
+						level = 99
+					}
+					remove_building = {
+						type = industrial_complex
+						level = 99
+					}
+					remove_building = {
+						type = infrastructure
+						level = 10
+					}
+					add_manpower = -1280000
+				}
+				add_offsite_building = {
+					type = industrial_complex
+					level = 2
+				}
+				add_offsite_building = {
+					type = arms_factory
+					level = 4
+				}
+			}
+			371 = {
+				add_core_of = SIC
+				set_state_category = wasteland
+			}
+			369 = {
+				add_core_of = SIC
+				set_state_category = wasteland
+			}
+			530 = {
+				add_core_of = SIC
+				set_state_category = wasteland
+			}
+			add_victory_points = {
+				province = 3144
+				value = -32
+			}
+			add_victory_points = {
+				province = 6166
+				value = -15
+			}
+			add_victory_points = {
+				province = 7754
+				value = -17
+			}
+			
+		}
+	}
+
+	focus = {
+		id = SIC_griffonstone
+		icon = GFX_SIC_facing_the_sun
+		prerequisite = { focus = SIC_the_western_counties }
+		cost = 10
+		x = 3
+		y = 1
+		relative_position_id = SIC_the_western_counties
+		ai_will_do = { factor = 100 }
+		available = {
+			country_exists = BOI
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_griffonstone"
+			add_manpower = 5000
+		}
+	}
+
+	focus = {
+		id = SIC_our_ancient_home
+		icon = GFX_SIC_facing_the_sun
+		prerequisite = { focus = SIC_griffonstone }
+		cost = 10
+		x = -1
+		y = 1
+		relative_position_id = SIC_griffonstone
+		ai_will_do = { factor = 100 }
+		available = {
+			country_exists = BOI
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_our_ancient_home"
+			add_political_power = 75
+		}
+	}
+
+	focus = {
+		id = SIC_the_true_heirs
+		icon = GFX_SIC_facing_the_sun
+		prerequisite = { focus = SIC_griffonstone }
+		cost = 10
+		x = 1
+		y = 1
+		relative_position_id = SIC_griffonstone
+		ai_will_do = { factor = 100 }
+		available = {
+			country_exists = BOI
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_the_true_heirs"
+			add_war_support = 0.03
+		}
+	}
+
+	focus = {
+		id = SIC_seize_the_throne
+		icon = GFX_SIC_facing_the_sun
+		prerequisite = { focus = SIC_our_ancient_home }
+		prerequisite = { focus = SIC_the_true_heirs }
+		cost = 10
+		x = 1
+		y = 1
+		relative_position_id = SIC_our_ancient_home
+		ai_will_do = { factor = 100 }
+		available = {
+			country_exists = BOI
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_seize_the_throne"
+			declare_war_on = {
+				target = BOI
+				type = annex_everything
+			}
+		}
+	}
+
+	focus = {
+		id = SIC_the_sacred_city
+		icon = GFX_SIC_facing_the_sun
+		prerequisite = { focus = SIC_seize_the_throne }
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = SIC_seize_the_throne
+		ai_will_do = { factor = 100 }
+		available = {
+			owns_state = 389
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_the_sacred_city"
+			custom_effect_tooltip = 1_frd_burn_it_all_down_tt
+			hidden_effect = {
+				389 = {
+					remove_building = {
+						type = arms_factory
+						level = 99
+					}
+					remove_building = {
+						type = industrial_complex
+						level = 99
+					}
+					remove_building = {
+						type = infrastructure
+						level = 10
+					}
+					add_manpower = -1275000
+				}
+				add_offsite_building = {
+					type = arms_factory
+					level = 2
+				}
+			}
+			389 = {
+				add_core_of = SIC
+				set_state_category = wasteland
+			}
+			add_victory_points = {
+				province = 7192
+				value = -24
+			}
+		}
+	}
+
+	focus = {
+		id = SIC_the_west_seized
+		icon = GFX_SIC_facing_the_sun
+		prerequisite = { focus = SIC_the_ancient_wealth }
+		prerequisite = { focus = SIC_the_sacred_city }
+		cost = 10
+		x = 3
+		y = 1
+		relative_position_id = SIC_the_ancient_wealth
+		available = {
+			NOT = {
+				country_exists = WNG
+				country_exists = BOi
+			}
+		}
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_the_west_seized"
+			set_country_flag = SIC_frederick_conquering
+			add_war_support = 0.03
+		}
+	}
 
 
 
+	focus = {
+		id = SIC_the_fatherland_calls
+		icon = GFX_SIC_facing_the_sun
+		prerequisite = { focus = SIC_the_east_tamed }
+		prerequisite = { focus = SIC_the_north_reclaimed }
+		prerequisite = { focus = SIC_the_west_seized }
+		cost = 2
+		x = 0
+		y = 1
+		relative_position_id = SIC_the_north_reclaimed
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_the_fatherland_calls"
+		}
+	}
+	
+	focus = {
+		id = SIC_FRD_the_imperial_restoration2
+		icon = GFX_SIC_the_decadent_regency_2
+		prerequisite = { focus = SIC_the_fatherland_calls }
+		mutually_exclusive = { focus = SIC_FRD_the_empire_reborn }
+		available = {
+			OR = {
+				GRI = {
+					exists = yes
+					OR = {
+						has_government = fascism
+						has_government = neutrality
+					}
+				}
+				STW = {
+					exists = yes
+					has_government = neutrality
+				}
+			}
+		}
+		cost = 1
+		x = -2
+		y = 1
+		relative_position_id = SIC_the_fatherland_calls
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_FRD_the_imperial_restoration2"
+			add_stability = 0.1
+			add_war_support = -0.1
+		}
+	}
+	
+	focus = {
+		id = SIC_FRD_merging_administrations
+		icon = GFX_FRD_SIC_the_decadent_regency_2
+		prerequisite = { focus = SIC_FRD_the_imperial_restoration2 }
+		cost = 7
+		x = -1
+		y = 1
+		relative_position_id = SIC_FRD_the_imperial_restoration2
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_FRD_merging_administrations"
+			add_political_power = 75
+		}
+	}
+	
+	focus = {
+		id = SIC_FRD_our_autonomy
+		icon = GFX_SIC_the_decadent_regency_2
+		prerequisite = { focus = SIC_FRD_the_imperial_restoration2 }
+		cost = 7
+		x = 1
+		y = 1
+		relative_position_id = SIC_FRD_the_imperial_restoration2
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_FRD_our_autonomy"
+			add_political_power = 75
+		}
+	}
+	
+	focus = {
+		id = SIC_FRD_the_empire_endures
+		icon = GFX_SIC_the_decadent_regency_2
+		prerequisite = { focus = SIC_FRD_merging_administrations }
+		prerequisite = { focus = SIC_FRD_our_autonomy }
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = SIC_FRD_merging_administrations
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_FRD_the_empire_endures"
+			IF = {
+				limit = {
+					GRI = {
+						exists = yes
+					}
+				}
+				GRI = {
+					set_autonomy = {
+						target = SIC
+						autonomy_state = autonomy_nominal_vassal
+					}
+				}
+			} ELSE = {
+				STW = {
+					set_autonomy = {
+						target = SIC
+						autonomy_state = autonomy_nominal_vassal
+					}
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = SIC_FRD_the_southern_economy
+		icon = GFX_SIC_the_decadent_regency_2
+		prerequisite = { focus = SIC_FRD_the_empire_endures }
+		cost = 6
+		x = -6
+		y = 1
+		relative_position_id = SIC_FRD_the_empire_endures
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_FRD_the_southern_economy"
+			add_political_power = 42
+		}
+	}
+	
+	focus = {
+		id = SIC_FRD_invest_in_infrastructure
+		icon = GFX_SIC_the_decadent_regency_2
+		prerequisite = { focus = SIC_FRD_the_southern_economy }
+		cost = 6
+		x = -1
+		y = 1
+		relative_position_id = SIC_FRD_the_southern_economy
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_FRD_invest_in_infrastructure"
+			add_political_power = 42
+		}
+	}
+	
+	focus = {
+		id = SIC_FRD_invest_in_supplies
+		icon = GFX_SIC_the_decadent_regency_2
+		prerequisite = { focus = SIC_FRD_the_southern_economy }
+		cost = 6
+		x = 1
+		y = 1
+		relative_position_id = SIC_FRD_the_southern_economy
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_FRD_invest_in_infrastructure"
+			add_political_power = 42
+		}
+	}
+	
+	
+	
+	focus = {
+		id = SIC_FRD_the_southern_will
+		icon = GFX_SIC_the_decadent_regency_2
+		prerequisite = { focus = SIC_FRD_the_empire_endures }
+		cost = 6
+		x = -3
+		y = 1
+		relative_position_id = SIC_FRD_the_empire_endures
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_FRD_the_southern_economy"
+			add_political_power = 42
+		}
+	}
+	
+	
+	
+	focus = {
+		id = SIC_FRD_the_southern_military
+		icon = GFX_SIC_the_decadent_regency_2
+		prerequisite = { focus = SIC_FRD_the_empire_endures }
+		cost = 6
+		x = 0
+		y = 1
+		relative_position_id = SIC_FRD_the_empire_endures
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_FRD_the_southern_military"
+			add_political_power = 42
+		}
+	}
+	
+	focus = {
+		id = SIC_FRD_ref_the_mil
+		icon = GFX_SIC_the_decadent_regency_2
+		prerequisite = { focus = SIC_FRD_the_southern_military }
+		cost = 6
+		x = -1
+		y = 1
+		relative_position_id = SIC_FRD_the_southern_military
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_FRD_newshp"
+			add_political_power = 42
+			add_dynamic_modifier = { modifier = SIC_FRD_reform_military }
+			set_variable = { SIC_FRD_xpgnlnd = 0 }
+			set_variable = { SIC_FRD_armorg = 0 }
+			set_variable = { SIC_FRD_cordef = 0 }
+			set_variable = { SIC_FRD_coratk = 0 }
+		}
+	}
+	
+	focus = {
+		id = SIC_FRD_newshp
+		icon = GFX_SIC_the_decadent_regency_2
+		prerequisite = { focus = SIC_FRD_the_southern_military }
+		cost = 6
+		x = 1
+		y = 1
+		relative_position_id = SIC_FRD_the_southern_military
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_FRD_newshp"
+			add_political_power = 42
+		}
+	}
 
 
+
+	
+	
+	
+	
+	focus = {
+		id = SIC_FRD_the_empire_reborn
+		icon = GFX_SIC_the_decadent_regency_2
+		prerequisite = { focus = SIC_the_fatherland_calls }
+		mutually_exclusive = { focus = SIC_FRD_the_imperial_restoration2 }
+		available = {
+			GRI = {
+				OR = {
+					exists = no
+					NOT = {
+						OR = {
+							has_government = fascism
+							has_government = neutrality
+						}
+					}
+				}
+			}
+			STW = {
+				OR = {
+					exists = no
+					NOT = {
+						has_government = neutrality
+					}
+				}
+			}
+		}
+		cost = 1
+		x = 2
+		y = 1
+		relative_position_id = SIC_the_fatherland_calls
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_FRD_the_empire_reborn"
+			add_stability = -0.2
+			add_war_support = 0.2
+		}
+	}
+	
+	focus = {
+		id = SIC_FRD_the_border_guard_rallies
+		icon = GFX_SIC_the_decadent_regency_2
+		prerequisite = { focus = SIC_FRD_the_empire_reborn }
+		cost = 6
+		x = 0
+		y = 1
+		relative_position_id = SIC_FRD_the_empire_reborn
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_FRD_the_border_guard_rallies"
+			load_oob = SIC_FRD_BRDGRD
+		}
+	}
+	
+	focus = {
+		id = SIC_FRD_sketch_industrial_plans
+		icon = GFX_SIC_the_decadent_regency_2
+		prerequisite = { focus = SIC_FRD_the_empire_reborn }
+		cost = 6
+		x = 2
+		y = 1
+		relative_position_id = SIC_FRD_the_empire_reborn
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_FRD_sketch_industrial_plans"
+			add_ideas = SIC_FRD_warindida
+		}
+	}
+	
+	focus = {
+		id = SIC_FRD_the_invasion
+		icon = GFX_SIC_the_decadent_regency_2
+		prerequisite = { focus = SIC_FRD_the_border_guard_rallies }
+		prerequisite = { focus = SIC_FRD_sketch_industrial_plans }
+		cost = 6
+		x = 1
+		y = 1
+		relative_position_id = SIC_FRD_the_border_guard_rallies
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_FRD_the_invasion"
+			declare_war_on = {
+				target = 382.owner
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = 547.owner
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = 506.owner
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = 423.owner
+				type = annex_everything
+			}
+		}
+	}
+	
+	focus = {
+		id = SIC_FRD_return_to_griffenheim
+		icon = GFX_SIC_the_decadent_regency_2
+		prerequisite = { focus = SIC_FRD_the_invasion }
+		available = {
+			owns_state = 382
+		}
+		cost = 6
+		x = 0
+		y = 1
+		relative_position_id = SIC_FRD_the_invasion
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_FRD_return_to_griffenheim"
+			382 = {
+				add_core_of = SIC
+			}
+			add_stability = 0.1
+			set_capital = {
+				state = 382
+				remember_old_capital = no
+			}
+		}
+	}
+	
+	focus = {
+		id = SIC_FRD_aquelia
+		icon = GFX_SIC_the_decadent_regency_2
+		prerequisite = { focus = SIC_FRD_return_to_griffenheim }
+		cost = 6
+		x = 0
+		y = 1
+		relative_position_id = SIC_FRD_return_to_griffenheim
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_FRD_aquelia"
+		}
+	}
+	focus = {
+		id = SIC_FRD_ravage_the_southwest
+		icon = GFX_SIC_the_decadent_regency_2
+		prerequisite = { focus = SIC_FRD_aquelia }
+		cost = 6
+		x = 0
+		y = 1
+		available = {
+			owns_state = 377
+			owns_state = 376
+			owns_state = 435
+		}
+		relative_position_id = SIC_FRD_aquelia
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_FRD_sack_the_cities"
+		}
+	}
+	
+	focus = {
+		id = SIC_FRD_republic
+		icon = GFX_SIC_the_decadent_regency_2
+		prerequisite = { focus = SIC_FRD_return_to_griffenheim }
+		cost = 6
+		x = 2
+		y = 1
+		relative_position_id = SIC_FRD_return_to_griffenheim
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_FRD_republic"
+		}
+	}
+	focus = {
+		id = SIC_FRD_tame_the_far_north
+		icon = GFX_SIC_the_decadent_regency_2
+		prerequisite = { focus = SIC_FRD_republic }
+		cost = 6
+		x = 0
+		y = 1
+		available = {
+			owns_state = 485
+		}
+		relative_position_id = SIC_FRD_republic
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_FRD_tame_the_far_north"
+		}
+	}
+	
+	focus = {
+		id = SIC_FRD_riverlands
+		icon = GFX_SIC_the_decadent_regency_2
+		prerequisite = { focus = SIC_FRD_return_to_griffenheim }
+		cost = 6
+		x = 4
+		y = 1
+		relative_position_id = SIC_FRD_return_to_griffenheim
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_FRD_riverlands"
+		}
+	}
+	focus = {
+		id = SIC_FRD_secure_griffonia
+		icon = GFX_SIC_the_decadent_regency_2
+		prerequisite = { focus = SIC_FRD_riverlands }
+		cost = 6
+		x = 0
+		y = 1
+		available = {
+			owns_state = 619
+		}
+		relative_position_id = SIC_FRD_riverlands
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_FRD_secure_griffonia"
+		}
+	}
+	
+	
+	
+	focus = {
+		id = SIC_FRD_across_the_seas
+		icon = GFX_SIC_the_decadent_regency_2
+		prerequisite = { focus = SIC_FRD_ravage_the_southwest }
+		prerequisite = { focus = SIC_FRD_tame_the_far_north }
+		prerequisite = { focus = SIC_FRD_secure_griffonia }
+		available = {
+			owns_state = 483
+		}
+		cost = 6
+		x = 0
+		y = 1
+		relative_position_id = SIC_FRD_tame_the_far_north
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_FRD_across_the_seas"
+		}
+	}
 
 
 
