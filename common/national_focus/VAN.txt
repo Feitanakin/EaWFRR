@@ -12,5 +12,5 @@ focus_tree = {
 	shared_focus = VAN_The_Calm_Revolution
 	shared_focus = VAN_Defense_Of_The_Commune
 	shared_focus = VAN_A_Pirate_Life_For_Me
-	shared_focus = VAN_Second_Hooviet_Party_Congress
+	#shared_focus = VAN_Second_Hooviet_Party_Congress
 }
