@@ -1133,7 +1133,7 @@ focus_tree = {
 
 	focus = {
 		id = SIC_red_star_rising
-		icon = GFX_focus_sic_communism_flag
+		icon = GFX_SIC_red_star_from_the_ashes
 		cost = 8
 		x = -11
 		y = 9
@@ -1190,7 +1190,7 @@ focus_tree = {
 
 	focus = {
 		id = SIC_focus_on_the_farms
-		icon = GFX_focus_sic_communism_flag
+		icon = GFX_SIC_focus_on_the_farms
 		cost = 8
 		x = -1
 		y = 1
@@ -1211,7 +1211,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SIC_town_grants
-		icon = GFX_focus_sic_communism_flag
+		icon = GFX_SIC_town_grants
 		cost = 8
 		x = 0
 		y = 1
@@ -1235,7 +1235,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SIC_subsidize_farms
-		icon = GFX_focus_sic_communism_flag
+		icon = GFX_SIC_subsidize_farms
 		cost = 8
 		x = 0
 		y = 1
@@ -1262,7 +1262,7 @@ focus_tree = {
 
 	focus = {
 		id = SIC_seizing_private_property_agr
-		icon = GFX_focus_sic_communism_flag
+		icon = GFX_SIC_seizing_private_property
 		cost = 8
 		x = 1
 		y = 1
@@ -1307,7 +1307,7 @@ focus_tree = {
 
 	focus = {
 		id = SIC_freeing_space_agr
-		icon = GFX_focus_sic_communism_flag
+		icon = GFX_SIC_freeing_space
 		cost = 8
 		x = 0
 		y = 1
@@ -1331,7 +1331,7 @@ focus_tree = {
 
 	focus = {
 		id = SIC_agrarian_foundries
-		icon = GFX_focus_sic_communism_flag
+		icon = GFX_SIC_agrarian_foundries
 		cost = 8
 		x = 0
 		y = 1
@@ -1408,7 +1408,7 @@ focus_tree = {
 
 	focus = {
 		id = SIC_focus_on_the_cities
-		icon = GFX_focus_sic_communism_flag
+		icon = GFX_SIC_focus_on_the_cities
 		cost = 8
 		x = 1
 		y = 1
@@ -1429,7 +1429,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SIC_expand_industrial_districts
-		icon = GFX_focus_sic_communism_flag
+		icon = GFX_SIC_industrial_districts
 		cost = 8
 		x = 0
 		y = 1
@@ -1453,7 +1453,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SIC_urban_expansions
-		icon = GFX_focus_sic_communism_flag
+		icon = GFX_SIC_urban_expansions
 		cost = 8
 		x = 0
 		y = 1
@@ -1480,7 +1480,7 @@ focus_tree = {
 
 	focus = {
 		id = SIC_seizing_private_property_syn
-		icon = GFX_focus_sic_communism_flag
+		icon = GFX_SIC_seizing_private_property
 		cost = 8
 		x = -1
 		y = 1
@@ -1509,7 +1509,7 @@ focus_tree = {
 
 	focus = {
 		id = SIC_freeing_space_syn
-		icon = GFX_focus_sic_communism_flag
+		icon = GFX_SIC_freeing_space
 		cost = 8
 		x = 0
 		y = 1
@@ -1577,7 +1577,7 @@ focus_tree = {
 
 	focus = {
 		id = SIC_socialist_politics
-		icon = GFX_focus_sic_communism_flag
+		icon = GFX_SIC_socialis_politics
 		cost = 8
 		x = 0
 		y = 2
@@ -1600,7 +1600,7 @@ focus_tree = {
 
 	focus = {
 		id = SIC_settle_the_religious_debate
-		icon = GFX_focus_sic_communism_flag
+		icon = GFX_SIC_religious_discourse
 		cost = 3
 		x = -3
 		y = 1
@@ -1622,7 +1622,7 @@ focus_tree = {
 
 	focus = {
 		id = SIC_on_political_discourse
-		icon = GFX_focus_sic_communism_flag
+		icon = GFX_SIC_political_discourse
 		cost = 8
 		x = 3
 		y = 1
@@ -1670,7 +1670,7 @@ focus_tree = {
 	
 	focus = {
 		id = SIC_liberating_asterion
-		icon = GFX_focus_sic_communism_flag
+		icon = GFX_SIC_asterion2
 		cost = 8
 		x = -3
 		y = 1
@@ -1735,7 +1735,7 @@ focus_tree = {
 	
 	focus = {
 		id = SIC_liberating_cyanolisia
-		icon = GFX_focus_sic_communism_flag
+		icon = GFX_SIC_cyanolisia2
 		cost = 8
 		x = -1
 		y = 1
@@ -1797,7 +1797,7 @@ focus_tree = {
 	
 	focus = {
 		id = SIC_liberating_blackrock
-		icon = GFX_focus_sic_communism_flag
+		icon = GFX_SIC_blackrock2
 		cost = 8
 		x = 1
 		y = 1
@@ -1859,7 +1859,7 @@ focus_tree = {
 	
 	focus = {
 		id = SIC_liberating_falcoria
-		icon = GFX_focus_sic_communism_flag
+		icon = GFX_SIC_falcoria2
 		cost = 8
 		x = 3
 		y = 1
@@ -7905,7 +7905,7 @@ focus_tree = {
 
 	focus = {
 		id = SIC_the_imperial_restoration
-		icon = GFX_SIC_facing_the_sun
+		icon = GFX_SIC_imperial_restoration
 		cost = 10
 		x = 114
 		y = 8
@@ -7920,7 +7920,7 @@ focus_tree = {
 
 	focus = {
 		id = SIC_the_sharpened_claws
-		icon = GFX_SIC_facing_the_sun
+		icon = GFX_SIC_sharpened_claws
 		prerequisite = { focus = SIC_the_imperial_restoration }
 		cost = 10
 		x = -1
@@ -7937,7 +7937,7 @@ focus_tree = {
 
 	focus = {
 		id = SIC_the_greatest_of_peoples
-		icon = GFX_SIC_facing_the_sun
+		icon = GFX_SIC_greatest_of_peoples
 		prerequisite = { focus = SIC_the_imperial_restoration }
 		cost = 10
 		x = 1
@@ -7954,7 +7954,7 @@ focus_tree = {
 
 	focus = {
 		id = SIC_the_problem_before_us
-		icon = GFX_SIC_facing_the_sun
+		icon = GFX_SIC_the_problem_before_us
 		prerequisite = { focus = SIC_the_sharpened_claws }
 		prerequisite = { focus = SIC_the_greatest_of_peoples }
 		cost = 10
@@ -7974,7 +7974,7 @@ focus_tree = {
 
 	focus = {
 		id = SIC_the_eastern_counties
-		icon = GFX_SIC_facing_the_sun
+		icon = GFX_SIC_eastern_countries
 		prerequisite = { focus = SIC_the_problem_before_us }
 		cost = 10
 		x = -12
@@ -7992,7 +7992,7 @@ focus_tree = {
 
 	focus = {
 		id = SIC_cyanlosia
-		icon = GFX_SIC_facing_the_sun
+		icon = GFX_SIC_cyanolisia
 		prerequisite = { focus = SIC_the_eastern_counties }
 		cost = 10
 		x = -3
@@ -8009,7 +8009,7 @@ focus_tree = {
 
 	focus = {
 		id = SIC_a_meeting_with_taillow
-		icon = GFX_SIC_facing_the_sun
+		icon = GFX_SIC_a_meeting_with_taillow
 		prerequisite = { focus = SIC_cyanlosia }
 		cost = 10
 		x = 0
@@ -8026,7 +8026,7 @@ focus_tree = {
 
 	focus = {
 		id = SIC_a_deep_reflection
-		icon = GFX_SIC_facing_the_sun
+		icon = GFX_SIC_a_deep_reflection
 		prerequisite = { focus = SIC_a_meeting_with_taillow }
 		cost = 10
 		x = 0
@@ -8060,7 +8060,7 @@ focus_tree = {
 
 	focus = {
 		id = SIC_a_royal_unification
-		icon = GFX_SIC_facing_the_sun
+		icon = GFX_SIC_royal_unification
 		prerequisite = { focus = SIC_a_deep_reflection }
 		cost = 10
 		x = 0
@@ -8094,7 +8094,7 @@ focus_tree = {
 
 	focus = {
 		id = SIC_asterion
-		icon = GFX_SIC_facing_the_sun
+		icon = GFX_SIC_asterion
 		prerequisite = { focus = SIC_the_eastern_counties }
 		bypass = {
 			NOT = {
@@ -8117,7 +8117,7 @@ focus_tree = {
 
 	focus = {
 		id = SIC_the_roaring_bulls
-		icon = GFX_SIC_facing_the_sun
+		icon = GFX_SIC_roaring_bulls
 		prerequisite = { focus = SIC_asterion }
 		bypass = {
 			NOT = {
@@ -8140,7 +8140,7 @@ focus_tree = {
 
 	focus = {
 		id = SIC_our_rifles_ready
-		icon = GFX_SIC_facing_the_sun
+		icon = GFX_SIC_rifles_ready
 		prerequisite = { focus = SIC_asterion }
 		bypass = {
 			NOT = {
@@ -8167,7 +8167,7 @@ focus_tree = {
 
 	focus = {
 		id = SIC_the_red_cloth
-		icon = GFX_SIC_facing_the_sun
+		icon = GFX_SIC_red_cloth
 		prerequisite = { focus = SIC_the_roaring_bulls }
 		prerequisite = { focus = SIC_our_rifles_ready }
 		cost = 3
@@ -8186,7 +8186,7 @@ focus_tree = {
 
 	focus = {
 		id = SIC_the_spoils_of_aster
-		icon = GFX_SIC_facing_the_sun
+		icon = GFX_SIC_spoils_of_aster
 		prerequisite = { focus = SIC_the_red_cloth }
 		cost = 1
 		x = 0
@@ -8243,7 +8243,7 @@ focus_tree = {
 
 	focus = {
 		id = SIC_the_east_tamed
-		icon = GFX_SIC_facing_the_sun
+		icon = GFX_SIC_east_tamed
 		prerequisite = { focus = SIC_a_royal_unification }
 		prerequisite = { focus = SIC_the_spoils_of_aster }
 		cost = 10
@@ -8268,7 +8268,7 @@ focus_tree = {
 
 	focus = {
 		id = SIC_the_northern_counties
-		icon = GFX_SIC_facing_the_sun
+		icon = GFX_SIC_northern_countries
 		prerequisite = { focus = SIC_the_problem_before_us }
 		cost = 10
 		x = 0
@@ -8286,7 +8286,7 @@ focus_tree = {
 
 	focus = {
 		id = SIC_falcoria
-		icon = GFX_SIC_facing_the_sun
+		icon = GFX_SIC_falcor
 		prerequisite = { focus = SIC_the_northern_counties }
 		bypass = {
 			NOT = {
@@ -8309,7 +8309,7 @@ focus_tree = {
 
 	focus = {
 		id = SIC_fortify_our_islands
-		icon = GFX_SIC_facing_the_sun
+		icon = GFX_SIC_fortify_our_islands
 		prerequisite = { focus = SIC_falcoria }
 		bypass = {
 			NOT = {
@@ -8351,7 +8351,7 @@ focus_tree = {
 
 	focus = {
 		id = SIC_the_drawing_of_weapons
-		icon = GFX_SIC_facing_the_sun
+		icon = GFX_SIC_drawing_of_weapons
 		prerequisite = { focus = SIC_falcoria }
 		bypass = {
 			NOT = {
@@ -8374,7 +8374,7 @@ focus_tree = {
 
 	focus = {
 		id = SIC_attack
-		icon = GFX_SIC_facing_the_sun
+		icon = GFX_SIC_attack
 		prerequisite = { focus = SIC_the_drawing_of_weapons }
 		prerequisite = { focus = SIC_fortify_our_islands }
 		cost = 3
@@ -8400,7 +8400,7 @@ focus_tree = {
 
 	focus = {
 		id = SIC_sacking_matton
-		icon = GFX_SIC_facing_the_sun
+		icon = GFX_SIC_sacking_matton
 		prerequisite = { focus = SIC_attack }
 		cost = 1
 		x = 0
@@ -8447,7 +8447,7 @@ focus_tree = {
 
 	focus = {
 		id = SIC_blackrock
-		icon = GFX_SIC_facing_the_sun
+		icon = GFX_SIC_blackrock
 		prerequisite = { focus = SIC_the_northern_counties }
 		cost = 10
 		x = 3
@@ -8465,7 +8465,7 @@ focus_tree = {
 
 	focus = {
 		id = SIC_promise_order
-		icon = GFX_SIC_facing_the_sun
+		icon = GFX_SIC_promise_order
 		prerequisite = { focus = SIC_blackrock }
 		cost = 10
 		x = -1
@@ -8485,7 +8485,7 @@ focus_tree = {
 
 	focus = {
 		id = SIC_mountaineer_brigades
-		icon = GFX_SIC_facing_the_sun
+		icon = GFX_SIC_mountaineer_brigades
 		prerequisite = { focus = SIC_blackrock }
 		cost = 10
 		x = 1
@@ -8503,7 +8503,7 @@ focus_tree = {
 
 	focus = {
 		id = SIC_subdue_the_anarchists
-		icon = GFX_SIC_facing_the_sun
+		icon = GFX_SIC_subdue_the_anarchists
 		prerequisite = { focus = SIC_mountaineer_brigades }
 		prerequisite = { focus = SIC_promise_order }
 		cost = 10
@@ -8529,7 +8529,7 @@ focus_tree = {
 
 	focus = {
 		id = SIC_mountain_riches
-		icon = GFX_SIC_facing_the_sun
+		icon = GFX_SIC_mountain_riches
 		prerequisite = { focus = SIC_subdue_the_anarchists }
 		cost = 10
 		x = 0
@@ -8576,7 +8576,7 @@ focus_tree = {
 
 	focus = {
 		id = SIC_the_north_reclaimed
-		icon = GFX_SIC_facing_the_sun
+		icon = GFX_SIC_north_reclaimed
 		prerequisite = { focus = SIC_mountain_riches }
 		prerequisite = { focus = SIC_sacking_matton }
 		cost = 10
@@ -8601,7 +8601,7 @@ focus_tree = {
 
 	focus = {
 		id = SIC_the_western_counties
-		icon = GFX_SIC_facing_the_sun
+		icon = GFX_SIC_western_counties
 		prerequisite = { focus = SIC_the_problem_before_us }
 		cost = 10
 		x = 10
@@ -8620,7 +8620,7 @@ focus_tree = {
 
 	focus = {
 		id = SIC_wingbardy
-		icon = GFX_SIC_facing_the_sun
+		icon = GFX_SIC_wingbardy
 		prerequisite = { focus = SIC_the_western_counties }
 		cost = 10
 		x = -3
@@ -8638,7 +8638,7 @@ focus_tree = {
 
 	focus = {
 		id = SIC_anti_tank_tactics
-		icon = GFX_SIC_facing_the_sun
+		icon = GFX_SIC_anti_tank_tactits
 		prerequisite = { focus = SIC_wingbardy }
 		cost = 10
 		x = -1
@@ -8656,7 +8656,7 @@ focus_tree = {
 
 	focus = {
 		id = SIC_the_true_fascism
-		icon = GFX_SIC_facing_the_sun
+		icon = GFX_SIC_true_fascism
 		prerequisite = { focus = SIC_wingbardy }
 		cost = 10
 		x = 1
@@ -8674,7 +8674,7 @@ focus_tree = {
 
 	focus = {
 		id = SIC_to_karthin
-		icon = GFX_SIC_facing_the_sun
+		icon = GFX_SIC_to_karthin
 		prerequisite = { focus = SIC_anti_tank_tactics }
 		prerequisite = { focus = SIC_the_true_fascism }
 		cost = 10
@@ -8696,7 +8696,7 @@ focus_tree = {
 
 	focus = {
 		id = SIC_the_ancient_wealth
-		icon = GFX_SIC_facing_the_sun
+		icon = GFX_SIC_ancient_wealth
 		prerequisite = { focus = SIC_to_karthin }
 		cost = 10
 		x = 0
@@ -8794,7 +8794,7 @@ focus_tree = {
 
 	focus = {
 		id = SIC_griffonstone
-		icon = GFX_SIC_facing_the_sun
+		icon = GFX_SIC_griffinstone
 		prerequisite = { focus = SIC_the_western_counties }
 		cost = 10
 		x = 3
@@ -8812,7 +8812,7 @@ focus_tree = {
 
 	focus = {
 		id = SIC_our_ancient_home
-		icon = GFX_SIC_facing_the_sun
+		icon = GFX_SIC_our_ancient_home
 		prerequisite = { focus = SIC_griffonstone }
 		cost = 10
 		x = -1
@@ -8830,7 +8830,7 @@ focus_tree = {
 
 	focus = {
 		id = SIC_the_true_heirs
-		icon = GFX_SIC_facing_the_sun
+		icon = GFX_SIC_heirs
 		prerequisite = { focus = SIC_griffonstone }
 		cost = 10
 		x = 1
@@ -8848,7 +8848,7 @@ focus_tree = {
 
 	focus = {
 		id = SIC_seize_the_throne
-		icon = GFX_SIC_facing_the_sun
+		icon = GFX_SIC_seize_the_throne
 		prerequisite = { focus = SIC_our_ancient_home }
 		prerequisite = { focus = SIC_the_true_heirs }
 		cost = 10
@@ -8870,7 +8870,7 @@ focus_tree = {
 
 	focus = {
 		id = SIC_the_sacred_city
-		icon = GFX_SIC_facing_the_sun
+		icon = GFX_SIC_sacred_city
 		prerequisite = { focus = SIC_seize_the_throne }
 		cost = 10
 		x = 0
@@ -8917,7 +8917,7 @@ focus_tree = {
 
 	focus = {
 		id = SIC_the_west_seized
-		icon = GFX_SIC_facing_the_sun
+		icon = GFX_SIC_west_seized
 		prerequisite = { focus = SIC_the_ancient_wealth }
 		prerequisite = { focus = SIC_the_sacred_city }
 		cost = 10
@@ -8958,7 +8958,7 @@ focus_tree = {
 	
 	focus = {
 		id = SIC_FRD_the_imperial_restoration2
-		icon = GFX_SIC_the_decadent_regency_2
+		icon = GFX_SIC_the_imperial_restoration
 		prerequisite = { focus = SIC_the_fatherland_calls }
 		mutually_exclusive = { focus = SIC_FRD_the_empire_reborn }
 		available = {
@@ -8990,7 +8990,7 @@ focus_tree = {
 	
 	focus = {
 		id = SIC_FRD_merging_administrations
-		icon = GFX_FRD_SIC_the_decadent_regency_2
+		icon = GFX_SIC_merging_administrations
 		prerequisite = { focus = SIC_FRD_the_imperial_restoration2 }
 		cost = 7
 		x = -1
@@ -9005,7 +9005,7 @@ focus_tree = {
 	
 	focus = {
 		id = SIC_FRD_our_autonomy
-		icon = GFX_SIC_the_decadent_regency_2
+		icon = GFX_SIC_our_autonomy
 		prerequisite = { focus = SIC_FRD_the_imperial_restoration2 }
 		cost = 7
 		x = 1

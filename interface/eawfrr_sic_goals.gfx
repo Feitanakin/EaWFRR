@@ -594,4 +594,311 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/SIC_revive_language.dds"
 	}
 
+####################################################################
+####################################################################
+####################################################################
+####################################################################
+####################################################################
+####################################################################
+####################################################################
+####################################################################
+####################################################################
+####################################################################
+####################################################################
+
+	SpriteType = {
+		name = "GFX_SIC_a_deep_reflection"
+		texturefile = "gfx/interface/goals/SIC_a_deep_reflection.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SIC_a_meeting_with_taillow"
+		texturefile = "gfx/interface/goals/SIC_a_meeting_with_taillow.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SIC_agrarian_foundries"
+		texturefile = "gfx/interface/goals/SIC_agrarian_foundries.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SIC_ancient_wealth"
+		texturefile = "gfx/interface/goals/SIC_ancient_wealth.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SIC_anti_tank_tactits"
+		texturefile = "gfx/interface/goals/SIC_anti_tank_tactits.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SIC_asterion"
+		texturefile = "gfx/interface/goals/SIC_asterion.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SIC_asterion2"
+		texturefile = "gfx/interface/goals/SIC_asterion2.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SIC_attack"
+		texturefile = "gfx/interface/goals/SIC_attack.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SIC_blackrock"
+		texturefile = "gfx/interface/goals/SIC_blackrock.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SIC_blackrock2"
+		texturefile = "gfx/interface/goals/SIC_blackrock2.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SIC_cyanolisia"
+		texturefile = "gfx/interface/goals/SIC_cyanolisia.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SIC_cyanolisia2"
+		texturefile = "gfx/interface/goals/SIC_cyanolisia2.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SIC_drawing_of_weapons"
+		texturefile = "gfx/interface/goals/SIC_drawing_of_weapons.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SIC_east_tamed"
+		texturefile = "gfx/interface/goals/SIC_east_tamed.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SIC_eastern_countries"
+		texturefile = "gfx/interface/goals/SIC_eastern_countries.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SIC_falcor"
+		texturefile = "gfx/interface/goals/SIC_falcor.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SIC_falcoria2"
+		texturefile = "gfx/interface/goals/SIC_falcoria2.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SIC_focus_on_the_cities"
+		texturefile = "gfx/interface/goals/SIC_focus_on_the_cities.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SIC_focus_on_the_farms"
+		texturefile = "gfx/interface/goals/SIC_focus_on_the_farms.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SIC_fortify_our_islands"
+		texturefile = "gfx/interface/goals/SIC_fortify_our_islands.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SIC_freeing_space"
+		texturefile = "gfx/interface/goals/SIC_freeing_space.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SIC_greatest_of_peoples"
+		texturefile = "gfx/interface/goals/SIC_greatest_of_peoples.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SIC_griffinstone"
+		texturefile = "gfx/interface/goals/SIC_griffinstone.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SIC_heirs"
+		texturefile = "gfx/interface/goals/SIC_heirs.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SIC_imperial_restoration"
+		texturefile = "gfx/interface/goals/SIC_imperial_restoration.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SIC_industrial_districts"
+		texturefile = "gfx/interface/goals/SIC_industrial_districts.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SIC_merging_administrations"
+		texturefile = "gfx/interface/goals/SIC_merging_administrations.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SIC_our_ancient_home"
+		texturefile = "gfx/interface/goals/SIC_our_ancient_home.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SIC_mountain_riches"
+		texturefile = "gfx/interface/goals/SIC_mountain_riches.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SIC_mountaineer_brigades"
+		texturefile = "gfx/interface/goals/SIC_mountaineer_brigades.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SIC_north_reclaimed"
+		texturefile = "gfx/interface/goals/SIC_north_reclaimed.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SIC_northern_countries"
+		texturefile = "gfx/interface/goals/SIC_northern_countries.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SIC_our_autonomy"
+		texturefile = "gfx/interface/goals/SIC_our_autonomy.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SIC_political_discourse"
+		texturefile = "gfx/interface/goals/SIC_political_discourse.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SIC_promise_order"
+		texturefile = "gfx/interface/goals/SIC_promise_order.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SIC_red_cloth"
+		texturefile = "gfx/interface/goals/SIC_red_cloth.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SIC_red_star_from_the_ashes"
+		texturefile = "gfx/interface/goals/SIC_red_star_from_the_ashes.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SIC_religious_discourse"
+		texturefile = "gfx/interface/goals/SIC_religious_discourse.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SIC_rifles_ready"
+		texturefile = "gfx/interface/goals/SIC_rifles_ready.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SIC_roaring_bulls"
+		texturefile = "gfx/interface/goals/SIC_roaring_bulls.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SIC_royal_unification"
+		texturefile = "gfx/interface/goals/SIC_royal_unification.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SIC_sacking_matton"
+		texturefile = "gfx/interface/goals/SIC_sacking_matton.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SIC_sacred_city"
+		texturefile = "gfx/interface/goals/SIC_sacred_city.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SIC_seize_the_throne"
+		texturefile = "gfx/interface/goals/SIC_seize_the_throne.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SIC_seizing_private_property"
+		texturefile = "gfx/interface/goals/SIC_seizing_private_property.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SIC_sharpened_claws"
+		texturefile = "gfx/interface/goals/SIC_sharpened_claws.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SIC_socialis_politics"
+		texturefile = "gfx/interface/goals/SIC_socialis_politics.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SIC_spoils_of_aster"
+		texturefile = "gfx/interface/goals/SIC_spoils_of_aster.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SIC_subdue_the_anarchists"
+		texturefile = "gfx/interface/goals/SIC_subdue_the_anarchists.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SIC_subsidize_farms"
+		texturefile = "gfx/interface/goals/SIC_subsidize_farms.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SIC_the_imperial_restoration"
+		texturefile = "gfx/interface/goals/SIC_the_imperial_restoration.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SIC_the_problem_before_us"
+		texturefile = "gfx/interface/goals/SIC_the_problem_before_us.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SIC_to_karthin"
+		texturefile = "gfx/interface/goals/SIC_to_karthin.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SIC_town_grants"
+		texturefile = "gfx/interface/goals/SIC_town_grants.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SIC_true_fascism"
+		texturefile = "gfx/interface/goals/SIC_true_fascism.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SIC_urban_expansions"
+		texturefile = "gfx/interface/goals/SIC_urban_expansions.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SIC_west_seized"
+		texturefile = "gfx/interface/goals/SIC_west_seized.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SIC_western_counties"
+		texturefile = "gfx/interface/goals/SIC_western_counties.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SIC_wingbardy"
+		texturefile = "gfx/interface/goals/SIC_wingbardy.dds"
+	}
+
 }
