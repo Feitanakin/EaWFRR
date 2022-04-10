@@ -63,3 +63,4218 @@ SIC_anti_piracy = {
 		}
 	}
 }
+
+SIC_FRD_invasion = {
+	SIC_FRD_aquelia = {
+		icon = hammer_and_horseshoe_decision
+		cost = 0
+		fire_only_once = yes
+		days_remove = 14
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			country_exists = JER
+			has_completed_focus = SIC_FRD_aquelia
+		}
+		
+		complete_effect = {
+		}
+
+		remove_effect = {
+			declare_war_on = {
+				target = JER
+				type = annex_everything
+			}
+			add_timed_idea = {
+				idea = SIC_FRD_surprise
+				days = 14
+			}
+		}
+	}
+	SIC_FRD_greifwald = {
+		icon = hammer_and_horseshoe_decision
+		cost = 0
+		fire_only_once = yes
+		days_remove = 14
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			country_exists = AET
+			has_completed_focus = SIC_FRD_aquelia
+		}
+		
+		complete_effect = {
+		}
+
+		remove_effect = {
+			declare_war_on = {
+				target = AET
+				type = annex_everything
+			}
+			add_timed_idea = {
+				idea = SIC_FRD_surprise
+				days = 14
+			}
+		}
+	}
+	SIC_FRD_adelart = {
+		icon = hammer_and_horseshoe_decision
+		cost = 0
+		fire_only_once = yes
+		days_remove = 14
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			country_exists = HEL
+			has_completed_focus = SIC_FRD_aquelia
+		}
+		
+		complete_effect = {
+		}
+
+		remove_effect = {
+			declare_war_on = {
+				target = HEL
+				type = annex_everything
+			}
+			add_timed_idea = {
+				idea = SIC_FRD_surprise
+				days = 14
+			}
+		}
+	}
+	SIC_FRD_avian = {
+		icon = hammer_and_horseshoe_decision
+		cost = 0
+		fire_only_once = yes
+		days_remove = 14
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			country_exists = AVI
+			has_completed_focus = SIC_FRD_aquelia
+		}
+		
+		complete_effect = {
+		}
+
+		remove_effect = {
+			declare_war_on = {
+				target = AVI
+				type = annex_everything
+			}
+			add_timed_idea = {
+				idea = SIC_FRD_surprise
+				days = 14
+			}
+		}
+	}
+	SIC_FRD_erie = {
+		icon = hammer_and_horseshoe_decision
+		cost = 0
+		fire_only_once = yes
+		days_remove = 14
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			country_exists = ERI
+			has_completed_focus = SIC_FRD_aquelia
+		}
+		
+		complete_effect = {
+		}
+
+		remove_effect = {
+			declare_war_on = {
+				target = ERI
+				type = annex_everything
+			}
+			add_timed_idea = {
+				idea = SIC_FRD_surprise
+				days = 14
+			}
+		}
+	}
+	SIC_FRD_eyrie = {
+		icon = hammer_and_horseshoe_decision
+		cost = 0
+		fire_only_once = yes
+		days_remove = 14
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			country_exists = EYR
+			has_completed_focus = SIC_FRD_aquelia
+		}
+		
+		complete_effect = {
+		}
+
+		remove_effect = {
+			declare_war_on = {
+				target = EYR
+				type = annex_everything
+			}
+			add_timed_idea = {
+				idea = SIC_FRD_surprise
+				days = 14
+			}
+		}
+	}
+	SIC_FRD_skyfall = {
+		icon = hammer_and_horseshoe_decision
+		cost = 0
+		fire_only_once = yes
+		days_remove = 14
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			country_exists = TRD
+			has_completed_focus = SIC_FRD_aquelia
+		}
+		
+		complete_effect = {
+		}
+
+		remove_effect = {
+			declare_war_on = {
+				target = TRD
+				type = annex_everything
+			}
+			add_timed_idea = {
+				idea = SIC_FRD_surprise
+				days = 14
+			}
+		}
+	}
+	SIC_FRD_fezeria = {
+		icon = hammer_and_horseshoe_decision
+		cost = 0
+		fire_only_once = yes
+		days_remove = 14
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			country_exists = FEZ
+			has_completed_focus = SIC_FRD_aquelia
+		}
+		
+		complete_effect = {
+		}
+
+		remove_effect = {
+			declare_war_on = {
+				target = FEZ
+				type = annex_everything
+			}
+			add_timed_idea = {
+				idea = SIC_FRD_surprise
+				days = 14
+			}
+		}
+	}
+	SIC_FRD_flowena = {
+		icon = hammer_and_horseshoe_decision
+		cost = 0
+		fire_only_once = yes
+		days_remove = 14
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			country_exists = FLO
+			has_completed_focus = SIC_FRD_aquelia
+		}
+		
+		complete_effect = {
+		}
+
+		remove_effect = {
+			declare_war_on = {
+				target = FLO
+				type = annex_everything
+			}
+			add_timed_idea = {
+				idea = SIC_FRD_surprise
+				days = 14
+			}
+		}
+	}
+	SIC_FRD_sparelto = {
+		icon = hammer_and_horseshoe_decision
+		cost = 0
+		fire_only_once = yes
+		days_remove = 14
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			country_exists = ARA
+			has_completed_focus = SIC_FRD_aquelia
+		}
+		
+		complete_effect = {
+		}
+
+		remove_effect = {
+			declare_war_on = {
+				target = ARA
+				type = annex_everything
+			}
+			add_timed_idea = {
+				idea = SIC_FRD_surprise
+				days = 14
+			}
+		}
+	}
+	SIC_FRD_francistra = {
+		icon = hammer_and_horseshoe_decision
+		cost = 0
+		fire_only_once = yes
+		days_remove = 14
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			country_exists = FRN
+			has_completed_focus = SIC_FRD_aquelia
+		}
+		
+		complete_effect = {
+		}
+
+		remove_effect = {
+			declare_war_on = {
+				target = FRN
+				type = annex_everything
+			}
+			add_timed_idea = {
+				idea = SIC_FRD_surprise
+				days = 14
+			}
+		}
+	}
+	SIC_FRD_talouse = {
+		icon = hammer_and_horseshoe_decision
+		cost = 0
+		fire_only_once = yes
+		days_remove = 14
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			country_exists = TAL
+			has_completed_focus = SIC_FRD_aquelia
+		}
+		
+		complete_effect = {
+		}
+
+		remove_effect = {
+			declare_war_on = {
+				target = TAL
+				type = annex_everything
+			}
+			add_timed_idea = {
+				idea = SIC_FRD_surprise
+				days = 14
+			}
+		}
+	}
+	SIC_FRD_new_mareland = {
+		icon = hammer_and_horseshoe_decision
+		cost = 0
+		fire_only_once = yes
+		days_remove = 14
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			country_exists = EQC
+			has_completed_focus = SIC_FRD_aquelia
+		}
+		
+		complete_effect = {
+		}
+
+		remove_effect = {
+			declare_war_on = {
+				target = EQC
+				type = annex_everything
+			}
+			add_timed_idea = {
+				idea = SIC_FRD_surprise
+				days = 14
+			}
+		}
+	}
+	
+	
+	
+	SIC_FRD_the_republic = {
+		icon = hammer_and_horseshoe_decision
+		cost = 0
+		fire_only_once = yes
+		days_remove = 14
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			country_exists = FAT
+			has_completed_focus = SIC_FRD_republic
+		}
+		
+		complete_effect = {
+		}
+
+		remove_effect = {
+			declare_war_on = {
+				target = FAT
+				type = annex_everything
+			}
+			add_timed_idea = {
+				idea = SIC_FRD_surprise
+				days = 14
+			}
+		}
+	}
+	
+	SIC_FRD_vedina = {
+		icon = hammer_and_horseshoe_decision
+		cost = 0
+		fire_only_once = yes
+		days_remove = 14
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			country_exists = VED
+			has_completed_focus = SIC_FRD_republic
+		}
+		
+		complete_effect = {
+		}
+
+		remove_effect = {
+			declare_war_on = {
+				target = VED
+				type = annex_everything
+			}
+			add_timed_idea = {
+				idea = SIC_FRD_surprise
+				days = 14
+			}
+		}
+	}
+	
+	SIC_FRD_haukland = {
+		icon = hammer_and_horseshoe_decision
+		cost = 0
+		fire_only_once = yes
+		days_remove = 14
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			country_exists = HAU
+			has_completed_focus = SIC_FRD_republic
+		}
+		
+		complete_effect = {
+		}
+
+		remove_effect = {
+			declare_war_on = {
+				target = HAU
+				type = annex_everything
+			}
+			add_timed_idea = {
+				idea = SIC_FRD_surprise
+				days = 14
+			}
+		}
+	}
+	
+	SIC_FRD_skynavia = {
+		icon = hammer_and_horseshoe_decision
+		cost = 0
+		fire_only_once = yes
+		days_remove = 14
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			country_exists = SRS
+			has_completed_focus = SIC_FRD_republic
+		}
+		
+		complete_effect = {
+		}
+
+		remove_effect = {
+			declare_war_on = {
+				target = SRS
+				type = annex_everything
+			}
+			add_timed_idea = {
+				idea = SIC_FRD_surprise
+				days = 14
+			}
+		}
+	}
+	
+	SIC_FRD_northern_tribes = {
+		icon = hammer_and_horseshoe_decision
+		cost = 0
+		fire_only_once = yes
+		days_remove = 14
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			country_exists = NTR
+			has_completed_focus = SIC_FRD_republic
+		}
+		
+		complete_effect = {
+		}
+
+		remove_effect = {
+			declare_war_on = {
+				target = NTR
+				type = annex_everything
+			}
+			add_timed_idea = {
+				idea = SIC_FRD_surprise
+				days = 14
+			}
+		}
+	}
+	
+	SIC_FRD_sunstriker_clan = {
+		icon = hammer_and_horseshoe_decision
+		cost = 0
+		fire_only_once = yes
+		days_remove = 14
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			country_exists = MNC
+			has_completed_focus = SIC_FRD_republic
+		}
+		
+		complete_effect = {
+		}
+
+		remove_effect = {
+			declare_war_on = {
+				target = MNC
+				type = annex_everything
+			}
+			add_timed_idea = {
+				idea = SIC_FRD_surprise
+				days = 14
+			}
+		}
+	}
+	
+	
+	
+	SIC_FRD_hellquill = {
+		icon = hammer_and_horseshoe_decision
+		cost = 0
+		fire_only_once = yes
+		days_remove = 14
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			country_exists = HLQ
+			has_completed_focus = SIC_FRD_riverlands
+		}
+		
+		complete_effect = {
+		}
+
+		remove_effect = {
+			declare_war_on = {
+				target = HLQ
+				type = annex_everything
+			}
+			add_timed_idea = {
+				idea = SIC_FRD_surprise
+				days = 14
+			}
+		}
+	}
+	
+	SIC_FRD_longsword = {
+		icon = hammer_and_horseshoe_decision
+		cost = 0
+		fire_only_once = yes
+		days_remove = 14
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			country_exists = LNS
+			has_completed_focus = SIC_FRD_riverlands
+		}
+		
+		complete_effect = {
+		}
+
+		remove_effect = {
+			declare_war_on = {
+				target = LNS
+				type = annex_everything
+			}
+			add_timed_idea = {
+				idea = SIC_FRD_surprise
+				days = 14
+			}
+		}
+	}
+	
+	SIC_FRD_diamond_mountain = {
+		icon = hammer_and_horseshoe_decision
+		cost = 0
+		fire_only_once = yes
+		days_remove = 14
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			country_exists = DMT
+			has_completed_focus = SIC_FRD_riverlands
+		}
+		
+		complete_effect = {
+		}
+
+		remove_effect = {
+			declare_war_on = {
+				target = DMT
+				type = annex_everything
+			}
+			add_timed_idea = {
+				idea = SIC_FRD_surprise
+				days = 14
+			}
+		}
+	}
+	
+	SIC_FRD_deponya = {
+		icon = hammer_and_horseshoe_decision
+		cost = 0
+		fire_only_once = yes
+		days_remove = 14
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			country_exists = DEP
+			has_completed_focus = SIC_FRD_riverlands
+		}
+		
+		complete_effect = {
+		}
+
+		remove_effect = {
+			declare_war_on = {
+				target = DEP
+				type = annex_everything
+			}
+			add_timed_idea = {
+				idea = SIC_FRD_surprise
+				days = 14
+			}
+		}
+	}
+	
+	SIC_FRD_hellquil = {
+		icon = hammer_and_horseshoe_decision
+		cost = 0
+		fire_only_once = yes
+		days_remove = 14
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			country_exists = LCT
+			has_completed_focus = SIC_FRD_riverlands
+		}
+		
+		complete_effect = {
+		}
+
+		remove_effect = {
+			declare_war_on = {
+				target = LCT
+				type = annex_everything
+			}
+			add_timed_idea = {
+				idea = SIC_FRD_surprise
+				days = 14
+			}
+		}
+	}
+	
+	SIC_FRD_hellquil = {
+		icon = hammer_and_horseshoe_decision
+		cost = 0
+		fire_only_once = yes
+		days_remove = 14
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			country_exists = BAK
+			has_completed_focus = SIC_FRD_riverlands
+		}
+		
+		complete_effect = {
+		}
+
+		remove_effect = {
+			declare_war_on = {
+				target = BAK
+				type = annex_everything
+			}
+			add_timed_idea = {
+				idea = SIC_FRD_surprise
+				days = 14
+			}
+		}
+	}
+	
+	SIC_FRDriver_republic = {
+		icon = hammer_and_horseshoe_decision
+		cost = 0
+		fire_only_once = yes
+		days_remove = 14
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			country_exists = RCT
+			has_completed_focus = SIC_FRD_riverlands
+		}
+		
+		complete_effect = {
+		}
+
+		remove_effect = {
+			declare_war_on = {
+				target = RCT
+				type = annex_everything
+			}
+			add_timed_idea = {
+				idea = SIC_FRD_surprise
+				days = 14
+			}
+		}
+	}
+	
+	SIC_FRD_wittenland = {
+		icon = hammer_and_horseshoe_decision
+		cost = 0
+		fire_only_once = yes
+		days_remove = 14
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			country_exists = WIT
+			has_completed_focus = SIC_FRD_riverlands
+		}
+		
+		complete_effect = {
+		}
+
+		remove_effect = {
+			declare_war_on = {
+				target = WIT
+				type = annex_everything
+			}
+			add_timed_idea = {
+				idea = SIC_FRD_surprise
+				days = 14
+			}
+		}
+	}
+	
+	SIC_FRD_nimbusia = {
+		icon = hammer_and_horseshoe_decision
+		cost = 0
+		fire_only_once = yes
+		days_remove = 14
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			country_exists = NIM
+			has_completed_focus = SIC_FRD_riverlands
+		}
+		
+		complete_effect = {
+		}
+
+		remove_effect = {
+			declare_war_on = {
+				target = NIM
+				type = annex_everything
+			}
+			add_timed_idea = {
+				idea = SIC_FRD_surprise
+				days = 14
+			}
+		}
+	}
+	
+	SIC_FRD_ponadhein = {
+		icon = hammer_and_horseshoe_decision
+		cost = 0
+		fire_only_once = yes
+		days_remove = 14
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			country_exists = FRE
+			has_completed_focus = SIC_FRD_riverlands
+		}
+		
+		complete_effect = {
+		}
+
+		remove_effect = {
+			declare_war_on = {
+				target = FRE
+				type = annex_everything
+			}
+			add_timed_idea = {
+				idea = SIC_FRD_surprise
+				days = 14
+			}
+		}
+	}
+	
+	SIC_FRD_firtree = {
+		icon = hammer_and_horseshoe_decision
+		cost = 0
+		fire_only_once = yes
+		days_remove = 14
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			country_exists = FIR
+			has_completed_focus = SIC_FRD_riverlands
+		}
+		
+		complete_effect = {
+		}
+
+		remove_effect = {
+			declare_war_on = {
+				target = FIR
+				type = annex_everything
+			}
+			add_timed_idea = {
+				idea = SIC_FRD_surprise
+				days = 14
+			}
+		}
+	}
+	
+	SIC_FRD_farbrook = {
+		icon = hammer_and_horseshoe_decision
+		cost = 0
+		fire_only_once = yes
+		days_remove = 14
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			country_exists = FBK
+			has_completed_focus = SIC_FRD_riverlands
+		}
+		
+		complete_effect = {
+		}
+
+		remove_effect = {
+			declare_war_on = {
+				target = FBK
+				type = annex_everything
+			}
+			add_timed_idea = {
+				idea = SIC_FRD_surprise
+				days = 14
+			}
+		}
+	}
+	
+	SIC_FRD_watertown = {
+		icon = hammer_and_horseshoe_decision
+		cost = 0
+		fire_only_once = yes
+		days_remove = 14
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			country_exists = WAT
+			has_completed_focus = SIC_FRD_riverlands
+		}
+		
+		complete_effect = {
+		}
+
+		remove_effect = {
+			declare_war_on = {
+				target = WAT
+				type = annex_everything
+			}
+			add_timed_idea = {
+				idea = SIC_FRD_surprise
+				days = 14
+			}
+		}
+	}
+	
+	SIC_FRD_lushi = {
+		icon = hammer_and_horseshoe_decision
+		cost = 0
+		fire_only_once = yes
+		days_remove = 14
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			country_exists = LUS
+			has_completed_focus = SIC_FRD_riverlands
+		}
+		
+		complete_effect = {
+		}
+
+		remove_effect = {
+			declare_war_on = {
+				target = LUS
+				type = annex_everything
+			}
+			add_timed_idea = {
+				idea = SIC_FRD_surprise
+				days = 14
+			}
+		}
+	}
+	
+	SIC_FRD_brodfeld = {
+		icon = hammer_and_horseshoe_decision
+		cost = 0
+		fire_only_once = yes
+		days_remove = 14
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			OR = {
+				country_exists = FRW
+				country_exists = BRF
+			}
+			has_completed_focus = SIC_FRD_riverlands
+		}
+		
+		complete_effect = {
+		}
+
+		remove_effect = {
+			declare_war_on = {
+				target = FRW
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = BRF
+				type = annex_everything
+			}
+			add_timed_idea = {
+				idea = SIC_FRD_surprise
+				days = 14
+			}
+		}
+	}
+	
+	SIC_FRD_gryphian_host = {
+		icon = hammer_and_horseshoe_decision
+		cost = 0
+		fire_only_once = yes
+		days_remove = 14
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			country_exists = GRY
+			has_completed_focus = SIC_FRD_riverlands
+		}
+		
+		complete_effect = {
+		}
+
+		remove_effect = {
+			declare_war_on = {
+				target = GRY
+				type = annex_everything
+			}
+			add_timed_idea = {
+				idea = SIC_FRD_surprise
+				days = 14
+			}
+		}
+	}
+	
+	SIC_FRD_free_towns_of_gryphius = {
+		icon = hammer_and_horseshoe_decision
+		cost = 0
+		fire_only_once = yes
+		days_remove = 14
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			country_exists = GRU
+			has_completed_focus = SIC_FRD_riverlands
+		}
+		
+		complete_effect = {
+		}
+
+		remove_effect = {
+			declare_war_on = {
+				target = GRU
+				type = annex_everything
+			}
+			add_timed_idea = {
+				idea = SIC_FRD_surprise
+				days = 14
+			}
+		}
+	}
+	
+	SIC_FRD_barrad_magocracy = {
+		icon = hammer_and_horseshoe_decision
+		cost = 0
+		fire_only_once = yes
+		days_remove = 14
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			country_exists = BAR
+			has_completed_focus = SIC_FRD_riverlands
+		}
+		
+		complete_effect = {
+		}
+
+		remove_effect = {
+			declare_war_on = {
+				target = BAR
+				type = annex_everything
+			}
+			add_timed_idea = {
+				idea = SIC_FRD_surprise
+				days = 14
+			}
+		}
+	}
+	
+	SIC_FRD_kasa = {
+		icon = hammer_and_horseshoe_decision
+		cost = 0
+		fire_only_once = yes
+		days_remove = 14
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			country_exists = ZES
+			has_completed_focus = SIC_FRD_riverlands
+		}
+		
+		complete_effect = {
+		}
+
+		remove_effect = {
+			declare_war_on = {
+				target = ZES
+				type = annex_everything
+			}
+			add_timed_idea = {
+				idea = SIC_FRD_surprise
+				days = 14
+			}
+		}
+	}
+	
+	SIC_FRD_austurland = {
+		icon = hammer_and_horseshoe_decision
+		cost = 0
+		fire_only_once = yes
+		days_remove = 14
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			country_exists = OLV
+			has_completed_focus = SIC_FRD_riverlands
+		}
+		
+		complete_effect = {
+		}
+
+		remove_effect = {
+			declare_war_on = {
+				target = OLV
+				type = annex_everything
+			}
+			add_timed_idea = {
+				idea = SIC_FRD_surprise
+				days = 14
+			}
+		}
+	}
+	
+	SIC_FRD_grenclyf = {
+		icon = hammer_and_horseshoe_decision
+		cost = 0
+		fire_only_once = yes
+		days_remove = 14
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			country_exists = NCH
+			has_completed_focus = SIC_FRD_riverlands
+		}
+		
+		complete_effect = {
+		}
+
+		remove_effect = {
+			declare_war_on = {
+				target = NCH
+				type = annex_everything
+			}
+			add_timed_idea = {
+				idea = SIC_FRD_surprise
+				days = 14
+			}
+		}
+	}
+	
+	
+	
+	
+	
+	SIC_FRD_prepare_our_invasion = {
+		icon = hammer_and_horseshoe_decision
+		cost = 0
+		fire_only_once = yes
+		days_remove = 35
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			has_completed_focus = SIC_FRD_across_the_seas
+		}
+		
+		complete_effect = {
+		}
+
+		remove_effect = {
+			add_ideas = SIC_FRD_preparing_invasions
+			set_country_flag = invasions_prepared
+		}
+	}
+	
+	SIC_FRD_nova_griffonia = {
+		icon = hammer_and_horseshoe_decision
+		cost = 0
+		fire_only_once = yes
+		days_remove = 14
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			country_exists = GRF
+			has_country_flag = invasions_prepared
+		}
+		
+		complete_effect = {
+		}
+
+		remove_effect = {
+			declare_war_on = {
+				target = GRF
+				type = annex_everything
+			}
+			add_timed_idea = {
+				idea = SIC_FRD_surprise
+				days = 14
+			}
+		}
+	}
+	
+	SIC_FRD_pingland = {
+		icon = hammer_and_horseshoe_decision
+		cost = 0
+		fire_only_once = yes
+		days_remove = 14
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			country_exists = PNG
+			has_country_flag = invasions_prepared
+		}
+		
+		complete_effect = {
+		}
+
+		remove_effect = {
+			declare_war_on = {
+				target = PNG
+				type = annex_everything
+			}
+			add_timed_idea = {
+				idea = SIC_FRD_surprise
+				days = 14
+			}
+		}
+	}
+}
+
+
+
+SIC_FRD_razing = {
+	SIC_FRD_aquelian_cities = {
+		icon = hammer_and_horseshoe_decision
+		cost = 0
+		fire_only_once = yes
+		days_remove = 5
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			owns_state = 377
+			owns_state = 435
+			owns_state = 376
+			has_completed_focus = SIC_FRD_aquelia
+		}
+		
+		complete_effect = {
+		}
+
+		remove_effect = {
+			custom_effect_tooltip = 1_frd_burn_it_all_down_tt
+			hidden_effect = {
+				377 = {
+					remove_building = {
+						type = arms_factory
+						level = 99
+					}
+					remove_building = {
+						type = industrial_complex
+						level = 99
+					}
+					remove_building = {
+						type = infrastructure
+						level = 10
+					}
+					add_manpower = -2000000
+				}
+				435 = {
+					remove_building = {
+						type = arms_factory
+						level = 99
+					}
+					remove_building = {
+						type = industrial_complex
+						level = 99
+					}
+					remove_building = {
+						type = infrastructure
+						level = 10
+					}
+					add_manpower = -1275000
+				}
+				376 = {
+					remove_building = {
+						type = arms_factory
+						level = 99
+					}
+					remove_building = {
+						type = industrial_complex
+						level = 99
+					}
+					remove_building = {
+						type = infrastructure
+						level = 10
+					}
+					add_manpower = -1550000
+				}
+				add_offsite_building = {
+					type = industrial_complex
+					level = 3
+				}
+				add_offsite_building = {
+					type = arms_factory
+					level = 2
+				}
+			}
+			377 = {
+				add_core_of = SIC
+				set_state_category = wasteland
+			}
+			435 = {
+				add_core_of = SIC
+				set_state_category = wasteland
+			}
+			376 = {
+				add_core_of = SIC
+				set_state_category = wasteland
+			}
+			add_victory_points = {
+				province = 3164
+				value = -24
+			}
+			add_victory_points = {
+				province = 9122
+				value = -16
+			}
+			add_victory_points = {
+				province = 6935
+				value = -16
+			}
+		}
+	}
+	
+	SIC_FRD_peripheran_cities = {
+		icon = hammer_and_horseshoe_decision
+		cost = 0
+		fire_only_once = yes
+		days_remove = 5
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			owns_state = 381
+			owns_state = 380
+			owns_state = 390
+			owns_state = 442
+			has_completed_focus = SIC_FRD_aquelia
+		}
+		
+		complete_effect = {
+		}
+
+		remove_effect = {
+			custom_effect_tooltip = 1_frd_burn_it_all_down_tt
+			hidden_effect = {
+				381 = {
+					remove_building = {
+						type = arms_factory
+						level = 99
+					}
+					remove_building = {
+						type = industrial_complex
+						level = 99
+					}
+					remove_building = {
+						type = infrastructure
+						level = 10
+					}
+					add_manpower = -3375000
+				}
+				380 = {
+					remove_building = {
+						type = arms_factory
+						level = 99
+					}
+					remove_building = {
+						type = industrial_complex
+						level = 99
+					}
+					remove_building = {
+						type = infrastructure
+						level = 10
+					}
+					add_manpower = -2003000
+				}
+				390 = {
+					remove_building = {
+						type = arms_factory
+						level = 99
+					}
+					remove_building = {
+						type = industrial_complex
+						level = 99
+					}
+					remove_building = {
+						type = infrastructure
+						level = 10
+					}
+					add_manpower = -1276500
+				}
+				442 = {
+					remove_building = {
+						type = arms_factory
+						level = 99
+					}
+					remove_building = {
+						type = industrial_complex
+						level = 99
+					}
+					remove_building = {
+						type = infrastructure
+						level = 10
+					}
+					add_manpower = -879400
+				}
+				add_offsite_building = {
+					type = industrial_complex
+					level = 9
+				}
+				add_offsite_building = {
+					type = arms_factory
+					level = 3
+				}
+			}
+			381 = {
+				add_core_of = SIC
+				set_state_category = wasteland
+			}
+			380 = {
+				add_core_of = SIC
+				set_state_category = wasteland
+			}
+			390 = {
+				add_core_of = SIC
+				set_state_category = wasteland
+			}
+			442 = {
+				add_core_of = SIC
+				set_state_category = wasteland
+			}
+			add_victory_points = {
+				province = 12882
+				value = -40
+			}
+			add_victory_points = {
+				province = 1963
+				value = -16
+			}
+			add_victory_points = {
+				province = 4868
+				value = -16
+			}
+			add_victory_points = {
+				province = 12740
+				value = -16
+			}
+		}
+	}
+	
+	
+	
+	SIC_FRD_northern_centers = {
+		icon = hammer_and_horseshoe_decision
+		cost = 0
+		fire_only_once = yes
+		days_remove = 5
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			owns_state = 485
+			owns_state = 429
+			owns_state = 522
+			has_completed_focus = SIC_FRD_republic
+		}
+		
+		complete_effect = {
+		}
+
+		remove_effect = {
+			custom_effect_tooltip = 1_frd_burn_it_all_down_tt
+			hidden_effect = {
+				485 = {
+					remove_building = {
+						type = arms_factory
+						level = 99
+					}
+					remove_building = {
+						type = industrial_complex
+						level = 99
+					}
+					remove_building = {
+						type = infrastructure
+						level = 10
+					}
+					add_manpower = -1925000
+				}
+				429 = {
+					remove_building = {
+						type = arms_factory
+						level = 99
+					}
+					remove_building = {
+						type = industrial_complex
+						level = 99
+					}
+					remove_building = {
+						type = infrastructure
+						level = 10
+					}
+					add_manpower = -1571000
+				}
+				522 = {
+					remove_building = {
+						type = arms_factory
+						level = 99
+					}
+					remove_building = {
+						type = industrial_complex
+						level = 99
+					}
+					remove_building = {
+						type = infrastructure
+						level = 10
+					}
+					add_manpower = -666000
+				}
+				add_offsite_building = {
+					type = industrial_complex
+					level = 4
+				}
+				add_offsite_building = {
+					type = arms_factory
+					level = 2
+				}
+			}
+			485 = {
+				add_core_of = SIC
+				set_state_category = wasteland
+			}
+			429 = {
+				add_core_of = SIC
+				set_state_category = wasteland
+			}
+			522 = {
+				add_core_of = SIC
+				set_state_category = wasteland
+			}
+			add_victory_points = {
+				province = 7146
+				value = -29
+			}
+			add_victory_points = {
+				province = 7148
+				value = -21
+			}
+			add_victory_points = {
+				province = 6502
+				value = -16
+			}
+		}
+	}
+	
+	
+	
+	SIC_FRD_burn_the_riverlands = {
+		icon = hammer_and_horseshoe_decision
+		cost = 0
+		fire_only_once = yes
+		days_remove = 5
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			owns_state = 387
+			owns_state = 550
+			owns_state = 619
+			owns_state = 617
+			owns_state = 649
+			owns_state = 637
+			owns_state = 645
+			has_completed_focus = SIC_FRD_riverlands
+		}
+		
+		complete_effect = {
+		}
+
+		remove_effect = {
+			custom_effect_tooltip = 1_frd_burn_it_all_down_tt
+			hidden_effect = {
+				387 = {
+					remove_building = {
+						type = arms_factory
+						level = 99
+					}
+					remove_building = {
+						type = industrial_complex
+						level = 99
+					}
+					remove_building = {
+						type = infrastructure
+						level = 10
+					}
+					add_manpower = -2177000
+				}
+				550 = {
+					remove_building = {
+						type = arms_factory
+						level = 99
+					}
+					remove_building = {
+						type = industrial_complex
+						level = 99
+					}
+					remove_building = {
+						type = infrastructure
+						level = 10
+					}
+					add_manpower = -1500000
+				}
+				619 = {
+					remove_building = {
+						type = arms_factory
+						level = 99
+					}
+					remove_building = {
+						type = industrial_complex
+						level = 99
+					}
+					remove_building = {
+						type = infrastructure
+						level = 10
+					}
+					add_manpower = -3050000
+				}
+				617 = {
+					remove_building = {
+						type = arms_factory
+						level = 99
+					}
+					remove_building = {
+						type = industrial_complex
+						level = 99
+					}
+					remove_building = {
+						type = infrastructure
+						level = 10
+					}
+					add_manpower = -1540000
+				}
+				649 = {
+					remove_building = {
+						type = arms_factory
+						level = 99
+					}
+					remove_building = {
+						type = industrial_complex
+						level = 99
+					}
+					remove_building = {
+						type = infrastructure
+						level = 10
+					}
+					add_manpower = -1490000
+				}
+				649 = {
+					remove_building = {
+						type = arms_factory
+						level = 99
+					}
+					remove_building = {
+						type = industrial_complex
+						level = 99
+					}
+					remove_building = {
+						type = infrastructure
+						level = 10
+					}
+					add_manpower = -1610000
+				}
+				645 = {
+					remove_building = {
+						type = arms_factory
+						level = 99
+					}
+					remove_building = {
+						type = industrial_complex
+						level = 99
+					}
+					remove_building = {
+						type = infrastructure
+						level = 10
+					}
+					add_manpower = -1610000
+				}
+				add_offsite_building = {
+					type = industrial_complex
+					level = 7
+				}
+				add_offsite_building = {
+					type = arms_factory
+					level = 6
+				}
+				add_offsite_building = {
+					type = dockyard
+					level = 1
+				}
+			}
+			485 = {
+				add_core_of = SIC
+				set_state_category = wasteland
+			}
+			550 = {
+				add_core_of = SIC
+				set_state_category = wasteland
+			}
+			619 = {
+				add_core_of = SIC
+				set_state_category = wasteland
+			}
+			617 = {
+				add_core_of = SIC
+				set_state_category = wasteland
+			}
+			649 = {
+				add_core_of = SIC
+				set_state_category = wasteland
+			}
+			637 = {
+				add_core_of = SIC
+				set_state_category = wasteland
+			}
+			645 = {
+				add_core_of = SIC
+				set_state_category = wasteland
+			}
+			add_victory_points = {
+				province = 8079
+				value = -24
+			}
+			add_victory_points = {
+				province = 1209
+				value = -20
+			}
+			add_victory_points = {
+				province = 5013
+				value = -24
+			}
+			add_victory_points = {
+				province = 7374
+				value = -20
+			}
+			add_victory_points = {
+				province = 7738
+				value = -20
+			}
+			add_victory_points = {
+				province = 12055
+				value = -20
+			}
+			add_victory_points = {
+				province = 11911
+				value = -20
+			}
+		}
+	}
+	
+	SIC_FRD_torch_the_grains = {
+		icon = hammer_and_horseshoe_decision
+		cost = 0
+		fire_only_once = yes
+		days_remove = 5
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			owns_state = 598
+			owns_state = 512
+			owns_state = 508
+			owns_state = 385
+			has_completed_focus = SIC_FRD_riverlands
+		}
+		
+		complete_effect = {
+		}
+
+		remove_effect = {
+			custom_effect_tooltip = 1_frd_burn_it_all_down_tt
+			hidden_effect = {
+				598 = {
+					remove_building = {
+						type = arms_factory
+						level = 99
+					}
+					remove_building = {
+						type = industrial_complex
+						level = 99
+					}
+					remove_building = {
+						type = infrastructure
+						level = 10
+					}
+					add_manpower = -694000
+				}
+				512 = {
+					remove_building = {
+						type = arms_factory
+						level = 99
+					}
+					remove_building = {
+						type = industrial_complex
+						level = 99
+					}
+					remove_building = {
+						type = infrastructure
+						level = 10
+					}
+					add_manpower = -1100000
+				}
+				508 = {
+					remove_building = {
+						type = arms_factory
+						level = 99
+					}
+					remove_building = {
+						type = industrial_complex
+						level = 99
+					}
+					remove_building = {
+						type = infrastructure
+						level = 10
+					}
+					add_manpower = -854000
+				}
+				385 = {
+					remove_building = {
+						type = arms_factory
+						level = 99
+					}
+					remove_building = {
+						type = industrial_complex
+						level = 99
+					}
+					remove_building = {
+						type = infrastructure
+						level = 10
+					}
+					add_manpower = -8600000
+				}
+				add_offsite_building = {
+					type = industrial_complex
+					level = 7
+				}
+				add_offsite_building = {
+					type = arms_factory
+					level = 6
+				}
+				add_offsite_building = {
+					type = dockyard
+					level = 1
+				}
+			}
+			598 = {
+				add_core_of = SIC
+				set_state_category = wasteland
+			}
+			512 = {
+				add_core_of = SIC
+				set_state_category = wasteland
+			}
+			508 = {
+				add_core_of = SIC
+				set_state_category = wasteland
+			}
+			385 = {
+				add_core_of = SIC
+				set_state_category = wasteland
+			}
+			add_victory_points = {
+				province = 10764
+				value = -20
+			}
+			add_victory_points = {
+				province = 7331
+				value = -20
+			}
+			add_victory_points = {
+				province = 10377
+				value = -28
+			}
+			add_victory_points = {
+				province = 7572
+				value = -16
+			}
+		}
+	}
+}
+
+
+
+SIC_FRD_reconstructing = {
+	SIC_FRD_aster_reforged = {
+		icon = hammer_and_horseshoe_decision
+		cost = 40
+		fire_only_once = yes
+		days_remove = 0
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			owns_state = 386
+			owns_state = 463
+			owns_state = 462
+			386 = {
+				state_category = wasteland
+			}
+		}
+		
+		complete_effect = {
+		}
+
+		remove_effect = {
+			set_province_name = { id = 2156 name = "Aster" }
+			386 = {
+				set_state_category = large_town
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 4
+					instant_build = yes
+				}
+				add_manpower = 700000
+			}
+			463 = {
+				set_state_category = large_town
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 4
+					instant_build = yes
+				}
+				add_manpower = 700000
+			}
+			462 = {
+				set_state_category = large_town
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 4
+					instant_build = yes
+				}
+				add_manpower = 700000
+			}
+			add_victory_points = {
+				province = 2156
+				value = 25
+			}
+			add_victory_points = {
+				province = 1937
+				value = 25
+			}
+			add_victory_points = {
+				province = 10934
+				value = 25
+			}
+		}
+	}
+	
+	
+	SIC_FRD_aquelia_rebirthed = {
+		icon = hammer_and_horseshoe_decision
+		cost = 25
+		fire_only_once = yes
+		days_remove = 25
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			owns_state = 377
+			377 = {
+				state_category = wasteland
+			}
+		}
+		
+		complete_effect = {
+		}
+
+		remove_effect = {
+			377 = {
+				set_state_category = large_town
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 4
+					instant_build = yes
+				}
+				add_manpower = 300000
+			}
+			add_victory_points = {
+				province = 3164
+				value = 8
+			}
+			435 = {
+				set_state_category = large_town
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 4
+					instant_build = yes
+				}
+				add_manpower = 300000
+			}
+			add_victory_points = {
+				province = 9122
+				value = 8
+			}
+			376 = {
+				set_state_category = large_town
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 4
+					instant_build = yes
+				}
+				add_manpower = 300000
+			}
+			add_victory_points = {
+				province = 6935
+				value = 8
+			}
+		}
+	}
+	SIC_FRD_aquelia_great_again = {
+		icon = hammer_and_horseshoe_decision
+		cost = 40
+		fire_only_once = yes
+		days_remove = 60
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			owns_state = 377
+			377 = {
+				state_category = large_town
+			}
+		}
+		
+		complete_effect = {
+		}
+
+		remove_effect = {
+			377 = {
+				set_state_category = metropolis
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+				add_manpower = 500000
+			}
+			add_victory_points = {
+				province = 3164
+				value = 16
+			}
+			435 = {
+				set_state_category = metropolis
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+				add_manpower = 500000
+			}
+			add_victory_points = {
+				province = 9122
+				value = 16
+			}
+			376 = {
+				set_state_category = metropolis
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+				add_manpower = 500000
+			}
+			add_victory_points = {
+				province = 6935
+				value = 16
+			}
+		}
+	}
+	
+	
+	SIC_FRD_the_west_refurbrished = {
+		icon = hammer_and_horseshoe_decision
+		cost = 40
+		fire_only_once = yes
+		days_remove = 60
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			owns_state = 529
+			529 = {
+				state_category = wasteland
+			}
+			owns_state = 371
+			371 = {
+				state_category = wasteland
+			}
+		}
+		
+		complete_effect = {
+		}
+
+		remove_effect = {
+			529 = {
+				set_state_category = city
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 4
+					instant_build = yes
+				}
+				add_manpower = 450000
+			}
+			add_victory_points = {
+				province = 7868
+				value = 11
+			}
+			371 = {
+				set_state_category = large_city
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 5
+					instant_build = yes
+				}
+				add_manpower = 600000
+			}
+			add_victory_points = {
+				province = 3144
+				value = 15
+			}
+			369 = {
+				set_state_category = large_town
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 4
+					instant_build = yes
+				}
+				add_manpower = 375000
+			}
+			add_victory_points = {
+				province = 6166
+				value = 9
+			}
+			530 = {
+				set_state_category = town
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+				add_manpower = 290000
+			}
+			add_victory_points = {
+				province = 7754
+				value = 7
+			}
+		}
+	}
+}
+
+
+SIC_FRD_integration = {
+	SIC_FRD_prospero_region = {
+		icon = hammer_and_horseshoe_decision
+		cost = 35
+		fire_only_once = yes
+		days_remove = 35
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		available = {
+			NOT = {
+				has_country_flag = frd_coring
+			}
+		}
+		
+		complete_effect = {
+			set_country_flag = frd_coring
+		}
+
+		remove_effect = {
+			clr_country_flag = frd_coring
+			463 = {
+				add_core_of = SIC
+			}
+			464 = {
+				add_core_of = SIC
+			}
+			667 = {
+				add_core_of = SIC
+			}
+			657 = {
+				add_core_of = SIC
+			}
+			513 = {
+				add_core_of = SIC
+			}
+			664 = {
+				add_core_of = SIC
+			}
+			654 = {
+				add_core_of = SIC
+			}
+			655 = {
+				add_core_of = SIC
+			}
+			656 = {
+				add_core_of = SIC
+			}
+		}
+	}
+	
+	SIC_FRD_minos_region = {
+		icon = hammer_and_horseshoe_decision
+		cost = 35
+		fire_only_once = yes
+		days_remove = 35
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		available = {
+			NOT = {
+				has_country_flag = frd_coring
+			}
+		}
+		
+		complete_effect = {
+			set_country_flag = frd_coring
+		}
+
+		remove_effect = {
+			clr_country_flag = frd_coring
+			465 = {
+				add_core_of = SIC
+			}
+			462 = {
+				add_core_of = SIC
+			}
+			467 = {
+				add_core_of = SIC
+			}
+			466 = {
+				add_core_of = SIC
+			}
+			468 = {
+				add_core_of = SIC
+			}
+			469 = {
+				add_core_of = SIC
+			}
+		}
+	}
+	
+	SIC_FRD_blackhollow_region = {
+		icon = hammer_and_horseshoe_decision
+		cost = 35
+		fire_only_once = yes
+		days_remove = 35
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		available = {
+			NOT = {
+				has_country_flag = frd_coring
+			}
+		}
+		
+		complete_effect = {
+			set_country_flag = frd_coring
+		}
+
+		remove_effect = {
+			clr_country_flag = frd_coring
+			490 = {
+				add_core_of = SIC
+			}
+			446 = {
+				add_core_of = SIC
+			}
+			606 = {
+				add_core_of = SIC
+			}
+			531 = {
+				add_core_of = SIC
+			}
+			392 = {
+				add_core_of = SIC
+			}
+			393 = {
+				add_core_of = SIC
+			}
+		}
+	}
+	
+	SIC_FRD_gale_region = {
+		icon = hammer_and_horseshoe_decision
+		cost = 35
+		fire_only_once = yes
+		days_remove = 35
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		available = {
+			NOT = {
+				has_country_flag = frd_coring
+			}
+		}
+		
+		complete_effect = {
+			set_country_flag = frd_coring
+		}
+
+		remove_effect = {
+			clr_country_flag = frd_coring
+			489 = {
+				add_core_of = SIC
+			}
+			488 = {
+				add_core_of = SIC
+			}
+			471 = {
+				add_core_of = SIC
+			}
+			679 = {
+				add_core_of = SIC
+			}
+			384 = {
+				add_core_of = SIC
+			}
+		}
+	}
+	
+	SIC_FRD_greybill_region = {
+		icon = hammer_and_horseshoe_decision
+		cost = 35
+		fire_only_once = yes
+		days_remove = 35
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		available = {
+			NOT = {
+				has_country_flag = frd_coring
+			}
+		}
+		
+		complete_effect = {
+			set_country_flag = frd_coring
+		}
+
+		remove_effect = {
+			clr_country_flag = frd_coring
+			503 = {
+				add_core_of = SIC
+			}
+			533 = {
+				add_core_of = SIC
+			}
+			549 = {
+				add_core_of = SIC
+			}
+			504 = {
+				add_core_of = SIC
+			}
+			534 = {
+				add_core_of = SIC
+			}
+		}
+	}
+	
+	SIC_FRD_pluma_region = {
+		icon = hammer_and_horseshoe_decision
+		cost = 35
+		fire_only_once = yes
+		days_remove = 35
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		available = {
+			NOT = {
+				has_country_flag = frd_coring
+			}
+		}
+		
+		complete_effect = {
+			set_country_flag = frd_coring
+		}
+
+		remove_effect = {
+			clr_country_flag = frd_coring
+			375 = {
+				add_core_of = SIC
+			}
+			374 = {
+				add_core_of = SIC
+			}
+			373 = {
+				add_core_of = SIC
+			}
+			536 = {
+				add_core_of = SIC
+			}
+			370 = {
+				add_core_of = SIC
+			}
+			372 = {
+				add_core_of = SIC
+			}
+		}
+	}
+	
+	
+	
+	
+	
+	SIC_FRD_south_empire = {
+		icon = hammer_and_horseshoe_decision
+		cost = 42
+		fire_only_once = yes
+		days_remove = 21
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			has_completed_focus = SIC_FRD_return_to_griffenheim
+		}
+		
+		available = {
+			NOT = {
+				has_country_flag = frd_coring
+			}
+		}
+		
+		complete_effect = {
+			set_country_flag = frd_coring
+		}
+
+		remove_effect = {
+			clr_country_flag = frd_coring
+			422 = {
+				add_core_of = SIC
+			}
+			547 = {
+				add_core_of = SIC
+			}
+			411 = {
+				add_core_of = SIC
+			}
+			398 = {
+				add_core_of = SIC
+			}
+			506 = {
+				add_core_of = SIC
+			}
+			554 = {
+				add_core_of = SIC
+			}
+			423 = {
+				add_core_of = SIC
+			}
+			397 = {
+				add_core_of = SIC
+			}
+			402 = {
+				add_core_of = SIC
+			}
+			439 = {
+				add_core_of = SIC
+			}
+			674 = {
+				add_core_of = SIC
+			}
+			399 = {
+				add_core_of = SIC
+			}
+		}
+	}
+	
+	SIC_FRD_west_empire = {
+		icon = hammer_and_horseshoe_decision
+		cost = 42
+		fire_only_once = yes
+		days_remove = 21
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			has_completed_focus = SIC_FRD_return_to_griffenheim
+		}
+		
+		available = {
+			NOT = {
+				has_country_flag = frd_coring
+			}
+		}
+		
+		complete_effect = {
+			set_country_flag = frd_coring
+		}
+
+		remove_effect = {
+			clr_country_flag = frd_coring
+			447 = {
+				add_core_of = SIC
+			}
+			378 = {
+				add_core_of = SIC
+			}
+			666 = {
+				add_core_of = SIC
+			}
+			405 = {
+				add_core_of = SIC
+			}
+			440 = {
+				add_core_of = SIC
+			}
+			441 = {
+				add_core_of = SIC
+			}
+			434 = {
+				add_core_of = SIC
+			}
+			497 = {
+				add_core_of = SIC
+			}
+			498 = {
+				add_core_of = SIC
+			}
+			433 = {
+				add_core_of = SIC
+			}
+			520 = {
+				add_core_of = SIC
+			}
+		}
+	}
+	
+	SIC_FRD_north_empire = {
+		icon = hammer_and_horseshoe_decision
+		cost = 42
+		fire_only_once = yes
+		days_remove = 21
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			has_completed_focus = SIC_FRD_return_to_griffenheim
+		}
+		
+		available = {
+			NOT = {
+				has_country_flag = frd_coring
+			}
+		}
+		
+		complete_effect = {
+			set_country_flag = frd_coring
+		}
+
+		remove_effect = {
+			clr_country_flag = frd_coring
+			538 = {
+				add_core_of = SIC
+			}
+			486 = {
+				add_core_of = SIC
+			}
+			458 = {
+				add_core_of = SIC
+			}
+			546 = {
+				add_core_of = SIC
+			}
+			443 = {
+				add_core_of = SIC
+			}
+			545 = {
+				add_core_of = SIC
+			}
+			437 = {
+				add_core_of = SIC
+			}
+			555 = {
+				add_core_of = SIC
+			}
+			424 = {
+				add_core_of = SIC
+			}
+			479 = {
+				add_core_of = SIC
+			}
+			492 = {
+				add_core_of = SIC
+			}
+			568 = {
+				add_core_of = SIC
+			}
+			539 = {
+				add_core_of = SIC
+			}
+		}
+	}
+	
+	
+	
+	SIC_FRD_aquelian_countryside = {
+		icon = hammer_and_horseshoe_decision
+		cost = 112
+		fire_only_once = yes
+		days_remove = 56
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			has_completed_focus = SIC_FRD_ravage_the_southwest
+		}
+		
+		available = {
+			NOT = {
+				has_country_flag = frd_coring
+			}
+		}
+		
+		complete_effect = {
+			set_country_flag = frd_coring
+		}
+
+		remove_effect = {
+			clr_country_flag = frd_coring
+			502 = {
+				add_core_of = SIC
+			}
+			523 = {
+				add_core_of = SIC
+			}
+			524 = {
+				add_core_of = SIC
+			}
+			472 = {
+				add_core_of = SIC
+			}
+			516 = {
+				add_core_of = SIC
+			}
+			407 = {
+				add_core_of = SIC
+			}
+			473 = {
+				add_core_of = SIC
+			}
+			406 = {
+				add_core_of = SIC
+			}
+			519 = {
+				add_core_of = SIC
+			}
+			448 = {
+				add_core_of = SIC
+			}
+			517 = {
+				add_core_of = SIC
+			}
+			421 = {
+				add_core_of = SIC
+			}
+		}
+	}
+	
+	SIC_FRD_west_periphere = {
+		icon = hammer_and_horseshoe_decision
+		cost = 112
+		fire_only_once = yes
+		days_remove = 56
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			has_completed_focus = SIC_FRD_ravage_the_southwest
+		}
+		
+		available = {
+			NOT = {
+				has_country_flag = frd_coring
+			}
+			owns_state = 501
+			owns_state = 470
+			owns_state = 401
+			owns_state = 391
+		}
+		
+		complete_effect = {
+			set_country_flag = frd_coring
+		}
+
+		remove_effect = {
+			clr_country_flag = frd_coring
+			391 = {
+				add_core_of = SIC
+			}
+			400 = {
+				add_core_of = SIC
+			}
+			401 = {
+				add_core_of = SIC
+			}
+			500 = {
+				add_core_of = SIC
+			}
+			673 = {
+				add_core_of = SIC
+			}
+			470 = {
+				add_core_of = SIC
+			}
+			501 = {
+				add_core_of = SIC
+			}
+		}
+	}
+	
+	SIC_FRD_east_periphere = {
+		icon = hammer_and_horseshoe_decision
+		cost = 112
+		fire_only_once = yes
+		days_remove = 56
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			has_completed_focus = SIC_FRD_ravage_the_southwest
+		}
+		
+		available = {
+			NOT = {
+				has_country_flag = frd_coring
+			}
+			owns_state = 381
+			owns_state = 390
+			owns_state = 495
+			owns_state = 494
+			owns_state = 672
+		}
+		
+		complete_effect = {
+			set_country_flag = frd_coring
+		}
+
+		remove_effect = {
+			clr_country_flag = frd_coring
+			672 = {
+				add_core_of = SIC
+			}
+			493 = {
+				add_core_of = SIC
+			}
+			494 = {
+				add_core_of = SIC
+			}
+			496 = {
+				add_core_of = SIC
+			}
+			495 = {
+				add_core_of = SIC
+			}
+			457 = {
+				add_core_of = SIC
+			}
+			436 = {
+				add_core_of = SIC
+			}
+			396 = {
+				add_core_of = SIC
+			}
+			379 = {
+				add_core_of = SIC
+			}
+		}
+	}
+	
+	SIC_FRD_greater_wingbardy = {
+		icon = hammer_and_horseshoe_decision
+		cost = 112
+		fire_only_once = yes
+		days_remove = 56
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			has_completed_focus = SIC_FRD_ravage_the_southwest
+		}
+		
+		available = {
+			NOT = {
+				has_country_flag = frd_coring
+			}
+			owns_state = 408
+			owns_state = 515
+			owns_state = 366
+		}
+		
+		complete_effect = {
+			set_country_flag = frd_coring
+		}
+
+		remove_effect = {
+			clr_country_flag = frd_coring
+			408 = {
+				add_core_of = SIC
+			}
+			487 = {
+				add_core_of = SIC
+			}
+			481 = {
+				add_core_of = SIC
+			}
+			410 = {
+				add_core_of = SIC
+			}
+			526 = {
+				add_core_of = SIC
+			}
+			515 = {
+				add_core_of = SIC
+			}
+			521 = {
+				add_core_of = SIC
+			}
+			652 = {
+				add_core_of = SIC
+			}
+			388 = {
+				add_core_of = SIC
+			}
+			366 = {
+				add_core_of = SIC
+			}
+			367 = {
+				add_core_of = SIC
+			}
+			368 = {
+				add_core_of = SIC
+			}
+		}
+	}
+	
+	
+	
+	SIC_FRD_northern_plains = {
+		icon = hammer_and_horseshoe_decision
+		cost = 168
+		fire_only_once = yes
+		days_remove = 80
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			has_completed_focus = SIC_FRD_tame_the_far_north
+		}
+		
+		available = {
+			NOT = {
+				has_country_flag = frd_coring
+			}
+		}
+		
+		complete_effect = {
+			set_country_flag = frd_coring
+		}
+
+		remove_effect = {
+			clr_country_flag = frd_coring
+			556 = {
+				add_core_of = SIC
+			}
+			557 = {
+				add_core_of = SIC
+			}
+			432 = {
+				add_core_of = SIC
+			}
+			548 = {
+				add_core_of = SIC
+			}
+			581 = {
+				add_core_of = SIC
+			}
+			582 = {
+				add_core_of = SIC
+			}
+			450 = {
+				add_core_of = SIC
+			}
+			449 = {
+				add_core_of = SIC
+			}
+			431 = {
+				add_core_of = SIC
+			}
+			576 = {
+				add_core_of = SIC
+			}
+			484 = {
+				add_core_of = SIC
+			}
+			403 = {
+				add_core_of = SIC
+			}
+			404 = {
+				add_core_of = SIC
+			}
+			482 = {
+				add_core_of = SIC
+			}
+			584 = {
+				add_core_of = SIC
+			}
+			575 = {
+				add_core_of = SIC
+			}
+			430 = {
+				add_core_of = SIC
+			}
+			483 = {
+				add_core_of = SIC
+			}
+			542 = {
+				add_core_of = SIC
+			}
+			658 = {
+				add_core_of = SIC
+			}
+			660 = {
+				add_core_of = SIC
+			}
+			659 = {
+				add_core_of = SIC
+			}
+		}
+	}
+	
+	SIC_FRD_northern_wastes = {
+		icon = hammer_and_horseshoe_decision
+		cost = 56
+		fire_only_once = yes
+		days_remove = 27
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			has_completed_focus = SIC_FRD_secure_griffonia
+		}
+		
+		available = {
+			NOT = {
+				has_country_flag = frd_coring
+			}
+		}
+		
+		complete_effect = {
+			set_country_flag = frd_coring
+		}
+
+		remove_effect = {
+			clr_country_flag = frd_coring
+			477 = {
+				add_core_of = SIC
+			}
+			476 = {
+				add_core_of = SIC
+			}
+			475 = {
+				add_core_of = SIC
+			}
+			459 = {
+				add_core_of = SIC
+			}
+			480 = {
+				add_core_of = SIC
+			}
+			474 = {
+				add_core_of = SIC
+			}
+			583 = {
+				add_core_of = SIC
+			}
+			601 = {
+				add_core_of = SIC
+			}
+			585 = {
+				add_core_of = SIC
+			}
+			677 = {
+				add_core_of = SIC
+			}
+			562 = {
+				add_core_of = SIC
+			}
+			567 = {
+				add_core_of = SIC
+			}
+			563 = {
+				add_core_of = SIC
+			}
+			602 = {
+				add_core_of = SIC
+			}
+			573 = {
+				add_core_of = SIC
+			}
+			574 = {
+				add_core_of = SIC
+			}
+			670 = {
+				add_core_of = SIC
+			}
+			669 = {
+				add_core_of = SIC
+			}
+			668 = {
+				add_core_of = SIC
+			}
+		}
+	}
+	
+	
+	
+	SIC_FRD_northern_hillponies = {
+		icon = hammer_and_horseshoe_decision
+		cost = 56
+		fire_only_once = yes
+		days_remove = 27
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			has_completed_focus = SIC_FRD_secure_griffonia
+		}
+		
+		available = {
+			NOT = {
+				has_country_flag = frd_coring
+			}
+		}
+		
+		complete_effect = {
+			set_country_flag = frd_coring
+		}
+
+		remove_effect = {
+			clr_country_flag = frd_coring
+			641 = {
+				add_core_of = SIC
+			}
+			642 = {
+				add_core_of = SIC
+			}
+			643 = {
+				add_core_of = SIC
+			}
+			640 = {
+				add_core_of = SIC
+			}
+			639 = {
+				add_core_of = SIC
+			}
+			569 = {
+				add_core_of = SIC
+			}
+			572 = {
+				add_core_of = SIC
+			}
+			571 = {
+				add_core_of = SIC
+			}
+			455 = {
+				add_core_of = SIC
+			}
+			603 = {
+				add_core_of = SIC
+			}
+			604 = {
+				add_core_of = SIC
+			}
+			644 = {
+				add_core_of = SIC
+			}
+			453 = {
+				add_core_of = SIC
+			}
+			650 = {
+				add_core_of = SIC
+			}
+			454 = {
+				add_core_of = SIC
+			}
+			478 = {
+				add_core_of = SIC
+			}
+			636 = {
+				add_core_of = SIC
+			}
+			670 = {
+				add_core_of = SIC
+			}
+			669 = {
+				add_core_of = SIC
+			}
+			668 = {
+				add_core_of = SIC
+			}
+		}
+	}
+	
+	SIC_FRD_north_riverlands = {
+		icon = hammer_and_horseshoe_decision
+		cost = 168
+		fire_only_once = yes
+		days_remove = 80
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			has_completed_focus = SIC_FRD_secure_griffonia
+		}
+		
+		available = {
+			NOT = {
+				has_country_flag = frd_coring
+			}
+		}
+		
+		complete_effect = {
+			set_country_flag = frd_coring
+		}
+
+		remove_effect = {
+			clr_country_flag = frd_coring
+			438 = {
+				add_core_of = SIC
+			}
+			461 = {
+				add_core_of = SIC
+			}
+			638 = {
+				add_core_of = SIC
+			}
+			635 = {
+				add_core_of = SIC
+			}
+			637 = {
+				add_core_of = SIC
+			}
+			647 = {
+				add_core_of = SIC
+			}
+			648 = {
+				add_core_of = SIC
+			}
+			543 = {
+				add_core_of = SIC
+			}
+			491 = {
+				add_core_of = SIC
+			}
+			586 = {
+				add_core_of = SIC
+			}
+			544 = {
+				add_core_of = SIC
+			}
+			646 = {
+				add_core_of = SIC
+			}
+			577 = {
+				add_core_of = SIC
+			}
+			620 = {
+				add_core_of = SIC
+			}
+			587 = {
+				add_core_of = SIC
+			}
+		}
+	}
+	
+	SIC_FRD_south_riverlands = {
+		icon = hammer_and_horseshoe_decision
+		cost = 168
+		fire_only_once = yes
+		days_remove = 80
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			has_completed_focus = SIC_FRD_secure_griffonia
+		}
+		
+		available = {
+			NOT = {
+				has_country_flag = frd_coring
+			}
+		}
+		
+		complete_effect = {
+			set_country_flag = frd_coring
+		}
+
+		remove_effect = {
+			clr_country_flag = frd_coring
+			541 = {
+				add_core_of = SIC
+			}
+			560 = {
+				add_core_of = SIC
+			}
+			499 = {
+				add_core_of = SIC
+			}
+			551 = {
+				add_core_of = SIC
+			}
+			615 = {
+				add_core_of = SIC
+			}
+			614 = {
+				add_core_of = SIC
+			}
+			616 = {
+				add_core_of = SIC
+			}
+			628 = {
+				add_core_of = SIC
+			}
+			629 = {
+				add_core_of = SIC
+			}
+			627 = {
+				add_core_of = SIC
+			}
+			580 = {
+				add_core_of = SIC
+			}
+			681 = {
+				add_core_of = SIC
+			}
+			621 = {
+				add_core_of = SIC
+			}
+			452 = {
+				add_core_of = SIC
+			}
+			622 = {
+				add_core_of = SIC
+			}
+			682 = {
+				add_core_of = SIC
+			}
+		}
+	}
+	
+	SIC_FRD_griffonian_edge = {
+		icon = hammer_and_horseshoe_decision
+		cost = 224
+		fire_only_once = yes
+		days_remove = 112
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			has_completed_focus = SIC_FRD_secure_griffonia
+		}
+		
+		available = {
+			NOT = {
+				has_country_flag = frd_coring
+			}
+		}
+		
+		complete_effect = {
+			set_country_flag = frd_coring
+		}
+
+		remove_effect = {
+			clr_country_flag = frd_coring
+			592 = {
+				add_core_of = SIC
+			}
+			613 = {
+				add_core_of = SIC
+			}
+			610 = {
+				add_core_of = SIC
+			}
+			597 = {
+				add_core_of = SIC
+			}
+			631 = {
+				add_core_of = SIC
+			}
+			612 = {
+				add_core_of = SIC
+			}
+			611 = {
+				add_core_of = SIC
+			}
+			609 = {
+				add_core_of = SIC
+			}
+			596 = {
+				add_core_of = SIC
+			}
+			590 = {
+				add_core_of = SIC
+			}
+			663 = {
+				add_core_of = SIC
+			}
+			589 = {
+				add_core_of = SIC
+			}
+			651 = {
+				add_core_of = SIC
+			}
+			605 = {
+				add_core_of = SIC
+			}
+			414 = {
+				add_core_of = SIC
+			}
+			588 = {
+				add_core_of = SIC
+			}
+			559 = {
+				add_core_of = SIC
+			}
+			514 = {
+				add_core_of = SIC
+			}
+			599 = {
+				add_core_of = SIC
+			}
+			600 = {
+				add_core_of = SIC
+			}
+			595 = {
+				add_core_of = SIC
+			}
+			623 = {
+				add_core_of = SIC
+			}
+			630 = {
+				add_core_of = SIC
+			}
+			624 = {
+				add_core_of = SIC
+			}
+			558 = {
+				add_core_of = SIC
+			}
+			578 = {
+				add_core_of = SIC
+			}
+			413 = {
+				add_core_of = SIC
+			}
+			680 = {
+				add_core_of = SIC
+			}
+			626 = {
+				add_core_of = SIC
+			}
+			625 = {
+				add_core_of = SIC
+			}
+			579 = {
+				add_core_of = SIC
+			}
+			412 = {
+				add_core_of = SIC
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+SIC_FRD_southern_economy = {
+	SIC_FRD_invest_in_civs = {
+		icon = hammer_and_horseshoe_decision
+		cost = 28
+		fire_only_once = no
+		days_remove = 28
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		remove_effect = {
+			add_stability = -0.01
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	SIC_FRD_invest_in_mils = {
+		icon = hammer_and_horseshoe_decision
+		cost = 28
+		fire_only_once = no
+		days_remove = 28
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		remove_effect = {
+			add_stability = -0.01
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	SIC_FRD_invest_in_infrastructure = {
+		icon = hammer_and_horseshoe_decision
+		visible = {
+			has_completed_focus = SIC_FRD_invest_in_infrastructure
+		}
+		cost = 14
+		fire_only_once = no
+		days_remove = 14
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		remove_effect = {
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	SIC_FRD_invest_in_supplies = {
+		icon = hammer_and_horseshoe_decision
+		visible = {
+			has_completed_focus = SIC_FRD_invest_in_supplies
+		}
+		cost = 42
+		fire_only_once = no
+		days_remove = 42
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		remove_effect = {
+			add_stability = -0.01
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = supply_node
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	SIC_FRD_one_year_plan = {
+		icon = hammer_and_horseshoe_decision
+		cost = 35
+		fire_only_once = no
+		
+		available = {
+			NOT = {
+				has_idea = SIC_FRD_oneyerpln
+			}
+		}
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		complete_effect = {
+			add_stability = -0.05
+			add_timed_idea = {
+				idea = SIC_FRD_oneyerpln
+				days = 365
+			}
+		}
+	}
+}
+
+SIC_FRD_southern_army = {
+	SIC_FRD_conscription_efforts = {
+		icon = hammer_and_horseshoe_decision
+		cost = 21
+		fire_only_once = no
+		days_remove = 21
+		
+		visible = {
+			NOT = {
+				OR = {
+					has_idea = volunteer_only
+					has_idea = disarmed_nation
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		remove_effect = {
+			add_manpower = 60000
+			add_war_support = -0.02
+			add_stability = -0.03
+		}
+	}
+	SIC_FRD_recruitment_efforts = {
+		icon = hammer_and_horseshoe_decision
+		cost = 35
+		fire_only_once = no
+		days_remove = 35
+		
+		visible = {
+			NOT = {
+				has_idea = disarmed_nation
+			}
+		}
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		remove_effect = {
+			add_manpower = 30000
+			add_stability = -0.01
+		}
+	}
+	
+	SIC_FRD_military_parades = {
+		icon = hammer_and_horseshoe_decision
+		cost = 0
+		fire_only_once = no
+		days_remove = 0
+		
+		visible = {
+			NOT = {
+				has_idea = disarmed_nation
+				has_idea = SIC_FRD_milprdrep
+			}
+		}
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		remove_effect = {
+			add_stability = -0.02
+			add_timed_idea = {
+				idea = SIC_FRD_milprdrep
+				days = 30
+			}
+		}
+	}
+	
+	SIC_FRD_ref_our_mil_decxp = {
+		icon = hammer_and_horseshoe_decision
+		cost = 35
+		fire_only_once = no
+		days_remove = 35
+		
+		visible = {
+			has_completed_focus = SIC_FRD_ref_the_mil
+		}
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		remove_effect = {
+			add_to_variable = { SIC_FRD_xpgnlnd = 0.03 }
+		}
+	}
+	
+	SIC_FRD_ref_our_mil_decorg = {
+		icon = hammer_and_horseshoe_decision
+		cost = 35
+		fire_only_once = no
+		days_remove = 35
+		
+		visible = {
+			has_completed_focus = SIC_FRD_ref_the_mil
+		}
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		remove_effect = {
+			add_to_variable = { SIC_FRD_armorg = 0.01 }
+		}
+	}
+	
+	SIC_FRD_ref_our_mil_deccor = {
+		icon = hammer_and_horseshoe_decision
+		cost = 35
+		fire_only_once = no
+		days_remove = 35
+		
+		visible = {
+			has_completed_focus = SIC_FRD_ref_the_mil
+		}
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		remove_effect = {
+			add_to_variable = { SIC_FRD_armcordef = 0.01 }
+			add_to_variable = { SIC_FRD_armcoratk = 0.01 }
+		}
+	}
+	
+	SIC_FRD_offensive_stance = {
+		icon = hammer_and_horseshoe_decision
+		cost = 7
+		fire_only_once = no
+		days_remove = 7
+		
+		visible = {
+			NOT = {
+				has_idea = disarmed_nation
+				has_idea = SIC_FRD_offstn
+				has_idea = SIC_FRD_defstn
+			}
+		}
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		remove_effect = {
+			add_stability = -0.01
+			add_timed_idea = {
+				idea = SIC_FRD_offstn
+				days = 90
+			}
+		}
+	}
+	
+	SIC_FRD_defensive_stance = {
+		icon = hammer_and_horseshoe_decision
+		cost = 7
+		fire_only_once = no
+		days_remove = 7
+		
+		visible = {
+			NOT = {
+				has_idea = disarmed_nation
+				has_idea = SIC_FRD_offstn
+				has_idea = SIC_FRD_defstn
+			}
+		}
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		remove_effect = {
+			add_stability = -0.01
+			add_timed_idea = {
+				idea = SIC_FRD_defstn
+				days = 90
+			}
+		}
+	}
+}
+
+SIC_FRD_southern_navy = {
+	SIC_FRD_construct_docks = {
+		icon = hammer_and_horseshoe_decision
+		cost = 28
+		fire_only_once = no
+		days_remove = 28
+		
+		visible = {
+		}
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		remove_effect = {
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	SIC_FRD_deploy_the_navy = {
+		icon = hammer_and_horseshoe_decision
+		cost = 21
+		fire_only_once = no
+		days_remove = 42
+		
+		visible = {
+			has_completed_focus = SIC_FRD_newshp
+		}
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		remove_effect = {
+			load_oob = "SIC_FRD_shpdec"
+		}
+	}
+}
+
+SIC_FRD_southern_will = {
+	SIC_FRD_dispell_riots = {
+		icon = hammer_and_horseshoe_decision
+		cost = 7
+		fire_only_once = no
+		days_remove = 7
+		
+		visible = {
+			has_stability < 0.3
+		}
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		remove_effect = {
+			add_stability = 0.06
+		}
+	}
+	SIC_FRD_disappear_disidents = {
+		icon = hammer_and_horseshoe_decision
+		cost = 14
+		fire_only_once = no
+		days_remove = 14
+		
+		visible = {
+			AND = {
+				has_stability > 0.3
+				has_stability < 0.8
+			}
+		}
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		remove_effect = {
+			add_stability = 0.04
+		}
+	}
+	SIC_FRD_provide_goods = {
+		icon = hammer_and_horseshoe_decision
+		cost = 21
+		fire_only_once = no
+		days_remove = 21
+		
+		visible = {
+		}
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		remove_effect = {
+			add_stability = 0.03
+			add_political_power = -50
+		}
+	}
+	
+	SIC_FRD_imperial_revanchism = {
+		icon = hammer_and_horseshoe_decision
+		cost = 14
+		fire_only_once = no
+		days_remove = 14
+		
+		visible = {
+		}
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		remove_effect = {
+			add_war_support = 0.02
+		}
+	}
+}
+
+
+SIC_com_foreign_diplomacy = {
+	SIC_COM_invade_wingbardy = {
+		icon = hammer_and_horseshoe_decision
+		cost = 0
+		fire_only_once = yes
+		days_remove = 35
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			NOT = {
+				WNG = {
+					has_government = communism
+				}
+				owns_state = 504
+			}
+		}
+		
+		complete_effect = {
+		}
+
+		remove_effect = {
+			declare_war_on = {
+				target = WNG
+				type = annex_everything
+			}
+		}
+	}
+	SIC_COM_communizing_wingbardy = {
+		icon = hammer_and_horseshoe_decision
+		cost = 84
+		fire_only_once = yes
+		days_remove = 21
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			owns_state = 371
+		}
+		
+		complete_effect = {
+		}
+
+		remove_effect = {
+			puppet = WNG
+			add_state_core = 373
+			add_state_core = 536
+			add_state_core = 371
+			FAL = {
+				transfer_state = 530
+			}
+			WNG = {
+				transfer_state = 374
+				transfer_state = 370
+				transfer_state = 372
+				transfer_state = 369
+				transfer_state = 375
+				transfer_state = 534
+			}
+		}
+	}
+	
+	SIC_COM_deal_with_wingbardy = {
+		icon = hammer_and_horseshoe_decision
+		cost = 20
+		fire_only_once = yes
+		days_remove = 0
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			WNG = {
+				has_government = communism
+			}
+			owns_state = 504
+		}
+		
+		complete_effect = {
+			WNG = {
+				country_event = sicameon_frtr_com.4
+			}
+		}
+	}
+	
+	
+	SIC_COM_invade_brodfeld = {
+		icon = hammer_and_horseshoe_decision
+		cost = 0
+		fire_only_once = yes
+		days_remove = 35
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			GRW = {
+				exists = no
+			}
+			BRF = {
+				exists = yes
+			}
+			owns_state = 671
+		}
+		
+		complete_effect = {
+		}
+
+		remove_effect = {
+			declare_war_on = {
+				target = BRF
+				type = annex_everything
+			}
+		}
+	}
+	SIC_COM_communizing_Brodfeld = {
+		icon = hammer_and_horseshoe_decision
+		cost = 63
+		fire_only_once = yes
+		days_remove = 21
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			owns_state = 663
+		}
+		
+		complete_effect = {
+		}
+
+		remove_effect = {
+			puppet = GRW
+			add_state_core = 663
+			BAN = {
+				transfer_state = 605
+				add_state_core = 665
+			}
+			GRW = {
+				transfer_state = 651
+				transfer_state = 589
+				transfer_state = 385
+				transfer_state = 590
+				transfer_state = 508
+				transfer_state = 588
+				transfer_state = 414
+			}
+		}
+	}
+	
+	SIC_COM_deal_with_brodfeld = {
+		icon = hammer_and_horseshoe_decision
+		cost = 20
+		fire_only_once = yes
+		days_remove = 0
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			GRF = {
+				exists = yes
+			}
+			BRF = {
+				exists = no
+			}
+			owns_state = 671
+		}
+		
+		complete_effect = {
+			GRW = {
+				country_event = sicameon_frtr_com.4
+			}
+		}
+	}
+}
