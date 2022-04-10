@@ -1132,1202 +1132,786 @@ focus_tree = {
 	############################"Communist" Tree##########################
 
 	focus = {
-		id = SIC_red_cascade
+		id = SIC_red_star_rising
 		icon = GFX_focus_sic_communism_flag
 		cost = 8
-		x = -6
-		y = 8
+		x = -11
+		y = 9
 		ai_will_do = {
 			factor = 55
 		}
 		available = {
-			OR = {
-				has_country_flag = SIC_communist_victory
-				is_subject = yes
-			}
 			has_government = communism
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_red_cascade"
-			if = {
-				limit = {
-					is_in_faction_with = MIT
-					is_subject = no
-				}
-				leave_faction = yes
-			}
-			add_political_power = 100
+			add_political_power = 150
 			add_popularity = { 
 				ideology = communism
 				popularity = 0.1
 			}
-			add_ideas = SIC_divided_legislature
+			country_event = sicameon_frtr_com.1
+			add_ideas = {
+				SIC_COM_religious_question
+			}
+			add_ideas = {
+				SIC_COM_dissidence_question
+			}
 		}
-		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
-		id = SIC_handle_harmonists
-		icon = GFX_focus_generic_strike_at_democracy2
+		id = SIC_agrarians
+		icon = GFX_focus_sic_communism_flag
 		cost = 8
-		relative_position_id = SIC_red_cascade
-		x = -8
+		x = -7
 		y = 1
+		mutually_exclusive = { focus = SIC_syndicalists }
+		relative_position_id = SIC_red_star_rising
+		prerequisite = {
+			focus = SIC_red_star_rising
+		}
 		ai_will_do = {
 			factor = 55
 		}
 		available = {
 			has_government = communism
 		}
-		prerequisite = {
-			focus = SIC_red_cascade
-		}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SIC_handle_harmonists"
-			country_event = sicameon.72
-		}
-	}
-
-	focus = {
-		id = SIC_penalize_harmonists
-		icon = GFX_focus_indy_anti_democracy
-		cost = 8
-		relative_position_id = SIC_handle_harmonists
-		x = -1
-		y = 1
-		ai_will_do = {
-			factor = 55
-		}
-		available = {
-			has_country_flag = SIC_fuck_harmonists
-			has_government = communism
-		}
-		prerequisite = {
-			focus = SIC_handle_harmonists
-		}
-		mutually_exclusive = {
-			focus = SIC_incentives_for_harmonists
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SIC_penalize_harmonists"
-			add_stability = -0.1
-			add_war_support = 0.1
-			add_ideas = SIC_bash_democrats
-		}
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
-	}
-
-	focus = {
-		id = SIC_might_makes_right
-		icon = GFX_goal_revolution
-		cost = 8
-		relative_position_id = SIC_penalize_harmonists
-		x = 0
-		y = 1
-		ai_will_do = {
-			factor = 55
-		}
-		available = {
-			has_government = communism
-		}
-		prerequisite = {
-			focus = SIC_penalize_harmonists
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SIC_might_makes_right"
-			add_ideas = SIC_might_makes_right_idea
-		}
-		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
-	}
-
-	focus = {
-		id = SIC_incentives_for_harmonists
-		icon = GFX_goal_generic_major_alliance
-		cost = 8
-		relative_position_id = SIC_handle_harmonists
-		x = 1
-		y = 1
-		ai_will_do = {
-			factor = 55
-		}
-		prerequisite = {
-			focus = SIC_handle_harmonists
-		}
-		available = {
-			has_country_flag = SIC_reason_with_harmonists
-			has_government = communism
-		}
-		mutually_exclusive = {
-			focus = SIC_penalize_harmonists
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SIC_incentives_for_harmonists"
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_red_cascade"
 			add_stability = 0.1
-			add_war_support = -0.1
-			add_ideas = SIC_appease_democrats
-		}
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
-	}
-
-	focus = {
-		id = SIC_reason_tempers_passion
-		icon = GFX_goal_supremacy_of_will
-		cost = 8
-		relative_position_id = SIC_incentives_for_harmonists
-		x = 0
-		y = 1
-		ai_will_do = {
-			factor = 55
-		}
-		available = {
-			has_government = communism
-		}
-		prerequisite = {
-			focus = SIC_incentives_for_harmonists
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SIC_reason_tempers_passion"
-			add_ideas = SIC_reason_tempers_passion_idea
-		}
-		search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
-	}
-
-	focus = {
-		id = SIC_divine_issue
-		icon = GFX_goal_government_icon
-		cost = 8
-		relative_position_id = SIC_red_cascade
-		x = -4
-		y = 1
-		ai_will_do = {
-			factor = 55
-		}
-		available = {
-			has_government = communism
-		}
-		prerequisite = {
-			focus = SIC_red_cascade
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SIC_divine_issue"
-			country_event = sicameon.73
-		}
-	}
-
-	focus = {
-		id = SIC_supreme_pontiff
-		icon = GFX_goal_ideology_national_populist
-		cost = 8
-		relative_position_id = SIC_divine_issue
-		x = -1
-		y = 1
-		ai_will_do = {
-			factor = 55
-		}
-		available = {
-			has_country_flag = SIC_one_pontiff
-			has_government = communism
-		}
-		prerequisite = {
-			focus = SIC_divine_issue
-		}
-		mutually_exclusive = {
-			focus = SIC_pontificate_blessing
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SIC_supreme_pontiff"
-			add_ideas = SIC_supreme_pontiff_idea
-		}
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
-	}
-
-	focus = {
-		id = SIC_reorganize_church
-		icon = GFX_goal_solar_church
-		cost = 8
-		relative_position_id = SIC_supreme_pontiff
-		x = 0
-		y = 1
-		ai_will_do = {
-			factor = 55
-		}
-		available = {
-			has_government = communism
-		}
-		prerequisite = {
-			focus = SIC_supreme_pontiff
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SIC_reorganize_church"
-			add_ideas = SIC_reorganize_church_idea
-		}
-		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_RESEARCH }
-	}
-
-	focus = {
-		id = SIC_pontificate_blessing
-		icon = GFX_goal_red_star_dove
-		cost = 8
-		relative_position_id = SIC_divine_issue
-		x = 1
-		y = 1
-		ai_will_do = {
-			factor = 55
-		}
-		available = {
-			has_country_flag = SIC_many_pontiffs
-			has_government = communism
-		}
-		prerequisite = {
-			focus = SIC_divine_issue
-		}
-		mutually_exclusive = {
-			focus = SIC_supreme_pontiff
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SIC_pontificate_blessing"
-			add_ideas = SIC_pontificate_blessing_idea
-		}
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
-	}
-
-	focus = {
-		id = SIC_sycaecia_vanguard
-		icon = GFX_goal_generic_liberty_statue
-		cost = 8
-		relative_position_id = SIC_pontificate_blessing
-		x = 0
-		y = 1
-		ai_will_do = {
-			factor = 55
-		}
-		available = {
-			has_government = communism
-		}
-		prerequisite = {
-			focus = SIC_pontificate_blessing
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SIC_sycaecia_vanguard"
-			add_ideas = SIC_sycaecia_vanguard_idea
-		}
-		search_filters = { FOCUS_FILTER_ARMY_BONUS }
-	}
-
-	focus = {
-		id = SIC_patriotism_campaigns
-		icon = GFX_goal_generic_alliance
-		cost = 8
-		relative_position_id = SIC_reason_tempers_passion
-		x = 1
-		y = 1
-		ai_will_do = {
-			factor = 55
-		}
-		available = {
-			has_government = communism
-		}
-		prerequisite = {
-			focus = SIC_might_makes_right
-			focus = SIC_reason_tempers_passion
-		}
-		prerequisite = {
-			focus = SIC_reorganize_church
-			focus = SIC_sycaecia_vanguard
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SIC_patriotism_campaigns"
-			unlock_decision_category_tooltip = SIC_patriotism_campaigns_category
-			#unlocks decisions
-		}
-	}
-
-	focus = {
-		id = SIC_one_for_all
-		icon = GFX_goal_generic_national_unity_claws
-		cost = 8
-		relative_position_id = SIC_patriotism_campaigns
-		x = 0
-		y = 1
-		ai_will_do = {
-			factor = 55
-		}
-		available = {
-			has_government = communism
-		}
-		prerequisite = {
-			focus = SIC_patriotism_campaigns
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SIC_one_for_all"
-			add_ideas = SIC_one_for_all
-			remove_ideas = SIC_divided_legislature
-		}
-		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
-	}
-
-	focus = {
-		id = SIC_codify_sicameonism
-		icon = GFX_goal_ideology_syndicalist
-		cost = 8
-		relative_position_id = SIC_red_cascade
-		x = 0
-		y = 1
-		ai_will_do = {
-			factor = 55
-		}
-		available = {
-			has_government = communism
-		}
-		prerequisite = {
-			focus = SIC_red_cascade
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SIC_codify_sicameonism"
-			add_ideas = SIC_codified_syndicalism
 			add_popularity = { 
 				ideology = communism
 				popularity = 0.1
 			}
-		}
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-
-	focus = {
-		id = SIC_officialize_the_syndicates
-		icon = GFX_goal_document
-		cost = 8
-		relative_position_id = SIC_codify_sicameonism
-		x = 0
-		y = 1
-		ai_will_do = {
-			factor = 55
-		}
-		available = {
-			has_government = communism
-		}
-		prerequisite = {
-			focus = SIC_codify_sicameonism
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SIC_officialize_the_syndicates"
-			swap_ideas = { remove_idea = SIC_codified_syndicalism add_idea = SIC_official_syndicates }
+			remove_ideas = SIC_COM_divided_party
 		}
 	}
 
 	focus = {
-		id = SIC_separate_syndicates
-		icon = GFX_goal_generic_war_with_comintern
+		id = SIC_focus_on_the_farms
+		icon = GFX_focus_sic_communism_flag
 		cost = 8
-		relative_position_id = SIC_officialize_the_syndicates
 		x = -1
 		y = 1
+		relative_position_id = SIC_agrarians
+		prerequisite = {
+			focus = SIC_agrarians
+		}
 		ai_will_do = {
 			factor = 55
 		}
 		available = {
 			has_government = communism
 		}
-		prerequisite = {
-			focus = SIC_officialize_the_syndicates
-		}
-		mutually_exclusive = {
-			focus = SIC_replace_parishes
-		}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SIC_separate_syndicates"
-			swap_ideas = { remove_idea = SIC_official_syndicates add_idea = SIC_syndicates_and_parishes }
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_red_cascade"
+			add_ideas = SIC_COM_agr_frmfoc
 		}
 	}
-
 	focus = {
-		id = SIC_establish_fourth_branch
-		icon = GFX_goal_strasserisim_government
+		id = SIC_town_grants
+		icon = GFX_focus_sic_communism_flag
 		cost = 8
-		relative_position_id = SIC_separate_syndicates
 		x = 0
 		y = 1
+		relative_position_id = SIC_focus_on_the_farms
+		prerequisite = {
+			focus = SIC_focus_on_the_farms
+		}
 		ai_will_do = {
 			factor = 55
 		}
 		available = {
 			has_government = communism
 		}
-		prerequisite = {
-			focus = SIC_separate_syndicates
-		}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SIC_establish_fourth_branch"
-			add_ideas = SIC_fourth_branch
-		}
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-
-	focus = {
-		id = SIC_replace_parishes
-		icon = GFX_goal_red_star_gold_wreath
-		cost = 8
-		relative_position_id = SIC_officialize_the_syndicates
-		x = 1
-		y = 1
-		ai_will_do = {
-			factor = 55
-		}
-		available = {
-			has_government = communism
-		}
-		prerequisite = {
-			focus = SIC_officialize_the_syndicates
-		}
-		mutually_exclusive = {
-			focus = SIC_separate_syndicates
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SIC_replace_parishes"
-			swap_ideas = { remove_idea = SIC_official_syndicates add_idea = SIC_syndicates_only }
-		}
-	}
-
-	focus = {
-		id = SIC_syndical_legislature
-		icon = GFX_Socialist_Law
-		cost = 8
-		relative_position_id = SIC_replace_parishes
-		x = 0
-		y = 1
-		ai_will_do = {
-			factor = 55
-		}
-		available = {
-			has_government = communism
-		}
-		prerequisite = {
-			focus = SIC_replace_parishes
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SIC_syndical_legislature"
-			add_ideas = SIC_syndical_legislature_idea
-		}
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-
-	focus = {
-		id = SIC_federal_syndicate
-		icon = GFX_goal_HOL_council_communism
-		cost = 8
-		relative_position_id = SIC_establish_fourth_branch
-		x = 1
-		y = 1
-		ai_will_do = {
-			factor = 55
-		}
-		available = {
-			has_government = communism
-		}
-		prerequisite = {
-			focus = SIC_establish_fourth_branch
-			focus = SIC_syndical_legislature
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SIC_federal_syndicate"
-			add_political_power = 100
-			swap_ideas = { remove_idea = SIC_peasant_republic add_idea = SIC_federal_syndicate_idea }
-		}
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-
-	focus = { ########### events are from id 98 to id 103
-		id = SIC_flush_out_rats
-		icon = GFX_HOL_crackdown_natpop
-		cost = 8
-		relative_position_id = SIC_red_cascade
-		x = 3
-		y = 1
-		ai_will_do = {
-			factor = 55
-		}
-		available = {
-			has_government = communism
-		}
-		prerequisite = {
-			focus = SIC_red_cascade
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SIC_flush_out_rats"
-			country_event = { id = sicameon.98 days = 7 }
-		}
-	}
-
-	focus = { ########### events are from id 80 to id 97
-		id = SIC_hunting_the_swordfish
-		icon = GFX_goal_strasserite_oppression
-		cost = 8
-		relative_position_id = SIC_flush_out_rats
-		x = 0
-		y = 1
-		ai_will_do = {
-			factor = 55
-		}
-		available = {
-			has_country_flag = dealt_with_the_rats
-			has_government = communism
-		}
-		prerequisite = {
-			focus = SIC_flush_out_rats
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SIC_hunting_the_swordfish"
-			country_event = { id = sicameon.80 days = 7 }
-		}
-	}
-
-	focus = {
-		id = SIC_bandit_queen
-		icon = GFX_goal_ban_blackrock
-		cost = 8
-		relative_position_id = SIC_hunting_the_swordfish
-		x = 0
-		y = 3
-		ai_will_do = {
-			factor = 55
-			modifier = {
-				factor = 0
-				has_war = yes
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_red_cascade"
+			swap_ideas = {
+				remove_idea = SIC_COM_agr_frmfoc
+				add_idea = SIC_COM_agr_frmfoc2
 			}
 		}
+	}
+	focus = {
+		id = SIC_subsidize_farms
+		icon = GFX_focus_sic_communism_flag
+		cost = 8
+		x = 0
+		y = 1
+		relative_position_id = SIC_town_grants
+		prerequisite = {
+			focus = SIC_town_grants
+		}
+		ai_will_do = {
+			factor = 55
+		}
 		available = {
 			has_government = communism
-			is_subject = no
 		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_red_cascade"
+			swap_ideas = {
+				remove_idea = SIC_COM_agr_frmfoc2
+				add_idea = SIC_COM_agr_frmfoc3
+			}
+		}
+	}
+	
+	
+
+	focus = {
+		id = SIC_seizing_private_property_agr
+		icon = GFX_focus_sic_communism_flag
+		cost = 8
+		x = 1
+		y = 1
+		relative_position_id = SIC_agrarians
 		prerequisite = {
-			focus = SIC_hunting_the_swordfish
+			focus = SIC_agrarians
 		}
-		bypass = {
-			OR = {
-				is_subject = yes
-				BAN = {
-					OR = {
-						is_subject = yes
-						has_war_with = SIC
-						exists = no
-						NOT = {
-							has_government = fascism
-						}
-					}
+		ai_will_do = {
+			factor = 55
+		}
+		available = {
+			has_government = communism
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_red_cascade"
+			445 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			509 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			460 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
 				}
 			}
 		}
-		will_lead_to_war_with = BAN
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SIC_bandit_queen"
-			create_wargoal = {
-				type = annex_everything
-				target = BAN
-			}
-		}
-		search_filters = { FOCUS_FILTER_ANNEXATION }
 	}
 
-	#focus = {
-	#	id = SIC_striped_menace
-	#	icon = GFX_goal_slavery
-	#	cost = 8
-	#	relative_position_id = SIC_bandit_queen
-	#	x = 0
-	#	y = 1
-	#	ai_will_do = {
-	#		factor = 50
-	#		modifier = {
-	#			factor = 0
-	#			has_war = yes
-	#		}
-	#	}
-	#	available = {
-	#		has_government = communism
-	#		is_subject = no
-	#	}
-	#	bypass = {
-	#		ZES = {
-	#			OR = {
-	#				exists = no
-	#				is_subject = yes
-	#				has_war_with = SIC
-	#				NOT = {
-	#					has_government = fascism
-	#				}
-	#			}
-	#		}
-	#	}
-	#	will_lead_to_war_with = ZES
-	#	prerequisite = {
-	#		focus = SIC_bandit_queen
-	#	}
-	#	completion_reward = {
-	#		log = "[GetDateText]: [Root.GetName]: Focus SIC_striped_menace"
-	#		create_wargoal = {
-	#			type = puppet_wargoal_focus
-	#			target = ZES
-	#		}
-	#	}
-	#	search_filters = { FOCUS_FILTER_ANNEXATION }
-	#}
-
 	focus = {
-		id = SIC_resurgent_republic
-		icon = GFX_goal_red_eagle
+		id = SIC_freeing_space_agr
+		icon = GFX_focus_sic_communism_flag
 		cost = 8
-		relative_position_id = SIC_one_for_all
 		x = 0
 		y = 1
+		relative_position_id = SIC_seizing_private_property_agr
+		prerequisite = {
+			focus = SIC_seizing_private_property_agr
+		}
 		ai_will_do = {
 			factor = 55
 		}
 		available = {
 			has_government = communism
 		}
-		prerequisite = {
-			focus = SIC_one_for_all
-		}
-		prerequisite = {
-			focus = SIC_federal_syndicate
-		}
-		prerequisite = {
-			focus = SIC_bandit_queen
-		}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SIC_resurgent_republic"
-			add_political_power = 100
-		}
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-
-	focus = {
-		id = SIC_reservists_to_soldiers
-		icon = GFX_goal_to_the_barricades
-		cost = 8
-		relative_position_id = SIC_resurgent_republic
-		x = -2
-		y = 1
-		ai_will_do = {
-			factor = 55
-		}
-		prerequisite = {
-			focus = SIC_resurgent_republic
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SIC_reservists_to_soldiers"
-			add_manpower = 15000
-			add_timed_idea = { idea = SIC_reservists_to_soldiers_idea days = 365 }
-		}
-		search_filters = { FOCUS_FILTER_MANPOWER }
-	}
-
-	focus = {
-		id = SIC_establish_republican_guards
-		icon = GFX_goal_NOR_secret_police
-		cost = 8
-		relative_position_id = SIC_reservists_to_soldiers
-		x = -1
-		y = 1
-		ai_will_do = {
-			factor = 55
-		}
-		prerequisite = {
-			focus = SIC_reservists_to_soldiers
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SIC_establish_republican_guards"
-			add_ideas = SIC_commie_republican_guard
-		}
-		search_filters = { FOCUS_FILTER_ARMY_BONUS }
-	}
-
-	focus = {
-		id = SIC_valentin_prodegies
-		icon = GFX_goal_the_students
-		cost = 8
-		relative_position_id = SIC_reservists_to_soldiers
-		x = 1
-		y = 1
-		ai_will_do = {
-			factor = 55
-		}
-		prerequisite = {
-			focus = SIC_reservists_to_soldiers
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SIC_valentin_prodegies"
-			add_corps_commander_role = {
-				character = SIC_jose_pico
-
-				traits = { griffon_race_trait }
-				skill = 2
-				attack_skill = 2
-				defense_skill = 2
-				planning_skill = 1
-				logistics_skill = 2
-			} custom_effect_tooltip = jose_pico_stats_tp
-			add_corps_commander_role = {
-				character = SIC_leila_ordona
-
-				traits = { griffon_race_trait }
-				skill = 2
-				attack_skill = 2
-				defense_skill = 2
-				planning_skill = 2
-				logistics_skill = 1
-			} custom_effect_tooltip = leila_ordona_stats_tp
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_red_cascade"
+			every_owned_state = {
+				add_extra_state_shared_building_slots = 1
+			}
 		}
 	}
 
 	focus = {
-		id = SIC_peasant_frugality
-		icon = GFX_goal_coop_farms
+		id = SIC_agrarian_foundries
+		icon = GFX_focus_sic_communism_flag
 		cost = 8
-		relative_position_id = SIC_resurgent_republic
-		x = 2
+		x = 0
 		y = 1
+		relative_position_id = SIC_freeing_space_agr
+		prerequisite = {
+			focus = SIC_freeing_space_agr
+		}
 		ai_will_do = {
 			factor = 55
 		}
-		prerequisite = {
-			focus = SIC_resurgent_republic
+		available = {
+			has_government = communism
 		}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SIC_peasant_frugality"
-			add_ideas = SIC_peasant_frugality_idea
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_red_cascade"
+			445 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			509 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			460 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
+	
+	
+	
+	
 
 	focus = {
-		id = SIC_national_syndiate
-		icon = GFX_goal_strasser_industry
+		id = SIC_syndicalists
+		icon = GFX_focus_sic_communism_flag
 		cost = 8
-		relative_position_id = SIC_peasant_frugality
-		x = -1
+		x = 7
 		y = 1
+		mutually_exclusive = { focus = SIC_agrarians }
+		relative_position_id = SIC_red_star_rising
+		prerequisite = {
+			focus = SIC_red_star_rising
+		}
 		ai_will_do = {
 			factor = 55
 		}
-		prerequisite = {
-			focus = SIC_peasant_frugality
+		available = {
+			has_government = communism
 		}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SIC_national_syndiate"
-			add_ideas = SIC_national_syndicate_idea
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-	}
-
-	focus = {
-		id = SIC_free_industrial_might
-		icon = GFX_goal_socialist_industry
-		cost = 8
-		relative_position_id = SIC_peasant_frugality
-		x = 1
-		y = 1
-		ai_will_do = {
-			factor = 55
-		}
-		prerequisite = {
-			focus = SIC_peasant_frugality
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SIC_free_industrial_might"
-			add_ideas = SIC_free_industrial_might_idea
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-	}
-
-	focus = {
-		id = SIC_beyond_snowtops
-		icon = GFX_goal_generic_occupy_states_ongoing_war
-		cost = 8
-		relative_position_id = SIC_federal_syndicate
-		x = 1
-		y = 1
-		ai_will_do = {
-			factor = 55
-		}
-		prerequisite = {
-			focus = SIC_one_for_all
-		}
-		prerequisite = {
-			focus = SIC_federal_syndicate
-		}
-		prerequisite = {
-			focus = SIC_bandit_queen
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SIC_beyond_snowtops"
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_red_cascade"
 			add_war_support = 0.1
-		}
-		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
-	}
-
-	focus = {
-		id = SIC_bring_down_falcon
-		icon = GFX_goal_generic_territory_or_war
-		cost = 8
-		relative_position_id = SIC_beyond_snowtops
-		x = -2
-		y = 1
-		available = {
-			has_government = communism
-			is_subject = no
-		}
-		ai_will_do = {
-			factor = 55
-			modifier = {
-				factor = 0
-				has_war = yes
+			add_popularity = { 
+				ideology = communism
+				popularity = -0.1
 			}
-		}
-		bypass = {
-			FAL = {
-				OR = {
-					is_in_faction_with = SIC
-					exists = no
-					is_subject = yes
-					has_war_with = SIC
-					has_government = communism
-				}
-			}
-		}
-		prerequisite = {
-			focus = SIC_beyond_snowtops
-		}
-		will_lead_to_war_with = FAL
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SIC_bring_down_falcon"
-			create_wargoal = {
-				type = puppet_wargoal_focus
-				target = FAL
-			}
-		}
-		search_filters = { FOCUS_FILTER_ANNEXATION }
-	}
-
-	focus = { ##diplomacy events from id to id ##infiltration events from id 127 to 135 ##your turn Horse ##you fucked up the id of the last event silly frog
-		id = SIC_comrades_in_wingbardy
-		icon = GFX_focus_wng_flag
-		cost = 8
-		relative_position_id = SIC_bring_down_falcon
-		x = 0
-		y = 1
-		ai_will_do = {
-			factor = 55
-		}
-		bypass = {
-			WNG = {
-				OR = {
-					exists = no
-					is_subject = yes
-					is_in_faction_with = SIC
-				}
-			}
-		}
-		prerequisite = {
-			focus = SIC_bring_down_falcon
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SIC_comrades_in_wingbardy"
-			if = {
-				limit = {
-					WNG = {
-						has_government = communism
-					}
-				}
-				country_event = sicameon.137
-			}
-			else = {
-				country_event = { id = sicameon.127 days = 1 }
-			}
+			remove_ideas = SIC_COM_divided_party
 		}
 	}
 
 	focus = {
-		id = SIC_wash_out_blackhollow
-		icon = GFX_goal_stab_cyril
+		id = SIC_focus_on_the_cities
+		icon = GFX_focus_sic_communism_flag
 		cost = 8
-		relative_position_id = SIC_beyond_snowtops
+		x = 1
+		y = 1
+		relative_position_id = SIC_syndicalists
+		prerequisite = {
+			focus = SIC_syndicalists
+		}
+		ai_will_do = {
+			factor = 55
+		}
+		available = {
+			has_government = communism
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_red_cascade"
+			add_ideas = SIC_COM_syn_ctyfoc
+		}
+	}
+	focus = {
+		id = SIC_expand_industrial_districts
+		icon = GFX_focus_sic_communism_flag
+		cost = 8
 		x = 0
 		y = 1
-		ai_will_do = {
-			factor = 55
-			modifier = {
-				factor = 0
-				has_war = yes
-			}
-		}
-		available = {
-			has_government = communism
-			is_subject = no
-		}
-		bypass = {
-			BAN = {
-				OR = {
-					exists = no
-					is_subject = yes
-					has_war_with = SIC
-				}
-			}
-		}
+		relative_position_id = SIC_focus_on_the_cities
 		prerequisite = {
-			focus = SIC_beyond_snowtops
-		}
-		will_lead_to_war_with = BAN
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SIC_wash_out_blackhollow"
-			create_wargoal = {
-				type = annex_everything
-				target = BAN
-			}
-		}
-		search_filters = { FOCUS_FILTER_ANNEXATION }
-	}
-
-	focus = { ##event id are from
-		id = SIC_cyan_issue
-		icon = GFX_goal_generic_major_war
-		cost = 8
-		relative_position_id = SIC_beyond_snowtops
-		x = 3
-		y = 1
-		available = {
-			has_government = communism
-			is_subject = no
+			focus = SIC_focus_on_the_cities
 		}
 		ai_will_do = {
 			factor = 55
-			modifier = {
-				factor = 0
-				has_war = yes
-			}
-		}
-		bypass = {
-			CYA = {
-				OR = {
-					exists = no
-					is_subject = yes
-					has_war_with = SIC
-					is_in_faction_with = SIC
-				}
-			}
-		}
-		prerequisite = {
-			focus = SIC_beyond_snowtops
-		}
-		will_lead_to_war_with = CYA
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SIC_cyan_issue"
-			if = {
-				limit = {
-					CYA = {
-						AND = {
-							has_government = communism
-							has_completed_focus = CYA_democratic_socialism
-						}
-					}
-				}
-				country_event = sicameon.138
-			}
-			else = {
-				create_wargoal = {
-					type = annex_everything
-					target = CYA
-				}
-			}
-		}
-		search_filters = { FOCUS_FILTER_ANNEXATION }
-	}
-
-	focus = { ##event id are from 120 to 126
-		id = SIC_reconciling_MIT
-		icon = GFX_focus_indy_bullish_diplomacy
-		cost = 8
-		relative_position_id = SIC_cyan_issue
-		x = -2
-		y = 1
-		ai_will_do = {
-			factor = 55
-			modifier = {
-				factor = 0
-				has_war = yes
-			}
 		}
 		available = {
 			has_government = communism
-			is_subject = no
 		}
-		bypass = {
-			MIT = {
-				OR = {
-					exists = no
-					is_subject = yes
-					has_war_with = SIC
-					is_in_faction_with = SIC
-				}
-			}
-		}
-		prerequisite = {
-			focus = SIC_cyan_issue
-		}
-		will_lead_to_war_with = MIT
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SIC_reconciling_MIT"
-			if = {
-				limit = {
-					MIT = {
-						has_government = communism
-					}
-				}
-				country_event = { id = sicameon.120 days = 1 }
-			}
-			else = {
-				create_wargoal = {
-					type = annex_everything
-					target = MIT
-				}
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_red_cascade"
+			swap_ideas = {
+				remove_idea = SIC_COM_syn_ctyfoc
+				add_idea = SIC_COM_syn_ctyfoc2
 			}
 		}
-		search_filters = { FOCUS_FILTER_ANNEXATION }
 	}
-
-	focus = { ##event id are from 117 to 119
-		id = SIC_tutor_gryphus
-		icon = GFX_goal_support_from_GRU
+	focus = {
+		id = SIC_urban_expansions
+		icon = GFX_focus_sic_communism_flag
 		cost = 8
-		relative_position_id = SIC_cyan_issue
 		x = 0
 		y = 1
+		relative_position_id = SIC_expand_industrial_districts
+		prerequisite = {
+			focus = SIC_expand_industrial_districts
+		}
 		ai_will_do = {
 			factor = 55
-			modifier = {
-				factor = 0
-				has_war = yes
-			}
 		}
-		bypass = {
-			GRU = {
-				OR = {
-					exists = no
-					is_subject = yes
-					has_war_with = SIC
-					is_in_faction_with = SIC
-				}
-			}
-		}
-		prerequisite = {
-			focus = SIC_cyan_issue
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SIC_tutor_gryphus"
-			GRU = { country_event = { id = sicameon.117 days = 1 } }
-		}
-	}
-
-	focus = { ###event id from 104 to 116
-		id = SIC_prywhen_debate
-		icon = GFX_focus_grw_flag
-		cost = 8
-		relative_position_id = SIC_cyan_issue
-		x = 2
-		y = 1
 		available = {
 			has_government = communism
-			is_subject = no
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_red_cascade"
+			swap_ideas = {
+				remove_idea = SIC_COM_syn_ctyfoc2
+				add_idea = SIC_COM_syn_ctyfoc3
+			}
+		}
+	}
+	
+	
+
+	focus = {
+		id = SIC_seizing_private_property_syn
+		icon = GFX_focus_sic_communism_flag
+		cost = 8
+		x = -1
+		y = 1
+		relative_position_id = SIC_syndicalists
+		prerequisite = {
+			focus = SIC_syndicalists
 		}
 		ai_will_do = {
 			factor = 55
-			modifier = {
-				factor = 0
-				has_war = yes
-			}
 		}
-		bypass = {
-			OR = {
-				owns_state = 385
-				GRW = {
-					OR = {
-						is_subject = yes
-						has_war_with = SIC
-						is_in_faction_with = SIC
-					}
-				}
-			}
-		}
-		will_lead_to_war_with = GRW
-		will_lead_to_war_with = BRF
-		prerequisite = {
-			focus = SIC_cyan_issue
+		available = {
+			has_government = communism
 		}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SIC_prywhen_debate"
-			if = {
-				limit = {
-					GRW = {
-						exists = yes
-					}
-				}
-				country_event = { id = sicameon.104 days = 1 }
-			}
-			else = {
-				create_wargoal = {
-					type = puppet_wargoal_focus
-					target = 385.owner
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_red_cascade"
+			445 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
 				}
 			}
 		}
-		search_filters = { FOCUS_FILTER_ANNEXATION }
 	}
 
 	focus = {
-		id = SIC_look_out_guard
-		icon = GFX_focus_strike_griffonstone
+		id = SIC_freeing_space_syn
+		icon = GFX_focus_sic_communism_flag
 		cost = 8
-		relative_position_id = SIC_wash_out_blackhollow
+		x = 0
+		y = 1
+		relative_position_id = SIC_seizing_private_property_syn
+		prerequisite = {
+			focus = SIC_seizing_private_property_syn
+		}
+		ai_will_do = {
+			factor = 55
+		}
+		available = {
+			has_government = communism
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_red_cascade"
+			445 = {
+				add_extra_state_shared_building_slots = 4
+			}
+			444 = {
+				add_extra_state_shared_building_slots = 3
+			}
+			460 = {
+				add_extra_state_shared_building_slots = 2
+			}
+			509 = {
+				add_extra_state_shared_building_slots = 2
+			}
+		}
+	}
+
+	focus = {
+		id = SIC_syndicalist_foundries
+		icon = GFX_focus_sic_communism_flag
+		cost = 8
+		x = 0
+		y = 1
+		relative_position_id = SIC_freeing_space_syn
+		prerequisite = {
+			focus = SIC_freeing_space_syn
+		}
+		ai_will_do = {
+			factor = 55
+		}
+		available = {
+			has_government = communism
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_red_cascade"
+			509 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	
+	
+	
+	
+	
+
+	focus = {
+		id = SIC_socialist_politics
+		icon = GFX_focus_sic_communism_flag
+		cost = 8
 		x = 0
 		y = 2
+		relative_position_id = SIC_red_star_rising
+		prerequisite = {
+			focus = SIC_red_star_rising
+		}
 		ai_will_do = {
 			factor = 55
-			modifier = {
-				factor = 0
-				has_war = yes
-			}
-		}
-		prerequisite = {
-			focus = SIC_wash_out_blackhollow
-		}
-		prerequisite = {
-			focus = SIC_comrades_in_wingbardy
-		}
-		prerequisite = {
-			focus = SIC_reconciling_MIT
-		}
-		prerequisite = {
-			focus = SIC_tutor_gryphus
-		}
-		prerequisite = {
-			focus = SIC_prywhen_debate
 		}
 		available = {
 			has_government = communism
-			is_subject = no
 		}
-		bypass = {
-			owns_state = 389
-		}
-		will_lead_to_war_with = BOI
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SIC_look_out_guard"
-			create_wargoal = {
-				type = puppet_wargoal_focus
-				target = 389.owner
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_red_cascade"
+			add_political_power = 75
+			add_stability = 0.03
+		}
+	}
+
+	focus = {
+		id = SIC_settle_the_religious_debate
+		icon = GFX_focus_sic_communism_flag
+		cost = 3
+		x = -3
+		y = 1
+		relative_position_id = SIC_socialist_politics
+		prerequisite = {
+			focus = SIC_socialist_politics
+		}
+		ai_will_do = {
+			factor = 55
+		}
+		available = {
+			has_government = communism
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_red_cascade"
+			country_event = sicameon_frtr_com.2
+		}
+	}
+
+	focus = {
+		id = SIC_on_political_discourse
+		icon = GFX_focus_sic_communism_flag
+		cost = 8
+		x = 3
+		y = 1
+		relative_position_id = SIC_socialist_politics
+		prerequisite = {
+			focus = SIC_socialist_politics
+		}
+		ai_will_do = {
+			factor = 55
+		}
+		available = {
+			has_government = communism
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_red_cascade"
+			country_event = sicameon_frtr_com.3
+		}
+	}
+
+	
+	
+	focus = {
+		id = SIC_communist_foreign_policy
+		icon = GFX_focus_sic_communism_flag
+		cost = 8
+		x = 0
+		y = 1
+		relative_position_id = SIC_socialist_politics
+		prerequisite = {
+			focus = SIC_socialist_politics
+		}
+		ai_will_do = {
+			factor = 55
+		}
+		available = {
+			has_government = communism
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_red_cascade"
+			add_political_power = 75
+			add_war_support = 0.03
+			create_faction = "Southern Communist Block"
+		}
+	}
+	
+	focus = {
+		id = SIC_liberating_asterion
+		icon = GFX_focus_sic_communism_flag
+		cost = 8
+		x = -3
+		y = 1
+		relative_position_id = SIC_communist_foreign_policy
+		prerequisite = {
+			focus = SIC_communist_foreign_policy
+		}
+		ai_will_do = {
+			factor = 55
+		}
+		available = {
+			has_government = communism
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_red_cascade"
+			declare_war_on = {
+				target = MIT
+				type = annex_everything
 			}
 		}
-		search_filters = { FOCUS_FILTER_ANNEXATION }
+	}
+	focus = {
+		id = SIC_communizing_asterion
+		icon = GFX_focus_sic_communism_flag
+		cost = 8
+		x = 0
+		y = 1
+		relative_position_id = SIC_liberating_asterion
+		prerequisite = {
+			focus = SIC_liberating_asterion
+		}
+		ai_will_do = {
+			factor = 55
+		}
+		available = {
+			has_government = communism
+			owns_state = 386
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_red_cascade"
+			puppet = MIT
+			add_state_core = 667
+			add_state_core = 657
+			add_state_core = 654
+			add_state_core = 664
+			add_state_core = 655
+			add_state_core = 513
+			add_state_core = 463
+			add_state_core = 386
+			add_state_core = 464
+			add_state_core = 656
+			MIT = {
+				transfer_state = 466
+				transfer_state = 467
+				transfer_state = 462
+				transfer_state = 465
+				transfer_state = 468
+				transfer_state = 469
+			}
+		}
+	}
+	
+	focus = {
+		id = SIC_liberating_cyanolisia
+		icon = GFX_focus_sic_communism_flag
+		cost = 8
+		x = -1
+		y = 1
+		relative_position_id = SIC_communist_foreign_policy
+		prerequisite = {
+			focus = SIC_communist_foreign_policy
+		}
+		ai_will_do = {
+			factor = 55
+		}
+		available = {
+			has_government = communism
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_red_cascade"
+			declare_war_on = {
+				target = CYA
+				type = annex_everything
+			}
+		}
+	}
+	focus = {
+		id = SIC_communizing_cyanlosia
+		icon = GFX_focus_sic_communism_flag
+		cost = 8
+		x = 0
+		y = 1
+		relative_position_id = SIC_liberating_cyanolisia
+		prerequisite = {
+			focus = SIC_liberating_cyanolisia
+		}
+		ai_will_do = {
+			factor = 55
+		}
+		available = {
+			has_government = communism
+			owns_state = 671
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_red_cascade"
+			puppet = CYA
+			add_state_core = 671
+			add_state_core = 510
+			CYA = {
+				transfer_state = 511
+				transfer_state = 507
+			}
+			IF = {
+				limit = {
+					owns_state = 446
+				}
+				CYA = {
+					transfer_state = 446
+					add_state_core = 446
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = SIC_liberating_blackrock
+		icon = GFX_focus_sic_communism_flag
+		cost = 8
+		x = 1
+		y = 1
+		relative_position_id = SIC_communist_foreign_policy
+		prerequisite = {
+			focus = SIC_communist_foreign_policy
+		}
+		ai_will_do = {
+			factor = 55
+		}
+		available = {
+			has_government = communism
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_red_cascade"
+			declare_war_on = {
+				target = BAN
+				type = annex_everything
+			}
+		}
+	}
+	focus = {
+		id = SIC_communizing_blackrock
+		icon = GFX_focus_sic_communism_flag
+		cost = 8
+		x = 0
+		y = 1
+		relative_position_id = SIC_liberating_blackrock
+		prerequisite = {
+			focus = SIC_liberating_blackrock
+		}
+		ai_will_do = {
+			factor = 55
+		}
+		available = {
+			has_government = communism
+			owns_state = 532
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_red_cascade"
+			puppet = BAN
+			BAN = {
+				transfer_state = 490
+				transfer_state = 606
+				transfer_state = 532
+				transfer_state = 489
+			}
+			IF = {
+				limit = {
+					owns_state = 671
+				}
+				CYA = {
+					transfer_state = 446
+					add_state_core = 446
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = SIC_liberating_falcoria
+		icon = GFX_focus_sic_communism_flag
+		cost = 8
+		x = 3
+		y = 1
+		relative_position_id = SIC_communist_foreign_policy
+		prerequisite = {
+			focus = SIC_communist_foreign_policy
+		}
+		ai_will_do = {
+			factor = 55
+		}
+		available = {
+			has_government = communism
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_red_cascade"
+			declare_war_on = {
+				target = FAL
+				type = annex_everything
+			}
+		}
+	}
+	focus = {
+		id = SIC_communizing_falcoria
+		icon = GFX_focus_sic_communism_flag
+		cost = 8
+		x = 0
+		y = 1
+		relative_position_id = SIC_liberating_falcoria
+		prerequisite = {
+			focus = SIC_liberating_falcoria
+		}
+		ai_will_do = {
+			factor = 55
+		}
+		available = {
+			has_government = communism
+			owns_state = 529
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_red_cascade"
+			puppet = FAL
+			add_state_core = 504
+			FAL = {
+				transfer_state = 549
+				transfer_state = 503
+				transfer_state = 533
+				transfer_state = 393
+				transfer_state = 392
+				transfer_state = 529
+				transfer_state = 409
+			}
+		}
 	}
 
 	####################Pirate Tree##########################
@@ -7554,7 +7138,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_a_phantom_from_the_past"
-			
+			country_event = sicameon_frtr_frd.2
 		}
 	}
 
@@ -7569,7 +7153,7 @@ focus_tree = {
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_for_the_kaiserreich"
-			
+			add_ideas = SIC_FRD_fur_das_kaiserreich
 		}
 	}
 
@@ -7585,7 +7169,7 @@ focus_tree = {
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_scuash_local_resistance"
-			
+			add_ideas = SIC_FRD_sqslclrst
 		}
 	}
 
@@ -7600,7 +7184,9 @@ focus_tree = {
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_combat_crime_with_extreme_prejudice"
-			
+			swap_ideas = {
+				remove_ideas = SIC_FRD_sqslclrst
+			}
 		}
 	}
 
