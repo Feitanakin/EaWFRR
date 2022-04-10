@@ -1,7 +1,141 @@
 SIC_swordfish_campaign_cat = {
     priority = {
         base = 100
+    }SIC_swordfish_campaign_cat = {
+    priority = {
+        base = 100
     }
+    allowed = {
+        original_tag = SIC
+    }
+    visible = {
+        has_completed_focus = SIC_anticorruption
+    }
+}
+SIC_anti_piracy = {
+    priority = {
+        base = 100
+    }
+    allowed = {
+        original_tag = SIC
+    }
+    visible = {
+        has_completed_focus = SIC_piracy
+    }
+}
+
+
+
+SIC_FRD_the_heir = {
+    priority = {
+        base = 100000
+    }
+    allowed = {
+        original_tag = SIC
+    }
+    visible = {
+        has_completed_focus = SIC_FRD_return_to_griffenheim
+    }
+}
+SIC_FRD_integration = {
+    priority = {
+        base = 10000
+    }
+    allowed = {
+        original_tag = SIC
+    }
+    visible = {
+        has_completed_focus = SIC_the_fatherland_calls
+    }
+}
+SIC_FRD_razing = {
+    priority = {
+        base = 10000
+    }
+    allowed = {
+        original_tag = SIC
+    }
+    visible = {
+    }
+}
+SIC_FRD_reconstructing = {
+    priority = {
+        base = 10000
+    }
+    allowed = {
+        original_tag = SIC
+    }
+    visible = {
+		has_completed_focus = SIC_the_spoils_of_aster
+    }
+}
+SIC_FRD_invasion = {
+    priority = {
+        base = 10000
+    }
+    allowed = {
+        original_tag = SIC
+    }
+    visible = {
+    }
+}
+SIC_FRD_southern_economy = {
+    priority = {
+        base = 100
+    }
+    allowed = {
+        original_tag = SIC
+    }
+    visible = {
+        has_completed_focus = SIC_FRD_the_southern_economy
+    }
+}
+SIC_FRD_southern_army = {
+    priority = {
+        base = 100
+    }
+    allowed = {
+        original_tag = SIC
+    }
+    visible = {
+        has_completed_focus = SIC_FRD_the_southern_military
+    }
+}
+SIC_FRD_southern_navy = {
+    priority = {
+        base = 100
+    }
+    allowed = {
+        original_tag = SIC
+    }
+    visible = {
+        has_completed_focus = SIC_FRD_the_southern_military
+    }
+}
+SIC_FRD_southern_will = {
+    priority = {
+        base = 100
+    }
+    allowed = {
+        original_tag = SIC
+    }
+    visible = {
+        has_completed_focus = SIC_FRD_the_southern_will
+    }
+}
+
+
+SIC_com_foreign_diplomacy = {
+    priority = {
+        base = 100
+    }
+    allowed = {
+        original_tag = SIC
+    }
+    visible = {
+        has_completed_focus = SIC_communist_foreign_policy
+    }
+}
     allowed = {
         original_tag = SIC
     }
