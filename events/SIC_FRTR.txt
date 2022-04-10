@@ -281,3 +281,123 @@ country_event = {
 	}
 	is_triggered_only = yes
 }
+
+
+
+
+
+
+add_namespace = sicameon_frtr_frd
+country_event = {
+	id = sicameon_frtr_frd.1
+	title = sicameon_frtr_frd.1.t
+	desc = sicameon_frtr_frd.1.d
+	#picture =
+	option = {
+		name = sicameon_frtr_frd.1.a
+		declare_war_on = {
+			target = MIT
+			type = annex_everything
+		}
+		MIT = {
+			add_timed_idea = {
+				idea = SIC_FRD_astsprida
+				days = 12
+			}
+		}
+	}
+	is_triggered_only = yes
+}
+
+country_event = {
+	id = sicameon_frtr_frd.2
+	title = sicameon_frtr_frd.2.t
+	desc = sicameon_frtr_frd.2.d
+	#picture =
+	option = {
+		name = sicameon_frtr_frd.2.a
+		add_political_power = 150
+	}
+	is_triggered_only = yes
+}
+
+
+
+
+add_namespace = sicameon_frtr_com
+country_event = {
+	id = sicameon_frtr_com.1
+	title = sicameon_frtr_com.1.t
+	desc = sicameon_frtr_com.1.d
+	#picture =
+	option = {
+		name = sicameon_frtr_com.1.a
+		complete_national_focus = SIC_agrarians
+	}
+	option = {
+		name = sicameon_frtr_com.1.b
+		complete_national_focus = SIC_syndicalists
+	}
+	is_triggered_only = yes
+}
+
+country_event = {
+	id = sicameon_frtr_com.2
+	title = sicameon_frtr_com.2.t
+	desc = sicameon_frtr_com.2.d
+	#picture =
+	option = {
+		name = sicameon_frtr_com.2.a
+		swap_ideas = {
+			remove_idea = SIC_COM_religious_question
+			add_idea = SIC_COM_religion_allowed
+		}
+	}
+	option = {
+		name = sicameon_frtr_com.2.b
+		swap_ideas = {
+			remove_idea = SIC_COM_religious_question
+			add_idea = SIC_COM_religion_squashed
+		}
+	}
+	is_triggered_only = yes
+}
+
+country_event = {
+	id = sicameon_frtr_com.3
+	title = sicameon_frtr_com.3.t
+	desc = sicameon_frtr_com.3.d
+	#picture =
+	option = {
+		name = sicameon_frtr_com.3.a
+		swap_ideas = {
+			remove_idea = SIC_COM_dissidence_question
+			add_idea = SIC_COM_political_freedoms
+		}
+	}
+	option = {
+		name = sicameon_frtr_com.3.b
+		swap_ideas = {
+			remove_idea = SIC_COM_dissidence_question
+			add_idea = SIC_COM_political_uniformity
+		}
+	}
+	is_triggered_only = yes
+}
+
+country_event = {
+	id = sicameon_frtr_com.4
+	title = sicameon_frtr_com.4.t
+	desc = sicameon_frtr_com.4.d
+	#picture =
+	option = {
+		name = sicameon_frtr_com.4.a
+		ROOT = {
+			add_to_faction = WNG
+		}
+	}
+	option = {
+		name = sicameon_frtr_com.4.b
+	}
+	is_triggered_only = yes
+}
