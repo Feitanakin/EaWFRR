@@ -143,7 +143,10 @@ focus_tree = {
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_whip_our_navy_back_into_shape"
-			
+			swap_ideas = {
+				remove_idea = eternal_navy_1
+				add_idea = eternal_navy_2
+			}
 		}
 	}
 
@@ -158,7 +161,20 @@ focus_tree = {
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_a_show_of_strength"
-			
+			start_border_war = {
+				change_state_after_war = no
+				attacker = {
+					state = 570
+					num_provinces = 2
+					on_win = sicameon_frtr.17
+					on_lose = sicameon_frtr.18
+				}
+
+				defender = {
+					state = 446
+					num_provinces = 2
+				}
+			}
 		}
 	}
 	
@@ -175,21 +191,6 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_an_interesting_proposal"
 			country_event = { days = 0 id = sicameon_frtr.3 }
-		}
-	}
-
-	focus = {
-		id = SIC_an_emergency_meeting
-		icon = GFX_SIC_an_emergency_meeting
-		prerequisite = { focus = SIC_an_interesting_proposal }
-		cost = 10
-		x = 0
-		y = 1
-		relative_position_id = SIC_an_interesting_proposal
-		ai_will_do = { factor = 100 }
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SIC_an_emergency_meeting"
-			
 		}
 	}
 

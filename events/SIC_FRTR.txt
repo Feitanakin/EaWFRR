@@ -32,39 +32,31 @@ country_event = {
 	option = {
 		name = sicameon_frtr.3.a
 		ai_chance = {
-			factor = 25
+			factor = 33
 		}
+		complete_national_focus = SIC_a_phantom_from_the_past 
+		recruit_character = SIC_Frederick
+		promote_character = SIC_Frederick
 	}
 	option = {
 		name = sicameon_frtr.3.b
 		ai_chance = {
-			factor = 25
+			factor = 33
 		}
 		complete_national_focus = SIC_an_heir_in_exile
-		create_country_leader = {
-			name = "Tomado of Brodfeld"
-			picture = "Tomado.tga"
-			expire = "1965.1.1"
-			ideology = liberalism
-			traits = {  }
-		}
-		set_politics = {
-			ruling_party = democratic
-			elections_allowed = no
-		}
+		recruit_character = SIC_Tomado
+		promote_character = SIC_Tomado
 	}
 	option = {
 		name = sicameon_frtr.3.c
 		ai_chance = {
-			factor = 25
+			factor = 34
 		}
+		complete_national_focus = SIC_springtime_sic
+		recruit_character = SIC_Petronilo
+		promote_character = SIC_Petronilo
 	}
-	option = {
-		name = sicameon_frtr.3.e
-		ai_chance = {
-			factor = 25
-		}
-	}
+
 }
 
 country_event = {
@@ -282,8 +274,33 @@ country_event = {
 	is_triggered_only = yes
 }
 
+country_event = {
+	id = sicameon_frtr.18
+	title = sicameon_frtr.18.t
+	desc = sicameon_frtr.18.d
+	#picture = 
+	option = {
+		name = sicameon_frtr.18.a
+		swap_ideas = {
+			remove_idea = swordfish_claws_1
+			add_idea = swordfish_claws_2
+		}
+	}
+	is_triggered_only = yes
+}
 
-
+country_event = {
+	id = sicameon_frtr.19
+	title = sicameon_frtr.19.t
+	desc = sicameon_frtr.19.d
+	#picture = 
+	option = {
+		name = sicameon_frtr.19.a
+		add_political_power = -50
+		add_manpower = -8000
+	}
+	is_triggered_only = yes
+}
 
 
 

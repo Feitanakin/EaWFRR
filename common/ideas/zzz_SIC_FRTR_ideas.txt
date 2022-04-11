@@ -72,24 +72,6 @@ ideas = {
 				war_support_factor = -0.1
 			}
 		}
-			
-		swordfish_claws = {
-			name = swordfish_claws
-			
-			picture = swordfish_claws
-			
-			allowed = {
-				tag = SIC
-			}
-			
-			removal_cost = -1
-			
-			modifier = {
-				consumer_goods_factor = 0.04
-				stability_factor = -0.07
-				min_export = 0.2
-			}
-		}
 		
 		swordfish_claws_1 = {
 			name = swordfish_claws
@@ -103,8 +85,8 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				consumer_goods_factor = 0.02
-				stability_factor = -0.05
+				consumer_goods_factor = 0.04
+				stability_factor = -0.07
 				min_export = 0.2
 			}
 		}
@@ -122,11 +104,12 @@ ideas = {
 			
 			modifier = {
 				consumer_goods_factor = 0.02
-				stability_factor = -0.03
+				stability_factor = -0.035
+				min_export = 0.1
 			}
 		}
 		
-		eternal_navy = {
+		eternal_navy_1 = {
 			name = eternal_navy
 			
 			picture = eternal_navy
@@ -142,6 +125,25 @@ ideas = {
 				navy_chief_cost_factor = -0.1
 				navy_screen_attack_factor	= 0.15
 				screening_efficiency = 0.15
+			}
+		}
+
+		eternal_navy_2 = {
+			name = eternal_navy
+			
+			picture = eternal_navy
+			
+			allowed = {
+				tag = SIC
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				experience_gain_navy = 0.06
+				navy_chief_cost_factor = -0.2
+				navy_screen_attack_factor	= 0.30
+				screening_efficiency = 0.30
 			}
 		}
 		

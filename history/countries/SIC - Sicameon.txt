@@ -77,8 +77,8 @@ set_politics = {
 add_ideas = {
 	republican_tension
 	dead_monarchy
-	swordfish_claws
-	eternal_navy
+	swordfish_claws_1
+	eternal_navy_1
 	outdated_industry
 	limited_conscription
 	free_trade
