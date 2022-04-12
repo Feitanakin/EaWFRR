@@ -45,4 +45,12 @@ leader_traits = {
 			defense_bonus_against = 0.1
 		}
 	}
+	
+	inexperienced_junker = {
+		random = no
+		stability_factor = -0.05
+		war_support_factor = 0.05
+		political_power_factor = -0.1
+		conscription_factor = 0.05
+	}
 }
