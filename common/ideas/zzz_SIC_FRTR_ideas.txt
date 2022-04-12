@@ -72,8 +72,8 @@ ideas = {
 				war_support_factor = -0.1
 			}
 		}
-		
-		swordfish_claws_1 = {
+			
+		swordfish_claws = {
 			name = swordfish_claws
 			
 			picture = swordfish_claws
@@ -87,6 +87,24 @@ ideas = {
 			modifier = {
 				consumer_goods_factor = 0.04
 				stability_factor = -0.07
+				min_export = 0.2
+			}
+		}
+		
+		swordfish_claws_1 = {
+			name = swordfish_claws
+			
+			picture = swordfish_claws
+			
+			allowed = {
+				tag = SIC
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.02
+				stability_factor = -0.05
 				min_export = 0.2
 			}
 		}
@@ -104,12 +122,11 @@ ideas = {
 			
 			modifier = {
 				consumer_goods_factor = 0.02
-				stability_factor = -0.035
-				min_export = 0.1
+				stability_factor = -0.03
 			}
 		}
 		
-		eternal_navy_1 = {
+		eternal_navy = {
 			name = eternal_navy
 			
 			picture = eternal_navy
@@ -125,25 +142,6 @@ ideas = {
 				navy_chief_cost_factor = -0.1
 				navy_screen_attack_factor	= 0.15
 				screening_efficiency = 0.15
-			}
-		}
-
-		eternal_navy_2 = {
-			name = eternal_navy
-			
-			picture = eternal_navy
-			
-			allowed = {
-				tag = SIC
-			}
-			
-			removal_cost = -1
-			
-			modifier = {
-				experience_gain_navy = 0.06
-				navy_chief_cost_factor = -0.2
-				navy_screen_attack_factor	= 0.30
-				screening_efficiency = 0.30
 			}
 		}
 		
@@ -316,6 +314,289 @@ ideas = {
 				stability_factor = 0.1
 				industrial_capacity_factory = 0.1
 				production_speed_arms_factory_factor = 0.1
+			}
+		}
+		SIC_FRD_rzncst = {
+			#picture = placeholder
+			allowed = {
+				tag = SIC
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_gain = -0.25
+				monthly_population = -0.05
+				stability_factor = 0.2
+				industrial_capacity_factory = 0.15
+				production_speed_arms_factory_factor = 0.2
+			}
+		}
+		SIC_FRD_rplrtn = {
+			#picture = placeholder
+			allowed = {
+				tag = SIC
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.1
+				democratic_drift = -0.05
+				communism_drift = -0.05
+			}
+		}
+		SIC_FRD_lawofbrs = {
+			#picture = placeholder
+			allowed = {
+				tag = SIC
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.25
+				democratic_drift = -0.05
+				communism_drift = -0.05
+				fascism_drift = 0.05
+				stability_factor = 0.05
+				war_support_factor = 0.05
+			}
+		}
+		
+		SIC_FRD_cmpwthlcl = {
+			#picture = placeholder
+			allowed = {
+				tag = SIC
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.1
+				stability_factor = 0.1
+			}
+		}
+		SIC_FRD_cmplntcnt = {
+			#picture = placeholder
+			allowed = {
+				tag = SIC
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.25
+				stability_factor = 0.2
+				production_speed_buildings_factor = -0.05
+			}
+		}
+		SIC_FRD_crmtrlcrt = {
+			#picture = placeholder
+			allowed = {
+				tag = SIC
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.25
+				stability_factor = 0.25
+				war_support_factor = 0.1
+				production_speed_buildings_factor = -0.1
+			}
+		}
+		SIC_FRD_unrthsol = {
+			#picture = placeholder
+			allowed = {
+				tag = SIC
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.05
+				industrial_capacity_factory = 0.1
+			}
+		}
+		SIC_FRD_prtofduk = {
+			#picture = placeholder
+			allowed = {
+				tag = SIC
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.1
+				industrial_capacity_factory = 0.25
+			}
+		}
+		
+		
+		SIC_FRD_priests = {
+			#picture = placeholder
+			allowed = {
+				tag = SIC
+			}
+			removal_cost = -1
+			modifier = {
+				weekly_stability_factor = 0.005
+			}
+		}
+		SIC_FRD_nosecchn = {
+			#picture = placeholder
+			allowed = {
+				tag = SIC
+			}
+			removal_cost = -1
+			targeted_modifier = {
+				tag = FAT
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = JER
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = TRD
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+			}
+		}
+		
+		
+		SIC_FRD_revbtr = {
+			#picture = placeholder
+			allowed = {
+				tag = SIC
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.05
+				war_support_factor = 0.1
+				weekly_manpower = 500
+			}
+		}
+		SIC_FRD_intrec = {
+			#picture = placeholder
+			allowed = {
+				tag = SIC
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_gain = -0.05
+				war_support_factor = 0.1
+				weekly_manpower = 600
+			}
+		}
+		SIC_FRD_intmnr = {
+			#picture = placeholder
+			allowed = {
+				tag = SIC
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_gain = -0.1
+				stability_factor = 0.05
+				war_support_factor = 0.15
+				weekly_manpower = 750
+			}
+		}
+		SIC_FRD_frgoldrht = {
+			#picture = placeholder
+			allowed = {
+				tag = SIC
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_gain = -0.05
+				war_support_factor = 0.2
+				weekly_manpower = 750
+			}
+		}
+		
+		SIC_FRD_mhtcdl = {
+			#picture = placeholder
+			allowed = {
+				tag = SIC
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				war_support_factor = 0.05
+				weekly_manpower = 250
+			}
+		}
+		SIC_FRD_wrkswy = {
+			#picture = placeholder
+			allowed = {
+				tag = SIC
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.15
+				war_support_factor = 0.05
+				weekly_manpower = 500
+			}
+		}
+		SIC_FRD_anthrm = {
+			#picture = placeholder
+			allowed = {
+				tag = SIC
+			}
+			removal_cost = -1
+			targeted_modifier = {
+				tag = FAT
+				attack_bonus_against = 0.15
+				defense_bonus_against = 0.05
+			}
+		}
+		SIC_FRD_dsthrm = {
+			#picture = placeholder
+			allowed = {
+				tag = SIC
+			}
+			removal_cost = -1
+			targeted_modifier = {
+				tag = FAT
+				attack_bonus_against = 0.15
+				defense_bonus_against = 0.05
+			}
+			targeted_modifier = {
+				tag = JER
+				attack_bonus_against = 0.15
+				defense_bonus_against = 0.05
+			}
+			targeted_modifier = {
+				tag = TRD
+				attack_bonus_against = 0.15
+				defense_bonus_against = 0.05
+			}
+		}
+		
+		SIC_FRD_sclfsc = {
+			#picture = placeholder
+			allowed = {
+				tag = SIC
+			}
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = 0.05
+				stability_factor = 0.1
+				political_power_factor = 0.05
+			}
+		}
+		
+		SIC_FRD_ntnwrr = {
+			#picture = placeholder
+			allowed = {
+				tag = SIC
+			}
+			removal_cost = -1
+			modifier = {
+				conscription = 0.01
+			}
+		}
+		SIC_FRD_glrsic = {
+			#picture = placeholder
+			allowed = {
+				tag = SIC
+			}
+			removal_cost = -1
+			modifier = {
+				conscription = 0.01
+				research_speed_factor = 0.1
+				production_speed_buildings_factor = 0.1
+				industrial_capacity_factory = 0.1
+				monthly_population = 0.1
+				consumer_goods_factor = 0.05
 			}
 		}
 		
