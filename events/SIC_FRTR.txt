@@ -32,31 +32,56 @@ country_event = {
 	option = {
 		name = sicameon_frtr.3.a
 		ai_chance = {
-			factor = 33
+			factor = 25
 		}
-		complete_national_focus = SIC_a_phantom_from_the_past 
-		recruit_character = SIC_Frederick
-		promote_character = SIC_Frederick
+		set_party_name = { 
+			ideology = fascism 
+			long_name = "Die Vaterland und Volk's Party"
+			name = "Vaterland Party"
+		}
+		set_politics = {
+			ruling_party = fascism
+			elections_allowed = no
+		}
+		create_country_leader = {
+			name = "Frederick of Yale-Gamia"
+			picture = "August_IV.tga"
+			expire = "1965.1.1"
+			ideology = nazism
+			traits = {  }
+		}
+		complete_national_focus = SIC_facing_the_sun
 	}
 	option = {
 		name = sicameon_frtr.3.b
 		ai_chance = {
-			factor = 33
+			factor = 25
 		}
 		complete_national_focus = SIC_an_heir_in_exile
-		recruit_character = SIC_Tomado
-		promote_character = SIC_Tomado
+		create_country_leader = {
+			name = "Tomado of Brodfeld"
+			picture = "Tomado.tga"
+			expire = "1965.1.1"
+			ideology = liberalism
+			traits = {  }
+		}
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = no
+		}
 	}
 	option = {
 		name = sicameon_frtr.3.c
 		ai_chance = {
-			factor = 34
+			factor = 25
 		}
-		complete_national_focus = SIC_springtime_sic
-		recruit_character = SIC_Petronilo
-		promote_character = SIC_Petronilo
 	}
-
+	option = {
+		name = sicameon_frtr.3.e
+		ai_chance = {
+			factor = 25
+		}
+	}
 }
 
 country_event = {
@@ -274,33 +299,6 @@ country_event = {
 	is_triggered_only = yes
 }
 
-country_event = {
-	id = sicameon_frtr.18
-	title = sicameon_frtr.18.t
-	desc = sicameon_frtr.18.d
-	#picture = 
-	option = {
-		name = sicameon_frtr.18.a
-		swap_ideas = {
-			remove_idea = swordfish_claws_1
-			add_idea = swordfish_claws_2
-		}
-	}
-	is_triggered_only = yes
-}
-
-country_event = {
-	id = sicameon_frtr.19
-	title = sicameon_frtr.19.t
-	desc = sicameon_frtr.19.d
-	#picture = 
-	option = {
-		name = sicameon_frtr.19.a
-		add_political_power = -50
-		add_manpower = -8000
-	}
-	is_triggered_only = yes
-}
 
 
 
@@ -334,6 +332,17 @@ country_event = {
 	option = {
 		name = sicameon_frtr_frd.2.a
 		add_political_power = 150
+	}
+	is_triggered_only = yes
+}
+
+country_event = {
+	id = sicameon_frtr_frd.3
+	title = sicameon_frtr_frd.3.t
+	desc = sicameon_frtr_frd.3.d
+	#picture =
+	option = {
+		name = sicameon_frtr_frd.3.a
 	}
 	is_triggered_only = yes
 }
