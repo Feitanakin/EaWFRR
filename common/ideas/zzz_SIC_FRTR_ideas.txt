@@ -17,6 +17,39 @@ ideas = {
 				communism_drift = 0.03
 			}
 		}
+		republican_tension_frd = {
+			name = republican_tension
+			
+			picture = republican_tension
+			
+			allowed = {
+				tag = SIC
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.1
+				democratic_drift = 0.04
+				political_power_factor = -0.15
+			}
+		}
+		autonomous_countryside = {
+			name = autonomous_countryside
+			
+			picture = autonomous_countryside
+			
+			allowed = {
+				tag = SIC
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.05
+				political_power_factor = -0.1
+			}
+		}
 
 		republican_tension_1 = {
 			name = republican_tension
@@ -88,6 +121,26 @@ ideas = {
 				consumer_goods_factor = 0.04
 				stability_factor = -0.07
 				min_export = 0.2
+			}
+		}
+		pirates_of_the_duke = {
+			name = pirates_of_the_duke
+			
+			picture = swordfish_claws
+			
+			allowed = {
+				tag = SIC
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+				stability_factor = -0.1
+				min_export = -0.25
+				experience_gain_navy = 0.05 
+				navy_screen_attack_factor = 0.15 
+				screening_efficiency = 0.15
 			}
 		}
 		
@@ -358,6 +411,19 @@ ideas = {
 			}
 		}
 		
+		SIC_FRD_rzncst = {
+			#picture = placeholder
+			allowed = {
+				tag = SIC
+			}
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = -0.09
+				stability_factor = -0.05
+				war_support_factor = -0.05
+			}
+		}
+		
 		SIC_FRD_cmpwthlcl = {
 			#picture = placeholder
 			allowed = {
@@ -425,7 +491,7 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				weekly_stability_factor = 0.005
+				stability_weekly_factor = 0.005
 			}
 		}
 		SIC_FRD_nosecchn = {
