@@ -7959,7 +7959,7 @@ focus_tree = {
 	focus = {
 		id = SIC_the_imperial_restoration
 		icon = GFX_SIC_facing_the_sun
-		cost = 10
+		cost = 1
 		x = 114
 		y = 8
 		ai_will_do = { factor = 10 }
@@ -7975,7 +7975,7 @@ focus_tree = {
 		id = SIC_the_sharpened_claws
 		icon = GFX_SIC_facing_the_sun
 		prerequisite = { focus = SIC_the_imperial_restoration }
-		cost = 10
+		cost = 3
 		x = -1
 		y = 1
 		relative_position_id = SIC_the_imperial_restoration
@@ -7992,7 +7992,7 @@ focus_tree = {
 		id = SIC_the_greatest_of_peoples
 		icon = GFX_SIC_facing_the_sun
 		prerequisite = { focus = SIC_the_imperial_restoration }
-		cost = 10
+		cost = 3
 		x = 1
 		y = 1
 		relative_position_id = SIC_the_imperial_restoration
@@ -8010,7 +8010,7 @@ focus_tree = {
 		icon = GFX_SIC_facing_the_sun
 		prerequisite = { focus = SIC_the_sharpened_claws }
 		prerequisite = { focus = SIC_the_greatest_of_peoples }
-		cost = 10
+		cost = 3
 		x = 1
 		y = 1
 		relative_position_id = SIC_the_sharpened_claws
@@ -8020,6 +8020,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_the_problem_before_us"
 			set_country_flag = SIC_frederick_conquering
+			custom_effect_tooltip = frd_begin_the_conquest_tt
 		}
 	}
 	
@@ -8040,6 +8041,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_the_eastern_counties"
 			clr_country_flag = SIC_frederick_conquering
+			custom_effect_tooltip = frd_direct_our_conquest_tt
 		}
 	}
 
@@ -8047,7 +8049,7 @@ focus_tree = {
 		id = SIC_cyanlosia
 		icon = GFX_SIC_facing_the_sun
 		prerequisite = { focus = SIC_the_eastern_counties }
-		cost = 10
+		cost = 1
 		x = -3
 		y = 1
 		relative_position_id = SIC_the_eastern_counties
@@ -8057,6 +8059,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_cyanlosia"
+			country_event = { id = sicameon_frtr_frd.4 days = 0 }
 		}
 	}
 
@@ -8064,7 +8067,7 @@ focus_tree = {
 		id = SIC_a_meeting_with_taillow
 		icon = GFX_SIC_facing_the_sun
 		prerequisite = { focus = SIC_cyanlosia }
-		cost = 10
+		cost = 1
 		x = 0
 		y = 1
 		relative_position_id = SIC_cyanlosia
@@ -8074,6 +8077,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_a_meeting_with_taillow"
+			country_event = { id = sicameon_frtr_frd.5 days = 0 }
 		}
 	}
 
@@ -8081,7 +8085,7 @@ focus_tree = {
 		id = SIC_a_deep_reflection
 		icon = GFX_SIC_facing_the_sun
 		prerequisite = { focus = SIC_a_meeting_with_taillow }
-		cost = 10
+		cost = 1
 		x = 0
 		y = 1
 		relative_position_id = SIC_a_meeting_with_taillow
@@ -8091,6 +8095,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_a_deep_reflection"
+			country_event = { id = sicameon_frtr_frd.6 days = 0 }
 		}
 	}
 
@@ -8098,7 +8103,7 @@ focus_tree = {
 		id = SIC_a_daring_proposal
 		icon = GFX_SIC_facing_the_sun
 		prerequisite = { focus = SIC_a_deep_reflection }
-		cost = 10
+		cost = 1
 		x = 0
 		y = 1
 		relative_position_id = SIC_a_deep_reflection
@@ -8108,6 +8113,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_a_daring_proposal"
+			country_event = { id = sicameon_frtr_frd.7 days = 0 }
 		}
 	}
 
@@ -8115,7 +8121,7 @@ focus_tree = {
 		id = SIC_a_royal_unification
 		icon = GFX_SIC_facing_the_sun
 		prerequisite = { focus = SIC_a_deep_reflection }
-		cost = 10
+		cost = 4
 		x = 0
 		y = 1
 		relative_position_id = SIC_a_deep_reflection
@@ -8142,6 +8148,7 @@ focus_tree = {
 			507 = {
 				add_core_of = SIC
 			}
+			country_event = { id = sicameon_frtr_frd.8 days = 0 }
 		}
 	}
 
@@ -9118,6 +9125,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_FRD_the_southern_economy"
 			add_political_power = 42
+			custom_effect_tooltip = frd_new_decisions_tt
 		}
 	}
 	
@@ -9133,6 +9141,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_FRD_invest_in_infrastructure"
 			add_political_power = 42
+			custom_effect_tooltip = frd_new_decisions_tt
 		}
 	}
 	
@@ -9148,6 +9157,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_FRD_invest_in_infrastructure"
 			add_political_power = 42
+			custom_effect_tooltip = frd_new_decisions_tt
 		}
 	}
 	
@@ -9165,6 +9175,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_FRD_the_southern_economy"
 			add_political_power = 42
+			custom_effect_tooltip = frd_new_decisions_tt
 		}
 	}
 	
@@ -9182,6 +9193,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_FRD_the_southern_military"
 			add_political_power = 42
+			custom_effect_tooltip = frd_new_decisions_tt
 		}
 	}
 	
@@ -9202,6 +9214,7 @@ focus_tree = {
 			set_variable = { SIC_FRD_armorg = 0 }
 			set_variable = { SIC_FRD_cordef = 0 }
 			set_variable = { SIC_FRD_coratk = 0 }
+			custom_effect_tooltip = frd_new_decisions_tt
 		}
 	}
 	
@@ -9217,6 +9230,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_FRD_newshp"
 			add_political_power = 42
+			custom_effect_tooltip = frd_new_decisions_tt
 		}
 	}
 
@@ -9361,6 +9375,7 @@ focus_tree = {
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_FRD_aquelia"
+			custom_effect_tooltip = frd_new_decisions_tt
 		}
 	}
 	focus = {
@@ -9379,6 +9394,7 @@ focus_tree = {
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_FRD_sack_the_cities"
+			custom_effect_tooltip = frd_new_decisions_tt
 		}
 	}
 	
@@ -9393,6 +9409,7 @@ focus_tree = {
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_FRD_republic"
+			custom_effect_tooltip = frd_new_decisions_tt
 		}
 	}
 	focus = {
@@ -9409,6 +9426,7 @@ focus_tree = {
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_FRD_tame_the_far_north"
+			custom_effect_tooltip = frd_new_decisions_tt
 		}
 	}
 	
@@ -9423,6 +9441,7 @@ focus_tree = {
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_FRD_riverlands"
+			custom_effect_tooltip = frd_new_decisions_tt
 		}
 	}
 	focus = {
@@ -9439,6 +9458,7 @@ focus_tree = {
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_FRD_secure_griffonia"
+			custom_effect_tooltip = frd_new_decisions_tt
 		}
 	}
 	
@@ -9460,6 +9480,7 @@ focus_tree = {
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_FRD_across_the_seas"
+			custom_effect_tooltip = frd_new_decisions_tt
 		}
 	}
 
