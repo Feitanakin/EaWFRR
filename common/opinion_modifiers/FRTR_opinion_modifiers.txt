@@ -1,4 +1,5 @@
 opinion_modifiers = {
   LCT_Stalliongrad_Cooperation = { value = 30 }
   HLQ_Longsword_Resettlement = { value = -50 }
+  SIC_FRD_support_the_regency_opinion = { value = 30 }
 }
