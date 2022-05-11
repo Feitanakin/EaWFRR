@@ -3,4 +3,8 @@
 		name = "GFX_frtr_changelog"
 		texturefile = "gfx/interface/frtr_changelog.dds"
 	}
+	spriteType = {
+		name = "GFX_frtr_changelog_old_2"
+		texturefile = "gfx/interface/frtr_changelog_old_2.dds"
+	}
 }

@@ -56,12 +56,6 @@ guiTypes = {
 		animation_time = 1000
 		size = { width = 256 height = 768}
 
-		iconType =
-		{
-			name ="frontend_game_logo"
-			spriteType = "GFX_frontend_game_logo"
-			position = { x= 0 y = 20 }
-		}
 		#instantTextBoxType = {
 		#	name ="eaw_version_label"
 		#	position = { x = 0 y = 301 }
@@ -141,25 +135,47 @@ guiTypes = {
 		Orientation = lower_left
 		Origo = lower_left
 
-		iconType =
-		{
-			name ="frontend_game_version"
-			spriteType = "GFX_frontend_game_version"
-			position = { x = -17 y = -101 }
-		}
 		containerWindowType = {
-			name ="mainmenu_panel_bottom_background"
-			position = { x= 0 y = 79 }
+			name ="frtr_changelog"
+			position = { x= -48 y = -605 }
 			size = { width = 320 height = 395}
 			background = {
-				name = "Background"
-				quadTextureSprite ="GFX_tiled_window"
+				name = "frtr_changelog_background"
+				quadTextureSprite ="GFX_frtr_changelog"
+			}
+		}
+
+		containerWindowType = {
+			name = "frtr_changelog_old_2"
+			position = { x= 1 y = 50}
+			size = { width = 285 height = 379 }
+			Background = {
+				name = "frtr_changelog_background"
+				spriteType = "GFX_frtr_changelog_old_2"
+			}
+			instantTextBoxType = {
+				name = "frtr_changelog_title"
+				position = { x = 12 y = 10 }
+				font = "hoi_30header"
+				text = "frtr_changelog_title_tt"
+				format = centre
+				maxWidth = 255
+				maxHeight = 58
+			}
+			instantTextBoxType = {
+				name ="frtr_changelog_changes"
+				position = { x = 12 y = 55 }
+				font = "hoi_20bs"
+				text = "frtr_changelog_changes_tt"
+				format = centre
+				maxWidth = 255
+				maxHeight = 160
 			}
 		}
 
 		ButtonType = {
 			name = "sp_continue_button"
-			position = { x = 16 y = 97 }
+			position = { x = 0 y = -327  }
 			quadTextureSprite ="GFX_main_lobby_button"
 			buttonText = "FE_CONTINUE"
 			buttonFont = "hoi_24header"
@@ -170,7 +186,7 @@ guiTypes = {
 		iconType = {
 			name = "sp_continue_flag_left"
 			quadTextureSprite ="GFX_flag_small2_not_masked"
-			position = { x= 35 y = 101 }
+			position = { x= 17 y = -323 }
 			Orientation = "UPPER_LEFT"
 			alwaystransparent = yes
 		}
@@ -178,7 +194,7 @@ guiTypes = {
 		iconType = {
 			name = "sp_continue_flag_left_overlay"
 			quadTextureSprite ="GFX_flag_small2_not_masked"
-			position = { x= 35 y = 101 }
+			position = { x= 17 y = -323 }
 			Orientation = "UPPER_LEFT"
 			alwaystransparent = yes
 		}
@@ -186,7 +202,7 @@ guiTypes = {
 		iconType = {
 			name = "sp_continue_flag_right"
 			quadTextureSprite ="GFX_flag_small2_not_masked"
-			position = { x= 245 y = 101 }
+			position = { x= 227 y = -323 }
 			Orientation = "UPPER_LEFT"
 			alwaystransparent = yes
 		}
@@ -194,14 +210,14 @@ guiTypes = {
 		iconType = {
 			name = "sp_continue_flag_right_overlay"
 			quadTextureSprite ="GFX_flag_small2_not_masked"
-			position = { x= 245 y = 101 }
+			position = { x= 227 y = -323 }
 			Orientation = "UPPER_LEFT"
 			alwaystransparent = yes
 		}
 
 		ButtonType = {
 			name = "sp_new_button"
-			position = { x = 16 y = 137 }
+			position = { x = 0 y = -287 }
 			quadTextureSprite ="GFX_main_lobby_button"
 			buttonText = "FE_NEW"
 			buttonFont = "hoi_24header"
@@ -211,7 +227,7 @@ guiTypes = {
 
 		ButtonType = {
 			name = "sp_load_button"
-			position = {  x = 16 y = 177 }
+			position = { x = 0 y = -247 }
 			quadTextureSprite ="GFX_main_lobby_button"
 			buttonText = "MENU_BAR_LOAD"
 			buttonFont = "hoi_24header"
@@ -219,19 +235,19 @@ guiTypes = {
 			oversound = ui_menu_over
 		}
 		
-		ButtonType = {
-			name = "sp_tutorial_button"
-			position = { x = 16 y = 500 }
-			quadTextureSprite ="GFX_main_lobby_button"	
-			buttonText = "FE_TUTORIAL"
-			buttonFont = "hoi_24header"
-			clicksound = click_default
-			oversound = ui_menu_over
-		}
+#		ButtonType = {
+#			name = "sp_tutorial_button"
+#			position = { x = 0 y = -247 }
+#			quadTextureSprite ="GFX_main_lobby_button"	
+#			buttonText = "FE_TUTORIAL"
+#			buttonFont = "hoi_24header"
+#			clicksound = click_default
+#			oversound = ui_menu_over
+#		}
 
 		ButtonType = {
 			name = "sp_back_button"
-			position = { x = 16 y = 297 }
+			position = { x = 0 y = -79 }
 			quadTextureSprite ="GFX_main_lobby_button"
 			buttonText = "BACK"
 			buttonFont = "hoi_24header"
@@ -250,29 +266,23 @@ guiTypes = {
 		Orientation = lower_left
 		Origo = lower_left
 
-		iconType =
-		{
-			name ="frontend_game_version"
-			spriteType = "GFX_frontend_game_version"
-			position = { x = -17 y = -101 }
+		containerWindowType = {
+			name ="frtr_changelog"
+			position = { x= -48 y = -605 }
+			size = { width = 320 height = 395}
+			background = {
+				name = "frtr_changelog_background"
+				quadTextureSprite ="GFX_frtr_changelog"
+			}
 		}
 
 		containerWindowType = {
-			name ="mainmenu_panel_bottom_background"
-			position = { x= 0 y = 79 }
-			size = { width = 320 height = 395}
-			background = {
-				name = "Background"
-				quadTextureSprite ="GFX_tiled_window"
-			}
-		}
-		containerWindowType = {
-			name = "frtr_changelog"
-			position = { x= 315 y = 90 }
+			name = "frtr_changelog_old_2"
+			position = { x= 1 y = 50}
 			size = { width = 285 height = 379 }
 			Background = {
 				name = "frtr_changelog_background"
-				spriteType = "GFX_frtr_changelog"
+				spriteType = "GFX_frtr_changelog_old_2"
 			}
 			instantTextBoxType = {
 				name = "frtr_changelog_title"
@@ -295,7 +305,7 @@ guiTypes = {
 		}
 		ButtonType = {
 			name = "single_player_button"
-			position = { x = 16 y = 97  }
+			position = { x = 0 y = -327  }
 			quadTextureSprite ="GFX_main_lobby_button"
 			font = "hoi_24header"
 			text = "FE_SINGLE_PLAYER"
@@ -305,7 +315,7 @@ guiTypes = {
 
 		ButtonType = {
 			name = "multi_player_button"
-			position = { x = 16 y = 137 }
+			position = { x = 0 y = -287 }
 			quadTextureSprite ="GFX_main_lobby_button"
 			font = "hoi_24header"
 			text = "FE_MULTI_PLAYER"
@@ -323,7 +333,7 @@ guiTypes = {
 		instantTextBoxType = {
 
 			name ="version_label"
-			position = { x = 35 y = 435 }
+			position = { x = 17 y = 435 }
 			textureFile = ""
 			font = "hoi_18b"
 			borderSize = {x = 0 y = 0}
@@ -336,7 +346,7 @@ guiTypes = {
 
 		ButtonType = {
 			name = "settings_button"
-			position = { x = 16 y = 177 }
+			position = { x = 0 y = -247 }
 			quadTextureSprite ="GFX_main_lobby_button"
 			buttonText = "OPTIONS"
 			buttonFont = "hoi_24header"
@@ -347,7 +357,7 @@ guiTypes = {
 
 		ButtonType = {
 			name = "credits_button"
-			position = {  x = 16 y = 217 }
+			position = {  x = 0 y = -207 }
 			quadTextureSprite ="GFX_main_lobby_button"
 			buttonText = "FE_CREDITS"
 			buttonFont = "hoi_24header"
@@ -357,7 +367,7 @@ guiTypes = {
 
 		ButtonType = {
 			name = "nudge_button"
-			position = { x = 16 y = 257 }
+			position = { x = 0 y = -167 }
 			quadTextureSprite ="GFX_main_lobby_button"
 			buttonText = "Nudge!"
 			buttonFont = "hoi_24header"
@@ -366,7 +376,7 @@ guiTypes = {
 
 		ButtonType = {
 			name = "exit_button"
-			position = { x = 16 y = 339 }
+			position = { x = 0 y = -79 }
 			quadTextureSprite ="GFX_main_lobby_button"
 			font = "hoi_24header"
 			text = "FE_EXIT"
@@ -378,7 +388,7 @@ guiTypes = {
 		##facebook etc.
 		ButtonType = {
 			name = "homepage_button"
-			position = { x = 20 y = 388 }
+			position = { x = 0 y = -38 }
 			quadTextureSprite ="eaw_moddb"
 			clicksound = click_default
 			pdx_tooltip = "EAW_MENU_MODDB"
@@ -386,7 +396,7 @@ guiTypes = {
 		}
 		ButtonType = {
 			name = "forum_button"
-			position = { x = 60 y = 388 }
+			position = { x = 40 y = -38 }
 			quadTextureSprite ="eaw_discord"
 			clicksound = click_default
 			pdx_tooltip = "EAW_MENU_DISCORD"
@@ -394,7 +404,7 @@ guiTypes = {
 		}
 		ButtonType = {
 			name = "facebook_button"
-			position = { x = 100 y = 388 }
+			position = { x = 80 y = -38 }
 			quadTextureSprite ="eaw_steamworkshop"
 			clicksound = click_default
 			pdx_tooltip = "EAW_MENU_STEAMWORKSHOP"
@@ -403,7 +413,7 @@ guiTypes = {
 
 		ButtonType = {
 			name = "twitter_button"
-			position = { x = 140 y = 388 }
+			position = { x = 120 y = -38 }
 			quadTextureSprite ="eaw_vk"
 			clicksound = click_default
 			pdx_tooltip = "EAW_MENU_VK"
@@ -412,7 +422,7 @@ guiTypes = {
 
 		ButtonType = {
 			name = "eaw_wiki_button"
-			position = { x = 180 y = 388 }
+			position = { x = 160 y = -38 }
 			quadTextureSprite = "eaw_wiki"
 			pdx_tooltip = "EAW_WIKI_OPEN"
 			web_link = "https://equestria-at-war.wikia.com"
@@ -421,7 +431,7 @@ guiTypes = {
 
 		ButtonType = {
 			name = "eaw_reddit_button"
-			position = { x = 220 y = 388 }
+			position = { x = 200 y = -38 }
 			quadTextureSprite = "eaw_reddit"
 			pdx_tooltip = "EAW_REDDIT_OPEN"
 			web_link = "https://www.reddit.com/r/equestriaatwar/"
@@ -430,7 +440,7 @@ guiTypes = {
 
 		ButtonType = {
 			name = "eaw_yt_button"
-			position = { x = 260 y = 388 }
+			position = { x = 240 y = -38 }
 			quadTextureSprite = "eaw_yt"
 			pdx_tooltip = "EAW_YT_OPEN"
 			web_link = "https://www.youtube.com/channel/UCJZ8YIheC6TRRsZxPNMPHbg"
@@ -439,7 +449,7 @@ guiTypes = {
 
 	#	ButtonType = {
 	#		name = "eaw_twitter_button"
-	#		position = { x = 320 y = 388 }
+	#		position = { x = 300 y = -38 }
 	#		quadTextureSprite = "eaw_twitter"
 	#		pdx_tooltip = "EAW_TWT_OPEN"
 	#		web_link = "https://twitter.com/equestriaatwar"
