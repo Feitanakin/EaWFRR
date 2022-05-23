@@ -6,7 +6,7 @@ tags={
 }
 name="From Rottendedam to Rijeka"
 picture="Thumbnail.png"
-supported_version="1.10.*"
+supported_version="1.11.*"
 path="mod/EaWFRR"
 dependencies = {  
 	"Equestria at War"
