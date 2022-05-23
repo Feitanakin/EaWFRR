@@ -7156,6 +7156,7 @@ focus_tree = {
 					target = SIC
 					modifier = SIC_FRD_support_the_regency_opinion
 				}
+			}
 		}
 	}
 
@@ -7178,6 +7179,7 @@ focus_tree = {
 			add_popularity = {
 				ideology = democratic
 				popularity = -0.05
+			}
 		}
 	}
 
@@ -7210,6 +7212,7 @@ focus_tree = {
 			add_timed_idea = {
 				idea = SIC_FRD_rzncst
 				days = 180
+			}
 		}
 	}
 
@@ -7242,6 +7245,7 @@ focus_tree = {
 			swap_ideas = {
 				remove_idea = SIC_FRD_rplrtn
 				add_idea = SIC_FRD_lawofbrs
+			}
 		}
 	}
 
@@ -7260,6 +7264,7 @@ focus_tree = {
 			add_popularity = {
 				ideology = neutrality
 				popularity = 0.1
+			}
 		}
 	}
 
@@ -7292,6 +7297,7 @@ focus_tree = {
 			swap_ideas = {
 				remove_idea = swordfish_claws
 				add_idea = pirates_of_the_duke
+			}
 		}
 	}
 
@@ -7309,6 +7315,7 @@ focus_tree = {
 			swap_ideas = {
 				remove_idea = republican_tension
 				add_idea = republican_tension_frd
+			}
 		}
 	}
 
@@ -7326,6 +7333,7 @@ focus_tree = {
 			swap_ideas = {
 				remove_idea = republican_tension_frd
 				add_idea = autonomous_countryside
+			}
 		}
 	}
 
@@ -7373,6 +7381,7 @@ focus_tree = {
 			add_timed_idea = {
 				idea = SIC_FRD_priests
 				days = 70
+			}
 		}
 	}
 
@@ -7475,6 +7484,7 @@ focus_tree = {
 			swap_ideas = {
 				remove_idea = SIC_FRD_revbtr
 				add_idea = SIC_FRD_intrec
+			}
 		}
 	}
 
@@ -7493,6 +7503,7 @@ focus_tree = {
 			swap_ideas = {
 				remove_idea = SIC_FRD_intrec
 				add_idea = SIC_FRD_intmnr
+			}
 		}
 	}
 
@@ -7526,6 +7537,7 @@ focus_tree = {
 			swap_ideas = {
 				remove_idea = SIC_FRD_intrec
 				add_idea = SIC_FRD_frgoldrht
+			}
 		}
 	}
 
@@ -7669,6 +7681,7 @@ focus_tree = {
 			swap_ideas = {
 				remove_idea = SIC_FRD_anthrm
 				add_idea = SIC_FRD_dsthrm
+			}
 		}
 	}
 
@@ -7686,6 +7699,7 @@ focus_tree = {
 			swap_ideas = {
 				remove_idea = SIC_FRD_mhtcdl
 				add_idea = SIC_FRD_wrkswy
+			}
 		}
 	}
 
