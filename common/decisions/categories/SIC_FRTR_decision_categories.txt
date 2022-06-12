@@ -1,7 +1,7 @@
 SIC_swordfish_campaign_cat = {
     priority = {
         base = 100
-    }SIC_swordfish_campaign_cat = {
+    }
     priority = {
         base = 100
     }
@@ -20,10 +20,23 @@ SIC_anti_piracy = {
         original_tag = SIC
     }
     visible = {
-        has_completed_focus = SIC_piracy
+		OR = {
+        	has_completed_focus = SIC_piracy
+			has_completed_focus = SIC_anticorruption
+		}
     }
 }
-
+SIC_spawn_insurgencies = {
+    priority = {
+        base = 100
+    }
+    allowed = {
+        original_tag = SIC
+    }
+    visible = {
+        has_completed_focus = SIC_organise_insurgencies
+    }
+}
 
 
 SIC_FRD_the_heir = {
@@ -141,16 +154,5 @@ SIC_com_foreign_diplomacy = {
     }
     visible = {
         has_completed_focus = SIC_anticorruption
-    }
-}
-SIC_anti_piracy = {
-    priority = {
-        base = 100
-    }
-    allowed = {
-        original_tag = SIC
-    }
-    visible = {
-        has_completed_focus = SIC_piracy
     }
 }

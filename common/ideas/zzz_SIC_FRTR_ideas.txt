@@ -1,5 +1,83 @@
 ideas = {
 	country = {
+	
+		new_religious_mythos = {
+			name = new_religious_mythos
+			
+			picture = new_religious_mythos
+			
+			allowed = {
+				tag = SIC
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				neutrality_drift = 0.05
+				stability_factor = 0.03
+			}
+		}
+		
+		new_griffonian_identity_1 = {
+			name = new_griffonian_identity
+			
+			picture = new_griffonian_identity
+			
+			allowed = {
+				tag = SIC
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.02
+				army_attack_factor = 0.05
+				conscription = 0.02
+				stability_factor = 0.04
+
+			}
+		}
+
+		new_griffonian_identity_2 = {
+			name = new_griffonian_identity
+			
+			picture = new_griffonian_identity
+			
+			allowed = {
+				tag = SIC
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.035
+				army_attack_factor = 0.1
+				conscription = 0.03
+				stability_factor = 0.07
+
+			}
+		}
+
+		new_griffonian_identity_3 = {
+			name = new_griffonian_identity
+			
+			picture = new_griffonian_identity
+			
+			allowed = {
+				tag = SIC
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+				army_attack_factor = 0.15
+				conscription = 0.04
+				stability_factor = 0.1
+
+			}
+		}
+	
 		republican_tension = {
 			name = republican_tension
 			
@@ -56,6 +134,25 @@ ideas = {
 			}
 		}
 
+		republican_tension_3 = {
+			name = republican_tension
+			
+			picture = republican_tension
+			
+			allowed = {
+				tag = SIC
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.25
+				political_power_factor = -0.1
+				democratic_drift = 0.07
+				communism_drift = 0.04
+			}
+		}
+
 		dead_monarchy = {
 			name = dead_monarchy
 			
@@ -72,7 +169,25 @@ ideas = {
 				war_support_factor = -0.1
 			}
 		}
-		
+
+		swordfish_claws = {
+			name = swordfish_claws
+			
+			picture = swordfish_claws
+			
+			allowed = {
+				tag = SIC
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.08
+				stability_factor = -0.14
+				min_export = 0.4
+			}
+		}
+	
 		swordfish_claws_1 = {
 			name = swordfish_claws
 			
@@ -213,15 +328,109 @@ ideas = {
 			}
 		}
 		
-		idealism_above_all = {
+		idealism_above_all_1 = {
 			#picture = placeholder
+			name = idealism_above_all
 			allowed = {
 				tag = SIC
 			}
 			removal_cost = -1
 			modifier = { 
+				political_power_gain = 0.1
+				drift_defence_factor = 0.1
+				justify_war_goal_time = -0.15
+			}
+		}
+
+		idealism_above_all_2 = {
+			#picture = placeholder
+			name = idealism_above_all
+			allowed = {
+				tag = SIC
+			}
+			removal_cost = -1
+			modifier = { 
+				political_power_gain = 0.2
 				drift_defence_factor = 0.2
-				justify_war_goal_time = -0.35
+				justify_war_goal_time = -0.3
+			}
+		}
+
+		idealism_above_all_3 = {
+			#picture = placeholder
+			name = idealism_above_all
+			allowed = {
+				tag = SIC
+			}
+			removal_cost = -1
+			modifier = { 
+				political_power_gain = 0.3
+				drift_defence_factor = 0.3
+				justify_war_goal_time = -0.45
+			}
+		}
+		
+		SIC_reshuffle_budget = {
+			#picture = placeholder
+			name = reshuffle_budget
+			allowed = {
+				tag = SIC
+			}
+			removal_cost = -1
+			modifier = { 
+				consumer_goods_factor = -0.025
+			}
+		}
+		
+		SIC_harmony_for_griffonia = {
+			#picture = placeholder
+			name = harmony_for_griffonia
+			allowed = {
+				tag = SIC
+			}
+			removal_cost = -1
+			modifier = { 
+				stability_factor = 0.05
+				neutrality_drift = 0.01
+			}
+		}
+		
+		SIC_new_legion = {
+			#picture = placeholder
+			name = new_legion
+			allowed = {
+				tag = SIC
+			}
+			removal_cost = -1
+			modifier = { 
+				army_morale = 10
+				army_speed_factor = 0.1
+			}
+		}
+		
+		SIC_empire_of_many_tongues = {
+			#picture = placeholder
+			name = empire_of_many_tongues
+			allowed = {
+				tag = SIC
+			}
+			removal_cost = -1
+			modifier = { 
+				production_speed_buildings_factor = 0.05
+				conscription = 0.003
+			}
+		}
+
+		SIC_empire_of_many_tongues_1 = {
+			#picture = placeholder
+			name = empire_of_many_tongues
+			allowed = {
+				tag = SIC
+			}
+			removal_cost = -1
+			modifier = { 
+				production_speed_buildings_factor = 0.075
+				conscription = 0.005
 			}
 		}
 		

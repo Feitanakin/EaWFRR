@@ -302,7 +302,126 @@ country_event = {
 	is_triggered_only = yes
 }
 
+country_event = {
+	id = sicameon_frtr.20
+	title = sicameon_frtr.20.t
+	desc = sicameon_frtr.20.d
+	#picture = 
+	option = {
+		name = sicameon_frtr.20.a
+		ai_chance = {
+			factor = 50
+		}
+		add_political_power = 150
+	}
+	option = {
+		name = sicameon_frtr.20.b
+		ai_chance = {
+			factor = 50
+		}
+		SIC = {
+			recruit_character = SIC_Mason_Of_Kivessin
+			recruit_character = SIC_constanti_privezan
+			recruit_character = SIC_Ion_Soimescu
+		}
+	}
+	is_triggered_only = yes
+}
 
+country_event = {
+	id = sicameon_frtr.21
+	title = sicameon_frtr.21.t
+	desc = sicameon_frtr.21.d
+	#picture = 
+	option = {
+		name = sicameon_frtr.21.a
+		ai_chance = {
+			factor = 50
+		}
+		add_political_power = 150
+	}
+	option = {
+		name = sicameon_frtr.21.b
+		ai_chance = {
+			factor = 50
+		}
+		SIC = {
+			recruit_character = GRW_rain_twister
+			recruit_character = GRW_witia_gryphon
+			recruit_character = GRW_koldvin
+		}
+	}
+	is_triggered_only = yes
+}
+
+country_event = {
+	id = sicameon_frtr.22
+	title = sicameon_frtr.22.t
+	desc = sicameon_frtr.22.d
+	#picture = 
+	option = {
+		name = sicameon_frtr.22.a
+		add_political_power = 10
+	}
+	is_triggered_only = yes
+}
+
+country_event = {
+	id = sicameon_frtr.23
+	title = sicameon_frtr.23.t
+	desc = sicameon_frtr.23.d
+	#picture = 
+	option = {
+		name = sicameon_frtr.23.a
+		add_political_power = 10
+	}
+	is_triggered_only = yes
+}
+
+country_event = {
+	id = sicameon_frtr.24
+	title = sicameon_frtr.24.t
+	desc = sicameon_frtr.24.d
+	#picture = 
+	option = {
+		name = sicameon_frtr.24.a
+		add_political_power = 10
+	}
+	is_triggered_only = yes
+}
+
+country_event = {
+	id = sicameon_frtr.25
+	title = sicameon_frtr.25.t
+	desc = sicameon_frtr.25.d
+	#picture = 
+	option = {
+		name = sicameon_frtr.25.a
+	}
+	is_triggered_only = yes
+}
+
+country_event = {
+	id = sicameon_frtr.26
+	title = sicameon_frtr.26.t
+	desc = sicameon_frtr.26.d
+	#picture = 
+	option = {
+		name = sicameon_frtr.26.a
+	}
+	is_triggered_only = yes
+}
+
+country_event = {
+	id = sicameon_frtr.27
+	title = sicameon_frtr.27.t
+	desc = sicameon_frtr.27.d
+	#picture = 
+	option = {
+		name = sicameon_frtr.27.a
+	}
+	is_triggered_only = yes
+}
 
 add_namespace = sicameon_frtr_frd
 country_event = {

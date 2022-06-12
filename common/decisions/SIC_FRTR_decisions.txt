@@ -1,3 +1,32 @@
+SIC_spawn_insurgencies = {
+	SIC_spawn_insurgencies_1 = {
+		icon = hammer_and_horseshoe_decision
+		visible = {
+			OR = {
+				has_war_with = BRF
+				has_war_with = GRW
+			}
+		}
+		available = {
+			OR = {
+				has_war_with = BRF
+				has_war_with = GRW
+			}
+		}
+		cost = 50
+		fire_only_once = yes
+		days_remove = 7
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		remove_effect = {
+			load_oob = "SIC_insurgencies"
+		}
+	}
+}
+
 SIC_anti_piracy = {
 	SIC_anti_piracy_remove_1 = {
 		icon = hammer_and_horseshoe_decision
@@ -16,11 +45,10 @@ SIC_anti_piracy = {
 		}
 
 		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove LCT_agitate_in_from target: [From.GetName]"
 			swap_ideas = { remove_idea = swordfish_claws add_idea = swordfish_claws_1 }
 		}
 	}
-	SIC_anti_piracy_remove_1 = {
+	SIC_anti_piracy_remove_2 = {
 		icon = hammer_and_horseshoe_decision
 		visible = {
 			has_idea = swordfish_claws_1
@@ -37,11 +65,10 @@ SIC_anti_piracy = {
 		}
 
 		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove LCT_agitate_in_from target: [From.GetName]"
 			swap_ideas = { remove_idea = swordfish_claws add_idea_1 = swordfish_claws_2 }
 		}
 	}
-	SIC_anti_piracy_remove_1 = {
+	SIC_anti_piracy_remove_3 = {
 		icon = hammer_and_horseshoe_decision
 		visible = {
 			has_idea = swordfish_claws_2
@@ -58,7 +85,6 @@ SIC_anti_piracy = {
 		}
 
 		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove LCT_agitate_in_from target: [From.GetName]"
 			remove_idea = swordfish_claws_2
 		}
 	}

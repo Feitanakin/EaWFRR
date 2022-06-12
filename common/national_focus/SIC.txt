@@ -110,6 +110,10 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_all_is_well"
 			country_event = { id = sicameon_frtr.17 days = 0 }
+			set_country_flag = SIC_political_resolve
+			hidden_effect = {
+				country_event = { id = sicameon.11 days = 240 }
+			}
 		}
 	}
 	
@@ -128,7 +132,7 @@ focus_tree = {
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_reshuffle_our_budget"
-			
+			add_ideas = SIC_reshuffle_budget
 		}
 	}
 	
@@ -191,6 +195,10 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_an_interesting_proposal"
 			country_event = { days = 0 id = sicameon_frtr.3 }
+			set_country_flag = SIC_political_resolve
+			hidden_effect = {
+				country_event = { id = sicameon.11 days = 240 }
+			}
 		}
 	}
 
@@ -6071,15 +6079,15 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
 	####################
-    #####PETRONILO######
-    #DUKE#OF#DEPRESSION#
-    ##AND FABULOUSNESS##
-    focus = {
-        id = SIC_springtime_sic
-        icon = GFX_SIC_a_true_grand_duchess
-        cost = 10
-        x = 45
-        y = 0
+	#####PETRONILO######
+	#DUKE#OF#DEPRESSION#
+	##AND FABULOUSNESS##
+	focus = {
+		id = SIC_springtime_sic
+		icon = GFX_SIC_a_true_grand_duchess
+		cost = 10
+		x = 45
+		y = 0
 		available = {
 			has_country_leader = {
 				id = 50001
@@ -6087,230 +6095,237 @@ focus_tree = {
 				name = "Petronilo of Midoria"
 			}
 		}
-        #bypass = {
-        #    has_country_flag = #Petronilo has been elected Duke
-        #}
-    }
-    focus = {
-        id = SIC_make_the_best
-        icon = GFX_SIC_make_the_best_out_of_this
-        cost = 5
-        relative_position_id = SIC_springtime_sic #clamped to SIC_springtime_sic, so that when you plug it in to the main focus tree you only have to move SIC_springtime_sic to orient it.
-        x = -2
-        y = 1
-        prerequisite = {
-            focus = SIC_springtime_sic
-        }
-        completion_reward = {
-            country_event = sicameon_frtr.1
-        }
-    }
-    focus = {
-        id = SIC_justify_regency
-        icon = GFX_SIC_justify_the_regency
-        cost = 8    
-        relative_position_id = SIC_springtime_sic
-        x = 2
-        y = 1
-        prerequisite = {
-           focus = SIC_springtime_sic
-        }
-        completion_reward = {
-            add_ideas = unifying_nation
-        }
-    }
-    focus = {
-        id = SIC_no_hope_action
-        icon = GFX_SIC_there_is_no_hope_without_action
-        cost = 5
-        relative_position_id = SIC_springtime_sic
-        x = -3
-        y = 2
-        prerequisite = {
-            focus = SIC_make_the_best
-        }
-        completion_reward = {
-            country_event = sicameon_frtr.2
-        }
-    }
-    focus = {
-        id = SIC_deradical_cam
-        icon = GFX_SIC_deradicalization_campaign
-        cost = 5
-        relative_position_id = SIC_springtime_sic
-        x = -4
-        y = 3
-        completion_reward = {
-        add_political_power = -75
-                add_popularity = {
+		#bypass = {
+		#	has_country_flag = #Petronilo has been elected Duke
+		#}
+	}
+	focus = {
+		id = SIC_make_the_best
+		icon = GFX_SIC_make_the_best_out_of_this
+		cost = 5
+		relative_position_id = SIC_springtime_sic #clamped to SIC_springtime_sic, so that when you plug it in to the main focus tree you only have to move SIC_springtime_sic to orient it.
+		x = -2
+		y = 1
+		prerequisite = {
+			focus = SIC_springtime_sic
+		}
+		completion_reward = {
+			country_event = sicameon_frtr.1
+		}
+	}
+	focus = {
+		id = SIC_justify_regency
+		icon = GFX_SIC_justify_the_regency
+		cost = 8	
+		relative_position_id = SIC_springtime_sic
+		x = 2
+		y = 1
+		prerequisite = {
+		   focus = SIC_springtime_sic
+		}
+		completion_reward = {
+			add_ideas = unifying_nation
+		}
+	}
+	focus = {
+		id = SIC_no_hope_action
+		icon = GFX_SIC_there_is_no_hope_without_action
+		cost = 5
+		relative_position_id = SIC_springtime_sic
+		x = -3
+		y = 2
+		prerequisite = {
+			focus = SIC_make_the_best
+		}
+		completion_reward = {
+			country_event = sicameon_frtr.2
+		}
+	}
+	focus = {
+		id = SIC_deradical_cam
+		icon = GFX_SIC_deradicalization_campaign
+		cost = 5
+		relative_position_id = SIC_springtime_sic
+		x = -4
+		y = 3
+		completion_reward = {
+		add_political_power = -75
+				add_popularity = {
 				ideology = democratic
 				popularity = 0.1
 				}
 		add_stability = -0.1
-        }
-        prerequisite = {
-            focus = SIC_no_hope_action
-        }
-    }
-    focus = {
-        id = SIC_peoples_duke
-        icon = GFX_SIC_the_peoples_grand_duke
-        cost = 5
-        relative_position_id = SIC_springtime_sic
-        x = -4
-        y = 4
-        prerequisite = {
-            focus = SIC_deradical_cam
-        }
-        completion_reward = {
-            add_ideas = duke_of_the_people
-        }
-    }
-    focus = {
-        id = SIC_anticorruption
-        icon = GFX_SIC_anti_corruption_campaign
-        cost = 8
-        relative_position_id = SIC_springtime_sic
-        x = -2
-        y = 3
-        prerequisite = {
-            focus = SIC_no_hope_action
-        }
-    }
-    focus = {
-        id = SIC_demonize_sword
-        icon = GFX_SIC_demozise_the_swordfish
-        cost = 5
-        relative_position_id = SIC_springtime_sic
-        x = -2
-        y = 4
-        prerequisite = {
-            focus = SIC_anticorruption
-        }
-        completion_reward = {
-            add_timed_idea = { 
-                idea = antiespadarte
-                days = 180
-            }
-        }
-    }
-    focus = {
-        id = SIC_hearts_minds
-        icon = GFX_SIC_hearts_and_minds
-        cost = 8
-        relative_position_id = SIC_springtime_sic
-        x = -2
-        y = 5
-        prerequisite = {
-            focus = SIC_demonize_sword
-        }
-        completion_reward = {
-            add_ideas = faith_harmony
-        }
-    }
-    focus = {
-        id = SIC_immediate_change
-        icon = GFX_SIC_but_bring_forth_immediate_change
-        cost = 5
-        relative_position_id = SIC_springtime_sic
-        x = 2
-        y = 2
-        prerequisite = {
-            focus = SIC_justify_regency
-        }
-    }
-    focus = {
-        id = SIC_convince_council
-        icon = GFX_SIC_convince_the_former_council
-        cost = 8
-        relative_position_id = SIC_springtime_sic
-        x = 1
-        y = 3
-        completion_reward = {
-        add_political_power = -50
-                add_popularity = {
+		}
+		prerequisite = {
+			focus = SIC_no_hope_action
+		}
+	}
+	focus = {
+		id = SIC_peoples_duke
+		icon = GFX_SIC_the_peoples_grand_duke
+		cost = 5
+		relative_position_id = SIC_springtime_sic
+		x = -4
+		y = 4
+		prerequisite = {
+			focus = SIC_deradical_cam
+		}
+		completion_reward = {
+			add_ideas = duke_of_the_people
+		}
+	}
+	focus = {
+		id = SIC_anticorruption
+		icon = GFX_SIC_anti_corruption_campaign
+		cost = 8
+		relative_position_id = SIC_springtime_sic
+		x = -2
+		y = 3
+		prerequisite = {
+			focus = SIC_no_hope_action
+		}
+		completion_reward = {
+			custom_effect_tooltip = SIC_FRTR_fight_piracy
+		}
+	}
+	focus = {
+		id = SIC_demonize_sword
+		icon = GFX_SIC_demozise_the_swordfish
+		cost = 5
+		relative_position_id = SIC_springtime_sic
+		x = -2
+		y = 4
+		prerequisite = {
+			focus = SIC_anticorruption
+		}
+		completion_reward = {
+			add_timed_idea = { 
+				idea = antiespadarte
+				days = 180
+			}
+		}
+	}
+	focus = {
+		id = SIC_hearts_minds
+		icon = GFX_SIC_hearts_and_minds
+		cost = 8
+		relative_position_id = SIC_springtime_sic
+		x = -2
+		y = 5
+		prerequisite = {
+			focus = SIC_demonize_sword
+		}
+		completion_reward = {
+			add_ideas = faith_harmony
+		}
+	}
+	focus = {
+		id = SIC_immediate_change
+		icon = GFX_SIC_but_bring_forth_immediate_change
+		cost = 5
+		relative_position_id = SIC_springtime_sic
+		x = 2
+		y = 2
+		prerequisite = {
+			focus = SIC_justify_regency
+		}
+		completion_reward = {
+			swap_ideas = { remove_idea = republican_tension add_idea = republican_tension_3 }
+			country_event = { days = 0 id = sicameon_frtr.27 }
+		}
+	}
+	focus = {
+		id = SIC_convince_council
+		icon = GFX_SIC_convince_the_former_council
+		cost = 8
+		relative_position_id = SIC_springtime_sic
+		x = 1
+		y = 3
+		completion_reward = {
+		add_political_power = -50
+				add_popularity = {
 				ideology = neutrality
 				popularity = 0.1
 				}
-        }
-        prerequisite = {
-            focus = SIC_immediate_change
-        }
-    }
-    focus = {
-        id = SIC_second_chance
-        icon = GFX_SIC_everybody_deserves_a_second_chance
-        cost = 5
-        relative_position_id = SIC_springtime_sic
-        x = 1
-        y = 4
-        completion_reward = {
-        add_manpower = 25000
-        add_popularity = {
+		}
+		prerequisite = {
+			focus = SIC_immediate_change
+		}
+	}
+	focus = {
+		id = SIC_second_chance
+		icon = GFX_SIC_everybody_deserves_a_second_chance
+		cost = 5
+		relative_position_id = SIC_springtime_sic
+		x = 1
+		y = 4
+		completion_reward = {
+		add_manpower = 25000
+		add_popularity = {
 				ideology = democratic
 				popularity = 0.1
 			}
-        }
-        prerequisite = {
-            focus = SIC_convince_council
-        }
-    }
-    focus = {
-        id = SIC_pardon_republicans
-        icon = GFX_SIC_pardon_the_republicans
-        cost = 8
-        relative_position_id = SIC_springtime_sic
-        x = 3
-        y = 3
-        prerequisite = {
-            focus = SIC_immediate_change
-        }
-    }
-    focus = {
-        id = SIC_democracy_now
-        icon = GFX_SIC_democracy_now
-        cost = 5
-        relative_position_id = SIC_springtime_sic
-        x = 3
-        y = 4
-        completion_reward = {
-        add_political_power = 100 
-        }
-        prerequisite = {
-            focus = SIC_pardon_republicans
-        }
-    }
-    focus = {
-        id = SIC_free_elections
-        icon = GFX_SIC_free_elections
-        cost = 8
-        relative_position_id = SIC_springtime_sic
-        x = 2
-        y = 5
-        completion_reward = {
-        remove_ideas = republican_tension
-        }
-        prerequisite = {
-            focus = SIC_second_chance
-        }
-        prerequisite = {
-            focus = SIC_democracy_now
-        }
-    }
-    focus = {
-        id = SIC_looking_outwards
-        icon = GFX_goal_foreign_diplomacy
-        cost = 1
-        relative_position_id = SIC_springtime_sic
-        x = 0
-        y = 6
-        prerequisite = {
-            focus = SIC_free_elections
-        }
-        prerequisite = {
-            focus = SIC_hearts_minds
-        }
-    }
+		}
+		prerequisite = {
+			focus = SIC_convince_council
+		}
+	}
+	focus = {
+		id = SIC_pardon_republicans
+		icon = GFX_SIC_pardon_the_republicans
+		cost = 8
+		relative_position_id = SIC_springtime_sic
+		x = 3
+		y = 3
+		prerequisite = {
+			focus = SIC_immediate_change
+		}
+	}
+	focus = {
+		id = SIC_democracy_now
+		icon = GFX_SIC_democracy_now
+		cost = 5
+		relative_position_id = SIC_springtime_sic
+		x = 3
+		y = 4
+		completion_reward = {
+		add_political_power = 100 
+		}
+		prerequisite = {
+			focus = SIC_pardon_republicans
+		}
+	}
+	focus = {
+		id = SIC_free_elections
+		icon = GFX_SIC_free_elections
+		cost = 8
+		relative_position_id = SIC_springtime_sic
+		x = 2
+		y = 5
+		completion_reward = {
+		remove_ideas = republican_tension
+		}
+		prerequisite = {
+			focus = SIC_second_chance
+		}
+		prerequisite = {
+			focus = SIC_democracy_now
+		}
+	}
+	focus = {
+		id = SIC_looking_outwards
+		icon = GFX_goal_foreign_diplomacy
+		cost = 1
+		relative_position_id = SIC_springtime_sic
+		x = 0
+		y = 6
+		prerequisite = {
+			focus = SIC_free_elections
+		}
+		prerequisite = {
+			focus = SIC_hearts_minds
+		}
+	}
 
 ##########################################################################
 ##########################################################################
@@ -6484,7 +6499,7 @@ focus_tree = {
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_piracy"
-			
+			custom_effect_tooltip = SIC_FRTR_fight_piracy
 		}
 	}
 
@@ -6518,7 +6533,7 @@ focus_tree = {
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_generation"
-			
+			add_manpower = 20000
 		}
 	}
 
@@ -6553,7 +6568,7 @@ focus_tree = {
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_approach"
-			add_ideas = idealism_above_all
+			add_ideas = idealism_above_all_1
 		}
 	}
 
@@ -6603,7 +6618,7 @@ focus_tree = {
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_nonetheless"
-			
+			swap_ideas = { remove_idea = idealism_above_all_1 add_idea = idealism_above_all_2 }
 		}
 	}
 
@@ -6622,28 +6637,12 @@ focus_tree = {
 		}
 	}
 
-	focus = {
-		id = SIC_outwards 
-		icon = GFX_goal_foreign_diplomacy
-		prerequisite = { focus = SIC_with_honour }
-		prerequisite = { focus = SIC_blackhollow }
-		prerequisite = { focus = SIC_brodfeld_in_exile }
-		cost = 10
-		x = 0
-		y = 1
-		relative_position_id = SIC_blackhollow
-		ai_will_do = { factor = 100 }
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SIC_outwards"
-			
-		}
-		
-	}	#Focus for Dreams of reclamation
-	focus = {
+
+	focus = {#Focus for Dreams of reclamation
 		id = SIC_dreams_of_reclamation
 		icon = GFX_SIC_dreams_of_reclamation
 		x = 75
-		y = 1
+		y = 0
 		cost = 2
 		available_if_capitulated = yes
 		available = {
@@ -6654,7 +6653,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_dreams_of_reclamation"
-			
+			add_political_power = 100
 		}
 	}
 
@@ -6663,12 +6662,29 @@ focus_tree = {
 		id = SIC_sow_discontentement
 		icon = GFX_SIC_sow_discontent
 		x = 73
-		y = 2
+		y = 1
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = { focus = SIC_dreams_of_reclamation }
 		ai_will_do = {
 			factor = 1
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_sow_discontentement"
+			BRF = {
+				add_stability = -0.1
+				add_equipment_to_stockpile = {
+					type = infantry_equipment amount = -2000 producer = BRF
+				}
+				add_war_support = -0.25
+			}
+			GRW = {
+				add_stability = -0.1
+				add_equipment_to_stockpile = {
+					type = infantry_equipment amount = -2000 producer = GRW
+				}
+				add_war_support = -0.25
+			}
 		}
 	}
 
@@ -6677,12 +6693,20 @@ focus_tree = {
 		id = SIC_the_cyalonosian_question
 		icon = GFX_SIC_the_cyanolisian_question
 		x = 75
-		y = 2
+		y = 1
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = { focus = SIC_dreams_of_reclamation }
 		ai_will_do = {
 			factor = 1
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_the_cyalonosian_question"
+			create_wargoal= {
+				type = annex_everything 
+				target = CYA
+			}
+			CYA = { add_to_ROOT_potential_cores = yes }
 		}
 	}
 
@@ -6691,12 +6715,16 @@ focus_tree = {
 		id = SIC_organise_insurgencies
 		icon = GFX_SIC_organize_insurgencies
 		x = 77
-		y = 2
+		y = 1
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = { focus = SIC_dreams_of_reclamation }
 		ai_will_do = {
 			factor = 1
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_organise_insurgencies"
+			custom_effect_tooltip = SIC_FRTR_insurgencies
 		}
 	}
 
@@ -6705,7 +6733,7 @@ focus_tree = {
 		id = SIC_a_war_of_reclamation
 		icon = GFX_SIC_a_war_of_reclamation
 		x = 75
-		y = 3
+		y = 2
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = { 
@@ -6720,6 +6748,96 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_a_war_of_reclamation"
+			508 = {
+				owner = {
+					ROOT = { create_wargoal = { type = annex_everything target = PREV } }
+				}
+			}
+			hidden_effect = {
+			663 = {
+				owner = {
+					ROOT = { create_wargoal = { type = annex_everything target = PREV } }
+				}
+			}
+			385 = {
+				owner = {
+					ROOT = { create_wargoal = { type = annex_everything target = PREV } }
+				}
+			}
+			589 = {
+				owner = {
+					ROOT = { create_wargoal = { type = annex_everything target = PREV } }
+				}
+			}
+			651 = {
+				owner = {
+					ROOT = { create_wargoal = { type = annex_everything target = PREV } }
+				}
+			}
+			605 = {
+				owner = {
+					ROOT = { create_wargoal = { type = annex_everything target = PREV } }
+				}
+			}
+			414 = {
+				owner = {
+					ROOT = { create_wargoal = { type = annex_everything target = PREV } }
+				}
+			}
+			588 = {
+				owner = {
+					ROOT = { create_wargoal = { type = annex_everything target = PREV } }
+				}
+			}
+			590 = {
+				owner = {
+					ROOT = { create_wargoal = { type = annex_everything target = PREV } }
+				}
+			}
+			}
+		}
+	}
+
+	focus = {
+		id = SIC_return_of_the_prince
+		icon = GFX_goal_tomado
+		x = 75
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		available = {
+			508 = { is_controlled_by = SIC}
+			663 = { is_controlled_by = SIC}
+			385 = { is_controlled_by = SIC}
+			589 = { is_controlled_by = SIC}
+			651 = { is_controlled_by = SIC}
+			605 = { is_controlled_by = SIC}
+			414 = { is_controlled_by = SIC}
+			588 = { is_controlled_by = SIC}
+			590 = { is_controlled_by = SIC}
+		}
+		prerequisite = { 
+			focus = SIC_a_war_of_reclamation 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_return_of_the_prince"
+			set_cosmetic_tag = frtr_saicameon_prywhen
+			set_capital = { state = 385 }
+			508 = { add_core_of = SIC }
+			663 = { add_core_of = SIC }
+			385 = { add_core_of = SIC }
+			589 = { add_core_of = SIC }
+			651 = { add_core_of = SIC }
+			605 = { add_core_of = SIC }
+			414 = { add_core_of = SIC }
+			588 = { add_core_of = SIC }
+			590 = { add_core_of = SIC }
+		}
 	}
 
 	#Focus for Trials the red
@@ -6730,9 +6848,17 @@ focus_tree = {
 		y = 4
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = SIC_a_war_of_reclamation }
+		prerequisite = { focus = SIC_return_of_the_prince }
 		ai_will_do = {
 			factor = 1
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_trials_the_red"
+			
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_trial_the_legionnaires"
+			country_event = { days = 1 id = sicameon_frtr.21 }
 		}
 	}
 
@@ -6744,9 +6870,27 @@ focus_tree = {
 		y = 4
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = SIC_a_war_of_reclamation }
+		prerequisite = { focus = SIC_return_of_the_prince }
 		ai_will_do = {
 			factor = 1
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_unite_the_evi_valley"
+			create_wargoal= {
+				type = annex_everything 
+				target = GRU
+			}
+			GRU = { add_to_ROOT_potential_cores = yes }
+			create_wargoal= {
+				type = annex_everything 
+				target = GRY
+			}
+			GRY = { add_to_ROOT_potential_cores = yes }
+			create_wargoal= {
+				type = annex_everything 
+				target = LUS
+			}
+			LUS = { add_to_ROOT_potential_cores = yes }
 		}
 	}
 
@@ -6758,9 +6902,13 @@ focus_tree = {
 		y = 4
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = SIC_a_war_of_reclamation }
+		prerequisite = { focus = SIC_return_of_the_prince }
 		ai_will_do = {
 			factor = 1
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_religious_syncretism"
+			add_ideas = new_religious_mythos
 		}
 	}
 
@@ -6772,9 +6920,13 @@ focus_tree = {
 		y = 4
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = SIC_a_war_of_reclamation }
+		prerequisite = { focus = SIC_return_of_the_prince }
 		ai_will_do = {
 			factor = 1
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_trial_the_legionnaires"
+			country_event = { days = 1 id = sicameon_frtr.20 }
 		}
 	}
 
@@ -6795,6 +6947,10 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_revelation_of_an_ancient_past"
+			country_event = { days = 1 id = sicameon_frtr.25 }
+		}
 	}
 
 	#Focus for Revelation of an ancient past
@@ -6813,6 +6969,10 @@ focus_tree = {
 		}
 		ai_will_do = {
 			factor = 1
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_revelation_of_an_ancient_past"
+			country_event = { days = 1 id = sicameon_frtr.22 }
 		}
 	}
 
@@ -6833,6 +6993,35 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_return_in_karthin"
+			create_wargoal= {
+				target = 371.owner
+				type = annex_everything 
+			}
+			hidden_effect = {
+			create_wargoal= {
+				target = WNG
+				type = annex_everything 
+			}
+			}
+			create_wargoal= {
+				target = TAL
+				type = annex_everything 
+			}
+			create_wargoal= {
+				target = FRN
+				type = annex_everything 
+			}
+			create_wargoal= {
+					target = ARA
+				type = annex_everything 
+			}
+			create_wargoal= {
+				target = FAL
+				type = annex_everything 
+			}
+		}
 	}
 
 	#Focus for Irredentist claim
@@ -6844,7 +7033,7 @@ focus_tree = {
 		cost = 5.8
 		available_if_capitulated = yes
 		available = {
-			has_completed_focus = SIC_brodfeld_in_exile
+			has_completed_focus = SIC_convince_council
 		}
 		ai_will_do = {
 			factor = 1
@@ -7731,7 +7920,11 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_restitutor_orbis"
-			
+			set_cosmetic_tag = frtr_karthinian_empire
+			hidden_effect = {
+				recruit_character = SIC_Tomado_empire
+				promote_character = SIC_Tomado_empire
+			}
 		}
 	}
 
@@ -7742,11 +7935,32 @@ focus_tree = {
 		cost = 10
 		x = -2
 		y = 1
+		available = {
+			has_completed_focus = SIC_true_empire_of_griffonkind
+		}
 		relative_position_id = SIC_restitutor_orbis
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_imperial_mythos"
-			
+			country_event = { id = sicameon_frtr.23 days = 0 }
+			if ={
+				limit = {
+					has_idea = new_griffonian_identity_1
+				}
+				swap_ideas = {
+					remove_idea = new_griffonian_identity_1
+					add_idea = new_griffonian_identity_2
+				}
+			}
+			else_if ={
+				limit = {
+					has_idea = new_griffonian_identity_2
+				}
+				swap_ideas = {
+					remove_idea = new_griffonian_identity_2
+					add_idea = new_griffonian_identity_3
+				}
+			}
 		}
 	}
 
@@ -7761,7 +7975,7 @@ focus_tree = {
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_true_empire_of_griffonkind"
-			
+			add_ideas = new_griffonian_identity_1
 		}
 	}
 	
@@ -7772,11 +7986,32 @@ focus_tree = {
 		cost = 10
 		x = 2
 		y = 1
+		available = {
+			has_completed_focus = SIC_true_empire_of_griffonkind
+		}
 		relative_position_id = SIC_restitutor_orbis
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_revive_language"
-			
+			country_event = { id = sicameon_frtr.24 days = 0 }
+			if ={
+				limit = {
+					has_idea = new_griffonian_identity_1
+				}
+				swap_ideas = {
+					remove_idea = new_griffonian_identity_1
+					add_idea = new_griffonian_identity_2
+				}
+			}
+			else_if ={
+				limit = {
+					has_idea = new_griffonian_identity_2
+				}
+				swap_ideas = {
+					remove_idea = new_griffonian_identity_2
+					add_idea = new_griffonian_identity_3
+				}
+			}
 		}
 	}
 
@@ -7793,7 +8028,7 @@ focus_tree = {
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_harmonia_et_honor"
-			
+			add_ideas = SIC_harmony_for_griffonia
 		}
 	}
 
@@ -7808,7 +8043,7 @@ focus_tree = {
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_pater_patriae"
-			
+			country_event = { id = sicameon_frtr.26 days = 0 }
 		}
 	}
 
@@ -7823,7 +8058,7 @@ focus_tree = {
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_barbaroi_councils"
-			
+			add_ideas = SIC_empire_of_many_tongues
 		}
 	}
 
@@ -7838,7 +8073,7 @@ focus_tree = {
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_princeps_senatus"
-			
+			add_stability = 0.15
 		}
 	}
 
@@ -7854,7 +8089,7 @@ focus_tree = {
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_something_dead_made_new"
-			
+			swap_ideas = { remove_idea = idealism_above_all_2 add_idea = idealism_above_all_3 }
 		}
 	}
 
@@ -7871,7 +8106,7 @@ focus_tree = {
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_resurrection_of_the_spirit"
-			
+			add_ideas = SIC_new_legion
 		}
 	}
 
@@ -7886,7 +8121,26 @@ focus_tree = {
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_generals_of_the_empire"
-			
+			WNG = {
+				every_unit_leader = {
+					set_nationality = SIC
+				}
+			}
+			TAL = {
+				every_unit_leader = {
+					set_nationality = SIC
+				}
+			}
+			FRN = {
+				every_unit_leader = {
+					set_nationality = SIC
+				}
+			}
+			ARA = {
+				every_unit_leader = {
+					set_nationality = SIC
+				}
+			}
 		}
 	}
 
@@ -7901,7 +8155,7 @@ focus_tree = {
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_dux_esercitus"
-			
+			add_war_support = 0.15
 		}
 	}
 
@@ -7917,7 +8171,7 @@ focus_tree = {
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_something_old_made_immortal"
-			
+			swap_ideas = { remove_idea = SIC_empire_of_many_tongues add_idea = SIC_empire_of_many_tongues_1 }
 		}
 	}
 
@@ -7934,7 +8188,7 @@ focus_tree = {
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_bello_griffkino"
-			
+			create_wargoal = { type = annex_everything target = event_target:griffonian_empire }
 		}
 	}
 
