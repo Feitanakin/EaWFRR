@@ -6936,13 +6936,16 @@ focus_tree = {
 		icon = GFX_SIC_dreams_of_a_better_future
 		x = 77
 		y = 5
-		cost = 10
+		cost = 2.9
 		available_if_capitulated = yes
 		prerequisite = { 
 			focus = SIC_religious_syncretism 
 		}
 		prerequisite = { 
 			focus = SIC_trial_the_legionnaires 
+		}
+		available = {
+			has_completed_focus = SIC_revelation_of_an_ancient_past
 		}
 		ai_will_do = {
 			factor = 1
@@ -6959,7 +6962,7 @@ focus_tree = {
 		icon = GFX_SIC_revelations_of_an_ancient_past
 		x = 73
 		y = 5
-		cost = 10
+		cost = 2.9
 		available_if_capitulated = yes
 		prerequisite = { 
 			focus = SIC_trials_the_red 
@@ -8188,7 +8191,15 @@ focus_tree = {
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_bello_griffkino"
-			create_wargoal = { type = annex_everything target = event_target:griffonian_empire }
+			IF = {
+				limit = {
+					owns_state = 382
+				}
+				add_stability = 0.1
+				add_war_support = 0.1
+			} ELSE = {
+				create_wargoal = { type = annex_everything target = event_target:griffonian_empire }
+			}
 		}
 	}
 
@@ -8220,7 +8231,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_the_imperial_restoration"
-			
+			country_event = sicameon_frtr_frd.2
 		}
 	}
 
@@ -8321,7 +8332,7 @@ focus_tree = {
 		icon = GFX_SIC_a_meeting_with_taillow
 		prerequisite = { focus = SIC_cyanlosia }
 		cost = 1
-		x = 0
+		x = -1
 		y = 1
 		relative_position_id = SIC_cyanlosia
 		ai_will_do = { factor = 100 }
@@ -8337,14 +8348,15 @@ focus_tree = {
 	focus = {
 		id = SIC_a_deep_reflection
 		icon = GFX_SIC_a_deep_reflection
-		prerequisite = { focus = SIC_a_meeting_with_taillow }
+		prerequisite = { focus = SIC_cyanlosia }
 		cost = 1
-		x = 0
+		x = 1
 		y = 1
-		relative_position_id = SIC_a_meeting_with_taillow
+		relative_position_id = SIC_cyanlosia
 		ai_will_do = { factor = 100 }
 		available = {
 			country_exists = CYA
+			has_completed_focus = SIC_a_meeting_with_taillow
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_a_deep_reflection"
@@ -8356,8 +8368,9 @@ focus_tree = {
 		id = SIC_a_daring_proposal
 		icon = GFX_SIC_facing_the_sun
 		prerequisite = { focus = SIC_a_deep_reflection }
+		prerequisite = { focus = SIC_a_meeting_with_taillow }
 		cost = 1
-		x = 0
+		x = -1
 		y = 1
 		relative_position_id = SIC_a_deep_reflection
 		ai_will_do = { factor = 100 }
@@ -8373,11 +8386,11 @@ focus_tree = {
 	focus = {
 		id = SIC_a_royal_unification
 		icon = GFX_SIC_royal_unification
-		prerequisite = { focus = SIC_a_deep_reflection }
+		prerequisite = { focus = SIC_a_daring_proposal }
 		cost = 4
 		x = 0
 		y = 1
-		relative_position_id = SIC_a_deep_reflection
+		relative_position_id = SIC_a_daring_proposal
 		ai_will_do = { factor = 100 }
 		available = {
 			country_exists = CYA
