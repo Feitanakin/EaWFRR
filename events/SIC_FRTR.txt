@@ -457,6 +457,65 @@ country_event = {
 	is_triggered_only = yes
 }
 
+country_event = {
+	id = sicameon_frtr_frd.4
+	title = sicameon_frtr_frd.4.t
+	desc = sicameon_frtr_frd.4.d
+	#picture =
+	option = {
+		name = sicameon_frtr_frd.4.a
+	}
+	is_triggered_only = yes
+}
+country_event = {
+	id = sicameon_frtr_frd.5
+	title = sicameon_frtr_frd.5.t
+	desc = sicameon_frtr_frd.5.d
+	#picture =
+	option = {
+		name = sicameon_frtr_frd.5.a
+	}
+	is_triggered_only = yes
+}
+country_event = {
+	id = sicameon_frtr_frd.6
+	title = sicameon_frtr_frd.6.t
+	desc = sicameon_frtr_frd.6.d
+	#picture =
+	option = {
+		name = sicameon_frtr_frd.6.a
+	}
+	is_triggered_only = yes
+}
+country_event = {
+	id = sicameon_frtr_frd.7
+	title = sicameon_frtr_frd.7.t
+	desc = sicameon_frtr_frd.7.d
+	#picture =
+	option = {
+		name = sicameon_frtr_frd.6.a
+		add_ideas = SIC_FRD_unifying
+		CYA = {
+			add_ideas = SIC_FRD_unifying
+		}
+	}
+	is_triggered_only = yes
+}
+country_event = {
+	id = sicameon_frtr_frd.8
+	title = sicameon_frtr_frd.8.t
+	desc = sicameon_frtr_frd.8.d
+	#picture =
+	option = {
+		name = sicameon_frtr_frd.8.a
+		remove_ideas = SIC_FRD_unifying
+		CYA = {
+			remove_ideas = SIC_FRD_unifying
+		}
+	}
+	is_triggered_only = yes
+}
+
 
 
 
