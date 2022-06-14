@@ -136,8 +136,6 @@ set_rule = {
 	can_generate_female_aces = yes
 }
 		
-set_country_flag = trade_laws_blocked
-set_country_flag = have_regular_puppets
 
 add_opinion_modifier = {
 	target = MIT

@@ -111,9 +111,6 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_all_is_well"
 			country_event = { id = sicameon_frtr.17 days = 0 }
 			set_country_flag = SIC_political_resolve
-			hidden_effect = {
-				country_event = { id = sicameon.11 days = 240 }
-			}
 		}
 	}
 	
@@ -8928,8 +8925,8 @@ focus_tree = {
 		ai_will_do = { factor = 100 }
 		available = {
 			NOT = {
-				country_exists = CYA
-				country_exists = MIT
+				country_exists = BAN
+				country_exists = FAL
 			}
 		}
 		completion_reward = {
