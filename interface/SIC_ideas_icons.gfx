@@ -18,4 +18,14 @@ spriteTypes = {
 		name = "GFX_idea_eternal_navy"
 		texturefile = "gfx/interface/ideas/eternal_navy.dds"
 	}
+
+	SpriteType = {
+		name = "GFX_idea_duke_of_the_people"
+		texturefile = "gfx/interface/ideas/duke_of_the_people.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_idea_brodfeld_diaspora"
+		texturefile = "gfx/interface/ideas/brodfeld_diaspora.dds"
+	}
 }

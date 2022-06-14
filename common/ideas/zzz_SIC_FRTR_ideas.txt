@@ -263,7 +263,7 @@ ideas = {
 		}
 		
 		antiespadarte = { #Anti-Espadarte Smear Campaign
-			#picture = placeholder
+			#picture = broken_resistance
 			allowed = {
 				tag = SIC
 			}
@@ -275,7 +275,7 @@ ideas = {
 		}
 
 		faith_harmony = {
-			#picture = placeholder
+			#picture = harmonic_stagnation3
 			allowed = {
 				tag = SIC
 			}
@@ -290,7 +290,7 @@ ideas = {
 		}
 
 		unifying_nation = {
-			#picture = placeholder
+			#picture = generic_pp_unity_bonus
 			allowed = {
 				tag = SIC
 			}
@@ -303,7 +303,7 @@ ideas = {
 		}
 
 		duke_of_the_people = {
-			#picture = placeholder
+			picture = duke_of_the_people
 			allowed = {
 				tag = SIC
 			}
@@ -318,7 +318,7 @@ ideas = {
 		}
 		
 		brodfeld_diaspora = {
-			#picture = placeholder
+			picture = brodfeld_diaspora
 			allowed = {
 				tag = SIC
 			}
@@ -329,7 +329,7 @@ ideas = {
 		}
 		
 		idealism_above_all_1 = {
-			#picture = placeholder
+			picture = FRA_scw_intervention_nationalists_focus
 			name = idealism_above_all
 			allowed = {
 				tag = SIC
@@ -343,7 +343,7 @@ ideas = {
 		}
 
 		idealism_above_all_2 = {
-			#picture = placeholder
+			picture = FRA_scw_intervention_nationalists_focus
 			name = idealism_above_all
 			allowed = {
 				tag = SIC
@@ -357,7 +357,7 @@ ideas = {
 		}
 
 		idealism_above_all_3 = {
-			#picture = placeholder
+			picture = FRA_scw_intervention_nationalists_focus
 			name = idealism_above_all
 			allowed = {
 				tag = SIC
@@ -371,7 +371,7 @@ ideas = {
 		}
 		
 		SIC_reshuffle_budget = {
-			#picture = placeholder
+			picture = SOV_third_five_year_plan_civilian
 			name = reshuffle_budget
 			allowed = {
 				tag = SIC
@@ -383,7 +383,7 @@ ideas = {
 		}
 		
 		SIC_harmony_for_griffonia = {
-			#picture = placeholder
+			picture = harmonic_stagnation3
 			name = harmony_for_griffonia
 			allowed = {
 				tag = SIC
@@ -396,7 +396,7 @@ ideas = {
 		}
 		
 		SIC_new_legion = {
-			#picture = placeholder
+			picture = WNG_B_legion
 			name = new_legion
 			allowed = {
 				tag = SIC
@@ -409,7 +409,7 @@ ideas = {
 		}
 		
 		SIC_empire_of_many_tongues = {
-			#picture = placeholder
+			picture = WNG_political_deadlock
 			name = empire_of_many_tongues
 			allowed = {
 				tag = SIC
@@ -422,7 +422,7 @@ ideas = {
 		}
 
 		SIC_empire_of_many_tongues_1 = {
-			#picture = placeholder
+			picture = WNG_political_deadlock
 			name = empire_of_many_tongues
 			allowed = {
 				tag = SIC
@@ -435,7 +435,7 @@ ideas = {
 		}
 		
 		decentralized_administration = {
-			#picture = placeholder
+			picture = generic_democratic_opposition
 			allowed = {
 				tag = SIC
 			}
@@ -449,7 +449,7 @@ ideas = {
 		}
 		
 		harmony_with_enlightened_characteristics = {
-			#picture = placeholder
+			picture = CES_uphold_harmony
 			allowed = {
 				tag = SIC
 			}
@@ -462,7 +462,7 @@ ideas = {
 		}
 		
 		tactical_reorganization_efforts = {
-			#picture = placeholder
+			picture = MEX_politicised_army
 			allowed = {
 				tag = SIC
 			}
@@ -474,7 +474,7 @@ ideas = {
 		}
 		
 		defensive_tactical_approach = {
-			#picture = placeholder
+			picture = ast_volunteer_defence_corps
 			allowed = {
 				tag = SIC
 			}
@@ -528,7 +528,16 @@ ideas = {
 			}
 		}
 		
-		
+		SIC_FRD_unifying = {
+			#picture = placeholder
+			allowed = {
+				tag = SIC
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_cost = 0.25
+			}
+		}	
 		
 		SIC_FRD_astida = {
 			#picture = placeholder

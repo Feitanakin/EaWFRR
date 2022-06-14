@@ -65,7 +65,7 @@ SIC_anti_piracy = {
 		}
 
 		remove_effect = {
-			swap_ideas = { remove_idea = swordfish_claws add_idea_1 = swordfish_claws_2 }
+			swap_ideas = { remove_idea = swordfish_claws_1 add_idea = swordfish_claws_2 }
 		}
 	}
 	SIC_anti_piracy_remove_3 = {

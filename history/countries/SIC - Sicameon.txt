@@ -82,6 +82,7 @@ add_ideas = {
 	outdated_industry
 	limited_conscription
 	free_trade
+	SIC_militia_dependence
 }
 set_stability = 0.6
 set_war_support = 0.4

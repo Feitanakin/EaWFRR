@@ -170,8 +170,8 @@ focus_tree = {
 				attacker = {
 					state = 570
 					num_provinces = 2
-					on_win = sicameon_frtr.17
-					on_lose = sicameon_frtr.18
+					on_win = sicameon_frtr.18
+					on_lose = sicameon_frtr.19
 				}
 
 				defender = {
@@ -1150,6 +1150,10 @@ focus_tree = {
 			factor = 55
 		}
 		available = {
+			OR = {
+				has_country_flag = SIC_communist_victory
+				is_subject = yes
+			}
 			has_government = communism
 		}
 		completion_reward = {
@@ -6663,7 +6667,7 @@ focus_tree = {
 		icon = GFX_SIC_sow_discontent
 		x = 73
 		y = 1
-		cost = 10
+		cost = 5
 		available_if_capitulated = yes
 		prerequisite = { focus = SIC_dreams_of_reclamation }
 		ai_will_do = {
@@ -6694,7 +6698,7 @@ focus_tree = {
 		icon = GFX_SIC_the_cyanolisian_question
 		x = 75
 		y = 1
-		cost = 10
+		cost = 8
 		available_if_capitulated = yes
 		prerequisite = { focus = SIC_dreams_of_reclamation }
 		ai_will_do = {
@@ -6716,7 +6720,7 @@ focus_tree = {
 		icon = GFX_SIC_organize_insurgencies
 		x = 77
 		y = 1
-		cost = 10
+		cost = 5
 		available_if_capitulated = yes
 		prerequisite = { focus = SIC_dreams_of_reclamation }
 		ai_will_do = {
@@ -6734,7 +6738,7 @@ focus_tree = {
 		icon = GFX_SIC_a_war_of_reclamation
 		x = 75
 		y = 2
-		cost = 10
+		cost = 8
 		available_if_capitulated = yes
 		prerequisite = { 
 			focus = SIC_sow_discontentement 
@@ -6805,7 +6809,7 @@ focus_tree = {
 		icon = GFX_goal_tomado
 		x = 75
 		y = 3
-		cost = 10
+		cost = 5
 		available_if_capitulated = yes
 		available = {
 			508 = { is_controlled_by = SIC}
@@ -6846,11 +6850,14 @@ focus_tree = {
 		icon = GFX_SIC_trial_the_reds
 		x = 72
 		y = 4
-		cost = 10
+		cost = 5
 		available_if_capitulated = yes
 		prerequisite = { focus = SIC_return_of_the_prince }
 		ai_will_do = {
 			factor = 1
+		}
+		available = {
+			controls_state = 605
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_trials_the_red"
@@ -6868,7 +6875,7 @@ focus_tree = {
 		icon = GFX_SIC_unite_the_evi_valley
 		x = 74
 		y = 4
-		cost = 10
+		cost = 8
 		available_if_capitulated = yes
 		prerequisite = { focus = SIC_return_of_the_prince }
 		ai_will_do = {
@@ -6900,7 +6907,7 @@ focus_tree = {
 		icon = GFX_SIC_religious_syncretism
 		x = 76
 		y = 4
-		cost = 10
+		cost = 8
 		available_if_capitulated = yes
 		prerequisite = { focus = SIC_return_of_the_prince }
 		ai_will_do = {
@@ -6918,11 +6925,14 @@ focus_tree = {
 		icon = GFX_SIC_trial_the_legionaries
 		x = 78
 		y = 4
-		cost = 10
+		cost = 5
 		available_if_capitulated = yes
 		prerequisite = { focus = SIC_return_of_the_prince }
 		ai_will_do = {
 			factor = 1
+		}
+		available = {
+			controls_state = 508
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_trial_the_legionnaires"
@@ -6936,7 +6946,7 @@ focus_tree = {
 		icon = GFX_SIC_dreams_of_a_better_future
 		x = 77
 		y = 5
-		cost = 10
+		cost = 5
 		available_if_capitulated = yes
 		prerequisite = { 
 			focus = SIC_religious_syncretism 
@@ -6959,7 +6969,7 @@ focus_tree = {
 		icon = GFX_SIC_revelations_of_an_ancient_past
 		x = 73
 		y = 5
-		cost = 10
+		cost = 5
 		available_if_capitulated = yes
 		prerequisite = { 
 			focus = SIC_trials_the_red 
@@ -6982,7 +6992,7 @@ focus_tree = {
 		icon = GFX_SIC_return_in_karthin
 		x = 75
 		y = 6
-		cost = 10
+		cost = 8
 		available_if_capitulated = yes
 		prerequisite = { 
 			focus = SIC_revelation_of_an_ancient_past 
@@ -7319,8 +7329,10 @@ focus_tree = {
 		x = 90
 		y = 8
 		ai_will_do = { factor = 100 }
-		bypass = {
-			has_country_leader = {					  
+		available = {
+			has_country_leader = {
+				id = 50003
+				ruling_only = yes 
 				name = "Frederick of Yale-Gamia"
 			}
 		}
@@ -7621,277 +7633,273 @@ focus_tree = {
 ##########################################################################
 ##########################################################################
 ##########################################################################
-
-	focus = {
-		id = SIC_facing_the_sun
-		icon = GFX_SIC_facing_the_sun
-		cost = 1
-		x = 104
-		y = 0
-		ai_will_do = { factor = 100 }
-		available = {
-			has_country_leader = {
-				id = 50003
-				ruling_only = yes 
-				name = "Frederick of Yale-Gamia"
-			}
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SIC_facing_the_sun"
-			add_country_leader_trait = inexperienced_junker
-		}
-	}
-
-	focus = {
-		id = SIC_betray_the_revolution
-		icon = GFX_SIC_betray_the_revolution
-		prerequisite = { focus = SIC_facing_the_sun }
-		mutually_exclusive = { focus = SIC_an_almighty_caudillo }
-		cost = 3
-		x = -2
-		y = 1
-		relative_position_id = SIC_facing_the_sun
-		ai_will_do = { factor = 100 }
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SIC_betray_the_revolution"
-			add_political_power = -75
-			add_ideas = SIC_FRD_revbtr
-		}
-	}
-
-	focus = {
-		id = SIC_integrate_reactionaries
-		icon = GFX_SIC_sway_the_religious
-		prerequisite = { focus = SIC_betray_the_revolution }
-		cost = 3
-		x = -2
-		y = 1
-		relative_position_id = SIC_betray_the_revolution
-		ai_will_do = { factor = 100 }
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SIC_integrate_reactionaries"
-			swap_ideas = {
-				remove_idea = SIC_FRD_revbtr
-				add_idea = SIC_FRD_intrec
-			}
-		}
-	}
-
-	focus = {
-		id = SIC_absorb_monarchists
-		icon = GFX_SIC_absorb_monarchists
-		prerequisite = { focus = SIC_integrate_reactionaries }
-		mutually_exclusive = { focus = SIC_forget_the_old_right }
-		cost = 6
-		x = -2
-		y = 2
-		relative_position_id = SIC_integrate_reactionaries
-		ai_will_do = { factor = 100 }
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SIC_absorb_monarchists"
-			swap_ideas = {
-				remove_idea = SIC_FRD_intrec
-				add_idea = SIC_FRD_intmnr
-			}
-		}
-	}
-
-	focus = {
-		id = SIC_soldiers_of_a_great_sicameon
-		icon = GFX_SIC_soldiers_of_a_great_sicameon
-		prerequisite = { focus = SIC_integrate_reactionaries }
-		cost = 5
-		x = 0
-		y = 1
-		relative_position_id = SIC_integrate_reactionaries
-		ai_will_do = { factor = 100 }
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SIC_soldiers_of_a_great_sicameon"
-			
-		}
-	}
-
-	focus = {
-		id = SIC_forget_the_old_right
-		icon = GFX_SIC_forget_the_old_right
-		prerequisite = { focus = SIC_integrate_reactionaries }
-		mutually_exclusive = { focus = SIC_absorb_monarchists }
-		cost = 6
-		x = 2
-		y = 2
-		relative_position_id = SIC_integrate_reactionaries
-		ai_will_do = { factor = 100 }
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SIC_forget_the_old_right"
-			swap_ideas = {
-				remove_idea = SIC_FRD_intrec
-				add_idea = SIC_FRD_frgoldrht
-			}
-		}
-	}
-
-	focus = {
-		id = SIC_spring_will_return
-		icon = GFX_SIC_spring_will_return
-		prerequisite = { focus = SIC_betray_the_revolution focus = SIC_an_almighty_caudillo }
-		cost = 3
-		x = 0
-		y = 2
-		relative_position_id = SIC_facing_the_sun
-		ai_will_do = { factor = 100 }
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SIC_spring_will_return"
-			add_stability = 0.05
-		}
-	}
-
-	focus = {
-		id = SIC_a_socialist_outlook
-		icon = GFX_SIC_a_socialist_oulook
-		prerequisite = { focus = SIC_spring_will_return }
-		cost = 4
-		x = 0
-		y = 1
-		relative_position_id = SIC_spring_will_return
-		ai_will_do = { factor = 100 }
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SIC_a_socialist_outlook"
-			add_ideas = SIC_FRD_sclfsc
-		}
-	}
-
-	focus = {
-		id = SIC_our_karthinian_brethen
-		icon = GFX_goal_WNG_meet_beakolini
-		prerequisite = { focus = SIC_a_socialist_outlook }
-		cost = 3
-		x = 0
-		y = 1
-		relative_position_id = SIC_a_socialist_outlook
-		ai_will_do = { factor = 100 }
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SIC_our_karthinian_brethen"
-			add_war_support = 0.05
-		}
-	}
-
-	focus = {
-		id = SIC_a_nation_of_warriors
-		icon = GFX_SIC_a_nation_of_warriors
-		prerequisite = { focus = SIC_forget_the_old_right  focus = SIC_absorb_monarchists }
-		prerequisite = { focus = SIC_our_karthinian_brethen }
-		cost = 10
-		x = 0
-		y = 1
-		relative_position_id = SIC_forget_the_old_right
-		ai_will_do = { factor = 100 }
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SIC_a_nation_of_warriors"
-			add_manpower = 60000
-			load_oob = SIC_FRD_ntn_wrr
-			add_ideas = SIC_FRD_ntnwrr
-		}
-	}
-	
-	focus = {
-		id = SIC_a_legacy_to_consider
-		icon = GFX_SIC_return_in_karthin
-		prerequisite = { focus = SIC_an_end_to_espadarte  focus = SIC_sway_the_workers }
-		prerequisite = { focus = SIC_our_karthinian_brethen }
-		cost = 10
-		x = 0
-		y = 1
-		relative_position_id = SIC_an_end_to_espadarte
-		ai_will_do = { factor = 100 }
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SIC_a_legacy_to_consider"
-			add_ideas = SIC_FRD_glrsic
-		}
-	}
-
-	focus = {
-		id = SIC_an_almighty_caudillo
-		icon = GFX_SIC_an_almighty_caudillo
-		prerequisite = { focus = SIC_facing_the_sun }
-		mutually_exclusive = { focus = SIC_betray_the_revolution }
-		cost = 3
-		x = 2
-		y = 1
-		relative_position_id = SIC_facing_the_sun
-		ai_will_do = { factor = 100 }
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SIC_an_almighty_caudillo"
-			add_political_power = 75
-			add_ideas = SIC_FRD_mhtcdl
-		}
-	}
-
-	focus = {
-		id = SIC_our_former_allies
-		icon = GFX_SIC_our_former_allies
-		prerequisite = { focus = SIC_an_almighty_caudillo }
-		cost = 3
-		x = 2
-		y = 1
-		relative_position_id = SIC_an_almighty_caudillo
-		ai_will_do = { factor = 100 }
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SIC_our_former_allies"
-			add_ideas = SIC_FRD_anthrm
-		}
-	}
-
-	focus = {
-		id = SIC_an_end_to_espadarte
-		icon = GFX_SIC_anti_corruption_campaign
-		prerequisite = { focus = SIC_our_former_allies }
-		cost = 3
-		x = -2
-		y = 2
-		relative_position_id = SIC_our_former_allies
-		ai_will_do = { factor = 100 }
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SIC_an_end_to_espadarte"
-			remove_ideas = swordfish_claws
-		}
-	}
-
-	focus = {
-		id = SIC_destroy_harmonists
-		icon = GFX_SIC_destory_the_harmonists
-		prerequisite = { focus = SIC_our_former_allies }
-		cost = 3
-		x = 0
-		y = 1
-		relative_position_id = SIC_our_former_allies
-		ai_will_do = { factor = 100 }
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SIC_destroy_harmonists"
-			swap_ideas = {
-				remove_idea = SIC_FRD_anthrm
-				add_idea = SIC_FRD_dsthrm
-			}
-		}
-	}
-
-	focus = {
-		id = SIC_sway_the_workers
-		icon = GFX_SIC_sway_the_workers
-		prerequisite = { focus = SIC_our_former_allies }
-		cost = 3
-		x = 2
-		y = 2
-		relative_position_id = SIC_our_former_allies
-		ai_will_do = { factor = 100 }
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SIC_sway_the_workers"
-			swap_ideas = {
-				remove_idea = SIC_FRD_mhtcdl
-				add_idea = SIC_FRD_wrkswy
-			}
-		}
-	}
-
+#
+#	focus = {
+#		id = SIC_facing_the_sun
+#		icon = GFX_SIC_facing_the_sun
+#		cost = 1
+#		x = 104
+#		y = 0
+#		ai_will_do = { factor = 100 }
+#		available = {
+#			
+#		}
+#		completion_reward = {
+#			log = "[GetDateText]: [Root.GetName]: Focus SIC_facing_the_sun"
+#			add_country_leader_trait = inexperienced_junker
+#		}
+#	}
+#
+#	focus = {
+#		id = SIC_betray_the_revolution
+#		icon = GFX_SIC_betray_the_revolution
+#		prerequisite = { focus = SIC_facing_the_sun }
+#		mutually_exclusive = { focus = SIC_an_almighty_caudillo }
+#		cost = 3
+#		x = -2
+#		y = 1
+#		relative_position_id = SIC_facing_the_sun
+#		ai_will_do = { factor = 100 }
+#		completion_reward = {
+#			log = "[GetDateText]: [Root.GetName]: Focus SIC_betray_the_revolution"
+#			add_political_power = -75
+#			add_ideas = SIC_FRD_revbtr
+#		}
+#	}
+#
+#	focus = {
+#		id = SIC_integrate_reactionaries
+#		icon = GFX_SIC_sway_the_religious
+#		prerequisite = { focus = SIC_betray_the_revolution }
+#		cost = 3
+#		x = -2
+#		y = 1
+#		relative_position_id = SIC_betray_the_revolution
+#		ai_will_do = { factor = 100 }
+#		completion_reward = {
+#			log = "[GetDateText]: [Root.GetName]: Focus SIC_integrate_reactionaries"
+#			swap_ideas = {
+#				remove_idea = SIC_FRD_revbtr
+#				add_idea = SIC_FRD_intrec
+#			}
+#		}
+#	}
+#
+#	focus = {
+#		id = SIC_absorb_monarchists
+#		icon = GFX_SIC_absorb_monarchists
+#		prerequisite = { focus = SIC_integrate_reactionaries }
+#		mutually_exclusive = { focus = SIC_forget_the_old_right }
+#		cost = 6
+#		x = -2
+#		y = 2
+#		relative_position_id = SIC_integrate_reactionaries
+#		ai_will_do = { factor = 100 }
+#		completion_reward = {
+#			log = "[GetDateText]: [Root.GetName]: Focus SIC_absorb_monarchists"
+#			swap_ideas = {
+#				remove_idea = SIC_FRD_intrec
+#				add_idea = SIC_FRD_intmnr
+#			}
+#		}
+#	}
+#
+#	focus = {
+#		id = SIC_soldiers_of_a_great_sicameon
+#		icon = GFX_SIC_soldiers_of_a_great_sicameon
+#		prerequisite = { focus = SIC_integrate_reactionaries }
+#		cost = 5
+#		x = 0
+#		y = 1
+#		relative_position_id = SIC_integrate_reactionaries
+#		ai_will_do = { factor = 100 }
+#		completion_reward = {
+#			log = "[GetDateText]: [Root.GetName]: Focus SIC_soldiers_of_a_great_sicameon"
+#			
+#		}
+#	}
+#
+#	focus = {
+#		id = SIC_forget_the_old_right
+#		icon = GFX_SIC_forget_the_old_right
+#		prerequisite = { focus = SIC_integrate_reactionaries }
+#		mutually_exclusive = { focus = SIC_absorb_monarchists }
+#		cost = 6
+#		x = 2
+#		y = 2
+#		relative_position_id = SIC_integrate_reactionaries
+#		ai_will_do = { factor = 100 }
+#		completion_reward = {
+#			log = "[GetDateText]: [Root.GetName]: Focus SIC_forget_the_old_right"
+#			swap_ideas = {
+#				remove_idea = SIC_FRD_intrec
+#				add_idea = SIC_FRD_frgoldrht
+#			}
+#		}
+#	}
+#
+#	focus = {
+#		id = SIC_spring_will_return
+#		icon = GFX_SIC_spring_will_return
+#		prerequisite = { focus = SIC_betray_the_revolution focus = SIC_an_almighty_caudillo }
+#		cost = 3
+#		x = 0
+#		y = 2
+#		relative_position_id = SIC_facing_the_sun
+#		ai_will_do = { factor = 100 }
+#		completion_reward = {
+#			log = "[GetDateText]: [Root.GetName]: Focus SIC_spring_will_return"
+#			add_stability = 0.05
+#		}
+#	}
+#
+#	focus = {
+#		id = SIC_a_socialist_outlook
+#		icon = GFX_SIC_a_socialist_oulook
+#		prerequisite = { focus = SIC_spring_will_return }
+#		cost = 4
+#		x = 0
+#		y = 1
+#		relative_position_id = SIC_spring_will_return
+#		ai_will_do = { factor = 100 }
+#		completion_reward = {
+#			log = "[GetDateText]: [Root.GetName]: Focus SIC_a_socialist_outlook"
+#			add_ideas = SIC_FRD_sclfsc
+#		}
+#	}
+#
+#	focus = {
+#		id = SIC_our_karthinian_brethen
+#		icon = GFX_goal_WNG_meet_beakolini
+#		prerequisite = { focus = SIC_a_socialist_outlook }
+#		cost = 3
+#		x = 0
+#		y = 1
+#		relative_position_id = SIC_a_socialist_outlook
+#		ai_will_do = { factor = 100 }
+#		completion_reward = {
+#			log = "[GetDateText]: [Root.GetName]: Focus SIC_our_karthinian_brethen"
+#			add_war_support = 0.05
+#		}
+#	}
+#
+#	focus = {
+#		id = SIC_a_nation_of_warriors
+#		icon = GFX_SIC_a_nation_of_warriors
+#		prerequisite = { focus = SIC_forget_the_old_right  focus = SIC_absorb_monarchists }
+#		prerequisite = { focus = SIC_our_karthinian_brethen }
+#		cost = 10
+#		x = 0
+#		y = 1
+#		relative_position_id = SIC_forget_the_old_right
+#		ai_will_do = { factor = 100 }
+#		completion_reward = {
+#			log = "[GetDateText]: [Root.GetName]: Focus SIC_a_nation_of_warriors"
+#			add_manpower = 60000
+#			load_oob = SIC_FRD_ntn_wrr
+#			add_ideas = SIC_FRD_ntnwrr
+#		}
+#	}
+#	
+#	focus = {
+#		id = SIC_a_legacy_to_consider
+#		icon = GFX_SIC_return_in_karthin
+#		prerequisite = { focus = SIC_an_end_to_espadarte  focus = SIC_sway_the_workers }
+#		prerequisite = { focus = SIC_our_karthinian_brethen }
+#		cost = 10
+#		x = 0
+#		y = 1
+#		relative_position_id = SIC_an_end_to_espadarte
+#		ai_will_do = { factor = 100 }
+#		completion_reward = {
+#			log = "[GetDateText]: [Root.GetName]: Focus SIC_a_legacy_to_consider"
+#			add_ideas = SIC_FRD_glrsic
+#		}
+#	}
+#
+#	focus = {
+#		id = SIC_an_almighty_caudillo
+#		icon = GFX_SIC_an_almighty_caudillo
+#		prerequisite = { focus = SIC_facing_the_sun }
+#		mutually_exclusive = { focus = SIC_betray_the_revolution }
+#		cost = 3
+#		x = 2
+#		y = 1
+#		relative_position_id = SIC_facing_the_sun
+#		ai_will_do = { factor = 100 }
+#		completion_reward = {
+#			log = "[GetDateText]: [Root.GetName]: Focus SIC_an_almighty_caudillo"
+#			add_political_power = 75
+#			add_ideas = SIC_FRD_mhtcdl
+#		}
+#	}
+#
+#	focus = {
+#		id = SIC_our_former_allies
+#		icon = GFX_SIC_our_former_allies
+#		prerequisite = { focus = SIC_an_almighty_caudillo }
+#		cost = 3
+#		x = 2
+#		y = 1
+#		relative_position_id = SIC_an_almighty_caudillo
+#		ai_will_do = { factor = 100 }
+#		completion_reward = {
+#			log = "[GetDateText]: [Root.GetName]: Focus SIC_our_former_allies"
+#			add_ideas = SIC_FRD_anthrm
+#		}
+#	}
+#
+#	focus = {
+#		id = SIC_an_end_to_espadarte
+#		icon = GFX_SIC_anti_corruption_campaign
+#		prerequisite = { focus = SIC_our_former_allies }
+#		cost = 3
+#		x = -2
+#		y = 2
+#		relative_position_id = SIC_our_former_allies
+#		ai_will_do = { factor = 100 }
+#		completion_reward = {
+#			log = "[GetDateText]: [Root.GetName]: Focus SIC_an_end_to_espadarte"
+#			remove_ideas = swordfish_claws
+#		}
+#	}
+#
+#	focus = {
+#		id = SIC_destroy_harmonists
+#		icon = GFX_SIC_destory_the_harmonists
+#		prerequisite = { focus = SIC_our_former_allies }
+#		cost = 3
+#		x = 0
+#		y = 1
+#		relative_position_id = SIC_our_former_allies
+#		ai_will_do = { factor = 100 }
+#		completion_reward = {
+#			log = "[GetDateText]: [Root.GetName]: Focus SIC_destroy_harmonists"
+#			swap_ideas = {
+#				remove_idea = SIC_FRD_anthrm
+#				add_idea = SIC_FRD_dsthrm
+#			}
+#		}
+#	}
+#
+#	focus = {
+#		id = SIC_sway_the_workers
+#		icon = GFX_SIC_sway_the_workers
+#		prerequisite = { focus = SIC_our_former_allies }
+#		cost = 3
+#		x = 2
+#		y = 2
+#		relative_position_id = SIC_our_former_allies
+#		ai_will_do = { factor = 100 }
+#		completion_reward = {
+#			log = "[GetDateText]: [Root.GetName]: Focus SIC_sway_the_workers"
+#			swap_ideas = {
+#				remove_idea = SIC_FRD_mhtcdl
+#				add_idea = SIC_FRD_wrkswy
+#			}
+#		}
+#	}
+#
 #####################################################################################
 #####################################################################################
 #####################################################################################
@@ -7911,12 +7919,12 @@ focus_tree = {
 		id = SIC_restitutor_orbis
 		icon = GFX_SIC_restitutor_orbis
 		prerequisite = { focus = SIC_return_in_karthin }
-		cost = 10
+		cost = 8
 		x = 75
 		y = 7
 		ai_will_do = { factor = 100 }
 		available = {
-			
+			controls_state = 371
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_restitutor_orbis"
@@ -7924,6 +7932,11 @@ focus_tree = {
 			hidden_effect = {
 				recruit_character = SIC_Tomado_empire
 				promote_character = SIC_Tomado_empire
+				ARA = { add_to_ROOT_potential_cores = yes }
+				FAL = { add_to_ROOT_potential_cores = yes }
+				TAL = { add_to_ROOT_potential_cores = yes }
+				FRN = { add_to_ROOT_potential_cores = yes }
+				WNG = { add_to_ROOT_potential_cores = yes }
 			}
 		}
 	}
@@ -7932,7 +7945,7 @@ focus_tree = {
 		id = SIC_imperial_mythos
 		icon = GFX_SIC_imperial_mythos
 		prerequisite = { focus = SIC_restitutor_orbis }
-		cost = 10
+		cost = 5
 		x = -2
 		y = 1
 		available = {
@@ -7968,7 +7981,7 @@ focus_tree = {
 		id = SIC_true_empire_of_griffonkind
 		icon = GFX_SIC_true_empire_of_griffonkind
 		prerequisite = { focus = SIC_restitutor_orbis }
-		cost = 10
+		cost = 5
 		x = 0
 		y = 1
 		relative_position_id = SIC_restitutor_orbis
@@ -7983,7 +7996,7 @@ focus_tree = {
 		id = SIC_revive_language
 		icon = GFX_SIC_revive_language
 		prerequisite = { focus = SIC_restitutor_orbis }
-		cost = 10
+		cost = 5
 		x = 2
 		y = 1
 		available = {
@@ -8021,7 +8034,7 @@ focus_tree = {
 		prerequisite = { focus = SIC_true_empire_of_griffonkind }
 		prerequisite = { focus = SIC_imperial_mythos }
 		prerequisite = { focus = SIC_revive_language }
-		cost = 10
+		cost = 5
 		x = -1
 		y = 1
 		relative_position_id = SIC_true_empire_of_griffonkind
@@ -8036,7 +8049,7 @@ focus_tree = {
 		id = SIC_pater_patriae
 		icon = GFX_SIC_pater_patriae
 		prerequisite = { focus = SIC_true_empire_of_griffonkind }
-		cost = 10
+		cost = 8
 		x = 0
 		y = 2
 		relative_position_id = SIC_true_empire_of_griffonkind
@@ -8051,7 +8064,7 @@ focus_tree = {
 		id = SIC_barbaroi_councils
 		icon = GFX_SIC_barbaroi_councils
 		prerequisite = { focus = SIC_harmonia_et_honor }
-		cost = 10
+		cost = 5
 		x = -2
 		y = 1
 		relative_position_id = SIC_harmonia_et_honor
@@ -8066,7 +8079,7 @@ focus_tree = {
 		id = SIC_princeps_senatus
 		icon = GFX_SIC_princeps_senatus
 		prerequisite = { focus = SIC_harmonia_et_honor }
-		cost = 10
+		cost = 5
 		x = 0
 		y = 2
 		relative_position_id = SIC_harmonia_et_honor
@@ -8082,7 +8095,7 @@ focus_tree = {
 		icon = GFX_SIC_something_dead_made_new
 		prerequisite = { focus = SIC_barbaroi_councils }
 		prerequisite = { focus = SIC_princeps_senatus }
-		cost = 10
+		cost = 5
 		x = 0
 		y = 2
 		relative_position_id = SIC_barbaroi_councils
@@ -8099,7 +8112,7 @@ focus_tree = {
 		prerequisite = { focus = SIC_true_empire_of_griffonkind }
 		prerequisite = { focus = SIC_imperial_mythos }
 		prerequisite = { focus = SIC_revive_language }
-		cost = 10
+		cost = 5
 		x = 1
 		y = 1
 		relative_position_id = SIC_true_empire_of_griffonkind
@@ -8114,7 +8127,7 @@ focus_tree = {
 		id = SIC_generals_of_the_empire
 		icon = GFX_SIC_generals_of_the_empire
 		prerequisite = { focus = SIC_resurrection_of_the_spirit }
-		cost = 10
+		cost = 5
 		x = 2
 		y = 1
 		relative_position_id = SIC_resurrection_of_the_spirit
@@ -8148,7 +8161,7 @@ focus_tree = {
 		id = SIC_dux_esercitus
 		icon = GFX_SIC_dux_esercitus
 		prerequisite = { focus = SIC_resurrection_of_the_spirit }
-		cost = 10
+		cost = 5
 		x = 0
 		y = 2
 		relative_position_id = SIC_resurrection_of_the_spirit
@@ -8164,7 +8177,7 @@ focus_tree = {
 		icon = GFX_SIC_something_old_made_immortal
 		prerequisite = { focus = SIC_generals_of_the_empire }
 		prerequisite = { focus = SIC_dux_esercitus }
-		cost = 10
+		cost = 5
 		x = 0
 		y = 2
 		relative_position_id = SIC_generals_of_the_empire
@@ -8188,7 +8201,16 @@ focus_tree = {
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_bello_griffkino"
-			create_wargoal = { type = annex_everything target = event_target:griffonian_empire }
+			IF = {
+				limit = {
+					owns_state = 382
+				}
+				add_stability = 0.1
+				add_war_support = 0.1
+			}
+			ELSE = {
+				create_wargoal = { type = annex_everything target = event_target:griffonian_empire }
+			}
 		}
 	}
 
@@ -8217,10 +8239,15 @@ focus_tree = {
 		y = 8
 		ai_will_do = { factor = 10 }
 		available = {
+			has_country_leader = {
+				id = 50003
+				ruling_only = yes 
+				name = "Frederick of Yale-Gamia"
+			}
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_the_imperial_restoration"
-			
+			country_event = sicameon_frtr_frd.2
 		}
 	}
 
@@ -8284,7 +8311,7 @@ focus_tree = {
 		icon = GFX_SIC_eastern_countries
 		prerequisite = { focus = SIC_the_problem_before_us }
 		cost = 10
-		x = -12
+		x = -10
 		y = 1
 		relative_position_id = SIC_the_problem_before_us
 		ai_will_do = { factor = 100 }
@@ -8321,7 +8348,7 @@ focus_tree = {
 		icon = GFX_SIC_a_meeting_with_taillow
 		prerequisite = { focus = SIC_cyanlosia }
 		cost = 1
-		x = 0
+		x = -1
 		y = 1
 		relative_position_id = SIC_cyanlosia
 		ai_will_do = { factor = 100 }
@@ -8337,11 +8364,11 @@ focus_tree = {
 	focus = {
 		id = SIC_a_deep_reflection
 		icon = GFX_SIC_a_deep_reflection
-		prerequisite = { focus = SIC_a_meeting_with_taillow }
+		prerequisite = { focus = SIC_cyanlosia }
 		cost = 1
-		x = 0
+		x = 1
 		y = 1
-		relative_position_id = SIC_a_meeting_with_taillow
+		relative_position_id = SIC_cyanlosia
 		ai_will_do = { factor = 100 }
 		available = {
 			country_exists = CYA
@@ -8355,9 +8382,10 @@ focus_tree = {
 	focus = {
 		id = SIC_a_daring_proposal
 		icon = GFX_SIC_facing_the_sun
-		prerequisite = { focus = SIC_a_deep_reflection }
+		prerequisite = { focus = SIC_a_meeting_with_taillow  }
+		prerequisite = { focus = SIC_a_deep_reflection  }
 		cost = 1
-		x = 0
+		x = -1
 		y = 1
 		relative_position_id = SIC_a_deep_reflection
 		ai_will_do = { factor = 100 }
@@ -8373,11 +8401,11 @@ focus_tree = {
 	focus = {
 		id = SIC_a_royal_unification
 		icon = GFX_SIC_royal_unification
-		prerequisite = { focus = SIC_a_deep_reflection }
+		prerequisite = { focus = SIC_a_daring_proposal }
 		cost = 4
 		x = 0
 		y = 1
-		relative_position_id = SIC_a_deep_reflection
+		relative_position_id = SIC_a_daring_proposal
 		ai_will_do = { factor = 100 }
 		available = {
 			country_exists = CYA
