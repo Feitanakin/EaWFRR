@@ -1,4 +1,4 @@
-﻿capital = 445
+capital = 445
 oob = "SIC_1007"
 set_research_slots = 3
 
@@ -78,6 +78,7 @@ add_ideas = {
 	republican_tension
 	dead_monarchy
 	swordfish_claws
+	militia_dependence
 	eternal_navy_1
 	outdated_industry
 	limited_conscription
