@@ -1,6 +1,7 @@
 ﻿capital = 445
 oob = "SIC_1007"
 set_research_slots = 3
+add_manpower = 50000
 
 set_technology = {
 	griffon_race = 1
@@ -131,6 +132,7 @@ recruit_character = SIC_angel_picorroca
 recruit_character = SIC_lucia_pico_de_fuego
 recruit_character = SIC_jose_plumarroja
 recruit_character = SIC_viscount_trubach
+recruit_character = SIC_juan_guilloto
 
 set_rule = {
 	can_generate_female_aces = yes

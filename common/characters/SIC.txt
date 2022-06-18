@@ -1,5 +1,24 @@
 	characters={
 	
+	SIC_juan_guilloto={
+		name=SIC_juan_guilloto
+		portraits={
+			army={
+				large="gfx/leaders/SIC/Sicameon_mountaineer.tga"
+				small="GFX_idea_Sicameon_mountaineer"
+			}
+		}
+		corps_commander={
+			traits={ griffon_race_trait trait_mountaineer war_hero }
+			skill=3
+			attack_skill=3
+			defense_skill=1
+			planning_skill=2
+			logistics_skill=3
+			legacy_id=1105
+		}
+	}
+	
 	SIC_Frederick={
 		name=SIC_Frederick_of_Yale_Gamia
 		portraits={
