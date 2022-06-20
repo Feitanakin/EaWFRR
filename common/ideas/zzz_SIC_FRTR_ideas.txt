@@ -153,6 +153,25 @@ ideas = {
 			}
 		}
 
+		republican_tension_4 = {
+			name = republican_tension
+			
+			picture = republican_tension
+			
+			allowed = {
+				tag = SIC
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.3
+				political_power_factor = -0.15
+				democratic_drift = 0.12
+				communism_drift = 0.04
+			}
+		}
+
 		dead_monarchy = {
 			name = dead_monarchy
 			
@@ -263,7 +282,7 @@ ideas = {
 		}
 		
 		antiespadarte = { #Anti-Espadarte Smear Campaign
-			#picture = broken_resistance
+			picture = broken_resistance
 			allowed = {
 				tag = SIC
 			}
@@ -275,7 +294,7 @@ ideas = {
 		}
 
 		faith_harmony = {
-			#picture = harmonic_stagnation3
+			picture = harmonic_stagnation3
 			allowed = {
 				tag = SIC
 			}
@@ -290,7 +309,7 @@ ideas = {
 		}
 
 		unifying_nation = {
-			#picture = generic_pp_unity_bonus
+			picture = generic_pp_unity_bonus
 			allowed = {
 				tag = SIC
 			}
@@ -391,7 +410,7 @@ ideas = {
 			removal_cost = -1
 			modifier = { 
 				stability_factor = 0.05
-				neutrality_drift = 0.01
+				democracy_drift = 0.01
 			}
 		}
 		
@@ -485,7 +504,31 @@ ideas = {
 				army_defence_factor = 0.1
 			}
 		}
+
+		offensive_tactical_approach = {
+			picture = ast_volunteer_defence_corps
+			allowed = {
+				tag = SIC
+			}
+			removal_cost = -1
+			modifier = { 
+				conscription = 0.01
+				experience_gain_army = 0.1
+				army_attack_factor = 0.1
+			}
+		}
 		
+		riverland_funds = {
+			picture = Generic_bank_idea_icon
+			allowed = {
+				tag = SIC
+			}
+			removal_cost = -1
+			modifier = { 
+				consumer_goods_factor = -0.1
+			}
+		}
+	
 		####FRD LIMITED
 		
 		SIC_FRD_fur_das_kaiserreich = {

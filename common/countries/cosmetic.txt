@@ -14,6 +14,10 @@ frtr_karthinian_empire = {
 	color = rgb { 120 20 72 }
 	color_ui = rgb { 120 20 72 }
 }
+frtr_saicameon_prywhen = {
+	color = rgb { 156 62 30 }
+	color_ui = rgb { 156 62 30 }
+}
 FEA_dutch = {
 	color = rgb { 122 150 128 }
 	color_ui = rgb { 122 150 128 }

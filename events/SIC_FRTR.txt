@@ -41,16 +41,23 @@ country_event = {
 	option = {
 		name = sicameon_frtr.3.b
 		ai_chance = {
-			factor = 33
+			factor = 34
 		}
 		complete_national_focus = SIC_an_heir_in_exile
 		recruit_character = SIC_Tomado
 		promote_character = SIC_Tomado
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = no
+		}
+		hidden_effect = {
+			set_cosmetic_tag = SIC_tomado_the_king
+		}
 	}
 	option = {
 		name = sicameon_frtr.3.c
 		ai_chance = {
-			factor = 34
+			factor = 33
 		}
 		complete_national_focus = SIC_springtime_sic
 		recruit_character = SIC_Petronilo
@@ -291,6 +298,7 @@ country_event = {
 			elections_allowed = no
 		}
 		set_country_flag = SIC_harmonic_victory
+		remove_ideas = republican_tension_2
 		ai_chance = {
 			factor = 35
 		}
@@ -303,6 +311,7 @@ country_event = {
 			elections_allowed = no
 		}
 		set_country_flag = SIC_communist_victory
+		remove_ideas = republican_tension_2
 		ai_chance = {
 			factor = 40
 		}
@@ -315,6 +324,7 @@ country_event = {
 			elections_allowed = no
 		}
 		set_country_flag = SIC_fascist_victory
+		remove_ideas = republican_tension_2
 		ai_chance = {
 			factor = 25
 		}
@@ -393,9 +403,9 @@ country_event = {
 			factor = 50
 		}
 		SIC = {
-			recruit_character = GRW_rain_twister
-			recruit_character = GRW_witia_gryphon
-			recruit_character = GRW_koldvin
+			recruit_character = SIC_rain_twister
+			recruit_character = SIC_witia_gryphon
+			recruit_character = SIC_koldvin
 		}
 	}
 	is_triggered_only = yes
@@ -466,6 +476,58 @@ country_event = {
 	#picture = 
 	option = {
 		name = sicameon_frtr.27.a
+	}
+	is_triggered_only = yes
+}
+
+country_event = {
+	id = sicameon_frtr.28
+	title = sicameon_frtr.28.t
+	desc = sicameon_frtr.28.d
+	#picture = 
+	option = {
+		name = sicameon_frtr.28.a
+		ai_chance = {
+			factor = 80
+		}
+		SIC = {
+			country_event= { days = 1 id = sicameon_frtr.29 }
+		}
+	}
+	option = {
+		name = sicameon_frtr.28.b
+		ai_chance = {
+			factor = 20
+		}
+		SIC = {
+			country_event= { days = 1 id = sicameon_frtr.30 }
+		}
+	}
+	is_triggered_only = yes
+}
+
+country_event = {
+	id = sicameon_frtr.29
+	title = sicameon_frtr.29.t
+	desc = sicameon_frtr.29.d
+	#picture = 
+	option = {
+		name = sicameon_frtr.29.a
+		add_timed_idea = {
+			idea = riverland_funds
+			days = 180
+		}
+	}
+	is_triggered_only = yes
+}
+
+country_event = {
+	id = sicameon_frtr.30
+	title = sicameon_frtr.30.t
+	desc = sicameon_frtr.30.d
+	#picture = 
+	option = {
+		name = sicameon_frtr.30.a
 	}
 	is_triggered_only = yes
 }

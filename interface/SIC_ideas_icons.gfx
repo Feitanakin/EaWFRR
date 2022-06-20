@@ -28,4 +28,15 @@ spriteTypes = {
 		name = "GFX_idea_brodfeld_diaspora"
 		texturefile = "gfx/interface/ideas/brodfeld_diaspora.dds"
 	}
+
+	SpriteType = {
+		name = "GFX_idea_new_religious_mythos"
+		texturefile = "gfx/interface/ideas/new_religious_mythos.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_idea_new_griffonian_identity"
+		texturefile = "gfx/interface/ideas/new_griffonian_identity.dds"
+	}
+
 }

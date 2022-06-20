@@ -340,7 +340,14 @@
  SIC_liberating_falcoria:0 "Liberating Falcoria"
  SIC_communizing_falcoria:0 "Communizing Falcoria"
  
+ ### Decisions ###
  
+ SIC_spawn_insurgencies:0 "Prywhen insurgencies"
+ SIC_spawn_insurgencies_1:0 "Activate insurgencies."
+ SIC_anti_piracy:0 "Anti Piracy Campaign"
+ SIC_anti_piracy_remove_1:0 "Fight them in the streets."
+ SIC_anti_piracy_remove_2:0 "Arrest corrupted politicians."
+ SIC_anti_piracy_remove_3:0 "Launch raids on all hideouts."
  
 ### Ideas ###
 
@@ -373,6 +380,7 @@
  harmony_with_enlightened_characteristics:0 "Harmony With Enlightened Characteristics"
  tactical_reorganization_efforts:0 "Tactical Reorganization Efforts"
  defensive_tactical_approach:0 "Defensive Tactical Approach"
+ offensive_tactical_approach:0 "Offensive Tactical Approach"
  new_religious_mythos:0 "New Religious mythos"
  harmony_for_griffonia:0 "Harmony for Griffonia"
  new_legion:0 "New Legion"
@@ -380,6 +388,7 @@
  empire_of_many_tongues:0 "Empire of many tongues"
  unifying_nation:0 "Unifying Nation"
  antiespadarte:0 "Anti-Espadarte Smear Campaign"
+ riverland_funds:0 "Riverland Funds"
 
 ### Traits ###
 
@@ -495,4 +504,24 @@
  sicameon_frtr.27.t:0 "Grand Duke meets with Republican Leaders"
  sicameon_frtr.27.d:0 "Desc"
  sicameon_frtr.27.a:0 "Ok."
+ sicameon_frtr.28.t:0 "Request From Sicameon"
+ sicameon_frtr.28.d:0 "Pls send help."
+ sicameon_frtr.28.a:0 "Granted."
+ sicameon_frtr.28.b:0 "Nope."
+ sicameon_frtr.29.t:0 "Funds Granted."
+ sicameon_frtr.29.d:0 "Desc"
+ sicameon_frtr.29.a:0 "Good good."
+ sicameon_frtr.30.t:0 "No."
+ sicameon_frtr.30.d:0 "Desc"
+ sicameon_frtr.30.a:0 "Oh for fuck sake."
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
  

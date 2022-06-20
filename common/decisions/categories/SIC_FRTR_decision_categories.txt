@@ -13,6 +13,7 @@ SIC_swordfish_campaign_cat = {
     }
 }
 SIC_anti_piracy = {
+	icon = border_war
     priority = {
         base = 100
     }
@@ -27,6 +28,7 @@ SIC_anti_piracy = {
     }
 }
 SIC_spawn_insurgencies = {
+	icon = army_reform
     priority = {
         base = 100
     }

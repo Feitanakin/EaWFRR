@@ -1,6 +1,6 @@
 SIC_spawn_insurgencies = {
 	SIC_spawn_insurgencies_1 = {
-		icon = hammer_and_horseshoe_decision
+		icon = rifles
 		visible = {
 			OR = {
 				has_war_with = BRF
@@ -29,7 +29,7 @@ SIC_spawn_insurgencies = {
 
 SIC_anti_piracy = {
 	SIC_anti_piracy_remove_1 = {
-		icon = hammer_and_horseshoe_decision
+		icon = bird_skull
 		visible = {
 			has_idea = swordfish_claws
 		}
@@ -49,7 +49,7 @@ SIC_anti_piracy = {
 		}
 	}
 	SIC_anti_piracy_remove_2 = {
-		icon = hammer_and_horseshoe_decision
+		icon = bird_skull
 		visible = {
 			has_idea = swordfish_claws_1
 		}
@@ -69,7 +69,7 @@ SIC_anti_piracy = {
 		}
 	}
 	SIC_anti_piracy_remove_3 = {
-		icon = hammer_and_horseshoe_decision
+		icon = bird_skull
 		visible = {
 			has_idea = swordfish_claws_2
 		}
@@ -85,7 +85,7 @@ SIC_anti_piracy = {
 		}
 
 		remove_effect = {
-			remove_idea = swordfish_claws_2
+			remove_ideas = swordfish_claws_2
 		}
 	}
 }

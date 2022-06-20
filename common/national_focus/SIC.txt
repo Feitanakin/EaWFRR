@@ -6281,6 +6281,12 @@ focus_tree = {
 		prerequisite = {
 			focus = SIC_immediate_change
 		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = republican_tension_3
+				add_idea = republican_tension_4
+			}
+		}
 	}
 	focus = {
 		id = SIC_democracy_now
@@ -6304,27 +6310,13 @@ focus_tree = {
 		x = 2
 		y = 5
 		completion_reward = {
-		remove_ideas = republican_tension
+			remove_ideas = republican_tension_4
 		}
 		prerequisite = {
 			focus = SIC_second_chance
 		}
 		prerequisite = {
 			focus = SIC_democracy_now
-		}
-	}
-	focus = {
-		id = SIC_looking_outwards
-		icon = GFX_goal_foreign_diplomacy
-		cost = 1
-		relative_position_id = SIC_springtime_sic
-		x = 0
-		y = 6
-		prerequisite = {
-			focus = SIC_free_elections
-		}
-		prerequisite = {
-			focus = SIC_hearts_minds
 		}
 	}
 
@@ -6620,6 +6612,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_nonetheless"
 			swap_ideas = { remove_idea = idealism_above_all_1 add_idea = idealism_above_all_2 }
+			remove_ideas = republican_tension
 		}
 	}
 
@@ -7080,8 +7073,19 @@ focus_tree = {
 		cost = 5
 		available_if_capitulated = yes
 		prerequisite = { focus = SIC_the_best_defense }
+		bypass = {
+			RCT = {
+				exists = no
+			}
+		}
 		ai_will_do = {
 			factor = 1
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_bargain_for_riverland_funds"
+			RCT = {
+				country_event = { days = 0 id = sicameon_frtr.28 }
+			}
 		}
 	}
 
@@ -7096,6 +7100,11 @@ focus_tree = {
 		prerequisite = { focus = SIC_bargain_for_riverland_funds }
 		available = {
 			EQC = { is_puppet = no }
+		}
+		bypass = {
+			EQC = {
+				has_government = communism
+			}
 		}
 		ai_will_do = {
 			factor = 1
@@ -7174,6 +7183,10 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_is_a_good_offense"
+			swap_ideas = { remove_idea = tactical_reorganization_efforts add_idea = offensive_tactical_approach }
+		}
 	}
 
 	#Focus for Sycaceia call us to battle!
@@ -7187,6 +7200,10 @@ focus_tree = {
 		prerequisite = { focus = SIC_is_a_good_offense }
 		ai_will_do = {
 			factor = 1
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_sycaceia_call_us_to_battle"
+			add_manpower = 50000
 		}
 	}
 
@@ -7208,16 +7225,14 @@ focus_tree = {
 		prerequisite = { focus = SIC_the_best_defense }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_settle_the_situation_with_gryphus"
-			add_state_claim = 514
-			add_state_claim = 512
-			add_state_claim = 594
-			create_wargoal= {
-				type = annex_everything 
+			add_state_core = 514
+			add_state_core = 512
+			add_state_core = 594
+			create_wargoal = {
+				type = take_state_focus
 				target = GRU
+				generator = { 514 512 594 }
 			}
-			514 = { add_to_ROOT_potential_cores = yes }
-			512 = { add_to_ROOT_potential_cores = yes }
-			594 = { add_to_ROOT_potential_cores = yes }
 		}
 		ai_will_do = {
 			factor = 1
