@@ -41,23 +41,16 @@ country_event = {
 	option = {
 		name = sicameon_frtr.3.b
 		ai_chance = {
-			factor = 34
+			factor = 33
 		}
 		complete_national_focus = SIC_an_heir_in_exile
 		recruit_character = SIC_Tomado
 		promote_character = SIC_Tomado
-		set_politics = {
-			ruling_party = democratic
-			elections_allowed = no
-		}
-		hidden_effect = {
-			set_cosmetic_tag = SIC_tomado_the_king
-		}
 	}
 	option = {
 		name = sicameon_frtr.3.c
 		ai_chance = {
-			factor = 33
+			factor = 34
 		}
 		complete_national_focus = SIC_springtime_sic
 		recruit_character = SIC_Petronilo
@@ -282,56 +275,6 @@ country_event = {
 }
 
 country_event = {
-	id = sicameon_frtr.17
-	immediate = {log = "[GetDateText]: [Root.GetName]: event sicameon_frtr.17"}
-	title = sicameon_frtr.17.t
-	desc = sicameon_frtr.17.d
-	picture = GFX_event_feast
-	
-	is_triggered_only = yes
-	
-	fire_only_once = yes
-	option = { #Democrats
-		name = sicameon_frtr.17.a
-		set_politics = {
-			ruling_party = democratic
-			elections_allowed = no
-		}
-		set_country_flag = SIC_harmonic_victory
-		remove_ideas = republican_tension_2
-		ai_chance = {
-			factor = 35
-		}
-	}
-	
-	option = { #Syndies
-		name = sicameon_frtr.17.b
-		set_politics = {
-			ruling_party = communism
-			elections_allowed = no
-		}
-		set_country_flag = SIC_communist_victory
-		remove_ideas = republican_tension_2
-		ai_chance = {
-			factor = 40
-		}
-	}
-	
-	option = { #fascists
-		name = sicameon_frtr.17.c
-		set_politics = {
-			ruling_party = fascism
-			elections_allowed = no
-		}
-		set_country_flag = SIC_fascist_victory
-		remove_ideas = republican_tension_2
-		ai_chance = {
-			factor = 25
-		}
-	}
-}
-
-country_event = {
 	id = sicameon_frtr.18
 	title = sicameon_frtr.18.t
 	desc = sicameon_frtr.18.d
@@ -339,8 +282,8 @@ country_event = {
 	option = {
 		name = sicameon_frtr.18.a
 		swap_ideas = {
-			remove_idea = swordfish_claws
-			add_idea = swordfish_claws_1
+			remove_idea = swordfish_claws_1
+			add_idea = swordfish_claws_2
 		}
 	}
 	is_triggered_only = yes
@@ -403,9 +346,9 @@ country_event = {
 			factor = 50
 		}
 		SIC = {
-			recruit_character = SIC_rain_twister
-			recruit_character = SIC_witia_gryphon
-			recruit_character = SIC_koldvin
+			recruit_character = GRW_rain_twister
+			recruit_character = GRW_witia_gryphon
+			recruit_character = GRW_koldvin
 		}
 	}
 	is_triggered_only = yes
@@ -480,58 +423,6 @@ country_event = {
 	is_triggered_only = yes
 }
 
-country_event = {
-	id = sicameon_frtr.28
-	title = sicameon_frtr.28.t
-	desc = sicameon_frtr.28.d
-	#picture = 
-	option = {
-		name = sicameon_frtr.28.a
-		ai_chance = {
-			factor = 80
-		}
-		SIC = {
-			country_event= { days = 1 id = sicameon_frtr.29 }
-		}
-	}
-	option = {
-		name = sicameon_frtr.28.b
-		ai_chance = {
-			factor = 20
-		}
-		SIC = {
-			country_event= { days = 1 id = sicameon_frtr.30 }
-		}
-	}
-	is_triggered_only = yes
-}
-
-country_event = {
-	id = sicameon_frtr.29
-	title = sicameon_frtr.29.t
-	desc = sicameon_frtr.29.d
-	#picture = 
-	option = {
-		name = sicameon_frtr.29.a
-		add_timed_idea = {
-			idea = riverland_funds
-			days = 180
-		}
-	}
-	is_triggered_only = yes
-}
-
-country_event = {
-	id = sicameon_frtr.30
-	title = sicameon_frtr.30.t
-	desc = sicameon_frtr.30.d
-	#picture = 
-	option = {
-		name = sicameon_frtr.30.a
-	}
-	is_triggered_only = yes
-}
-
 add_namespace = sicameon_frtr_frd
 country_event = {
 	id = sicameon_frtr_frd.1
@@ -541,13 +432,18 @@ country_event = {
 	option = {
 		name = sicameon_frtr_frd.1.a
 		declare_war_on = {
-			target = MIT
+			target = 386.owner
 			type = annex_everything
 		}
-		MIT = {
-			add_timed_idea = {
-				idea = SIC_FRD_astsprida
-				days = 12
+		IF = {
+			limit = {
+				country_exists = MIT
+			}
+			MIT = {
+				add_timed_idea = {
+					idea = SIC_FRD_astsprida
+					days = 12
+				}
 			}
 		}
 	}
@@ -562,17 +458,6 @@ country_event = {
 	option = {
 		name = sicameon_frtr_frd.2.a
 		add_political_power = 150
-	}
-	is_triggered_only = yes
-}
-
-country_event = {
-	id = sicameon_frtr_frd.3
-	title = sicameon_frtr_frd.3.t
-	desc = sicameon_frtr_frd.3.d
-	#picture =
-	option = {
-		name = sicameon_frtr_frd.3.a
 	}
 	is_triggered_only = yes
 }
@@ -635,6 +520,8 @@ country_event = {
 	}
 	is_triggered_only = yes
 }
+
+
 
 
 add_namespace = sicameon_frtr_com
