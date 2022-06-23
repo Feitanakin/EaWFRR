@@ -120,14 +120,14 @@ focus_tree = {
 				GRI = {
 					is_faction_leader = yes
 					has_country_leader = {
-						name = "Duchess Gabriela Eagleclaw"
+						character = STW_gabriela_eagleclaw 
 						ruling_only = yes
 					}
 					has_completed_focus = GRI_eagleclaw
 				}
 				STW = {
 					has_country_leader = {
-						name = "Duchess Gabriela Eagleclaw"
+						character = STW_gabriela_eagleclaw 
 						ruling_only = yes
 					}
 				}
@@ -431,7 +431,7 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_STABILITY }
 	}
-	
+
 	focus = {
 		id = BRZ_reformation_act
 		icon = GFX_goal_constitutional_guarantees
@@ -1345,7 +1345,7 @@ focus_tree = {
 
 	focus = {
 		id = BRZ_the_free_mountains
-		icon = GFX_goal_liberty
+		icon = GFX_goal_generic_liberty_statue
 		prerequisite = { focus = BRZ_harmonic_life_laws }
 		x = 1
 		y = 1
@@ -1516,7 +1516,7 @@ focus_tree = {
 					is_in_faction_with = GRI
 					GRI = {
 						has_country_leader = {
-							name = "Duchess Gabriela Eagleclaw"
+							character = STW_gabriela_eagleclaw 
 							ruling_only = yes
 						}
 					}
@@ -2165,7 +2165,7 @@ focus_tree = {
 				limit = {
 					GRI = {
 						has_country_leader = {
-							name = "Duchess Gabriela Eagleclaw"
+							character = STW_gabriela_eagleclaw 
 							ruling_only = yes
 						}
 					}
@@ -2689,6 +2689,9 @@ focus_tree = {
 			create_faction = "spoticus_league"
 			clr_country_flag = herzland_diplomacy_blocked
 			unlock_decision_category_tooltip = BRZ_spoticus_league_decisions
+			
+			hidden_effect = {
+			ZES_oppressive_countries_calculate = yes
 
 			every_country = {
 				limit = {
@@ -3197,7 +3200,7 @@ focus_tree = {
 		available = {
 			has_government = communism
 			has_country_leader = {
-				name = "Kimball Barking-Sun"
+				character = BRZ_kimball_barking_sun
 				ruling_only = yes
 			}
 		}
@@ -4736,7 +4739,7 @@ focus_tree = {
 
 		}
 
-		will_lead_to_war_with = GRI
+		will_lead_to_war_with = GRI # tag alias for event_target:griffonian_empire
 
 		bypass = {
 			382 = {
@@ -4776,6 +4779,37 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 	}
 
+	focus = {
+		id = BRZ_return_of_the_emperor
+		icon = GFX_goal_grover_vi
+		prerequisite = { focus = BRZ_the_ture_dogs_of_griffonhime }
+		x = 0
+		y = 1
+		relative_position_id = BRZ_the_ture_dogs_of_griffonhime
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available = {
+			is_subject = no
+			382 = {
+				is_owned_by = ROOT
+			}
+		}
+		select_effect = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BRZ_return_of_the_emperor"
 			event_target:GRI_emperor_grover_vi_target = {
@@ -6758,6 +6792,7 @@ focus_tree = {
 		will_lead_to_war_with = JFT
 		will_lead_to_war_with = POM
 		will_lead_to_war_with = FLO
+		will_lead_to_war_with = JES
 
 		bypass = {
 			JER = {
@@ -6788,6 +6823,8 @@ focus_tree = {
 				exists = no
 			}
 			owns_state = 422
+			JES = {
+				exists = no
 		}
 
 		cancel_if_invalid = yes
@@ -6878,6 +6915,15 @@ focus_tree = {
 					country_event = BRZ_empire.1
 				}
 			}
+			if = {
+				limit = {
+					JES = {
+						exists = yes
+					}
+				}
+				JES = {
+					country_event = BRZ_empire.1
+				}
 
 			every_state = {
 				limit = {
@@ -6962,6 +7008,16 @@ focus_tree = {
 				}
 				add_claim_by = ROOT
 			}
+			every_state = {
+				limit = {
+					is_core_of = JES
+					NOT = {
+						is_core_of = ROOT
+						is_claimed_by = ROOT
+						is_owned_by = ROOT
+					}
+				}
+				add_claim_by = ROOT
 		}
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 	}
