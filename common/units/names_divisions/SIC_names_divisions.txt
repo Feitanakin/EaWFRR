@@ -61,28 +61,8 @@ SIC_INF_01 = {
 		11 = { "%dª Milicia Campesina de Cresta Arahno" }
 	}
 }
+
 SIC_INF_02 = { 
-	name = "Milicia Nacional"
-
-	for_countries = { SIC }
-
-	can_use = { NOT = { has_government = communism } }
-
-	division_types = { "infantry" "magical_infantry" }
-
-	# Number reservation system will tie to another group
-	#link_numbering_with = { GER_Gar_01 }
-
-	fallback_name = "%dª Milicia Nacional"
-
-	# Names with numbers (only one number per entry)ª
-	# It's okay to have gaps in numberingª
-	ordered = { 
-		1 = { "%dª Milicia Nacional" }
-	}
-}
-
-SIC_INF_03 = { 
 	name = "Sicameon Legión"
 
 	for_countries = { SIC }
@@ -100,6 +80,7 @@ SIC_INF_03 = {
 	# It's okay to have gaps in numberingª
 	ordered = { 
 		1 = { "%dª Sicameon Legión" }
+		2 = { "%dª Sicameon Legión" }
 	}
 }
 
