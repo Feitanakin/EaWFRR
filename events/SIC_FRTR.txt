@@ -32,7 +32,7 @@ country_event = {
 	option = {
 		name = sicameon_frtr.3.a
 		ai_chance = {
-			factor = 33
+			factor = 1
 		}
 		complete_national_focus = SIC_a_phantom_from_the_past 
 		recruit_character = SIC_Frederick
@@ -41,7 +41,7 @@ country_event = {
 	option = {
 		name = sicameon_frtr.3.b
 		ai_chance = {
-			factor = 34
+			factor = 98
 		}
 		complete_national_focus = SIC_an_heir_in_exile
 		recruit_character = SIC_Tomado
@@ -57,7 +57,7 @@ country_event = {
 	option = {
 		name = sicameon_frtr.3.c
 		ai_chance = {
-			factor = 33
+			factor = 1
 		}
 		complete_national_focus = SIC_springtime_sic
 		recruit_character = SIC_Petronilo
@@ -273,10 +273,16 @@ country_event = {
 	option = {
 		name = sicameon_frtr.16.a
 		set_country_flag = SIC_monarch_elected
+		ai_chance = {
+			factor = 98
+		}
 	}
 	option = {
 		name = sicameon_frtr.16.b
 		set_country_flag = SIC_domestic_enemies
+		ai_chance = {
+			factor = 2
+		}
 	}
 	is_triggered_only = yes
 }

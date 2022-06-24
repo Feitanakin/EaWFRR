@@ -1,0 +1,183 @@
+ai_historical_focus_list_SIC= {
+	ai_national_focuses = {
+		SIC_the_decadent_regency
+		SIC_reshuffle_our_budget
+		SIC_a_show_of_strength
+		SIC_whip_our_navy_back_into_shape
+		SIC_an_interesting_proposal
+		SIC_an_heir_in_exile
+		SIC_school_system
+		SIC_industrial_base
+		SIC_education_appropriation
+		SIC_new_school_buildings
+		SIC_enthusiasm
+		SIC_regency
+		SIC_piracy
+		SIC_retirements
+		SIC_generation
+		SIC_examine_militia
+		SIC_blackhollow
+		SIC_expand_national_guard
+		SIC_standardize_militia
+		SIC_approach
+		SIC_administration
+		SIC_in_check
+		SIC_nonetheless
+		SIC_with_honour
+		SIC_modern_tooling
+		SIC_capital_concentration
+		SIC_brodfeldian_diaspora
+		SIC_freemasons
+		SIC_intelligentsia
+		SIC_former_revolutionary
+		SIC_brodfeld_in_exile
+		SIC_dreams_of_reclamation
+		SIC_the_cyalonosian_question
+		SIC_sow_discontentement
+		SIC_organise_insurgencies
+		SIC_a_war_of_reclamation
+		SIC_procure_modern_equipment
+		SIC_refit_old_cannons
+		SIC_allinas_process_modernization
+		SIC_practical_curriculum
+		SIC_return_of_the_prince
+		SIC_sycaecia_history
+		SIC_unite_the_evi_valley
+		SIC_mortal_backs_hearts_minds
+		SIC_city_universities
+		SIC_trials_the_red
+		SIC_religious_syncretism
+		SIC_trial_the_legionnaires
+		SIC_dream_of_a_better_future
+		SIC_revelation_of_an_ancient_past
+		SIC_return_in_karthin
+		SIC_research_grants
+		SIC_develop_islands
+		SIC_develop_heartlands
+		SIC_develop_mountains
+		SIC_restitutor_orbis
+		SIC_true_empire_of_griffonkind
+		SIC_imperial_mythos
+		SIC_revive_language
+		SIC_resurrection_of_the_spirit
+		SIC_generals_of_the_empire
+		SIC_dux_esercitus
+		SIC_something_old_made_immortal
+		SIC_pater_patriae
+		SIC_harmonia_et_honor
+		SIC_barbaroi_councils
+		SIC_princeps_senatus
+		SIC_something_dead_made_new
+		SIC_bello_griffkino
+		
+		
+	}
+}
+
+ai_focus_defense_SIC= {
+	research = {
+		defensive = 5.0
+		radar_tech = 1.0
+		construction_tech = 2.0
+		artillery = 2.0
+		race_tech = 2.0
+	}
+}
+
+ai_focus_aggressive_SIC= {
+	research = {
+		offensive = 5.0
+		synth_resources = 1.0
+		motorized_equipment = 2.0
+		armor = 20.0
+		race_tech = 5
+	}
+}
+
+ai_focus_war_production_SIC= {
+	research = {
+		industry = 10.0
+		construction_tech = 2.0
+		electronics = 2.0
+		computing_tech = 2.0
+		race_tech = 5.0
+	}
+}
+
+ai_focus_military_equipment_SIC= {
+	research = {
+		infantry_weapons = 50.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+		race_tech = 10
+	}
+}
+
+ai_focus_military_advancements_SIC= {
+	research = {
+		armor = 100.0
+		race_tech = 15
+		jet_technology = 5.0
+		land_doctrine = 25.0
+		rocketry = 7.5
+		radar_tech = 3.0
+		encryption_tech = 7.5
+		decryption_tech = 7.5
+		synth_resources = 3.0
+		motorized_equipment = 4.0
+		nuclear = 10.0
+		night_vision = 5.0
+	}
+}
+
+
+ai_focus_peaceful_SIC= {
+	research = {
+		industry = 15.0
+		construction_tech = 5.0
+		electronics = 10.0
+		computing_tech = 10.0
+		race_tech = 10
+	}
+}
+
+ai_focus_naval_SIC= {
+	research = {
+		naval_equipment = 7.0
+		naval_doctrine = 25.0
+		marine_tech = 10.0
+		dd_tech = 8.0
+		asw_tech = 5.0
+		cl_tech = 5.0
+		ca_tech = 5.0
+		bc_tech = 3.0
+		bb_tech = 8.0
+		shbb_tech = 5.0
+		tp_tech = 3.0
+		cv_tech = 5.0
+		ss_tech = 10.0
+	}
+}
+
+ai_focus_naval_air_SIC= {
+	research = {
+		naval_air = 4.0
+		naval_bomber = 3.0
+	}
+}
+
+ai_focus_aviation_SIC= {
+	research = {
+		air_doctrine = 25.0
+		light_air = 3.0
+		light_fighter = 3.0
+		jet_technology = 1.0
+		cas_bomber = 2.0
+		medium_air = 3.0
+		tactical_bomber = 5.0
+		heavy_air = 1.5
+		air_equipment = 5.0
+		para_tech = 10.0
+	}
+}
