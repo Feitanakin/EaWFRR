@@ -6087,8 +6087,9 @@ focus_tree = {
 		id = SIC_springtime_sic
 		icon = GFX_SIC_a_true_grand_duchess
 		cost = 10
-		x = 45
+		x = 47
 		y = 0
+		ai_will_do = { factor = 100 }
 		available = {
 			has_country_leader = {
 				id = 50001
@@ -6121,6 +6122,7 @@ focus_tree = {
 		relative_position_id = SIC_springtime_sic
 		x = 2
 		y = 1
+		ai_will_do = { factor = 100 }
 		prerequisite = {
 		   focus = SIC_springtime_sic
 		}
@@ -6135,6 +6137,7 @@ focus_tree = {
 		relative_position_id = SIC_springtime_sic
 		x = -3
 		y = 2
+		ai_will_do = { factor = 100 }
 		prerequisite = {
 			focus = SIC_make_the_best
 		}
@@ -6149,6 +6152,7 @@ focus_tree = {
 		relative_position_id = SIC_springtime_sic
 		x = -4
 		y = 3
+		ai_will_do = { factor = 100 }
 		completion_reward = {
 		add_political_power = -75
 				add_popularity = {
@@ -6168,6 +6172,7 @@ focus_tree = {
 		relative_position_id = SIC_springtime_sic
 		x = -4
 		y = 4
+		ai_will_do = { factor = 100 }
 		prerequisite = {
 			focus = SIC_deradical_cam
 		}
@@ -6182,6 +6187,7 @@ focus_tree = {
 		relative_position_id = SIC_springtime_sic
 		x = -2
 		y = 3
+		ai_will_do = { factor = 100 }
 		prerequisite = {
 			focus = SIC_no_hope_action
 		}
@@ -6196,6 +6202,7 @@ focus_tree = {
 		relative_position_id = SIC_springtime_sic
 		x = -2
 		y = 4
+		ai_will_do = { factor = 100 }
 		prerequisite = {
 			focus = SIC_anticorruption
 		}
@@ -6213,6 +6220,7 @@ focus_tree = {
 		relative_position_id = SIC_springtime_sic
 		x = -2
 		y = 5
+		ai_will_do = { factor = 100 }
 		prerequisite = {
 			focus = SIC_demonize_sword
 		}
@@ -6227,6 +6235,7 @@ focus_tree = {
 		relative_position_id = SIC_springtime_sic
 		x = 2
 		y = 2
+		ai_will_do = { factor = 100 }
 		prerequisite = {
 			focus = SIC_justify_regency
 		}
@@ -6242,6 +6251,7 @@ focus_tree = {
 		relative_position_id = SIC_springtime_sic
 		x = 1
 		y = 3
+		ai_will_do = { factor = 100 }
 		completion_reward = {
 		add_political_power = -50
 				add_popularity = {
@@ -6260,6 +6270,7 @@ focus_tree = {
 		relative_position_id = SIC_springtime_sic
 		x = 1
 		y = 4
+		ai_will_do = { factor = 100 }
 		completion_reward = {
 		add_manpower = 25000
 		add_popularity = {
@@ -6278,6 +6289,7 @@ focus_tree = {
 		relative_position_id = SIC_springtime_sic
 		x = 3
 		y = 3
+		ai_will_do = { factor = 100 }
 		prerequisite = {
 			focus = SIC_immediate_change
 		}
@@ -6295,6 +6307,7 @@ focus_tree = {
 		relative_position_id = SIC_springtime_sic
 		x = 3
 		y = 4
+		ai_will_do = { factor = 100 }
 		completion_reward = {
 		add_political_power = 100 
 		}
@@ -6309,6 +6322,7 @@ focus_tree = {
 		relative_position_id = SIC_springtime_sic
 		x = 2
 		y = 5
+		ai_will_do = { factor = 100 }
 		completion_reward = {
 			remove_ideas = republican_tension_4
 		}
@@ -6635,15 +6649,15 @@ focus_tree = {
 	focus = {#Focus for Dreams of reclamation
 		id = SIC_dreams_of_reclamation
 		icon = GFX_SIC_dreams_of_reclamation
-		x = 75
-		y = 0
+		x = 61
+		y = 8
 		cost = 2
 		available_if_capitulated = yes
 		available = {
 			has_completed_focus = SIC_brodfeld_in_exile
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 100
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_dreams_of_reclamation"
@@ -6655,13 +6669,13 @@ focus_tree = {
 	focus = {
 		id = SIC_sow_discontentement
 		icon = GFX_SIC_sow_discontent
-		x = 73
-		y = 1
+		x = 59
+		y = 9
 		cost = 5
 		available_if_capitulated = yes
 		prerequisite = { focus = SIC_dreams_of_reclamation }
 		ai_will_do = {
-			factor = 1
+			factor = 100
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_sow_discontentement"
@@ -6686,13 +6700,13 @@ focus_tree = {
 	focus = {
 		id = SIC_the_cyalonosian_question
 		icon = GFX_SIC_the_cyanolisian_question
-		x = 75
-		y = 1
+		x = 61
+		y = 9
 		cost = 8
 		available_if_capitulated = yes
 		prerequisite = { focus = SIC_dreams_of_reclamation }
 		ai_will_do = {
-			factor = 1
+			factor = 100
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_the_cyalonosian_question"
@@ -6708,13 +6722,13 @@ focus_tree = {
 	focus = {
 		id = SIC_organise_insurgencies
 		icon = GFX_SIC_organize_insurgencies
-		x = 77
-		y = 1
+		x = 63
+		y = 9
 		cost = 5
 		available_if_capitulated = yes
 		prerequisite = { focus = SIC_dreams_of_reclamation }
 		ai_will_do = {
-			factor = 1
+			factor = 100
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_organise_insurgencies"
@@ -6726,8 +6740,8 @@ focus_tree = {
 	focus = {
 		id = SIC_a_war_of_reclamation
 		icon = GFX_SIC_a_war_of_reclamation
-		x = 75
-		y = 2
+		x = 61
+		y = 10
 		cost = 8
 		available_if_capitulated = yes
 		prerequisite = { 
@@ -6740,7 +6754,7 @@ focus_tree = {
 			focus = SIC_organise_insurgencies 
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 100
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_a_war_of_reclamation"
@@ -6797,8 +6811,8 @@ focus_tree = {
 	focus = {
 		id = SIC_return_of_the_prince
 		icon = GFX_goal_tomado
-		x = 75
-		y = 3
+		x = 61
+		y = 11
 		cost = 5
 		available_if_capitulated = yes
 		available = {
@@ -6816,7 +6830,7 @@ focus_tree = {
 			focus = SIC_a_war_of_reclamation 
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 100
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_return_of_the_prince"
@@ -6838,13 +6852,13 @@ focus_tree = {
 	focus = {
 		id = SIC_trials_the_red
 		icon = GFX_SIC_trial_the_reds
-		x = 72
-		y = 4
+		x = 58
+		y = 12
 		cost = 5
 		available_if_capitulated = yes
 		prerequisite = { focus = SIC_return_of_the_prince }
 		ai_will_do = {
-			factor = 1
+			factor = 100
 		}
 		available = {
 			controls_state = 605
@@ -6863,13 +6877,13 @@ focus_tree = {
 	focus = {
 		id = SIC_unite_the_evi_valley
 		icon = GFX_SIC_unite_the_evi_valley
-		x = 74
-		y = 4
+		x = 60
+		y = 12
 		cost = 8
 		available_if_capitulated = yes
 		prerequisite = { focus = SIC_return_of_the_prince }
 		ai_will_do = {
-			factor = 1
+			factor = 100
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_unite_the_evi_valley"
@@ -6895,13 +6909,13 @@ focus_tree = {
 	focus = {
 		id = SIC_religious_syncretism
 		icon = GFX_SIC_religious_syncretism
-		x = 76
-		y = 4
+		x = 62
+		y = 12
 		cost = 8
 		available_if_capitulated = yes
 		prerequisite = { focus = SIC_return_of_the_prince }
 		ai_will_do = {
-			factor = 1
+			factor = 100
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_religious_syncretism"
@@ -6913,13 +6927,13 @@ focus_tree = {
 	focus = {
 		id = SIC_trial_the_legionnaires
 		icon = GFX_SIC_trial_the_legionaries
-		x = 78
-		y = 4
+		x = 64
+		y = 12
 		cost = 5
 		available_if_capitulated = yes
 		prerequisite = { focus = SIC_return_of_the_prince }
 		ai_will_do = {
-			factor = 1
+			factor = 100
 		}
 		available = {
 			controls_state = 508
@@ -6934,8 +6948,8 @@ focus_tree = {
 	focus = {
 		id = SIC_dream_of_a_better_future
 		icon = GFX_SIC_dreams_of_a_better_future
-		x = 77
-		y = 5
+		x = 63
+		y = 13
 		cost = 5
 		available_if_capitulated = yes
 		prerequisite = { 
@@ -6945,7 +6959,7 @@ focus_tree = {
 			focus = SIC_trial_the_legionnaires 
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 100
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_revelation_of_an_ancient_past"
@@ -6957,8 +6971,8 @@ focus_tree = {
 	focus = {
 		id = SIC_revelation_of_an_ancient_past
 		icon = GFX_SIC_revelations_of_an_ancient_past
-		x = 73
-		y = 5
+		x = 59
+		y = 13
 		cost = 5
 		available_if_capitulated = yes
 		prerequisite = { 
@@ -6968,7 +6982,7 @@ focus_tree = {
 			focus = SIC_unite_the_evi_valley 
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 100
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_revelation_of_an_ancient_past"
@@ -6980,8 +6994,8 @@ focus_tree = {
 	focus = {
 		id = SIC_return_in_karthin
 		icon = GFX_SIC_return_in_karthin
-		x = 75
-		y = 6
+		x = 61
+		y = 14
 		cost = 8
 		available_if_capitulated = yes
 		prerequisite = { 
@@ -6991,7 +7005,7 @@ focus_tree = {
 			focus = SIC_dream_of_a_better_future 
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 100
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_return_in_karthin"
@@ -7028,15 +7042,15 @@ focus_tree = {
 	focus = {
 		id = SIC_irredentist_claim
 		icon = GFX_SIC_irredentist_claims
-		x = 88
-		y = 1
+		x = 47
+		y = 8
 		cost = 5.8
 		available_if_capitulated = yes
 		available = {
 			has_completed_focus = SIC_convince_council
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 100
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_irredentist_claim"
@@ -7050,13 +7064,13 @@ focus_tree = {
 	focus = {
 		id = SIC_the_best_defense
 		icon = GFX_SIC_the_best_defence
-		x = 88
-		y = 2
+		x = 47
+		y = 9
 		cost = 1.5
 		available_if_capitulated = yes
 		prerequisite = { focus = SIC_irredentist_claim }
 		ai_will_do = {
-			factor = 1
+			factor = 100
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_the_best_defense"
@@ -7068,8 +7082,8 @@ focus_tree = {
 	focus = {
 		id = SIC_bargain_for_riverland_funds
 		icon = GFX_goal_riv_union
-		x = 84
-		y = 3
+		x = 43
+		y = 10
 		cost = 5
 		available_if_capitulated = yes
 		prerequisite = { focus = SIC_the_best_defense }
@@ -7079,7 +7093,7 @@ focus_tree = {
 			}
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 100
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_bargain_for_riverland_funds"
@@ -7093,8 +7107,8 @@ focus_tree = {
 	focus = {
 		id = SIC_befriend_new_mareland
 		icon = GFX_SIC_befriend_new_mareland
-		x = 84
-		y = 4
+		x = 43
+		y = 11
 		cost = 5
 		available_if_capitulated = yes
 		prerequisite = { focus = SIC_bargain_for_riverland_funds }
@@ -7107,7 +7121,7 @@ focus_tree = {
 			}
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 100
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_befriend_new_mareland"
@@ -7121,14 +7135,14 @@ focus_tree = {
 	focus = {
 		id = SIC_is_a_good_defense
 		icon = GFX_SIC_is_a_good_defense
-		x = 87
-		y = 3
+		x = 46
+		y = 10
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = { focus = SIC_the_best_defense }
 		mutually_exclusive = { focus = SIC_is_a_good_offense }
 		ai_will_do = {
-			factor = 1
+			factor = 100
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_is_a_good_defense"
@@ -7140,13 +7154,13 @@ focus_tree = {
 	focus = {
 		id = SIC_the_falcolian_line
 		icon = GFX_SIC_the_falcorian_line
-		x = 87
-		y = 4
+		x = 46
+		y = 11
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = { focus = SIC_is_a_good_defense }
 		ai_will_do = {
-			factor = 1
+			factor = 100
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_is_a_good_defense"
@@ -7174,14 +7188,14 @@ focus_tree = {
 	focus = {
 		id = SIC_is_a_good_offense
 		icon = GFX_SIC_is_a_good_offense
-		x = 89
-		y = 3
+		x = 48
+		y = 10
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = { focus = SIC_the_best_defense }
 		mutually_exclusive = { focus = SIC_is_a_good_defense }
 		ai_will_do = {
-			factor = 1
+			factor = 100
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_is_a_good_offense"
@@ -7193,13 +7207,13 @@ focus_tree = {
 	focus = {
 		id = SIC_sycaceia_call_us_to_battle
 		icon = GFX_SIC_sycaceia_calls_us_to_battle
-		x = 89
-		y = 4
+		x = 48
+		y = 11
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = { focus = SIC_is_a_good_offense }
 		ai_will_do = {
-			factor = 1
+			factor = 100
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_sycaceia_call_us_to_battle"
@@ -7211,8 +7225,8 @@ focus_tree = {
 	focus = {
 		id = SIC_settle_the_situation_with_gryphus
 		icon = GFX_SIC_settle_the_situation_with_gryphus
-		x = 92
-		y = 3
+		x = 51
+		y = 10
 		cost = 5
 		available_if_capitulated = yes
 		bypass = {
@@ -7235,7 +7249,7 @@ focus_tree = {
 			}
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 100
 		}
 	}
 
@@ -7243,8 +7257,8 @@ focus_tree = {
 	focus = {
 		id = SIC_intervene_in_blackhollow
 		icon = GFX_SIC_a_show_of_strength
-		x = 92
-		y = 4
+		x = 51
+		y = 11
 		cost = 5
 		available_if_capitulated = yes
 		prerequisite = { focus = SIC_settle_the_situation_with_gryphus }
@@ -7256,7 +7270,7 @@ focus_tree = {
 			}
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 100
 		}
 	}
 
@@ -7264,8 +7278,8 @@ focus_tree = {
 	focus = {
 		id = SIC_peace_in_southern_griffonia
 		icon = GFX_SIC_peace_in_southern_griffonia
-		x = 87
-		y = 5
+		x = 46
+		y = 12
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = { 
@@ -7285,7 +7299,7 @@ focus_tree = {
 			}
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 100
 		}
 	}
 
@@ -7293,8 +7307,8 @@ focus_tree = {
 	focus = {
 		id = SIC_slay_the_wingbardian_beast
 		icon = GFX_SIC_slay_the_wingbardian_beast
-		x = 89
-		y = 5
+		x = 48
+		y = 12
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = { 
@@ -7317,7 +7331,7 @@ focus_tree = {
 			}
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 100
 		}
 	}
 
@@ -7338,8 +7352,8 @@ focus_tree = {
 		id = SIC_a_phantom_from_the_past
 		icon = GFX_SIC_a_herzlander_grand_duke
 		cost = 10
-		x = 90
-		y = 8
+		x = 85
+		y = 0
 		ai_will_do = { factor = 100 }
 		available = {
 			has_country_leader = {
@@ -7650,7 +7664,7 @@ focus_tree = {
 #		id = SIC_facing_the_sun
 #		icon = GFX_SIC_facing_the_sun
 #		cost = 1
-#		x = 104
+#		x = 110
 #		y = 0
 #		ai_will_do = { factor = 100 }
 #		available = {
@@ -7932,8 +7946,8 @@ focus_tree = {
 		icon = GFX_SIC_restitutor_orbis
 		prerequisite = { focus = SIC_return_in_karthin }
 		cost = 8
-		x = 75
-		y = 7
+		x = 61
+		y = 15
 		ai_will_do = { factor = 100 }
 		available = {
 			controls_state = 371
@@ -8247,7 +8261,7 @@ focus_tree = {
 		id = SIC_the_imperial_restoration
 		icon = GFX_SIC_imperial_restoration
 		cost = 1
-		x = 114
+		x = 85
 		y = 8
 		ai_will_do = { factor = 10 }
 		available = {
