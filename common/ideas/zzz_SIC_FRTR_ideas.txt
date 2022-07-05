@@ -330,8 +330,7 @@ ideas = {
 			modifier = {
 				political_power_gain = 0.15
 				stability_factor = 0.05
-				weekly_stability_factor = 0.001
-				army_core_defence_factor = .10
+				army_core_defence_factor = 0.1
 				war_support_factor = 0.05
 			}
 		}
@@ -461,7 +460,6 @@ ideas = {
 			removal_cost = -1
 			modifier = { 
 				stability_factor = -0.1
-				stability_weekly = 0.001
 				army_core_defence_factor = 0.05
 				democratic_drift  = 0.03
 			}
@@ -545,7 +543,20 @@ ideas = {
 			}
 		}
 		
-		SIC_FRD_sqslclrst = {
+		SIC_FRD_war_with_criminals = {
+			#picture = placeholder
+			allowed = {
+				tag = SIC
+			}
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = -0.09
+				stability_factor = -0.05
+				war_support_factor = -0.05
+			}
+		}
+		
+		SIC_FRD_law_of_boreas = {
 			#picture = placeholder
 			allowed = {
 				tag = SIC
@@ -553,35 +564,62 @@ ideas = {
 			removal_cost = -1
 			modifier = {
 				political_power_gain = -0.1
-				industrial_capacity_factory = 0.1
-				production_speed_arms_factory_factor = 0.1
-			}
-		}
-		SIC_FRD_cmbcrm = {
-			#picture = placeholder
-			allowed = {
-				tag = SIC
-			}
-			removal_cost = -1
-			modifier = {
-				political_power_gain = -0.25
+				democratic_drift = -0.05
 				stability_factor = 0.1
-				industrial_capacity_factory = 0.1
-				production_speed_arms_factory_factor = 0.1
 			}
 		}
 		
-		SIC_FRD_unifying = {
+		SIC_FRD_pirates_of_the_duke = {
 			#picture = placeholder
 			allowed = {
 				tag = SIC
 			}
 			removal_cost = -1
 			modifier = {
-				political_power_cost = 0.25
+				consumer_goods_factor = -0.05
+				stability_factor = -0.10
+				min_export = -0.2
+			}
+		}
+		
+		SIC_FRD_republican_tension = {
+			name = republican_tension
+			#picture = placeholder
+			allowed = {
+				tag = SIC
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.20
+				democratic_drift = 0.05
+				communism_drift = 0.05
 			}
 		}	
+
+		SIC_FRD_autonomous_countryside = {
+			#picture = placeholder
+			allowed = {
+				tag = SIC
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.10
+				political_power_factor = -0.1
+				industrial_capacity_factory = -0.1
+			}
+		}
 		
+		SIC_FRD_sway_the_religious = {
+			#picture = placeholder
+			allowed = {
+				tag = SIC
+			}
+			removal_cost = -1
+			modifier = {
+				stability_weekly = 0.01
+			}
+		}
+
 		SIC_FRD_astida = {
 			#picture = placeholder
 			allowed = {
@@ -751,7 +789,7 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				weekly_stability_factor = -0.01
+				stability_weekly = -0.01
 				stability_factor = -0.1
 				political_power_gain = -0.5
 			}
@@ -765,7 +803,7 @@ ideas = {
 			removal_cost = -1
 			modifier = {
 				stability_factor = -0.1
-				weekly_stability_factor = -0.001
+				stability_weekly = -0.001
 			}
 		}
 		SIC_COM_religion_allowed = {
@@ -799,7 +837,7 @@ ideas = {
 			removal_cost = -1
 			modifier = {
 				political_power_gain = -0.25
-				weekly_stability_factor = -0.001
+				stability_weekly = -0.001
 			}
 		}
 		SIC_COM_political_freedoms = {

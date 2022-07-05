@@ -389,36 +389,36 @@
  unifying_nation:0 "Unifying Nation"
  antiespadarte:0 "Anti-Espadarte Smear Campaign"
  riverland_funds:0 "Riverland Funds"
+ 
+ ########################
+ 
+ SIC_FRD_war_with_criminals:0 "War With Criminals"
+ SIC_FRD_law_of_boreas:0 "Law of Boreas"
+ SIC_FRD_pirates_of_the_duke:0 "Pirates of the Grand Duke"
+ SIC_FRD_autonomous_countryside:0 "Autonomous Countryside"
+ SIC_FRD_sway_the_religious:0 "New Religious Campaign"
 
 ### Traits ###
 
  the_legitimate_claimant:0 "The Legitimate Claimant"
 
 ### Events ###
-
- sicameon.166.t:0 "Time is Running Out"
- sicameon.166.d:0 "The years have been cruel to Sicameon and to its rulers. In the past few decades, many elusive problems have begun to rear their ugly heads, posing a challenge to the ruling Regency Council and the nation that hosts it.\\nnFirstly, piracy and illegal trade have strained our economy and caused corruption to fester throughout local governments. An ever-growing number of upstart politicians line their own pockets with bribe money while the average citizen lives in fear of going outside at night.\\nnTo add to this, the popularity of our ruling Regency Council, having previously been uneasy, has recently begun to decay at an alarming rate. Republican parties have captured the hearts of a concerning swathe of the population, which looks increasingly towards revolution due to the uncompromising nature of our rule. The indecisiveness of the Regency Council towards electing a monarch does little to recover the government’s reputation, either.\\nnWe are left with two different possible approaches. The Regency Council should either focus all of its efforts on suppressing dissent or electing a monarch. Although getting a king on the throne may yet prove itself an indomitable task given the situation, it would solve some of our more immediate problems and help get the nation back on the right track. That said, facing our enemies head on would likely prove a less difficult but more risky effort. The choice ultimately falls to the Regency Council, which, in a rare moment of unity, decides…"
- sicameon.166.a:0 "A monarch must be elected now!"
- sicameon.166.b:0 "We must eliminate our domestic enemies first!"
- sicameon.167.t:0 "A meeting in the dark"
- sicameon.167.d:0 ""
- sicameon.167.a:0 ""
- sicameon.168.t:0 "A meeting in the dark"
- sicameon.168.d:0 ""
- sicameon.168.a:0 ""
- sicameon.169.t:0 "The Rebels dealt with"
- sicameon.169.d:0 ""
- sicameon.169.a:0 ""
- sicameon.170.t:0 "An Interesting Proposal"
- sicameon.170.d:0 ""
- sicameon.170.a:0 ""
+ 
+ sicameon_frtr_frd.2.t:0 "Meeting with the Council"
+ sicameon_frtr_frd.2.d:0 "TODO:Something about council integration into the new government."
+ sicameon_frtr_frd.2.a:0 "Fine."
+ sicameon_frtr_frd.3.t:0 "A Meeting at Night"
+ sicameon_frtr_frd.3.d:0 "TODO:Negotiations between the state and the pirates."
+ sicameon_frtr_frd.3.a:0 "Here's the solution."
+ 
+ ########################
+ 
  sicameon_frtr.1.t:0 "Hopeless Optimism"
  sicameon_frtr.1.d:0 ""
  sicameon_frtr.1.a:0 ""
  sicameon_frtr.2.t:0 "Speak to the People"
  sicameon_frtr.2.d:0 ""
  sicameon_frtr.2.a:0 ""
- ########################
  sicameon_frtr.3.t:0 "An Interesting Proposal"
  sicameon_frtr.3.d:0 "With the understandably unique circumstances laid before them, the regency council had gone into a private chamber and had been there a very long time indeed.  It was now day two, and although they had yet to decide who would take the reigns of power, a few notable candidates were now there.\n\nThe first option was perhaps the most obvious, at least according to the best bred on the council. Duke Frederick of Yale-Gamia, the Herzlander. Technically the legitimate heir to the throne, the duke laid claim through his father (who had sold the Duchy of Yaledom to the universities), whose grandfather in turn originally laid claim to Sicameon. Unfortunately, in the modern world claims of legitimacy fall on deaf ears. The vast majority of the country are repelled by his autocratic tendencies and worse yet the populace is disgusted by his wholehearted embrace of Imperial nostalgia.\n\nAnother well-bred option is Tomado of Bronfeld, the crown prince of Brodfeld. Now in exile, he fled his home country after it broke out into civil war between the communists and supporters of his tyrannical and mad father, King Kloseu. His harmonic values are beyond question, most council members have noted the increased animosity and fieryness in his speeches, more than ofter decrying the 'disgustingly decadent political order left behind by the failed Herzlander Empire'.\nRegardless of his extravagant views, the exiled crown prince has established himself as a very charismatic and intelligent figure in his new Sicameonese home.\n\nWhen it comes to politics however pragmatism often wins out, and while there are still disagreements it may be the case that Duchess Giovanna of Wingbardy may ultimately win the day. Closely related to the royal family of Wingbardy and with good connections, she would certainly seek to strengthen ties with Wingbardy and join the Karthinian Pact . Giovanna has,however, absolutely no intention of making Sicameon subservient to Wingbardy, but instead aspires to establish her own powerful legacy.\n\nThe last candidate is Petronilo of Midoria, whose pedigree is the least established – unless you count the opinion of the commoners. His nationalist credentials are well-understood, especially given his concern for the Sicameonese minorities in Gryphus that he aspires to help. Despite his relatively humble origins and curious behaviours, he does have a genuine desire to improve the lot of the common people while strengthening the nation and his rural populist and religious stances differentiate him from the other candidates, to the pleasure of the populace\n\nFinally, the council decides. They pick…"
  sicameon_frtr.3.a:0 "Frederick of Yale-Gamia"

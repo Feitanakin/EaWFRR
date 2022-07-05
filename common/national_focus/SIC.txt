@@ -7378,10 +7378,14 @@ focus_tree = {
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_for_the_kaiserreich"
+			add_opinion_modifier = {
+				target = GRI
+				modifier = large_increase
+			}
 			GRI = {
 				add_opinion_modifier = {
 					target = SIC
-					modifier = SIC_FRD_support_the_regency_opinion
+					modifier = large_increase
 				}
 			}
 		}
@@ -7421,7 +7425,7 @@ focus_tree = {
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_combat_crime_with_extreme_prejudice"
-			remove_ideas = republican_tension
+			custom_effect_tooltip = SIC_FRTR_fight_piracy
 		}
 	}
 
@@ -7437,8 +7441,45 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_raze_coasts"
 			add_timed_idea = {
-				idea = SIC_FRD_rzncst
+				idea = SIC_FRD_war_with_criminals
 				days = 180
+			}
+			add_offsite_building = {
+				type = industrial_complex
+				level = 2
+			}
+			444 = {
+				add_manpower = -1486
+				damage_building = { 
+					type = infrastructure
+					damage = 2
+				}
+				damage_building = { 
+					type = industrial_complex
+					damage = 2
+				}
+			}
+			445 = {
+				add_manpower = -2636
+				damage_building = { 
+					type = infrastructure
+					damage = 2
+				}
+				damage_building = { 
+					type = industrial_complex
+					damage = 2
+				}
+			}
+			460 = {
+				add_manpower = -932
+				damage_building = { 
+					type = infrastructure
+					damage = 2
+				}
+				damage_building = { 
+					type = industrial_complex
+					damage = 2
+				}
 			}
 		}
 	}
@@ -7454,7 +7495,12 @@ focus_tree = {
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_die_republikanischen_ratten"
-			add_ideas = SIC_FRD_rplrtn
+			remove_ideas = republican_tension
+			add_manpower = -10000
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.15
+			}
 		}
 	}
 
@@ -7469,10 +7515,7 @@ focus_tree = {
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_the_law_of_boreas"
-			swap_ideas = {
-				remove_idea = SIC_FRD_rplrtn
-				add_idea = SIC_FRD_lawofbrs
-			}
+			add_ideas = SIC_FRD_law_of_boreas
 		}
 	}
 
@@ -7521,9 +7564,23 @@ focus_tree = {
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_pirates_of_the_grand_duke"
-			swap_ideas = {
-				remove_idea = swordfish_claws
-				add_idea = pirates_of_the_duke
+			if = {
+				limit = {
+					has_idea = swordfish_claws
+				}
+				swap_ideas = {
+					remove_idea = swordfish_claws
+					add_idea = SIC_FRD_pirates_of_the_duke
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = swordfish_claws_1
+				}
+				swap_ideas = {
+					remove_idea = swordfish_claws_1
+					add_idea = SIC_FRD_pirates_of_the_duke
+				}
 			}
 		}
 	}
@@ -7541,7 +7598,7 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_let_the_countryside_be"
 			swap_ideas = {
 				remove_idea = republican_tension
-				add_idea = republican_tension_frd
+				add_idea = SIC_FRD_republican_tension
 			}
 		}
 	}
@@ -7558,8 +7615,8 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_firm_but_fair"
 			swap_ideas = {
-				remove_idea = republican_tension_frd
-				add_idea = autonomous_countryside
+				remove_idea = SIC_FRD_republican_tension
+				add_idea = SIC_FRD_autonomous_countryside
 			}
 		}
 	}
@@ -7590,7 +7647,8 @@ focus_tree = {
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_work_with_defunct_council"
-			add_political_power = 150
+			add_political_power = 100
+			country_event = { id = sicameon_frtr_frd.2 days = 1 }
 		}
 	}
 
@@ -7606,7 +7664,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_sway_the_religious"
 			add_timed_idea = {
-				idea = SIC_FRD_priests
+				idea = SIC_FRD_sway_the_religious
 				days = 70
 			}
 		}
@@ -7643,7 +7701,55 @@ focus_tree = {
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_no_second_chances"
-			add_ideas = SIC_FRD_nosecchn
+			add_popularity = {
+				ideology = democratic
+				popularity = -0.15
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = -0.05
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.1
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.1
+			}
+			445 = {
+				add_manpower = -3935
+			}
+			460 = {
+				add_manpower = -867
+			}
+			509 = {
+				add_manpower = -1655
+			}
+			444 = {
+				add_manpower = -739
+			}
+			527 = {
+				add_manpower = -2307
+			}
+			528 = {
+				add_manpower = -945
+			}
+			570 = {
+				add_manpower = -1052
+			}
+			518 = {
+				add_manpower = -791
+			}
+			394 = {
+				add_manpower = -695
+			}
+			395 = {
+				add_manpower = -456
+			}
+			535 = {
+				add_manpower = -283
+			}
 		}
 	}
 
@@ -8270,10 +8376,11 @@ focus_tree = {
 				ruling_only = yes 
 				name = "Frederick of Yale-Gamia"
 			}
+			has_completed_focus = SIC_no_second_chances
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_the_imperial_restoration"
-			country_event = sicameon_frtr_frd.2
+			country_event = sicameon_frtr_frd.
 		}
 	}
 

@@ -1,17 +1,3 @@
-SIC_swordfish_campaign_cat = {
-    priority = {
-        base = 100
-    }
-    priority = {
-        base = 100
-    }
-    allowed = {
-        original_tag = SIC
-    }
-    visible = {
-        has_completed_focus = SIC_anticorruption
-    }
-}
 SIC_anti_piracy = {
 	icon = border_war
     priority = {
@@ -24,6 +10,7 @@ SIC_anti_piracy = {
 		OR = {
         	has_completed_focus = SIC_piracy
 			has_completed_focus = SIC_anticorruption
+			has_completed_focus = SIC_combat_crime_with_extreme_prejudice
 		}
     }
 }
