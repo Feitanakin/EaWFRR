@@ -10,6 +10,7 @@
  SIC_Tomado_of_Brodfeld:0 "Tomado of Brodfeld"
  SIC_Petronilo_of_Midoria:0 "Petronilo of Midoria"
  SIC_juan_guilloto:0 "Juan Guilloto León"
+ SIC_Arantigos_Frederick:0 "Arantigos Frederick I"
 
 ### Focuses ###
 
@@ -392,11 +393,25 @@
  
  ########################
  
+ SIC_FRD_imperial_legetimity_1:0 "Pathetic Legetimity"
+ SIC_FRD_imperial_legetimity_2:0 "Low Legetimity"
+ SIC_FRD_imperial_legetimity_3:0 "Good Legetimity"
+ SIC_FRD_imperial_legetimity_4:0 "Great Legetimity"
  SIC_FRD_war_with_criminals:0 "War With Criminals"
  SIC_FRD_law_of_boreas:0 "Law of Boreas"
  SIC_FRD_pirates_of_the_duke:0 "Pirates of the Grand Duke"
  SIC_FRD_autonomous_countryside:0 "Autonomous Countryside"
  SIC_FRD_sway_the_religious:0 "New Religious Campaign"
+ SIC_FRD_empress_consort:0 "Empress Consort"
+ SIC_FRD_astida:0 "Anti-terrorist Operation"
+ SIC_FRD_spoils_of_aster:0 "Spoils of War"
+ SIC_FRD_spoils_of_aster_desc:0 "Definitely not from atrocities."
+ SIC_FRD_falatkida:0 "Operation 'Falcon'"
+ SIC_FRD_ordcmnida:0 "In Need of Order"
+ SIC_FRD_mntbltida:0 "Knowledge of Enemy Terrain"
+ SIC_FRD_anttnktctida:0 "Anti-tank Tactics"
+ SIC_FRD_atkwng:0 "Great War for the South"
+ SIC_FRD_karthinian_wealth:0 "Karthinian Wealth"
 
 ### Traits ###
 
@@ -404,12 +419,55 @@
 
 ### Events ###
  
+ sicameon_frtr_frd.1.t:0 "Collaborationists"
+ sicameon_frtr_frd.1.d:0 "TODO: With help of our agents, griffins and minotaurs who support unification will rise to secure islands."
+ sicameon_frtr_frd.1.a:0 "Fight for our future."
  sicameon_frtr_frd.2.t:0 "Meeting with the Council"
- sicameon_frtr_frd.2.d:0 "TODO:Something about council integration into the new government."
+ sicameon_frtr_frd.2.d:0 "TODO: Something about council integration into the new government."
  sicameon_frtr_frd.2.a:0 "Fine."
  sicameon_frtr_frd.3.t:0 "A Meeting at Night"
- sicameon_frtr_frd.3.d:0 "TODO:Negotiations between the state and the pirates."
+ sicameon_frtr_frd.3.d:0 "TODO: Negotiations between the state and the pirates."
  sicameon_frtr_frd.3.a:0 "Here's the solution."
+ sicameon_frtr_frd.4.t:0 "Rise in the South"
+ sicameon_frtr_frd.4.d:0 "TODO: Frederick simping for Griffonian Empire and proclaims Southern Griffonian Empire to help original empire to unite Griffonia"
+ sicameon_frtr_frd.4.a:0 "Ave Arantigos!"
+ sicameon_frtr_frd.5.t:0 "Empires and Emperors."
+ sicameon_frtr_frd.5.d:0 "TODO: Something about uniting south with blood and iron and a little bit information about the war with Griffenheim in case of herzland weakness."
+ sicameon_frtr_frd.5.a:0 "For the Emperor!"
+ sicameon_frtr_frd.6.t:0 "Affairs of the Heart"
+ sicameon_frtr_frd.6.d:0 "TODO: Something about peaceful annexation by marriage with countess, otherwise will be war."
+ sicameon_frtr_frd.6.a:0 "She will be mine."
+ sicameon_frtr_frd.7.t:0 "The Time Well Spent"
+ sicameon_frtr_frd.7.d:0 "TODO: Frederick visits Thymiaustadt to spend some time with Taillow. She seems to like him."
+ sicameon_frtr_frd.7.a:0 "That was great."
+ sicameon_frtr_frd.8.t:0 "Proposal"
+ sicameon_frtr_frd.8.d:0 "TODO: Frederick visits Thymiaustadt to spend some time with Taillow. She seems to like him."
+ sicameon_frtr_frd.8.a:0 "Yes!"
+ sicameon_frtr_frd.8.b:0 "No."
+ sicameon_frtr_frd.9.t:0 "Response"
+ sicameon_frtr_frd.9.d:0 "TODO: She said yes."
+ sicameon_frtr_frd.9.a:0 "Excellent."
+ sicameon_frtr_frd.10.t:0 "Response"
+ sicameon_frtr_frd.10.d:0 "TODO: She said no."
+ sicameon_frtr_frd.10.a:0 "This means war."
+ sicameon_frtr_frd.11.t:0 "Deal With the Island Nation"
+ sicameon_frtr_frd.11.d:0 "TODO: Justify conquest of Minotauria and why we need to attack now."
+ sicameon_frtr_frd.11.a:0 "Onward troops."
+ sicameon_frtr_frd.12.t:0 "Secure Our Border"
+ sicameon_frtr_frd.12.d:0 "TODO: Justify conquest of Falcoria."
+ sicameon_frtr_frd.12.a:0 "Get ready troops."
+ sicameon_frtr_frd.13.t:0 "Into the Mountains"
+ sicameon_frtr_frd.13.d:0 "TODO: Justify conquest of bandits."
+ sicameon_frtr_frd.13.a:0 "Soon we will show them order."
+ sicameon_frtr_frd.14.t:0 "Unhealthy Rivalries"
+ sicameon_frtr_frd.14.d:0 "TODO: Justify conquest of Wingbardy and nearest countries."
+ sicameon_frtr_frd.14.a:0 "There can be only one."
+ sicameon_frtr_frd.15.t:0 "Ancient Home"
+ sicameon_frtr_frd.15.d:0 "TODO: Justify conquest of Griffonstone."
+ sicameon_frtr_frd.15.a:0 "Home sweet home."
+ sicameon_frtr_frd.16.t:0 "One Last Push"
+ sicameon_frtr_frd.16.d:0 "TODO: We need to conquer last griffin states in the south."
+ sicameon_frtr_frd.16.a:0 "Yes Yes Yes"
  
  ########################
  

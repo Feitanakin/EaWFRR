@@ -546,16 +546,7 @@ country_event = {
 	#picture =
 	option = {
 		name = sicameon_frtr_frd.1.a
-		declare_war_on = {
-			target = MIT
-			type = annex_everything
-		}
-		MIT = {
-			add_timed_idea = {
-				idea = SIC_FRD_astsprida
-				days = 12
-			}
-		}
+		load_oob = "SIC_mit_collaborationists"
 	}
 	is_triggered_only = yes
 }
@@ -590,6 +581,11 @@ country_event = {
 	#picture =
 	option = {
 		name = sicameon_frtr_frd.4.a
+		set_cosmetic_tag = SIC_frederick_arantigos
+		hidden_effect = {
+			recruit_character = SIC_Frederick_arantigos
+			promote_character = SIC_Frederick_arantigos
+		}
 	}
 	is_triggered_only = yes
 }
@@ -600,6 +596,16 @@ country_event = {
 	#picture =
 	option = {
 		name = sicameon_frtr_frd.5.a
+		every_state = { limit = { is_owned_by = CYA } add_claim_by = SIC }
+		every_state = { limit = { is_owned_by = FAL } add_claim_by = SIC }
+		every_state = { limit = { is_owned_by = BAN } add_claim_by = SIC }
+		every_state = { limit = { is_owned_by = MIT } add_claim_by = SIC }
+		every_state = { limit = { is_owned_by = BOI } add_claim_by = SIC }
+		every_state = { limit = { is_owned_by = LAK } add_claim_by = SIC }
+		every_state = { limit = { is_owned_by = WNG } add_claim_by = SIC }
+		every_state = { limit = { is_owned_by = ARA } add_claim_by = SIC }
+		every_state = { limit = { is_owned_by = FRN } add_claim_by = SIC }
+		every_state = { limit = { is_owned_by = TAL } add_claim_by = SIC }
 	}
 	is_triggered_only = yes
 }
@@ -619,11 +625,7 @@ country_event = {
 	desc = sicameon_frtr_frd.7.d
 	#picture =
 	option = {
-		name = sicameon_frtr_frd.6.a
-		add_ideas = SIC_FRD_unifying
-		CYA = {
-			add_ideas = SIC_FRD_unifying
-		}
+		name = sicameon_frtr_frd.7.a
 	}
 	is_triggered_only = yes
 }
@@ -634,14 +636,134 @@ country_event = {
 	#picture =
 	option = {
 		name = sicameon_frtr_frd.8.a
-		remove_ideas = SIC_FRD_unifying
 		CYA = {
-			remove_ideas = SIC_FRD_unifying
+			country_event= { days = 1 id = sicameon_frtr_frd.9 }
+		}
+	}
+	option = {
+		name = sicameon_frtr_frd.8.b
+		CYA = {
+			country_event= { days = 1 id = sicameon_frtr_frd.10 }
+		}
+	}
+	is_triggered_only = yes
+}
+country_event = {
+	id = sicameon_frtr_frd.9
+	title = sicameon_frtr_frd.9.t
+	desc = sicameon_frtr_frd.9.d
+	#picture =
+	option = {
+		name = sicameon_frtr_frd.9.a
+		add_idea = SIC_FRD_empress_consort
+	}
+	is_triggered_only = yes
+}
+country_event = {
+	id = sicameon_frtr_frd.10
+	title = sicameon_frtr_frd.10.t
+	desc = sicameon_frtr_frd.10.d
+	#picture =
+	option = {
+		name = sicameon_frtr_frd.10.a
+		declare_war_on = {
+			target = CYA
+			type = annex_everything
+		}
+		set_country_flag = SIC_declined
+	}
+	is_triggered_only = yes
+}
+
+country_event = {
+	id = sicameon_frtr_frd.11
+	title = sicameon_frtr_frd.11.t
+	desc = sicameon_frtr_frd.11.d
+	#picture =
+	option = {
+		name = sicameon_frtr_frd.11.a
+		declare_war_on = {
+			target = MIT
+			type = annex_everything
 		}
 	}
 	is_triggered_only = yes
 }
 
+country_event = {
+	id = sicameon_frtr_frd.12
+	title = sicameon_frtr_frd.12.t
+	desc = sicameon_frtr_frd.12.d
+	#picture =
+	option = {
+		name = sicameon_frtr_frd.12.a
+	}
+	is_triggered_only = yes
+}
+
+country_event = {
+	id = sicameon_frtr_frd.13
+	title = sicameon_frtr_frd.13.t
+	desc = sicameon_frtr_frd.13.d
+	#picture =
+	option = {
+		name = sicameon_frtr_frd.13.a
+	}
+	is_triggered_only = yes
+}
+
+country_event = {
+	id = sicameon_frtr_frd.14
+	title = sicameon_frtr_frd.14.t
+	desc = sicameon_frtr_frd.14.d
+	#picture =
+	option = {
+		name = sicameon_frtr_frd.14.a
+	}
+	is_triggered_only = yes
+}
+
+country_event = {
+	id = sicameon_frtr_frd.15
+	title = sicameon_frtr_frd.15.t
+	desc = sicameon_frtr_frd.15.d
+	#picture =
+	option = {
+		name = sicameon_frtr_frd.15.a
+	}
+	is_triggered_only = yes
+}
+
+country_event = {
+	id = sicameon_frtr_frd.16
+	title = sicameon_frtr_frd.16.t
+	desc = sicameon_frtr_frd.16.d
+	#picture =
+	option = {
+		name = sicameon_frtr_frd.16.a
+		create_wargoal = { 
+			type = annex_everything
+			target = BRF
+		}
+		create_wargoal = { 
+			type = annex_everything
+			target = GRW
+		}
+		create_wargoal = { 
+			type = annex_everything
+			target = LUS
+		}
+		create_wargoal = { 
+			type = annex_everything
+			target = GRU
+		}
+		create_wargoal = { 
+			type = annex_everything
+			target = GRY
+		}
+	}
+	is_triggered_only = yes
+}
 
 add_namespace = sicameon_frtr_com
 country_event = {

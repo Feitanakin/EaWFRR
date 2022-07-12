@@ -8380,7 +8380,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_the_imperial_restoration"
-			country_event = sicameon_frtr_frd.
+			country_event = sicameon_frtr_frd.4
+			add_ideas = SIC_FRD_imperial_legetimity_1
 		}
 	}
 
@@ -8397,7 +8398,11 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_the_sharpened_claws"
-			add_manpower = 50000
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 5000
+				producer = SIC
+			}
 		}
 	}
 
@@ -8414,7 +8419,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_the_greatest_of_peoples"
-			add_war_support = 0.1
+			add_manpower = 50000
 		}
 	}
 
@@ -8433,7 +8438,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_the_problem_before_us"
 			set_country_flag = SIC_frederick_conquering
-			custom_effect_tooltip = frd_begin_the_conquest_tt
+			country_event = { id = sicameon_frtr_frd.5 days = 0 }
 		}
 	}
 	
@@ -8454,7 +8459,8 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_the_eastern_counties"
 			clr_country_flag = SIC_frederick_conquering
-			custom_effect_tooltip = frd_direct_our_conquest_tt
+			MIT = { add_to_ROOT_potential_cores = yes }
+			CYA = { add_to_ROOT_potential_cores = yes }
 		}
 	}
 
@@ -8462,6 +8468,11 @@ focus_tree = {
 		id = SIC_cyanlosia
 		icon = GFX_SIC_cyanolisia
 		prerequisite = { focus = SIC_the_eastern_counties }
+		bypass = {
+			NOT = {
+				country_exists = CYA
+			}
+		}
 		cost = 1
 		x = -3
 		y = 1
@@ -8472,7 +8483,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_cyanlosia"
-			country_event = { id = sicameon_frtr_frd.4 days = 0 }
+			country_event = { id = sicameon_frtr_frd.6 days = 0 }
 		}
 	}
 
@@ -8480,6 +8491,11 @@ focus_tree = {
 		id = SIC_a_meeting_with_taillow
 		icon = GFX_SIC_a_meeting_with_taillow
 		prerequisite = { focus = SIC_cyanlosia }
+		bypass = {
+			NOT = {
+				country_exists = CYA
+			}
+		}
 		cost = 1
 		x = -1
 		y = 1
@@ -8490,7 +8506,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_a_meeting_with_taillow"
-			country_event = { id = sicameon_frtr_frd.5 days = 0 }
+			country_event = { id = sicameon_frtr_frd.7 days = 0 }
 		}
 	}
 
@@ -8498,6 +8514,11 @@ focus_tree = {
 		id = SIC_a_deep_reflection
 		icon = GFX_SIC_a_deep_reflection
 		prerequisite = { focus = SIC_cyanlosia }
+		bypass = {
+			NOT = {
+				country_exists = CYA
+			}
+		}
 		cost = 1
 		x = 1
 		y = 1
@@ -8508,15 +8529,29 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_a_deep_reflection"
-			country_event = { id = sicameon_frtr_frd.6 days = 0 }
+			add_opinion_modifier = {
+				target = CYA
+				modifier = huge_increase
+			}
+			CYA = {
+				add_opinion_modifier = {
+					target = SIC
+					modifier = huge_increase
+				}
+			}
 		}
 	}
 
 	focus = {
 		id = SIC_a_daring_proposal
-		icon = GFX_SIC_facing_the_sun
+		icon = GFX_goal_wedding
 		prerequisite = { focus = SIC_a_meeting_with_taillow  }
 		prerequisite = { focus = SIC_a_deep_reflection  }
+		bypass = {
+			NOT = {
+				country_exists = CYA
+			}
+		}
 		cost = 1
 		x = -1
 		y = 1
@@ -8527,7 +8562,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_a_daring_proposal"
-			country_event = { id = sicameon_frtr_frd.7 days = 0 }
+			CYA = { country_event = { id = sicameon_frtr_frd.8 days = 0 } }
 		}
 	}
 
@@ -8535,6 +8570,14 @@ focus_tree = {
 		id = SIC_a_royal_unification
 		icon = GFX_SIC_royal_unification
 		prerequisite = { focus = SIC_a_daring_proposal }
+		bypass = {
+			OR = {
+				SIC = { has_country_flag = SIC_declined }
+				NOT = {
+					country_exists = CYA
+				}
+			}
+		}
 		cost = 4
 		x = 0
 		y = 1
@@ -8562,7 +8605,6 @@ focus_tree = {
 			507 = {
 				add_core_of = SIC
 			}
-			country_event = { id = sicameon_frtr_frd.8 days = 0 }
 		}
 	}
 
@@ -8585,7 +8627,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_asterion"
-			add_war_support = 0.03
+			country_event = { id = sicameon_frtr_frd.11 days = 0 }
 		}
 	}
 
@@ -8633,7 +8675,7 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_our_rifles_ready"
 			add_equipment_to_stockpile = {
 				type = infantry_equipment
-				amount = 750
+				amount = 2250
 				producer = SIC
 			}
 		}
@@ -8644,6 +8686,11 @@ focus_tree = {
 		icon = GFX_SIC_red_cloth
 		prerequisite = { focus = SIC_the_roaring_bulls }
 		prerequisite = { focus = SIC_our_rifles_ready }
+		bypass = {
+			NOT = {
+				country_exists = MIT
+			}
+		}
 		cost = 3
 		x = 1
 		y = 1
@@ -8673,45 +8720,14 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_the_spoils_of_aster"
 			remove_ideas = SIC_FRD_astida
-			custom_effect_tooltip = 1_frd_burn_it_all_down_tt
-			hidden_effect = {
-				386 = {
-					remove_building = {
-						type = arms_factory
-						level = 99
-					}
-					remove_building = {
-						type = industrial_complex
-						level = 99
-					}
-					remove_building = {
-						type = dockyard
-						level = 99
-					}
-					remove_building = {
-						type = infrastructure
-						level = 10
-					}
-					add_manpower = -1500000
-				}
-				add_offsite_building = {
-					type = industrial_complex
-					level = 1
-				}
-				add_offsite_building = {
-					type = arms_factory
-					level = 1
-				}
-			}
 			386 = {
-				add_core_of = SIC
-				set_state_category = wasteland
+				add_manpower = -41830
 			}
-			add_victory_points = {
-				province = 2156
-				value = -25
+			add_stability = -0.1
+			add_timed_idea = {
+				idea = SIC_FRD_spoils_of_aster
+				days = 180
 			}
-			set_province_name = { id = 2156 name = "Ruins of Aster" }
 		}
 	}
 
@@ -8734,7 +8750,33 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_a_daring_proposal"
 			set_country_flag = SIC_frederick_conquering
-			add_stability = 0.03
+			if = {
+				limit = {
+					has_idea = SIC_FRD_imperial_legetimity_1
+				}
+				swap_ideas = {
+					remove_idea = SIC_FRD_imperial_legetimity_1
+					add_idea = SIC_FRD_imperial_legetimity_2
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = SIC_FRD_imperial_legetimity_2
+				}
+				swap_ideas = {
+					remove_idea = SIC_FRD_imperial_legetimity_2
+					add_idea = SIC_FRD_imperial_legetimity_3
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = SIC_FRD_imperial_legetimity_3
+				}
+				swap_ideas = {
+					remove_idea = SIC_FRD_imperial_legetimity_3
+					add_idea = SIC_FRD_imperial_legetimity_4
+				}
+			}
 		}
 	}
 	
@@ -8755,7 +8797,8 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_the_northern_counties"
 			clr_country_flag = SIC_frederick_conquering
-			custom_effect_tooltip = frd_direct_our_conquest_tt
+			FAL = { add_to_ROOT_potential_cores = yes }
+			BAN = { add_to_ROOT_potential_cores = yes }
 		}
 	}
 
@@ -8778,7 +8821,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_falcoria"
-			add_political_power = 50
+			country_event = { id = sicameon_frtr_frd.12 days = 0 }
 		}
 	}
 
@@ -8843,7 +8886,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_the_drawing_of_weapons"
-			add_manpower = 20000
+			add_manpower = 25000
 		}
 	}
 
@@ -8852,6 +8895,11 @@ focus_tree = {
 		icon = GFX_SIC_attack
 		prerequisite = { focus = SIC_the_drawing_of_weapons }
 		prerequisite = { focus = SIC_fortify_our_islands }
+		bypass = {
+			NOT = {
+				country_exists = FAL
+			}
+		}
 		cost = 3
 		x = 1
 		y = 1
@@ -8866,10 +8914,7 @@ focus_tree = {
 				target = FAL
 				type = annex_everything
 			}
-			add_timed_idea = {
-				idea = SIC_FRD_falatkida
-				days = 15
-			}
+			add_ideas = SIC_FRD_falatkida
 		}
 	}
 
@@ -8887,35 +8932,14 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_sacking_matton"
-			custom_effect_tooltip = 1_frd_burn_it_all_down_tt
-			hidden_effect = {
-				529 = {
-					remove_building = {
-						type = arms_factory
-						level = 99
-					}
-					remove_building = {
-						type = industrial_complex
-						level = 99
-					}
-					remove_building = {
-						type = infrastructure
-						level = 10
-					}
-					add_manpower = -700000
-				}
-				add_offsite_building = {
-					type = industrial_complex
-					level = 1
-				}
-			}
+			remove_ideas = SIC_FRD_falatkida
 			529 = {
-				add_core_of = SIC
-				set_state_category = wasteland
+				add_manpower = -18462
 			}
-			add_victory_points = {
-				province = 7868
-				value = -12
+			add_stability = -0.1
+			add_timed_idea = {
+				idea = SIC_FRD_spoils_of_aster
+				days = 180
 			}
 		}
 	}
@@ -8924,6 +8948,11 @@ focus_tree = {
 		id = SIC_blackrock
 		icon = GFX_SIC_blackrock
 		prerequisite = { focus = SIC_the_northern_counties }
+		bypass = {
+			NOT = {
+				country_exists = BAN
+			}
+		}
 		cost = 10
 		x = 3
 		y = 1
@@ -8934,7 +8963,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_blackrock"
-			add_political_power = 75
+			country_event = { id = sicameon_frtr_frd.13 days = 0 }
 		}
 	}
 
@@ -8942,6 +8971,11 @@ focus_tree = {
 		id = SIC_promise_order
 		icon = GFX_SIC_promise_order
 		prerequisite = { focus = SIC_blackrock }
+		bypass = {
+			NOT = {
+				country_exists = BAN
+			}
+		}
 		cost = 10
 		x = -1
 		y = 1
@@ -8962,6 +8996,11 @@ focus_tree = {
 		id = SIC_mountaineer_brigades
 		icon = GFX_SIC_mountaineer_brigades
 		prerequisite = { focus = SIC_blackrock }
+		bypass = {
+			NOT = {
+				country_exists = BAN
+			}
+		}
 		cost = 10
 		x = 1
 		y = 1
@@ -8972,7 +9011,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_mountaineer_brigades"
-			load_oob = "SIC_MOUNT_BRGDS"
+			load_oob = "SIC_mountaineers"
 		}
 	}
 
@@ -8981,6 +9020,11 @@ focus_tree = {
 		icon = GFX_SIC_subdue_the_anarchists
 		prerequisite = { focus = SIC_mountaineer_brigades }
 		prerequisite = { focus = SIC_promise_order }
+		bypass = {
+			NOT = {
+				country_exists = BAN
+			}
+		}
 		cost = 10
 		x = 1
 		y = 1
@@ -8995,10 +9039,7 @@ focus_tree = {
 				target = BAN
 				type = annex_everything
 			}
-			add_timed_idea = {
-				idea = SIC_FRD_mntbltida
-				days = 21
-			}
+			add_ideas = SIC_FRD_mntbltida
 		}
 	}
 
@@ -9012,39 +9053,18 @@ focus_tree = {
 		relative_position_id = SIC_subdue_the_anarchists
 		ai_will_do = { factor = 100 }
 		available = {
-			owns_state = 446
+			owns_state = 532
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_mountain_riches"
-			custom_effect_tooltip = 1_frd_burn_it_all_down_tt
-			hidden_effect = {
-				532 = {
-					remove_building = {
-						type = arms_factory
-						level = 99
-					}
-					remove_building = {
-						type = industrial_complex
-						level = 99
-					}
-					remove_building = {
-						type = infrastructure
-						level = 10
-					}
-					add_manpower = -510000
-				}
-				add_offsite_building = {
-					type = arms_factory
-					level = 1
-				}
-			}
+			remove_ideas = SIC_FRD_mntbltida
 			532 = {
-				add_core_of = SIC
-				set_state_category = wasteland
+				add_manpower = -9075
 			}
-			add_victory_points = {
-				province = 10025
-				value = -8
+			add_stability = 0.1
+			add_timed_idea = {
+				idea = SIC_FRD_spoils_of_aster
+				days = 180
 			}
 		}
 	}
@@ -9068,7 +9088,33 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_the_north_reclaimed"
 			set_country_flag = SIC_frederick_conquering
-			add_political_power = 50
+			if = {
+				limit = {
+					has_idea = SIC_FRD_imperial_legetimity_1
+				}
+				swap_ideas = {
+					remove_idea = SIC_FRD_imperial_legetimity_1
+					add_idea = SIC_FRD_imperial_legetimity_2
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = SIC_FRD_imperial_legetimity_2
+				}
+				swap_ideas = {
+					remove_idea = SIC_FRD_imperial_legetimity_2
+					add_idea = SIC_FRD_imperial_legetimity_3
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = SIC_FRD_imperial_legetimity_3
+				}
+				swap_ideas = {
+					remove_idea = SIC_FRD_imperial_legetimity_3
+					add_idea = SIC_FRD_imperial_legetimity_4
+				}
+			}
 		}
 	}
 	
@@ -9090,7 +9136,12 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_the_northern_counties"
 			clr_country_flag = SIC_frederick_conquering
-			custom_effect_tooltip = frd_direct_our_conquest_tt
+			WNG = { add_to_ROOT_potential_cores = yes }
+			TAL = { add_to_ROOT_potential_cores = yes }
+			FRN = { add_to_ROOT_potential_cores = yes }
+			ARA = { add_to_ROOT_potential_cores = yes }
+			BOI = { add_to_ROOT_potential_cores = yes }
+			LAK = { add_to_ROOT_potential_cores = yes }
 		}
 	}
 
@@ -9098,6 +9149,22 @@ focus_tree = {
 		id = SIC_wingbardy
 		icon = GFX_SIC_wingbardy
 		prerequisite = { focus = SIC_the_western_counties }
+		bypass = {
+			AND = {
+				NOT = {
+					country_exists = WNG
+				}
+				NOT = {
+					country_exists = TAL
+				}
+				NOT = {
+					country_exists = FRN
+				}
+				NOT = {
+					country_exists = ARA
+				}
+			}
+		}
 		cost = 10
 		x = -3
 		y = 1
@@ -9108,7 +9175,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_wingbardy"
-			add_manpower = 5714
+			country_event = { id = sicameon_frtr_frd.14 days = 0 }
 		}
 	}
 
@@ -9116,6 +9183,22 @@ focus_tree = {
 		id = SIC_anti_tank_tactics
 		icon = GFX_SIC_anti_tank_tactits
 		prerequisite = { focus = SIC_wingbardy }
+		bypass = {
+			AND = {
+				NOT = {
+					country_exists = WNG
+				}
+				NOT = {
+					country_exists = TAL
+				}
+				NOT = {
+					country_exists = FRN
+				}
+				NOT = {
+					country_exists = ARA
+				}
+			}
+		}
 		cost = 10
 		x = -1
 		y = 1
@@ -9134,6 +9217,22 @@ focus_tree = {
 		id = SIC_the_true_fascism
 		icon = GFX_SIC_true_fascism
 		prerequisite = { focus = SIC_wingbardy }
+		bypass = {
+			AND = {
+				NOT = {
+					country_exists = WNG
+				}
+				NOT = {
+					country_exists = TAL
+				}
+				NOT = {
+					country_exists = FRN
+				}
+				NOT = {
+					country_exists = ARA
+				}
+			}
+		}
 		cost = 10
 		x = 1
 		y = 1
@@ -9144,7 +9243,10 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_the_true_fascism"
-			add_stability = 0.03
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.05
+			}
 		}
 	}
 
@@ -9153,6 +9255,22 @@ focus_tree = {
 		icon = GFX_SIC_to_karthin
 		prerequisite = { focus = SIC_anti_tank_tactics }
 		prerequisite = { focus = SIC_the_true_fascism }
+		bypass = {
+			AND = {
+				NOT = {
+					country_exists = WNG
+				}
+				NOT = {
+					country_exists = TAL
+				}
+				NOT = {
+					country_exists = FRN
+				}
+				NOT = {
+					country_exists = ARA
+				}
+			}
+		}
 		cost = 10
 		x = 1
 		y = 1
@@ -9163,8 +9281,21 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_to_karthin"
+			add_timed_idea = { idea = SIC_FRD_atkwng days = 90 }
 			declare_war_on = {
 				target = WNG
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = ARA
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = TAL
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = FRN
 				type = annex_everything
 			}
 		}
@@ -9184,87 +9315,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_the_ancient_wealth"
-			custom_effect_tooltip = 1_frd_burn_it_all_down_tt
-			hidden_effect = {
-				371 = {
-					remove_building = {
-						type = arms_factory
-						level = 99
-					}
-					remove_building = {
-						type = industrial_complex
-						level = 99
-					}
-					remove_building = {
-						type = infrastructure
-						level = 10
-					}
-					add_manpower = -2350000
-				}
-				369 = {
-					remove_building = {
-						type = arms_factory
-						level = 99
-					}
-					remove_building = {
-						type = industrial_complex
-						level = 99
-					}
-					remove_building = {
-						type = infrastructure
-						level = 10
-					}
-					add_manpower = -1840000
-				}
-				530 = {
-					remove_building = {
-						type = arms_factory
-						level = 99
-					}
-					remove_building = {
-						type = industrial_complex
-						level = 99
-					}
-					remove_building = {
-						type = infrastructure
-						level = 10
-					}
-					add_manpower = -1280000
-				}
-				add_offsite_building = {
-					type = industrial_complex
-					level = 2
-				}
-				add_offsite_building = {
-					type = arms_factory
-					level = 4
-				}
-			}
-			371 = {
-				add_core_of = SIC
-				set_state_category = wasteland
-			}
-			369 = {
-				add_core_of = SIC
-				set_state_category = wasteland
-			}
-			530 = {
-				add_core_of = SIC
-				set_state_category = wasteland
-			}
-			add_victory_points = {
-				province = 3144
-				value = -32
-			}
-			add_victory_points = {
-				province = 6166
-				value = -15
-			}
-			add_victory_points = {
-				province = 7754
-				value = -17
-			}
-			
+			add_ideas = SIC_FRD_karthinian_wealth
 		}
 	}
 
@@ -9272,6 +9323,16 @@ focus_tree = {
 		id = SIC_griffonstone
 		icon = GFX_SIC_griffinstone
 		prerequisite = { focus = SIC_the_western_counties }
+		bypass = {
+			AND = {
+				NOT = {
+					country_exists = BOI
+				}
+				NOT = {
+					country_exists = LAK
+				}
+			}
+		}
 		cost = 10
 		x = 3
 		y = 1
@@ -9282,7 +9343,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_griffonstone"
-			add_manpower = 5000
+			country_event = { id = sicameon_frtr_frd.15 days = 0 }
 		}
 	}
 
@@ -9290,6 +9351,16 @@ focus_tree = {
 		id = SIC_our_ancient_home
 		icon = GFX_SIC_our_ancient_home
 		prerequisite = { focus = SIC_griffonstone }
+		bypass = {
+			AND = {
+				NOT = {
+					country_exists = BOI
+				}
+				NOT = {
+					country_exists = LAK
+				}
+			}
+		}
 		cost = 10
 		x = -1
 		y = 1
@@ -9300,7 +9371,11 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_our_ancient_home"
-			add_political_power = 75
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 1500
+				producer = SIC
+			}
 		}
 	}
 
@@ -9308,6 +9383,16 @@ focus_tree = {
 		id = SIC_the_true_heirs
 		icon = GFX_SIC_heirs
 		prerequisite = { focus = SIC_griffonstone }
+		bypass = {
+			AND = {
+				NOT = {
+					country_exists = BOI
+				}
+				NOT = {
+					country_exists = LAK
+				}
+			}
+		}
 		cost = 10
 		x = 1
 		y = 1
@@ -9318,7 +9403,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_the_true_heirs"
-			add_war_support = 0.03
+			add_manpower = 50000
 		}
 	}
 
@@ -9327,6 +9412,16 @@ focus_tree = {
 		icon = GFX_SIC_seize_the_throne
 		prerequisite = { focus = SIC_our_ancient_home }
 		prerequisite = { focus = SIC_the_true_heirs }
+		bypass = {
+			AND = {
+				NOT = {
+					country_exists = BOI
+				}
+				NOT = {
+					country_exists = LAK
+				}
+			}
+		}
 		cost = 10
 		x = 1
 		y = 1
@@ -9339,6 +9434,10 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_seize_the_throne"
 			declare_war_on = {
 				target = BOI
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = LAK
 				type = annex_everything
 			}
 		}
@@ -9358,36 +9457,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_the_sacred_city"
-			custom_effect_tooltip = 1_frd_burn_it_all_down_tt
-			hidden_effect = {
-				389 = {
-					remove_building = {
-						type = arms_factory
-						level = 99
-					}
-					remove_building = {
-						type = industrial_complex
-						level = 99
-					}
-					remove_building = {
-						type = infrastructure
-						level = 10
-					}
-					add_manpower = -1275000
-				}
-				add_offsite_building = {
-					type = arms_factory
-					level = 2
-				}
-			}
-			389 = {
-				add_core_of = SIC
-				set_state_category = wasteland
-			}
-			add_victory_points = {
-				province = 7192
-				value = -24
-			}
+			set_capital = { state = 389 }
 		}
 	}
 
@@ -9410,7 +9480,33 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_the_west_seized"
 			set_country_flag = SIC_frederick_conquering
-			add_war_support = 0.03
+			if = {
+				limit = {
+					has_idea = SIC_FRD_imperial_legetimity_1
+				}
+				swap_ideas = {
+					remove_idea = SIC_FRD_imperial_legetimity_1
+					add_idea = SIC_FRD_imperial_legetimity_2
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = SIC_FRD_imperial_legetimity_2
+				}
+				swap_ideas = {
+					remove_idea = SIC_FRD_imperial_legetimity_2
+					add_idea = SIC_FRD_imperial_legetimity_3
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = SIC_FRD_imperial_legetimity_3
+				}
+				swap_ideas = {
+					remove_idea = SIC_FRD_imperial_legetimity_3
+					add_idea = SIC_FRD_imperial_legetimity_4
+				}
+			}
 		}
 	}
 
@@ -9429,6 +9525,7 @@ focus_tree = {
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_the_fatherland_calls"
+			country_event = { id = sicameon_frtr_frd.16 days = 0 }
 		}
 	}
 	

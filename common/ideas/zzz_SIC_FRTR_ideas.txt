@@ -529,6 +529,70 @@ ideas = {
 	
 		####FRD LIMITED
 		
+		SIC_FRD_imperial_legetimity_1 = {
+			#picture = placeholder
+			allowed = {
+				tag = SIC
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.20
+				stability_factor = -0.1
+				war_support_factor = -0.1
+				conscription_factor = -0.2
+				surrender_limit = -0.1
+				resistance_growth = 0.2
+			}
+		}
+	
+		SIC_FRD_imperial_legetimity_2 = {
+			#picture = placeholder
+			allowed = {
+				tag = SIC
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.05
+				stability_factor = -0.05
+				war_support_factor = -0.05
+				conscription_factor = -0.1
+				surrender_limit = -0.05
+				resistance_growth = 0.1
+			}
+		}
+
+		SIC_FRD_imperial_legetimity_3 = {
+			#picture = placeholder
+			allowed = {
+				tag = SIC
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.15
+				stability_factor = 0.1
+				war_support_factor = 0.1
+				conscription_factor = 0.05
+				surrender_limit = 0.1
+				resistance_growth = -0.1
+			}
+		}
+
+		SIC_FRD_imperial_legetimity_4 = {
+			#picture = placeholder
+			allowed = {
+				tag = SIC
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.25
+				stability_factor = 0.15
+				war_support_factor = 0.15
+				conscription_factor = 0.2
+				surrender_limit = 0.2
+				resistance_growth = -0.25
+			}
+		}
+
 		SIC_FRD_fur_das_kaiserreich = {
 			#picture = placeholder
 			allowed = {
@@ -619,6 +683,42 @@ ideas = {
 				stability_weekly = 0.01
 			}
 		}
+		
+		SIC_FRD_empress_consort = {
+			#picture = placeholder
+			allowed = {
+				tag = SIC
+			}
+			removal_cost = -1
+			modifier = {
+				compliance_gain = 0.02
+				political_power_factor = 0.1
+				stability_factor = 0.05
+				war_support_factor = 0.05
+			}
+		}
+		
+		SIC_FRD_spoils_of_aster = {
+			#picture = placeholder
+			allowed = {
+				tag = SIC
+			}
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = -0.025
+			}
+		}
+
+		SIC_FRD_karthinian_wealth = {
+			#picture = placeholder
+			allowed = {
+				tag = SIC
+			}
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
 
 		SIC_FRD_astida = {
 			#picture = placeholder
@@ -628,20 +728,7 @@ ideas = {
 			removal_cost = -1
 			targeted_modifier = {
 				tag = MIT
-				attack_bonus_against = 0.05
-			}
-		}
-		
-		SIC_FRD_astsprida = {
-			#picture = placeholder
-			allowed = {
-				tag = SIC
-			}
-			removal_cost = -1
-			targeted_modifier = {
-				tag = SIC
-				attack_bonus_against = -0.5
-				defense_bonus_against = -0.5
+				attack_bonus_against = 0.1
 			}
 		}
 		
@@ -687,7 +774,19 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				defence = 0.1
+				army_strength_factor = 0.1
+			}
+		}
+		
+		SIC_FRD_atkwng = {
+			#picture = placeholder
+			allowed = {
+				tag = SIC
+			}
+			removal_cost = -1
+			modifier = {
+				army_defence_factor = 0.05
+				army_attack_factor = 0.1
 			}
 		}
 		

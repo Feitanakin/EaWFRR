@@ -33,6 +33,20 @@
 		}
 	}
 
+	SIC_Frederick_arantigos={
+		name=SIC_Arantigos_Frederick
+		portraits={
+			civilian={
+				large="gfx/leaders/SIC/Frederick_arantigos.tga"
+			}
+		}
+		country_leader={
+			ideology=despotism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+
 	SIC_Tomado={
 		name=SIC_Tomado_of_Brodfeld
 		portraits={

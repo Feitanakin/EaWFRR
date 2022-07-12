@@ -18,6 +18,10 @@ frtr_saicameon_prywhen = {
 	color = rgb { 156 62 30 }
 	color_ui = rgb { 156 62 30 }
 }
+SIC_frederick_arantigos = {
+	color = rgb { 187 119 50 }
+	color_ui = rgb { 187 119 50 }
+}
 FEA_dutch = {
 	color = rgb { 122 150 128 }
 	color_ui = rgb { 122 150 128 }

@@ -1,0 +1,35 @@
+division_template = {
+	name = "Mountaineer Guard"			
+	division_names_group = SIC_MON_01
+	regiments = {
+		mountaineers = { x = 0 y = 0 }
+		mountaineers = { x = 1 y = 0 }
+		mountaineers = { x = 2 y = 0 }
+		mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 1 y = 1 }
+		mountaineers = { x = 2 y = 1 }
+		mountaineers = { x = 0 y = 2 }
+		artillery_brigade = { x = 1 y = 2 }
+		artillery_brigade = { x = 2 y = 2 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }
+		artillery = { x = 0 y = 1 }
+		engineer = { x = 0 y = 2 }
+	}
+	priority = 2
+}
+units = {
+	division = {
+		name = "Mountaineers of the Snowtops"
+		location = 4424
+		division_template = "Mountaineer Guard"
+		start_experience_factor = 1.0 
+	}
+	division = {
+		name = "Mountaineers of the Snowtops"
+		location = 10313
+		division_template = "Mountaineer Guard"
+		start_experience_factor = 1.0 
+	}
+}
