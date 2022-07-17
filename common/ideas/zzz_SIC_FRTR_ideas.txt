@@ -529,8 +529,8 @@ ideas = {
 	
 		####FRD LIMITED
 		
-		SIC_FRD_imperial_legetimity_1 = {
-			#picture = placeholder
+		SIC_FRD_imperial_legitimacy_1 = {
+			picture = SIC_legitimacy_pathetic
 			allowed = {
 				tag = SIC
 			}
@@ -545,8 +545,8 @@ ideas = {
 			}
 		}
 	
-		SIC_FRD_imperial_legetimity_2 = {
-			#picture = placeholder
+		SIC_FRD_imperial_legitimacy_2 = {
+			picture = SIC_legitimacy_low
 			allowed = {
 				tag = SIC
 			}
@@ -561,8 +561,8 @@ ideas = {
 			}
 		}
 
-		SIC_FRD_imperial_legetimity_3 = {
-			#picture = placeholder
+		SIC_FRD_imperial_legitimacy_3 = {
+			picture = SIC_legitimacy_good
 			allowed = {
 				tag = SIC
 			}
@@ -577,8 +577,8 @@ ideas = {
 			}
 		}
 
-		SIC_FRD_imperial_legetimity_4 = {
-			#picture = placeholder
+		SIC_FRD_imperial_legitimacy_4 = {
+			picture = SIC_legitimacy_great
 			allowed = {
 				tag = SIC
 			}
@@ -592,23 +592,9 @@ ideas = {
 				resistance_growth = -0.25
 			}
 		}
-
-		SIC_FRD_fur_das_kaiserreich = {
-			#picture = placeholder
-			allowed = {
-				tag = SIC
-			}
-			removal_cost = -1
-			modifier = {
-				political_power_factor = 0.05
-				stability_factor = -0.1
-				war_support_factor = 0.1
-				conscription_factor = 0.1
-			}
-		}
 		
 		SIC_FRD_war_with_criminals = {
-			#picture = placeholder
+			picture = SIC_war_with_criminals
 			allowed = {
 				tag = SIC
 			}
@@ -621,7 +607,7 @@ ideas = {
 		}
 		
 		SIC_FRD_law_of_boreas = {
-			#picture = placeholder
+			picture = idol_of_boreas_lost
 			allowed = {
 				tag = SIC
 			}
@@ -634,7 +620,7 @@ ideas = {
 		}
 		
 		SIC_FRD_pirates_of_the_duke = {
-			#picture = placeholder
+			picture = MNC_bandits_black_market
 			allowed = {
 				tag = SIC
 			}
@@ -648,7 +634,7 @@ ideas = {
 		
 		SIC_FRD_republican_tension = {
 			name = republican_tension
-			#picture = placeholder
+			picture = republican_tension
 			allowed = {
 				tag = SIC
 			}
@@ -661,7 +647,7 @@ ideas = {
 		}	
 
 		SIC_FRD_autonomous_countryside = {
-			#picture = placeholder
+			picture = SIC_autonomous_countryside
 			allowed = {
 				tag = SIC
 			}
@@ -674,7 +660,7 @@ ideas = {
 		}
 		
 		SIC_FRD_sway_the_religious = {
-			#picture = placeholder
+			picture = new_religious_mythos
 			allowed = {
 				tag = SIC
 			}
@@ -685,7 +671,7 @@ ideas = {
 		}
 		
 		SIC_FRD_empress_consort = {
-			#picture = placeholder
+			picture = SIC_empress_consort
 			allowed = {
 				tag = SIC
 			}
@@ -699,7 +685,7 @@ ideas = {
 		}
 		
 		SIC_FRD_spoils_of_aster = {
-			#picture = placeholder
+			picture = SIC_spoils_of_aster
 			allowed = {
 				tag = SIC
 			}
@@ -710,7 +696,7 @@ ideas = {
 		}
 
 		SIC_FRD_karthinian_wealth = {
-			#picture = placeholder
+			picture = SIC_karthinian_wealth
 			allowed = {
 				tag = SIC
 			}
@@ -721,7 +707,7 @@ ideas = {
 		}
 
 		SIC_FRD_astida = {
-			#picture = placeholder
+			picture = RUS_planning_school
 			allowed = {
 				tag = SIC
 			}
@@ -733,7 +719,7 @@ ideas = {
 		}
 		
 		SIC_FRD_falatkida = {
-			#picture = placeholder
+			picture = RUS_planning_school
 			allowed = {
 				tag = SIC
 			}
@@ -745,7 +731,7 @@ ideas = {
 		}
 		
 		SIC_FRD_ordcmnida = {
-			#picture = placeholder
+			picture = SIC_in_need_of_order
 			allowed = {
 				tag = SIC
 			}
@@ -757,29 +743,45 @@ ideas = {
 		}
 		
 		SIC_FRD_mntbltida = {
-			#picture = placeholder
+			picture = SIC_planned_invasion
 			allowed = {
 				tag = SIC
 			}
 			removal_cost = -1
 			modifier = {
-				army_speed_factor = 0.25
+				army_speed_factor = 0.15
 			}
 		}
 		
 		SIC_FRD_anttnktctida = {
-			#picture = placeholder
+			picture = SIC_anti_tank
+			allowed = {
+				tag = SIC
+			}
+			removal_cost = -1
+			equipment_bonus = {
+				anti_tank = {
+					build_cost_ic = -0.15 instant = yes
+					reliability = 0.05
+				}
+			}
+		}
+		
+		SIC_FRD_fast_fast_fast = {
+			picture = SIC_fast_fast_fast
 			allowed = {
 				tag = SIC
 			}
 			removal_cost = -1
 			modifier = {
-				army_strength_factor = 0.1
+				planning_speed = 0.5
+				army_speed_factor = 0.15
+				breakthrough_factor = 0.1
 			}
-		}
+		}	
 		
 		SIC_FRD_atkwng = {
-			#picture = placeholder
+			picture = SIC_planned_invasion
 			allowed = {
 				tag = SIC
 			}
@@ -791,7 +793,7 @@ ideas = {
 		}
 		
 		SIC_FRD_warindida = {
-			#picture = placeholder
+			picture = IRE_medium_industry
 			allowed = {
 				tag = SIC
 			}
@@ -802,19 +804,8 @@ ideas = {
 			}
 		}
 		
-		SIC_FRD_surprise = {
-			#picture = placeholder
-			allowed = {
-				tag = SIC
-			}
-			removal_cost = -1
-			modifier = {
-				army_attack_factor = 0.1
-			}
-		}
-		
 		SIC_FRD_invasion_preparations = {
-			#picture = placeholder
+			picture = SIC_invasion
 			allowed = {
 				tag = SIC
 			}
@@ -824,60 +815,6 @@ ideas = {
 				amphibious_invasion_defence = 0.2
 			}
 		}
-		
-		####FRD REPEATABLE
-		
-		SIC_FRD_milprdrep = {
-			#picture = placeholder
-			allowed = {
-				tag = SIC
-			}
-			removal_cost = -1
-			modifier = {
-				experience_gain_army = 0.03
-				army_org_factor = -0.6
-				weekly_war_support_factor = 0.005
-			}
-		}
-		
-		SIC_FRD_offstn = {
-			#picture = placeholder
-			allowed = {
-				tag = SIC
-			}
-			removal_cost = -1
-			modifier = {
-				army_defence_factor = -0.1
-				army_attack_factor = 0.2
-			}
-		}
-		
-		SIC_FRD_defstn = {
-			#picture = placeholder
-			allowed = {
-				tag = SIC
-			}
-			removal_cost = -1
-			modifier = {
-				army_defence_factor = 0.2
-				army_attack_factor = -0.1
-			}
-		}
-		
-		SIC_FRD_oneyerpln = {
-			#picture = placeholder
-			allowed = {
-				tag = SIC
-			}
-			removal_cost = -1
-			modifier = {
-				production_speed_buildings_factor = 0.2
-				industrial_capacity_factory = -0.2
-				industrial_capacity_dockyard = -0.2
-			}
-		}
-		
-		
 		
 		####COM LIMITED
 		

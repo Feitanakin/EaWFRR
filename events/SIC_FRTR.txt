@@ -37,6 +37,11 @@ country_event = {
 		complete_national_focus = SIC_a_phantom_from_the_past 
 		recruit_character = SIC_Frederick
 		promote_character = SIC_Frederick
+		set_party_name= {
+			ideology = neutrality
+			long_name = SIC_fred_kings_party_long
+			name = SIC_fred_kings_party
+		}
 	}
 	option = {
 		name = sicameon_frtr.3.b
@@ -50,6 +55,11 @@ country_event = {
 			ruling_party = democratic
 			elections_allowed = no
 		}
+		set_party_name= {
+			ideology = democratic
+			long_name = SIC_tom_kings_party_long
+			name = SIC_tom_kings_party
+		}
 		hidden_effect = {
 			set_cosmetic_tag = SIC_tomado_the_king
 		}
@@ -62,6 +72,11 @@ country_event = {
 		complete_national_focus = SIC_springtime_sic
 		recruit_character = SIC_Petronilo
 		promote_character = SIC_Petronilo
+		set_party_name= {
+			ideology = neutrality
+			long_name = SIC_petr_kings_party_long
+			name = SIC_petr_kings_party
+		}
 	}
 
 }
@@ -586,6 +601,11 @@ country_event = {
 			recruit_character = SIC_Frederick_arantigos
 			promote_character = SIC_Frederick_arantigos
 		}
+		set_party_name= {
+			ideology = neutrality
+			long_name = SIC_fred_emperors_party_long
+			name = SIC_fred_emperors_party
+		}
 	}
 	is_triggered_only = yes
 }
@@ -636,13 +656,13 @@ country_event = {
 	#picture =
 	option = {
 		name = sicameon_frtr_frd.8.a
-		CYA = {
+		SIC = {
 			country_event= { days = 1 id = sicameon_frtr_frd.9 }
 		}
 	}
 	option = {
 		name = sicameon_frtr_frd.8.b
-		CYA = {
+		SIC = {
 			country_event= { days = 1 id = sicameon_frtr_frd.10 }
 		}
 	}
@@ -655,7 +675,7 @@ country_event = {
 	#picture =
 	option = {
 		name = sicameon_frtr_frd.9.a
-		add_idea = SIC_FRD_empress_consort
+		add_ideas = SIC_FRD_empress_consort
 	}
 	is_triggered_only = yes
 }
@@ -745,25 +765,123 @@ country_event = {
 			type = annex_everything
 			target = BRF
 		}
+		BRF = { add_to_ROOT_potential_cores = yes }
 		create_wargoal = { 
 			type = annex_everything
 			target = GRW
 		}
+		GRW = { add_to_ROOT_potential_cores = yes }
 		create_wargoal = { 
 			type = annex_everything
 			target = LUS
 		}
+		LUS = { add_to_ROOT_potential_cores = yes }
 		create_wargoal = { 
 			type = annex_everything
 			target = GRU
 		}
+		GRU = { add_to_ROOT_potential_cores = yes }
 		create_wargoal = { 
 			type = annex_everything
 			target = GRY
 		}
+		GRY = { add_to_ROOT_potential_cores = yes }
 	}
 	is_triggered_only = yes
 }
+
+country_event = {
+	id = sicameon_frtr_frd.17
+	title = sicameon_frtr_frd.17.t
+	desc = sicameon_frtr_frd.17.d
+	#picture =
+	option = {
+		name = sicameon_frtr_frd.17.a
+		GRI = {
+			country_event= { days = 1 id = sicameon_frtr_frd.18 }
+		}
+	}
+	is_triggered_only = yes
+}
+
+country_event = {
+	id = sicameon_frtr_frd.18
+	title = sicameon_frtr_frd.18.t
+	desc = sicameon_frtr_frd.18.d
+	#picture =
+	option = {
+		name = sicameon_frtr_frd.18.a
+		ai_chance = {
+			factor = 90
+		}
+		SIC = {
+			country_event= { days = 1 id = sicameon_frtr_frd.19 }
+		}
+		set_cosmetic_tag = GRI_north_empire
+	}
+	option = {
+		name = sicameon_frtr_frd.18.b
+		ai_chance = {
+			factor = 10
+		}
+		SIC = {
+			country_event= { days = 1 id = sicameon_frtr_frd.20 }
+		}
+	}
+	is_triggered_only = yes
+}
+
+country_event = {
+	id = sicameon_frtr_frd.19
+	title = sicameon_frtr_frd.19.t
+	desc = sicameon_frtr_frd.19.d
+	#picture =
+	option = {
+		name = sicameon_frtr_frd.19.a
+		
+	}
+	is_triggered_only = yes
+}
+
+country_event = {
+	id = sicameon_frtr_frd.20
+	title = sicameon_frtr_frd.20.t
+	desc = sicameon_frtr_frd.20.d
+	#picture =
+	option = {
+		name = sicameon_frtr_frd.20.a
+		SIC = {
+			every_unit_leader = {
+				set_nationality = GRI
+			}
+			transfer_navy = { target = GRI }
+		}
+		GRI = {
+			annex_country = {
+			    target = SIC
+			    transfer_troops = yes
+			}
+		}
+		every_state = { limit = { is_core_of = SIC } add_core_of = GRI }
+		GRI = { change_tag_from = SIC }
+	}
+	is_triggered_only = yes
+}
+
+country_event = {
+	id = sicameon_frtr_frd.21
+	title = sicameon_frtr_frd.21.t
+	desc = sicameon_frtr_frd.21.d
+	#picture =
+	option = {
+		name = sicameon_frtr_frd.21.a
+		set_cosmetic_tag = SIC_frederick_arantigos_new
+	}
+	is_triggered_only = yes
+}
+
+###############################################################
+
 
 add_namespace = sicameon_frtr_com
 country_event = {

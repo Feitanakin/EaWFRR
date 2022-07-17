@@ -13,6 +13,12 @@ division_template = {
 units = {
 	division = {
 		name = "Collaborationists"
+		location = 2047
+		division_template = "Collaboration Brigade"
+		start_experience_factor = 0
+	}
+	division = {
+		name = "Collaborationists"
 		location = 13176
 		division_template = "Collaboration Brigade"
 		start_experience_factor = 0

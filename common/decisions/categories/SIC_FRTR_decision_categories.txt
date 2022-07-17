@@ -27,61 +27,8 @@ SIC_spawn_insurgencies = {
     }
 }
 
-
-SIC_FRD_the_heir = {
-    priority = {
-        base = 100000
-    }
-    allowed = {
-        original_tag = SIC
-    }
-    visible = {
-        has_completed_focus = SIC_FRD_return_to_griffenheim
-    }
-}
-SIC_FRD_integration = {
-    priority = {
-        base = 10000
-    }
-    allowed = {
-        original_tag = SIC
-    }
-    visible = {
-        has_completed_focus = SIC_the_fatherland_calls
-    }
-}
-SIC_FRD_razing = {
-    priority = {
-        base = 10000
-    }
-    allowed = {
-        original_tag = SIC
-    }
-    visible = {
-    }
-}
-SIC_FRD_reconstructing = {
-    priority = {
-        base = 10000
-    }
-    allowed = {
-        original_tag = SIC
-    }
-    visible = {
-		has_completed_focus = SIC_the_spoils_of_aster
-    }
-}
-SIC_FRD_invasion = {
-    priority = {
-        base = 10000
-    }
-    allowed = {
-        original_tag = SIC
-    }
-    visible = {
-    }
-}
 SIC_FRD_southern_economy = {
+    icon = GFX_decision_category_generic_industry
     priority = {
         base = 100
     }
@@ -93,6 +40,7 @@ SIC_FRD_southern_economy = {
     }
 }
 SIC_FRD_southern_army = {
+    icon = GFX_decision_category_army_reform
     priority = {
         base = 100
     }
@@ -104,6 +52,7 @@ SIC_FRD_southern_army = {
     }
 }
 SIC_FRD_southern_navy = {
+    icon = GFX_decision_category_MTG_naval_treaties
     priority = {
         base = 100
     }
@@ -111,10 +60,11 @@ SIC_FRD_southern_navy = {
         original_tag = SIC
     }
     visible = {
-        has_completed_focus = SIC_FRD_the_southern_military
+        has_completed_focus = SIC_FRD_newshp
     }
 }
 SIC_FRD_southern_will = {
+    icon = GFX_decision_category_river_federation
     priority = {
         base = 100
     }

@@ -7351,7 +7351,7 @@ focus_tree = {
 	focus = {
 		id = SIC_a_phantom_from_the_past
 		icon = GFX_SIC_a_herzlander_grand_duke
-		cost = 10
+		cost = 7
 		x = 85
 		y = 0
 		ai_will_do = { factor = 100 }
@@ -7371,7 +7371,7 @@ focus_tree = {
 		id = SIC_for_the_kaiserreich
 		icon = GFX_SIC_for_the_kaiserreich
 		prerequisite = { focus = SIC_a_phantom_from_the_past }
-		cost = 10
+		cost = 7
 		x = -4
 		y = 1
 		relative_position_id = SIC_a_phantom_from_the_past
@@ -7396,7 +7396,7 @@ focus_tree = {
 		icon = GFX_SIC_squash_local_resistance
 		prerequisite = { focus = SIC_for_the_kaiserreich }
 		mutually_exclusive = { focus = SIC_make_compromisses }
-		cost = 10
+		cost = 7
 		x = 3
 		y = 1
 		relative_position_id = SIC_for_the_kaiserreich
@@ -7418,7 +7418,7 @@ focus_tree = {
 		id = SIC_combat_crime_with_extreme_prejudice
 		icon = GFX_SIC_combat_crime_with_extreme_prejudice
 		prerequisite = { focus = SIC_scuash_local_resistance }
-		cost = 10
+		cost = 7
 		x = -1
 		y = 1
 		relative_position_id = SIC_scuash_local_resistance
@@ -7433,7 +7433,7 @@ focus_tree = {
 		id = SIC_raze_coasts
 		icon = GFX_SIC_raze_coasts
 		prerequisite = { focus = SIC_combat_crime_with_extreme_prejudice }
-		cost = 10
+		cost = 7
 		x = 0
 		y = 1
 		relative_position_id = SIC_combat_crime_with_extreme_prejudice
@@ -7488,7 +7488,7 @@ focus_tree = {
 		id = SIC_die_republikanischen_ratten
 		icon = GFX_SIC_die_ratten
 		prerequisite = { focus = SIC_scuash_local_resistance }
-		cost = 10
+		cost = 7
 		x = 1
 		y = 1
 		relative_position_id = SIC_scuash_local_resistance
@@ -7508,7 +7508,7 @@ focus_tree = {
 		id = SIC_the_law_of_boreas
 		icon = GFX_SIC_the_law_of_boreas
 		prerequisite = { focus = SIC_die_republikanischen_ratten }
-		cost = 10
+		cost = 7
 		x = 0
 		y = 1
 		relative_position_id = SIC_die_republikanischen_ratten
@@ -7524,7 +7524,7 @@ focus_tree = {
 		icon = GFX_SIC_make_compromises
 		prerequisite = { focus = SIC_for_the_kaiserreich }
 		mutually_exclusive = { focus = SIC_scuash_local_resistance }
-		cost = 10
+		cost = 7
 		x = -3
 		y = 1
 		relative_position_id = SIC_for_the_kaiserreich
@@ -7542,7 +7542,7 @@ focus_tree = {
 		id = SIC_an_unorthodox_solution
 		icon = GFX_SIC_an_unorthodox_solution
 		prerequisite = { focus = SIC_make_compromisses }
-		cost = 10
+		cost = 7
 		x = -1
 		y = 1
 		relative_position_id = SIC_make_compromisses
@@ -7557,7 +7557,7 @@ focus_tree = {
 		id = SIC_pirates_of_the_grand_duke
 		icon = GFX_SIC_pirates_of_the_grand_duke
 		prerequisite = { focus = SIC_an_unorthodox_solution }
-		cost = 10
+		cost = 7
 		x = 0
 		y = 1
 		relative_position_id = SIC_an_unorthodox_solution
@@ -7589,7 +7589,7 @@ focus_tree = {
 		id = SIC_let_the_countryside_be
 		icon = GFX_SIC_let_the_countryside_be
 		prerequisite = { focus = SIC_make_compromisses }
-		cost = 10
+		cost = 7
 		x = 1
 		y = 1
 		relative_position_id = SIC_make_compromisses
@@ -7607,7 +7607,7 @@ focus_tree = {
 		id = SIC_firm_but_fair
 		icon = GFX_SIC_firm_but_fair
 		prerequisite = { focus = SIC_let_the_countryside_be }
-		cost = 10
+		cost = 7
 		x = 0
 		y = 1
 		relative_position_id = SIC_let_the_countryside_be
@@ -7656,7 +7656,7 @@ focus_tree = {
 		id = SIC_sway_the_religious
 		icon = GFX_SIC_sway_the_religious
 		prerequisite = { focus = SIC_work_with_defunct_council }
-		cost = 10
+		cost = 7
 		x = -1
 		y = 1
 		relative_position_id = SIC_work_with_defunct_council
@@ -7674,7 +7674,7 @@ focus_tree = {
 		id = SIC_meet_with_the_far_right
 		icon = GFX_SIC_meet_with_the_far_right
 		prerequisite = { focus = SIC_work_with_defunct_council }
-		cost = 10
+		cost = 7
 		x = 1
 		y = 1
 		relative_position_id = SIC_work_with_defunct_council
@@ -7694,7 +7694,7 @@ focus_tree = {
 		icon = GFX_SIC_no_second_chances
 		prerequisite = { focus = SIC_meet_with_the_far_right }
 		prerequisite = { focus = SIC_sway_the_religious }
-		cost = 10
+		cost = 7
 		x = 0
 		y = 2
 		relative_position_id = SIC_work_with_defunct_council
@@ -8069,6 +8069,11 @@ focus_tree = {
 				TAL = { add_to_ROOT_potential_cores = yes }
 				FRN = { add_to_ROOT_potential_cores = yes }
 				WNG = { add_to_ROOT_potential_cores = yes }
+				set_party_name= {
+					ideology = democratic
+					long_name = SIC_tom_emperors_party_long
+					name = SIC_tom_emperors_party
+				}
 			}
 		}
 	}
@@ -8366,7 +8371,7 @@ focus_tree = {
 	focus = {
 		id = SIC_the_imperial_restoration
 		icon = GFX_SIC_imperial_restoration
-		cost = 1
+		cost = 10
 		x = 85
 		y = 8
 		ai_will_do = { factor = 10 }
@@ -8381,7 +8386,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_the_imperial_restoration"
 			country_event = sicameon_frtr_frd.4
-			add_ideas = SIC_FRD_imperial_legetimity_1
+			add_ideas = SIC_FRD_imperial_legitimacy_1
 		}
 	}
 
@@ -8419,6 +8424,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_the_greatest_of_peoples"
+			add_stability = 0.1
 			add_manpower = 50000
 		}
 	}
@@ -8448,7 +8454,7 @@ focus_tree = {
 		id = SIC_the_eastern_counties
 		icon = GFX_SIC_eastern_countries
 		prerequisite = { focus = SIC_the_problem_before_us }
-		cost = 10
+		cost = 9
 		x = -10
 		y = 1
 		relative_position_id = SIC_the_problem_before_us
@@ -8473,7 +8479,7 @@ focus_tree = {
 				country_exists = CYA
 			}
 		}
-		cost = 1
+		cost = 6
 		x = -3
 		y = 1
 		relative_position_id = SIC_the_eastern_counties
@@ -8496,7 +8502,7 @@ focus_tree = {
 				country_exists = CYA
 			}
 		}
-		cost = 1
+		cost = 3
 		x = -1
 		y = 1
 		relative_position_id = SIC_cyanlosia
@@ -8519,7 +8525,7 @@ focus_tree = {
 				country_exists = CYA
 			}
 		}
-		cost = 1
+		cost = 3
 		x = 1
 		y = 1
 		relative_position_id = SIC_cyanlosia
@@ -8529,10 +8535,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_a_deep_reflection"
-			add_opinion_modifier = {
-				target = CYA
-				modifier = huge_increase
-			}
+			add_political_power = -20
 			CYA = {
 				add_opinion_modifier = {
 					target = SIC
@@ -8552,7 +8555,7 @@ focus_tree = {
 				country_exists = CYA
 			}
 		}
-		cost = 1
+		cost = 3
 		x = -1
 		y = 1
 		relative_position_id = SIC_a_deep_reflection
@@ -8572,13 +8575,13 @@ focus_tree = {
 		prerequisite = { focus = SIC_a_daring_proposal }
 		bypass = {
 			OR = {
-				SIC = { has_country_flag = SIC_declined }
+				has_country_flag = SIC_declined
 				NOT = {
 					country_exists = CYA
 				}
 			}
 		}
-		cost = 4
+		cost = 2
 		x = 0
 		y = 1
 		relative_position_id = SIC_a_daring_proposal
@@ -8589,22 +8592,17 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_a_royal_unification"
 			#sets into place a multi month event chain that ends in marriage
+			CYA = {
+				every_unit_leader = {
+					set_nationality = SIC
+				}
+				transfer_navy = { target = SIC }
+			}
 			annex_country = {
-				target = CYA
-				transfer_troops = yes
+			    target = CYA
+			    transfer_troops = yes
 			}
-			671 = {
-				add_core_of = SIC
-			}
-			510 = {
-				add_core_of = SIC
-			}
-			511 = {
-				add_core_of = SIC
-			}
-			507 = {
-				add_core_of = SIC
-			}
+			every_state = { limit = { is_core_of = CYA } add_core_of = SIC }
 		}
 	}
 
@@ -8617,7 +8615,7 @@ focus_tree = {
 				country_exists = MIT
 			}
 		}
-		cost = 5
+		cost = 6
 		x = 3
 		y = 1
 		relative_position_id = SIC_the_eastern_counties
@@ -8675,7 +8673,7 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_our_rifles_ready"
 			add_equipment_to_stockpile = {
 				type = infantry_equipment
-				amount = 2250
+				amount = 1750
 				producer = SIC
 			}
 		}
@@ -8709,7 +8707,7 @@ focus_tree = {
 		id = SIC_the_spoils_of_aster
 		icon = GFX_SIC_spoils_of_aster
 		prerequisite = { focus = SIC_the_red_cloth }
-		cost = 1
+		cost = 2
 		x = 0
 		y = 1
 		relative_position_id = SIC_the_red_cloth
@@ -8736,7 +8734,7 @@ focus_tree = {
 		icon = GFX_SIC_east_tamed
 		prerequisite = { focus = SIC_a_royal_unification }
 		prerequisite = { focus = SIC_the_spoils_of_aster }
-		cost = 10
+		cost = 9
 		x = 3
 		y = 1
 		relative_position_id = SIC_a_royal_unification
@@ -8752,29 +8750,29 @@ focus_tree = {
 			set_country_flag = SIC_frederick_conquering
 			if = {
 				limit = {
-					has_idea = SIC_FRD_imperial_legetimity_1
+					has_idea = SIC_FRD_imperial_legitimacy_1
 				}
 				swap_ideas = {
-					remove_idea = SIC_FRD_imperial_legetimity_1
-					add_idea = SIC_FRD_imperial_legetimity_2
+					remove_idea = SIC_FRD_imperial_legitimacy_1
+					add_idea = SIC_FRD_imperial_legitimacy_2
 				}
 			}
 			else_if = {
 				limit = {
-					has_idea = SIC_FRD_imperial_legetimity_2
+					has_idea = SIC_FRD_imperial_legitimacy_2
 				}
 				swap_ideas = {
-					remove_idea = SIC_FRD_imperial_legetimity_2
-					add_idea = SIC_FRD_imperial_legetimity_3
+					remove_idea = SIC_FRD_imperial_legitimacy_2
+					add_idea = SIC_FRD_imperial_legitimacy_3
 				}
 			}
 			else_if = {
 				limit = {
-					has_idea = SIC_FRD_imperial_legetimity_3
+					has_idea = SIC_FRD_imperial_legitimacy_3
 				}
 				swap_ideas = {
-					remove_idea = SIC_FRD_imperial_legetimity_3
-					add_idea = SIC_FRD_imperial_legetimity_4
+					remove_idea = SIC_FRD_imperial_legitimacy_3
+					add_idea = SIC_FRD_imperial_legitimacy_4
 				}
 			}
 		}
@@ -8786,7 +8784,7 @@ focus_tree = {
 		id = SIC_the_northern_counties
 		icon = GFX_SIC_northern_countries
 		prerequisite = { focus = SIC_the_problem_before_us }
-		cost = 10
+		cost = 9
 		x = 0
 		y = 1
 		relative_position_id = SIC_the_problem_before_us
@@ -8811,7 +8809,7 @@ focus_tree = {
 				country_exists = FAL
 			}
 		}
-		cost = 5
+		cost = 6
 		x = -3
 		y = 1
 		relative_position_id = SIC_the_northern_counties
@@ -8887,6 +8885,11 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_the_drawing_of_weapons"
 			add_manpower = 25000
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 2500
+				producer = SIC
+			}
 		}
 	}
 
@@ -8922,7 +8925,7 @@ focus_tree = {
 		id = SIC_sacking_matton
 		icon = GFX_SIC_sacking_matton
 		prerequisite = { focus = SIC_attack }
-		cost = 1
+		cost = 2
 		x = 0
 		y = 1
 		relative_position_id = SIC_attack
@@ -8953,7 +8956,7 @@ focus_tree = {
 				country_exists = BAN
 			}
 		}
-		cost = 10
+		cost = 6
 		x = 3
 		y = 1
 		relative_position_id = SIC_the_northern_counties
@@ -8976,7 +8979,7 @@ focus_tree = {
 				country_exists = BAN
 			}
 		}
-		cost = 10
+		cost = 3
 		x = -1
 		y = 1
 		relative_position_id = SIC_blackrock
@@ -9001,7 +9004,7 @@ focus_tree = {
 				country_exists = BAN
 			}
 		}
-		cost = 10
+		cost = 3
 		x = 1
 		y = 1
 		relative_position_id = SIC_blackrock
@@ -9011,7 +9014,10 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_mountaineer_brigades"
-			load_oob = "SIC_mountaineers"
+			custom_effect_tooltip = SIC_FRD_mountaineers
+			hidden_effect = {
+				load_oob = "SIC_mountaineers"
+			}
 		}
 	}
 
@@ -9025,7 +9031,7 @@ focus_tree = {
 				country_exists = BAN
 			}
 		}
-		cost = 10
+		cost = 3
 		x = 1
 		y = 1
 		relative_position_id = SIC_promise_order
@@ -9047,7 +9053,7 @@ focus_tree = {
 		id = SIC_mountain_riches
 		icon = GFX_SIC_mountain_riches
 		prerequisite = { focus = SIC_subdue_the_anarchists }
-		cost = 10
+		cost = 2
 		x = 0
 		y = 1
 		relative_position_id = SIC_subdue_the_anarchists
@@ -9074,7 +9080,7 @@ focus_tree = {
 		icon = GFX_SIC_north_reclaimed
 		prerequisite = { focus = SIC_mountain_riches }
 		prerequisite = { focus = SIC_sacking_matton }
-		cost = 10
+		cost = 9
 		x = 3
 		y = 1
 		relative_position_id = SIC_sacking_matton
@@ -9090,29 +9096,29 @@ focus_tree = {
 			set_country_flag = SIC_frederick_conquering
 			if = {
 				limit = {
-					has_idea = SIC_FRD_imperial_legetimity_1
+					has_idea = SIC_FRD_imperial_legitimacy_1
 				}
 				swap_ideas = {
-					remove_idea = SIC_FRD_imperial_legetimity_1
-					add_idea = SIC_FRD_imperial_legetimity_2
+					remove_idea = SIC_FRD_imperial_legitimacy_1
+					add_idea = SIC_FRD_imperial_legitimacy_2
 				}
 			}
 			else_if = {
 				limit = {
-					has_idea = SIC_FRD_imperial_legetimity_2
+					has_idea = SIC_FRD_imperial_legitimacy_2
 				}
 				swap_ideas = {
-					remove_idea = SIC_FRD_imperial_legetimity_2
-					add_idea = SIC_FRD_imperial_legetimity_3
+					remove_idea = SIC_FRD_imperial_legitimacy_2
+					add_idea = SIC_FRD_imperial_legitimacy_3
 				}
 			}
 			else_if = {
 				limit = {
-					has_idea = SIC_FRD_imperial_legetimity_3
+					has_idea = SIC_FRD_imperial_legitimacy_3
 				}
 				swap_ideas = {
-					remove_idea = SIC_FRD_imperial_legetimity_3
-					add_idea = SIC_FRD_imperial_legetimity_4
+					remove_idea = SIC_FRD_imperial_legitimacy_3
+					add_idea = SIC_FRD_imperial_legitimacy_4
 				}
 			}
 		}
@@ -9124,7 +9130,7 @@ focus_tree = {
 		id = SIC_the_western_counties
 		icon = GFX_SIC_western_counties
 		prerequisite = { focus = SIC_the_problem_before_us }
-		cost = 10
+		cost = 9
 		x = 10
 		y = 1
 		relative_position_id = SIC_the_problem_before_us
@@ -9165,13 +9171,18 @@ focus_tree = {
 				}
 			}
 		}
-		cost = 10
+		cost = 6
 		x = -3
 		y = 1
 		relative_position_id = SIC_the_western_counties
 		ai_will_do = { factor = 100 }
 		available = {
-			country_exists = WNG
+			OR = {
+				country_exists = WNG
+				country_exists = TAL
+				country_exists = FRN
+				country_exists = ARA
+			}
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_wingbardy"
@@ -9199,17 +9210,28 @@ focus_tree = {
 				}
 			}
 		}
-		cost = 10
+		cost = 3
 		x = -1
 		y = 1
 		relative_position_id = SIC_wingbardy
 		ai_will_do = { factor = 100 }
 		available = {
-			country_exists = WNG
+			OR = {
+				country_exists = WNG
+				country_exists = TAL
+				country_exists = FRN
+				country_exists = ARA
+			}
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_anti_tank_tactics"
 			add_ideas = SIC_FRD_anttnktctida
+			add_tech_bonus = {
+				name = arty_bonus
+				bonus = 1
+				uses = 1
+				category = artillery
+			}
 		}
 	}
 
@@ -9233,16 +9255,22 @@ focus_tree = {
 				}
 			}
 		}
-		cost = 10
+		cost = 3
 		x = 1
 		y = 1
 		relative_position_id = SIC_wingbardy
 		ai_will_do = { factor = 100 }
 		available = {
-			country_exists = WNG
+			OR = {
+				country_exists = WNG
+				country_exists = TAL
+				country_exists = FRN
+				country_exists = ARA
+			}
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_the_true_fascism"
+			add_political_power = 100
 			add_popularity = {
 				ideology = fascism
 				popularity = 0.05
@@ -9271,13 +9299,18 @@ focus_tree = {
 				}
 			}
 		}
-		cost = 10
+		cost = 3
 		x = 1
 		y = 1
 		relative_position_id = SIC_anti_tank_tactics
 		ai_will_do = { factor = 100 }
 		available = {
-			country_exists = WNG
+			OR = {
+				country_exists = WNG
+				country_exists = TAL
+				country_exists = FRN
+				country_exists = ARA
+			}
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_to_karthin"
@@ -9305,7 +9338,7 @@ focus_tree = {
 		id = SIC_the_ancient_wealth
 		icon = GFX_SIC_ancient_wealth
 		prerequisite = { focus = SIC_to_karthin }
-		cost = 10
+		cost = 2
 		x = 0
 		y = 1
 		relative_position_id = SIC_to_karthin
@@ -9333,13 +9366,16 @@ focus_tree = {
 				}
 			}
 		}
-		cost = 10
+		cost = 6
 		x = 3
 		y = 1
 		relative_position_id = SIC_the_western_counties
 		ai_will_do = { factor = 100 }
 		available = {
-			country_exists = BOI
+			OR = {
+				country_exists = BOI
+				country_exists = LAK
+			}
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_griffonstone"
@@ -9361,21 +9397,20 @@ focus_tree = {
 				}
 			}
 		}
-		cost = 10
+		cost = 3
 		x = -1
 		y = 1
 		relative_position_id = SIC_griffonstone
 		ai_will_do = { factor = 100 }
 		available = {
-			country_exists = BOI
+			OR = {
+				country_exists = BOI
+				country_exists = LAK
+			}
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_our_ancient_home"
-			add_equipment_to_stockpile = {
-				type = artillery_equipment
-				amount = 1500
-				producer = SIC
-			}
+			add_timed_idea = { idea = SIC_FRD_fast_fast_fast days = 180 }
 		}
 	}
 
@@ -9393,13 +9428,16 @@ focus_tree = {
 				}
 			}
 		}
-		cost = 10
+		cost = 3
 		x = 1
 		y = 1
 		relative_position_id = SIC_griffonstone
 		ai_will_do = { factor = 100 }
 		available = {
-			country_exists = BOI
+			OR = {
+				country_exists = BOI
+				country_exists = LAK
+			}
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_the_true_heirs"
@@ -9422,13 +9460,16 @@ focus_tree = {
 				}
 			}
 		}
-		cost = 10
+		cost = 3
 		x = 1
 		y = 1
 		relative_position_id = SIC_our_ancient_home
 		ai_will_do = { factor = 100 }
 		available = {
-			country_exists = BOI
+			OR = {
+				country_exists = BOI
+				country_exists = LAK
+			}
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_seize_the_throne"
@@ -9447,7 +9488,7 @@ focus_tree = {
 		id = SIC_the_sacred_city
 		icon = GFX_SIC_sacred_city
 		prerequisite = { focus = SIC_seize_the_throne }
-		cost = 10
+		cost = 4
 		x = 0
 		y = 1
 		relative_position_id = SIC_seize_the_throne
@@ -9457,7 +9498,14 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_the_sacred_city"
-			set_capital = { state = 389 }
+			389 = {
+				add_core_of = SIC
+			}
+			add_stability = 0.1
+			set_capital = { 
+				state = 389 
+				remember_old_capital = no
+			}
 		}
 	}
 
@@ -9466,14 +9514,14 @@ focus_tree = {
 		icon = GFX_SIC_west_seized
 		prerequisite = { focus = SIC_the_ancient_wealth }
 		prerequisite = { focus = SIC_the_sacred_city }
-		cost = 10
+		cost = 9
 		x = 3
 		y = 1
 		relative_position_id = SIC_the_ancient_wealth
 		available = {
 			NOT = {
 				country_exists = WNG
-				country_exists = BOi
+				country_exists = BOI
 			}
 		}
 		ai_will_do = { factor = 100 }
@@ -9482,29 +9530,29 @@ focus_tree = {
 			set_country_flag = SIC_frederick_conquering
 			if = {
 				limit = {
-					has_idea = SIC_FRD_imperial_legetimity_1
+					has_idea = SIC_FRD_imperial_legitimacy_1
 				}
 				swap_ideas = {
-					remove_idea = SIC_FRD_imperial_legetimity_1
-					add_idea = SIC_FRD_imperial_legetimity_2
+					remove_idea = SIC_FRD_imperial_legitimacy_1
+					add_idea = SIC_FRD_imperial_legitimacy_2
 				}
 			}
 			else_if = {
 				limit = {
-					has_idea = SIC_FRD_imperial_legetimity_2
+					has_idea = SIC_FRD_imperial_legitimacy_2
 				}
 				swap_ideas = {
-					remove_idea = SIC_FRD_imperial_legetimity_2
-					add_idea = SIC_FRD_imperial_legetimity_3
+					remove_idea = SIC_FRD_imperial_legitimacy_2
+					add_idea = SIC_FRD_imperial_legitimacy_3
 				}
 			}
 			else_if = {
 				limit = {
-					has_idea = SIC_FRD_imperial_legetimity_3
+					has_idea = SIC_FRD_imperial_legitimacy_3
 				}
 				swap_ideas = {
-					remove_idea = SIC_FRD_imperial_legetimity_3
-					add_idea = SIC_FRD_imperial_legetimity_4
+					remove_idea = SIC_FRD_imperial_legitimacy_3
+					add_idea = SIC_FRD_imperial_legitimacy_4
 				}
 			}
 		}
@@ -9518,7 +9566,7 @@ focus_tree = {
 		prerequisite = { focus = SIC_the_east_tamed }
 		prerequisite = { focus = SIC_the_north_reclaimed }
 		prerequisite = { focus = SIC_the_west_seized }
-		cost = 2
+		cost = 4
 		x = 0
 		y = 1
 		relative_position_id = SIC_the_north_reclaimed
@@ -9549,15 +9597,14 @@ focus_tree = {
 				}
 			}
 		}
-		cost = 1
+		cost = 7
 		x = -2
 		y = 1
 		relative_position_id = SIC_the_fatherland_calls
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_FRD_the_imperial_restoration2"
-			add_stability = 0.1
-			add_war_support = -0.1
+			country_event = { id = sicameon_frtr_frd.17 days = 0 }
 		}
 	}
 	
@@ -9565,7 +9612,7 @@ focus_tree = {
 		id = SIC_FRD_merging_administrations
 		icon = GFX_SIC_merging_administrations
 		prerequisite = { focus = SIC_FRD_the_imperial_restoration2 }
-		cost = 7
+		cost = 4
 		x = -1
 		y = 1
 		relative_position_id = SIC_FRD_the_imperial_restoration2
@@ -9573,6 +9620,17 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_FRD_merging_administrations"
 			add_political_power = 75
+			add_opinion_modifier = {
+				target = GRI
+				modifier = large_increase
+			}
+			GRI = {
+				add_opinion_modifier = {
+					target = SIC
+					modifier = large_increase
+				}
+				add_political_power = 75
+			}
 		}
 	}
 	
@@ -9580,14 +9638,25 @@ focus_tree = {
 		id = SIC_FRD_our_autonomy
 		icon = GFX_SIC_our_autonomy
 		prerequisite = { focus = SIC_FRD_the_imperial_restoration2 }
-		cost = 7
+		cost = 4
 		x = 1
 		y = 1
 		relative_position_id = SIC_FRD_the_imperial_restoration2
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_FRD_our_autonomy"
-			add_political_power = 75
+			add_stability = 0.20
+			add_opinion_modifier = {
+				target = GRI
+				modifier = large_increase
+			}
+			GRI = {
+				add_opinion_modifier = {
+					target = SIC
+					modifier = large_increase
+				}
+				add_stability = 0.20
+			}
 		}
 	}
 	
@@ -9596,7 +9665,7 @@ focus_tree = {
 		icon = GFX_goal_gri
 		prerequisite = { focus = SIC_FRD_merging_administrations }
 		prerequisite = { focus = SIC_FRD_our_autonomy }
-		cost = 1
+		cost = 2
 		x = 1
 		y = 1
 		relative_position_id = SIC_FRD_merging_administrations
@@ -9612,14 +9681,14 @@ focus_tree = {
 				GRI = {
 					set_autonomy = {
 						target = SIC
-						autonomy_state = autonomy_nominal_vassal
+						autonomy_state = autonomy_southern_empire
 					}
 				}
 			} ELSE = {
 				STW = {
 					set_autonomy = {
 						target = SIC
-						autonomy_state = autonomy_nominal_vassal
+						autonomy_state = autonomy_southern_empire
 					}
 				}
 			}
@@ -9722,11 +9791,6 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_FRD_newshp"
 			add_political_power = 42
-			add_dynamic_modifier = { modifier = SIC_FRD_reform_military }
-			set_variable = { SIC_FRD_xpgnlnd = 0 }
-			set_variable = { SIC_FRD_armorg = 0 }
-			set_variable = { SIC_FRD_cordef = 0 }
-			set_variable = { SIC_FRD_coratk = 0 }
 			custom_effect_tooltip = frd_new_decisions_tt
 		}
 	}
@@ -9759,35 +9823,16 @@ focus_tree = {
 		prerequisite = { focus = SIC_the_fatherland_calls }
 		mutually_exclusive = { focus = SIC_FRD_the_imperial_restoration2 }
 		available = {
-			GRI = {
-				OR = {
-					exists = no
-					NOT = {
-						OR = {
-							has_government = fascism
-							has_government = neutrality
-						}
-					}
-				}
-			}
-			STW = {
-				OR = {
-					exists = no
-					NOT = {
-						has_government = neutrality
-					}
-				}
-			}
+			
 		}
-		cost = 1
+		cost = 7
 		x = 2
 		y = 1
 		relative_position_id = SIC_the_fatherland_calls
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_FRD_the_empire_reborn"
-			add_stability = -0.2
-			add_war_support = 0.2
+			country_event = { id = sicameon_frtr_frd.21 days = 0 }
 		}
 	}
 	
@@ -9802,7 +9847,10 @@ focus_tree = {
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_FRD_the_border_guard_rallies"
-			load_oob = SIC_FRD_BRDGRD
+			custom_effect_tooltip = SIC_FRD_nationalists
+			hidden_effect = {
+				load_oob = "SIC_FRD_nationalists"
+			}
 		}
 	}
 	
@@ -9833,22 +9881,45 @@ focus_tree = {
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_FRD_the_invasion"
-			declare_war_on = {
-				target = 382.owner
-				type = annex_everything
-			}
-			declare_war_on = {
-				target = 547.owner
-				type = annex_everything
-			}
-			declare_war_on = {
-				target = 506.owner
-				type = annex_everything
-			}
-			declare_war_on = {
-				target = 423.owner
-				type = annex_everything
-			}
+		 create_wargoal = { type = annex_everything target = event_target:griffonian_empire }
+		 hidden_effect = {
+		 create_wargoal= {
+		 type = annex_everything 
+		 target = GRI
+		 }
+		 create_wargoal= {
+		 type = annex_everything 
+		 target = FEA
+		 }
+		 create_wargoal= {
+		 type = annex_everything 
+		 target = STW
+		 }
+		 create_wargoal= {
+		 type = annex_everything 
+		 target = BRZ
+		 }
+		 create_wargoal= {
+		 type = annex_everything 
+		 target = KAT
+		 }
+		 create_wargoal= {
+		 type = annex_everything 
+		 target = ROU
+		 }
+		 create_wargoal= {
+		 type = annex_everything 
+		 target = ANG
+		 }
+		 create_wargoal= {
+		 type = annex_everything 
+		 target = YAL
+		 }
+		 create_wargoal= {
+		 type = annex_everything 
+		 target = PYT
+		 }
+		 }
 		}
 	}
 	
@@ -9874,6 +9945,15 @@ focus_tree = {
 				state = 382
 				remember_old_capital = no
 			}
+		 GRI = { add_to_ROOT_potential_cores = yes }
+		 STW = { add_to_ROOT_potential_cores = yes }
+		 KAT = { add_to_ROOT_potential_cores = yes }
+		 BRZ = { add_to_ROOT_potential_cores = yes }
+		 FEA = { add_to_ROOT_potential_cores = yes }
+		 ROU = { add_to_ROOT_potential_cores = yes }
+		 ANG = { add_to_ROOT_potential_cores = yes }
+		 YAL = { add_to_ROOT_potential_cores = yes }
+		 PYT = { add_to_ROOT_potential_cores = yes }
 		}
 	}
 	
@@ -9888,7 +9968,52 @@ focus_tree = {
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_FRD_aquelia"
-			custom_effect_tooltip = frd_new_decisions_tt
+		 create_wargoal= {
+		 type = annex_everything 
+		 target = JER
+		 }
+		 hidden_effect = {
+		 create_wargoal= {
+		 type = annex_everything 
+		 target = JES
+		 }
+		 create_wargoal= {
+		 type = annex_everything 
+		 target = TRD
+		 }
+		 create_wargoal= {
+		 type = annex_everything 
+		 target = AVI
+		 }
+		 create_wargoal= {
+		 type = annex_everything 
+		 target = ERI
+		 }
+		 create_wargoal= {
+		 type = annex_everything 
+		 target = EYR
+		 }
+		 create_wargoal= {
+		 type = annex_everything 
+		 target = FEZ
+		 }
+		 create_wargoal= {
+		 type = annex_everything 
+		 target = AET
+		 }
+		 create_wargoal= {
+		 type = annex_everything 
+		 target = HEL
+		 }
+		 create_wargoal= {
+		 type = annex_everything 
+		 target = FLO
+		 }
+		 create_wargoal= {
+		 type = annex_everything 
+		 target = POM
+		 }
+		 }
 		}
 	}
 	focus = {
@@ -9899,15 +10024,36 @@ focus_tree = {
 		x = 0
 		y = 1
 		available = {
-			owns_state = 377
-			owns_state = 376
-			owns_state = 435
+		 JER = { exists = no }
+		 TRD = { exists = no }
+		 AVI = { exists = no }
+		 ERI = { exists = no }
+		 EYR = { exists = no }
+		 FEZ = { exists = no }
+		 AET = { exists = no }
+		 HEL = { exists = no }
+		 FLO = { exists = no }
+		 POM = { exists = no }
 		}
 		relative_position_id = SIC_FRD_aquelia
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_FRD_sack_the_cities"
-			custom_effect_tooltip = frd_new_decisions_tt
+		 JER = { add_to_ROOT_potential_cores = yes }
+		 JRR = { add_to_ROOT_potential_cores = yes }
+		 JEB = { add_to_ROOT_potential_cores = yes }
+		 VIN = { add_to_ROOT_potential_cores = yes }
+		 JFT = { add_to_ROOT_potential_cores = yes }
+		 JES = { add_to_ROOT_potential_cores = yes }
+		 TRD = { add_to_ROOT_potential_cores = yes }
+		 AVI = { add_to_ROOT_potential_cores = yes }
+		 ERI = { add_to_ROOT_potential_cores = yes }
+		 EYR = { add_to_ROOT_potential_cores = yes }
+		 FEZ = { add_to_ROOT_potential_cores = yes }
+		 AET = { add_to_ROOT_potential_cores = yes }
+		 HEL = { add_to_ROOT_potential_cores = yes }
+		 FLO = { add_to_ROOT_potential_cores = yes }
+		 POM = { add_to_ROOT_potential_cores = yes }
 		}
 	}
 	
@@ -9922,7 +10068,26 @@ focus_tree = {
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_FRD_republic"
-			custom_effect_tooltip = frd_new_decisions_tt
+		 create_wargoal= {
+		 type = annex_everything 
+		 target = SRS
+		 }
+		 create_wargoal= {
+		 type = annex_everything 
+		 target = NTR
+		 }
+		 create_wargoal= {
+		 type = annex_everything 
+		 target = FAT
+		 }
+		 create_wargoal= {
+		 type = annex_everything 
+		 target = FAW
+		 }
+		 create_wargoal= {
+		 type = annex_everything 
+		 target = MNC
+		 }
 		}
 	}
 	focus = {
@@ -9933,13 +10098,20 @@ focus_tree = {
 		x = 0
 		y = 1
 		available = {
-			owns_state = 485
+		 SRS = { exists = no }
+		 NTR = { exists = no }
+		 FAT = { exists = no }
+		 MNC = { exists = no }
 		}
 		relative_position_id = SIC_FRD_republic
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_FRD_tame_the_far_north"
-			custom_effect_tooltip = frd_new_decisions_tt
+		 SRS = { add_to_ROOT_potential_cores = yes }
+		 NTR = { add_to_ROOT_potential_cores = yes }
+		 FAT = { add_to_ROOT_potential_cores = yes }
+		 FAW = { add_to_ROOT_potential_cores = yes }
+		 MNC = { add_to_ROOT_potential_cores = yes }
 		}
 	}
 	
@@ -9954,7 +10126,58 @@ focus_tree = {
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_FRD_riverlands"
-			custom_effect_tooltip = frd_new_decisions_tt
+		 create_wargoal= {
+		 type = annex_everything 
+		 target = WAT
+		 }
+		 create_wargoal= {
+		 type = annex_everything 
+		 target = FBK
+		 }
+		 create_wargoal= {
+		 type = annex_everything 
+		 target = FIR
+		 }
+		 create_wargoal= {
+		 type = annex_everything 
+		 target = DMT
+		 }
+		 create_wargoal= {
+		 type = annex_everything 
+		 target = BAK
+		 }
+		 create_wargoal= {
+		 type = annex_everything 
+		 target = DEP
+		 }
+		 create_wargoal= {
+		 type = annex_everything 
+		 target = LCT
+		 }
+		 create_wargoal= {
+		 type = annex_everything 
+		 target = RCT
+		 }
+		 create_wargoal= {
+		 type = annex_everything 
+		 target = LUS
+		 }
+		 create_wargoal= {
+		 type = annex_everything 
+		 target = NIM
+		 }
+		 create_wargoal= {
+		 type = annex_everything 
+		 target = WIT
+		 }
+		 create_wargoal= {
+		 type = annex_everything 
+		 target = FRE
+		 }
+		 create_wargoal= {
+		 type = annex_everything 
+		 target = BAR
+		 }
 		}
 	}
 	focus = {
@@ -9965,13 +10188,36 @@ focus_tree = {
 		x = 0
 		y = 1
 		available = {
-			owns_state = 619
+		 WAT = { exists = no }
+		 FBK = { exists = no }
+		 FIR = { exists = no }
+		 DMT = { exists = no }
+		 BAK = { exists = no }
+		 DEP = { exists = no }
+		 LCT = { exists = no }
+		 RCT = { exists = no }
+		 NIM = { exists = no }
+		 WIT = { exists = no }
+		 FRE = { exists = no }
+		 BAR = { exists = no }
 		}
 		relative_position_id = SIC_FRD_riverlands
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_FRD_secure_griffonia"
-			custom_effect_tooltip = frd_new_decisions_tt
+		 WAT = { add_to_ROOT_potential_cores = yes }
+		 FBK = { add_to_ROOT_potential_cores = yes }
+		 LUS = { add_to_ROOT_potential_cores = yes }
+		 FIR = { add_to_ROOT_potential_cores = yes }
+		 DMT = { add_to_ROOT_potential_cores = yes }
+		 BAK = { add_to_ROOT_potential_cores = yes }
+		 DEP = { add_to_ROOT_potential_cores = yes }
+		 LCT = { add_to_ROOT_potential_cores = yes }
+		 RCT = { add_to_ROOT_potential_cores = yes }
+		 NIM = { add_to_ROOT_potential_cores = yes }
+		 WIT = { add_to_ROOT_potential_cores = yes }
+		 FRE = { add_to_ROOT_potential_cores = yes }
+		 BAR = { add_to_ROOT_potential_cores = yes }
 		}
 	}
 	
@@ -9985,6 +10231,10 @@ focus_tree = {
 		prerequisite = { focus = SIC_FRD_secure_griffonia }
 		available = {
 			owns_state = 483
+			OR = {
+				country_exists = GRF
+				country_exists = GFF
+			}
 		}
 		cost = 6
 		x = 0
@@ -9993,7 +10243,17 @@ focus_tree = {
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_FRD_across_the_seas"
-			custom_effect_tooltip = frd_new_decisions_tt
+			add_ideas = SIC_FRD_invasion_preparations
+			create_wargoal = { 
+				type = annex_everything
+				target = GRF
+			}
+			GRF = { add_to_ROOT_potential_cores = yes }
+			create_wargoal = { 
+				type = annex_everything
+				target = GFF
+			}
+			GFF = { add_to_ROOT_potential_cores = yes }
 		}
 	}
 

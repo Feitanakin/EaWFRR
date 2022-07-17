@@ -11,3 +11,11 @@ frtr_karthinian_empire_DEF:0 "Karthinian Empire"
 SIC_frederick_arantigos:0 "Southern Griffonian Empire"
 SIC_frederick_arantigos_ADJ:0 "Griffonian"
 SIC_frederick_arantigos_DEF:0 "The Griffonian Empire"
+
+GRI_north_empire:0 "Northern Griffonian Empire"
+GRI_north_empire_ADJ:0 "Griffonian"
+GRI_north_empire_DEF:0 "The Griffonian Empire"
+
+SIC_frederick_arantigos_new:0 "Griffonian Empire"
+SIC_frederick_arantigos_new_ADJ:0 "Griffonian"
+SIC_frederick_arantigos_new_DEF:0 "The Griffonian Empire"

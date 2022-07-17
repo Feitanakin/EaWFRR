@@ -352,9 +352,6 @@ country_event = { ## The tsunami!
 			}
 		}
 		restore_previous_manpower = yes
-		hidden_effect = {
-			country_event = { id = sicameon.12 days = 150 }
-		}
 	}
 	option = { #accept aid from the radicals
 		name = sicameon.11.b
@@ -425,9 +422,6 @@ country_event = { ## The tsunami!
 			}
 		}
 		restore_previous_manpower = yes
-		hidden_effect = {
-			country_event = { id = sicameon.12 days = 150 }
-		}
 	}
 }
 

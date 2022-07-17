@@ -39,4 +39,74 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/new_griffonian_identity.dds"
 	}
 
+	SpriteType = {
+		name = "GFX_idea_SIC_legitimacy_pathetic"
+		texturefile = "gfx/interface/ideas/SIC_legitimacy_pathetic.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_idea_SIC_legitimacy_low"
+		texturefile = "gfx/interface/ideas/SIC_legitimacy_low.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_idea_SIC_legitimacy_good"
+		texturefile = "gfx/interface/ideas/SIC_legitimacy_good.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_idea_SIC_legitimacy_great"
+		texturefile = "gfx/interface/ideas/SIC_legitimacy_great.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_idea_SIC_empress_consort"
+		texturefile = "gfx/interface/ideas/SIC_empress_consort.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_idea_SIC_war_with_criminals"
+		texturefile = "gfx/interface/ideas/SIC_war_with_criminals.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_idea_SIC_autonomous_countryside"
+		texturefile = "gfx/interface/ideas/SIC_autonomous_countryside.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_idea_SIC_karthinian_wealth"
+		texturefile = "gfx/interface/ideas/SIC_karthinian_wealth.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_idea_SIC_spoils_of_aster"
+		texturefile = "gfx/interface/ideas/SIC_spoils_of_aster.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_idea_SIC_fast_fast_fast"
+		texturefile = "gfx/interface/ideas/SIC_fast_fast_fast.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_idea_SIC_planned_invasion"
+		texturefile = "gfx/interface/ideas/SIC_planned_invasion.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_idea_SIC_invasion"
+		texturefile = "gfx/interface/ideas/SIC_invasion.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_idea_SIC_in_need_of_order"
+		texturefile = "gfx/interface/ideas/SIC_in_need_of_order.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_idea_SIC_anti_tank"
+		texturefile = "gfx/interface/ideas/SIC_anti_tank.dds"
+	}
+
 }
