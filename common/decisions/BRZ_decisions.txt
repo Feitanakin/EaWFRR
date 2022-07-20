@@ -470,7 +470,7 @@ political_actions = {
 		visible = {
 			has_government = democratic
 			has_war_with = GRI
-			has_country_leader = { ruling_only = yes name = "Winston Copperhill" }
+			has_country_leader = { ruling_only = yes character = BRZ_winston_copperhill }
 		}
 
 		complete_effect = {
@@ -764,8 +764,9 @@ BRZ_spread_the_revolution_decisions_catagory = {
 			BRZ_is_not_infiltrating_a_state = yes
 		}
 
-		highlight_state_targets = {
-			state = 555
+		highlight_states = {
+			highlight_state_targets = {
+				state = 555	}
 		}
 		
 		modifier = {
@@ -850,8 +851,9 @@ BRZ_spread_the_revolution_decisions_catagory = {
 			BRZ_is_not_infiltrating_a_state = yes
 		}
 
-		highlight_state_targets = {
-			state = 437
+		highlight_states = {
+			highlight_state_targets = {
+				state = 437	}
 		}
 		
 		modifier = {
@@ -936,8 +938,9 @@ BRZ_spread_the_revolution_decisions_catagory = {
 			BRZ_is_not_infiltrating_a_state = yes
 		}
 
-		highlight_state_targets = {
-			state = 397
+		highlight_states = {
+			highlight_state_targets = {
+				state = 397	}
 		}
 		
 		modifier = {
@@ -1022,8 +1025,9 @@ BRZ_spread_the_revolution_decisions_catagory = {
 			BRZ_is_not_infiltrating_a_state = yes
 		}
 
-		highlight_state_targets = {
-			state = 405
+		highlight_states = {
+			highlight_state_targets = {
+				state = 405	}
 		}
 		
 		modifier = {
@@ -1108,8 +1112,9 @@ BRZ_spread_the_revolution_decisions_catagory = {
 			BRZ_is_not_infiltrating_a_state = yes
 		}
 
-		highlight_state_targets = {
-			state = 554
+		highlight_states = {
+			highlight_state_targets = {
+				state = 554	}
 		}
 		
 		modifier = {
@@ -1194,8 +1199,9 @@ BRZ_spread_the_revolution_decisions_catagory = {
 			BRZ_is_not_infiltrating_a_state = yes
 		}
 
-		highlight_state_targets = {
-			state = 506
+		highlight_states = {
+			highlight_state_targets = {
+				state = 506	}
 		}
 		
 		modifier = {
@@ -1280,8 +1286,9 @@ BRZ_spread_the_revolution_decisions_catagory = {
 			BRZ_is_not_infiltrating_a_state = yes
 		}
 
-		highlight_state_targets = {
-			state = 402
+		highlight_states = {
+			highlight_state_targets = {
+				state = 402	}
 		}
 		
 		modifier = {
@@ -1366,8 +1373,9 @@ BRZ_spread_the_revolution_decisions_catagory = {
 			BRZ_is_not_infiltrating_a_state = yes
 		}
 
-		highlight_state_targets = {
-			state = 439
+		highlight_states = {
+			highlight_state_targets = {
+				state = 439	}
 		}
 		
 		modifier = {
@@ -1452,8 +1460,9 @@ BRZ_spread_the_revolution_decisions_catagory = {
 			BRZ_is_not_infiltrating_a_state = yes
 		}
 
-		highlight_state_targets = {
-			state = 399
+		highlight_states = {
+			highlight_state_targets = {
+				state = 399	}
 		}
 		
 		modifier = {
@@ -1538,8 +1547,9 @@ BRZ_spread_the_revolution_decisions_catagory = {
 			BRZ_is_not_infiltrating_a_state = yes
 		}
 
-		highlight_state_targets = {
-			state = 666
+		highlight_states = {
+			highlight_state_targets = {
+				state = 666	}
 		}
 		
 		modifier = {
@@ -1624,8 +1634,9 @@ BRZ_spread_the_revolution_decisions_catagory = {
 			BRZ_is_not_infiltrating_a_state = yes
 		}
 
-		highlight_state_targets = {
-			state = 545
+		highlight_states = {
+			highlight_state_targets = {
+				state = 545	}
 		}
 		
 		modifier = {
@@ -1710,8 +1721,9 @@ BRZ_spread_the_revolution_decisions_catagory = {
 			BRZ_is_not_infiltrating_a_state = yes
 		}
 
-		highlight_state_targets = {
-			state = 443
+		highlight_states = {
+			highlight_state_targets = {
+				state = 443	}
 		}
 		
 		modifier = {
@@ -1796,8 +1808,9 @@ BRZ_spread_the_revolution_decisions_catagory = {
 			BRZ_is_not_infiltrating_a_state = yes
 		}
 
-		highlight_state_targets = {
-			state = 440
+		highlight_states = {
+			highlight_state_targets = {
+				state = 440	}
 		}
 		
 		modifier = {
@@ -1882,8 +1895,9 @@ BRZ_spread_the_revolution_decisions_catagory = {
 			BRZ_is_not_infiltrating_a_state = yes
 		}
 
-		highlight_state_targets = {
-			state = 434
+		highlight_states = {
+			highlight_state_targets = {
+				state = 434	}
 		}
 		
 		modifier = {
@@ -1968,8 +1982,9 @@ BRZ_spread_the_revolution_decisions_catagory = {
 			BRZ_is_not_infiltrating_a_state = yes
 		}
 
-		highlight_state_targets = {
-			state = 547
+		highlight_states = {
+			highlight_state_targets = {
+				state = 547	}
 		}
 		
 		modifier = {
@@ -2054,8 +2069,9 @@ BRZ_spread_the_revolution_decisions_catagory = {
 			BRZ_is_not_infiltrating_a_state = yes
 		}
 
-		highlight_state_targets = {
-			state = 441
+		highlight_states = {
+			highlight_state_targets = {
+				state = 441	}
 		}
 		
 		modifier = {
@@ -2188,8 +2204,9 @@ BRZ_tackle_communist_infiltration = {
 			has_equipment = { infantry_equipment > 99 }
 		}
 
-		highlight_state_targets = {
-			state = 555
+		highlight_states = {
+			highlight_state_targets = {
+				state = 555	}
 		}
 		
 		modifier = {
@@ -2245,8 +2262,9 @@ BRZ_tackle_communist_infiltration = {
 			has_equipment = { infantry_equipment > 99 }
 		}
 
-		highlight_state_targets = {
-			state = 437
+		highlight_states = {
+			highlight_state_targets = {
+				state = 437	}
 		}
 		
 		modifier = {
@@ -2302,8 +2320,9 @@ BRZ_tackle_communist_infiltration = {
 			has_equipment = { infantry_equipment > 99 }
 		}
 
-		highlight_state_targets = {
-			state = 397
+		highlight_states = {
+			highlight_state_targets = {
+				state = 397	}
 		}
 		
 		modifier = {
@@ -2359,8 +2378,9 @@ BRZ_tackle_communist_infiltration = {
 			has_equipment = { infantry_equipment > 99 }
 		}
 
-		highlight_state_targets = {
-			state = 405
+		highlight_states = {
+			highlight_state_targets = {
+				state = 405	}
 		}
 		
 		modifier = {
@@ -2416,8 +2436,9 @@ BRZ_tackle_communist_infiltration = {
 			has_equipment = { infantry_equipment > 99 }
 		}
 
-		highlight_state_targets = {
-			state = 554
+		highlight_states = {
+			highlight_state_targets = {
+				state = 554	}
 		}
 		
 		modifier = {
@@ -2473,8 +2494,9 @@ BRZ_tackle_communist_infiltration = {
 			has_equipment = { infantry_equipment > 99 }
 		}
 
-		highlight_state_targets = {
-			state = 506
+		highlight_states = {
+			highlight_state_targets = {
+				state = 506	}
 		}
 		
 		modifier = {
@@ -2530,8 +2552,9 @@ BRZ_tackle_communist_infiltration = {
 			has_equipment = { infantry_equipment > 99 }
 		}
 
-		highlight_state_targets = {
-			state = 402
+		highlight_states = {
+			highlight_state_targets = {
+				state = 402	}
 		}
 		
 		modifier = {
@@ -2587,8 +2610,9 @@ BRZ_tackle_communist_infiltration = {
 			has_equipment = { infantry_equipment > 99 }
 		}
 
-		highlight_state_targets = {
-			state = 439
+		highlight_states = {
+			highlight_state_targets = {
+				state = 439	}
 		}
 		
 		modifier = {
@@ -2644,8 +2668,9 @@ BRZ_tackle_communist_infiltration = {
 			has_equipment = { infantry_equipment > 99 }
 		}
 
-		highlight_state_targets = {
-			state = 399
+		highlight_states = {
+			highlight_state_targets = {
+				state = 399	}
 		}
 		
 		modifier = {
@@ -2701,8 +2726,9 @@ BRZ_tackle_communist_infiltration = {
 			has_equipment = { infantry_equipment > 99 }
 		}
 
-		highlight_state_targets = {
-			state = 666
+		highlight_states = {
+			highlight_state_targets = {
+				state = 666	}
 		}
 		
 		modifier = {
@@ -2758,8 +2784,9 @@ BRZ_tackle_communist_infiltration = {
 			has_equipment = { infantry_equipment > 99 }
 		}
 
-		highlight_state_targets = {
-			state = 545
+		highlight_states = {
+			highlight_state_targets = {
+				state = 545	}
 		}
 		
 		modifier = {
@@ -2815,8 +2842,10 @@ BRZ_tackle_communist_infiltration = {
 			has_equipment = { infantry_equipment > 99 }
 		}
 
-		highlight_state_targets = {
-			state = 443
+		highlight_states = {
+			highlight_state_targets = {
+				state = 443
+				}
 		}
 		
 		modifier = {
@@ -2872,8 +2901,10 @@ BRZ_tackle_communist_infiltration = {
 			has_equipment = { infantry_equipment > 99 }
 		}
 
-		highlight_state_targets = {
-			state = 440
+		highlight_states = {
+			highlight_state_targets = {
+				state = 440
+				}
 		}
 		
 		modifier = {
@@ -2929,8 +2960,10 @@ BRZ_tackle_communist_infiltration = {
 			has_equipment = { infantry_equipment > 99 }
 		}
 
-		highlight_state_targets = {
-			state = 434
+		highlight_states = {
+			highlight_state_targets = {
+				state = 434
+			}
 		}
 		
 		modifier = {
@@ -2986,8 +3019,10 @@ BRZ_tackle_communist_infiltration = {
 			has_equipment = { infantry_equipment > 99 }
 		}
 
-		highlight_state_targets = {
-			state = 547
+		highlight_states = {
+			highlight_state_targets = {
+				state = 547
+			}
 		}
 		
 		modifier = {
@@ -3043,8 +3078,10 @@ BRZ_tackle_communist_infiltration = {
 			has_equipment = { infantry_equipment > 99 }
 		}
 
-		highlight_state_targets = {
-			state = 441
+		highlight_states = {
+			highlight_state_targets = {
+				state = 441
+			}
 		}
 		
 		modifier = {
@@ -5474,6 +5511,52 @@ BRZ_restore_empire = {
             every_state = {
                 limit = {
                     is_core_of = JFT
+                    NOT = {
+                        is_core_of = BRZ
+                    }
+                }
+                add_core_of = ROOT
+                hidden_effect = {
+                    remove_claim_by = BRZ
+                }
+            }
+        }
+        
+        ai_will_do = {
+            factor = 50
+        }
+	}
+	BRZ_core_jes = {
+
+		icon = infiltrate_state
+
+		allowed = {
+            original_tag = BRZ
+        }
+
+        visible = {
+            any_of = {
+				array = JES.core_states
+				var:v = { NOT = { is_core_of = BRZ } }
+			}
+        }
+        
+        available = {
+			controls_state = 487
+            has_completed_focus = BRZ_march_on_aquileia
+        }
+
+        cost = 50
+
+        days_remove = 60
+
+        cancel_if_not_visible = yes
+        
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove BRZ_core_jes"
+            every_state = {
+                limit = {
+                    is_core_of = JES
                     NOT = {
                         is_core_of = BRZ
                     }

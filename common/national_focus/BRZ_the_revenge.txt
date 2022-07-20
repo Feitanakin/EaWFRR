@@ -63,6 +63,7 @@ focus_tree = {
 		x = 28
 		y = 0
 		relative_position_id = BRZ_finish_the_ravenworks
+		mutually_exclusive = { focus = BRZ_The_Call_of_Our_Ancestors }
 
 		cost = 5
 
@@ -2404,7 +2405,7 @@ focus_tree = {
 		available_if_capitulated = no
 		available = {
 			HLQ = {
-				ruling_party = fascism
+				has_government = fascism
 			}
 		}
 		completion_reward = {
@@ -2477,7 +2478,7 @@ focus_tree = {
 			add_war_support = 0.2
 			add_manpower = 150000
 			set_cosmetic_tag = United_dogs
-			set_capital = 454
+			set_capital = { state = 454 }
 			set_province_name= {
 				id = 8210
 				name = odror_avor_zyon

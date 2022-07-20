@@ -15,7 +15,7 @@ SIC_anti_piracy = {
     }
 }
 SIC_spawn_insurgencies = {
-	icon = army_reform
+	icon = GFX_decision_category_form_prywhen_category
     priority = {
         base = 100
     }
