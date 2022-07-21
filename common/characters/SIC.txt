@@ -505,6 +505,14 @@
 				small="gfx/interface/ideas/Advisors/SIC/SIC_jose_pico.tga"
 			}
 		}
+		corps_commander = {
+			traits = { ranger griffon_race_trait }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+		}
 	}
 	SIC_leila_ordona={
 		name=SIC_leila_ordona
