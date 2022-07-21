@@ -5,7 +5,7 @@
  frd_new_decisions_tt:0 "§CNew Decisions Can be Activated§!"
  SIC_FRD_mountaineers:0 "§CTwo elite mountaineer divisions will be deployed.§!"
  SIC_FRD_nationalists:0 "§CAll radical military formations will be integrated into the army§!"
- SIC_frederick_conquering:0 "War Plan is Avtive"
+ SIC_frederick_conquering:0 "War Plan is Active"
 
  ### Names ###
 
@@ -535,11 +535,11 @@
  sicameon_frtr_frd.18.d:0 "TODO: Current leader of the empire need to decide if Griffonia will be divided between Northern and Southern empires ( Benifits that south is united by similar culture and won't revolt ) or Southern Empire will be annexed ( Bigger, stronger, better )."
  sicameon_frtr_frd.18.a:0 "South must stay as it is."
  sicameon_frtr_frd.18.b:0 "Finally the South is home."
- sicameon_frtr_frd.19.t:0 "Divided Outcome"
- sicameon_frtr_frd.19.d:0 "TODO: Frederick is happy that he will remain emperor."
+ sicameon_frtr_frd.19.t:0 "The Co-Emperor"
+ sicameon_frtr_frd.19.d:0 "Although when he first received the telegram with the plan, to keep the Empire divided and set up a protectorate in the South, with him as its ruler, Frederick wasn’t happy - Was it not the will of the Gods to return the Empire to its former glory, and unite all its former lands under a single banner again? But when he considered it again, he couldn’t deny that he actually liked the proposal. After all: Was it not he who unified these lands, and returned them under Imperial authority? It is only fair that he received a worthy prize. And under his benelovent yet firm rule his Protectorate shall be the pride of not only the Griffon Empire – but the entire griffonkind."
  sicameon_frtr_frd.19.a:0 "At last."
- sicameon_frtr_frd.20.t:0 "Annexation Outcome"
- sicameon_frtr_frd.20.d:0 "TODO: Frederick is happy that empire is whole."
+ sicameon_frtr_frd.20.t:0 "Bigger, Stronger, Better"
+ sicameon_frtr_frd.20.d:0 "When Frederich received the telegram of the Emperor approving the integration of the Southern lands into the Empire proper, first he felt a great calm. But soon the calmth gave way to happiness, as he was hit with a sudden sense of joy. For how could he not rejoice, now that his efforts helped restore the mightiest nation ever known to everycreature, and regain - at least part of - the pride of griffonkind? His mission was completed, and his work was approved by everyone, from the youngest hatchling to the eldest matushalem, some claim even by mighty Boreas himself. For it was not only the will, but the outright command of the Gods that it would happen.\n\n'And He made it happen'"
  sicameon_frtr_frd.20.a:0 "At last."
  sicameon_frtr_frd.21.t:0 "With Fire and Sword"
  sicameon_frtr_frd.21.d:0 "TODO: Griffenheim is weak, Frederick will unite griffonia by himself."
