@@ -7035,6 +7035,14 @@ focus_tree = {
 				target = FAL
 				type = annex_everything 
 			}
+			create_wargoal= {
+				target = BOI
+				type = annex_everything 
+			}
+			create_wargoal= {
+				target = LAK
+				type = annex_everything 
+			}
 		}
 	}
 
@@ -8069,6 +8077,8 @@ focus_tree = {
 				TAL = { add_to_ROOT_potential_cores = yes }
 				FRN = { add_to_ROOT_potential_cores = yes }
 				WNG = { add_to_ROOT_potential_cores = yes }
+				BOI = { add_to_ROOT_potential_cores = yes }
+				LAK = { add_to_ROOT_potential_cores = yes }
 				set_party_name= {
 					ideology = democratic
 					long_name = SIC_tom_emperors_party_long

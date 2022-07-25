@@ -3884,6 +3884,10 @@ add_war_support = 0.15
 				desc = "TWOTAIL_TAIL_DESC"
 				traits = { politically_connected pony_race_trait }
 				legacy_id = 658
+			}
+		}
+	}
+
 	focus = {
 		id = RCT_red_saturday
 		icon = GFX_focus_generic_soviet_politics
@@ -3988,6 +3992,7 @@ add_war_support = 0.15
 		}
 		bypass = {
 			amount_research_slots > 4
+		}
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -5466,6 +5471,7 @@ add_war_support = 0.15
 						}
 					}
 				}
+			}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
 	}
@@ -8337,6 +8343,7 @@ add_war_support = 0.15
 		
 		bypass = {
 			amount_research_slots > 4
+		}
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -8671,6 +8678,7 @@ focus_tree = {
 					promote_character = {
 					  character = RCT_river_swirl
 					  ideology = liberalism
+					}
 				}
 				load_focus_tree = river_city_focus
 				complete_national_focus = RCT_strengthen_the_ohs

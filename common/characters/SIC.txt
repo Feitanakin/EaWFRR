@@ -5,7 +5,7 @@
 		portraits={
 			army={
 				large="gfx/leaders/SIC/Sicameon_mountaineer.tga"
-				small="GFX_idea_Sicameon_mountaineer"
+				small="gfx/interface/ideas/Advisors/SIC/SIC_sicameon_mountaineer.tga"
 			}
 		}
 		corps_commander={
@@ -16,6 +16,17 @@
 			planning_skill=2
 			logistics_skill=3
 			legacy_id=1105
+		}
+		advisor = {
+			slot = high_command
+			idea_token = SIC_mountaineer
+			cost = 100
+			allowed = {
+				original_tag = SIC
+			}
+			traits = {
+				army_commando_2
+			}
 		}
 	}
 	
@@ -279,15 +290,15 @@
 			idea_token = BRF_Lexandro_Leuescu
 			ledger = army
 			visible = {
-				NOT = { has_completed_focus = BRF_loyal_military }
+				has_completed_focus = SIC_intelligentsia
 			}
 			allowed = {
-				original_tag = BRF
+				original_tag = SIC
 			}
 			available = {
 				NOT = { has_government = communism }
 			}
-			traits = { army_artillery_2 }
+			traits = { army_logistics_3 }
 			ai_will_do = {
 				factor = 40
 			}
@@ -441,6 +452,21 @@
 			logistics_skill=2
 			legacy_id=-1
 		}
+		advisor={
+			slot = army_chief
+			idea_token = SIC_high_command_def
+			ledger = army
+			cost = 100
+			allowed = {
+				original_tag = SIC
+			}
+			traits = {
+				army_chief_defensive_3
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
 	}
 	SIC_mika_volarman_de_etchebehere={
 		name=SIC_mika_volarman_de_etchebehere
@@ -458,6 +484,17 @@
 			planning_skill=2
 			logistics_skill=1
 			legacy_id=-1
+		}
+		advisor = {
+			slot = high_command
+			idea_token = SIC_mika_arty
+			cost = 100
+			allowed = {
+				original_tag = SIC
+			}
+			traits = {
+				army_artillery_2
+			}
 		}
 		gender = female
 	}
@@ -478,6 +515,17 @@
 			logistics_skill=2
 			legacy_id=-1
 		}
+		advisor = {
+			slot = high_command
+			idea_token = SIC_garra_regroup
+			cost = 100
+			allowed = {
+				original_tag = SIC
+			}
+			traits = {
+				army_regrouping_2
+			}
+		}
 	}
 	SIC_valentin_el_campesino_glacialez={
 		name=SIC_valentin_el_campesino_glacialez
@@ -496,6 +544,17 @@
 			logistics_skill=2
 			legacy_id=-1
 		}
+		advisor = {
+			slot = high_command
+			idea_token = SIC_glaci_inf
+			cost = 100
+			allowed = {
+				original_tag = SIC
+			}
+			traits = {
+				army_infantry_2
+			}
+		}
 	}
 	SIC_jose_pico={
 		name=SIC_jose_pico
@@ -511,7 +570,18 @@
 			attack_skill = 2
 			defense_skill = 2
 			planning_skill = 1
-			logistics_skill = 2
+			logistics_skill = 3
+		}
+		advisor = {
+			slot = high_command
+			idea_token = SIC_pico_logi
+			cost = 100
+			allowed = {
+				original_tag = SIC
+			}
+			traits = {
+				army_logistics_2
+			}
 		}
 	}
 	SIC_leila_ordona={
@@ -770,183 +840,6 @@
 			}
 			traits = {
 				corporatist_industrialist
-			}
-		}
-	}
-	SIC_miguel_alarroja={
-		name=SIC_advisor_10
-		portraits={
-			army = {
-				small="GFX_idea_generic_griffon_with_cap"
-			}
-		}
-		advisor = {
-			slot = army_chief
-			idea_token = SIC_advisor_10
-			cost = 100
-			allowed = {
-				original_tag = SIC
-			}
-			traits = {
-				army_chief_defensive_2
-			}
-		}
-	}
-	SIC_ricardo_alacero={
-		name=SIC_advisor_11
-		portraits={
-			army = {
-				small="GFX_idea_unknown_advisor_griffon"
-			}
-		}
-		advisor = {
-			slot = army_chief
-			idea_token = SIC_advisor_11
-			cost = 200
-			allowed = {
-				original_tag = SIC
-			}
-			traits = {
-				army_entrenchment_3
-			}
-		}
-	}
-	SIC_manuel_colacero={
-		name=SIC_advisor_12
-		portraits={
-			army = {
-				small="GFX_idea_unknown_advisor_griffon"
-			}
-		}
-		advisor = {
-			slot = army_chief
-			idea_token = SIC_advisor_12
-			cost = 100
-			allowed = {
-				original_tag = SIC
-			}
-			traits = {
-				army_chief_reform_2
-			}
-		}
-	}
-	SIC_maria_del_carmen_alarrosa={
-		name=SIC_advisor_13
-		portraits={
-			army = {
-				small="GFX_idea_unknown_advisor_griffon"
-			}
-		}
-		advisor = {
-			slot = high_command
-			idea_token = SIC_advisor_13
-			ledger = army
-			cost = 50
-			allowed = {
-				original_tag = SIC
-			}
-			traits = {
-				army_commando_1
-			}
-		}
-	}
-	SIC_juan_de_la_garra={
-		name=SIC_advisor_14
-		portraits={
-			army = {
-				small="GFX_idea_unknown_advisor_griffon"
-			}
-		}
-		advisor = {
-			slot = high_command
-			idea_token = SIC_advisor_14
-			ledger = army
-			cost = 100
-			allowed = {
-				original_tag = SIC
-			}
-			traits = {
-				army_cavalry_2
-			}
-		}
-	}
-	SIC_rafael_colarroja={
-		name=SIC_advisor_15
-		portraits={
-			army = {
-				small="GFX_idea_unknown_advisor_griffon"
-			}
-		}
-		advisor = {
-			slot = high_command
-			idea_token = SIC_advisor_15
-			ledger = army
-			cost = 100
-			allowed = {
-				original_tag = SIC
-			}
-			traits = {
-				army_regrouping_2
-			}
-		}
-	}
-	SIC_inaki_garralarga={
-		name=SIC_advisor_16
-		portraits={
-			army = {
-				small="GFX_idea_unknown_advisor_griffon"
-			}
-		}
-		advisor = {
-			slot = high_command
-			idea_token = SIC_advisor_16
-			ledger = army
-			cost = 200
-			allowed = {
-				original_tag = SIC
-			}
-			traits = {
-				army_concealment_3
-			}
-		}
-	}
-	SIC_francisco_garranegra={
-		name=SIC_advisor_17
-		portraits={
-			army = {
-				small="GFX_idea_unknown_advisor_griffon"
-			}
-		}
-		advisor = {
-			slot = high_command
-			idea_token = SIC_advisor_17
-			ledger = army
-			cost = 50
-			allowed = {
-				original_tag = SIC
-			}
-			traits = {
-				army_artillery_1
-			}
-		}
-	}
-	SIC_victoria_plumaluz={
-		name=SIC_advisor_18
-		portraits={
-			army = {
-				small="GFX_idea_unknown_advisor_griffon"
-			}
-		}
-		advisor = {
-			slot = high_command
-			idea_token = SIC_advisor_18
-			ledger = army
-			cost = 100
-			allowed = {
-				original_tag = SIC
-			}
-			traits = {
-				army_chief_maneuver_2
 			}
 		}
 	}
