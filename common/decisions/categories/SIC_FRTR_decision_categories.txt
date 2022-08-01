@@ -11,6 +11,7 @@ SIC_anti_piracy = {
         	has_completed_focus = SIC_piracy
 			has_completed_focus = SIC_anticorruption
 			has_completed_focus = SIC_combat_crime_with_extreme_prejudice
+			has_completed_focus = SIC_all_is_well
 		}
     }
 }

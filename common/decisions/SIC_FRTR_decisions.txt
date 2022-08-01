@@ -913,19 +913,8 @@ SIC_com_foreign_diplomacy = {
 
 		remove_effect = {
 			puppet = WNG
-			add_state_core = 373
-			add_state_core = 536
-			add_state_core = 371
 			FAL = {
 				transfer_state = 530
-			}
-			WNG = {
-				transfer_state = 374
-				transfer_state = 370
-				transfer_state = 372
-				transfer_state = 369
-				transfer_state = 375
-				transfer_state = 534
 			}
 		}
 	}
@@ -1004,20 +993,6 @@ SIC_com_foreign_diplomacy = {
 
 		remove_effect = {
 			puppet = GRW
-			add_state_core = 663
-			BAN = {
-				transfer_state = 605
-				add_state_core = 665
-			}
-			GRW = {
-				transfer_state = 651
-				transfer_state = 589
-				transfer_state = 385
-				transfer_state = 590
-				transfer_state = 508
-				transfer_state = 588
-				transfer_state = 414
-			}
 		}
 	}
 	
@@ -1038,7 +1013,6 @@ SIC_com_foreign_diplomacy = {
 			BRF = {
 				exists = no
 			}
-			owns_state = 671
 		}
 		
 		complete_effect = {

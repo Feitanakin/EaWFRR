@@ -766,7 +766,8 @@ BRZ_spread_the_revolution_decisions_catagory = {
 
 		highlight_states = {
 			highlight_state_targets = {
-				state = 555	}
+				state = 555
+			}
 		}
 		
 		modifier = {
@@ -853,7 +854,8 @@ BRZ_spread_the_revolution_decisions_catagory = {
 
 		highlight_states = {
 			highlight_state_targets = {
-				state = 437	}
+				state = 437
+			}
 		}
 		
 		modifier = {
@@ -940,7 +942,8 @@ BRZ_spread_the_revolution_decisions_catagory = {
 
 		highlight_states = {
 			highlight_state_targets = {
-				state = 397	}
+				state = 397
+			}
 		}
 		
 		modifier = {
@@ -1027,7 +1030,8 @@ BRZ_spread_the_revolution_decisions_catagory = {
 
 		highlight_states = {
 			highlight_state_targets = {
-				state = 405	}
+				state = 405
+			}
 		}
 		
 		modifier = {
@@ -1114,7 +1118,8 @@ BRZ_spread_the_revolution_decisions_catagory = {
 
 		highlight_states = {
 			highlight_state_targets = {
-				state = 554	}
+				state = 554
+			}
 		}
 		
 		modifier = {
@@ -1201,7 +1206,8 @@ BRZ_spread_the_revolution_decisions_catagory = {
 
 		highlight_states = {
 			highlight_state_targets = {
-				state = 506	}
+				state = 506
+			}
 		}
 		
 		modifier = {
@@ -1288,7 +1294,8 @@ BRZ_spread_the_revolution_decisions_catagory = {
 
 		highlight_states = {
 			highlight_state_targets = {
-				state = 402	}
+				state = 402
+			}
 		}
 		
 		modifier = {
@@ -1375,7 +1382,8 @@ BRZ_spread_the_revolution_decisions_catagory = {
 
 		highlight_states = {
 			highlight_state_targets = {
-				state = 439	}
+				state = 439
+			}
 		}
 		
 		modifier = {
@@ -1462,7 +1470,8 @@ BRZ_spread_the_revolution_decisions_catagory = {
 
 		highlight_states = {
 			highlight_state_targets = {
-				state = 399	}
+				state = 399
+			}
 		}
 		
 		modifier = {
@@ -1549,7 +1558,8 @@ BRZ_spread_the_revolution_decisions_catagory = {
 
 		highlight_states = {
 			highlight_state_targets = {
-				state = 666	}
+				state = 666
+			}
 		}
 		
 		modifier = {
@@ -1636,7 +1646,8 @@ BRZ_spread_the_revolution_decisions_catagory = {
 
 		highlight_states = {
 			highlight_state_targets = {
-				state = 545	}
+				state = 545
+			}
 		}
 		
 		modifier = {
@@ -1723,7 +1734,8 @@ BRZ_spread_the_revolution_decisions_catagory = {
 
 		highlight_states = {
 			highlight_state_targets = {
-				state = 443	}
+				state = 443
+			}
 		}
 		
 		modifier = {
@@ -1810,7 +1822,8 @@ BRZ_spread_the_revolution_decisions_catagory = {
 
 		highlight_states = {
 			highlight_state_targets = {
-				state = 440	}
+				state = 440
+			}
 		}
 		
 		modifier = {
@@ -1897,7 +1910,8 @@ BRZ_spread_the_revolution_decisions_catagory = {
 
 		highlight_states = {
 			highlight_state_targets = {
-				state = 434	}
+				state = 434
+			}
 		}
 		
 		modifier = {
@@ -1984,7 +1998,8 @@ BRZ_spread_the_revolution_decisions_catagory = {
 
 		highlight_states = {
 			highlight_state_targets = {
-				state = 547	}
+				state = 547
+			}
 		}
 		
 		modifier = {
@@ -2071,7 +2086,8 @@ BRZ_spread_the_revolution_decisions_catagory = {
 
 		highlight_states = {
 			highlight_state_targets = {
-				state = 441	}
+				state = 441
+			}
 		}
 		
 		modifier = {
@@ -2155,6 +2171,7 @@ BRZ_tackle_communist_infiltration = {
 				add = 85
 				NOT = {
 					any_owned_state = {
+						has_state_flag = discovered_infiltration
 						OR = {
 							state = 555
 							state = 437
@@ -2173,7 +2190,7 @@ BRZ_tackle_communist_infiltration = {
 							state = 547
 							state = 441
 						}
-						has_state_flag = discovered_infiltration
+											  
 					}
 				}
 			}
@@ -2206,7 +2223,8 @@ BRZ_tackle_communist_infiltration = {
 
 		highlight_states = {
 			highlight_state_targets = {
-				state = 555	}
+				state = 555
+			}
 		}
 		
 		modifier = {
@@ -2264,7 +2282,8 @@ BRZ_tackle_communist_infiltration = {
 
 		highlight_states = {
 			highlight_state_targets = {
-				state = 437	}
+				state = 437
+			}
 		}
 		
 		modifier = {
@@ -2322,7 +2341,8 @@ BRZ_tackle_communist_infiltration = {
 
 		highlight_states = {
 			highlight_state_targets = {
-				state = 397	}
+				state = 397
+			}
 		}
 		
 		modifier = {
@@ -2380,7 +2400,8 @@ BRZ_tackle_communist_infiltration = {
 
 		highlight_states = {
 			highlight_state_targets = {
-				state = 405	}
+				state = 405
+			}
 		}
 		
 		modifier = {
@@ -2438,7 +2459,8 @@ BRZ_tackle_communist_infiltration = {
 
 		highlight_states = {
 			highlight_state_targets = {
-				state = 554	}
+				state = 554
+			}
 		}
 		
 		modifier = {
@@ -2496,7 +2518,8 @@ BRZ_tackle_communist_infiltration = {
 
 		highlight_states = {
 			highlight_state_targets = {
-				state = 506	}
+				state = 506
+			}
 		}
 		
 		modifier = {
@@ -2554,7 +2577,8 @@ BRZ_tackle_communist_infiltration = {
 
 		highlight_states = {
 			highlight_state_targets = {
-				state = 402	}
+				state = 402
+			}
 		}
 		
 		modifier = {
@@ -2612,7 +2636,8 @@ BRZ_tackle_communist_infiltration = {
 
 		highlight_states = {
 			highlight_state_targets = {
-				state = 439	}
+				state = 439
+			}
 		}
 		
 		modifier = {
@@ -2670,7 +2695,8 @@ BRZ_tackle_communist_infiltration = {
 
 		highlight_states = {
 			highlight_state_targets = {
-				state = 399	}
+				state = 399
+			}
 		}
 		
 		modifier = {
@@ -2728,7 +2754,8 @@ BRZ_tackle_communist_infiltration = {
 
 		highlight_states = {
 			highlight_state_targets = {
-				state = 666	}
+				state = 666
+			}
 		}
 		
 		modifier = {
@@ -2786,7 +2813,8 @@ BRZ_tackle_communist_infiltration = {
 
 		highlight_states = {
 			highlight_state_targets = {
-				state = 545	}
+				state = 545
+			}
 		}
 		
 		modifier = {
@@ -2845,7 +2873,7 @@ BRZ_tackle_communist_infiltration = {
 		highlight_states = {
 			highlight_state_targets = {
 				state = 443
-				}
+			}
 		}
 		
 		modifier = {
@@ -2904,7 +2932,7 @@ BRZ_tackle_communist_infiltration = {
 		highlight_states = {
 			highlight_state_targets = {
 				state = 440
-				}
+			}
 		}
 		
 		modifier = {

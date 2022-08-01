@@ -965,3 +965,276 @@ country_event = {
 	}
 	is_triggered_only = yes
 }
+
+##############################PUPPETS#############################
+
+country_event = {
+	id = sicameon_frtr_com.5
+	immediate = {log = "[GetDateText]: [Root.GetName]: sicameon_frtr_com.5"}
+	hidden = yes
+
+	mean_time_to_happen = { days = 1 }
+
+	trigger = {
+		original_tag = FAL
+		FAL = {
+			is_subject = yes
+			is_subject_of = SIC
+		}
+		SIC = { has_completed_focus = SIC_red_star_rising }
+	}
+
+	option = {
+		FAL = { set_cosmetic_tag = FAL_ssr }
+		SIC = {
+			set_autonomy = {
+				target = FAL
+				autonomous_state = autonomy_soviet_socialist_republic
+			}
+		}
+	}
+}
+
+country_event = {
+	id = sicameon_frtr_com.6
+	immediate = {log = "[GetDateText]: [Root.GetName]: sicameon_frtr_com.6"}
+	hidden = yes
+
+	mean_time_to_happen = { days = 1 }
+
+	trigger = {
+		original_tag = BAN
+		BAN = {
+			is_subject = yes
+			is_subject_of = SIC
+		}
+		SIC = { has_completed_focus = SIC_red_star_rising }
+	}
+
+	option = {
+		BAN = { set_cosmetic_tag = BAN_ssr }
+		SIC = {
+			set_autonomy = {
+				target = BAN
+				autonomous_state = autonomy_soviet_socialist_republic
+			}
+		}
+	}
+}
+
+country_event = {
+	id = sicameon_frtr_com.7
+	immediate = {log = "[GetDateText]: [Root.GetName]: sicameon_frtr_com.7"}
+	hidden = yes
+
+	mean_time_to_happen = { days = 1 }
+
+	trigger = {
+		original_tag = CYA
+		CYA = {
+			is_subject = yes
+			is_subject_of = SIC
+		}
+		SIC = { has_completed_focus = SIC_red_star_rising }
+	}
+
+	option = {
+		CYA = { set_cosmetic_tag = CYA_ssr }
+		SIC = {
+			set_autonomy = {
+				target = CYA
+				autonomous_state = autonomy_soviet_socialist_republic
+			}
+		}
+	}
+}
+
+country_event = {
+	id = sicameon_frtr_com.8
+	immediate = {log = "[GetDateText]: [Root.GetName]: sicameon_frtr_com.8"}
+	hidden = yes
+
+	mean_time_to_happen = { days = 1 }
+
+	trigger = {
+		original_tag = MIT
+		MIT = {
+			is_subject = yes
+			is_subject_of = SIC
+		}
+		SIC = { has_completed_focus = SIC_red_star_rising }
+	}
+
+	option = {
+		MIT = { set_cosmetic_tag = MIT_ssr }
+		SIC = {
+			set_autonomy = {
+				target = MIT
+				autonomous_state = autonomy_soviet_socialist_republic
+			}
+		}
+	}
+}
+
+country_event = {
+	id = sicameon_frtr_com.9
+	immediate = {log = "[GetDateText]: [Root.GetName]: sicameon_frtr_com.9"}
+	hidden = yes
+
+	mean_time_to_happen = { days = 1 }
+
+	trigger = {
+		original_tag = BOI
+		BOI = {
+			is_subject = yes
+			is_subject_of = SIC
+		}
+		SIC = { has_completed_focus = SIC_red_star_rising }
+	}
+
+	option = {
+		BOI = { set_cosmetic_tag = BOI_ssr }
+		SIC = {
+			set_autonomy = {
+				target = BOI
+				autonomous_state = autonomy_soviet_socialist_republic
+			}
+		}
+	}
+}
+
+country_event = {
+	id = sicameon_frtr_com.10
+	immediate = {log = "[GetDateText]: [Root.GetName]: sicameon_frtr_com.10"}
+	hidden = yes
+
+	mean_time_to_happen = { days = 1 }
+
+	trigger = {
+		original_tag = LAK
+		LAK = {
+			is_subject = yes
+			is_subject_of = SIC
+		}
+		SIC = { has_completed_focus = SIC_red_star_rising }
+	}
+
+	option = {
+		LAK = { set_cosmetic_tag = LAK_ssr }
+		SIC = {
+			set_autonomy = {
+				target = LAK
+				autonomous_state = autonomy_soviet_socialist_republic
+			}
+		}
+	}
+}
+
+country_event = {
+	id = sicameon_frtr_com.11
+	immediate = {log = "[GetDateText]: [Root.GetName]: sicameon_frtr_com.11"}
+	hidden = yes
+
+	mean_time_to_happen = { days = 1 }
+
+	trigger = {
+		original_tag = WNG
+		WNG = {
+			is_subject = yes
+			is_subject_of = SIC
+		}
+		SIC = { has_completed_focus = SIC_red_star_rising }
+	}
+
+	option = {
+		WNG = { set_cosmetic_tag = WNG_ssr }
+		SIC = {
+			set_autonomy = {
+				target = WNG
+				autonomous_state = autonomy_soviet_socialist_republic
+			}
+		}
+	}
+}
+
+country_event = {
+	id = sicameon_frtr_com.12
+	immediate = {log = "[GetDateText]: [Root.GetName]: sicameon_frtr_com.12"}
+	hidden = yes
+
+	mean_time_to_happen = { days = 1 }
+
+	trigger = {
+		original_tag = ARA
+		ARA = {
+			is_subject = yes
+			is_subject_of = SIC
+		}
+		SIC = { has_completed_focus = SIC_red_star_rising }
+	}
+
+	option = {
+		ARA = { set_cosmetic_tag = ARA_ssr }
+		SIC = {
+			set_autonomy = {
+				target = ARA
+				autonomous_state = autonomy_soviet_socialist_republic
+			}
+		}
+	}
+}
+
+country_event = {
+	id = sicameon_frtr_com.13
+	immediate = {log = "[GetDateText]: [Root.GetName]: sicameon_frtr_com.13"}
+	hidden = yes
+
+	mean_time_to_happen = { days = 1 }
+
+	trigger = {
+		original_tag = FRN
+		FRN = {
+			is_subject = yes
+			is_subject_of = SIC
+		}
+		SIC = { has_completed_focus = SIC_red_star_rising }
+	}
+
+	option = {
+		FRN = { set_cosmetic_tag = FRN_ssr }
+		SIC = {
+			set_autonomy = {
+				target = FRN
+				autonomous_state = autonomy_soviet_socialist_republic
+			}
+		}
+	}
+}
+
+country_event = {
+	id = sicameon_frtr_com.14
+	immediate = {log = "[GetDateText]: [Root.GetName]: sicameon_frtr_com.14"}
+	hidden = yes
+
+	mean_time_to_happen = { days = 1 }
+
+	trigger = {
+		original_tag = TAL
+		TAL = {
+			is_subject = yes
+			is_subject_of = SIC
+		}
+		SIC = { has_completed_focus = SIC_red_star_rising }
+	}
+
+	option = {
+		TAL = { set_cosmetic_tag = TAL_ssr }
+		SIC = {
+			set_autonomy = {
+				target = TAL
+				autonomous_state = autonomy_soviet_socialist_republic
+			}
+		}
+	}
+}
+

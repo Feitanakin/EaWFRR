@@ -948,7 +948,7 @@ country_event = { #A New Regent Chosen/Eros
 	title = marschen.15.t
 	desc = marschen.15.d
 	
-	picture = GFX_event_medieval_city_2
+	picture = GFX_event_griffenheim
 	is_triggered_only = yes
 	
 	option = {
@@ -966,7 +966,7 @@ country_event = { #A New Regent Chosen/Gabriella
 	title = marschen.16.t
 	desc = marschen.16.d
 	
-	picture = GFX_event_medieval_city_2
+	picture = GFX_event_griffenheim
 	is_triggered_only = yes
 	
 	option = {
@@ -1863,7 +1863,7 @@ country_event = { #The New Principality
 	   add_war_support = 0.05
 	   clr_country_flag = herzland_diplomacy_blocked
 	   clr_country_flag = have_regular_puppets
-		set_country_leader_ideology = conservatism
+		set_country_leader_ideology = harmonic_constitutionalism
 	   if = { 
 		limit = { has_idea = PYT_the_new_regime }
 		swap_ideas = {
@@ -1900,7 +1900,7 @@ country_event = { #The Emperor Murdered
 	title = marschen.40.t
 	desc = marschen.40.d
 	
-	picture = GFX_event_medieval_city_2
+	picture = GFX_event_griffenheim
 	is_triggered_only = yes
 	
 	option = {
@@ -1917,7 +1917,7 @@ country_event = { #Annex Offer
 	immediate = {log = "[GetDateText]: [Root.GetName]: event marschen.41"}
 	title = marschen.41.t
 	desc = marschen.41.d
-	picture = GFX_event_medieval_city_2
+	picture = GFX_event_griffenheim
 	is_triggered_only = yes
 	option = {
 		name = marschen.41.a
@@ -1987,7 +1987,7 @@ country_event = { #Declined
 	immediate = {log = "[GetDateText]: [Root.GetName]: event marschen.42"}
 	title = marschen.42.t
 	desc = marschen.42.d
-	picture = GFX_event_medieval_city_2
+	picture = GFX_event_griffenheim
 	is_triggered_only = yes
 
 	option = {
@@ -2008,7 +2008,7 @@ country_event = { #Containing the Dutch
 	immediate = {log = "[GetDateText]: [Root.GetName]: event marschen.43"}
 	title = marschen.43.t
 	desc = marschen.43.d
-	picture = GFX_event_medieval_city_2
+	picture = GFX_event_griffenheim
 	is_triggered_only = yes
 
 	option = {
@@ -2030,6 +2030,20 @@ country_event = { #Containing the Dutch
 		497 = {
 			remove_core_of = FEA
 			add_manpower = 15000
+		}
+		520 = {
+			set_state_name = STATE_520_KRAUT
+		}
+		433 = {
+			set_state_name = STATE_433_KRAUT
+		}
+		set_province_name = {
+			id = 12763
+			name = PROV_12763_KRAUT
+		}
+		set_province_name = {
+			id = 9195
+			name = PROV_9195_KRAUT
 		}
 	}
 }
@@ -2269,7 +2283,7 @@ country_event = { #The Elections
 	title = marschen.54.t
 	desc = marschen.54.d
 	
-	picture = GFX_event_medieval_city_2
+	picture = GFX_event_griffenheim
 	is_triggered_only = yes
 	
 	option = {
@@ -2360,6 +2374,20 @@ country_event = { #One Language
 		add_popularity = { 
 		    ideology = neutrality 
 		    popularity = 0.03 
+		}
+		520 = {
+			set_state_name = STATE_520_KRAUT
+		}
+		433 = {
+			set_state_name = STATE_433_KRAUT
+		}
+		set_province_name = {
+			id = 12763
+			name = PROV_12763_KRAUT
+		}
+		set_province_name = {
+			id = 9195
+			name = PROV_9195_KRAUT
 		}
 	}
 }
@@ -2509,7 +2537,7 @@ country_event = { #The Herzlander Century
 	title = marschen.62.t
 	desc = marschen.62.d
 	
-	picture = GFX_event_medieval_city_2
+	picture = GFX_event_griffenheim
 	is_triggered_only = yes
 	
 	option = {
@@ -2648,7 +2676,7 @@ country_event = { #Kemerskai's Death
 	immediate = {log = "[GetDateText]: [Root.GetName]: event marschen.71"}
 	title = marschen.71.t
 	desc = marschen.71.d
-	picture = GFX_event_medieval_city_2
+	picture = GFX_event_griffenheim
 	is_triggered_only = yes
 	fire_only_once = yes
 
@@ -2664,9 +2692,7 @@ country_event = { #Kemerskai's Death
 			ideology = democratic
 			popularity = -0.05
 		}
-		hidden_effect = {
-			FAT = { FAT_kill_kemerskai = yes }
-		}
+		FAT = { FAT_kill_kemerskai = yes }
 	}
 }
 country_event = { #Erebus snaps out of it
@@ -2674,7 +2700,7 @@ country_event = { #Erebus snaps out of it
 	immediate = {log = "[GetDateText]: [Root.GetName]: event marschen.72"}
 	title = marschen.72.t
 	desc = marschen.72.d
-	picture = GFX_event_medieval_city_2
+	picture = GFX_event_griffenheim
 	is_triggered_only = yes
 
 	option = {
@@ -3079,7 +3105,7 @@ news_event = { #The Co-Prosperity Sphere
 	immediate = {log = "[GetDateText]: [Root.GetName]: event marschen_news.2"}
 	title = marschen_news.2.t
 	desc = marschen_news.2.d
-	picture = GFX_news_talononte
+	picture = GFX_news_griffenheim
 	is_triggered_only = yes
 	major = yes
 
@@ -3093,7 +3119,7 @@ news_event = { #Succeeding the Empire
 	immediate = {log = "[GetDateText]: [Root.GetName]: event marschen_news.3"}
 	title = marschen_news.3.t
 	desc = marschen_news.3.d
-	picture = GFX_news_talononte
+	picture = GFX_news_griffenheim
 	is_triggered_only = yes
 	major = yes
 
@@ -3117,7 +3143,7 @@ news_event = { #A Plot twist
 	immediate = {log = "[GetDateText]: [Root.GetName]: event marschen_news.4"}
 	title = marschen_news.4.t
 	desc = marschen_news.4.d
-	picture = GFX_news_talononte
+	picture = GFX_news_griffenheim
 	is_triggered_only = yes
 	major = yes
 

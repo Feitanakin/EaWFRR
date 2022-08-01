@@ -19,13 +19,14 @@ guiTypes = {
 			quadTextureSprite ="GFX_frontend_bg"
 			alwaystransparent = yes
 		}
-	# Christmas TIMEEEE is over!!!
-		#iconType = {
-         #   name = "snow_anim"
-         #   position = { x = 0 y = 180 }
-         #   quadTextureSprite = "GFX_frontend_bg_snow_anim"
-        #  orientation = upper_left
-		#}
+		
+		# Christmas TIMEEEE is off :(
+		# iconType = {
+		# 	name = "snow_anim"
+		# 	position = { x = 0 y = 180 }
+		# 	quadTextureSprite = "GFX_frontend_bg_snow_anim"
+		# 	orientation = upper_left
+		# }
 
 		#containerWindowType = {
 		#	name = "luna_bg"
@@ -425,7 +426,7 @@ guiTypes = {
 			position = { x = 160 y = -38 }
 			quadTextureSprite = "eaw_wiki"
 			pdx_tooltip = "EAW_WIKI_OPEN"
-			web_link = "https://equestria-at-war.wikia.com"
+			web_link = "https://equestriaatwar.miraheze.org/wiki/Equestria_at_War_Wiki"
 			clicksound = click_default
 		}
 

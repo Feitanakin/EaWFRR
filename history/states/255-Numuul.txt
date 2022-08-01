@@ -1,0 +1,23 @@
+
+state={
+	id=255
+	name="STATE_255"
+	resources={
+		tungsten=8.000
+	}
+
+	history={
+		owner = YAK
+		add_core_of = YAK
+
+	}
+
+	provinces={
+		720 954 1758 4449 4508 7831 8083 10461 11635 12697 
+	}
+	manpower=11562
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+	local_supplies=0.000
+	
+}

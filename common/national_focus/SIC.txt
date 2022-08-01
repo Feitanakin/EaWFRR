@@ -1674,7 +1674,7 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_red_cascade"
 			add_political_power = 75
 			add_war_support = 0.03
-			create_faction = "Southern Communist Block"
+			create_faction = "Midorian Treaty Organization"
 		}
 	}
 	
@@ -1721,25 +1721,9 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_red_cascade"
-			puppet = MIT
+			release_puppet = MIT
+			transfer_state = 667
 			add_state_core = 667
-			add_state_core = 657
-			add_state_core = 654
-			add_state_core = 664
-			add_state_core = 655
-			add_state_core = 513
-			add_state_core = 463
-			add_state_core = 386
-			add_state_core = 464
-			add_state_core = 656
-			MIT = {
-				transfer_state = 466
-				transfer_state = 467
-				transfer_state = 462
-				transfer_state = 465
-				transfer_state = 468
-				transfer_state = 469
-			}
 		}
 	}
 	
@@ -1786,22 +1770,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_red_cascade"
-			puppet = CYA
-			add_state_core = 671
-			add_state_core = 510
-			CYA = {
-				transfer_state = 511
-				transfer_state = 507
-			}
-			IF = {
-				limit = {
-					owns_state = 446
-				}
-				CYA = {
-					transfer_state = 446
-					add_state_core = 446
-				}
-			}
+			release_puppet = CYA
 		}
 	}
 	
@@ -1848,22 +1817,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_red_cascade"
-			puppet = BAN
-			BAN = {
-				transfer_state = 490
-				transfer_state = 606
-				transfer_state = 532
-				transfer_state = 489
-			}
-			IF = {
-				limit = {
-					owns_state = 671
-				}
-				CYA = {
-					transfer_state = 446
-					add_state_core = 446
-				}
-			}
+			release_puppet = BAN
 		}
 	}
 	
@@ -1910,17 +1864,11 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_red_cascade"
-			puppet = FAL
+			release_puppet = FAL
+			transfer_state = 504
+			transfer_state = 535
 			add_state_core = 504
-			FAL = {
-				transfer_state = 549
-				transfer_state = 503
-				transfer_state = 533
-				transfer_state = 393
-				transfer_state = 392
-				transfer_state = 529
-				transfer_state = 409
-			}
+			add_state_core = 535
 		}
 	}
 
@@ -9691,14 +9639,14 @@ focus_tree = {
 				GRI = {
 					set_autonomy = {
 						target = SIC
-						autonomy_state = autonomy_southern_empire
+						autonomous_state = autonomy_southern_empire
 					}
 				}
 			} ELSE = {
 				STW = {
 					set_autonomy = {
 						target = SIC
-						autonomy_state = autonomy_southern_empire
+						autonomous_state = autonomy_southern_empire
 					}
 				}
 			}

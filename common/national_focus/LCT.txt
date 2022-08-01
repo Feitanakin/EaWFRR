@@ -4,7 +4,7 @@ focus_tree = {
 	country = {
 		factor = 0
 		modifier = {
-			add = 20
+			add = 10
 			tag = LCT
 		}
 	}
@@ -59,7 +59,7 @@ focus_tree = {
 	focus = {
 		id = LCT_princely_restoration
 		icon = GFX_focus_lct_princely_restoration
-		x = -13
+		x = 3
 		y = 0
 		cost = 10
 
@@ -83,9 +83,15 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus LCT_princely_restoration"
 			custom_effect_tooltip = LCT_princely_restoration_effect_tt
-			remove_unit_leader = 904
-			remove_unit_leader = 906
-			remove_unit_leader = 907
+			LCT_lake_shield = {
+				remove_unit_leader_role = yes
+			}
+			LCT_bright_star = {
+				remove_unit_leader_role = yes
+			}
+			LCT_starwort = {
+				remove_unit_leader_role = yes
+			}
 			clr_country_flag = have_regular_puppets
 			add_timed_idea = {
 				days = 548
@@ -246,31 +252,6 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-			DEP = {
-				random_state = {
-					limit = {
-						has_state_flag = LCT_DEP_railways_Inf1
-					}
-					add_building_construction = {
-						type = infrastructure
-						level = 1
-						instant_build = yes
-					}
-				}
-				random_state = {
-					limit = {
-						has_state_flag = LCT_DEP_railways_Inf2
-					}
-					add_building_construction = {
-						type = infrastructure
-						level = 2
-						instant_build = yes
-					}
-				}
-			}
-		}
-
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus LCT_DEP_railways"
 			DEP = {
@@ -279,39 +260,17 @@ focus_tree = {
 					localization = LCT_DEP_railways
 				}
 			}
-			DEP = {
-				random_owned_controlled_state = {
-					limit = {
-						is_fully_controlled_by = PREV
-						free_building_slots = {
-							building = infrastructure
-							size > 0
-							include_locked = yes
-						}
-					}
-					add_building_construction = {
-						type = infrastructure
-						level = 1
-						instant_build = yes
-					}
-					set_state_flag = LCT_DEP_railways_Inf1
-				}
-				random_owned_controlled_state = {
-					limit = {
-						is_fully_controlled_by = PREV
-						free_building_slots = {
-							building = infrastructure
-							size > 1
-							include_locked = yes
-						}
-					}
-					add_building_construction = {
-						type = infrastructure
-						level = 2
-						instant_build = yes
-					}
-					set_state_flag = LCT_DEP_railways_Inf2
-				}
+			build_railway = {
+				level = 2
+				start_state = 550
+				target_state = 544
+				build_only_on_allied = yes
+			}
+			build_railway = {
+				level = 2
+				start_state = 544
+				target_state = 586
+				build_only_on_allied = yes
 			}
 		}
 		search_filters = { FOCUS_FILTER_TFV_AUTONOMY FOCUS_FILTER_INDUSTRY }
@@ -1144,7 +1103,6 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = LCT_buckrovic_incident
-		will_lead_to_war_with = GRI
 		cost = 15
 
 		ai_will_do = {
@@ -1162,8 +1120,8 @@ focus_tree = {
 		available = {
 			is_subject = no
 			has_global_flag = GRI_empire_rising_flag
-			NOT = { is_in_faction_with = event_target:griffonian_empire }
-			event_target:griffonian_empire = {
+			NOT = { is_in_faction_with = GRD }
+			GRD = {
 				any_neighbor_country = {
 					OR = {
 						tag = ROOT
@@ -1176,7 +1134,7 @@ focus_tree = {
 
 		bypass = {
 			OR = {
-				has_war_with = event_target:griffonian_empire
+				has_war_with = GRD
 				owns_state = 382
 			}
 		}
@@ -1184,7 +1142,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-		will_lead_to_war_with = GRI
+		will_lead_to_war_with = GRD # tag alias for event_target:griffonian_empire
 		will_lead_to_war_with = ANG
 		will_lead_to_war_with = PYT
 		will_lead_to_war_with = YAL
@@ -1197,14 +1155,14 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus LCT_strike_at_the_source"
 			if = {
 				limit = {
-					event_target:griffonian_empire = { exists = yes }
+					GRD = { exists = yes }
 				}
 				create_wargoal = {
 					type = annex_everything
-					target = event_target:griffonian_empire
+					target = GRD
 				}
 				hidden_effect = {
-					event_target:griffonian_empire = {
+					GRD = {
 						ROOT = {
 							add_ai_strategy = {
 								type = antagonize
@@ -1232,15 +1190,14 @@ focus_tree = {
 				555 = {
 					add_claim_by = ROOT
 				}
-				random_country = {
-					limit = {
-						owns_state = 382
-					}
-					ROOT = {
-						add_ai_strategy = {
-							type = antagonize
-							id = PREV
-							value = 200
+				382 = {
+					owner = {
+						ROOT = {
+							add_ai_strategy = {
+								type = antagonize
+								id = PREV
+								value = 200
+							}
 						}
 					}
 				}
@@ -1463,7 +1420,7 @@ focus_tree = {
 			}
 			WIT = {
 				if = {
-					limit = { has_country_leader = { ruling_only = yes name = "Wulfric Grey" } has_war = no }
+					limit = { has_country_leader = { ruling_only = yes character = WIT_wulfric_grey } has_war = no }
 					country_event = lakecity.20
 				}
 			}
@@ -1736,7 +1693,12 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus LCT_river_empire"
 			add_political_power = 150
 			add_stability = 0.1
-			set_cosmetic_tag = LCT_riv_emp
+			if = {
+				limit = {
+					NOT = { has_country_flag = river_federation_founder }
+				}
+				set_cosmetic_tag = LCT_riv_emp
+			}
 			every_state = {
 				limit = {
 					OR = {
@@ -1775,7 +1737,7 @@ focus_tree = {
 		}
 
 		available = {
-			event_target:griffonian_empire = {
+			GRD = {
 				exists = no
 			}
 			382 = {
@@ -1793,7 +1755,12 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus LCT_pony_on_throne"
 			add_political_power = -200
 			add_stability = -0.1
-			set_cosmetic_tag = LCT_griff_empire
+			if = {
+				limit = {
+					NOT = { has_country_flag = river_federation_founder }
+				}
+				set_cosmetic_tag = LCT_griff_empire
+			}
 			382 = {
 				add_core_of = ROOT
 			}
@@ -2447,16 +2414,38 @@ focus_tree = {
 		ai_will_do = {
 			factor = 4
 			modifier = {
-				event_target:longsword = { surrender_progress > 0.3 }
+				if = {
+					limit = {
+						country_exists = event_target:longsword
+					}
+					event_target:longsword = { surrender_progress > 0.3 }
+				}
+				else = {
+					HLQ = { surrender_progress > 0.3 }
+				}
 				factor = 5
 			}
 			modifier = {
-				strength_ratio = { tag = event_target:longsword ratio > 1.5 }
+				if = {
+					limit = {
+						country_exists = event_target:longsword
+					}
+					strength_ratio = { tag = event_target:longsword ratio > 1.5 }
+				}
+				else = {
+					strength_ratio = { tag = HLQ ratio > 1.5 }
+				}
 				factor = 5
 			}
 			modifier = {
 				date < 1011.1.1
 				factor = 0
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { has_global_flag = river_federation_founded }
+				is_river_fed_member = yes
+				is_faction_leader = no
 			}
 		}
 		will_lead_to_war_with = LNS
@@ -2544,6 +2533,12 @@ focus_tree = {
 				GRY = { has_war = yes }
 				factor = 5
 			}
+			modifier = {
+				factor = 0.8
+				NOT = { has_global_flag = river_federation_founded }
+				is_river_fed_member = yes
+				is_faction_leader = no
+			}
 		}
 		will_lead_to_war_with = LUS
 		will_lead_to_war_with = GRY
@@ -2601,27 +2596,33 @@ focus_tree = {
 		ai_will_do = {
 			factor = 3
 			modifier = {
-				event_target:griffonian_empire = { surrender_progress > 0.3 }
+				GRD = { surrender_progress > 0.3 }
 				factor = 10
 			}
 			modifier = {
-				strength_ratio = { tag = event_target:griffonian_empire ratio > 1.5 }
+				strength_ratio = { tag = GRD ratio > 1.5 }
 				factor = 2
 			}
 			modifier = {
 				factor = 0.1
 				date < 1013.1.1
-				event_target:griffonian_empire = {
+				GRD = {
 					has_war = no
 				}
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { has_global_flag = river_federation_founded }
+				is_river_fed_member = yes
+				is_faction_leader = no
 			}
 		}
 
 		available = {
 			is_subject = no
 			has_global_flag = GRI_empire_rising_flag
-			NOT = { is_in_faction_with = event_target:griffonian_empire }
-			event_target:griffonian_empire = {
+			NOT = { is_in_faction_with = GRD }
+			GRD = {
 				any_neighbor_country = {
 					OR = {
 						tag = ROOT
@@ -2633,26 +2634,19 @@ focus_tree = {
 		}
 
 		bypass = {
-			has_war_with = event_target:griffonian_empire
+			has_war_with = GRD
 		}
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-		will_lead_to_war_with = GRI
-		will_lead_to_war_with = ANG
-		will_lead_to_war_with = PYT
-		will_lead_to_war_with = YAL
-		will_lead_to_war_with = ROU
-		will_lead_to_war_with = KAT
-		will_lead_to_war_with = STW
-		will_lead_to_war_with = BRZ
-		will_lead_to_war_with = FEA
+		will_lead_to_war_with = GRD # tag alias for event_target:griffonian_empire
+
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus LCT_destroy_true_enemy"
 			create_wargoal = {
 				type = annex_everything
-				target = event_target:griffonian_empire
+				target = GRD
 			}
 		}
 		search_filters = { FOCUS_FILTER_ANNEXATION }
@@ -2779,11 +2773,16 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus LCT_greater_lake_city"
 			add_political_power = 400
 			if = {
-				limit = { has_RIV_cosmetic_tag = yes }
-				set_cosmetic_tag = LCT_great_lake_city_ally
-			}
-			else = {
-				set_cosmetic_tag = LCT_great_lake_city
+				limit = {
+					NOT = { has_country_flag = river_federation_founder }
+				}
+				if = {
+					limit = { has_RIV_cosmetic_tag = yes }
+					set_cosmetic_tag = LCT_great_lake_city_ally
+				}
+				else = {
+					set_cosmetic_tag = LCT_great_lake_city
+				}
 			}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2804,12 +2803,14 @@ focus_tree = {
 		ai_will_do = {
 			factor = 2
 			modifier = {
-				has_war_with = event_target:griffonian_empire
+				has_war_with = GRD
 				factor = 0.1
 			}
 			modifier = {
-				has_war_with = WNG
-				factor = 3
+				factor = 0.8
+				NOT = { has_global_flag = river_federation_founded }
+				is_river_fed_member = yes
+				is_faction_leader = no
 			}
 		}
 
@@ -3551,17 +3552,8 @@ focus_tree = {
 			remove_ideas = LCT_rising_militarism
 			add_ideas = LCT_civilian_government
 
-			create_country_leader = {
-				name = "Wavebreaker"
-				desc = "POLITICS_WAVEBREAKER_DESC"
-				picture = "WaveBreaker.tga"
-				expire = "1965.1.1"
-				ideology = liberalism
-				traits = {
-					dislikes_griffon_empire
-				}
-				id = 903
-			}
+			promote_character = LCT_wavebreaker
+
 			add_popularity = { ideology = democratic popularity = 0.20 }
 			set_politics = { ruling_party = democratic elections_allowed = yes }
 		}
@@ -3584,10 +3576,6 @@ focus_tree = {
 		ai_will_do = {
 			factor = 7
 		}
-
-
-
-
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -4431,7 +4419,7 @@ focus_tree = {
 	focus = {
 		id = LCT_army_modernisation
 		icon = GFX_goal_generic_army_doctrines
-		x = 30
+		x = 15
 		y = 0
 		relative_position_id = LCT_democracy_prevails
 
@@ -4559,9 +4547,9 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus LCT_infantry_supremacy"
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = LCT_infantry_supremacy
-				bonus = 1.0
+				cost_reduction = 0.5
 				uses = 2
 				category = cat_grand_battle_plan
 				category = cat_mass_assault
@@ -4605,9 +4593,9 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus LCT_tech_supremacy"
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = LCT_tech_supremacy
-				bonus = 1.0
+				cost_reduction = 0.5
 				uses = 2
 				category = cat_mobile_warfare
 				category = cat_superior_firepower
@@ -4840,9 +4828,9 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus LCT_army_tatics"
-			add_tech_bonus = {
-				name = LCT_army_tatics
-				bonus = 1.0
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
 				uses = 2
 				category = land_doctrine
 			}
@@ -4904,10 +4892,6 @@ focus_tree = {
 			factor = 4
 		}
 
-
-
-
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -4938,10 +4922,6 @@ focus_tree = {
 			factor = 4
 		}
 
-
-
-
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -4949,8 +4929,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus LCT_army_expansion"
 			custom_effect_tooltip = available_chief_of_army
-			show_ideas_tooltip = LCT_drill_army_chief
-
+			show_ideas_tooltip = LCT_haster_razor
 		}
 	}
 
@@ -4993,9 +4972,9 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			add_tech_bonus = {
-				name = LCT_establish_air_force
-				bonus = 1.0
+			add_doctrine_cost_reduction = {
+				name = air_doc_bonus
+				cost_reduction = 0.5
 				uses = 1
 				category = air_doctrine
 			}
@@ -5018,9 +4997,9 @@ focus_tree = {
 				}
 				set_state_flag = LCT_establish_air_force_ab
 			}
-			add_tech_bonus = {
-				name = LCT_establish_air_force
-				bonus = 1.0
+			add_doctrine_cost_reduction = {
+				name = air_doc_bonus
+				cost_reduction = 0.5
 				uses = 1
 				category = air_doctrine
 			}
@@ -5212,9 +5191,9 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus LCT_the_lake_in_the_sky"
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = air_doc_bonus
-				bonus = 1.0
+				cost_reduction = 0.5
 				uses = 1
 				category = air_doctrine
 			}
@@ -5602,10 +5581,9 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus LCT_carrier_focus"
 			custom_effect_tooltip = available_designer
 			show_ideas_tooltip = LCT_pacific_manufacturer
-
-			add_tech_bonus = {
-				name = naval_doc_bonus
-				bonus = 1.0
+			add_doctrine_cost_reduction = {
+				name = cat_base_strike
+				cost_reduction = 0.5
 				uses = 2
 				category = cat_base_strike
 			}
@@ -5644,9 +5622,9 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus LCT_capital_focus"
 			custom_effect_tooltip = available_designer
 			show_ideas_tooltip = LCT_atlantic_manufacturer
-			add_tech_bonus = {
-				name = naval_doc_bonus
-				bonus = 1.0
+			add_doctrine_cost_reduction = {
+				name = cat_fleet_in_being
+				cost_reduction = 0.5
 				uses = 2
 				category = cat_fleet_in_being
 			}
@@ -6034,7 +6012,6 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
-
 #####################################################################
 #####################################################################
 #####################################################################
