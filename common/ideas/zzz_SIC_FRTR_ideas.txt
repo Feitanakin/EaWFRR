@@ -184,7 +184,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				neutral_drift = -0.03
+				neutrality_drift_drift = -0.03
 				war_support_factor = -0.1
 			}
 		}
@@ -409,7 +409,7 @@ ideas = {
 			removal_cost = -1
 			modifier = { 
 				stability_factor = 0.05
-				democracy_drift = 0.01
+				democratic_drift = 0.01
 			}
 		}
 		
@@ -998,6 +998,33 @@ ideas = {
 				factor = 40
 			}
 			traits = { compassionate_gentleman }
+		}
+	}
+	
+##################MANPOWER##################
+	
+	mobilization_laws = {
+		law = yes
+		
+		workers_and_peasants_red_army = {
+			picture = workers_and_peasants_red_army
+			level = 6
+            removal_cost = -1
+            allowed = { always = no }
+            cancel_if_invalid = no
+            available = {
+                always = yes
+            }
+
+            modifier = {
+                conscription = 0.07
+                training_time_factor = 0.15
+				mobilization_speed = 0.25
+            }
+
+            allowed_to_remove = {
+                always = no
+            }
 		}
 	}
 }

@@ -79,6 +79,7 @@ SIC_FRD_southern_will = {
 
 
 SIC_com_foreign_diplomacy = {
+    icon = GFX_decision_category_generic_communism
     priority = {
         base = 100
     }
@@ -89,10 +90,16 @@ SIC_com_foreign_diplomacy = {
         has_completed_focus = SIC_communist_foreign_policy
     }
 }
+
+SIC_com_enlisted = {
+    icon = GFX_decision_category_generic_communism
+    priority = {
+        base = 100
+    }
     allowed = {
         original_tag = SIC
     }
     visible = {
-        has_completed_focus = SIC_anticorruption
+        has_completed_focus = SIC_communist_foreign_policy
     }
 }

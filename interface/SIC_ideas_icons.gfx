@@ -109,4 +109,9 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/SIC_anti_tank.dds"
 	}
 
+	SpriteType = {
+		name = "GFX_idea_workers_and_peasants_red_army"
+		texturefile = "gfx/interface/ideas/workers_and_peasants_red_army.dds"
+	}
+
 }

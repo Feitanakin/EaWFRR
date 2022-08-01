@@ -1675,6 +1675,7 @@ focus_tree = {
 			add_political_power = 75
 			add_war_support = 0.03
 			create_faction = "Midorian Treaty Organization"
+			add_ideas = workers_and_peasants_red_army
 		}
 	}
 	

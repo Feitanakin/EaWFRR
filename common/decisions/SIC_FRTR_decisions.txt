@@ -865,9 +865,325 @@ SIC_FRD_southern_will = {
 #######################################################
 
 SIC_com_foreign_diplomacy = {
-	SIC_COM_invade_wingbardy = {
-		icon = hammer_and_horseshoe_decision
-		cost = 0
+	SIC_COM_communizing_jes = {
+		icon = GFX_decision_generic_decision
+		cost = 15
+		fire_only_once = yes
+		days_remove = 7
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			owns_state = 487
+			JES = {
+				exists = no
+			}
+		}
+		
+		complete_effect = {
+		}
+
+		remove_effect = {
+			release_puppet = JES
+		}
+	}
+	SIC_COM_invade_frn = {
+		icon = GFX_decision_generic_ignite_civil_war
+		cost = 15
+		fire_only_once = yes
+		days_remove = 35
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			NOT = {
+				FRN = {
+					has_government = communism
+				}
+			}
+			has_army_manpower = { size > 149999 }
+			FRN = {
+				exists = yes
+			}
+			WNG = {
+				is_subject_of = SIC
+			}
+		}
+		
+		complete_effect = {
+		}
+
+		remove_effect = {
+			declare_war_on = {
+				target = FRN
+				type = annex_everything
+			}
+		}
+	}
+	SIC_COM_communizing_frn = {
+		icon = GFX_decision_generic_decision
+		cost = 15
+		fire_only_once = yes
+		days_remove = 7
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			owns_state = 515
+			FRN = {
+				exists = no
+			}
+		}
+		
+		complete_effect = {
+		}
+
+		remove_effect = {
+			release_puppet = FRN
+		}
+	}
+	SIC_COM_invade_tal = {
+		icon = GFX_decision_generic_ignite_civil_war
+		cost = 15
+		fire_only_once = yes
+		days_remove = 35
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			NOT = {
+				TAL = {
+					has_government = communism
+				}
+			}
+			has_army_manpower = { size > 149999 }
+			TAL = {
+				exists = yes
+			}
+			WNG = {
+				is_subject_of = SIC
+			}
+		}
+		
+		complete_effect = {
+		}
+
+		remove_effect = {
+			declare_war_on = {
+				target = TAL
+				type = annex_everything
+			}
+		}
+	}
+	SIC_COM_communizing_tal = {
+		icon = GFX_decision_generic_decision
+		cost = 15
+		fire_only_once = yes
+		days_remove = 7
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			owns_state = 366
+			TAL = {
+				exists = no
+			}
+		}
+		
+		complete_effect = {
+		}
+
+		remove_effect = {
+			release_puppet = TAL
+		}
+	}
+	SIC_COM_invade_ara = {
+		icon = GFX_decision_generic_ignite_civil_war
+		cost = 15
+		fire_only_once = yes
+		days_remove = 35
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			NOT = {
+				ARA = {
+					has_government = communism
+				}
+			}
+			has_army_manpower = { size > 49999 }
+			ARA = {
+				exists = yes
+			}
+			BOI = {
+				is_subject_of = SIC
+			}
+		}
+		
+		complete_effect = {
+		}
+
+		remove_effect = {
+			declare_war_on = {
+				target = ARA
+				type = annex_everything
+			}
+		}
+	}
+	SIC_COM_communizing_ara = {
+		icon = GFX_decision_generic_decision
+		cost = 15
+		fire_only_once = yes
+		days_remove = 7
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			owns_state = 408
+			ARA = {
+				exists = no
+			}
+		}
+		
+		complete_effect = {
+		}
+
+		remove_effect = {
+			release_puppet = ARA
+		}
+	}
+	SIC_COM_invade_lak = {
+		icon = GFX_decision_generic_ignite_civil_war
+		cost = 15
+		fire_only_once = yes
+		days_remove = 35
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			NOT = {
+				LAK = {
+					has_government = communism
+				}
+			}
+			has_army_manpower = { size > 49999 }
+			LAK = {
+				exists = yes
+			}
+			BOI = {
+				is_subject_of = SIC
+			}
+		}
+		
+		complete_effect = {
+		}
+
+		remove_effect = {
+			declare_war_on = {
+				target = LAK
+				type = annex_everything
+			}
+		}
+	}
+	SIC_COM_communizing_lak = {
+		icon = GFX_decision_generic_decision
+		cost = 15
+		fire_only_once = yes
+		days_remove = 7
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			owns_state = 383
+			LAK = {
+				exists = no
+			}
+		}
+		
+		complete_effect = {
+		}
+
+		remove_effect = {
+			release_puppet = LAK
+		}
+	}
+	SIC_COM_invade_boi = {
+		icon = GFX_decision_generic_ignite_civil_war
+		cost = 15
+		fire_only_once = yes
+		days_remove = 35
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			NOT = {
+				BOI = {
+					has_government = communism
+				}
+			}
+			has_army_manpower = { size > 149999 }
+			BOI = {
+				exists = yes
+			}
+		}
+		
+		complete_effect = {
+		}
+
+		remove_effect = {
+			declare_war_on = {
+				target = BOI
+				type = annex_everything
+			}
+		}
+	}
+	SIC_COM_communizing_boi = {
+		icon = GFX_decision_generic_decision
+		cost = 15
+		fire_only_once = yes
+		days_remove = 7
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			owns_state = 389
+			BOI = {
+				exists = no
+			}
+		}
+		
+		complete_effect = {
+		}
+
+		remove_effect = {
+			release_puppet = BOI
+		}
+	}
+	SIC_COM_invade_wng = {
+		icon = GFX_decision_generic_ignite_civil_war
+		cost = 15
 		fire_only_once = yes
 		days_remove = 35
 
@@ -880,7 +1196,10 @@ SIC_com_foreign_diplomacy = {
 				WNG = {
 					has_government = communism
 				}
-				owns_state = 504
+			}
+			has_army_manpower = { size > 349999 }
+			WNG = {
+				exists = yes
 			}
 		}
 		
@@ -894,11 +1213,11 @@ SIC_com_foreign_diplomacy = {
 			}
 		}
 	}
-	SIC_COM_communizing_wingbardy = {
-		icon = hammer_and_horseshoe_decision
-		cost = 84
+	SIC_COM_communizing_wng = {
+		icon = GFX_decision_generic_decision
+		cost = 15
 		fire_only_once = yes
-		days_remove = 21
+		days_remove = 7
 
 		ai_will_do = {
 			factor = 15
@@ -906,47 +1225,29 @@ SIC_com_foreign_diplomacy = {
 		
 		visible = {
 			owns_state = 371
+			WNG = {
+				exists = no
+			}
 		}
 		
 		complete_effect = {
 		}
 
 		remove_effect = {
-			puppet = WNG
+			release_puppet = WNG
 			FAL = {
 				transfer_state = 530
 			}
 		}
 	}
 	
-	SIC_COM_deal_with_wingbardy = {
-		icon = hammer_and_horseshoe_decision
-		cost = 20
-		fire_only_once = yes
-		days_remove = 0
-
-		ai_will_do = {
-			factor = 15
-		}
-		
-		visible = {
-			WNG = {
-				has_government = communism
-			}
-			owns_state = 504
-		}
-		
-		complete_effect = {
-			WNG = {
-				country_event = sicameon_frtr_com.4
-			}
-		}
-	}
+	
+	
 	
 	
 	SIC_COM_invade_brodfeld = {
-		icon = hammer_and_horseshoe_decision
-		cost = 0
+		icon = GFX_decision_generic_ignite_civil_war
+		cost = 15
 		fire_only_once = yes
 		days_remove = 35
 
@@ -961,7 +1262,6 @@ SIC_com_foreign_diplomacy = {
 			BRF = {
 				exists = yes
 			}
-			owns_state = 671
 		}
 		
 		complete_effect = {
@@ -975,50 +1275,1646 @@ SIC_com_foreign_diplomacy = {
 		}
 	}
 	SIC_COM_communizing_Brodfeld = {
-		icon = hammer_and_horseshoe_decision
-		cost = 63
+		icon = GFX_decision_generic_decision
+		cost = 15
 		fire_only_once = yes
-		days_remove = 21
+		days_remove = 7
 
 		ai_will_do = {
 			factor = 15
 		}
 		
 		visible = {
-			owns_state = 663
+			owns_state = 508
+			GRW = {
+				exists = no
+			}
 		}
 		
 		complete_effect = {
 		}
 
 		remove_effect = {
-			puppet = GRW
+			release_puppet = GRW
 		}
 	}
-	
-	SIC_COM_deal_with_brodfeld = {
-		icon = hammer_and_horseshoe_decision
-		cost = 20
-		fire_only_once = yes
-		days_remove = 0
+}
+
+#######################################################
+#######################################################
+#######################################################
+#######################################################
+#######################################################
+#######################################################
+#######################################################
+
+SIC_com_enlisted = {
+	SIC_com_enlisted_fal_1 = {
+		icon = GFX_decision_POL_organize_strike_two
+		cost = 0
+		fire_only_once = no
+		days_remove = 7
 
 		ai_will_do = {
 			factor = 15
 		}
 		
 		visible = {
-			GRF = {
-				exists = yes
-			}
-			BRF = {
-				exists = no
+			FAL = {
+				is_subject_of = SIC
+				has_manpower > 10000
+				has_manpower < 24999
 			}
 		}
 		
 		complete_effect = {
-			GRW = {
-				country_event = sicameon_frtr_com.4
-			}
+			FAL = { add_manpower = -10000 }
+		}
+
+		remove_effect = {
+			SIC = { add_manpower = 10000 }
 		}
 	}
+
+	SIC_com_enlisted_fal_2 = {
+		icon = GFX_decision_POL_organize_strike_two
+		cost = 0
+		fire_only_once = no
+		days_remove = 7
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			FAL = {
+				is_subject_of = SIC
+				has_manpower > 25000
+				has_manpower < 49999
+			}
+		}
+		
+		complete_effect = {
+			FAL = { add_manpower = -25000 }
+		}
+
+		remove_effect = {
+			SIC = { add_manpower = 25000 }
+		}
+	}
+
+	SIC_com_enlisted_fal_3 = {
+		icon = GFX_decision_POL_organize_strike_two
+		cost = 0
+		fire_only_once = no
+		days_remove = 7
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			FAL = {
+				is_subject_of = SIC
+				has_manpower > 50000
+				has_manpower < 74999
+			}
+		}
+		
+		complete_effect = {
+			FAL = { add_manpower = -50000 }
+		}
+
+		remove_effect = {
+			SIC = { add_manpower = 50000 }
+		}
+	}
+
+	SIC_com_enlisted_fal_4 = {
+		icon = GFX_decision_POL_organize_strike_two
+		cost = 0
+		fire_only_once = no
+		days_remove = 7
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			FAL = {
+				is_subject_of = SIC
+				has_manpower > 75000
+				has_manpower < 99999
+			}
+		}
+		
+		complete_effect = {
+			FAL = { add_manpower = -75000 }
+		}
+
+		remove_effect = {
+			SIC = { add_manpower = 75000 }
+		}
+	}
+
+	SIC_com_enlisted_fal_5 = {
+		icon = GFX_decision_POL_organize_strike_two
+		cost = 0
+		fire_only_once = no
+		days_remove = 7
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			FAL = {
+				is_subject_of = SIC
+				has_manpower > 100000
+			}
+		}
+		
+		complete_effect = {
+			FAL = { add_manpower = -100000 }
+		}
+
+		remove_effect = {
+			SIC = { add_manpower = 100000 }
+		}
+	}
+
+	SIC_com_enlisted_cya_1 = {
+		icon = GFX_decision_POL_organize_strike_two
+		cost = 0
+		fire_only_once = no
+		days_remove = 7
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			CYA = {
+				is_subject_of = SIC
+				has_manpower > 10000
+				has_manpower < 24999
+			}
+		}
+		
+		complete_effect = {
+			CYA = { add_manpower = -10000 }
+		}
+
+		remove_effect = {
+			SIC = { add_manpower = 10000 }
+		}
+	}
+
+	SIC_com_enlisted_cya_2 = {
+		icon = GFX_decision_POL_organize_strike_two
+		cost = 0
+		fire_only_once = no
+		days_remove = 7
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			CYA = {
+				is_subject_of = SIC
+				has_manpower > 25000
+				has_manpower < 49999
+			}
+		}
+		
+		complete_effect = {
+			CYA = { add_manpower = -25000 }
+		}
+
+		remove_effect = {
+			SIC = { add_manpower = 25000 }
+		}
+	}
+
+	SIC_com_enlisted_cya_3 = {
+		icon = GFX_decision_POL_organize_strike_two
+		cost = 0
+		fire_only_once = no
+		days_remove = 7
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			CYA = {
+				is_subject_of = SIC
+				has_manpower > 50000
+				has_manpower < 74999
+			}
+		}
+		
+		complete_effect = {
+			CYA = { add_manpower = -50000 }
+		}
+
+		remove_effect = {
+			SIC = { add_manpower = 50000 }
+		}
+	}
+
+	SIC_com_enlisted_cya_4 = {
+		icon = GFX_decision_POL_organize_strike_two
+		cost = 0
+		fire_only_once = no
+		days_remove = 7
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			CYA = {
+				is_subject_of = SIC
+				has_manpower > 75000
+				has_manpower < 99999
+			}
+		}
+		
+		complete_effect = {
+			CYA = { add_manpower = -75000 }
+		}
+
+		remove_effect = {
+			SIC = { add_manpower = 75000 }
+		}
+	}
+
+	SIC_com_enlisted_cya_5 = {
+		icon = GFX_decision_POL_organize_strike_two
+		cost = 0
+		fire_only_once = no
+		days_remove = 7
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			CYA = {
+				is_subject_of = SIC
+				has_manpower > 100000
+			}
+		}
+		
+		complete_effect = {
+			CYA = { add_manpower = -100000 }
+		}
+
+		remove_effect = {
+			SIC = { add_manpower = 100000 }
+		}
+	}
+
+	SIC_com_enlisted_mit_1 = {
+		icon = GFX_decision_POL_organize_strike_two
+		cost = 0
+		fire_only_once = no
+		days_remove = 7
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			MIT = {
+				is_subject_of = SIC
+				has_manpower > 10000
+				has_manpower < 24999
+			}
+		}
+		
+		complete_effect = {
+			MIT = { add_manpower = -10000 }
+		}
+
+		remove_effect = {
+			SIC = { add_manpower = 10000 }
+		}
+	}
+
+	SIC_com_enlisted_mit_2 = {
+		icon = GFX_decision_POL_organize_strike_two
+		cost = 0
+		fire_only_once = no
+		days_remove = 7
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			MIT = {
+				is_subject_of = SIC
+				has_manpower > 25000
+				has_manpower < 49999
+			}
+		}
+		
+		complete_effect = {
+			MIT = { add_manpower = -25000 }
+		}
+
+		remove_effect = {
+			SIC = { add_manpower = 25000 }
+		}
+	}
+
+	SIC_com_enlisted_mit_3 = {
+		icon = GFX_decision_POL_organize_strike_two
+		cost = 0
+		fire_only_once = no
+		days_remove = 7
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			MIT = {
+				is_subject_of = SIC
+				has_manpower > 50000
+				has_manpower < 74999
+			}
+		}
+		
+		complete_effect = {
+			MIT = { add_manpower = -50000 }
+		}
+
+		remove_effect = {
+			SIC = { add_manpower = 50000 }
+		}
+	}
+
+	SIC_com_enlisted_mit_4 = {
+		icon = GFX_decision_POL_organize_strike_two
+		cost = 0
+		fire_only_once = no
+		days_remove = 7
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			MIT = {
+				is_subject_of = SIC
+				has_manpower > 75000
+				has_manpower < 99999
+			}
+		}
+		
+		complete_effect = {
+			MIT = { add_manpower = -75000 }
+		}
+
+		remove_effect = {
+			SIC = { add_manpower = 75000 }
+		}
+	}
+
+	SIC_com_enlisted_mit_5 = {
+		icon = GFX_decision_POL_organize_strike_two
+		cost = 0
+		fire_only_once = no
+		days_remove = 7
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			MIT = {
+				is_subject_of = SIC
+				has_manpower > 100000
+			}
+		}
+		
+		complete_effect = {
+			MIT = { add_manpower = -100000 }
+		}
+
+		remove_effect = {
+			SIC = { add_manpower = 100000 }
+		}
+	}
+
+	SIC_com_enlisted_ban_1 = {
+		icon = GFX_decision_POL_organize_strike_two
+		cost = 0
+		fire_only_once = no
+		days_remove = 7
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			BAN = {
+				is_subject_of = SIC
+				has_manpower > 10000
+				has_manpower < 24999
+			}
+		}
+		
+		complete_effect = {
+			BAN = { add_manpower = -10000 }
+		}
+
+		remove_effect = {
+			SIC = { add_manpower = 10000 }
+		}
+	}
+
+	SIC_com_enlisted_ban_2 = {
+		icon = GFX_decision_POL_organize_strike_two
+		cost = 0
+		fire_only_once = no
+		days_remove = 7
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			BAN = {
+				is_subject_of = SIC
+				has_manpower > 25000
+				has_manpower < 49999
+			}
+		}
+		
+		complete_effect = {
+			BAN = { add_manpower = -25000 }
+		}
+
+		remove_effect = {
+			SIC = { add_manpower = 25000 }
+		}
+	}
+
+	SIC_com_enlisted_ban_3 = {
+		icon = GFX_decision_POL_organize_strike_two
+		cost = 0
+		fire_only_once = no
+		days_remove = 7
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			BAN = {
+				is_subject_of = SIC
+				has_manpower > 50000
+				has_manpower < 74999
+			}
+		}
+		
+		complete_effect = {
+			BAN = { add_manpower = -50000 }
+		}
+
+		remove_effect = {
+			SIC = { add_manpower = 50000 }
+		}
+	}
+
+	SIC_com_enlisted_ban_4 = {
+		icon = GFX_decision_POL_organize_strike_two
+		cost = 0
+		fire_only_once = no
+		days_remove = 7
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			BAN = {
+				is_subject_of = SIC
+				has_manpower > 75000
+				has_manpower < 99999
+			}
+		}
+		
+		complete_effect = {
+			BAN = { add_manpower = -75000 }
+		}
+
+		remove_effect = {
+			SIC = { add_manpower = 75000 }
+		}
+	}
+
+	SIC_com_enlisted_ban_5 = {
+		icon = GFX_decision_POL_organize_strike_two
+		cost = 0
+		fire_only_once = no
+		days_remove = 7
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			BAN = {
+				is_subject_of = SIC
+				has_manpower > 100000
+			}
+		}
+		
+		complete_effect = {
+			BAN = { add_manpower = -100000 }
+		}
+
+		remove_effect = {
+			SIC = { add_manpower = 100000 }
+		}
+	}
+
+	SIC_com_enlisted_boi_1 = {
+		icon = GFX_decision_POL_organize_strike_two
+		cost = 0
+		fire_only_once = no
+		days_remove = 7
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			BOI = {
+				is_subject_of = SIC
+				has_manpower > 10000
+				has_manpower < 24999
+			}
+		}
+		
+		complete_effect = {
+			BOI = { add_manpower = -10000 }
+		}
+
+		remove_effect = {
+			SIC = { add_manpower = 10000 }
+		}
+	}
+
+	SIC_com_enlisted_boi_2 = {
+		icon = GFX_decision_POL_organize_strike_two
+		cost = 0
+		fire_only_once = no
+		days_remove = 7
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			BOI = {
+				is_subject_of = SIC
+				has_manpower > 25000
+				has_manpower < 49999
+			}
+		}
+		
+		complete_effect = {
+			BOI = { add_manpower = -25000 }
+		}
+
+		remove_effect = {
+			SIC = { add_manpower = 25000 }
+		}
+	}
+
+	SIC_com_enlisted_boi_3 = {
+		icon = GFX_decision_POL_organize_strike_two
+		cost = 0
+		fire_only_once = no
+		days_remove = 7
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			BOI = {
+				is_subject_of = SIC
+				has_manpower > 50000
+				has_manpower < 74999
+			}
+		}
+		
+		complete_effect = {
+			BOI = { add_manpower = -50000 }
+		}
+
+		remove_effect = {
+			SIC = { add_manpower = 50000 }
+		}
+	}
+
+	SIC_com_enlisted_boi_4 = {
+		icon = GFX_decision_POL_organize_strike_two
+		cost = 0
+		fire_only_once = no
+		days_remove = 7
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			BOI = {
+				is_subject_of = SIC
+				has_manpower > 75000
+				has_manpower < 99999
+			}
+		}
+		
+		complete_effect = {
+			BOI = { add_manpower = -75000 }
+		}
+
+		remove_effect = {
+			SIC = { add_manpower = 75000 }
+		}
+	}
+
+	SIC_com_enlisted_boi_5 = {
+		icon = GFX_decision_POL_organize_strike_two
+		cost = 0
+		fire_only_once = no
+		days_remove = 7
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			BOI = {
+				is_subject_of = SIC
+				has_manpower > 100000
+			}
+		}
+		
+		complete_effect = {
+			BOI = { add_manpower = -100000 }
+		}
+
+		remove_effect = {
+			SIC = { add_manpower = 100000 }
+		}
+	}
+
+	SIC_com_enlisted_lak_1 = {
+		icon = GFX_decision_POL_organize_strike_two
+		cost = 0
+		fire_only_once = no
+		days_remove = 7
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			LAK = {
+				is_subject_of = SIC
+				has_manpower > 10000
+				has_manpower < 24999
+			}
+		}
+		
+		complete_effect = {
+			LAK = { add_manpower = -10000 }
+		}
+
+		remove_effect = {
+			SIC = { add_manpower = 10000 }
+		}
+	}
+
+	SIC_com_enlisted_lak_2 = {
+		icon = GFX_decision_POL_organize_strike_two
+		cost = 0
+		fire_only_once = no
+		days_remove = 7
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			LAK = {
+				is_subject_of = SIC
+				has_manpower > 25000
+				has_manpower < 49999
+			}
+		}
+		
+		complete_effect = {
+			LAK = { add_manpower = -25000 }
+		}
+
+		remove_effect = {
+			SIC = { add_manpower = 25000 }
+		}
+	}
+
+	SIC_com_enlisted_lak_3 = {
+		icon = GFX_decision_POL_organize_strike_two
+		cost = 0
+		fire_only_once = no
+		days_remove = 7
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			LAK = {
+				is_subject_of = SIC
+				has_manpower > 50000
+				has_manpower < 74999
+			}
+		}
+		
+		complete_effect = {
+			LAK = { add_manpower = -50000 }
+		}
+
+		remove_effect = {
+			SIC = { add_manpower = 50000 }
+		}
+	}
+
+	SIC_com_enlisted_lak_4 = {
+		icon = GFX_decision_POL_organize_strike_two
+		cost = 0
+		fire_only_once = no
+		days_remove = 7
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			LAK = {
+				is_subject_of = SIC
+				has_manpower > 75000
+				has_manpower < 99999
+			}
+		}
+		
+		complete_effect = {
+			LAK = { add_manpower = -75000 }
+		}
+
+		remove_effect = {
+			SIC = { add_manpower = 75000 }
+		}
+	}
+
+	SIC_com_enlisted_lak_5 = {
+		icon = GFX_decision_POL_organize_strike_two
+		cost = 0
+		fire_only_once = no
+		days_remove = 7
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			LAK = {
+				is_subject_of = SIC
+				has_manpower > 100000
+			}
+		}
+		
+		complete_effect = {
+			LAK = { add_manpower = -100000 }
+		}
+
+		remove_effect = {
+			SIC = { add_manpower = 100000 }
+		}
+	}
+
+	SIC_com_enlisted_wng_1 = {
+		icon = GFX_decision_POL_organize_strike_two
+		cost = 0
+		fire_only_once = no
+		days_remove = 7
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			WNG = {
+				is_subject_of = SIC
+				has_manpower > 10000
+				has_manpower < 24999
+			}
+		}
+		
+		complete_effect = {
+			WNG = { add_manpower = -10000 }
+		}
+
+		remove_effect = {
+			SIC = { add_manpower = 10000 }
+		}
+	}
+
+	SIC_com_enlisted_wng_2 = {
+		icon = GFX_decision_POL_organize_strike_two
+		cost = 0
+		fire_only_once = no
+		days_remove = 7
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			WNG = {
+				is_subject_of = SIC
+				has_manpower > 25000
+				has_manpower < 49999
+			}
+		}
+		
+		complete_effect = {
+			WNG = { add_manpower = -25000 }
+		}
+
+		remove_effect = {
+			SIC = { add_manpower = 25000 }
+		}
+	}
+
+	SIC_com_enlisted_wng_3 = {
+		icon = GFX_decision_POL_organize_strike_two
+		cost = 0
+		fire_only_once = no
+		days_remove = 7
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			WNG = {
+				is_subject_of = SIC
+				has_manpower > 50000
+				has_manpower < 74999
+			}
+		}
+		
+		complete_effect = {
+			WNG = { add_manpower = -50000 }
+		}
+
+		remove_effect = {
+			SIC = { add_manpower = 50000 }
+		}
+	}
+
+	SIC_com_enlisted_wng_4 = {
+		icon = GFX_decision_POL_organize_strike_two
+		cost = 0
+		fire_only_once = no
+		days_remove = 7
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			WNG = {
+				is_subject_of = SIC
+				has_manpower > 75000
+				has_manpower < 99999
+			}
+		}
+		
+		complete_effect = {
+			WNG = { add_manpower = -75000 }
+		}
+
+		remove_effect = {
+			SIC = { add_manpower = 75000 }
+		}
+	}
+
+	SIC_com_enlisted_wng_5 = {
+		icon = GFX_decision_POL_organize_strike_two
+		cost = 0
+		fire_only_once = no
+		days_remove = 7
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			WNG = {
+				is_subject_of = SIC
+				has_manpower > 100000
+			}
+		}
+		
+		complete_effect = {
+			WNG = { add_manpower = -100000 }
+		}
+
+		remove_effect = {
+			SIC = { add_manpower = 100000 }
+		}
+	}
+	
+	SIC_com_enlisted_ara_1 = {
+		icon = GFX_decision_POL_organize_strike_two
+		cost = 0
+		fire_only_once = no
+		days_remove = 7
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			ARA = {
+				is_subject_of = SIC
+				has_manpower > 10000
+				has_manpower < 24999
+			}
+		}
+		
+		complete_effect = {
+			ARA = { add_manpower = -10000 }
+		}
+
+		remove_effect = {
+			SIC = { add_manpower = 10000 }
+		}
+	}
+
+	SIC_com_enlisted_ara_2 = {
+		icon = GFX_decision_POL_organize_strike_two
+		cost = 0
+		fire_only_once = no
+		days_remove = 7
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			ARA = {
+				is_subject_of = SIC
+				has_manpower > 25000
+				has_manpower < 49999
+			}
+		}
+		
+		complete_effect = {
+			ARA = { add_manpower = -25000 }
+		}
+
+		remove_effect = {
+			SIC = { add_manpower = 25000 }
+		}
+	}
+
+	SIC_com_enlisted_ara_3 = {
+		icon = GFX_decision_POL_organize_strike_two
+		cost = 0
+		fire_only_once = no
+		days_remove = 7
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			ARA = {
+				is_subject_of = SIC
+				has_manpower > 50000
+				has_manpower < 74999
+			}
+		}
+		
+		complete_effect = {
+			ARA = { add_manpower = -50000 }
+		}
+
+		remove_effect = {
+			SIC = { add_manpower = 50000 }
+		}
+	}
+
+	SIC_com_enlisted_ara_4 = {
+		icon = GFX_decision_POL_organize_strike_two
+		cost = 0
+		fire_only_once = no
+		days_remove = 7
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			ARA = {
+				is_subject_of = SIC
+				has_manpower > 75000
+				has_manpower < 99999
+			}
+		}
+		
+		complete_effect = {
+			ARA = { add_manpower = -75000 }
+		}
+
+		remove_effect = {
+			SIC = { add_manpower = 75000 }
+		}
+	}
+
+	SIC_com_enlisted_ara_5 = {
+		icon = GFX_decision_POL_organize_strike_two
+		cost = 0
+		fire_only_once = no
+		days_remove = 7
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			ARA = {
+				is_subject_of = SIC
+				has_manpower > 100000
+			}
+		}
+		
+		complete_effect = {
+			ARA = { add_manpower = -100000 }
+		}
+
+		remove_effect = {
+			SIC = { add_manpower = 100000 }
+		}
+	}
+
+	SIC_com_enlisted_frn_1 = {
+		icon = GFX_decision_POL_organize_strike_two
+		cost = 0
+		fire_only_once = no
+		days_remove = 7
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			FRN = {
+				is_subject_of = SIC
+				has_manpower > 10000
+				has_manpower < 24999
+			}
+		}
+		
+		complete_effect = {
+			FRN = { add_manpower = -10000 }
+		}
+
+		remove_effect = {
+			SIC = { add_manpower = 10000 }
+		}
+	}
+
+	SIC_com_enlisted_frn_2 = {
+		icon = GFX_decision_POL_organize_strike_two
+		cost = 0
+		fire_only_once = no
+		days_remove = 7
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			FRN = {
+				is_subject_of = SIC
+				has_manpower > 25000
+				has_manpower < 49999
+			}
+		}
+		
+		complete_effect = {
+			FRN = { add_manpower = -25000 }
+		}
+
+		remove_effect = {
+			SIC = { add_manpower = 25000 }
+		}
+	}
+
+	SIC_com_enlisted_frn_3 = {
+		icon = GFX_decision_POL_organize_strike_two
+		cost = 0
+		fire_only_once = no
+		days_remove = 7
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			FRN = {
+				is_subject_of = SIC
+				has_manpower > 50000
+				has_manpower < 74999
+			}
+		}
+		
+		complete_effect = {
+			FRN = { add_manpower = -50000 }
+		}
+
+		remove_effect = {
+			SIC = { add_manpower = 50000 }
+		}
+	}
+
+	SIC_com_enlisted_frn_4 = {
+		icon = GFX_decision_POL_organize_strike_two
+		cost = 0
+		fire_only_once = no
+		days_remove = 7
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			FRN = {
+				is_subject_of = SIC
+				has_manpower > 75000
+				has_manpower < 99999
+			}
+		}
+		
+		complete_effect = {
+			FRN = { add_manpower = -75000 }
+		}
+
+		remove_effect = {
+			SIC = { add_manpower = 75000 }
+		}
+	}
+
+	SIC_com_enlisted_frn_5 = {
+		icon = GFX_decision_POL_organize_strike_two
+		cost = 0
+		fire_only_once = no
+		days_remove = 7
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			FRN = {
+				is_subject_of = SIC
+				has_manpower > 100000
+			}
+		}
+		
+		complete_effect = {
+			FRN = { add_manpower = -100000 }
+		}
+
+		remove_effect = {
+			SIC = { add_manpower = 100000 }
+		}
+	}
+
+	SIC_com_enlisted_tal_1 = {
+		icon = GFX_decision_POL_organize_strike_two
+		cost = 0
+		fire_only_once = no
+		days_remove = 7
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			TAL = {
+				is_subject_of = SIC
+				has_manpower > 10000
+				has_manpower < 24999
+			}
+		}
+		
+		complete_effect = {
+			TAL = { add_manpower = -10000 }
+		}
+
+		remove_effect = {
+			SIC = { add_manpower = 10000 }
+		}
+	}
+
+	SIC_com_enlisted_tal_2 = {
+		icon = GFX_decision_POL_organize_strike_two
+		cost = 0
+		fire_only_once = no
+		days_remove = 7
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			TAL = {
+				is_subject_of = SIC
+				has_manpower > 25000
+				has_manpower < 49999
+			}
+		}
+		
+		complete_effect = {
+			TAL = { add_manpower = -25000 }
+		}
+
+		remove_effect = {
+			SIC = { add_manpower = 25000 }
+		}
+	}
+
+	SIC_com_enlisted_tal_3 = {
+		icon = GFX_decision_POL_organize_strike_two
+		cost = 0
+		fire_only_once = no
+		days_remove = 7
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			TAL = {
+				is_subject_of = SIC
+				has_manpower > 50000
+				has_manpower < 74999
+			}
+		}
+		
+		complete_effect = {
+			TAL = { add_manpower = -50000 }
+		}
+
+		remove_effect = {
+			SIC = { add_manpower = 50000 }
+		}
+	}
+
+	SIC_com_enlisted_tal_4 = {
+		icon = GFX_decision_POL_organize_strike_two
+		cost = 0
+		fire_only_once = no
+		days_remove = 7
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			TAL = {
+				is_subject_of = SIC
+				has_manpower > 75000
+				has_manpower < 99999
+			}
+		}
+		
+		complete_effect = {
+			TAL = { add_manpower = -75000 }
+		}
+
+		remove_effect = {
+			SIC = { add_manpower = 75000 }
+		}
+	}
+
+	SIC_com_enlisted_tal_5 = {
+		icon = GFX_decision_POL_organize_strike_two
+		cost = 0
+		fire_only_once = no
+		days_remove = 7
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			TAL = {
+				is_subject_of = SIC
+				has_manpower > 100000
+			}
+		}
+		
+		complete_effect = {
+			TAL = { add_manpower = -100000 }
+		}
+
+		remove_effect = {
+			SIC = { add_manpower = 100000 }
+		}
+	}
+
+	SIC_com_enlisted_jes_1 = {
+		icon = GFX_decision_POL_organize_strike_two
+		cost = 0
+		fire_only_once = no
+		days_remove = 7
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			JES = {
+				is_subject_of = SIC
+				has_manpower > 10000
+				has_manpower < 24999
+			}
+		}
+		
+		complete_effect = {
+			JES = { add_manpower = -10000 }
+		}
+
+		remove_effect = {
+			SIC = { add_manpower = 10000 }
+		}
+	}
+
+	SIC_com_enlisted_jes_2 = {
+		icon = GFX_decision_POL_organize_strike_two
+		cost = 0
+		fire_only_once = no
+		days_remove = 7
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			JES = {
+				is_subject_of = SIC
+				has_manpower > 25000
+				has_manpower < 49999
+			}
+		}
+		
+		complete_effect = {
+			JES = { add_manpower = -25000 }
+		}
+
+		remove_effect = {
+			SIC = { add_manpower = 25000 }
+		}
+	}
+
+	SIC_com_enlisted_jes_3 = {
+		icon = GFX_decision_POL_organize_strike_two
+		cost = 0
+		fire_only_once = no
+		days_remove = 7
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			JES = {
+				is_subject_of = SIC
+				has_manpower > 50000
+				has_manpower < 74999
+			}
+		}
+		
+		complete_effect = {
+			JES = { add_manpower = -50000 }
+		}
+
+		remove_effect = {
+			SIC = { add_manpower = 50000 }
+		}
+	}
+
+	SIC_com_enlisted_jes_4 = {
+		icon = GFX_decision_POL_organize_strike_two
+		cost = 0
+		fire_only_once = no
+		days_remove = 7
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			JES = {
+				is_subject_of = SIC
+				has_manpower > 75000
+				has_manpower < 99999
+			}
+		}
+		
+		complete_effect = {
+			JES = { add_manpower = -75000 }
+		}
+
+		remove_effect = {
+			SIC = { add_manpower = 75000 }
+		}
+	}
+
+	SIC_com_enlisted_jes_5 = {
+		icon = GFX_decision_POL_organize_strike_two
+		cost = 0
+		fire_only_once = no
+		days_remove = 7
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			JES = {
+				is_subject_of = SIC
+				has_manpower > 100000
+			}
+		}
+		
+		complete_effect = {
+			JES = { add_manpower = -100000 }
+		}
+
+		remove_effect = {
+			SIC = { add_manpower = 100000 }
+		}
+	}
+
+	SIC_com_enlisted_grw_1 = {
+		icon = GFX_decision_POL_organize_strike_two
+		cost = 0
+		fire_only_once = no
+		days_remove = 7
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			GRW = {
+				is_subject_of = SIC
+				has_manpower > 10000
+				has_manpower < 24999
+			}
+		}
+		
+		complete_effect = {
+			GRW = { add_manpower = -10000 }
+		}
+
+		remove_effect = {
+			SIC = { add_manpower = 10000 }
+		}
+	}
+
+	SIC_com_enlisted_grw_2 = {
+		icon = GFX_decision_POL_organize_strike_two
+		cost = 0
+		fire_only_once = no
+		days_remove = 7
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			GRW = {
+				is_subject_of = SIC
+				has_manpower > 25000
+				has_manpower < 49999
+			}
+		}
+		
+		complete_effect = {
+			GRW = { add_manpower = -25000 }
+		}
+
+		remove_effect = {
+			SIC = { add_manpower = 25000 }
+		}
+	}
+
+	SIC_com_enlisted_grw_3 = {
+		icon = GFX_decision_POL_organize_strike_two
+		cost = 0
+		fire_only_once = no
+		days_remove = 7
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			GRW = {
+				is_subject_of = SIC
+				has_manpower > 50000
+				has_manpower < 74999
+			}
+		}
+		
+		complete_effect = {
+			GRW = { add_manpower = -50000 }
+		}
+
+		remove_effect = {
+			SIC = { add_manpower = 50000 }
+		}
+	}
+
+	SIC_com_enlisted_grw_4 = {
+		icon = GFX_decision_POL_organize_strike_two
+		cost = 0
+		fire_only_once = no
+		days_remove = 7
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			GRW = {
+				is_subject_of = SIC
+				has_manpower > 75000
+				has_manpower < 99999
+			}
+		}
+		
+		complete_effect = {
+			GRW = { add_manpower = -75000 }
+		}
+
+		remove_effect = {
+			SIC = { add_manpower = 75000 }
+		}
+	}
+
+	SIC_com_enlisted_grw_5 = {
+		icon = GFX_decision_POL_organize_strike_two
+		cost = 0
+		fire_only_once = no
+		days_remove = 7
+
+		ai_will_do = {
+			factor = 15
+		}
+		
+		visible = {
+			GRW = {
+				is_subject_of = SIC
+				has_manpower > 100000
+			}
+		}
+		
+		complete_effect = {
+			GRW = { add_manpower = -100000 }
+		}
+
+		remove_effect = {
+			SIC = { add_manpower = 100000 }
+		}
+	}
+
 }

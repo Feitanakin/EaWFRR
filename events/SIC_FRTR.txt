@@ -973,7 +973,7 @@ country_event = {
 	immediate = {log = "[GetDateText]: [Root.GetName]: sicameon_frtr_com.5"}
 	hidden = yes
 
-	mean_time_to_happen = { days = 1 }
+	mean_time_to_happen = { days = 0 }
 
 	trigger = {
 		original_tag = FAL
@@ -986,6 +986,8 @@ country_event = {
 
 	option = {
 		FAL = { set_cosmetic_tag = FAL_ssr }
+		add_ideas = workers_and_peasants_red_army
+		add_ideas = war_economy
 		SIC = {
 			set_autonomy = {
 				target = FAL
@@ -1000,7 +1002,7 @@ country_event = {
 	immediate = {log = "[GetDateText]: [Root.GetName]: sicameon_frtr_com.6"}
 	hidden = yes
 
-	mean_time_to_happen = { days = 1 }
+	mean_time_to_happen = { days = 0 }
 
 	trigger = {
 		original_tag = BAN
@@ -1013,6 +1015,8 @@ country_event = {
 
 	option = {
 		BAN = { set_cosmetic_tag = BAN_ssr }
+		add_ideas = workers_and_peasants_red_army
+		add_ideas = war_economy
 		SIC = {
 			set_autonomy = {
 				target = BAN
@@ -1027,7 +1031,7 @@ country_event = {
 	immediate = {log = "[GetDateText]: [Root.GetName]: sicameon_frtr_com.7"}
 	hidden = yes
 
-	mean_time_to_happen = { days = 1 }
+	mean_time_to_happen = { days = 0 }
 
 	trigger = {
 		original_tag = CYA
@@ -1040,6 +1044,8 @@ country_event = {
 
 	option = {
 		CYA = { set_cosmetic_tag = CYA_ssr }
+		add_ideas = workers_and_peasants_red_army
+		add_ideas = war_economy
 		SIC = {
 			set_autonomy = {
 				target = CYA
@@ -1054,7 +1060,7 @@ country_event = {
 	immediate = {log = "[GetDateText]: [Root.GetName]: sicameon_frtr_com.8"}
 	hidden = yes
 
-	mean_time_to_happen = { days = 1 }
+	mean_time_to_happen = { days = 0 }
 
 	trigger = {
 		original_tag = MIT
@@ -1067,6 +1073,8 @@ country_event = {
 
 	option = {
 		MIT = { set_cosmetic_tag = MIT_ssr }
+		add_ideas = workers_and_peasants_red_army
+		add_ideas = war_economy
 		SIC = {
 			set_autonomy = {
 				target = MIT
@@ -1081,7 +1089,7 @@ country_event = {
 	immediate = {log = "[GetDateText]: [Root.GetName]: sicameon_frtr_com.9"}
 	hidden = yes
 
-	mean_time_to_happen = { days = 1 }
+	mean_time_to_happen = { days = 0 }
 
 	trigger = {
 		original_tag = BOI
@@ -1094,6 +1102,8 @@ country_event = {
 
 	option = {
 		BOI = { set_cosmetic_tag = BOI_ssr }
+		add_ideas = workers_and_peasants_red_army
+		add_ideas = war_economy
 		SIC = {
 			set_autonomy = {
 				target = BOI
@@ -1108,7 +1118,7 @@ country_event = {
 	immediate = {log = "[GetDateText]: [Root.GetName]: sicameon_frtr_com.10"}
 	hidden = yes
 
-	mean_time_to_happen = { days = 1 }
+	mean_time_to_happen = { days = 0 }
 
 	trigger = {
 		original_tag = LAK
@@ -1121,6 +1131,8 @@ country_event = {
 
 	option = {
 		LAK = { set_cosmetic_tag = LAK_ssr }
+		add_ideas = workers_and_peasants_red_army
+		add_ideas = war_economy
 		SIC = {
 			set_autonomy = {
 				target = LAK
@@ -1135,7 +1147,7 @@ country_event = {
 	immediate = {log = "[GetDateText]: [Root.GetName]: sicameon_frtr_com.11"}
 	hidden = yes
 
-	mean_time_to_happen = { days = 1 }
+	mean_time_to_happen = { days = 0 }
 
 	trigger = {
 		original_tag = WNG
@@ -1148,6 +1160,8 @@ country_event = {
 
 	option = {
 		WNG = { set_cosmetic_tag = WNG_ssr }
+		add_ideas = workers_and_peasants_red_army
+		add_ideas = war_economy
 		SIC = {
 			set_autonomy = {
 				target = WNG
@@ -1162,7 +1176,7 @@ country_event = {
 	immediate = {log = "[GetDateText]: [Root.GetName]: sicameon_frtr_com.12"}
 	hidden = yes
 
-	mean_time_to_happen = { days = 1 }
+	mean_time_to_happen = { days = 0 }
 
 	trigger = {
 		original_tag = ARA
@@ -1175,6 +1189,8 @@ country_event = {
 
 	option = {
 		ARA = { set_cosmetic_tag = ARA_ssr }
+		add_ideas = workers_and_peasants_red_army
+		add_ideas = war_economy
 		SIC = {
 			set_autonomy = {
 				target = ARA
@@ -1189,7 +1205,7 @@ country_event = {
 	immediate = {log = "[GetDateText]: [Root.GetName]: sicameon_frtr_com.13"}
 	hidden = yes
 
-	mean_time_to_happen = { days = 1 }
+	mean_time_to_happen = { days = 0 }
 
 	trigger = {
 		original_tag = FRN
@@ -1202,6 +1218,8 @@ country_event = {
 
 	option = {
 		FRN = { set_cosmetic_tag = FRN_ssr }
+		add_ideas = workers_and_peasants_red_army
+		add_ideas = war_economy
 		SIC = {
 			set_autonomy = {
 				target = FRN
@@ -1216,7 +1234,7 @@ country_event = {
 	immediate = {log = "[GetDateText]: [Root.GetName]: sicameon_frtr_com.14"}
 	hidden = yes
 
-	mean_time_to_happen = { days = 1 }
+	mean_time_to_happen = { days = 0 }
 
 	trigger = {
 		original_tag = TAL
@@ -1229,6 +1247,8 @@ country_event = {
 
 	option = {
 		TAL = { set_cosmetic_tag = TAL_ssr }
+		add_ideas = workers_and_peasants_red_army
+		add_ideas = war_economy
 		SIC = {
 			set_autonomy = {
 				target = TAL
@@ -1237,4 +1257,59 @@ country_event = {
 		}
 	}
 }
+country_event = {
+	id = sicameon_frtr_com.15
+	immediate = {log = "[GetDateText]: [Root.GetName]: sicameon_frtr_com.15"}
+	hidden = yes
 
+	mean_time_to_happen = { days = 0 }
+
+	trigger = {
+		original_tag = JES
+		JES = {
+			is_subject = yes
+			is_subject_of = SIC
+		}
+		SIC = { has_completed_focus = SIC_red_star_rising }
+	}
+
+	option = {
+		JES = { set_cosmetic_tag = JES_ssr }
+		add_ideas = workers_and_peasants_red_army
+		add_ideas = war_economy
+		SIC = {
+			set_autonomy = {
+				target = JES
+				autonomous_state = autonomy_soviet_socialist_republic
+			}
+		}
+	}
+}
+country_event = {
+	id = sicameon_frtr_com.16
+	immediate = {log = "[GetDateText]: [Root.GetName]: sicameon_frtr_com.16"}
+	hidden = yes
+
+	mean_time_to_happen = { days = 0 }
+
+	trigger = {
+		original_tag = GRW
+		GRW = {
+			is_subject = yes
+			is_subject_of = SIC
+		}
+		SIC = { has_completed_focus = SIC_red_star_rising }
+	}
+
+	option = {
+		GRW = { set_cosmetic_tag = GRW_ssr }
+		add_ideas = workers_and_peasants_red_army
+		add_ideas = war_economy
+		SIC = {
+			set_autonomy = {
+				target = GRW
+				autonomous_state = autonomy_soviet_socialist_republic
+			}
+		}
+	}
+}

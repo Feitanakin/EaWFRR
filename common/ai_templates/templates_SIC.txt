@@ -118,10 +118,6 @@ infantry_SIC = {
 		}
 	}
 
-	production_prio = {
-		factor = 4
-	}
-
 	match_to_count = 0.4
 
 
@@ -228,13 +224,13 @@ knights_SIC = {
 		}
 	}
 
+	available_for = {
+		SIC
+	}
+
 	match_to_count = 0.4
 
 	knights_default = {
-	
-		available_for = {
-			SIC
-		}
 
 		upgrade_prio = {
 			factor = 2

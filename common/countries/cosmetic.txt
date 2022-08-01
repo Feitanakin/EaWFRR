@@ -66,6 +66,10 @@ FRN_ssr = {
 	color = rgb { 209 73 108 }
 	color_ui = rgb { 209 73 108 }
 }
+JES_ssr = {
+	color = rgb { 209 73 108 }
+	color_ui = rgb { 209 73 108 }
+}
 FEA_dutch = {
 	color = rgb { 122 150 128 }
 	color_ui = rgb { 122 150 128 }
