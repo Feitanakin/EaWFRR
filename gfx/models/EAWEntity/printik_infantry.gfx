@@ -345,4 +345,37 @@ objectTypes = {
 			texture_specular = "WNG_knights_helmet_spec.dds"
 			}		
         }
+		pdxmesh = {
+		name = "NZC_infantry_rifle_mesh"
+		file = "gfx/models/EAWEntity/griffons/NZC_infantry.mesh"
+		
+		animation = { id = "move"			type = "GRI_infantry_move" }
+		animation = { id = "idle"			type = "GRI_infantry_idle" }
+		animation = { id = "idle01"			type = "GRI_infantry_idle_01" }
+		animation = { id = "idle02"			type = "GRI_infantry_idle_02" }
+		animation = { id = "idle03"			type = "GRI_infantry_idle_03" }
+		animation = { id = "idle04"			type = "GRI_infantry_idle_04" }
+		animation = { id = "long_idle"		type = "GRI_infantry_long_idle" }
+		animation = { id = "charge"			type = "GRI_infantry_attack_charge" }
+		animation = { id = "retreat"		type = "GRI_infantry_retreat" }
+		animation = { id = "training"		type = "GRI_infantry_training_idle" }
+#		animation = { id = "test"			type = "GRI_infantry_test" }
+
+		meshsettings = {
+			name = "mesh"
+			index = 0
+			shader="PdxMeshAdvanced"
+			texture_diffuse = "NZC_infantry_rifle_mesh.dds"
+			texture_normal = "NZC_infantry_rifle_mesh.dds"
+			texture_specular = "NZC_infantry_rifle_mesh.dds"
+		}
+		scale = 1.0
+		
+		}
+		
+		
+		pdxmesh = {
+		name = "NZC_infantry_helmet_pith_mesh"
+		file = "gfx/models/EAWEntity/griffons/attachments/NZC_infantry_helmet_pith.mesh"
+		}
 }

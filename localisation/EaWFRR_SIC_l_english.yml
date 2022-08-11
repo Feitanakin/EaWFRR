@@ -38,6 +38,8 @@
  ### Autonomy ###
  autonomy_southern_empire:0 "Southern Empire"
  autonomy_soviet_socialist_republic:0 "Soviet Socialist Republic"
+ autonomy_trade_company:0 "Trade company"
+ 
  ### Focuses ###
 
  SIC_the_decadent_regency:0 "The Decadent Regency"
@@ -343,8 +345,8 @@
  SIC_FRD_invest_in_supplies:0 "Invest In Supplies"
  SIC_FRD_the_southern_will:0 "The Southern Will"
  SIC_FRD_the_southern_military:0 "The Southern Military"
- SIC_FRD_ref_the_mil:0 "Ref the Mil"
- SIC_FRD_newshp:0 "Newshp"
+ SIC_FRD_ref_the_mil:0 "Focus on Military"
+ SIC_FRD_newshp:0 "Focus on Navy"
  SIC_FRD_the_empire_reborn:0 "The Empire Reborn"
  SIC_FRD_the_border_guard_rallies:0 "Arm the Nationalists"
  SIC_FRD_sketch_industrial_plans:0 "Sketch Industrial Plans"

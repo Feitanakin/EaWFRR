@@ -1,7 +1,7 @@
-﻿capital = 445
-oob = "SIC_1007"
+﻿capital = 715
+oob = "NZC_1007"
 set_research_slots = 3
-add_manpower = 50000
+add_manpower = 100000
 
 set_technology = {
 	griffon_race = 1
@@ -23,7 +23,7 @@ set_technology = {
 	motorised_infantry = 1
 	basic_train = 1
 }
-actually_fix_weapon_techs = yes #THIS HAS TO BE CALLED IN EVERY HISTORY FILE RIGHT AFTER MAIN set_technology!
+actually_fix_weapon_techs = yes
 
 if = {
 	limit = {
@@ -39,7 +39,7 @@ if = {
 		monitors_nomtg = 1
 		coastal_defense_ships_nomtg = 1
 	}
-	set_naval_oob = "SIC_1007_naval_legacy"
+	set_naval_oob = "NZC_1007_naval_legacy"
 }
 if = {
 	limit = {
@@ -60,184 +60,55 @@ if = {
 		coastal_defense_ships = 1
 		monitors_mtg = 1
 	}
-	set_naval_oob = "SIC_1007_naval"
+	set_naval_oob = "NZC_1007_naval"
 }
 
 set_convoys = 70
 set_popularities = {
-	democratic = 30
-	fascism = 10
-	communism = 20
-	neutrality = 40
+	democratic = 15
+	communism = 10
+	fascism = 5
+	neutrality = 70
 }
-
+declare_war_on = {
+	target = MCW
+	type = annex_everything
+}
 set_politics = {
 	ruling_party = neutrality
-	last_election = "1000.10.10"
-	election_frequency = 36
+	last_election = "1006.11.8"
+	election_frequency = 48
 	elections_allowed = no
 }
 add_ideas = {
-	republican_tension
-	dead_monarchy
-	swordfish_claws
-	eternal_navy_1
 	outdated_industry
 	limited_conscription
 	free_trade
-	SIC_militia_dependence
 }
 set_stability = 0.6
-set_war_support = 0.4
-535 = {
-	set_demilitarized_zone = yes
+set_war_support = 0.8
+
+recruit_character = NZC_Commerce_Raider
+recruit_character = NZC_pirate_parrot_1
+recruit_character = NZC_pirate_parrot_2
+recruit_character = NZC_pirate_parrot_3
+
+add_equipment_to_stockpile = {
+	type = infantry_equipment_0
+	amount = 3300
+	producer = NZC
+}
+add_equipment_to_stockpile = {
+	type = artillery_equipment_1
+	amount = 480
+	producer = NZC
+}
+add_equipment_to_stockpile = {
+	type = support_equipment
+	amount = 430
+	producer = NZC
 }
 
-recruit_character = SIC_frtr_Regency_Council
-recruit_character = SIC_father_jose
-recruit_character = SIC_don_espadarte
-recruit_character = SIC_blackrock_espadarte
-recruit_character = SIC_alexis_de_sicameon
-recruit_character = SIC_remige_plumar
-recruit_character = SIC_carlos_kartino_de_valle
-recruit_character = SIC_mika_volarman_de_etchebehere
-recruit_character = SIC_cipriano_garra
-recruit_character = SIC_valentin_el_campesino_glacialez
-recruit_character = SIC_jose_pico
-recruit_character = SIC_leila_ordona
-recruit_character = SIC_teodorico_aponte
-recruit_character = SIC_antonio_azarola_y_grifon
-recruit_character = SIC_juana_pluma_garraz_de_mendoza
-recruit_character = SIC_miguel_vuelo_fernandez_pajaro
-recruit_character = SIC_carlos_de_midoria
-recruit_character = SIC_asuncion_cola_infernal
-recruit_character = SIC_ana_pluma_de_hierro
-recruit_character = SIC_federico_plumanegra
-recruit_character = SIC_camilo_nidoalto
-recruit_character = SIC_jacinto_picorroble
-recruit_character = SIC_santiago_ramon_garra_de_la_tormenta
-recruit_character = SIC_jorge_orellana
-recruit_character = SIC_pedro_crestazul
-recruit_character = SIC_miguel_alarroja
-recruit_character = SIC_ricardo_alacero
-recruit_character = SIC_manuel_colacero
-recruit_character = SIC_maria_del_carmen_alarrosa
-recruit_character = SIC_juan_de_la_garra
-recruit_character = SIC_rafael_colarroja
-recruit_character = SIC_inaki_garralarga
-recruit_character = SIC_francisco_garranegra
-recruit_character = SIC_victoria_plumaluz
-recruit_character = SIC_rosa_garraoscura
-recruit_character = SIC_federico_plumagris
-recruit_character = SIC_garcilaso_alaviento
-recruit_character = SIC_angel_picorroca
-recruit_character = SIC_lucia_pico_de_fuego
-recruit_character = SIC_jose_plumarroja
-recruit_character = SIC_viscount_trubach
-recruit_character = SIC_juan_guilloto
-
-set_rule = {
-	can_generate_female_aces = yes
-}
-		
-
-add_opinion_modifier = {
-	target = MIT
-	modifier = SIC_minotaur_friends
-	}
-
-add_opinion_modifier = {
-	target = WNG
-	modifier = SIC_antimonarchism
-	}
-	
-add_opinion_modifier = {
-	target = FAL
-	modifier = SIC_antimonarchism
-	}
-
-add_opinion_modifier = {
-	target = GRI
-	modifier = SIC_antimonarchism
-	}
-	
-add_opinion_modifier = {
-	target = BOI
-	modifier = SIC_antimonarchism
-	}
-	
-add_opinion_modifier = {
-	target = BRF
-	modifier = SIC_antimonarchism
-	}
-	
-add_opinion_modifier = {
-	target = CYA
-	modifier = SIC_antimonarchism
-	}
-	
-add_opinion_modifier = {
-	target = FRN
-	modifier = SIC_antimonarchism
-	}
-	
-add_opinion_modifier = {
-	target = TAL
-	modifier = SIC_antimonarchism
-	}
-	
-reverse_add_opinion_modifier = {
-	target = MIT
-	modifier = SIC_minotaur_friends
-	}
-
-reverse_add_opinion_modifier = {
-	target = WNG
-	modifier = SIC_antimonarchism
-	}
-	
-reverse_add_opinion_modifier = {
-	target = FAL
-	modifier = SIC_antimonarchism
-	}
-
-reverse_add_opinion_modifier = {
-	target = GRI
-	modifier = SIC_antimonarchism
-	}
-	
-reverse_add_opinion_modifier = {
-	target = BOI
-	modifier = SIC_antimonarchism
-	}
-	
-reverse_add_opinion_modifier = {
-	target = BRF
-	modifier = SIC_antimonarchism
-	}
-	
-reverse_add_opinion_modifier = {
-	target = CYA
-	modifier = SIC_antimonarchism
-	}
-	
-reverse_add_opinion_modifier = {
-	target = FRN
-	modifier = SIC_antimonarchism
-	}
-	
-reverse_add_opinion_modifier = {
-	target = TAL
-	modifier = SIC_antimonarchism
-	}
-add_opinion_modifier = {
-	target = BAN
-	modifier = SIC_bandits
-	}
-reverse_add_opinion_modifier = {
-	target = BAN
-	modifier = SIC_bandits
-	}
 if = {
 	limit = { has_dlc = "Man the Guns"}
 
@@ -471,6 +342,103 @@ if = {
 			fixed_ship_radar_slot = empty
 			fixed_ship_engine_slot = light_ship_engine_1
 			rear_1_custom_slot = ship_secondaries_1
+		}
+	}
+	create_equipment_variant = {
+		name = "São Penário Class"
+		type = ship_hull_heavy_1
+		name_group = GENERIC_ANIMALS
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_heavy_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = heavy_ship_engine_1
+			fixed_ship_secondaries_slot = ship_secondaries_1
+			fixed_ship_armor_slot = ship_armor_bb_1
+			front_1_custom_slot = empty
+			mid_1_custom_slot = ship_anti_air_1
+			mid_2_custom_slot = ship_secondaries_1
+			rear_1_custom_slot = ship_heavy_battery_1
+		}
+	}
+	create_equipment_variant = {
+		name = "Oliveira Class"
+		type = ship_hull_cruiser_1
+		name_group = GENERIC_NEUTRAL_CRUISER
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_medium_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			fixed_ship_armor_slot = ship_armor_cruiser_2
+			mid_1_custom_slot = ship_anti_air_1
+			mid_2_custom_slot = ship_medium_battery_1
+			rear_1_custom_slot = ship_medium_battery_1
+		}
+	}
+	create_equipment_variant = {
+		name = "Cachoeiro Class"
+		type = ship_hull_cruiser_1
+		name_group = GENERIC_NEUTRAL_CRUISER
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_medium_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			fixed_ship_armor_slot = ship_armor_cruiser_1
+			mid_1_custom_slot = ship_anti_air_1
+			mid_2_custom_slot = ship_light_medium_battery_1
+			rear_1_custom_slot = empty
+		}
+	}
+	create_equipment_variant = {
+		name = "Pombal Class"
+		type = ship_hull_light_1
+		name_group = GENERIC_WEAPON_NAMING
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = light_ship_engine_1
+			fixed_ship_torpedo_slot = ship_torpedo_1
+			mid_1_custom_slot = ship_mine_layer_1
+			rear_1_custom_slot = ship_depth_charge_1
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Porto Alto Class"
+		type = ship_hull_light_1
+		name_group = GENERIC_WEAPON_NAMING
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = light_ship_engine_1
+			fixed_ship_torpedo_slot = ship_torpedo_1
+			mid_1_custom_slot = ship_torpedo_1
+			rear_1_custom_slot = ship_depth_charge_1
+		}
+	}
+	create_equipment_variant = {
+		name = "Golfinho Class"
+		type = ship_hull_submarine_2
+		name_group = GENERIC_FISH
+		parent_version = 0
+		modules = {
+			fixed_ship_torpedo_slot = ship_torpedo_sub_2
+			fixed_ship_engine_slot = sub_ship_engine_2
+			rear_1_custom_slot = ship_mine_layer_sub
 		}
 	}
 }

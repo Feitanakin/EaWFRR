@@ -44,6 +44,10 @@ spriteTypes = {
 		textureFile = "gfx/interface/autonomy/autonomy_soviet_socialist_republic_icon.png"
 	}
 	spriteType = {
+		name = "GFX_autonomy_trade_company_icon"
+		textureFile = "gfx/interface/autonomy/autonomy_trade_company_icon.png"
+	}
+	spriteType = {
 		name = "GFX_ideology_anarchist_communism"
 		texturefile = "gfx/interface/ideologies/anarchist_communism.dds"
 	}
