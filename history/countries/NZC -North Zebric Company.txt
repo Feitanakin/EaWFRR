@@ -92,6 +92,9 @@ recruit_character = NZC_Commerce_Raider
 recruit_character = NZC_pirate_parrot_1
 recruit_character = NZC_pirate_parrot_2
 recruit_character = NZC_pirate_parrot_3
+recruit_character = NZC_pirate_parrot_4
+recruit_character = NZC_pirate_parrot_5
+recruit_character = NZC_pirate_parrot_6
 
 add_equipment_to_stockpile = {
 	type = infantry_equipment_0

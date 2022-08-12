@@ -190,7 +190,7 @@
 	}
 
 	NZC_pirate_parrot_6={
-		name=NZC_pirate_parrot_5
+		name=NZC_pirate_parrot_6
 		portraits={
 			army={
 				large="gfx/leaders/NZC/pirate_parrot_6.tga"
