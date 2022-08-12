@@ -4,7 +4,7 @@ tags={
 	"Gameplay"
 	"Events"
 }
-name="From Rottendedam to Rijeka"
+name="EaW: From Rottendedam to Rijeka"
 picture="Thumbnail.png"
 supported_version="1.11.*"
 path="mod/EaWFRR"
