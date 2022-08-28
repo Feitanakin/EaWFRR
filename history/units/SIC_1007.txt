@@ -67,7 +67,7 @@ division_template = {
 	priority = 2
 }
 division_template = {
-	name = "Bridaga de Marinas"			
+	name = "Brigada de Marinas"			
 	division_names_group = SIC_MAR_01
 	regiments = {
 		marine = { x = 0 y = 0 }
@@ -97,6 +97,21 @@ division_template = {
 		artillery = { x = 0 y = 0 }
 	}
 }
+division_template = {
+	name = "Brigada de Blindado"
+	division_names_group = SIC_ARM_01
+	regiments = {
+		medium_armor = { x = 0 y = 0 }
+		medium_armor = { x = 0 y = 1 }
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+		motorized = { x = 1 y = 2 }
+		motorized = { x = 1 y = 3 }
+	}
+	support = { 
+		mot_recon = { x = 0 y = 0 }
+	}
+}
 units = {
 	division = {
 		division_name = {
@@ -107,7 +122,7 @@ units = {
 		division_template = "Brigada de la Milicia Campesina"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.9
-		}
+	}
 	division = {
 		division_name = {
 			is_name_ordered = yes
@@ -117,7 +132,7 @@ units = {
 		division_template = "Brigada de la Milicia Campesina"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.9
-		}
+	}
 	division = {
 		division_name = {
 			is_name_ordered = yes
@@ -127,7 +142,7 @@ units = {
 		division_template = "Brigada de la Milicia Campesina"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.9
-		}
+	}
 	division = {
 		division_name = {
 			is_name_ordered = yes
@@ -136,7 +151,8 @@ units = {
 		location = 12292
 		division_template = "Brigada de la Milicia Campesina"
 		start_experience_factor = 0.3
-		start_equipment_factor = 0.9 }
+		start_equipment_factor = 0.9 
+	}
 	division = {
 		division_name = {
 			is_name_ordered = yes
@@ -146,7 +162,7 @@ units = {
 		division_template = "Brigada de la Sicameon Legión"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.9
-		}
+	}
 	division = {
 		division_name = {
 			is_name_ordered = yes
@@ -156,7 +172,7 @@ units = {
 		division_template = "Brigada de la Sicameon Legión"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.9
-		}
+	}
 	division = {
 		division_name = {
 			is_name_ordered = yes
@@ -186,7 +202,7 @@ units = {
 		division_template = "Brigada de la Sicameon Legión"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.9
-		}
+	}
 	division = {
 		division_name = {
 			is_name_ordered = yes
@@ -196,7 +212,7 @@ units = {
 		division_template = "Brigada de la Milicia Campesina"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.9
-		}
+	}
 	division = {
 		division_name = {
 			is_name_ordered = yes
@@ -206,21 +222,27 @@ units = {
 		division_template = "Brigada de la Milicia Campesina"
 		start_experience_factor = 0.3 
 		start_equipment_factor = 0.9
-		}
+	}
 	division = {
 		name = "Agrupación de Infantería de Marina de Midoria"
 		location = 12180
-		division_template = "Bridaga de Marinas"
+		division_template = "Brigada de Marinas"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.9
-		}
+	}
 	division = {
 		name = "Agrupación de Infantería de Marina de Queruscos"
 		location = 7645
-		division_template = "Bridaga de Marinas"
+		division_template = "Brigada de Marinas"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.9
-		}
+	}
+	division = {
+		name = "Brigada de Blindadas de la Sicameon Legión"
+		location = 7591
+		division_template = "Brigada de Blindado"
+		start_experience_factor = 0.3
+	}
 }
 
 ### Starting Production ###
@@ -254,13 +276,32 @@ instant_effect = {
 	}
 	add_equipment_production = {
 		equipment = {
+			type = motorized_equipment_1
+			creator = "SIC"
+		}
+		requested_factories = 1
+		progress = 0.95
+		efficiency = 60
+	}
+	add_equipment_production = {
+		equipment = {
+			type = medium_tank_chassis_1
+			creator = "SIC"
+			version_name = "Gravelines"
+		}
+		requested_factories = 1
+		progress = 0.95
+		efficiency = 60
+	}
+	add_equipment_production = {
+		equipment = {
 			type = ship_hull_heavy_1
 			creator = "SIC" 
 			version_name = "Emperador Class"
 		}
 		name = "ANS Emperador Grover II"
 		requested_factories = 5
-		progress = 0.88
+		progress = 0.98
 		amount = 1
 	}
 }

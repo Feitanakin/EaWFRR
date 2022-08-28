@@ -6046,9 +6046,17 @@ focus_tree = {
 				name = "Petronilo of Midoria"
 			}
 		}
-		#bypass = {
-		#	has_country_flag = #Petronilo has been elected Duke
-		#}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_springtime_sic"
+			add_offsite_building = {
+				type = industrial_complex
+				level = 1
+			}
+			add_offsite_building = {
+				type = arms_factory
+				level = 1
+			}
+		}
 	}
 	focus = {
 		id = SIC_make_the_best
@@ -6313,7 +6321,14 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_an_heir_in_exile"
-			
+			add_offsite_building = {
+				type = industrial_complex
+				level = 1
+			}
+			add_offsite_building = {
+				type = arms_factory
+				level = 1
+			}
 		}
 	}
 
@@ -7361,6 +7376,14 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_a_phantom_from_the_past"							  
+			add_offsite_building = {
+				type = industrial_complex
+				level = 1
+			}
+			add_offsite_building = {
+				type = arms_factory
+				level = 1
+			}
 		}
 	}
 

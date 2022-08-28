@@ -1,0 +1,14 @@
+entity = {
+	name = "SIC_light_armor_entity"
+	clone = "SPR_light_armor_entity"
+}
+
+entity = {
+	name = "SIC_medium_armor_entity"
+	clone = "CZE_medium_armor_entity"
+}
+
+entity = {
+	name = "SIC_heavy_armor_entity"
+	clone = "CZE_heavy_armor_entity"
+}

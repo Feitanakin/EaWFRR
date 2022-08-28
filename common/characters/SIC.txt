@@ -565,7 +565,7 @@
 			}
 		}
 		corps_commander = {
-			traits = { ranger griffon_race_trait }
+			traits = { panzer_leader griffon_race_trait }
 			skill = 2
 			attack_skill = 2
 			defense_skill = 2
