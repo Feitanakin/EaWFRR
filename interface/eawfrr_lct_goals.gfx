@@ -57,9 +57,24 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/LCT_syndicalism_pluralism.dds"
 	}
 
+	SpriteType = {
+		name = "GFX_LCT_proclaim"
+		texturefile = "gfx/interface/goals/LCT_proclaim.dds"
+	}
 
+	SpriteType = {
+		name = "GFX_LCT_great_patriotic_war"
+		texturefile = "gfx/interface/goals/LCT_great_patriotic_war.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_LCT_crusaders"
+		texturefile = "gfx/interface/goals/LCT_crusaders.dds"
+	}
 
-
-
+	SpriteType = {
+		name = "GFX_LCT_deponyan_liberation"
+		texturefile = "gfx/interface/goals/LCT_deponyan_liberation.dds"
+	}
 
 }

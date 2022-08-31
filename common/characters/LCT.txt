@@ -46,21 +46,6 @@ characters={
 			id=899
 		}
 	}
-
-	LCT_springtime_frost={
-		name=LCT_springtime_frost
-		portraits={
-			civilian={
-				large="gfx/leaders/LCT/SpringtimeFrost.tga"
-			}
-		}
-		country_leader={
-			desc="POLITICS_SPRINGTIME_FROST_DESC"
-			ideology=centrism
-			expire="1965.1.1.1"
-			id=899
-		}
-	}
 	LCT_wavebreaker={
 		name=LCT_wavebreaker
 		portraits={
@@ -164,7 +149,7 @@ characters={
 		portraits={
 			army={
 				large="gfx/leaders/LCT/Riversword.tga"
-				small=GFX_idea_LCT_hc_maneuver
+				small="gfx/interface/ideas/Advisors/LCT/LCT_riversword.tga"
 			}
 		}
 		field_marshal={
@@ -531,7 +516,7 @@ characters={
 		name=LCT_morale_army_chief
 		portraits={
 			army={
-				small=GFX_idea_unknown_advisor3
+				small=GFX_idea_LCT_hc_maneuver
 			}
 		}
 		advisor={

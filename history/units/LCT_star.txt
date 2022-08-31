@@ -1,0 +1,42 @@
+﻿division_template = {
+	name = "Lake Red Guard"
+	division_names_group = LCT_INF_01
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		artillery_brigade = { x = 0 y = 3 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		artillery_brigade = { x = 1 y = 3 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+		artillery_brigade = { x = 2 y = 3 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }
+		artillery = { x = 0 y = 1 }
+		engineer = { x = 0 y = 2 }
+	}
+	priority = 2
+}
+
+units = {
+	division = {
+		location = 8079
+		division_template = "Lake Red Guard"
+		start_experience_factor = 1
+	}
+	division = {
+		location = 10832
+		division_template = "Lake Red Guard"
+		start_experience_factor = 1
+	}
+	division = {
+		location = 12810
+		division_template = "Lake Red Guard"
+		start_experience_factor = 1
+	}
+}

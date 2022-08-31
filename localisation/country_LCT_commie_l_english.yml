@@ -30,6 +30,8 @@
 
   LCT_become_tp:0 "You will become §Y[LCT.GetNameDef]§!\n"
   LCT_border_wall:0 "§YEvery Border Province:§!\n   Add §Y2 Land Fort§!."
+  
+  LCT_star_tt:0 "§YThree§! §Celite§! divisions will be spawned"
 
 
 
@@ -69,7 +71,7 @@ LCT_settlement_initiative:0 "Settlement Initiative"
 LCT_settlement_initiative_desc:0 ""
 LCT_envoy_to_stalliongrad:0 "Envoy to Stalliongrad"
 LCT_envoy_to_stalliongrad_desc:0 ""
-LCT_export_the_revolution:0 "Export the Eevolution"
+LCT_export_the_revolution:0 "Export the Revolution"
 LCT_export_the_revolution_desc:0 ""
 LCT_fund_partisans:0 "Fund Partisans"
 LCT_fund_partisans_desc:0 ""
@@ -77,4 +79,9 @@ LCT_defend_the_revolution:0 "Defend the Revolution"
 LCT_defend_the_revolution_desc:0 ""
 LCT_deponyan_liberation:0 "Deponyan Liberation"
 LCT_deponyan_liberation_desc:0 ""
-
+LCT_crusaders:0 "Destroy the Crusaders!"
+LCT_crusaders_desc:0 ""
+LCT_proclaim:0 "Proclaim the Riverland Socialism"
+LCT_proclaim_desc:0 ""
+LCT_great_patriotic_war:0 "The Great Patriotic War"
+LCT_great_patriotic_war_desc:0 ""
