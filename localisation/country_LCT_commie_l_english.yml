@@ -85,3 +85,19 @@ LCT_proclaim:0 "Proclaim the Riverland Socialism"
 LCT_proclaim_desc:0 ""
 LCT_great_patriotic_war:0 "The Great Patriotic War"
 LCT_great_patriotic_war_desc:0 ""
+
+
+### Ideas ###
+LCT_red_river_army_idea:0 "Red River Army"
+LCT_stalliongrad_cooperation:0 "Stalliongrad Cooperation"
+LCT_war_communism:0 "War Communism"
+LCT_C_a_red_army:0 "Red Army"
+LCT_C_market_socialism:0 "Market Socialism"
+LCT_C_nationalized_guilds:0 "Nationalized Guilds"
+
+### Decision ###
+LCT_communist_partisans:0 "Communist Partisans"
+LCT_agitate_in_from:0 "Start agitation"
+LCT_partisans_in_from:0 "Train [artisans"
+LCT_annex_tag:0 "Red Brotherhoove"
+LCT_annex_dep:0 "Take under the wing"

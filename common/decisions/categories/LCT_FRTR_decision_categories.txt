@@ -9,3 +9,14 @@ LCT_communist_partisans = {
 	}
 	icon = modern_city
 }
+LCT_annex_tag = {
+	allowed = {
+		original_tag = LCT
+	}
+	priority = 99
+	visible = {
+		has_government = communism
+		has_completed_focus = LCT_deponyan_liberation
+	}
+	icon = GFX_decision_category_SOV_civil_puppet_interaction
+}

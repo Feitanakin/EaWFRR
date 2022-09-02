@@ -6050,11 +6050,12 @@ focus_tree = {
 		available_if_capitulated = no
 		
 		bypass = {
-			has_country_leader = { ruling_only = yes name = "Tito Titovich" }
+			
 		}
 		
 		available = {
 			has_government = communism
+			has_country_leader = { ruling_only = yes name = "Tito Titovich" }
 		}
 		
 		completion_reward = {
@@ -6844,10 +6845,13 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: LCT_deponyan_liberation"
-			declare_war_on = {
-			    target = DEP
-			    type = annex_everything
+			DEP = {
+				start_civil_war = {
+					ideology = communism
+					size = 0.8
+				}
 			}
+			RCT = { remove_from_faction = LCT }
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}

@@ -1,7 +1,7 @@
 ideas = {
 	country = {
 		LCT_red_river_army_idea = {
-			picture = BAL_peoples_army
+			picture = MEX_revolutionary_army
 			available = {
         		tag = LCT
 				has_government = communism
@@ -19,7 +19,7 @@ ideas = {
 	}
 	country = {
 		LCT_stalliongrad_cooperation = {
-			picture = BAL_peoples_army
+			picture = WNG_COM_const
 			available = {
       			tag = LCT
 				has_government = communism
@@ -58,7 +58,7 @@ ideas = {
 	country = {
 		LCT_C_a_red_army = {
 
-			picture = YUG_federal_defense_council
+			picture = trotskyite_plot_purged
 
 			allowed = {
 				always = no
@@ -86,7 +86,7 @@ ideas = {
 		
 		LCT_C_market_socialism = {
 
-			picture = YUG_federal_defense_council
+			picture = SOV_fourth_five_year_plan
 
 			allowed = {
 				always = no
@@ -111,7 +111,7 @@ ideas = {
 		
 		LCT_C_nationalized_guilds = {
 
-			picture = YUG_federal_defense_council
+			picture = EQS_UESR_communism
 
 			allowed = {
 				always = no

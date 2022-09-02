@@ -101,3 +101,39 @@ LCT_communist_partisans = {
 		}
 	}
 }
+LCT_annex_tag = {
+	LCT_annex_dep = {
+		icon = GFX_decision_SOV_secure_the_administration
+		targets = { RCT LCT NIM WIT BAK DEP FRE DMT }
+		targets_dynamic = yes
+		target_trigger = {
+			FROM = {
+				is_original_riv_fed_country = yes
+			}
+		}
+		visible = {
+			FROM = {
+				is_original_riv_fed_country = yes
+				exists = yes
+				has_government = communism
+			}
+		}
+		available = {
+			has_government = communism
+			has_completed_focus = LCT_deponyan_liberation
+		}
+		cost = 50
+		fire_only_once = no
+		days_re_enable = 50
+		days_remove = 30
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove LCT_annex_dep target: [From.GetName]"
+			LCT = { puppet = FROM }
+		}
+	}
+}
