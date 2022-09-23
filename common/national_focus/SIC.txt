@@ -6784,6 +6784,14 @@ focus_tree = {
 					ROOT = { create_wargoal = { type = annex_everything target = PREV } }
 				}
 			}
+			hidden_effect = {
+				every_state = {
+					limit = {
+						is_core_of = BRF
+					}
+					add_claim_by = SIC 
+				}
+			}
 			}
 		}
 	}
@@ -7023,29 +7031,85 @@ focus_tree = {
 				type = annex_everything 
 			}
 			}
+			hidden_effect = {
+				every_state = {
+					limit = {
+						is_core_of = WNG 
+					}
+					add_claim_by = SIC 
+				}
+			}
 			create_wargoal= {
 				target = TAL
 				type = annex_everything 
+			}
+			hidden_effect = {
+				every_state = {
+					limit = {
+						is_core_of = TAL 
+					}
+					add_claim_by = SIC 
+				}
 			}
 			create_wargoal= {
 				target = FRN
 				type = annex_everything 
 			}
+			hidden_effect = {
+				every_state = {
+					limit = {
+						is_core_of = FRN 
+					}
+					add_claim_by = SIC 
+				}
+			}
 			create_wargoal= {
 					target = ARA
 				type = annex_everything 
+			}
+			hidden_effect = {
+				every_state = {
+					limit = {
+						is_core_of = ARA 
+					}
+					add_claim_by = SIC 
+				}
 			}
 			create_wargoal= {
 				target = FAL
 				type = annex_everything 
 			}
+			hidden_effect = {
+				every_state = {
+					limit = {
+						is_core_of = FAL 
+					}
+					add_claim_by = SIC 
+				}
+			}
 			create_wargoal= {
 				target = BOI
 				type = annex_everything 
 			}
+			hidden_effect = {
+				every_state = {
+					limit = {
+						is_core_of = BOI 
+					}
+					add_claim_by = SIC 
+				}
+			}
 			create_wargoal= {
 				target = LAK
 				type = annex_everything 
+			}
+			hidden_effect = {
+				every_state = {
+					limit = {
+						is_core_of = LAK 
+					}
+					add_claim_by = SIC 
+				}
 			}
 		}
 	}

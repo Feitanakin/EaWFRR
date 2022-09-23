@@ -2,11 +2,11 @@
 
 frtr_saicameon_prywhen:0 "Kingdom of Sicameon-Prywhen"
 frtr_saicameon_prywhen_ADJ:0 "Sicameon-Prywhen"
-frtr_saicameon_prywhen_DEF:0 "Kingdom of Sicameon-Prywhen"
+frtr_saicameon_prywhen_DEF:0 "The Kingdom of Sicameon-Prywhen"
 
 frtr_karthinian_empire:0 "Karthinian Empire"
 frtr_karthinian_empire_ADJ:0 "Karthinian"
-frtr_karthinian_empire_DEF:0 "Karthinian Empire"
+frtr_karthinian_empire_DEF:0 "The Karthinian Empire"
 
 SIC_frederick_arantigos:0 "Southern Griffonian Empire"
 SIC_frederick_arantigos_ADJ:0 "Griffonian"
@@ -19,6 +19,10 @@ GRI_north_empire_DEF:0 "The Griffonian Empire"
 SIC_frederick_arantigos_new:0 "Griffonian Empire"
 SIC_frederick_arantigos_new_ADJ:0 "Griffonian"
 SIC_frederick_arantigos_new_DEF:0 "The Griffonian Empire"
+
+SIC_tomado_the_king:0 "Grand Duchy of Sicameon"
+SIC_tomado_the_king_ADJ:0 "Sicameonese"
+SIC_tomado_the_king_DEF:0 "The Grand Duchy of Sicameon"
 
 LAK_ssr_communism:0 "Rumarean SSR"
 BOI_ssr_communism:0 "Griffonstonian SSR"

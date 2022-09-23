@@ -294,7 +294,7 @@ ideas = {
 		}
 
 		faith_harmony = {
-			picture = harmonic_stagnation3
+			picture = EQS_harmonic_stagnation3
 			allowed = {
 				tag = SIC
 			}
@@ -977,7 +977,95 @@ ideas = {
 			}
 		}
 	}
+	
+	country = {
+	
+		SIC_sic_representative_office = {
+			name = SIC_sic_representative_office
+			
+			picture = SIC_sic_representative_office
+			
+			allowed = {
+				tag = NZC
+				SIC = { exists = yes }
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				
+			}
+		}
 
+		SIC_wng_representative_office = {
+			name = SIC_wng_representative_office
+			
+			picture = SIC_wng_representative_office
+			
+			allowed = {
+				tag = NZC
+				WNG = { exists = yes }
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				
+			}
+		}
+
+		SIC_fal_representative_office = {
+			name = SIC_fal_representative_office
+			
+			picture = SIC_fal_representative_office
+			
+			allowed = {
+				tag = NZC
+				FAL = { exists = yes }
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				
+			}
+		}
+
+		SIC_cya_representative_office = {
+			name = SIC_cya_representative_office
+			
+			picture = SIC_cya_representative_office
+			
+			allowed = {
+				tag = NZC
+				CYA = { exists = yes }
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				
+			}
+		}
+
+		SIC_gru_representative_office = {
+			name = SIC_gru_representative_office
+			
+			picture = SIC_gru_representative_office
+			
+			allowed = {
+				tag = NZC
+				GRU = { exists = yes }
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				
+			}
+		}
+
+	}
 ####ADVISORS, THEORISTS AND CONCERNS
 
 	political_advisor = {

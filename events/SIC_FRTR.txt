@@ -73,9 +73,12 @@ country_event = {
 		recruit_character = SIC_Petronilo
 		promote_character = SIC_Petronilo
 		set_party_name= {
-			ideology = neutrality
+			ideology = democratic
 			long_name = SIC_petr_kings_party_long
 			name = SIC_petr_kings_party
+		}
+		hidden_effect = {
+			set_cosmetic_tag = SIC_tomado_the_king
 		}
 	}
 

@@ -114,4 +114,29 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/workers_and_peasants_red_army.dds"
 	}
 
+	SpriteType = {
+		name = "GFX_idea_SIC_sic_representative_office"
+		texturefile = "gfx/interface/ideas/SIC_sic_representative_office.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_idea_SIC_wng_representative_office"
+		texturefile = "gfx/interface/ideas/SIC_wng_representative_office.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_idea_SIC_fal_representative_office"
+		texturefile = "gfx/interface/ideas/SIC_fal_representative_office.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_idea_SIC_cya_representative_office"
+		texturefile = "gfx/interface/ideas/SIC_cya_representative_office.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_idea_SIC_gru_representative_office"
+		texturefile = "gfx/interface/ideas/SIC_gru_representative_office.dds"
+	}
+
 }

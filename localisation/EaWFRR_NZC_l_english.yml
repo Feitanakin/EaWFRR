@@ -18,3 +18,10 @@ NZC_democratic_party:0 "UCoMoStwtNZ"
 NZC_democratic_party_long:0 "United Company of Merchants of Sicameon trading with the North Zebrica"
 NZC_fascism_party:0 "UCoMoStwtNZ"
 NZC_fascism_party_long:0 "United Company of Merchants of Sicameon trading with the North Zebrica"
+
+### Ideas ###
+SIC_sic_representative_office:0 "Sicameonese Representative Office"
+SIC_wng_representative_office:0 "Wingbardian Representative Office"
+SIC_fal_representative_office:0 "Falcorian Representative Office"
+SIC_cya_representative_office:0 "Cyanolisian Representative Office"
+SIC_gru_representative_office:0 "Gryphussian Representative Office"

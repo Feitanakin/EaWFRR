@@ -75,6 +75,31 @@ units = {
 		start_equipment_factor = 0.9
 		start_experience_factor = 0.5
 	}
+	
+	division = {
+		name = "5ª Divisão de Infantaria"
+		location = 7290
+		division_template = "Divisão de Infantaria"
+		start_equipment_factor = 0.9
+		start_experience_factor = 0.5
+	}
+
+	division = {
+		name = "6ª Divisão de Infantaria"
+		location = 18796
+		division_template = "Divisão de Infantaria"
+		start_equipment_factor = 0.9
+		start_experience_factor = 0.5
+	}
+
+	division = {
+		name = "7ª Divisão de Infantaria"
+		location = 18843
+		division_template = "Divisão de Infantaria"
+		start_equipment_factor = 0.9
+		start_experience_factor = 0.5
+	}
+	
 	division = {
 		name = "1ª Divisão de Marinha"
 		location = 18800

@@ -84,7 +84,19 @@ add_ideas = {
 	outdated_industry
 	limited_conscription
 	free_trade
+	SIC_sic_representative_office
+	SIC_wng_representative_office
+	SIC_fal_representative_office
+	SIC_cya_representative_office
+	SIC_gru_representative_office
 }
+
+SIC = {give_guarantee = NZC}
+WNG = {give_guarantee = NZC}
+FAL = {give_guarantee = NZC}
+CYA = {give_guarantee = NZC}
+GRU = {give_guarantee = NZC}
+
 set_stability = 0.6
 set_war_support = 0.8
 
