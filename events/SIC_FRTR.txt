@@ -72,6 +72,10 @@ country_event = {
 		complete_national_focus = SIC_springtime_sic
 		recruit_character = SIC_Petronilo
 		promote_character = SIC_Petronilo
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = no
+		}
 		set_party_name= {
 			ideology = democratic
 			long_name = SIC_petr_kings_party_long
