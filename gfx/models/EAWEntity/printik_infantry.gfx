@@ -1,4 +1,41 @@
 objectTypes = {
+
+		pdxmesh = {
+		name = "riverland_infantry_rifle_mesh"
+		file = "gfx/models/EAWEntity/ponies/riverland_infantry.mesh"
+		
+		animation = { id = "idle"			type = "CRY_infantry_idle" }
+		animation = { id = "idle01"			type = "CRY_infantry_idle_01" }
+		animation = { id = "idle02"			type = "CRY_infantry_idle_02" }
+		animation = { id = "attack"			type = "CRY_infantry_attack" }
+		animation = { id = "defend"			type = "CRY_infantry_attack" }
+		animation = { id = "retreat"		type = "CRY_infantry_retreat" }
+		animation = { id = "move"			type = "CRY_infantry_move" }
+		animation = { id = "training"		type = "CRY_infantry_training" }
+		animation = { id = "limp"			type = "CRY_infantry_limp" }
+		
+		scale = 1.0
+		
+		}
+
+		pdxmesh = {
+		name = "pegasi_infantry_rifle_mesh"
+		file = "gfx/models/EAWEntity/ponies/pegasi_infantry.mesh"
+		
+		animation = { id = "idle"			type = "CRY_infantry_idle" }
+		animation = { id = "idle01"			type = "CRY_infantry_idle_01" }
+		animation = { id = "idle02"			type = "CRY_infantry_idle_02" }
+		animation = { id = "attack"			type = "CRY_infantry_attack" }
+		animation = { id = "defend"			type = "CRY_infantry_attack" }
+		animation = { id = "retreat"		type = "CRY_infantry_retreat" }
+		animation = { id = "move"			type = "CRY_infantry_move" }
+		animation = { id = "training"		type = "CRY_infantry_training" }
+		animation = { id = "limp"			type = "CRY_infantry_limp" }
+		
+		scale = 1.0
+		
+		}
+
 		pdxmesh = {
 		name = "CRY_infantry_rifle_mesh"
 		file = "gfx/models/EAWEntity/ponies/CRY_infantry.mesh"
@@ -35,7 +72,24 @@ objectTypes = {
 		scale = 1.0
 		
 		}
+
+		pdxmesh = {
+		name = "generic_infantry_rifle_mesh"
+		file = "gfx/models/EAWEntity/ponies/generic_infantry.mesh"
 		
+		animation = { id = "idle"			type = "CRY_infantry_idle" }
+		animation = { id = "idle01"			type = "CRY_infantry_idle_01" }
+		animation = { id = "idle02"			type = "CRY_infantry_idle_02" }
+		animation = { id = "attack"			type = "CRY_infantry_attack" }
+		animation = { id = "defend"			type = "CRY_infantry_attack" }
+		animation = { id = "retreat"		type = "CRY_infantry_retreat" }
+		animation = { id = "move"			type = "CRY_infantry_move" }
+		animation = { id = "training"		type = "CRY_infantry_training" }
+		animation = { id = "limp"			type = "CRY_infantry_limp" }
+		
+		scale = 1.0
+		
+		}	
 		
 		pdxmesh = {
 		name = "CHN_infantry_rifle_mesh"
@@ -61,6 +115,34 @@ objectTypes = {
 			texture_specular = "CHN_infantry_spec.dds"
 			}
 		
+		}
+
+		pdxmesh = {
+		name = "generic_griffon_infantry_rifle_mesh"
+		file = "gfx/models/EAWEntity/griffons/generic_griffon_infantry.mesh"
+		
+		animation = { id = "move"			type = "GRI_infantry_move" }
+		animation = { id = "idle"			type = "GRI_infantry_idle" }
+		animation = { id = "idle01"			type = "GRI_infantry_idle_01" }
+		animation = { id = "idle02"			type = "GRI_infantry_idle_02" }
+		animation = { id = "idle03"			type = "GRI_infantry_idle_03" }
+		animation = { id = "idle04"			type = "GRI_infantry_idle_04" }
+		animation = { id = "long_idle"		type = "GRI_infantry_long_idle" }
+		animation = { id = "charge"			type = "GRI_infantry_attack_charge" }
+		animation = { id = "retreat"		type = "GRI_infantry_retreat" }
+		animation = { id = "training"		type = "GRI_infantry_training_idle" }
+		animation = { id = "limp"			type = "GRI_infantry_limp" }
+#		animation = { id = "test"			type = "GRI_infantry_test" }
+
+		meshsettings = {
+			name = "mesh"
+			index = 0
+			shader="PdxMeshAdvanced"
+			texture_diffuse = "generic_infantry_diffuse.dds"
+			texture_normal = "GRI_infantry_normal.dds"
+			texture_specular = "GRI_infantry_spec.dds"
+			}
+		scale = 1.0
 		}
 		
 		pdxmesh = {
@@ -110,8 +192,127 @@ objectTypes = {
 		scale = 1.0
 		
 		}
+
+		pdxmesh = {
+		name = "JER_infantry_rifle_mesh"
+		file = "gfx/models/EAWEntity/griffons/JER_infantry.mesh"
 		
+		animation = { id = "move"			type = "GRI_infantry_move" }
+		animation = { id = "idle"			type = "GRI_infantry_idle" }
+		animation = { id = "idle01"			type = "GRI_infantry_idle_01" }
+		animation = { id = "idle02"			type = "GRI_infantry_idle_02" }
+		animation = { id = "idle03"			type = "GRI_infantry_idle_03" }
+		animation = { id = "idle04"			type = "GRI_infantry_idle_04" }
+		animation = { id = "long_idle"		type = "GRI_infantry_long_idle" }
+		animation = { id = "charge"			type = "GRI_infantry_attack_charge" }
+		animation = { id = "retreat"		type = "GRI_infantry_retreat" }
+		animation = { id = "training"		type = "GRI_infantry_training_idle" }
+#		animation = { id = "test"			type = "GRI_infantry_test" }
+
+		scale = 1.0
 		
+		}		
+
+		pdxmesh = {
+		name = "west_griffonian_infantry_rifle_mesh"
+		file = "gfx/models/EAWEntity/griffons/west_griffonian_infantry.mesh"
+		
+		animation = { id = "move"			type = "GRI_infantry_move" }
+		animation = { id = "idle"			type = "GRI_infantry_idle" }
+		animation = { id = "idle01"			type = "GRI_infantry_idle_01" }
+		animation = { id = "idle02"			type = "GRI_infantry_idle_02" }
+		animation = { id = "idle03"			type = "GRI_infantry_idle_03" }
+		animation = { id = "idle04"			type = "GRI_infantry_idle_04" }
+		animation = { id = "long_idle"		type = "GRI_infantry_long_idle" }
+		animation = { id = "charge"			type = "GRI_infantry_attack_charge" }
+		animation = { id = "retreat"		type = "GRI_infantry_retreat" }
+		animation = { id = "training"		type = "GRI_infantry_training_idle" }
+#		animation = { id = "test"			type = "GRI_infantry_test" }
+
+		scale = 1.0
+		
+		}
+	
+		pdxmesh = {
+		name = "east_griffonian_infantry_rifle_mesh"
+		file = "gfx/models/EAWEntity/griffons/east_griffonian_infantry.mesh"
+		
+		animation = { id = "move"			type = "GRI_infantry_move" }
+		animation = { id = "idle"			type = "GRI_infantry_idle" }
+		animation = { id = "idle01"			type = "GRI_infantry_idle_01" }
+		animation = { id = "idle02"			type = "GRI_infantry_idle_02" }
+		animation = { id = "idle03"			type = "GRI_infantry_idle_03" }
+		animation = { id = "idle04"			type = "GRI_infantry_idle_04" }
+		animation = { id = "long_idle"		type = "GRI_infantry_long_idle" }
+		animation = { id = "charge"			type = "GRI_infantry_attack_charge" }
+		animation = { id = "retreat"		type = "GRI_infantry_retreat" }
+		animation = { id = "training"		type = "GRI_infantry_training_idle" }
+#		animation = { id = "test"			type = "GRI_infantry_test" }
+
+		scale = 1.0
+		
+		}
+
+		pdxmesh = {
+		name = "zebrica_griffonian_infantry_rifle_mesh"
+		file = "gfx/models/EAWEntity/griffons/zebrica_griffonian_infantry.mesh"
+		
+		animation = { id = "move"			type = "GRI_infantry_move" }
+		animation = { id = "idle"			type = "GRI_infantry_idle" }
+		animation = { id = "idle01"			type = "GRI_infantry_idle_01" }
+		animation = { id = "idle02"			type = "GRI_infantry_idle_02" }
+		animation = { id = "idle03"			type = "GRI_infantry_idle_03" }
+		animation = { id = "idle04"			type = "GRI_infantry_idle_04" }
+		animation = { id = "long_idle"		type = "GRI_infantry_long_idle" }
+		animation = { id = "charge"			type = "GRI_infantry_attack_charge" }
+		animation = { id = "retreat"		type = "GRI_infantry_retreat" }
+		animation = { id = "training"		type = "GRI_infantry_training_idle" }
+#		animation = { id = "test"			type = "GRI_infantry_test" }
+
+		scale = 1.0
+		
+		}
+
+		pdxmesh = {
+		name = "herzland_griffonian_infantry_rifle_mesh"
+		file = "gfx/models/EAWEntity/griffons/herzland_griffonian_infantry.mesh"
+		
+		animation = { id = "move"			type = "GRI_infantry_move" }
+		animation = { id = "idle"			type = "GRI_infantry_idle" }
+		animation = { id = "idle01"			type = "GRI_infantry_idle_01" }
+		animation = { id = "idle02"			type = "GRI_infantry_idle_02" }
+		animation = { id = "idle03"			type = "GRI_infantry_idle_03" }
+		animation = { id = "idle04"			type = "GRI_infantry_idle_04" }
+		animation = { id = "long_idle"		type = "GRI_infantry_long_idle" }
+		animation = { id = "charge"			type = "GRI_infantry_attack_charge" }
+		animation = { id = "retreat"		type = "GRI_infantry_retreat" }
+		animation = { id = "training"		type = "GRI_infantry_training_idle" }
+#		animation = { id = "test"			type = "GRI_infantry_test" }
+
+		scale = 1.0
+		
+		}
+
+		pdxmesh = {
+		name = "north_griffonian_infantry_rifle_mesh"
+		file = "gfx/models/EAWEntity/griffons/north_griffonian_infantry.mesh"
+		
+		animation = { id = "move"			type = "GRI_infantry_move" }
+		animation = { id = "idle"			type = "GRI_infantry_idle" }
+		animation = { id = "idle01"			type = "GRI_infantry_idle_01" }
+		animation = { id = "idle02"			type = "GRI_infantry_idle_02" }
+		animation = { id = "idle03"			type = "GRI_infantry_idle_03" }
+		animation = { id = "idle04"			type = "GRI_infantry_idle_04" }
+		animation = { id = "long_idle"		type = "GRI_infantry_long_idle" }
+		animation = { id = "charge"			type = "GRI_infantry_attack_charge" }
+		animation = { id = "retreat"		type = "GRI_infantry_retreat" }
+		animation = { id = "training"		type = "GRI_infantry_training_idle" }
+#		animation = { id = "test"			type = "GRI_infantry_test" }
+
+		scale = 1.0
+		
+		}
+
 		pdxmesh = {
 		name = "GRI_infantry_helmet_pickelhaube_mesh"
 		file = "gfx/models/EAWEntity/griffons/attachments/GRI_infantry_helmet_pickelhaube.mesh"
@@ -125,6 +326,36 @@ objectTypes = {
 		pdxmesh = {
 		name = "WNG_infantry_helmet_pasta_mesh"
 		file = "gfx/models/EAWEntity/griffons/attachments/WNG_infantry_helmet_pasta.mesh"
+		}
+		
+		pdxmesh = {
+		name = "JER_infantry_helmet_central_mesh"
+		file = "gfx/models/EAWEntity/griffons/attachments/JER_infantry_helmet_central.mesh"
+		}
+		
+		pdxmesh = {
+		name = "west_griffonian_infantry_helmet_mesh"
+		file = "gfx/models/EAWEntity/griffons/attachments/west_griffonian_infantry_helmet.mesh"
+		}
+
+		pdxmesh = {
+		name = "east_griffonian_infantry_helmet_mesh"
+		file = "gfx/models/EAWEntity/griffons/attachments/east_griffonian_infantry_helmet.mesh"
+		}
+		
+		pdxmesh = {
+		name = "zebrica_griffonian_infantry_helmet_pith_mesh"
+		file = "gfx/models/EAWEntity/griffons/attachments/zebrica_griffonian_infantry_helmet_pith.mesh"
+		}
+		
+		pdxmesh = {
+		name = "herzland_griffonian_infantry_helmet_mesh"
+		file = "gfx/models/EAWEntity/griffons/attachments/herzland_griffonian_infantry_helmet.mesh"
+		}
+		
+		pdxmesh = {
+		name = "north_griffonian_infantry_helmet_mesh"
+		file = "gfx/models/EAWEntity/griffons/attachments/north_griffonian_infantry_helmet.mesh"
 		}
 
 ### SF UNITS
@@ -345,37 +576,4 @@ objectTypes = {
 			texture_specular = "WNG_knights_helmet_spec.dds"
 			}		
         }
-		pdxmesh = {
-		name = "NZC_infantry_rifle_mesh"
-		file = "gfx/models/EAWEntity/griffons/NZC_infantry.mesh"
-		
-		animation = { id = "move"			type = "GRI_infantry_move" }
-		animation = { id = "idle"			type = "GRI_infantry_idle" }
-		animation = { id = "idle01"			type = "GRI_infantry_idle_01" }
-		animation = { id = "idle02"			type = "GRI_infantry_idle_02" }
-		animation = { id = "idle03"			type = "GRI_infantry_idle_03" }
-		animation = { id = "idle04"			type = "GRI_infantry_idle_04" }
-		animation = { id = "long_idle"		type = "GRI_infantry_long_idle" }
-		animation = { id = "charge"			type = "GRI_infantry_attack_charge" }
-		animation = { id = "retreat"		type = "GRI_infantry_retreat" }
-		animation = { id = "training"		type = "GRI_infantry_training_idle" }
-#		animation = { id = "test"			type = "GRI_infantry_test" }
-
-		meshsettings = {
-			name = "mesh"
-			index = 0
-			shader="PdxMeshAdvanced"
-			texture_diffuse = "NZC_infantry_rifle_mesh.dds"
-			texture_normal = "NZC_infantry_rifle_mesh.dds"
-			texture_specular = "NZC_infantry_rifle_mesh.dds"
-		}
-		scale = 1.0
-		
-		}
-		
-		
-		pdxmesh = {
-		name = "NZC_infantry_helmet_pith_mesh"
-		file = "gfx/models/EAWEntity/griffons/attachments/NZC_infantry_helmet_pith.mesh"
-		}
 }

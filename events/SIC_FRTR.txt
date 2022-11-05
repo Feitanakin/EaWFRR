@@ -560,62 +560,6 @@ country_event = {
 	is_triggered_only = yes
 }
 
-country_event = {
-	id = sicameon_frtr.31
-	immediate = {log = "[GetDateText]: [Root.GetName]: sicameon_frtr.31"}
-	hidden = yes
-
-	mean_time_to_happen = { days = 0 }
-
-	trigger = {
-		original_tag = NZC
-		MCW = {
-			exists = no
-		}
-		NZC = { controls_state = 721 }
-	}
-
-	option = {
-		SIC = {
-			set_autonomy = {
-				target = NZC
-				autonomous_state = autonomy_trade_company
-				freedom_level = 0.5
-			}
-			every_state = {
-				limit = {
-					is_core_of = MCW 
-				}
-				add_core_of = NZC 
-			}
-		}
-	}
-}
-
-country_event = {
-	id = sicameon_frtr.32
-	immediate = {log = "[GetDateText]: [Root.GetName]: sicameon_frtr.32"}
-	hidden = yes
-
-	mean_time_to_happen = { days = 0 }
-
-	trigger = {
-		original_tag = NZC
-		MCW = {
-			exists = yes
-		}
-		NZC = { has_war_with = MCW }
-	}
-
-	option = {
-		every_state = {
-			limit = {
-				is_core_of = MCW 
-			}
-			add_claim_by = NZC 
-		}
-	}
-}
 ###########################################################
 
 add_namespace = sicameon_frtr_frd

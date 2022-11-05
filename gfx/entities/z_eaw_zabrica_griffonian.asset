@@ -1,0 +1,158 @@
+entity = {
+	name = "zebrica_griffonian_infantry_entity"
+	pdxmesh = "zebrica_griffonian_infantry_rifle_mesh"
+	
+	default_state = "idle"
+	state = { name = "attack"			animation = "charge" 			animation_blend_time = 0.0  animation_speed = 1.0 looping = no next_state = "attack" propagate_state = { rifle1 = "idle" } }
+	state = { name = "defend"			animation = "charge" 			animation_blend_time = 0.3  animation_speed = 1.0 }
+	state = { name = "support_attack"	animation = "charge" 			animation_blend_time = 0.3	animation_speed = 1.0 }
+	state = { name = "move"				animation = "move" 				animation_blend_time = 0.0	animation_speed = 1.0	event = { trigger_once = yes sound = { soundeffect = "infantry_move_animation" } } }
+	state = { name = "retreat"			animation = "retreat" 			animation_blend_time = 0.3	animation_speed = 1.0 }
+	state = { name = "death"			animation = "retreat" 			animation_blend_time = 0.3	animation_speed = 1.0 }
+	state = { name = "idle"				animation = "idle"      		animation_blend_time = 0.3	animation_speed = 1.0 chance = 100 looping = no next_state = "idle" }
+	state = { name = "idle"				animation = "idle01"      		animation_blend_time = 0.3	animation_speed = 0.7 chance = 10 looping = no next_state = "idle" }
+	state = { name = "idle"				animation = "idle02"      		animation_blend_time = 0.3	animation_speed = 0.6 chance = 3 looping = no next_state = "idle" }
+	state = { name = "idle"				animation = "idle03"      		animation_blend_time = 0.3	animation_speed = 1.0 chance = 15 looping = no next_state = "idle" }
+	state = { name = "idle"				animation = "idle04"      		animation_blend_time = 0.3	animation_speed = 0.8 chance = 12 looping = no next_state = "idle" }
+	state = { name = "idle"				animation = "long_idle"      	animation_blend_time = 0.3	animation_speed = 0.8 chance = 1 looping = no next_state = "idle" }
+	state = { name = "training"			animation = "training" 			animation_blend_time = 0.3	animation_speed = 1.0 }
+
+	attach = { 	name = "rifle1"	jeb = "GER_infantry_weapon_rifle_right_entity" }	
+	attach = { 	name = "helm1"	head = "zebrica_griffonian_infantry_helmet_pith_entity" }	
+	
+	scale = 0.8
+}
+
+entity = {
+	clone = "zebrica_griffonian_infantry_entity"
+	name = "zebrica_griffonian_infantry_2_entity"
+}
+
+entity = {
+	clone = "zebrica_griffonian_infantry_entity"
+	name = "zebrica_griffonian_infantry_3_entity"
+}
+
+entity = {
+	clone = "zebrica_griffonian_infantry_entity"
+	name = "zebrica_griffonian_vehicle_infantry_rifle_entity"
+}
+
+entity = {
+	clone = "FRA_motorized_entity"
+	name = "zebrica_griffonian_motorized_entity"
+	attach = { 	name = "infantry"			infantry = "zebrica_griffonian_infantry_entity" }
+}
+
+entity = {
+	name = "zebrica_griffonian_artillery_entity"
+	clone = "GER_artillery_entity"
+
+	attach = { name = infantry			infantry = "zebrica_griffonian_infantry_entity" }
+}
+
+entity = {
+	name = "zebrica_griffonian_anti_tank_entity"
+	clone = "zebrica_griffonian_artillery_entity"
+
+}
+
+entity = {
+	clone = "GER_mechanized_entity"
+	name = "zebrica_griffonian_mechanized_entity"
+}
+
+############################
+
+entity = {
+	clone = "zebrica_griffonian_infantry_entity"
+	name = "YAN_infantry_entity"
+}
+
+entity = {
+	clone = "zebrica_griffonian_infantry_entity"
+	name = "YAN_infantry_2_entity"
+}
+
+entity = {
+	clone = "zebrica_griffonian_infantry_entity"
+	name = "YAN_infantry_3_entity"
+}
+
+entity = {
+	clone = "zebrica_griffonian_infantry_entity"
+	name = "YAN_vehicle_infantry_rifle_entity"
+}
+
+entity = {
+	clone = "zebrica_griffonian_mechanized_entity"
+	name = "YAN_mechanized_entity"
+}
+
+entity = {
+	clone = "zebrica_griffonian_motorized_entity"
+	name = "YAN_motorized_entity"
+	attach = { 	name = "infantry"			infantry = "zebrica_griffonian_infantry_entity" }
+}
+
+entity = {
+	clone = "zebrica_griffonian_infantry_entity"
+	name = "GFS_infantry_entity"
+}
+
+entity = {
+	clone = "zebrica_griffonian_infantry_entity"
+	name = "GFS_infantry_2_entity"
+}
+
+entity = {
+	clone = "zebrica_griffonian_infantry_entity"
+	name = "GFS_infantry_3_entity"
+}
+
+entity = {
+	clone = "zebrica_griffonian_infantry_entity"
+	name = "GFS_vehicle_infantry_rifle_entity"
+}
+
+entity = {
+	clone = "zebrica_griffonian_mechanized_entity"
+	name = "GFS_mechanized_entity"
+}
+
+entity = {
+	clone = "zebrica_griffonian_motorized_entity"
+	name = "GFS_motorized_entity"
+	attach = { 	name = "infantry"			infantry = "zebrica_griffonian_infantry_entity" }
+}
+
+entity = {
+	clone = "zebrica_griffonian_infantry_entity"
+	name = "TSV_infantry_entity"
+}
+
+entity = {
+	clone = "zebrica_griffonian_infantry_entity"
+	name = "TSV_infantry_2_entity"
+}
+
+entity = {
+	clone = "zebrica_griffonian_infantry_entity"
+	name = "TSV_infantry_3_entity"
+}
+
+entity = {
+	clone = "zebrica_griffonian_infantry_entity"
+	name = "TSV_vehicle_infantry_rifle_entity"
+}
+
+entity = {
+	clone = "zebrica_griffonian_mechanized_entity"
+	name = "TSV_mechanized_entity"
+}
+
+entity = {
+	clone = "zebrica_griffonian_motorized_entity"
+	name = "TSV_motorized_entity"
+	attach = { 	name = "infantry"			infantry = "zebrica_griffonian_infantry_entity" }
+}

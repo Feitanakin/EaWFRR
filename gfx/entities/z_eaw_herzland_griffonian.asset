@@ -1,0 +1,282 @@
+entity = {
+	name = "herzland_griffonian_infantry_entity"
+	pdxmesh = "herzland_griffonian_infantry_rifle_mesh"
+	
+	default_state = "idle"
+	state = { name = "attack"			animation = "charge" 			animation_blend_time = 0.0  animation_speed = 1.0 looping = no next_state = "attack" propagate_state = { rifle1 = "idle" } }
+	state = { name = "defend"			animation = "charge" 			animation_blend_time = 0.3  animation_speed = 1.0 }
+	state = { name = "support_attack"	animation = "charge" 			animation_blend_time = 0.3	animation_speed = 1.0 }
+	state = { name = "move"				animation = "move" 				animation_blend_time = 0.0	animation_speed = 1.0	event = { trigger_once = yes sound = { soundeffect = "infantry_move_animation" } } }
+	state = { name = "retreat"			animation = "retreat" 			animation_blend_time = 0.3	animation_speed = 1.0 }
+	state = { name = "death"			animation = "retreat" 			animation_blend_time = 0.3	animation_speed = 1.0 }
+	state = { name = "idle"				animation = "idle"      		animation_blend_time = 0.3	animation_speed = 1.0 chance = 100 looping = no next_state = "idle" }
+	state = { name = "idle"				animation = "idle01"      		animation_blend_time = 0.3	animation_speed = 0.7 chance = 10 looping = no next_state = "idle" }
+	state = { name = "idle"				animation = "idle02"      		animation_blend_time = 0.3	animation_speed = 0.6 chance = 3 looping = no next_state = "idle" }
+	state = { name = "idle"				animation = "idle03"      		animation_blend_time = 0.3	animation_speed = 1.0 chance = 15 looping = no next_state = "idle" }
+	state = { name = "idle"				animation = "idle04"      		animation_blend_time = 0.3	animation_speed = 0.8 chance = 12 looping = no next_state = "idle" }
+	state = { name = "idle"				animation = "long_idle"      	animation_blend_time = 0.3	animation_speed = 0.8 chance = 1 looping = no next_state = "idle" }
+	state = { name = "training"			animation = "training" 			animation_blend_time = 0.3	animation_speed = 1.0 }
+
+	attach = { 	name = "rifle1"	jeb = "GER_infantry_weapon_rifle_right_entity" }	
+	attach = { 	name = "helm1"	head = "herzland_griffonian_infantry_helmet_entity" }	
+	
+	scale = 0.8
+}
+
+entity = {
+	clone = "herzland_griffonian_infantry_entity"
+	name = "herzland_griffonian_infantry_2_entity"
+}
+
+entity = {
+	clone = "herzland_griffonian_infantry_entity"
+	name = "herzland_griffonian_infantry_3_entity"
+}
+
+entity = {
+	clone = "herzland_griffonian_infantry_entity"
+	name = "herzland_griffonian_vehicle_infantry_rifle_entity"
+}
+
+entity = {
+	clone = "GER_motorized_entity"
+	name = "herzland_griffonian_motorized_entity"
+	attach = { 	name = "infantry"			infantry = "herzland_griffonian_infantry_entity" }
+}
+
+entity = {
+	name = "herzland_griffonian_artillery_entity"
+	clone = "GER_artillery_entity"
+
+	attach = { name = infantry			infantry = "herzland_griffonian_infantry_entity" }
+}
+
+entity = {
+	name = "herzland_griffonian_anti_tank_entity"
+	clone = "herzland_griffonian_artillery_entity"
+
+}
+
+entity = {
+	clone = "GER_mechanized_entity"
+	name = "herzland_griffonian_mechanized_entity"
+}
+
+############################
+
+entity = {
+	clone = "herzland_griffonian_infantry_entity"
+	name = "TRD_infantry_entity"
+}
+
+entity = {
+	clone = "herzland_griffonian_infantry_entity"
+	name = "TRD_infantry_2_entity"
+}
+
+entity = {
+	clone = "herzland_griffonian_infantry_entity"
+	name = "TRD_infantry_3_entity"
+}
+
+entity = {
+	clone = "herzland_griffonian_infantry_entity"
+	name = "TRD_vehicle_infantry_rifle_entity"
+}
+
+entity = {
+	clone = "herzland_griffonian_mechanized_entity"
+	name = "TRD_mechanized_entity"
+}
+
+entity = {
+	clone = "herzland_griffonian_motorized_entity"
+	name = "TRD_motorized_entity"
+	attach = { 	name = "infantry"			infantry = "herzland_griffonian_infantry_entity" }
+}
+
+entity = {
+	clone = "herzland_griffonian_infantry_entity"
+	name = "EYR_infantry_entity"
+}
+
+entity = {
+	clone = "herzland_griffonian_infantry_entity"
+	name = "EYR_infantry_2_entity"
+}
+
+entity = {
+	clone = "herzland_griffonian_infantry_entity"
+	name = "EYR_infantry_3_entity"
+}
+
+entity = {
+	clone = "herzland_griffonian_infantry_entity"
+	name = "EYR_vehicle_infantry_rifle_entity"
+}
+
+entity = {
+	clone = "herzland_griffonian_mechanized_entity"
+	name = "EYR_mechanized_entity"
+}
+
+entity = {
+	clone = "herzland_griffonian_motorized_entity"
+	name = "EYR_motorized_entity"
+	attach = { 	name = "infantry"			infantry = "herzland_griffonian_infantry_entity" }
+}
+
+entity = {
+	clone = "herzland_griffonian_infantry_entity"
+	name = "BAN_infantry_entity"
+}
+
+entity = {
+	clone = "herzland_griffonian_infantry_entity"
+	name = "BAN_infantry_2_entity"
+}
+
+entity = {
+	clone = "herzland_griffonian_infantry_entity"
+	name = "BAN_infantry_3_entity"
+}
+
+entity = {
+	clone = "herzland_griffonian_infantry_entity"
+	name = "BAN_vehicle_infantry_rifle_entity"
+}
+
+entity = {
+	clone = "herzland_griffonian_mechanized_entity"
+	name = "BAN_mechanized_entity"
+}
+
+entity = {
+	clone = "herzland_griffonian_motorized_entity"
+	name = "BAN_motorized_entity"
+	attach = { 	name = "infantry"			infantry = "herzland_griffonian_infantry_entity" }
+}
+
+entity = {
+	clone = "herzland_griffonian_infantry_entity"
+	name = "BOI_infantry_entity"
+}
+
+entity = {
+	clone = "herzland_griffonian_infantry_entity"
+	name = "BOI_infantry_2_entity"
+}
+
+entity = {
+	clone = "herzland_griffonian_infantry_entity"
+	name = "BOI_infantry_3_entity"
+}
+
+entity = {
+	clone = "herzland_griffonian_infantry_entity"
+	name = "BOI_vehicle_infantry_rifle_entity"
+}
+
+entity = {
+	clone = "herzland_griffonian_mechanized_entity"
+	name = "BOI_mechanized_entity"
+}
+
+entity = {
+	clone = "herzland_griffonian_motorized_entity"
+	name = "BOI_motorized_entity"
+	attach = { 	name = "infantry"			infantry = "herzland_griffonian_infantry_entity" }
+}
+
+entity = {
+	clone = "herzland_griffonian_infantry_entity"
+	name = "LAK_infantry_entity"
+}
+
+entity = {
+	clone = "herzland_griffonian_infantry_entity"
+	name = "LAK_infantry_2_entity"
+}
+
+entity = {
+	clone = "herzland_griffonian_infantry_entity"
+	name = "LAK_infantry_3_entity"
+}
+
+entity = {
+	clone = "herzland_griffonian_infantry_entity"
+	name = "LAK_vehicle_infantry_rifle_entity"
+}
+
+entity = {
+	clone = "herzland_griffonian_mechanized_entity"
+	name = "LAK_mechanized_entity"
+}
+
+entity = {
+	clone = "herzland_griffonian_motorized_entity"
+	name = "LAK_motorized_entity"
+	attach = { 	name = "infantry"			infantry = "herzland_griffonian_infantry_entity" }
+}
+
+entity = {
+	clone = "herzland_griffonian_infantry_entity"
+	name = "GRF_infantry_entity"
+}
+
+entity = {
+	clone = "herzland_griffonian_infantry_entity"
+	name = "GRF_infantry_2_entity"
+}
+
+entity = {
+	clone = "herzland_griffonian_infantry_entity"
+	name = "GRF_infantry_3_entity"
+}
+
+entity = {
+	clone = "herzland_griffonian_infantry_entity"
+	name = "GRF_vehicle_infantry_rifle_entity"
+}
+
+entity = {
+	clone = "herzland_griffonian_mechanized_entity"
+	name = "GRF_mechanized_entity"
+}
+
+entity = {
+	clone = "herzland_griffonian_motorized_entity"
+	name = "GRF_motorized_entity"
+	attach = { 	name = "infantry"			infantry = "herzland_griffonian_infantry_entity" }
+}
+
+entity = {
+	clone = "herzland_griffonian_infantry_entity"
+	name = "GFF_infantry_entity"
+}
+
+entity = {
+	clone = "herzland_griffonian_infantry_entity"
+	name = "GFF_infantry_2_entity"
+}
+
+entity = {
+	clone = "herzland_griffonian_infantry_entity"
+	name = "GFF_infantry_3_entity"
+}
+
+entity = {
+	clone = "herzland_griffonian_infantry_entity"
+	name = "GFF_vehicle_infantry_rifle_entity"
+}
+
+entity = {
+	clone = "herzland_griffonian_mechanized_entity"
+	name = "GFF_mechanized_entity"
+}
+
+entity = {
+	clone = "herzland_griffonian_motorized_entity"
+	name = "GFF_motorized_entity"
+	attach = { 	name = "infantry"			infantry = "herzland_griffonian_infantry_entity" }
+}
