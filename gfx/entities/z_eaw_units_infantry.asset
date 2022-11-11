@@ -2,6 +2,81 @@
 ####  GENERIC ENTITIES
 
 entity = {
+	name = "thestral_infantry_entity"
+	pdxmesh = "thestral_infantry_rifle_mesh"
+	
+	default_state = "idle"
+	state = { name = "attack"			animation = "attack" 		animation_blend_time = 0.0 animation_speed = 1.0 looping = no next_state = "attack" }
+	state = { name = "defend"			animation = "attack" 		animation_blend_time = 0.3 animation_speed = 1.0 }
+	state = { name = "support_attack"	animation = "attack" 		animation_blend_time = 0.3 animation_speed = 1.0 }
+	state = { name = "move"				animation = "move" 			animation_blend_time = 0.0 animation_speed = 1.0 chance = 1	event = { trigger_once = yes sound = { soundeffect = "horse_walking" } } }
+	state = { name = "retreat"			animation = "limp"			animation_blend_time = 0.0 animation_speed = 1.0 looping = no next_state = "retreat" }
+	state = { name = "death"			animation = "retreat" 		animation_blend_time = 0.3 animation_speed = 1.0 }
+	state = { name = "idle"				animation = "idle"       	animation_blend_time = 0.3 animation_speed = 1.0 chance = 15 	looping = no next_state = "idle" }
+	state = { name = "idle"				animation = "idle01"		animation_blend_time = 0.3 animation_speed = 1.0 chance = 6 	looping = no next_state = "idle" }
+	state = { name = "idle"				animation = "idle02"		animation_blend_time = 0.3 animation_speed = 1.0 chance = 6 	looping = no next_state = "idle" }
+	state = { name = "idle"				animation = "idle"			animation_blend_time = 0.3 animation_speed = 1.5 chance = 5 	looping = no next_state = "idle" }
+	state = { name = "idle"				animation = "idle"			animation_blend_time = 0.3 animation_speed = 0.7 chance = 4 	looping = no next_state = "idle" }
+	state = { name = "training"			animation = "training" 		animation_blend_time = 0.0 animation_speed = 1.0 looping = no next_state = "training" }
+	
+	scale = 0.8	
+}
+
+entity = {
+	clone = "thestral_infantry_entity"
+	name = "BAT_infantry_entity"
+}
+
+entity = {
+	clone = "thestral_infantry_entity"
+	name = "BAT_infantry_2_entity"
+}
+
+entity = {
+	clone = "thestral_infantry_entity"
+	name = "BAT_infantry_3_entity"
+}
+
+entity = {
+	clone = "thestral_infantry_entity"
+	name = "BAT_vehicle_infantry_mg_entity"
+}
+
+entity = {
+	clone = "thestral_infantry_entity"
+	name = "BAT_vehicle_infantry_rifle_entity"
+}
+
+entity = {
+	name = "BAT_artillery_entity"
+	clone = "GER_artillery_entity"
+
+	attach = { name = infantry			infantry = "thestral_infantry_entity" }
+}
+
+entity = {
+	clone = "JAP_mechanized_entity"
+	name = "BAT_mechanized_entity"
+	attach = {     name = "infantry"            infantry = "thestral_infantry_entity" }
+}
+
+entity = {
+    clone = "motorized_entity"
+    name = "BAT_motorized_entity"
+    attach = {     name = "infantry"            infantry = "thestral_infantry_entity" }
+}
+
+entity = {
+	name = "BAT_anti_tank_entity"
+	clone = "BAT_artillery_entity"
+}
+
+entity = {
+	clone = "thestral_infantry_entity"
+	name = "BAT_pegasi_entity"
+}
+
+entity = {
 	name = "zebrica_infantry_entity"
 	pdxmesh = "zebrica_infantry_rifle_mesh"
 	
@@ -404,6 +479,77 @@ entity = {
 }
 
 entity = {
+	name = "EQC_infantry_entity"
+	pdxmesh = "EQC_infantry_rifle_mesh"	
+	
+	default_state = "idle"
+	state = { name = "attack"			animation = "attack" 		animation_blend_time = 0.0 animation_speed = 1.0 looping = no next_state = "attack" }
+	state = { name = "defend"			animation = "attack" 		animation_blend_time = 0.3 animation_speed = 1.0 }
+	state = { name = "support_attack"	animation = "attack" 		animation_blend_time = 0.3 animation_speed = 1.0 }
+	state = { name = "move"				animation = "move" 			animation_blend_time = 0.0 animation_speed = 1.0 chance = 1	event = { trigger_once = yes sound = { soundeffect = "horse_walking" } } }
+	state = { name = "retreat"			animation = "limp"			animation_blend_time = 0.0 animation_speed = 1.0 looping = no next_state = "retreat" }
+	state = { name = "death"			animation = "retreat" 		animation_blend_time = 0.3 animation_speed = 1.0 }
+	state = { name = "idle"				animation = "idle"       	animation_blend_time = 0.3 animation_speed = 1.0 chance = 15 	looping = no next_state = "idle" }
+	state = { name = "idle"				animation = "idle01"		animation_blend_time = 0.3 animation_speed = 1.0 chance = 6 	looping = no next_state = "idle" }
+	state = { name = "idle"				animation = "idle02"		animation_blend_time = 0.3 animation_speed = 1.0 chance = 6 	looping = no next_state = "idle" }
+	state = { name = "idle"				animation = "idle"			animation_blend_time = 0.3 animation_speed = 1.5 chance = 5 	looping = no next_state = "idle" }
+	state = { name = "idle"				animation = "idle"			animation_blend_time = 0.3 animation_speed = 0.7 chance = 4 	looping = no next_state = "idle" }
+	state = { name = "training"			animation = "training" 		animation_blend_time = 0.0 animation_speed = 1.0 looping = no next_state = "training" }
+	
+	scale = 0.8
+}
+
+#EQC
+entity = {
+	clone = "EQC_infantry_entity"
+	name = "EQC_infantry_entity"
+}
+
+entity = {
+	clone = "EQC_infantry_entity"
+	name = "EQC_infantry_2_entity"
+}
+
+entity = {
+	clone = "EQC_infantry_2_entity"
+	name = "EQC_infantry_3_entity"
+}
+
+entity = {
+	clone = "EQC_infantry_entity"
+	name = "EQC_vehicle_infantry_rifle_entity"
+}
+
+entity = {
+	clone = "EQC_infantry_entity"
+	name = "EQC_vehicle_infantry_mg_entity"
+}
+
+entity = {
+	name = "EQC_artillery_entity"
+	clone = "GER_artillery_entity"
+
+	attach = { name = infantry			infantry = "EQC_infantry_entity" }
+}
+
+entity = {
+	clone = "mechanized_entity"
+	name = "EMR_mechanized_entity"
+	attach = {     name = "infantry"            infantry = "EQC_infantry_entity" }
+}
+
+entity = {
+    clone = "motorized_entity"
+    name = "EMR_motorized_entity"
+    attach = {     name = "infantry"            infantry = "EQC_infantry_entity" }
+}
+
+entity = {
+	name = "EQC_anti_tank_entity"
+	clone = "EQC_artillery_entity"
+}
+
+entity = {
 	name = "EQS_infantry_entity"
 	pdxmesh = "EQS_infantry_rifle_mesh"	
 	
@@ -505,32 +651,6 @@ entity = {
 	name = "commonwealth_gfx_vehicle_infantry_mg_entity"
 }
 
-#EQC
-entity = {
-	clone = "EQS_infantry_entity"
-	name = "EQC_infantry_entity"
-}
-
-entity = {
-	clone = "EQS_infantry_entity"
-	name = "EQC_infantry_2_entity"
-}
-
-entity = {
-	clone = "EQS_infantry_2_entity"
-	name = "EQC_infantry_3_entity"
-}
-
-entity = {
-	clone = "EQC_infantry_entity"
-	name = "EQC_vehicle_infantry_rifle_entity"
-}
-
-entity = {
-	clone = "EQC_infantry_entity"
-	name = "EQC_vehicle_infantry_mg_entity"
-}
-
 #STG
 entity = {
 	clone = "generic_infantry_entity"
@@ -548,12 +668,12 @@ entity = {
 }
 
 entity = {
-	clone = "EQC_infantry_entity"
+	clone = "generic_infantry_entity"
 	name = "SOV_vehicle_infantry_rifle_entity"
 }
 
 entity = {
-	clone = "EQC_infantry_entity"
+	clone = "generic_infantry_entity"
 	name = "SOV_vehicle_infantry_mg_entity"
 }
 
@@ -573,12 +693,12 @@ entity = {
 }
 
 entity = {
-	clone = "EQC_infantry_entity"
+	clone = "generic_infantry_entity"
 	name = "STG_vehicle_infantry_rifle_entity"
 }
 
 entity = {
-	clone = "EQC_infantry_entity"
+	clone = "generic_infantry_entity"
 	name = "STG_vehicle_infantry_mg_entity"
 }
 
