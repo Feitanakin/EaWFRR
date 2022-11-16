@@ -791,10 +791,10 @@
 		name=SIC_advisor_8
 		portraits={
 			civilian={
-				small="GFX_idea_Birb_Orwell"
+				small="GFX_idea_SIC_Birb_Orwell"
 			}
 			army = {
-				small="GFX_idea_Birb_Orwell"
+				small="GFX_idea_SIC_Birb_Orwell"
 			}
 			army={
 				large="gfx/leaders/SIC/Birb_Orwell.tga"
@@ -877,7 +877,7 @@
 				original_tag = SIC
 			}
 			traits = {
-				air_naval_strike_3
+				alt_air_naval_strike_3
 			}
 		}
 	}
