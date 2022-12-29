@@ -122,7 +122,94 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/BAL_a_great_purge.dds"
 	}
 
+SpriteType = {
+		name = "GFX_BAL_liberate_vanhoover"
+		texturefile = "gfx/interface/goals/BAL_liberate_vanhoover.dds"
+	}
 
-
+SpriteType = {
+		name = "GFX_BAL_integrate_vanhoover"
+		texturefile = "gfx/interface/goals/BAL_integrate_vanhoover.dds"
+	}
+	
+SpriteType = {
+		name = "GFX_BAL_liberate_canterlot"
+		texturefile = "gfx/interface/goals/BAL_liberate_canterlot.dds"
+	}
+	
+SpriteType = {
+		name = "GFX_BAL_liberate_the_southwest"
+		texturefile = "gfx/interface/goals/BAL_liberate_the_southwest.dds"
+	}
+	
+SpriteType = {
+		name = "GFX_BAL_fate_of_las_pegasus"
+		texturefile = "gfx/interface/goals/BAL_fate_of_las_pegasus.dds"
+	}
+	
+SpriteType = {
+		name = "GFX_BAL_left_flavor"
+		texturefile = "gfx/interface/goals/BAL_left_flavor.dds"
+	}
+	
+SpriteType = {
+		name = "GFX_BAL_right_flavor"
+		texturefile = "gfx/interface/goals/BAL_right_flavor.dds"
+	}
+	
+SpriteType = {
+		name = "GFX_BAL_reunification_of_equestria"
+		texturefile = "gfx/interface/goals/BAL_reunification_of_equestria.dds"
+	}
+	
+SpriteType = {
+		name = "GFX_BAL_changelings_wargoal"
+		texturefile = "gfx/interface/goals/BAL_changelings_wargoal.dds"
+	}
+	
+SpriteType = {
+		name = "GFX_BAL_changelings_flavor"
+		texturefile = "gfx/interface/goals/BAL_changelings_flavor.dds"
+	}
+	
+SpriteType = {
+		name = "GFX_BAL_stalliongrad_wargoal"
+		texturefile = "gfx/interface/goals/BAL_stalliongrad_wargoal.dds"
+	}
+	
+SpriteType = {
+		name = "GFX_BAL_stalliongrad_flavor"
+		texturefile = "gfx/interface/goals/BAL_stalliongrad_flavor.dds"
+	}
+	
+SpriteType = {
+		name = "GFX_BAL_crystal_empire_wargoal"
+		texturefile = "gfx/interface/goals/BAL_crystal_empire_wargoal.dds"
+	}
+	
+SpriteType = {
+		name = "GFX_BAL_crystal_empire_flavor"
+		texturefile = "gfx/interface/goals/BAL_crystal_empire_flavor.dds"
+	}
+	
+SpriteType = {
+		name = "GFX_BAL_olenia_polar_bears_penguins_wargoal"
+		texturefile = "gfx/interface/goals/BAL_olenia_polar_bears_penguins_wargoal.dds"
+	}
+	
+SpriteType = {
+		name = "GFX_BAL_yaks_wargoal"
+		texturefile = "gfx/interface/goals/BAL_yaks_wargoal.dds"
+	}
+	
+SpriteType = {
+		name = "GFX_BAL_nova_griffonia_frontier_wargoal"
+		texturefile = "gfx/interface/goals/BAL_nova_griffonia_frontier_wargoal.dds"
+	}
+	
+SpriteType = {
+		name = "GFX_BAL_everything_is_conquered"
+		texturefile = "gfx/interface/goals/BAL_everything_is_conquered.dds"
+	}
 
 }

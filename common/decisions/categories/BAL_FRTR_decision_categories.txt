@@ -1,0 +1,26 @@
+BAL_integrate_bat_generals = {
+	icon = border_war
+    priority = {
+        base = 100
+    }
+    allowed = {
+        original_tag = SIC
+    }
+    visible = {
+        has_completed_focus = BAL_never_again
+    }
+}
+
+BAL_sojuzniki = {
+	icon = border_war
+    priority = {
+        base = 100
+    }
+    allowed = {
+        original_tag = SIC
+    }
+    visible = {
+        has_completed_focus = BAL_rescue_celestial_officers
+		has_completed_focus = EQC_government_in_exile
+    }
+}

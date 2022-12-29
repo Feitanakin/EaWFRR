@@ -399,3 +399,52 @@ entity = {
 	name = "BRS_anti_tank_entity"
 	clone = "BRS_artillery_entity"
 }
+
+entity = {
+	clone = "zebrica_deer_infantry_entity"
+	name = "SPL_infantry_entity"
+}
+
+entity = {
+	clone = "zebrica_deer_infantry_entity"
+	name = "SPL_infantry_2_entity"
+}
+
+entity = {
+	clone = "zebrica_deer_infantry_entity"
+	name = "SPL_infantry_3_entity"
+}
+
+entity = {
+	clone = "zebrica_deer_infantry_entity"
+	name = "SPL_vehicle_infantry_mg_entity"
+}
+
+entity = {
+	clone = "zebrica_deer_infantry_entity"
+	name = "SPL_vehicle_infantry_rifle_entity"
+}
+
+entity = {
+	name = "SPL_artillery_entity"
+	clone = "GER_artillery_entity"
+
+	attach = { name = infantry			infantry = "zebrica_deer_infantry_entity" }
+}
+
+entity = {
+	clone = "JAP_mechanized_entity"
+	name = "SPL_mechanized_entity"
+	attach = {     name = "infantry"            infantry = "zebrica_deer_infantry_entity" }
+}
+
+entity = {
+    clone = "motorized_entity"
+    name = "SPL_motorized_entity"
+    attach = {     name = "infantry"            infantry = "zebrica_deer_infantry_entity" }
+}
+
+entity = {
+	name = "SPL_anti_tank_entity"
+	clone = "SPL_artillery_entity"
+}

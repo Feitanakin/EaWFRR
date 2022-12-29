@@ -1,5 +1,12 @@
 ﻿l_english:
 
+### subideologies ###
+
+harmonic_socialism:0 "Harmonic Socialism"
+harmonic_socialism_desc:0 "Harmonic Socialism"
+starlightism:0 "Starlightism"
+starlightism_desc:0 "Starlightism"
+
 ### Leaders ###
 
 BAL_starlight_glimmer:0 "Starlight Glimmer"
@@ -70,3 +77,40 @@ BAL_there_is_no_equestria_without_princess_twilight:0 "There's No Equestria With
 BAL_there_is_no_equestria_without_princess_twilight_desc:0 ""
 BAL_a_war_of_liberation:0 "A War of Liberation"
 BAL_a_war_of_liberation_desc:0 ""
+BAL_liberate_vanhoover:0 "Unite With Vanhoover"
+BAL_liberate_vanhoover_desc:0 ""
+BAL_integrate_vanhoover:0 "Integrate Vanhoover’s Chain of Command"
+BAL_integrate_vanhoover_desc:0 ""
+BAL_liberate_canterlot:0 "Liberate Canterlot"
+BAL_liberate_canterlot_desc:0 ""
+BAL_left_flavor:0 "Canterlot’s Elite"
+BAL_left_flavor_desc:0 ""
+BAL_right_flavor:0 "Canterlot’s Destiny"
+BAL_right_flavor_desc:0 ""
+BAL_liberate_the_southwest:0 "Tame The South"
+BAL_liberate_the_southwest_desc:0 ""
+BAL_fate_of_las_pegasus:0 "Destroy The Oligarchs"
+BAL_fate_of_las_pegasus_desc:0 ""
+BAL_reunification_of_equestria:0 ""
+BAL_reunification_of_equestria_desc:0 ""
+BAL_changelings_wargoal:0 "Operation 'Chimera'"
+BAL_changelings_wargoal_desc:0 ""
+BAL_changelings_flavor:0 "The Great Question"
+BAL_changelings_flavor_desc:0 ""
+BAL_olenia_polar_bears_penguins_wargoal:0 "Mountains and Igloos"
+BAL_olenia_polar_bears_penguins_wargoal_desc:0 ""
+BAL_crystal_empire_wargoal:0 "Operation 'Meltdown'"
+BAL_crystal_empire_wargoal_desc:0 ""
+BAL_crystal_empire_flavor:0 "End Equestrian Divisionism"
+BAL_crystal_empire_flavor_desc:0 ""
+BAL_yaks_wargoal:0 "Tame The Frontier"
+BAL_yaks_wargoal_desc:0 ""
+BAL_stalliongrad_wargoal:0 "Operation 'Kremlin'"
+BAL_stalliongrad_wargoal_desc:0 ""
+BAL_stalliongrad_flavor:0 "A Powderkeg Tamed"
+BAL_stalliongrad_flavor_desc:0 ""
+BAL_nova_griffonia_frontier_wargoal:0 "Tame The Other Frontier"
+BAL_nova_griffonia_frontier_wargoal_desc:0 ""
+BAL_everything_is_conquered:0 " Equestria Into The Future"
+BAL_everything_is_conquered_desc:0 ""
+

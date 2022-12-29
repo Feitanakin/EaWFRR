@@ -9,16 +9,25 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = baltimare_frtr.1.a
-		recruit_character = BAL_starlin_glimmer
+		add_field_marshal_role  = {
+			character = BAL_starlin_glimmer
+			traits={ pony_race_trait infantry_leader trickster }
+			skill=4
+			attack_skill=4
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=2
+			legacy_id=5559
+		}
 		hidden_effect = {
 			country_event = { days = 1 id = baltimare_frtr.2 }
 		}
 	}
 }
 
-country_event = { 
+country_event = {
 	id = baltimare_frtr.2
-	immediate = {log = "[GetDateText]: [Root.GetName]: event baltimare_frtr.1"}
+	immediate = {log = "[GetDateText]: [Root.GetName]: event baltimare_frtr.2"}
 	title = baltimare_frtr.2.t
 	desc = baltimare_frtr.2.d
 	picture = GFX_event_eqs_communists
@@ -33,14 +42,22 @@ country_event = {
 
 country_event = { 
 	id = baltimare_frtr.3
-	immediate = {log = "[GetDateText]: [Root.GetName]: event baltimare_frtr.1"}
+	immediate = {log = "[GetDateText]: [Root.GetName]: event baltimare_frtr.3"}
 	title = baltimare_frtr.3.t
 	desc = baltimare_frtr.3.d
 	picture = GFX_event_eqs_communists
 	is_triggered_only = yes
 	option = {
 		name = baltimare_frtr.3.a
-		promote_character = BAL_starlin_glimmer
+		add_country_leader_role = {
+			character = BAL_starlin_glimmer
+			promote_leader = yes
+			country_leader = {
+				ideology = starlightism
+				expire = "1965.1.1.1"
+				traits = {  }
+			}
+		}
 		hidden_effect = {
 			country_event = { days = 1 id = baltimare_frtr.4 }
 		}
@@ -51,9 +68,9 @@ country_event = {
 	}
 }
 
-country_event = { 
+country_event = {
 	id = baltimare_frtr.4
-	immediate = {log = "[GetDateText]: [Root.GetName]: event baltimare_frtr.1"}
+	immediate = {log = "[GetDateText]: [Root.GetName]: event baltimare_frtr.4"}
 	title = baltimare_frtr.4.t
 	desc = baltimare_frtr.4.d
 	picture = GFX_event_pony_march
@@ -63,6 +80,57 @@ country_event = {
 		load_focus_tree = { 
 			tree = baltimare_focus_3
 		}
+		set_cosmetic_tag = BAL_starlin
 	}
 }
 
+country_event = {
+	id = baltimare_frtr.5
+	immediate = {log = "[GetDateText]: [Root.GetName]: event baltimare_frtr.5"}
+	title = baltimare_frtr.5.t
+	desc = baltimare_frtr.5.d
+	picture = GFX_event_pony_march
+	is_triggered_only = yes
+	option = {
+		name = baltimare_frtr.5.a
+		add_country_leader_role = {
+			character = BAL_starlin_glimmer
+			promote_leader = yes
+			country_leader = {
+				ideology = harmonic_socialism
+				expire = "1965.1.1.1"
+				traits = {  }
+			}
+		}
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = no
+		}
+	}
+}
+
+country_event = {
+	id = baltimare_frtr.6
+	immediate = {log = "[GetDateText]: [Root.GetName]: event baltimare_frtr.6"}
+	title = baltimare_frtr.6.t
+	desc = baltimare_frtr.6.d
+	picture = GFX_event_pony_march
+	is_triggered_only = yes
+	option = {
+		name = baltimare_frtr.6.a
+		
+	}
+}
+
+country_event = {
+	id = baltimare_frtr.7
+	immediate = {log = "[GetDateText]: [Root.GetName]: event baltimare_frtr.7"}
+	title = baltimare_frtr.7.t
+	desc = baltimare_frtr.7.d
+	picture = GFX_event_pony_march
+	is_triggered_only = yes
+	option = {
+		name = baltimare_frtr.7.a
+		
+	}
+}

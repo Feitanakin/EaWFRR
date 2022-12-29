@@ -272,4 +272,12 @@ spriteTypes = {
 		name = "GFX_ideology_social_banditry"
 		texturefile = "gfx/interface/ideologies/social_banditry.dds"
 	}
+	spriteType = {
+		name = "GFX_ideology_harmonic_socialism"
+		texturefile = "gfx/interface/ideologies/harmonic_socialism.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_starlightism"
+		texturefile = "gfx/interface/ideologies/starlightism.dds"
+	}
 }
