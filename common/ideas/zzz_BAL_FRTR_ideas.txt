@@ -1,0 +1,356 @@
+ideas = {
+	country = {
+          BAL_frtr_Start_From_Nothing = {
+
+               picture = 
+
+                allowed = {
+                    JER = { exists = yes }
+				 	FDR = { exists = yes }
+			    }
+
+               allowed_civil_war = { 
+                    always = yes
+                }
+
+               removal_cost = -1
+
+               modifier = { 
+				production_factory_max_efficiency_factor = 0.05
+				industrial_capacity_factory = 0.03
+				industrial_capacity_dockyard = 0.03
+				consumer_goods_factor = -0.02
+               } 
+          }
+	}
+	
+    country = {
+		BAL_frtr_Shady_Disappearances = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+
+			}
+			picture = FDR_secret_police
+			removal_cost = -1
+			modifier = {
+				operative_slot = 1
+				intelligence_agency_defense = 1.5
+				intel_from_operatives_factor = 0.2
+				resistance_damage_to_garrison = -0.1
+			}
+		}
+	}
+	
+    country = {
+		BAL_frtr_Equestrian_Front_of_Liberation_0 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+
+			}
+			picture = FDR_secret_police
+			removal_cost = -1
+			targeted_modifier = { 
+                tag = EQS
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.05
+			}
+			targeted_modifier = { 
+                tag = LNR
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.05
+			}
+			targeted_modifier = { 
+                tag = SCS
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.05
+			}
+			targeted_modifier = { 
+                tag = LSP
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.05
+			}
+			targeted_modifier = { 
+                tag = VAN
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.05
+			}
+		}
+	}
+
+    country = {
+		BAL_frtr_Equestrian_Front_of_Liberation_1 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+
+			}
+			picture = FDR_secret_police
+			removal_cost = -1
+			targeted_modifier = { 
+                tag = EQS
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+			}
+			targeted_modifier = { 
+                tag = LNR
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+			}
+			targeted_modifier = { 
+                tag = SCS
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+			}
+			targeted_modifier = { 
+                tag = LSP
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+			}
+			targeted_modifier = { 
+                tag = VAN
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+			}
+		}
+	}
+	
+    country = {
+		BAL_frtr_Equestrian_Front_of_Liberation_2 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+
+			}
+			picture = FDR_secret_police
+			removal_cost = -1
+			targeted_modifier = { 
+                tag = EQS
+				attack_bonus_against = 0.15
+				defense_bonus_against = 0.15
+			}
+			targeted_modifier = { 
+                tag = LNR
+				attack_bonus_against = 0.15
+				defense_bonus_against = 0.15
+			}
+			targeted_modifier = { 
+                tag = SCS
+				attack_bonus_against = 0.15
+				defense_bonus_against = 0.15
+			}
+			targeted_modifier = { 
+                tag = LSP
+				attack_bonus_against = 0.15
+				defense_bonus_against = 0.15
+			}
+			targeted_modifier = { 
+                tag = VAN
+				attack_bonus_against = 0.15
+				defense_bonus_against = 0.15
+			}
+		}
+	}
+	
+    country = {
+		BAL_frtr_officers_purged = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+
+			}
+			picture = FDR_secret_police
+			removal_cost = -1
+			modifier = {
+				send_volunteer_factor = -0.44
+				army_org_factor = -0.2
+				training_time_army_factor = 0.2
+			}
+		}
+	}
+	
+    country = {
+		BAL_frtr_five_year_plan = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+
+			}
+			picture = FDR_secret_police
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_speed_buildings_factor = 0.2
+				industry_repair_factor = 0.15
+			}
+		}
+	}
+	
+    country = {
+		BAL_frtr_army_buff = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+
+			}
+			picture = FDR_secret_police
+			removal_cost = -1
+			modifier = {
+				conscription_factor = 0.10
+				mobilization_speed = 0.2
+				army_org_factor = 0.1
+			}
+		}
+	}
+
+    country = {
+		BAL_frtr_four_tribes_under_one_sky_0 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+
+			}
+			picture = FDR_secret_police
+			removal_cost = -1
+			modifier = {
+				party_popularity_stability_factor = 0.25
+			}
+		}
+	}
+
+    country = {
+		BAL_frtr_four_tribes_under_one_sky_1 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+
+			}
+			picture = FDR_secret_police
+			removal_cost = -1
+			modifier = {
+				party_popularity_stability_factor = 0.5
+			}
+		}
+	}
+
+    country = {
+		BAL_frtr_worker_councils_0 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+
+			}
+			picture = FDR_secret_police
+			removal_cost = -1
+			modifier = {
+				production_speed_buildings_factor = 0.15
+				stability_factor = 0.05
+				democracy_drift = 0.02
+			}
+		}
+	}
+	
+    country = {
+		BAL_frtr_worker_councils_1 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+
+			}
+			picture = FDR_secret_police
+			removal_cost = -1
+			modifier = {
+				production_speed_buildings_factor = 0.25
+				stability_factor = 0.1
+				democracy_drift = 0.04
+			}
+		}
+	}
+
+    country = {
+		BAL_frtr_harmonic_socialism = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+
+			}
+			picture = FDR_secret_police
+			removal_cost = -1
+			modifier = {
+				communism_acceptance = 100
+			}
+		}
+	}
+
+    country = {
+		BAL_frtr_luna_atk = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+
+			}
+			picture = FDR_secret_police
+			removal_cost = -1
+			targeted_modifier = { 
+                tag = LNR
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+			}
+		}
+	}
+
+}
+

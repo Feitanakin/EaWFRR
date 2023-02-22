@@ -24,6 +24,14 @@ SIC_tomado_the_king:0 "Grand Duchy of Sicameon"
 SIC_tomado_the_king_ADJ:0 "Sicameonese"
 SIC_tomado_the_king_DEF:0 "The Grand Duchy of Sicameon"
 
+BAL_starlin_communism:0 "Southern Equestrian Socialist Republic"
+BAL_starlin_communism_ADJ:0 "Southern Equestrian"
+BAL_starlin_communism_DEF:0 "The Democratic Republic of Southern Equestria"
+
+BAL_starlin_democracy:0 "Democratic Republic of Southern Equestria"
+BAL_starlin_democracy_ADJ:0 "Southern Equestrian"
+BAL_starlin_democracy_DEF:0 "The Democratic Republic of Southern Equestria"
+
 LAK_ssr_communism:0 "Rumarean SSR"
 BOI_ssr_communism:0 "Griffonstonian SSR"
 FAL_ssr_communism:0 "Falcorian SSR"

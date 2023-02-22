@@ -11,6 +11,23 @@ starlightism_desc:0 "Starlightism"
 
 BAL_starlight_glimmer:0 "Starlight Glimmer"
 
+### Ideas ###
+
+BAL_frtr_Start_From_Nothing:0 "Start From Nothing"
+BAL_frtr_Shady_Disappearances:0 "Shady Disappearances"
+BAL_frtr_Equestrian_Front_of_Liberation_0:0 "Equestrian Front of Liberation"
+BAL_frtr_Equestrian_Front_of_Liberation_1:0 "Equestrian Front of Liberation"
+BAL_frtr_Equestrian_Front_of_Liberation_2:0 "Equestrian Front of Liberation"
+BAL_frtr_officers_purged:0 "Officers purged"
+BAL_frtr_five_year_plan:0 "Five year plan"
+BAL_frtr_army_buff:0 "Centralization and Discipline"
+BAL_frtr_four_tribes_under_one_sky_0:0 "Four tribes under one sky"
+BAL_frtr_four_tribes_under_one_sky_1:0 "Four tribes under one sky"
+BAL_frtr_worker_councils_0:0 "Workers' councils"
+BAL_frtr_worker_councils_1:0 "Workers' councils"
+BAL_frtr_harmonic_socialism:0 "Harmonic Socialism"
+BAL_frtr_luna_atk:0 "Not in fear of the Night"
+
 ### Events ###
 
 baltimare_frtr.1.t:0 "Exiled Leader of the Communist Party of Ponies arrives in Baltimare"
@@ -26,6 +43,18 @@ baltimare_frtr.3.b:0 "Starlight Glimmer overplayed her hand"
 baltimare_frtr.4.t:0 "Starlight Glimmer takes over the Republic of Baltimare!"
 baltimare_frtr.4.d:0 "Starlight Glimmer, a former leader of Our Town, has seized control of Baltimare and declared herself General Secretary, backed by a loyal cadre of military officials. Former government loyalists are still holding out in some areas of the South East but are not expected to last long barring immediate and direct outside intervention. This surprising turn of events has been met with mixed reactions. Some have celebrated her coup as a victory for the common worker as Glimmer’s history of Harmonism and promises of reform stand in stark contrast to the regime she replaced. Others however worry that she has changed and her promises of equality and harmony are nothing more than empty words wielded by Equus’s newest military strongpony. Some even denounce her as an Equalist extremist. As the world struggles to figure out how to react to her takeover, Starlight Glimmer has begun a period of rapid militarization aiming to build up the forces to fight off the armies of reactionaries that will inevitably come marching down South. The drums of war sound once more across the South East and few can say with any certainty what the future will hold for that troubled region."
 baltimare_frtr.4.a:0 "What is she up to this time?"
+baltimare_frtr.5.t:0 "A little reform"
+baltimare_frtr.5.d:0 "Ok?"
+baltimare_frtr.5.a:0 "Ok."
+baltimare_frtr.6.t:0 "Return of the princess"
+baltimare_frtr.6.d:0 "Ladies and gentlecolts, we got her."
+baltimare_frtr.6.a:0 "Yay!"
+baltimare_frtr.7.t:0 "Wow! Stirlight"
+baltimare_frtr.7.d:0 "Wow! Stirlight"
+baltimare_frtr.7.a:0 "Wow! Stirlight"
+baltimare_frtr.8.t:0 "Spy games"
+baltimare_frtr.8.d:0 "We don't need Stalliongrad. We don't need his spies here."
+baltimare_frtr.8.a:0 "Kill kill kill!"
 
 ### Focuses ###
 
@@ -91,7 +120,7 @@ BAL_liberate_the_southwest:0 "Tame The South"
 BAL_liberate_the_southwest_desc:0 ""
 BAL_fate_of_las_pegasus:0 "Destroy The Oligarchs"
 BAL_fate_of_las_pegasus_desc:0 ""
-BAL_reunification_of_equestria:0 ""
+BAL_reunification_of_equestria:0 "Reunification of Equestria"
 BAL_reunification_of_equestria_desc:0 ""
 BAL_changelings_wargoal:0 "Operation 'Chimera'"
 BAL_changelings_wargoal_desc:0 ""

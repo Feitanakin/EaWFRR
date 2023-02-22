@@ -20,7 +20,7 @@ country_event = {
 			legacy_id=5559
 		}
 		hidden_effect = {
-			country_event = { days = 1 id = baltimare_frtr.2 }
+			country_event = { days = 7 id = baltimare_frtr.2 }
 		}
 	}
 }
@@ -35,7 +35,7 @@ country_event = {
 	option = {
 		name = baltimare_frtr.2.a
 		hidden_effect = {
-			country_event = { days = 1 id = baltimare_frtr.3 }
+			
 		}
 	}
 }
@@ -65,6 +65,7 @@ country_event = {
 	option = {
 		name = baltimare_frtr.3.b
 		remove_unit_leader = 5559
+		set_country_flag = BAL_glimmer_lost
 	}
 }
 
@@ -132,5 +133,27 @@ country_event = {
 	option = {
 		name = baltimare_frtr.7.a
 		
+	}
+}
+
+country_event = {
+	id = baltimare_frtr.8
+	immediate = {log = "[GetDateText]: [Root.GetName]: event baltimare_frtr.8"}
+	title = baltimare_frtr.8.t
+	desc = baltimare_frtr.8.d
+	picture = GFX_event_pony_march
+	is_triggered_only = yes
+	option = {
+		name = baltimare_frtr.8.a
+		add_opinion_modifier = {
+			target = STG
+			modifier = large_decrease
+		}
+		STG = {
+			add_opinion_modifier = {
+				target = SIC
+				modifier = large_decrease
+			}
+		}
 	}
 }
