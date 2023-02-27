@@ -10,6 +10,7 @@ starlightism_desc:0 "Starlightism"
 ### Leaders ###
 
 BAL_starlight_glimmer:0 "Starlight Glimmer"
+BAL_twilight_sparkle:0 "Twilight Sparkle"
 
 ### Ideas ###
 
@@ -27,6 +28,7 @@ BAL_frtr_worker_councils_0:0 "Workers' councils"
 BAL_frtr_worker_councils_1:0 "Workers' councils"
 BAL_frtr_harmonic_socialism:0 "Harmonic Socialism"
 BAL_frtr_luna_atk:0 "Not in fear of the Night"
+BAL_frtr_lsp_wealth:0 "Wealth of Las Pegasus"
 
 ### Events ###
 
@@ -55,6 +57,38 @@ baltimare_frtr.7.a:0 "Wow! Stirlight"
 baltimare_frtr.8.t:0 "Spy games"
 baltimare_frtr.8.d:0 "We don't need Stalliongrad. We don't need his spies here."
 baltimare_frtr.8.a:0 "Kill kill kill!"
+baltimare_frtr.9.t:0 "Letter from Baltimare"
+baltimare_frtr.9.d:0 "Can we annex you?"
+baltimare_frtr.9.a:0 "Yes."
+baltimare_frtr.9.b:0 "No."
+baltimare_frtr.10.t:0 "Yes"
+baltimare_frtr.10.d:0 "They said yes."
+baltimare_frtr.10.a:0 "Cool."
+baltimare_frtr.11.t:0 "No"
+baltimare_frtr.11.d:0 "They said yes."
+baltimare_frtr.11.a:0 "Not cool."
+baltimare_frtr.12.t:0 "Bourgeois Wealth"
+baltimare_frtr.12.d:0 "What to do with their wealth?"
+baltimare_frtr.12.a:0 "Workers"
+baltimare_frtr.12.b:0 "Soldiers"
+baltimare_frtr.12.c:0 "Workers and soldiers"
+baltimare_frtr.13.t:0 "Everything is going good"
+baltimare_frtr.13.d:0 "Everything is going good"
+baltimare_frtr.13.a:0 "Everything is going good"
+baltimare_frtr.14.t:0 "Fate of the Changelings"
+baltimare_frtr.14.d:0 "What to do?"
+baltimare_frtr.14.a:0 "Puppet"
+baltimare_frtr.14.b:0 "Occupation"
+baltimare_frtr.15.t:0 "letter from old friend"
+baltimare_frtr.15.d:0 "Let me annex you pls?"
+baltimare_frtr.15.a:0 "Sure"
+baltimare_frtr.15.b:0 "Nope"
+baltimare_frtr.16.t:0 "Yes"
+baltimare_frtr.16.d:0 "They said yes"
+baltimare_frtr.16.a:0 "Great"
+baltimare_frtr.17.t:0 "No"
+baltimare_frtr.17.d:0 "They said no"
+baltimare_frtr.17.a:0 "Sad"
 
 ### Focuses ###
 

@@ -32,6 +32,14 @@ BAL_starlin_democracy:0 "Democratic Republic of Southern Equestria"
 BAL_starlin_democracy_ADJ:0 "Southern Equestrian"
 BAL_starlin_democracy_DEF:0 "The Democratic Republic of Southern Equestria"
 
+BAL_equestria_democracy:0 "Equestria"
+BAL_equestria_democracy_ADJ:0 "Equestrian"
+BAL_equestria_democracy_DEF:0 "Equestria"
+
+BAL_equestria_communism:0 "Equestrian Socialist Republic"
+BAL_equestria_communism_ADJ:0 "Equestrian"
+BAL_equestria_communism_DEF:0 "Equestrian Socialist Republic"
+
 LAK_ssr_communism:0 "Rumarean SSR"
 BOI_ssr_communism:0 "Griffonstonian SSR"
 FAL_ssr_communism:0 "Falcorian SSR"

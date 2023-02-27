@@ -154,6 +154,7 @@ recruit_character = BAL_lucky_star
 recruit_character = BAL_ponies_parliament
 recruit_character = BAL_commune_confed
 recruit_character = BAL_starlin_glimmer
+recruit_character = BAL_twilight_sparkle
 
 set_rule = {
 	can_generate_female_aces = yes

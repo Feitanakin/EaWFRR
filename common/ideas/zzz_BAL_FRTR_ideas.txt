@@ -351,6 +351,26 @@ ideas = {
 			}
 		}
 	}
+	
+    country = {
+		BAL_frtr_lsp_wealth = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+
+			}
+			picture = FDR_secret_police
+			removal_cost = -1
+			targeted_modifier = { 
+                consumer_goods_factor = -0.05
+			}
+		}
+	}
+
 
 }
 

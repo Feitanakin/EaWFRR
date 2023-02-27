@@ -5086,7 +5086,7 @@
 	shared_focus = {
 		id = BAL_general_secretary_stirlight_glimmer
 		icon = GFX_BAL_general_secretary_starlight_glimmer
-		cost = 10
+		cost = 8
 		x = 0
 		y = 0
 		bypass = {
@@ -5109,7 +5109,7 @@
 		icon = GFX_BAL_death_to_revisionism
 		prerequisite = { focus = BAL_general_secretary_stirlight_glimmer }
 		mutually_exclusive = { focus = BAL_death_to_tyranny }
-		cost = 10
+		cost = 8
 		x = -6
 		y = 1
 		relative_position_id = BAL_general_secretary_stirlight_glimmer
@@ -5124,7 +5124,7 @@
 		id = BAL_relocate_the_batponies
 		icon = GFX_BAL_relocate_the_batponies
 		prerequisite = { focus = BAL_death_to_revisionism }
-		cost = 10
+		cost = 8
 		x = -2
 		y = 1
 		relative_position_id = BAL_death_to_revisionism
@@ -5163,6 +5163,7 @@
 			 instant_build = yes
 			 }
   			}
+			remove_ideas = JUN_lunar_remnants
 		}
 	}
 
@@ -5170,7 +5171,7 @@
 		id = BAL_lessons_from_our_town
 		icon = GFX_BAL_lessons_from_our_town
 		prerequisite = { focus = BAL_relocate_the_batponies }
-		cost = 10
+		cost = 8
 		x = 0
 		y = 1
 		relative_position_id = BAL_relocate_the_batponies
@@ -5185,13 +5186,14 @@
 		id = BAL_jungle_camps
 		icon = GFX_BAL_jungle_camps
 		prerequisite = { focus = BAL_lessons_from_our_town }
-		cost = 10
+		cost = 8
 		x = 0
 		y = 1
 		relative_position_id = BAL_lessons_from_our_town
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BAL_jungle_camps"
+			remove_idea = NMS_native_resistance
 			add_ideas = BAL_frtr_Shady_Disappearances
 		}
 	}
@@ -5200,7 +5202,7 @@
 		id = BAL_denounce_stalliongrad
 		icon = GFX_BAL_denounce_stalliongrad
 		prerequisite = { focus = BAL_death_to_revisionism }
-		cost = 10
+		cost = 8
 		x = 0
 		y = 1
 		relative_position_id = BAL_death_to_revisionism
@@ -5219,7 +5221,7 @@
 		id = BAL_loyalty_to_equestria_only
 		icon = GFX_BAL_loyalty_to_equestria_onlyy
 		prerequisite = { focus = BAL_denounce_stalliongrad }
-		cost = 10
+		cost = 8
 		x = 0
 		y = 1
 		relative_position_id = BAL_denounce_stalliongrad
@@ -5234,7 +5236,7 @@
 		id = BAL_praise_starlight
 		icon = GFX_BAL_praise_starlight
 		prerequisite = { focus = BAL_loyalty_to_equestria_only }
-		cost = 10
+		cost = 8
 		x = 0
 		y = 1
 		relative_position_id = BAL_loyalty_to_equestria_only
@@ -5252,14 +5254,14 @@
 		id = BAL_destroy_anarchists
 		icon = GFX_BAL_destroy_anarchists
 		prerequisite = { focus = BAL_death_to_revisionism }
-		cost = 10
+		cost = 8
 		x = 2
 		y = 1
 		relative_position_id = BAL_death_to_revisionism
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BAL_destroy_anarchists"
-			remove_idea = {  }
+			remove_idea = JUN_economic_backwater
 			add_timed_idea = {
 				idea = BAL_frtr_five_year_plan
 				days = 1800
@@ -5271,7 +5273,7 @@
 		id = BAL_a_great_purge
 		icon = GFX_BAL_a_great_purge
 		prerequisite = { focus = BAL_destroy_anarchists }
-		cost = 10
+		cost = 8
 		x = 0
 		y = 1
 		relative_position_id = BAL_destroy_anarchists
@@ -5289,7 +5291,7 @@
 		id = BAL_centralization_and_discipline
 		icon = GFX_BAL_centralization_and_discipline
 		prerequisite = { focus = BAL_a_great_purge }
-		cost = 10
+		cost = 8
 		x = 0
 		y = 1
 		relative_position_id = BAL_a_great_purge
@@ -5306,7 +5308,7 @@
 		prerequisite = { focus = BAL_jungle_camps }
 		prerequisite = { focus = BAL_praise_starlight }
 		prerequisite = { focus = BAL_centralization_and_discipline }
-		cost = 10
+		cost = 8
 		x = 0
 		y = 1
 		relative_position_id = BAL_praise_starlight
@@ -5327,7 +5329,7 @@
 		icon = GFX_BAL_death_to_tyranny
 		prerequisite = { focus = BAL_general_secretary_stirlight_glimmer }
 		mutually_exclusive = { focus = BAL_death_to_revisionism }
-		cost = 10
+		cost = 8
 		x = 6
 		y = 1
 		relative_position_id = BAL_general_secretary_stirlight_glimmer
@@ -5342,13 +5344,14 @@
 		id = BAL_embrace_the_fourth_tribe
 		icon = GFX_BAL_embrace_the_fourth_tribe
 		prerequisite = { focus = BAL_death_to_tyranny }
-		cost = 10
+		cost = 8
 		x = -2
 		y = 1
 		relative_position_id = BAL_death_to_tyranny
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BAL_embrace_the_fourth_tribe"
+			remove_ideas = JUN_lunar_remnants
 			add_ideas = BAL_frtr_four_tribes_under_one_sky_0
 			add_popularity = { 
 				ideology = democratic 
@@ -5361,7 +5364,7 @@
 		id = BAL_never_again
 		icon = GFX_BAL_never_again
 		prerequisite = { focus = BAL_embrace_the_fourth_tribe }
-		cost = 10
+		cost = 8
 		x = 0
 		y = 1
 		relative_position_id = BAL_embrace_the_fourth_tribe
@@ -5379,7 +5382,7 @@
 		id = BAL_develop_the_countryside
 		icon = GFX_BAL_develop_the_countryside
 		prerequisite = { focus = BAL_never_again }
-		cost = 10
+		cost = 8
 		x = 0
 		y = 1
 		relative_position_id = BAL_never_again
@@ -5435,6 +5438,7 @@
 					instant_build = yes
 				}
 			}
+			remove_idea = NMS_native_resistance
 		}
 	}
 
@@ -5442,7 +5446,7 @@
 		id = BAL_socialism_is_harmonic
 		icon = GFX_BAL_socialism_is_harmonic
 		prerequisite = { focus = BAL_death_to_tyranny }
-		cost = 10
+		cost = 8
 		x = 0
 		y = 1
 		relative_position_id = BAL_death_to_tyranny
@@ -5462,13 +5466,14 @@
 		id = BAL_worker_led_town_councils
 		icon = GFX_BAL_worker_led_town_councils
 		prerequisite = { focus = BAL_socialism_is_harmonic }
-		cost = 10
+		cost = 8
 		x = 0
 		y = 1
 		relative_position_id = BAL_socialism_is_harmonic
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BAL_worker_led_town_councils"
+			remove_idea = JUN_economic_backwater
 			add_ideas = BAL_frtr_worker_councils_0
 		}
 	}
@@ -5477,7 +5482,7 @@
 		id = BAL_there_is_no_day_without_sunlight
 		icon = GFX_BAL_theres_no_day_without_sunlight
 		prerequisite = { focus = BAL_worker_led_town_councils }
-		cost = 10
+		cost = 5
 		x = 0
 		y = 1
 		relative_position_id = BAL_worker_led_town_councils
@@ -5495,7 +5500,7 @@
 		id = BAL_unity_against_nightmare_moon
 		icon = GFX_BAL_unity_against_nightmare_moon
 		prerequisite = { focus = BAL_death_to_tyranny }
-		cost = 10
+		cost = 8
 		x = 2
 		y = 1
 		relative_position_id = BAL_death_to_tyranny
@@ -5514,7 +5519,7 @@
 		id = BAL_rescue_celestial_officers
 		icon = GFX_BAL_rescue_celestial_officers
 		prerequisite = { focus = BAL_unity_against_nightmare_moon }
-		cost = 10
+		cost = 8
 		x = 0
 		y = 1
 		relative_position_id = BAL_unity_against_nightmare_moon
@@ -5531,7 +5536,7 @@
 		id = BAL_assure_our_comrades
 		icon = GFX_BAL_assure_our_comrades
 		prerequisite = { focus = BAL_rescue_celestial_officers }
-		cost = 10
+		cost = 8
 		x = 0
 		y = 1
 		relative_position_id = BAL_rescue_celestial_officers
@@ -5552,7 +5557,7 @@
 		prerequisite = { focus = BAL_there_is_no_day_without_sunlight }
 		prerequisite = { focus = BAL_assure_our_comrades }
 		prerequisite = { focus = BAL_develop_the_countryside }
-		cost = 10
+		cost = 8
 		x = 0
 		y = 1
 		relative_position_id = BAL_there_is_no_day_without_sunlight
@@ -5569,14 +5574,15 @@
 		id = BAL_a_war_of_liberation
 		icon = GFX_BAL_a_war_of_liberation
 		prerequisite = { focus = BAL_the_mare_of_steel focus = BAL_there_is_no_equestria_without_princess_twilight }
-		cost = 10
+		cost = 9
 		x = 0
 		y = 6
 		relative_position_id = BAL_general_secretary_stirlight_glimmer
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BAL_a_war_of_liberation"
-			
+			EQS = { add_to_ROOT_potential_cores = yes }
+			add_manpower = 150000
 		}
 	}
 
@@ -5584,14 +5590,14 @@
         id = BAL_liberate_vanhoover
         icon = GFX_BAL_liberate_vanhoover
         prerequisite = { focus = BAL_a_war_of_liberation }
-        cost = 10
+        cost = 5
         x = -4
         y = 1
         relative_position_id = BAL_a_war_of_liberation
         ai_will_do = { factor = 100 }
         completion_reward = {
             log = "[GetDateText]: [Root.GetName]: Focus BAL_liberate_vanhoover"
-            
+            VAN = { country_event = { days = 1 id = baltimare_frtr.9 } }
         }
     }
     
@@ -5599,14 +5605,24 @@
         id = BAL_integrate_vanhoover
         icon = GFX_BAL_integrate_vanhoover
         prerequisite = { focus = BAL_liberate_vanhoover }
-        cost = 10
+        cost = 3
         x = 0
         y = 1
+		available = {
+			VAN = {
+				exists = no
+			}
+			14 = { is_controlled_by = BAL }
+		}
         relative_position_id = BAL_liberate_vanhoover
         ai_will_do = { factor = 100 }
         completion_reward = {
             log = "[GetDateText]: [Root.GetName]: Focus BAL_integrate_vanhoover"
-            
+			VAN = {
+				every_unit_leader = {
+					set_nationality = BAL
+				}
+			}
         }
     }
     
@@ -5614,14 +5630,22 @@
         id = BAL_liberate_canterlot
         icon = GFX_BAL_liberate_canterlot
         prerequisite = { focus = BAL_a_war_of_liberation }
-        cost = 10
+        cost = 5
         x = 0
         y = 1
         relative_position_id = BAL_a_war_of_liberation
         ai_will_do = { factor = 100 }
         completion_reward = {
             log = "[GetDateText]: [Root.GetName]: Focus BAL_liberate_canterlot"
-            
+            3 = { add_claim_by = BAL }
+			create_wargoal = {
+				type = annex_everything 
+				target = EQS
+			}
+			create_wargoal = {
+				type = annex_everything 
+				target = NLR
+			}
         }
     }
     
@@ -5629,14 +5653,14 @@
         id = BAL_left_flavor
         icon = GFX_BAL_left_flavor
         prerequisite = { focus = BAL_liberate_canterlot }
-        cost = 10
+        cost = 3
         x = -1
         y = 1
         relative_position_id = BAL_liberate_canterlot
         ai_will_do = { factor = 100 }
         completion_reward = {
             log = "[GetDateText]: [Root.GetName]: Focus BAL_left_flavor"
-            
+            country_event = { days = 0 id = baltimare_frtr.12 }
         }
     }
     
@@ -5644,14 +5668,14 @@
         id = BAL_right_flavor
         icon = GFX_BAL_right_flavor
         prerequisite = { focus = BAL_liberate_canterlot }
-        cost = 10
+        cost = 3
         x = 1
         y = 1
         relative_position_id = BAL_liberate_canterlot
         ai_will_do = { factor = 100 }
         completion_reward = {
             log = "[GetDateText]: [Root.GetName]: Focus BAL_right_flavor"
-            
+            country_event = { days = 0 id = baltimare_frtr.13 }
         }
     }
     
@@ -5659,14 +5683,25 @@
         id = BAL_liberate_the_southwest
         icon = GFX_BAL_liberate_the_southwest
         prerequisite = { focus = BAL_a_war_of_liberation }
-        cost = 10
+        cost = 5
         x = 4
         y = 1
         relative_position_id = BAL_a_war_of_liberation
         ai_will_do = { factor = 100 }
         completion_reward = {
             log = "[GetDateText]: [Root.GetName]: Focus BAL_liberate_the_southwest"
-            
+			create_wargoal = {
+				type = annex_everything 
+				target = SCS
+			}
+			create_wargoal = {
+				type = annex_everything 
+				target = BUF
+			}
+			create_wargoal = {
+				type = annex_everything 
+				target = LSP
+			}
         }
     }
     
@@ -5674,14 +5709,14 @@
         id = BAL_fate_of_las_pegasus
         icon = GFX_BAL_fate_of_las_pegasus
         prerequisite = { focus = BAL_liberate_the_southwest }
-        cost = 10
+        cost = 3
         x = 0
         y = 1
         relative_position_id = BAL_liberate_the_southwest
         ai_will_do = { factor = 100 }
         completion_reward = {
             log = "[GetDateText]: [Root.GetName]: Focus BAL_fate_of_las_pegasus"
-            
+            add_ideas = BAL_frtr_lsp_wealth
         }
     }
     
@@ -5692,14 +5727,18 @@
         prerequisite = { focus = BAL_left_flavor }
         prerequisite = { focus = BAL_right_flavor }
         prerequisite = { focus = BAL_fate_of_las_pegasus }
-        cost = 10
+        cost = 8
         x = 0
         y = 2
+		available = {
+			at_war = no
+			3 = { is_controlled_by = BAL }
+		}
         relative_position_id = BAL_liberate_canterlot
         ai_will_do = { factor = 100 }
         completion_reward = {
             log = "[GetDateText]: [Root.GetName]: Focus BAL_reunification_of_equestria"
-            
+            set_country_flag = BAL_equestria
         }
     }
 
@@ -5707,14 +5746,17 @@
 		id = BAL_changelings_wargoal
 		icon = GFX_BAL_changelings_wargoal
 		prerequisite = { focus = BAL_reunification_of_equestria}
-		cost = 10
+		cost = 8
 		x = -4
 		y = 1
 		relative_position_id = BAL_reunification_of_equestria
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BAL_changelings_wargoal"
-			
+			create_wargoal = {
+				type = annex_everything 
+				target = CHN
+			}
 		}
 	}
 
@@ -5722,14 +5764,17 @@
 		id = BAL_changelings_flavor
 		icon = GFX_BAL_changelings_flavor
 		prerequisite = { focus = BAL_changelings_wargoal}
-		cost = 10
+		cost = 8
 		x = 0
 		y = 1
+		available = {
+			CHN = { exists = no }
+		}
 		relative_position_id = BAL_changelings_wargoal
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BAL_changelings_flavor"
-			
+			country_event = { days = 0 id = baltimare_frtr.14 }
 		}
 	}
 	
@@ -5737,14 +5782,25 @@
 		id = BAL_olenia_polar_bears_penguins_wargoal
 		icon = GFX_BAL_olenia_polar_bears_penguins_wargoal
 		prerequisite = { focus = BAL_changelings_flavor }
-		cost = 10
+		cost = 8
 		x = 0
 		y = 1
 		relative_position_id = BAL_changelings_flavor
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BAL_olenia_polar_bears_penguins_wargoal"
-			
+			create_wargoal = {
+				type = annex_everything 
+				target = PNG
+			}
+			create_wargoal = {
+				type = annex_everything 
+				target = PLB
+			}
+			create_wargoal = {
+				type = annex_everything 
+				target = OLE
+			}
 		}
 	}
 	
@@ -5752,14 +5808,23 @@
 		id = BAL_crystal_empire_wargoal
 		icon = GFX_BAL_crystal_empire_wargoal
 		prerequisite = { focus = BAL_reunification_of_equestria }
-		cost = 10
+		cost = 8
 		x = 0
 		y = 1
+		bypass = {
+			has_country_leader= {
+				ruling_only = yes
+				name = "Twilight Sparkle"
+			}
+		}
 		relative_position_id = BAL_reunification_of_equestria
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BAL_crystal_empire_wargoal"
-			
+			create_wargoal = {
+				type = annex_everything 
+				target = CRY
+			}
 		}
 	}
 	
@@ -5767,14 +5832,34 @@
 		id = BAL_crystal_empire_flavor
 		icon = GFX_BAL_crystal_empire_flavor
 		prerequisite = { focus = BAL_crystal_empire_wargoal }
-		cost = 10
+		cost = 8
 		x = 0
 		y = 1
+		available = {
+			OR = {
+				CRY = { exists = no }
+				has_country_leader= {
+					ruling_only = yes
+					name = "Twilight Sparkle"
+				}
+			}
+		}
 		relative_position_id = BAL_crystal_empire_wargoal
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BAL_crystal_empire_flavor"
-			
+			IF = {
+				limit = {
+					has_country_leader= {
+						ruling_only = yes
+						name = "Twilight Sparkle"
+					}
+				}
+				CRY = { country_event = { days = 0 id = baltimare_frtr.15 } }
+			}
+			ELSE = {
+				CRY = { add_to_ROOT_potential_cores = yes }
+			}
 		}
 	}
 
@@ -5782,14 +5867,21 @@
 		id = BAL_yaks_wargoal
 		icon = GFX_BAL_yaks_wargoal
 		prerequisite = { focus = BAL_crystal_empire_flavor }
-		cost = 10
+		cost = 8
 		x = 0
 		y = 1
 		relative_position_id = BAL_crystal_empire_flavor
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BAL_yaks_wargoal"
-			
+			create_wargoal = {
+				type = annex_everything 
+				target = YAK
+			}
+			create_wargoal = {
+				type = annex_everything 
+				target = JAK
+			}
 		}
 	}
 	
@@ -5797,14 +5889,17 @@
 		id = BAL_stalliongrad_wargoal
 		icon = GFX_BAL_stalliongrad_wargoal
 		prerequisite = { focus = BAL_reunification_of_equestria }
-		cost = 10
+		cost = 8
 		x = 4
 		y = 1
 		relative_position_id = BAL_reunification_of_equestria
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BAL_stalliongrad_wargoal"
-			
+			create_wargoal = {
+				type = annex_everything 
+				target = STG
+			}
 		}
 	}
 	
@@ -5812,14 +5907,14 @@
 		id = BAL_stalliongrad_flavor
 		icon = GFX_BAL_stalliongrad_flavor
 		prerequisite = { focus = BAL_stalliongrad_wargoal }
-		cost = 10
+		cost = 8
 		x = 0
 		y = 1
 		relative_position_id = BAL_stalliongrad_wargoal
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BAL_stalliongrad_flavor"
-			
+			STG = { add_to_ROOT_potential_cores = yes }
 		}
 	}
 	
@@ -5827,14 +5922,21 @@
 		id = BAL_nova_griffonia_frontier_wargoal
 		icon = GFX_BAL_nova_griffonia_frontier_wargoal
 		prerequisite = { focus = BAL_stalliongrad_flavor }
-		cost = 10
+		cost = 8
 		x = 0
 		y = 1
 		relative_position_id = BAL_stalliongrad_flavor
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BAL_nova_griffonia_frontier_wargoal"
-			
+			create_wargoal = {
+				type = annex_everything 
+				target = GRF
+			}
+			create_wargoal = {
+				type = annex_everything 
+				target = GFF
+			}
 		}
 	}
 	
@@ -5844,14 +5946,25 @@
 		prerequisite = { focus = BAL_nova_griffonia_frontier_wargoal }
 		prerequisite = { focus = BAL_yaks_wargoal }
 		prerequisite = { focus = BAL_olenia_polar_bears_penguins_wargoal }
-		cost = 10
+		cost = 8
 		x = 0
 		y = 1
 		relative_position_id = BAL_yaks_wargoal
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BAL_everything_is_conquered"
-			
+			if = {
+				limit = {
+					has_idea = BAL_frtr_Equestrian_Front_of_Liberation_2
+				}
+				remove_ideas = BAL_frtr_Equestrian_Front_of_Liberation_2
+			}
+			else_if = {
+				limit = {
+					has_idea = BAL_frtr_luna_atk
+				}
+				remove_ideas = BAL_frtr_luna_atk
+			}
 		}
 	}
 

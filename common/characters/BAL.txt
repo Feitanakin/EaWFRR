@@ -11,6 +11,16 @@ characters={
 		gender = female
 	}
 
+	BAL_twilight_sparkle={
+		name=BAL_twilight_sparkle
+		portraits={
+			civilian={
+				large="gfx/leaders/BAL/twilight_commie.tga"
+			}
+		}
+		gender = female
+	}
+
 	BAL_mayor_ash_moustache={
 		name=BAL_ash_moustache
 		portraits={
