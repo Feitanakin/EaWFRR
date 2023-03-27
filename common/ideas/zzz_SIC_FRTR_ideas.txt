@@ -401,7 +401,7 @@ ideas = {
 		}
 		
 		SIC_harmony_for_griffonia = {
-			picture = harmonic_stagnation3
+			picture = EQS_harmonic_stagnation3
 			name = harmony_for_griffonia
 			allowed = {
 				tag = SIC

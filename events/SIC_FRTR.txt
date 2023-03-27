@@ -32,11 +32,18 @@ country_event = {
 	option = {
 		name = sicameon_frtr.3.a
 		ai_chance = {
-			factor = 1
+			factor = 33
 		}
 		complete_national_focus = SIC_a_phantom_from_the_past 
-		recruit_character = SIC_Frederick
-		promote_character = SIC_Frederick
+			add_country_leader_role = {
+				character = SIC_Frederick
+				promote_leader = yes
+				country_leader = {
+					ideology = despotism
+					expire = "1965.1.1.1"
+					traits = {  }
+				}
+			}
 		set_party_name= {
 			ideology = neutrality
 			long_name = SIC_fred_kings_party_long
@@ -46,11 +53,18 @@ country_event = {
 	option = {
 		name = sicameon_frtr.3.b
 		ai_chance = {
-			factor = 98
+			factor = 34
 		}
 		complete_national_focus = SIC_an_heir_in_exile
-		recruit_character = SIC_Tomado
-		promote_character = SIC_Tomado
+			add_country_leader_role = {
+				character = SIC_Tomado
+				promote_leader = yes
+				country_leader = {
+					ideology = conservatism
+					expire = "1965.1.1.1"
+					traits = {  }
+				}
+			}
 		set_politics = {
 			ruling_party = democratic
 			elections_allowed = no
@@ -67,11 +81,18 @@ country_event = {
 	option = {
 		name = sicameon_frtr.3.c
 		ai_chance = {
-			factor = 1
+			factor = 33
 		}
 		complete_national_focus = SIC_springtime_sic
-		recruit_character = SIC_Petronilo
-		promote_character = SIC_Petronilo
+			add_country_leader_role = {
+				character = SIC_Petronilo
+				promote_leader = yes
+				country_leader = {
+					ideology = conservatism
+					expire = "1965.1.1.1"
+					traits = {  }
+				}
+			}
 		set_politics = {
 			ruling_party = democratic
 			elections_allowed = no
@@ -404,10 +425,16 @@ country_event = {
 		ai_chance = {
 			factor = 50
 		}
-		SIC = {
-			recruit_character = SIC_Mason_Of_Kivessin
-			recruit_character = SIC_constanti_privezan
-			recruit_character = SIC_Ion_Soimescu
+		BRF = {
+			BRF_Mason_Of_Kivessin = {
+				set_nationality = SIC
+			}
+			BRF_constanti_privezan = {
+				set_nationality = SIC
+			}
+			BRF_Ion_Soimescu = {
+				set_nationality = SIC
+			}
 		}
 	}
 	is_triggered_only = yes
@@ -430,10 +457,16 @@ country_event = {
 		ai_chance = {
 			factor = 50
 		}
-		SIC = {
-			recruit_character = SIC_rain_twister
-			recruit_character = SIC_witia_gryphon
-			recruit_character = SIC_koldvin
+		GRW = {
+			GRW_rain_twister = {
+				set_nationality = SIC
+			}
+			GRW_witia_gryphon = {
+				set_nationality = SIC
+			}
+			GRW_koldvin = {
+				set_nationality = SIC
+			}
 		}
 	}
 	is_triggered_only = yes
@@ -608,8 +641,15 @@ country_event = {
 		name = sicameon_frtr_frd.4.a
 		set_cosmetic_tag = SIC_frederick_arantigos
 		hidden_effect = {
-			recruit_character = SIC_Frederick_arantigos
-			promote_character = SIC_Frederick_arantigos
+			add_country_leader_role = {
+				character = SIC_Frederick_arantigos
+				promote_leader = yes
+				country_leader = {
+					ideology = despotism
+					expire = "1965.1.1.1"
+					traits = {  }
+				}
+			}
 		}
 		set_party_name= {
 			ideology = neutrality

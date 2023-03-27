@@ -37,11 +37,6 @@
 				large="gfx/leaders/SIC/August_IV.tga"
 			}
 		}
-		country_leader={
-			ideology=despotism
-			expire="1965.1.1.1"
-			id=-1
-		}
 	}
 
 	SIC_Frederick_arantigos={
@@ -50,11 +45,6 @@
 			civilian={
 				large="gfx/leaders/SIC/Frederick_arantigos.tga"
 			}
-		}
-		country_leader={
-			ideology=despotism
-			expire="1965.1.1.1"
-			id=-1
 		}
 	}
 
@@ -65,11 +55,6 @@
 				large="gfx/leaders/SIC/Tomado.tga"
 			}
 		}
-		country_leader={
-			ideology=conservatism
-			expire="1965.1.1.1"
-			id=-2
-		}
 	}
 
 	SIC_Tomado_empire={
@@ -79,11 +64,6 @@
 				large="gfx/leaders/SIC/Tomado_empire.tga"
 			}
 		}
-		country_leader={
-			ideology=conservatism
-			expire="1965.1.1.1"
-			id=-2
-		}
 	}
 
 	SIC_Petronilo={
@@ -92,11 +72,6 @@
 			civilian={
 				large="gfx/leaders/SIC/Petronilo.tga"
 			}
-		}
-		country_leader={
-			ideology=conservatism
-			expire="1965.1.1.1"
-			id=-3
 		}
 	}
 
@@ -109,224 +84,7 @@
 			}
 		}
 		gender = female
-		corps_commander={
-			traits={ promising_general griffon_race_trait }
-			skill=2
-			attack_skill=3
-			defense_skill=3
-			planning_skill=2
-			logistics_skill=1
-			legacy_id=788
-		}
 	}
-
-	SIC_Mason_Of_Kivessin={
-		name=BRF_Mason_Of_Kivessin
-		portraits={
-			army={
-				small="GFX_idea_BRF_Mason_Of_Kivessin"
-			}
-			army={
-				large="gfx/leaders/BRF/Mason.tga"
-			}
-		}
-		corps_commander={
-			traits={ griffon_race_trait inflexible_strategist trait_engineer }
-			skill=3
-			attack_skill=3
-			defense_skill=2
-			planning_skill=3
-			logistics_skill=2
-			legacy_id=786
-		}
-	}
-
-	SIC_rain_twister={
-		name=GRW_rain_twister
-		portraits={
-			army={
-				large="gfx/leaders/GRW/Rain_Twister.tga"
-				small="gfx/interface/ideas/Advisors/GRW/GRW_rain_twister.tga"
-			}
-		}
-		corps_commander={
-			traits={ infantry_officer pony_race_trait trickster }
-			skill=3
-			attack_skill=2
-			defense_skill=2
-			planning_skill=4
-			logistics_skill=2
-			legacy_id=777
-			desc = CORPS_COMMANDER_RAIN_TWISTER_DESC
-		}
-	}
-
-	SIC_witia_gryphon={
-		name=GRW_Witia
-		portraits={
-			army={
-				large="gfx/leaders/GRW/Cammunist.tga"
-				small="GFX_idea_GRW_Witia"
-			}
-		}
-		gender = female
-		corps_commander={
-			traits={ griffon_race_trait }
-			skill=2
-			attack_skill=1
-			defense_skill=2
-			planning_skill=2
-			logistics_skill=3
-			legacy_id=778
-		}
-	}
-
-	SIC_koldvin={
-		name=GRW_koldvin
-		portraits={
-			army={
-				large="gfx/leaders/GRW/Koldvin.tga"
-				small="gfx/interface/ideas/Advisors/GRW/GRW_koldvin.tga"
-			}
-		}
-		corps_commander={
-			traits={ griffon_race_trait }
-			skill=1
-			attack_skill=2
-			defense_skill=2
-			planning_skill=2
-			logistics_skill=1
-			legacy_id=780
-		}
-	}
-
-
-	SIC_constanti_privezan={
-		name=BRF_Constan_Pryzan
-		portraits={
-			army={
-				small="GFX_idea_BRF_Constan_Pryzan"
-			}
-			army={
-				large="gfx/leaders/BRF/Constanti.tga"
-			}
-		}
-		corps_commander={
-			traits={ inflexible_strategist war_hero griffon_race_trait }
-			skill=3
-			attack_skill=2
-			defense_skill=4
-			planning_skill=1
-			logistics_skill=3
-			legacy_id=784
-		}
-	}
-
-	SIC_Ion_Soimescu={
-		name=BRF_Ion_Soimescu
-		portraits={
-			army={
-				small="GFX_idea_BRF_Ion_Soimescu"
-			}
-			army={
-				large="gfx/leaders/BRF/Ion_Soimescu.tga"
-			}
-		}
-		corps_commander={
-			traits={ harsh_leader politically_connected griffon_race_trait }
-			skill=2
-			attack_skill=2
-			defense_skill=3
-			planning_skill=1
-			logistics_skill=1
-			legacy_id=781
-		}
-	}
-
-	SIC_sycle_coroanargint={
-		name=BRF_sycle_coroanargint
-		portraits={
-			army={
-				small="gfx/interface/ideas/Advisors/BRF/BRF_walrus.tga"
-			}
-			army={
-				large="gfx/leaders/BRF/Walrus.tga"
-			}
-		}
-		corps_commander={
-			traits={ brilliant_strategist career_officer griffon_race_trait organizer }
-			skill=3
-			attack_skill=4
-			defense_skill=2
-			planning_skill=3
-			logistics_skill=1
-			legacy_id=787
-			desc = BRF_Walrus_desc
-		}
-	}
-
-	SIC_lexandru_leuescu={
-		name=BRF_Lexandro_Leuescu
-		portraits={
-			army={
-				small="GFX_idea_BRF_Lexandro_Leuescu"
-			}
-			army={
-				large="gfx/leaders/BRF/Lexandru.tga"
-			}
-		}
-		corps_commander={
-			traits={ griffon_race_trait artillery_officer skilled_staffer trickster }
-			skill=2
-			attack_skill=2
-			defense_skill=1
-			planning_skill=3
-			logistics_skill=1
-			legacy_id=783
-		}
-		advisor = {
-			cost = 100
-			slot = high_command
-			idea_token = BRF_Lexandro_Leuescu
-			ledger = army
-			visible = {
-				has_completed_focus = SIC_intelligentsia
-			}
-			allowed = {
-				original_tag = SIC
-			}
-			available = {
-				NOT = { has_government = communism }
-			}
-			traits = { army_logistics_3 }
-			ai_will_do = {
-				factor = 40
-			}
-		}
-	}
-
-	SIC_catelin_toderoiu={
-		name=BRF_catelin_toderoiu
-		portraits={
-			army={
-				small="gfx/interface/ideas/Advisors/BRF/BRF_waifu.tga"
-			}
-			army={
-				large="gfx/leaders/BRF/BRF_waifu.tga"
-			}
-		}
-		gender = female
-		corps_commander={
-			traits={ trait_reckless griffon_race_trait swamp_fox ranger }
-			skill=2
-			attack_skill=3
-			defense_skill=2
-			planning_skill=1
-			logistics_skill=1
-			legacy_id=782
-		}
-	}
-
 
 	SIC_frtr_Regency_Council={
 		name=SIC_frtr_Regency_Council

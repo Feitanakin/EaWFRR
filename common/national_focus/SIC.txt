@@ -6405,10 +6405,16 @@ focus_tree = {
 				remove_unit_leader = 787
 				remove_unit_leader = 782
 				remove_unit_leader = 783
+				SIC_catelin_toderoiu = {
+					set_nationality = SIC
+				}
+				SIC_lexandru_leuescu = {
+					set_nationality = SIC
+				}
+				SIC_sycle_coroanargint = {
+					set_nationality = SIC
+				}
 			}
-			recruit_character = SIC_catelin_toderoiu
-			recruit_character = SIC_lexandru_leuescu
-			recruit_character = SIC_sycle_coroanargint
 		}
 	}
 
@@ -6426,8 +6432,10 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_former_revolutionary"
 			GRW = {
 				remove_unit_leader = 788
+				SIC_catelin_toderoiu = {
+					GRW_Theresa = SIC
+				}
 			}
-			recruit_character = SIC_Theresa
 		}
 	}
 
@@ -8171,8 +8179,15 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_restitutor_orbis"
 			set_cosmetic_tag = frtr_karthinian_empire
 			hidden_effect = {
-				recruit_character = SIC_Tomado_empire
-				promote_character = SIC_Tomado_empire
+				add_country_leader_role = {
+					character = SIC_Tomado_empire
+					promote_leader = yes
+					country_leader = {
+						ideology = conservatism
+						expire = "1965.1.1.1"
+						traits = {  }
+					}
+				}
 				ARA = { add_to_ROOT_potential_cores = yes }
 				FAL = { add_to_ROOT_potential_cores = yes }
 				TAL = { add_to_ROOT_potential_cores = yes }

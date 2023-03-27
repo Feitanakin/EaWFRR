@@ -142,6 +142,11 @@ recruit_character = SIC_lucia_pico_de_fuego
 recruit_character = SIC_jose_plumarroja
 recruit_character = SIC_viscount_trubach
 recruit_character = SIC_juan_guilloto
+recruit_character = SIC_Frederick
+recruit_character = SIC_Tomado
+recruit_character = SIC_Petronilo
+recruit_character = SIC_Frederick_arantigos
+recruit_character = SIC_Tomado_empire
 
 set_rule = {
 	can_generate_female_aces = yes
