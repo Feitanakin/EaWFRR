@@ -17,7 +17,24 @@ characters={
 		}
 	}
 
-	BRZ_occupation={
+	BRZ_occupation_1={
+		name=BRZ_occupational_authority
+		portraits={
+			civilian={
+				small=""
+				large="gfx/leaders/BRZ/occupational_authority.tga"
+			}
+		}
+		country_leader={
+			desc=""
+			ideology=nazism
+			traits={  }
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+
+	BRZ_occupation_2={
 		name=BRZ_occupational_authority
 		portraits={
 			civilian={

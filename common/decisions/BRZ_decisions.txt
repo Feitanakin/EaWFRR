@@ -6349,8 +6349,11 @@ BRZ_protectorates = {
 			hidden_effect = {
 				GRI = {
 					set_cosmetic_tag = herzland_dogs
-					recruit_character = BRZ_occupation
-					promote_character = BRZ_occupation
+				}
+				BRZ = {
+					BRZ_occupation_2 = {
+						set_nationality = GRI
+					}
 				}
 			}
 		}
@@ -6391,8 +6394,11 @@ BRZ_protectorates = {
 			hidden_effect = {
 				RCT = {
 					set_cosmetic_tag = riverlands_dogs
-					recruit_character = BRZ_occupation
-					promote_character = BRZ_occupation
+				}
+				BRZ = {
+					BRZ_occupation_1 = {
+						set_nationality = RCT
+					}
 				}
 			}
 		}

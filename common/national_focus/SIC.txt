@@ -6432,8 +6432,8 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIC_former_revolutionary"
 			GRW = {
 				remove_unit_leader = 788
-				SIC_catelin_toderoiu = {
-					GRW_Theresa = SIC
+				GRW_Theresa = {
+					set_nationality = SIC
 				}
 			}
 		}

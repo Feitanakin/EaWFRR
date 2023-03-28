@@ -1872,7 +1872,6 @@ focus_tree = {
 				ruling_party = fascism
 				elections_allowed = no
 			}
-			recruit_character = BRZ_nihael_pawsha_khagan
 			promote_character = BRZ_nihael_pawsha_khagan
 			set_cosmetic_tag = turanist_dogs
 			add_ideas = Imperial_loyalist_in_army_1
