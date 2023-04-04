@@ -912,9 +912,6 @@ country_event = { #Civil War has Ended
 				days = 5
 			}
 		}
-		hidden_effect = {
-			country_event = { days = 0 id = baltimare_frtr.3 }
-		}
 	}
 }
 country_event = { #George orwell departs

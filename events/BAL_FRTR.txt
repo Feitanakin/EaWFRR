@@ -19,9 +19,6 @@ country_event = {
 			logistics_skill=2
 			legacy_id=5559
 		}
-		hidden_effect = {
-			country_event = { days = 7 id = baltimare_frtr.2 }
-		}
 	}
 }
 
@@ -35,7 +32,7 @@ country_event = {
 	option = {
 		name = baltimare_frtr.2.a
 		hidden_effect = {
-			
+			country_event = { days = 100 id = baltimare_frtr.3 }
 		}
 	}
 }
@@ -59,13 +56,15 @@ country_event = {
 			}
 		}
 		hidden_effect = {
-			country_event = { days = 1 id = baltimare_frtr.4 }
+			country_event = { days = 0 id = baltimare_frtr.4 }
+			remove_ideas = NMS_native_resistance
+			remove_ideas = JUN_economic_backwater
+			remove_ideas = JUN_lunar_remnants
 		}
 	}
 	option = {
 		name = baltimare_frtr.3.b
 		remove_unit_leader = 5559
-		set_country_flag = BAL_glimmer_lost
 	}
 }
 

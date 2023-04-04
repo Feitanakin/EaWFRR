@@ -1007,7 +1007,7 @@
 			factor = 80
 		}
 		available = {
-			has_country_flag = BAL_glimmer_lost
+			
 		}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAL_proclaim_sesr"
@@ -1093,6 +1093,9 @@
 				}
 				clr_global_flag = sofia_and_nevsky_sent
 			}
+		hidden_effect = {
+			country_event = { days = 1 id = baltimare_frtr.2 }
+		}
 		}
 		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 	}
@@ -1434,6 +1437,9 @@
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAL_syndie_gang"
 			add_political_power = 100
+		hidden_effect = {
+			country_event = { days = 1 id = baltimare_frtr.2 }
+		}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
@@ -1745,6 +1751,9 @@
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAL_corn_lord_triumphs"
 			add_political_power = 100
+		hidden_effect = {
+			country_event = { days = 1 id = baltimare_frtr.2 }
+		}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
@@ -2134,6 +2143,9 @@
 				}
 				clr_country_flag = BAL_anarchist_advisors_unlocked
 			}
+		hidden_effect = {
+			country_event = { days = 1 id = baltimare_frtr.2 }
+		}
 		}
 		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL FOCUS_FILTER_ARMY_BONUS }
 	}
@@ -5163,7 +5175,6 @@
 			 instant_build = yes
 			 }
   			}
-			remove_ideas = JUN_lunar_remnants
 		}
 	}
 
@@ -5193,7 +5204,6 @@
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BAL_jungle_camps"
-			remove_idea = NMS_native_resistance
 			add_ideas = BAL_frtr_Shady_Disappearances
 		}
 	}
@@ -5261,7 +5271,6 @@
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BAL_destroy_anarchists"
-			remove_idea = JUN_economic_backwater
 			add_timed_idea = {
 				idea = BAL_frtr_five_year_plan
 				days = 1800
@@ -5351,7 +5360,6 @@
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BAL_embrace_the_fourth_tribe"
-			remove_ideas = JUN_lunar_remnants
 			add_ideas = BAL_frtr_four_tribes_under_one_sky_0
 			add_popularity = { 
 				ideology = democratic 
@@ -5438,7 +5446,6 @@
 					instant_build = yes
 				}
 			}
-			remove_idea = NMS_native_resistance
 		}
 	}
 
@@ -5473,7 +5480,6 @@
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BAL_worker_led_town_councils"
-			remove_idea = JUN_economic_backwater
 			add_ideas = BAL_frtr_worker_councils_0
 		}
 	}
