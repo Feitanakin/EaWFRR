@@ -1,8 +1,8 @@
 objectTypes = {
 
 		pdxmesh = {
-		name = "OLE_infantry_rifle_mesh"
-		file = "gfx/models/EAWEntity/ponies/OLE_infantry.mesh"
+		name = "deer_gfx_infantry_rifle_mesh"
+		file = "gfx/models/EAWEntity/deer/OLE_infantry.mesh"
 		
 		animation = { id = "idle"			type = "CRY_infantry_idle" }
 		animation = { id = "idle01"			type = "CRY_infantry_idle_01" }

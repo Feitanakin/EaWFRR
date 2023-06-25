@@ -58,8 +58,9 @@ entity = {
 }
 
 entity = {
-	clone = "GER_mechanized_entity"
+	clone = "ITA_mechanized_entity"
 	name = "herzland_griffonian_mechanized_entity"
+	attach = { 	name = "infantry"			infantry = "herzland_griffonian_infantry_entity" }
 }
 
 ############################
@@ -87,6 +88,7 @@ entity = {
 entity = {
 	clone = "herzland_griffonian_mechanized_entity"
 	name = "TRD_mechanized_entity"
+	attach = { 	name = "infantry"			infantry = "herzland_griffonian_infantry_entity" }
 }
 
 entity = {
@@ -118,6 +120,7 @@ entity = {
 entity = {
 	clone = "herzland_griffonian_mechanized_entity"
 	name = "EYR_mechanized_entity"
+	attach = { 	name = "infantry"			infantry = "herzland_griffonian_infantry_entity" }
 }
 
 entity = {
@@ -149,6 +152,7 @@ entity = {
 entity = {
 	clone = "herzland_griffonian_mechanized_entity"
 	name = "BAN_mechanized_entity"
+	attach = { 	name = "infantry"			infantry = "herzland_griffonian_infantry_entity" }
 }
 
 entity = {
@@ -180,6 +184,7 @@ entity = {
 entity = {
 	clone = "herzland_griffonian_mechanized_entity"
 	name = "BOI_mechanized_entity"
+	attach = { 	name = "infantry"			infantry = "herzland_griffonian_infantry_entity" }
 }
 
 entity = {
@@ -211,6 +216,7 @@ entity = {
 entity = {
 	clone = "herzland_griffonian_mechanized_entity"
 	name = "LAK_mechanized_entity"
+	attach = { 	name = "infantry"			infantry = "herzland_griffonian_infantry_entity" }
 }
 
 entity = {
@@ -242,6 +248,7 @@ entity = {
 entity = {
 	clone = "herzland_griffonian_mechanized_entity"
 	name = "GRF_mechanized_entity"
+	attach = { 	name = "infantry"			infantry = "herzland_griffonian_infantry_entity" }
 }
 
 entity = {
@@ -273,6 +280,7 @@ entity = {
 entity = {
 	clone = "herzland_griffonian_mechanized_entity"
 	name = "GFF_mechanized_entity"
+	attach = { 	name = "infantry"			infantry = "herzland_griffonian_infantry_entity" }
 }
 
 entity = {

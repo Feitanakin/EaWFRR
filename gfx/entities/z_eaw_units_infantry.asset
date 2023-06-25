@@ -1550,6 +1550,81 @@ entity = {
 }
 
 entity = {
+	name = "DED_infantry_entity"
+	pdxmesh = "DED_infantry_rifle_mesh"
+	
+	default_state = "idle"
+	state = { name = "attack"			animation = "attack" 					animation_blend_time = 0.0  animation_speed = 1.0 looping = no next_state = "attack" chance = 2 propagate_state = { rifle1 = "idle" } }
+	state = { name = "attack"			animation = "attack" 			animation_blend_time = 0.0  animation_speed = 1.0 looping = no next_state = "attack" chance = 1 }
+	state = { name = "defend"			animation = "attack" 			animation_blend_time = 0.3  animation_speed = 1.0 }
+	state = { name = "support_attack"	animation = "attack" 	animation_blend_time = 0.3 animation_speed = 1.0 }
+	state = { name = "move"				animation = "move" 				animation_blend_time = 0.0 animation_speed = 1.0 chance = 1	event = { trigger_once = yes sound = { soundeffect = "horse_walking" } } }
+	state = { name = "move"				animation = "move" 		animation_blend_time = 0.0 animation_speed = 1.0 chance = 1	event = { trigger_once = yes sound = { soundeffect = "horse_walking" } } }
+	state = { name = "retreat"			animation = "retreat" 			animation_blend_time = 0.3 animation_speed = 1.0 }
+	state = { name = "death"			animation = "retreat" 			animation_blend_time = 0.3 animation_speed = 1.0 }
+	state = { name = "idle"				animation = "idle"       		animation_blend_time = 0.3 animation_speed = 1.0 chance = 15 looping = no }
+	state = { name = "idle"				animation = "idle"		animation_blend_time = 0.3 animation_speed = 1.0 chance = 1 looping = no }
+	state = { name = "idle"				animation = "idle"		animation_blend_time = 0.3 animation_speed = 1.0 chance = 1 looping = no }
+	state = { name = "idle"				animation = "idle"		animation_blend_time = 0.3 animation_speed = 1.0 chance = 1 looping = no }
+	state = { name = "idle"				animation = "idle"		animation_blend_time = 0.3 animation_speed = 1.0 chance = 1 looping = no }
+	state = { name = "training"				animation = "training" 			animation_blend_time = 0.3 animation_speed = 1.0 chance = 2 looping = no }
+	state = { name = "training"				animation = "training" 	animation_blend_time = 0.3 animation_speed = 1.0 chance = 1 looping = no }
+	state = { name = "training"				animation = "training" 			animation_blend_time = 0.3 animation_speed = 1.0 chance = 1 looping = no }
+	#state = { name = "training"			animation = "training" 		animation_blend_time = 0.3 animation_speed = 1.0 chance = 1 looping = no }
+	state = { name = "training"				animation = "training" 		animation_blend_time = 0.3 animation_speed = 1.0 chance = 1 looping = no }
+	
+	scale = 0.8			
+}
+
+entity = {
+	clone = "DED_infantry_entity"
+	name = "DED_infantry_2_entity"
+}
+
+entity = {
+	clone = "DED_infantry_entity"
+	name = "DED_infantry_3_entity"
+}
+
+entity = {
+	clone = "DED_infantry_entity"
+	name = "DED_vehicle_infantry_rifle_entity"
+}
+
+entity = {
+	clone = "DED_infantry_entity"
+	name = "DED_vehicle_infantry_mg_entity"
+}
+
+entity = {
+	clone = "DED_infantry_entity"
+	name = "DED_vehicle_infantry_rifle_entity"
+}
+
+entity = {
+	name = "DED_artillery_entity"
+	clone = "GER_artillery_entity"
+
+	attach = { name = infantry			infantry = "DED_infantry_entity" }
+}
+
+entity = {
+	clone = "mechanized_entity"
+	name = "DED_mechanized_entity"
+	attach = {     name = "infantry"            infantry = "DED_infantry_entity" }
+}
+
+entity = {
+	name = "DED_anti_tank_entity"
+	clone = "DED_artillery_entity"
+}
+
+entity = {
+    clone = "motorized_entity"
+    name = "DED_motorized_entity"
+    attach = {     name = "infantry"            infantry = "DED_infantry_entity" }
+}
+entity = {
 	name = "STG_infantry_entity"
 	pdxmesh = "STG_infantry_rifle_mesh"	
 	

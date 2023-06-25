@@ -18,8 +18,8 @@ entity = {
 	state = { name = "idle"				animation = "long_idle"      	animation_blend_time = 0.3	animation_speed = 0.8 chance = 1 looping = no next_state = "idle" }
 	state = { name = "training"			animation = "training" 			animation_blend_time = 0.3	animation_speed = 1.0 }
 
-	attach = { 	name = "rifle1"	jeb = "GER_infantry_weapon_rifle_right_entity" }	
-	attach = { 	name = "generic_hl"	head = "SIC_infantry_helmet_central_entity" }	
+	attach = { 	name = "rifle1"	jeb = "GRI_infantry_weapon_clw18_ar" }	
+	attach = { 	name = "helm1"	head = "SIC_infantry_helmet_central_entity" }	
 	
 	scale = 0.8			
 }
@@ -37,6 +37,18 @@ entity = {
 entity = {
 	clone = "SIC_infantry_entity"
 	name = "SIC_vehicle_infantry_rifle_entity"
+}
+
+entity = {
+	clone = "ITA_mechanized_entity"
+	name = "SIC_mechanized_entity"
+	attach = { 	name = "infantry"			infantry = "SIC_infantry_entity" }
+}
+
+entity = {
+	clone = "motorized_entity"
+	name = "SIC_motorized_entity"
+	attach = { 	name = "infantry"			infantry = "SIC_infantry_entity" }
 }
 
 entity = {

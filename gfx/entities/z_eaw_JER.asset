@@ -176,8 +176,9 @@ entity = {
 }
 
 entity = {
-	clone = "FRA_mechanized_entity"
+	clone = "ITA_mechanized_entity"
 	name = "JER_mechanized_entity"
+	attach = { 	name = "infantry"			infantry = "JER_infantry_entity" }
 }
 
 entity = {
@@ -232,6 +233,7 @@ entity = {
 entity = {
 	clone = "JER_mechanized_entity"
 	name = "JES_mechanized_entity"
+	attach = { 	name = "infantry"			infantry = "JER_infantry_entity" }
 }
 
 entity = {
@@ -286,6 +288,7 @@ entity = {
 entity = {
 	clone = "JER_mechanized_entity"
 	name = "JEB_mechanized_entity"
+	attach = { 	name = "infantry"			infantry = "JER_infantry_entity" }
 }
 
 entity = {
@@ -340,6 +343,7 @@ entity = {
 entity = {
 	clone = "JER_mechanized_entity"
 	name = "JRR_mechanized_entity"
+	attach = { 	name = "infantry"			infantry = "JER_infantry_entity" }
 }
 
 entity = {
@@ -361,6 +365,12 @@ entity = {
 entity = {
 	name = "JRR_heavy_armor_entity"
 	clone = "JER_heavy_armor_entity"
+}
+
+entity = {
+	clone = "JER_mechanized_entity"
+	name = "JRR_mechanized_entity"
+	attach = { 	name = "infantry"			infantry = "JER_infantry_entity" }
 }
 
 entity = {
@@ -394,6 +404,7 @@ entity = {
 entity = {
 	clone = "JER_mechanized_entity"
 	name = "VIN_mechanized_entity"
+	attach = { 	name = "infantry"			infantry = "JER_infantry_entity" }
 }
 
 entity = {
@@ -427,113 +438,5 @@ entity = {
 entity = {
 	name = "VIN_anti_tank_entity"
 	clone = "VIN_artillery_entity"
-
-}
-
-entity = {
-	clone = "JER_light_plane_entity"
-	name = "POM_light_plane_entity"
-}
-
-entity = {
-	clone = "JER_medium_plane_entity"
-	name = "POM_medium_plane_entity"
-}
-
-entity = {
-	clone = "JER_heavy_plane_entity"
-	name = "POM_heavy_plane_entity"
-}
-
-entity = {
-	clone = "JER_mechanized_entity"
-	name = "POM_mechanized_entity"
-}
-
-entity = {
-	clone = "JER_motorized_entity"
-	name = "POM_motorized_entity"
-	attach = { 	name = "infantry"			infantry = "JER_infantry_entity" }
-}
-
-entity = {
-	clone = "JER_light_armor_entity"
-	name = "POM_light_armor_entity"
-}
-
-entity = {
-	clone = "JER_medium_armor_entity"
-	name = "POM_medium_armor_entity"
-}
-
-entity = {
-	name = "POM_heavy_armor_entity"
-	clone = "JER_heavy_armor_entity"
-}
-
-entity = {
-	name = "POM_artillery_entity"
-	clone = "JER_artillery_entity"
-
-	attach = { name = infantry			infantry = "JER_infantry_entity" }
-}
-
-entity = {
-	name = "POM_anti_tank_entity"
-	clone = "POM_artillery_entity"
-
-}
-
-entity = {
-	clone = "JER_light_plane_entity"
-	name = "FLO_light_plane_entity"
-}
-
-entity = {
-	clone = "JER_medium_plane_entity"
-	name = "FLO_medium_plane_entity"
-}
-
-entity = {
-	clone = "JER_heavy_plane_entity"
-	name = "FLO_heavy_plane_entity"
-}
-
-entity = {
-	clone = "JER_mechanized_entity"
-	name = "FLO_mechanized_entity"
-}
-
-entity = {
-	clone = "JER_motorized_entity"
-	name = "FLO_motorized_entity"
-	attach = { 	name = "infantry"			infantry = "JER_infantry_entity" }
-}
-
-entity = {
-	clone = "JER_light_armor_entity"
-	name = "FLO_light_armor_entity"
-}
-
-entity = {
-	clone = "JER_medium_armor_entity"
-	name = "FLO_medium_armor_entity"
-}
-
-entity = {
-	name = "FLO_heavy_armor_entity"
-	clone = "JER_heavy_armor_entity"
-}
-
-entity = {
-	name = "FLO_artillery_entity"
-	clone = "JER_artillery_entity"
-
-	attach = { name = infantry			infantry = "JER_infantry_entity" }
-}
-
-entity = {
-	name = "FLO_anti_tank_entity"
-	clone = "FLO_artillery_entity"
 
 }

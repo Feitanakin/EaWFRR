@@ -58,8 +58,9 @@ entity = {
 }
 
 entity = {
-	clone = "GER_mechanized_entity"
+	clone = "ITA_mechanized_entity"
 	name = "zebrica_griffonian_mechanized_entity"
+	attach = { 	name = "infantry"			infantry = "zebrica_griffonian_infantry_entity" }
 }
 
 ############################
@@ -87,6 +88,7 @@ entity = {
 entity = {
 	clone = "zebrica_griffonian_mechanized_entity"
 	name = "YAN_mechanized_entity"
+	attach = { 	name = "infantry"			infantry = "zebrica_griffonian_infantry_entity" }
 }
 
 entity = {
@@ -118,6 +120,7 @@ entity = {
 entity = {
 	clone = "zebrica_griffonian_mechanized_entity"
 	name = "GFS_mechanized_entity"
+	attach = { 	name = "infantry"			infantry = "zebrica_griffonian_infantry_entity" }
 }
 
 entity = {
@@ -149,6 +152,7 @@ entity = {
 entity = {
 	clone = "zebrica_griffonian_mechanized_entity"
 	name = "TSV_mechanized_entity"
+	attach = { 	name = "infantry"			infantry = "zebrica_griffonian_infantry_entity" }
 }
 
 entity = {

@@ -1,6 +1,6 @@
 entity = {
-	name = "OLE_infantry_entity"
-	pdxmesh = "OLE_infantry_rifle_mesh"
+	name = "deer_gfx_infantry_entity"
+	pdxmesh = "deer_gfx_infantry_rifle_mesh"
 	
 	default_state = "idle"
 	state = { name = "attack"			animation = "attack" 		animation_blend_time = 0.0 animation_speed = 1.0 looping = no next_state = "attack" }
@@ -20,47 +20,46 @@ entity = {
 }
 
 entity = {
-	clone = "OLE_infantry_entity"
-	name = "OLE_infantry_2_entity"
-}
-
-entity = {
-	clone = "OLE_infantry_entity"
-	name = "OLE_infantry_3_entity"
-}
-
-entity = {
-	clone = "OLE_infantry_entity"
-	name = "OLE_vehicle_infantry_mg_entity"
-}
-
-entity = {
-	clone = "OLE_infantry_entity"
-	name = "OLE_vehicle_infantry_rifle_entity"
-}
-
-entity = {
-	name = "OLE_artillery_entity"
-	clone = "GER_artillery_entity"
-
-	attach = { name = infantry			infantry = "OLE_infantry_entity" }
-}
-
-entity = {
-	clone = "JAP_mechanized_entity"
-	name = "OLE_mechanized_entity"
-	attach = {     name = "infantry"            infantry = "OLE_infantry_entity" }
-}
-
-entity = {
     clone = "motorized_entity"
-    name = "OLE_motorized_entity"
-    attach = {     name = "infantry"            infantry = "OLE_infantry_entity" }
+    name = "deer_gfx_motorized_entity"
+    attach = {     name = "infantry"            infantry = "deer_gfx_infantry_entity" }
 }
 
 entity = {
-	name = "OLE_anti_tank_entity"
-	clone = "OLE_artillery_entity"
+	clone = "mechanized_entity"
+	name = "deer_gfx_mechanized_entity"
+	attach = { 	name = "infantry"			infantry = "deer_gfx_infantry_entity" }
+}
+
+entity = {
+	name = "deer_gfx_artillery_entity"
+	clone = "artillery_entity"
+	attach = { name = infantry			infantry = "deer_gfx_infantry_entity" }
+}
+
+entity = {
+	name = "deer_gfx_anti_tank_entity"
+	clone = "deer_gfx_artillery_entity"
+}
+
+entity = {
+	clone = "deer_gfx_infantry_entity"
+	name = "deer_gfx_infantry_2_entity"
+}
+
+entity = {
+	clone = "deer_gfx_infantry_2_entity"
+	name = "deer_gfx_infantry_3_entity"
+}
+
+entity = {
+	clone = "deer_gfx_infantry_entity"
+	name = "deer_gfx_vehicle_infantry_rifle_entity"
+}
+
+entity = {
+	clone = "deer_gfx_infantry_entity"
+	name = "deer_gfx_vehicle_infantry_mg_entity"
 }
 
 ############################################

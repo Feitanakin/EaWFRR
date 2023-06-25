@@ -24,4 +24,9 @@ objectTypes = {
 		name = "SIC_infantry_helmet_central_mesh"
 		file = "gfx/models/EAWEntity/griffons/attachments/SIC_infantry_helmet_central.mesh"
 		}
+		
+		pdxmesh = {
+		name = "GRI_infantry_weapon_clw18_ar_mesh"
+		file = "gfx/models/EAWEntity/griffons/attachments/GRI_infantry_weapon_clw18_ar.mesh"
+		}
 }
