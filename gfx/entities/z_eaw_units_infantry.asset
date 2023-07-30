@@ -2763,7 +2763,7 @@ entity = {
 	state = { name = "training"			animation = "training" 			animation_blend_time = 0.3	animation_speed = 1.0 }
 
 	attach = { 	name = "rifle1"	jeb = "GER_infantry_weapon_rifle_right_entity" }	
-	attach = { 	name = "LSMm1"	head = "east_griffonian_infantry_LSMmet_entity" }	
+	attach = { 	name = "LSMm1"	head = "east_griffonian_infantry_helmet_entity" }	
 	
 	scale = 0.8
 }

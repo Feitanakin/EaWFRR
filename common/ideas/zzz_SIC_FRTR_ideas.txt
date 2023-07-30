@@ -13,7 +13,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				neutrality_drift = 0.05
+				democratic_drift = 0.05
 				stability_factor = 0.03
 			}
 		}
