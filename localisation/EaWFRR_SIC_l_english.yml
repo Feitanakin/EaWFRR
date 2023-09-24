@@ -42,6 +42,7 @@
  
  ### Focuses ###
 
+
  SIC_the_decadent_regency:0 "The Decadent Regency"
  SIC_the_decadent_regency_desc:0 "The Regency has stood for a long time, and in its standing, it has degenerated into nothing but an entity of corruption. It serves only the selfish nobility propped up by the Empire. An empire long gone. They are spoiled souls. What shall be done about them?"
  SIC_deal_with_the_republican_issue:0 "Deal With the Republican Issue"
@@ -92,8 +93,14 @@
  SIC_second_chance_desc:0 "Of course, this will not be popular. Not everyone has a positive outlook on the former council. But it is necessary. And as we make our future, we cannot simply deny them a chance to enjoy it."
  SIC_pardon_republicans:0 "Pardon the Republicans"
  SIC_pardon_republicans_desc:0 "It is over. Now, that we have the Duchess in power, we must be merciful. We are not barbarians. We are not blood-thirsty. We must pardon them, even when we despise their ideals. It will bring peace to our land. And peace is much better than prolonged war."
- SIC_democracy_now:0 "Democracy, Now!"
+ SIC_democracy_now:0 "Democracy, Now!!!"
  SIC_democracy_now_desc:0 "It is done. Now, we have the chance to make things right, to change our world. It is time for us to make our ideals a reality. We must have democracy!"
+ SIC_monarchist_elections:0 "Democracy Under The Grand Duchess"
+ SIC_monarchist_elections_desc:0 "The results of the Referendum are clear and Sicameon will remain a monarchy under a new constitutional form that will ensure Democratic Harmony, as wished by our benevolent and ever-loving head of state."
+ SIC_socdem_victory:0  "PSOS Victory"  
+ SIC_socdem_victory_desc:0 "The Grand Duchess's preferred candidates, the PSOS will guarantee a solid balance between Socialism and Harmony (WIP) (WIP icon)" 
+ SIC_conmon_victory:0 "RNS Victory" 
+ SIC_conmon_victory_desc:0 "With a somewhat unlikely victory the Renovacìon Nacional Sicameonesa, a right-wing coalition of noblegriffs and bourgeousie alike, has secured an electoral victory that will change Sicameon's direction forever. Petronila's reaction, ever the socialist sympathizer, remains to be seen (WIP) (WIP ICON)" 
  SIC_free_elections:0 "Free Elections!"
  SIC_free_elections_desc:0 "We dreamt of liberty from the Regency and the Empire. If we want liberty to thrive in our society, Sicameon must make sure that the elections we have are free and clear."
  SIC_looking_outwards:0 "Looking Outwards"

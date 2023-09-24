@@ -6322,7 +6322,55 @@ focus_tree = {
 		}
 		
 	}
-
+    focus = {
+		id = SIC_monarchist_elections
+		icon = GFX_SIC_free_elections
+		cost = 5
+		relative_position_id = SIC_springtime_sic
+		x = 15
+		y = 1
+		ai_will_do = { factor = 100 }
+		available = {
+			has_country_leader = {
+				id = 50001
+				ruling_only = yes 
+				name = "Petronila of Midoria"
+			}
+		}
+		completion_reward = {
+			remove_ideas = republican_tension_4
+		}
+		
+	}		
+    focus = {
+	    id = SIC_socdem_victory 
+        icon = GFX_SIC_red_star_from_the_ashes
+        cost = 1
+        relative_position_id = SIC_monarchist_elections
+        x = -7
+        y = 1
+        ai_will_do = { factor = 100 }
+		prerequisite = {
+			focus = SIC_monarchist_elections
+		}        		
+		
+		
+	}
+	
+    focus = {
+	    id = SIC_conmon_victory 
+        icon = GFX_SIC_the_law_of_boreas
+        cost = 1
+        relative_position_id = SIC_monarchist_elections
+        x = 7
+        y = 1
+        ai_will_do = { factor = 100 }
+		prerequisite = {
+			focus = SIC_monarchist_elections
+		}        		
+		
+		
+	}	
 ##########################################################################
 ##########################################################################
 ##########################################################################
