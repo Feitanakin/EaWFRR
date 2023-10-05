@@ -6370,7 +6370,161 @@ focus_tree = {
 		}        		
 		
 		
+	}
+    
+	focus = {
+	    id = SIC_bolster_nationalism 
+        icon = GFX_SIC_the_law_of_boreas
+        cost = 1
+        relative_position_id = SIC_monarchist_elections
+        x = 8
+        y = 2
+        ai_will_do = { factor = 100 }
+		prerequisite = {
+			focus = SIC_conmon_victory
+		}        		
+		
+		
+	}
+
+	focus = {
+	    id = SIC_nobles_upstarts
+        icon = GFX_SIC_the_law_of_boreas
+        cost = 1
+        relative_position_id = SIC_monarchist_elections
+        x = 10
+        y = 2
+        ai_will_do = { factor = 100 }
+		prerequisite = {
+			focus = SIC_conmon_victory
+		}        		
+		
+		
+	}
+
+	focus = {
+	    id = SIC_mid_land_reform
+        icon = GFX_SIC_the_law_of_boreas
+        cost = 1
+        relative_position_id = SIC_monarchist_elections
+        x = 9
+        y = 3
+        ai_will_do = { factor = 100 }
+		prerequisite = {
+			focus = SIC_nobles_upstarts
+		}        		
+		
+		
+	}
+	
+    focus = {
+	    id = SIC_fascist_ponycon
+        icon = GFX_SIC_the_law_of_boreas
+        cost = 1
+        relative_position_id = SIC_monarchist_elections
+        x = 6
+        y = 2
+        ai_will_do = { factor = 100 }
+		prerequisite = {
+			focus = SIC_conmon_victory
+		}        		
+		
+		
+	}
+
+    focus = {
+	    id = SIC_trad_larp
+        icon = GFX_SIC_the_law_of_boreas
+        cost = 1
+        relative_position_id = SIC_monarchist_elections
+        x = 4
+        y = 2
+        ai_will_do = { factor = 100 }
+		prerequisite = {
+			focus = SIC_conmon_victory
+		}        		
+		
+		
+	}
+	
+    focus = {
+	    id = SIC_federalismo_cooming
+        icon = GFX_SIC_the_law_of_boreas
+        cost = 1
+        relative_position_id = SIC_monarchist_elections
+        x = 7
+        y = 3
+        ai_will_do = { factor = 100 }
+		prerequisite = {
+			focus = SIC_fascist_ponycon
+			focus = SIC_bolster_nationalism
+		}        		
+		
+		
+	} 
+
+    focus = {
+	    id = SIC_trinity_worship
+        icon = GFX_SIC_the_law_of_boreas
+        cost = 1
+        relative_position_id = SIC_monarchist_elections
+        x = 5
+        y = 3
+        ai_will_do = { factor = 100 }
+		prerequisite = {
+			focus = SIC_trad_larp
+		}        		
+		
+		
+	}
+	
+    focus = {
+	    id = SIC_obligatory_petronila_focus
+        icon = GFX_SIC_the_law_of_boreas
+        cost = 1
+        relative_position_id = SIC_monarchist_elections
+        x = 6
+        y = 4
+        ai_will_do = { factor = 100 }
+		prerequisite = {
+			focus = SIC_trinity_worship
+		}        		
+		
+		
+	}
+	
+    focus = {
+	    id = SIC_guns_ships
+        icon = GFX_SIC_the_law_of_boreas
+        cost = 1
+        relative_position_id = SIC_monarchist_elections
+        x = 8
+        y = 4
+        ai_will_do = { factor = 100 }
+		prerequisite = {
+			focus = SIC_mid_land_reform
+		}        		
+		
+		
 	}	
+	
+    focus = {
+	    id = SIC_right_balance
+        icon = GFX_SIC_the_law_of_boreas
+        cost = 1
+        relative_position_id = SIC_monarchist_elections
+        x = 7
+        y = 5
+        ai_will_do = { factor = 100 }
+		prerequisite = {
+			focus = SIC_federalismo_cooming
+			focus = SIC_obligatory_petronila_focus
+			focus = SIC_guns_ships
+			
+		}        		
+		
+		
+	}   	
 ##########################################################################
 ##########################################################################
 ##########################################################################
